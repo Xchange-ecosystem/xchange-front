@@ -4,6 +4,7 @@ import { ShareModule } from "../core/share/share.module";
 import { PublicComponent } from "./public.component";
 import { HomeComponent } from "./home/containers/home.component";
 import { LoginComponent } from "./login/containers/login.componet";
+import { HeaderCardComponent } from './components/header-card/header-card.component';
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import { LoginComponent } from "./login/containers/login.componet";
     declarations: [
         PublicComponent,
         HomeComponent,
-        LoginComponent
+        LoginComponent,
+        HeaderCardComponent
     ],
     exports: [],
     providers: []

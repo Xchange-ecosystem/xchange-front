@@ -6,7 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "storybook": "concurrently 'npm:watch:*'",
+    "watch:storybook": "ng run ecosystem-web:storybook",
+    "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./stc/styles/tailwind.css --watch",
+    "build-storybook": "ng run ecosystem-web:build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +22,7 @@
     "@angular/platform-browser": "^16.1.0",
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
+    "node-sass": "^9.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -26,8 +31,17 @@
     "@angular-devkit/build-angular": "^16.1.1",
     "@angular/cli": "~16.1.1",
     "@angular/compiler-cli": "^16.1.0",
+    "@compodoc/compodoc": "^1.1.21",
+    "@storybook/addon-docs": "^7.5.0-alpha.3",
+    "@storybook/addon-essentials": "^7.5.0-alpha.3",
+    "@storybook/addon-interactions": "^7.5.0-alpha.3",
+    "@storybook/addon-links": "^7.5.0-alpha.3",
+    "@storybook/angular": "^7.5.0-alpha.3",
+    "@storybook/blocks": "^7.5.0-alpha.3",
+    "@storybook/testing-library": "^0.2.1",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.1",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -35,6 +49,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.4.30",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.5.0-alpha.3",
     "tailwindcss": "^3.3.3",
     "typescript": "~5.1.3"
   }
