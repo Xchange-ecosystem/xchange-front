@@ -134,7 +134,7 @@
       "projectType": "library",
       "root": "projects/ngx-xchange-ui",
       "sourceRoot": "projects/ngx-xchange-ui/src",
-      "prefix": "lib",
+      "prefix": "xc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

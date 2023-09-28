@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component , Input } from '@angular/core';
 
 @Component({
-  selector: 'app-cards-insights',
-  templateUrl: './cards-insights.component.html',
-  styleUrls: ['./cards-insights.component.scss']
+  selector: 'xc-card-insights',
+  templateUrl: './card-insights.component.html',
+  styleUrls: ['./card-insights.component.css']
 })
-export class CardsInsightsComponent {
+export class CardInsightsComponent {
   @Input()
   insights: {
     completedObjectives: Number;
@@ -22,4 +22,9 @@ export class CardsInsightsComponent {
       involvedProjects: 0
     }
   }
+}
+
+export interface CardInsightsProps {
+  amount: number
+  name: string
 }
