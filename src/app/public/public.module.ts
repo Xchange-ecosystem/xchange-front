@@ -4,6 +4,10 @@ import { ShareModule } from "../core/share/share.module";
 import { PublicComponent } from "./public.component";
 import { HomeComponent } from "./home/containers/home.component";
 import { LoginComponent } from "./login/containers/login.componet";
+import { HeaderCardComponent } from './components/header-card/header-card.component';
+import { UserNameCardComponent } from './components/user-name-card/user-name-card.component';
+import { CardsInsightsComponent } from './components/cards-insights/cards-insights.component';
+import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 
 @NgModule({
     imports: [
@@ -13,7 +17,11 @@ import { LoginComponent } from "./login/containers/login.componet";
     declarations: [
         PublicComponent,
         HomeComponent,
-        LoginComponent
+        LoginComponent,
+        HeaderCardComponent,
+        UserNameCardComponent,
+        CardsInsightsComponent,
+        UserAvatarComponent
     ],
     exports: [],
     providers: []
