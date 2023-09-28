@@ -189,7 +189,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\r\n  @apply font-manrope font-extrabold rounded-[3rem] cursor-pointer inline-block leading-none;\r\n  /* font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1; */\r\n}\r\n.storybook-button--primary {\r\n  @apply text-Background  bg-pink-50  \r\n  /* color: white;\r\n  background-color: #1ea7fd; */\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
+                    "data": ".storybook-button {\r\n  @apply font-manrope font-extrabold rounded-[3rem] cursor-pointer inline-block leading-none;\r\n  /* font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1; */\r\n}\r\n.storybook-button--primary {\r\n  @apply text-Background  bg-pink-200\r\n  /* color: white;\r\n  background-color: #1ea7fd; */\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
                     "styleUrl": "./button.css"
                 }
             ],
@@ -205,6 +205,66 @@
                     }
                 }
             }
+        },
+        {
+            "name": "CardsInsightsComponent",
+            "id": "component-CardsInsightsComponent-dbe8acbd12bc109307423b05c2c041ff93624ad4ce446359741a6aa70a2cfaea41c2576466854a25dda50c3a73d0d3010da5755fbd5349de73beb20bc1cdf0dd",
+            "file": "src/app/public/components/cards-insights/cards-insights.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-cards-insights",
+            "styleUrls": [
+                "./cards-insights.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./cards-insights.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "insights",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "literal type",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-cards-insights',\n  templateUrl: './cards-insights.component.html',\n  styleUrls: ['./cards-insights.component.scss']\n})\nexport class CardsInsightsComponent {\n  @Input()\n  insights: {\n    completedObjectives: Number;\n    activeObjectives: Number;\n    suggestedNextSteps: Number;\n    involvedProjects: Number;\n  }\n\n  constructor(){\n    this.insights = {\n      completedObjectives: 0,\n      activeObjectives: 0,\n      suggestedNextSteps: 0,\n      involvedProjects: 0\n    }\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./cards-insights.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 15
+            },
+            "templateData": "<section class=\"flex gap-4  max-w-[520px]\">\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.completedObjectives}}</p>\n    <p class=\"text-paragraph text-center leading-[100%] font-manrope font-normal w-[84px]\">Completed objectives</p>\n  </article>\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.activeObjectives}}</p>\n    <p class=\"text-paragraph text-center leading-[120%] font-manrope font-normal w-[84px]\">Active objectives</p>\n  </article>\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.suggestedNextSteps}}</p>\n    <p class=\"text-paragraph text-center leading-[120%] font-manrope font-normal inline-block w-[84px]\">Suggested Next steps</p>\n  </article>\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.involvedProjects}}</p>\n    <p class=\"text-paragraph text-center leading-[120%] font-manrope font-normal w-[84px]\">Involved Projects</p>\n  </article>\n</section>\n"
         },
         {
             "name": "HeaderCardComponent",
@@ -388,7 +448,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<h3 class=\"text-[#b4f255] font-bold font-manrope text-titles bg-[red]\">Esta sera la home del proyecto</h3>"
+            "templateData": "<h3 class=\"text-[#b4f255] font-bold font-manrope text-titles bg-[red]\">Esta sera la home del proyecto</h3>\r\n<br><br><br><br>\r\n<app-user-name-card name=\"Jose Manuel\" lastName=\"Cabrera Rojas\"></app-user-name-card>\r\n<br><br><br><br>\r\n<app-cards-insights completedObjetives=5 activeObjectives=15 suggestedNextSteps=8 involvedProjects=15></app-cards-insights>\r\n"
         },
         {
             "name": "LoginComponent",
@@ -453,7 +513,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<h3>Este sera el login</h3>\r\n<app-header-card></app-header-card>"
+            "templateData": "<h3>Este sera el login</h3>\r\n"
         },
         {
             "name": "NotFoundComponent",
@@ -666,7 +726,111 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<router-outlet></router-outlet>"
+            "templateData": "<router-outlet></router-outlet>\r\n"
+        },
+        {
+            "name": "UserAvatarComponent",
+            "id": "component-UserAvatarComponent-7e756cd37990ca091b6642a48c868cf1bfdd1f98b8ab37c4442c9bf088b1bdcab6b37792289260ec2e660d9207748e01d3775efa676b2e1217b1c0692449aac5",
+            "file": "src/app/public/components/user-avatar/user-avatar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-user-avatar",
+            "styleUrls": [
+                "./user-avatar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./user-avatar.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n\n@Component({\n  selector: 'app-user-avatar',\n  templateUrl: './user-avatar.component.html',\n  styleUrls: ['./user-avatar.component.scss']\n})\nexport class UserAvatarComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./user-avatar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div ngStyle=\"{'background-image': 'url(' + image + ')'}\" >\n</div>"
+        },
+        {
+            "name": "UserNameCardComponent",
+            "id": "component-UserNameCardComponent-cdee54d28c5a87a80fefab54242505ab919f76d5eb041a19c31b1299615e473dfbc453ad691ec2abc009ad96acc062230e493bd7dbfefd5c69865333a626a9f7",
+            "file": "src/app/public/components/user-name-card/user-name-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-user-name-card",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./user-name-card.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "lastName",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "String",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "String",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-user-name-card',\n  templateUrl: './user-name-card.component.html',\n})\nexport class UserNameCardComponent {\n  @Input()\n  name: String;\n  @Input()\n  lastName: String;\n  \n  constructor() {\n    this.name = '';\n    this.lastName = '';\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 11
+            },
+            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow\">\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\n</article>\n"
         }
     ],
     "modules": [
@@ -795,13 +959,13 @@
         },
         {
             "name": "PublicModule",
-            "id": "module-PublicModule-c41f9ad977137cf3e47e307eadab494c72f85caf4439b2f9dfa1ac197b01ff7a92cf9db382bc98a974af09c9bd7f233774015fed04674d6e6782a7a7f5722f4d",
+            "id": "module-PublicModule-94152cead588abc0f7c6c586d94189196383f8a78feceb0851b27b331aac6f4ee66cc49db6c7f807ea2c28500e7037ca92e24a234995760ed1a3d717ddd09995",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/public/public.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\nimport { CardsInsightsComponent } from './components/cards-insights/cards-insights.component';\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        CardsInsightsComponent,\r\n        UserAvatarComponent\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}",
             "children": [
                 {
                     "type": "providers",
@@ -810,6 +974,9 @@
                 {
                     "type": "declarations",
                     "elements": [
+                        {
+                            "name": "CardsInsightsComponent"
+                        },
                         {
                             "name": "HeaderCardComponent"
                         },
@@ -821,6 +988,12 @@
                         },
                         {
                             "name": "PublicComponent"
+                        },
+                        {
+                            "name": "UserAvatarComponent"
+                        },
+                        {
+                            "name": "UserNameCardComponent"
                         }
                     ]
                 },
@@ -933,6 +1106,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Cards_Insights",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    insights: {\r\n      completedObjectives: 5,\r\n      activeObjectives: 10,\r\n      suggestedNextSteps: 3,\r\n      involvedProjects: 7\r\n    }\r\n  }\r\n}"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1013,6 +1196,26 @@
                 "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UserNameCardComponent>",
+                "defaultValue": "{\r\n  title: 'Example/UserNameCardComponent',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardsInsightsComponent>",
+                "defaultValue": "{\r\n  title:\"CardsInsightsComponent\",\r\n  component: CardsInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardsInsightsComponent) => ({\r\n    props: {\r\n      ...args,\r\n    }\r\n  })\r\n}"
+            },
+            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1051,6 +1254,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
+                "name": "User_Card_Name",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'User',\r\n    lastName: 'Name',\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -1087,10 +1300,54 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UserNameCardComponent>",
+                "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardsInsightsComponent>",
+                "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
             }
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/app/public/components/cards-insights/cards-insights.component.stories.ts": [
+                {
+                    "name": "Cards_Insights",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    insights: {\r\n      completedObjectives: 5,\r\n      activeObjectives: 10,\r\n      suggestedNextSteps: 3,\r\n      involvedProjects: 7\r\n    }\r\n  }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardsInsightsComponent>",
+                    "defaultValue": "{\r\n  title:\"CardsInsightsComponent\",\r\n  component: CardsInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardsInsightsComponent) => ({\r\n    props: {\r\n      ...args,\r\n    }\r\n  })\r\n}"
+                }
+            ],
             "src/stories/Button.stories.ts": [
                 {
                     "name": "Large",
@@ -1207,6 +1464,28 @@
                     "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
                 }
             ],
+            "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UserNameCardComponent>",
+                    "defaultValue": "{\r\n  title: 'Example/UserNameCardComponent',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                },
+                {
+                    "name": "User_Card_Name",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'User',\r\n    lastName: 'Name',\r\n  },\r\n}"
+                }
+            ],
             ".storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -1256,6 +1535,32 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Page>",
                     "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UserNameCardComponent>",
+                    "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/app/public/components/cards-insights/cards-insights.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardsInsightsComponent>",
+                    "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1323,7 +1628,7 @@
         ]
     },
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -1355,12 +1660,79 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Cards_Insights",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/public/components/cards-insights/cards-insights.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardsInsightsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/public/components/header-card/header-card.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "HeaderCardComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/public/components/user-avatar/user-avatar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UserAvatarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "User_Card_Name",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/public/components/user-name-card/user-name-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "UserNameCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {

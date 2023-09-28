@@ -29,14 +29,15 @@ module.exports = {
         Secondary_Fonts: "#5D5D5D",
         Tertiary_Fonts: "#A7A7A7",
         Quaternary_Fonts: "F3F4F4",
-        Background: "#FFFFFF"
+        Background: "#FFFFFF",
+        text_Color: "#000000"
       },
       fontSize: {
         titles: "48px",
         subtitles:"32px",
         objectiveTitle: "24px",
         cardsTitles: "18px",
-        text: "16px",
+        paragraph: "16px",
         tags: "14px",
         small: "12px",
       },

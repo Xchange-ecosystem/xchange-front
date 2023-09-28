@@ -9,7 +9,7 @@
     "test": "ng test",
     "storybook": "concurrently 'npm:watch:*'",
     "watch:storybook": "ng run ecosystem-web:storybook",
-    "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./stc/styles/tailwind.css --watch",
+    "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./src/styles/tailwind.css --watch",
     "build-storybook": "ng run ecosystem-web:build-storybook"
   },
   "private": true,
