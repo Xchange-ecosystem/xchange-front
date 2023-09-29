@@ -1,0 +1,12 @@
+@import 'tailwindcss/base'; 
+@import 'tailwindcss/components'; 
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'manrope';
+  src: url('../fonts/Manrope-VariableFont_wght.ttf');
+}
+
+.cardShadow{
+  box-shadow: 10.5px 42px 42px 0px rgba(0, 0, 0, 0.25);
+}
