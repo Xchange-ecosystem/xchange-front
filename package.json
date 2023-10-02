@@ -9,7 +9,7 @@
     "test": "ng test",
     "storybook": "concurrently 'npm:watch:*'",
     "watch:storybook": "ng run ecosystem-web:storybook",
-    "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./src/styles/tailwind.css --watch",
+    "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./stc/styles/tailwind.css --watch",
     "build-storybook": "ng run ecosystem-web:build-storybook",
     "build:lib": "ng build ngx-xchange-ui && cd dist/ngx-xchange-ui && npm pack"
   },
@@ -37,6 +37,7 @@
     "@storybook/addon-essentials": "^7.5.0-alpha.3",
     "@storybook/addon-interactions": "^7.5.0-alpha.3",
     "@storybook/addon-links": "^7.5.0-alpha.3",
+    "@storybook/addon-styling-webpack": "^0.0.4",
     "@storybook/angular": "^7.5.0-alpha.3",
     "@storybook/blocks": "^7.5.0-alpha.3",
     "@storybook/testing-library": "^0.2.1",

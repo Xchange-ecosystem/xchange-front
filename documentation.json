@@ -22,7 +22,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-359ee21d7846986682cc09bbcd3b1c6028f9188ef2a47786ec0d764a229ac830c813b7712661ac44473d6193967f7d5162ed30b314887ed26521cc754cb22b8f",
+            "id": "component-AppComponent-48ce9b57693281728e1884e58f1742900fd2c4dcc60ec7009add6907812c386e4aa5e506adb61b892ff6bb3dde6d1470d994644d6823f13dd9d2e791cbd8686d",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -63,7 +63,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'ecosystem-web';\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'ecosystem-web';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -72,7 +72,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<router-outlet></router-outlet>\n"
+            "templateData": "<router-outlet></router-outlet>\r\n<xc-card-insights [insights]=\"{\r\n  completedObjectives: 5,\r\n  activeObjectives: 6,\r\n  suggestedNextSteps: 7,\r\n  involvedProjects: 8\r\n}\"></xc-card-insights>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -205,66 +205,6 @@
                     }
                 }
             }
-        },
-        {
-            "name": "CardsInsightsComponent",
-            "id": "component-CardsInsightsComponent-dbe8acbd12bc109307423b05c2c041ff93624ad4ce446359741a6aa70a2cfaea41c2576466854a25dda50c3a73d0d3010da5755fbd5349de73beb20bc1cdf0dd",
-            "file": "src/app/public/components/cards-insights/cards-insights.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-cards-insights",
-            "styleUrls": [
-                "./cards-insights.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./cards-insights.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "insights",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "literal type",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-cards-insights',\n  templateUrl: './cards-insights.component.html',\n  styleUrls: ['./cards-insights.component.scss']\n})\nexport class CardsInsightsComponent {\n  @Input()\n  insights: {\n    completedObjectives: Number;\n    activeObjectives: Number;\n    suggestedNextSteps: Number;\n    involvedProjects: Number;\n  }\n\n  constructor(){\n    this.insights = {\n      completedObjectives: 0,\n      activeObjectives: 0,\n      suggestedNextSteps: 0,\n      involvedProjects: 0\n    }\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./cards-insights.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 15
-            },
-            "templateData": "<section class=\"flex gap-4  max-w-[520px]\">\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.completedObjectives}}</p>\n    <p class=\"text-paragraph text-center leading-[100%] font-manrope font-normal w-[84px]\">Completed objectives</p>\n  </article>\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.activeObjectives}}</p>\n    <p class=\"text-paragraph text-center leading-[120%] font-manrope font-normal w-[84px]\">Active objectives</p>\n  </article>\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.suggestedNextSteps}}</p>\n    <p class=\"text-paragraph text-center leading-[120%] font-manrope font-normal inline-block w-[84px]\">Suggested Next steps</p>\n  </article>\n  <article class=\"flex flex-col gap-2 p-4 items-center rounded-lg bg-Background\">\n    <p class=\"text-text_Color text-subtitles font-manrope font-normal leading-[100%]\">{{insights.involvedProjects}}</p>\n    <p class=\"text-paragraph text-center leading-[120%] font-manrope font-normal w-[84px]\">Involved Projects</p>\n  </article>\n</section>\n"
         },
         {
             "name": "HeaderCardComponent",
@@ -448,7 +388,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<h3 class=\"text-[#b4f255] font-bold font-manrope text-titles bg-[red]\">Esta sera la home del proyecto</h3>\r\n<br><br><br><br>\r\n<app-user-name-card name=\"Jose Manuel\" lastName=\"Cabrera Rojas\"></app-user-name-card>\r\n<br><br><br><br>\r\n<app-cards-insights completedObjetives=5 activeObjectives=15 suggestedNextSteps=8 involvedProjects=15></app-cards-insights>\r\n"
+            "templateData": "<h3 class=\"text-[#b4f255] font-bold font-manrope text-titles bg-[red]\">Esta sera la home del proyecto</h3>\r\n<br><br><br><br>\r\n<app-user-name-card name=\"Jose Manuel\" lastName=\"Cabrera Rojas\"></app-user-name-card>\r\n<br><br><br><br>\r\n"
         },
         {
             "name": "LoginComponent",
@@ -517,7 +457,7 @@
         },
         {
             "name": "NotFoundComponent",
-            "id": "component-NotFoundComponent-31b8d7baa2eeaaae7bd0b66d2f65f719077e360d9cf0e2780479d1a91df7e59e62498da11a99866dce986c7e48539722a85e450a07cdc02803fc07cad00dd1aa",
+            "id": "component-NotFoundComponent-4f12df90bf54ceed4cf21d09cc7d4ffb386b271b2b69d669043986528d8ccc6656b5d1dc60755400a9b5d76d04427d3fe7347d96eba072e7447ae959010e6ed1",
             "file": "src/app/core/share/components/not-found/not-found.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -558,7 +498,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent implements OnInit{\n  constructor () {}\n\n  ngOnInit(): void {\n    \n  }\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-not-found',\r\n  templateUrl: './not-found.component.html',\r\n  styleUrls: ['./not-found.component.scss']\r\n})\r\nexport class NotFoundComponent implements OnInit{\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -578,7 +518,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<p>Error 404, page not found!</p>\n"
+            "templateData": "<p>Error 404, page not found!</p>\r\n"
         },
         {
             "name": "PageComponent",
@@ -730,7 +670,7 @@
         },
         {
             "name": "UserAvatarComponent",
-            "id": "component-UserAvatarComponent-7e756cd37990ca091b6642a48c868cf1bfdd1f98b8ab37c4442c9bf088b1bdcab6b37792289260ec2e660d9207748e01d3775efa676b2e1217b1c0692449aac5",
+            "id": "component-UserAvatarComponent-a10d7cf5761deda14c479daf979462ce8486489def34886be5495b022e724cf36959d4e065d06a1b038ddd7ccd407901cac644872dbaf980c64c48d8838ef86f",
             "file": "src/app/public/components/user-avatar/user-avatar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -760,7 +700,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n\n@Component({\n  selector: 'app-user-avatar',\n  templateUrl: './user-avatar.component.html',\n  styleUrls: ['./user-avatar.component.scss']\n})\nexport class UserAvatarComponent {\n\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'app-user-avatar',\r\n  templateUrl: './user-avatar.component.html',\r\n  styleUrls: ['./user-avatar.component.scss']\r\n})\r\nexport class UserAvatarComponent {\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -769,11 +709,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div ngStyle=\"{'background-image': 'url(' + image + ')'}\" >\n</div>"
+            "templateData": "<div ngStyle=\"{'background-image': 'url(' + image + ')'}\" >\r\n</div>"
         },
         {
             "name": "UserNameCardComponent",
-            "id": "component-UserNameCardComponent-cdee54d28c5a87a80fefab54242505ab919f76d5eb041a19c31b1299615e473dfbc453ad691ec2abc009ad96acc062230e493bd7dbfefd5c69865333a626a9f7",
+            "id": "component-UserNameCardComponent-0b6156b06089785f65db7256173a1234eb8b59991b1ce2818f759422553fa713b3b2b5cad2002056290a2889da74609c1d0b2d80365729883a0eff055076bbad",
             "file": "src/app/public/components/user-name-card/user-name-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -818,7 +758,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-user-name-card',\n  templateUrl: './user-name-card.component.html',\n})\nexport class UserNameCardComponent {\n  @Input()\n  name: String;\n  @Input()\n  lastName: String;\n  \n  constructor() {\n    this.name = '';\n    this.lastName = '';\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-user-name-card',\r\n  templateUrl: './user-name-card.component.html',\r\n})\r\nexport class UserNameCardComponent {\r\n  @Input()\r\n  name: String;\r\n  @Input()\r\n  lastName: String;\r\n  \r\n  constructor() {\r\n    this.name = '';\r\n    this.lastName = '';\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -830,19 +770,19 @@
                 "args": [],
                 "line": 11
             },
-            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow\">\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\n</article>\n"
+            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-cfa9c609ef0caf0c5db864c7fca9a615cbeebc16ffda97165575d4e73a109f132f92c46e692ac93745325591d57726f86d3378c85226bc961e347803200994e6",
+            "id": "module-AppModule-f972b072f36aaa08578d19a4b6da95299011a6c5c606c8e59def4ed81d280ec4e77f428e4c336ff24d10a068d19f5d26a2ce7a7928c0d7d6444eae516c6150b4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { CoreModule } from './core/core.module';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    CoreModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -887,13 +827,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-c92d54a5d21f164451bfd07890c2138c56482670de699c65555884ef76e732f91592f69849cd97226a6f8a0f347bc678e8388fcfc3cfe86c24e99427c1375df4",
+            "id": "module-AppRoutingModule-205d45637f2d0660cd9df356823552dab39aecae1b3fd41c9016d1711d0d047d06c4fcfb6f21a0c3b1da656338cf805322d311a964deb7312f6ef6cf75f1f3a1",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nimport { NotFoundComponent } from './core/share/components/not-found/not-found.component';\n\nconst routes: Routes = [\n  { path: '', loadChildren: () => \"import('./public/public.module')\\\n  .then(m => m.PublicModule)\" },\n  { path: '**', component: NotFoundComponent }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes, {useHash: true})],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nimport { NotFoundComponent } from './core/share/components/not-found/not-found.component';\r\n\r\nconst routes: Routes = [\r\n  { path: '', loadChildren: () => \"import('./public/public.module')\\\n  .then(m => m.PublicModule)\" },\r\n  { path: '**', component: NotFoundComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes, {useHash: true})],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -959,13 +899,13 @@
         },
         {
             "name": "PublicModule",
-            "id": "module-PublicModule-94152cead588abc0f7c6c586d94189196383f8a78feceb0851b27b331aac6f4ee66cc49db6c7f807ea2c28500e7037ca92e24a234995760ed1a3d717ddd09995",
+            "id": "module-PublicModule-334299db55fc14e6b135a12e06458145a0465dd47b5e2408668751a016fc5b539f01681cc1bd911322fc3df6bd09877bc726d81202589b7f9c00b3e800845340",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/public/public.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\nimport { CardsInsightsComponent } from './components/cards-insights/cards-insights.component';\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        CardsInsightsComponent,\r\n        UserAvatarComponent\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -974,9 +914,6 @@
                 {
                     "type": "declarations",
                     "elements": [
-                        {
-                            "name": "CardsInsightsComponent"
-                        },
                         {
                             "name": "HeaderCardComponent"
                         },
@@ -1106,16 +1043,6 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "Cards_Insights",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    insights: {\r\n      completedObjectives: 5,\r\n      activeObjectives: 10,\r\n      suggestedNextSteps: 3,\r\n      involvedProjects: 7\r\n    }\r\n  }\r\n}"
-            },
-            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1204,16 +1131,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<UserNameCardComponent>",
                 "defaultValue": "{\r\n  title: 'Example/UserNameCardComponent',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CardsInsightsComponent>",
-                "defaultValue": "{\r\n  title:\"CardsInsightsComponent\",\r\n  component: CardsInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardsInsightsComponent) => ({\r\n    props: {\r\n      ...args,\r\n    }\r\n  })\r\n}"
             },
             {
                 "name": "preview",
@@ -1311,43 +1228,10 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 180
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<CardsInsightsComponent>",
-                "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 180
             }
         ],
         "enumerations": [],
         "groupedVariables": {
-            "src/app/public/components/cards-insights/cards-insights.component.stories.ts": [
-                {
-                    "name": "Cards_Insights",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    insights: {\r\n      completedObjectives: 5,\r\n      activeObjectives: 10,\r\n      suggestedNextSteps: 3,\r\n      involvedProjects: 7\r\n    }\r\n  }\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<CardsInsightsComponent>",
-                    "defaultValue": "{\r\n  title:\"CardsInsightsComponent\",\r\n  component: CardsInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardsInsightsComponent) => ({\r\n    props: {\r\n      ...args,\r\n    }\r\n  })\r\n}"
-                }
-            ],
             "src/stories/Button.stories.ts": [
                 {
                     "name": "Large",
@@ -1553,19 +1437,6 @@
                     "description": "",
                     "kind": 180
                 }
-            ],
-            "src/app/public/components/cards-insights/cards-insights.component.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CardsInsightsComponent>",
-                    "file": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 180
-                }
             ]
         }
     },
@@ -1628,7 +1499,7 @@
         ]
     },
     "coverage": {
-        "count": 2,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -1655,35 +1526,6 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "NotFoundComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Cards_Insights",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/public/components/cards-insights/cards-insights.component.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/public/components/cards-insights/cards-insights.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "CardsInsightsComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"
