@@ -1,12 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { CardTasksIndicatorComponent } from 'projects/ngx-xchange-ui/src/public-api';
+import { CardProofsIndicatorComponent } from 'projects/ngx-xchange-ui/src/public-api';
+
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
-const meta: Meta<CardTasksIndicatorComponent> = {
-  title: 'xChange/Card Tasks Indicator Component',
-  component: CardTasksIndicatorComponent,
+const meta: Meta<CardProofsIndicatorComponent> = {
+  title: 'xChange/Card Proof Indicator Component',
+  component: CardProofsIndicatorComponent,
   tags: ['autodocs'],
-  render: (args: CardTasksIndicatorComponent) => ({
+  render: (args: CardProofsIndicatorComponent) => ({
     props: {
       backgroundColor: null,
       ...args,
@@ -18,12 +19,11 @@ const meta: Meta<CardTasksIndicatorComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<CardTasksIndicatorComponent>;
+type Story = StoryObj<CardProofsIndicatorComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {
   args: {
-    completeTasks: 4,
-    tasks: 5
+   proofsCount: 2,
   },
 };

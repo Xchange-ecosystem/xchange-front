@@ -17,4 +17,6 @@ export * from './components/card-paragraph/card-paragraph/card-paragraph.compone
 export * from './components/card-paragraph/card-paragraph.module';
 export * from './components/card-tasks-indicator/card-tasks-indicator/card-tasks-indicator.component';
 export * from './components/card-tasks-indicator/card-tasks-indicator.module';
+export * from './components/card-proofs-indicator/card-proofs-indicator/card-proofs-indicator.component';
+export * from './components/card-proofs-indicator/card-proofs-indicator.module';
 
