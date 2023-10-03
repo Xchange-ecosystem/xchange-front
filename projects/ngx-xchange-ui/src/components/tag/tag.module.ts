@@ -10,6 +10,8 @@ import { TagComponent } from './tag/tag.component';
   imports: [
     CommonModule
   ],
-  exports: [TagComponent]
+  exports: [
+    TagComponent
+  ]
 })
 export class TagModule { }

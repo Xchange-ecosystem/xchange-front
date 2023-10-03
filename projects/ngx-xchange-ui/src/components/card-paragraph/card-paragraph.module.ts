@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleH3Component } from './title-h3/title-h3.component';
+import { CardParagraphComponent } from './card-paragraph/card-paragraph.component';
 
 
 
 @NgModule({
   declarations: [
-    TitleH3Component
+    CardParagraphComponent
   ],
   imports: [
     CommonModule
-  ],
-  exports: [
-    TitleH3Component
   ]
 })
-export class TitleH3Module { }
+export class CardParagraphModule { }
