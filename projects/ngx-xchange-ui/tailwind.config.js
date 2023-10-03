@@ -66,7 +66,8 @@ module.exports = {
     '2xl': '1536px',
   },
   leading: {
-    "tag": "28px"
+    "tag": "28px",
+    "tag_indicator": "16.8px"
   },
   plugins: [],
 }
