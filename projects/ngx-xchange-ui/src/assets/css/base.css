@@ -578,6 +578,14 @@ video {
   gap: 1rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -636,6 +644,10 @@ video {
   font-family: manrope;
 }
 
+.text-cardsTitles {
+  font-size: 18px;
+}
+
 .text-paragraph {
   font-size: 16px;
 }
@@ -672,9 +684,23 @@ video {
   line-height: 120%;
 }
 
+.leading-normal {
+  line-height: 1.5;
+}
+
+.text-Main_Fonts {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
+}
+
 .text-Main_accent {
   --tw-text-opacity: 1;
   color: rgb(214 240 205 / var(--tw-text-opacity));
+}
+
+.text-Secondary_Fonts {
+  --tw-text-opacity: 1;
+  color: rgb(93 93 93 / var(--tw-text-opacity));
 }
 
 .text-\[\#b4f255\] {
@@ -685,11 +711,6 @@ video {
 .text-text_Color {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-Secondary_Fonts {
-  --tw-text-opacity: 1;
-  color: rgb(93 93 93 / var(--tw-text-opacity));
 }
 
 @font-face {

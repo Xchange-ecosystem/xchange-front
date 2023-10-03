@@ -776,13 +776,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-f972b072f36aaa08578d19a4b6da95299011a6c5c606c8e59def4ed81d280ec4e77f428e4c336ff24d10a068d19f5d26a2ce7a7928c0d7d6444eae516c6150b4",
+            "id": "module-AppModule-01b9e22c184a2a37db1b707dd71ff29633904582f7c7a30584e870df16e0fa872e1841b9f2d32f7b651c4339787248e791c06bc56ee8d5fffb6ffded3ec67a58",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1136,6 +1136,26 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/tag.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TagComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/TagComponent',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/titleH3.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TitleH3Component>",
+                "defaultValue": "{\r\n  title: 'xChange/TitleH3Component',\r\n  component: TitleH3Component,\r\n  tags: ['autodocs'],\r\n  render: (args: TitleH3Component) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1171,6 +1191,26 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tag.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/titleH3.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Objective\"\r\n  },\r\n}"
             },
             {
                 "name": "Secondary",
@@ -1244,6 +1284,28 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Page>",
                 "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TagComponent>",
+                "file": "src/stories/tag.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TitleH3Component>",
+                "file": "src/stories/titleH3.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1401,6 +1463,50 @@
                     "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
                 }
             ],
+            "src/stories/tag.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tag.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TagComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/TagComponent',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tag.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/titleH3.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/titleH3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TitleH3Component>",
+                    "defaultValue": "{\r\n  title: 'xChange/TitleH3Component',\r\n  component: TitleH3Component,\r\n  tags: ['autodocs'],\r\n  render: (args: TitleH3Component) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/titleH3.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Objective\"\r\n  },\r\n}"
+                }
+            ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
                 {
                     "name": "meta",
@@ -1485,6 +1591,32 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Page>",
                     "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/tag.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TagComponent>",
+                    "file": "src/stories/tag.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/titleH3.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TitleH3Component>",
+                    "file": "src/stories/titleH3.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1834,6 +1966,46 @@
                 "name": "PageComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/tag.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/tag.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/titleH3.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/titleH3.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             }
         ]
