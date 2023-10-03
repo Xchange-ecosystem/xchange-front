@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +15,7 @@ import { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    CardInsightsModule
+    CardInsightsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
