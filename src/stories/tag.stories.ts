@@ -23,11 +23,6 @@ type Story = StoryObj<TagComponent>;
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {
   args: {
-    insights:{
-      activeObjectives:5,
-      completedObjectives:6,
-      involvedProjects:7,
-      suggestedNextSteps: 8
-    }
+    tagContent: "Projects"
   },
 };
