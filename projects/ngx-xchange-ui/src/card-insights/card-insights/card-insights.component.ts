@@ -5,6 +5,8 @@ import { Component , Input } from '@angular/core';
   templateUrl: './card-insights.component.html',
   styleUrls: ['./card-insights.component.css']
 })
+
+//styleUrls: ['../../assets/css/tailwind.scss']
 export class CardInsightsComponent {
   @Input()
   insights: {

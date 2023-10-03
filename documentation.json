@@ -1106,6 +1106,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Card-insight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardInsightsComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/CardInsightsComponent',\r\n  component: CardInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardInsightsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1153,6 +1163,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n  },\r\n}"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Card-insight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+            },
+            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1191,6 +1211,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Button>",
                 "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardInsightsComponent>",
+                "file": "src/stories/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1348,6 +1379,28 @@
                     "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
                 }
             ],
+            "src/stories/Card-insight.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Card-insight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardInsightsComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/CardInsightsComponent',\r\n  component: CardInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardInsightsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Card-insight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+                }
+            ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
                 {
                     "name": "meta",
@@ -1393,6 +1446,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Button>",
                     "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Card-insight.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardInsightsComponent>",
+                    "file": "src/stories/Card-insight.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1499,7 +1565,7 @@
         ]
     },
     "coverage": {
-        "count": 3,
+        "count": 2,
         "status": "low",
         "files": [
             {
@@ -1650,6 +1716,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Card-insight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Card-insight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
