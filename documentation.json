@@ -72,7 +72,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<router-outlet></router-outlet>\r\n<xc-card-insights [insights]=\"{\r\n  completedObjectives: 5,\r\n  activeObjectives: 6,\r\n  suggestedNextSteps: 7,\r\n  involvedProjects: 8\r\n}\"></xc-card-insights>\r\n"
+            "templateData": "<router-outlet></router-outlet>\r\n<xc-card-insights [insights]=\"{\r\n  completedObjectives: 5,\r\n  activeObjectives: 6,\r\n  suggestedNextSteps: 7,\r\n  involvedProjects: 8\r\n}\"></xc-card-insights>\r\n<p xcTittle>hello</p>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -205,6 +205,40 @@
                     }
                 }
             }
+        },
+        {
+            "name": "DummyComponent",
+            "id": "component-DummyComponent-17a29581ffbfebd05d5f9908e96b1d6183f6e4be5d179468ecb0eb1dab5e0a99bf2613cb8cc63c18481a074795a7c7634c69a73f2b792d110dba010d85d09036",
+            "file": "src/stories/Heading.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "adr-dummy",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<p xcTittle >Click</p>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { TittleDirective } from 'projects/ngx-xchange-ui/src/directives/tittle/tittle.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <p xcTittle >Click</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
         },
         {
             "name": "HeaderCardComponent",
@@ -776,13 +810,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-f972b072f36aaa08578d19a4b6da95299011a6c5c606c8e59def4ed81d280ec4e77f428e4c336ff24d10a068d19f5d26a2ce7a7928c0d7d6444eae516c6150b4",
+            "id": "module-AppModule-26bf95915ec43e747b2ebdc9488d86f3a446e44dfb34f79b9cfe95d2423eb7e69f0f7f68d43e5f7b4b9772a88a7a04444bac0c9264f8154282ac5b51728cd3cb",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, TittleDirective } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    TittleDirective\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1126,6 +1160,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Heading.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DummyComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1171,6 +1215,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Heading.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n}"
             },
             {
                 "name": "Secondary",
@@ -1233,6 +1287,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<Header>",
                 "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DummyComponent>",
+                "file": "src/stories/Heading.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1401,6 +1466,28 @@
                     "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
                 }
             ],
+            "src/stories/Heading.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Heading.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DummyComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Heading.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n}"
+                }
+            ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
                 {
                     "name": "meta",
@@ -1472,6 +1559,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<Header>",
                     "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Heading.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DummyComponent>",
+                    "file": "src/stories/Heading.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1766,6 +1866,35 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Heading.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DummyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Heading.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Heading.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
