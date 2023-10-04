@@ -19,4 +19,6 @@ export * from './components/card-tasks-indicator/card-tasks-indicator/card-tasks
 export * from './components/card-tasks-indicator/card-tasks-indicator.module';
 export * from './components/card-proofs-indicator/card-proofs-indicator/card-proofs-indicator.component';
 export * from './components/card-proofs-indicator/card-proofs-indicator.module';
+export * from './components/card-deadline-indicator/card-deadline-indicator/card-deadline-indicator.component';
+export * from './components/card-deadline-indicator/card-deadline-indicator.module';
 
