@@ -7,7 +7,6 @@ import { TittleDirective } from './tittle.directive';
   ],
   imports: [
     CommonModule
-  ],
-  exports:[TittleDirective]
+  ]
 })
 export class TittleModule { }

@@ -2,18 +2,18 @@ import { moduleMetadata } from '@storybook/angular';
 import type { Meta, StoryObj } from '@storybook/angular';
 import { CommonModule } from '@angular/common';
 
-import Button from './button.component';
+import {HeaderComponent} from '../../projects/ngx-xchange-ui/src/public-api';
 import Header from './header.component';
 
-const meta: Meta<Header> = {
+const meta: Meta<HeaderComponent> = {
   title: 'Example/Header',
-  component: Header,
+  component: HeaderComponent,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs
   tags: ['autodocs'],
   render: (args) => ({ props: args }),
   decorators: [
     moduleMetadata({
-      declarations: [Button],
+      declarations: [HeaderComponent],
       imports: [CommonModule],
     }),
   ],
