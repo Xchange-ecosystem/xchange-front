@@ -59,7 +59,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"background\">\r\n  <router-outlet></router-outlet>\r\n  <br><br>\r\n  <h1 xcTittle=\"'sadfsdf'\">Hola mundo</h1>\r\n\r\n<br><br>\r\n<xc-card-deadline-indicator\r\ndeadline=\"2023-03-29T14:25:53.4393092+00:00\"\r\nicon=\"./assets/icons/u_file-check-alt.svg\"\r\n>\r\n</xc-card-deadline-indicator>\r\n</div>"
+            "templateData": "<div class=\"background\">\r\n  <router-outlet></router-outlet>\r\n  <br><br>\r\n  <h1 [xcTittle]=\"'sadfsdf'\">Hola mundo</h1>\r\n\r\n<br><br>\r\n<xc-card-deadline-indicator\r\ndeadline=\"2023-03-29T14:25:53.4393092+00:00\"\r\nicon=\"./assets/icons/u_file-check-alt.svg\"\r\n>\r\n</xc-card-deadline-indicator>\r\n</div>"
         },
         {
             "name": "DummyComponent",

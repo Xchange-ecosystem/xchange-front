@@ -3,10 +3,15 @@ import { CommonModule } from '@angular/common';
 import { TittleDirective } from './tittle.directive';
 @NgModule({
   declarations: [
-    [TittleDirective]
+    TittleDirective
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    TittleDirective
   ]
 })
+
+
 export class TittleModule { }
