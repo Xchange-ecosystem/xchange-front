@@ -542,10 +542,6 @@ video {
   display: flex;
 }
 
-.contents {
-  display: contents;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -582,6 +578,10 @@ video {
   justify-content: flex-start;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -596,6 +596,10 @@ video {
 
 .text-ellipsis {
   text-overflow: ellipsis;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-lg {
@@ -630,20 +634,24 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-indigo-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(129 140 248 / var(--tw-bg-opacity));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
-<<<<<<< HEAD
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-=======
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
->>>>>>> feature/createLibrary
 }
 
 .p-4 {
@@ -658,6 +666,11 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .py-2 {
@@ -718,6 +731,10 @@ video {
   font-weight: 400;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .leading-\[100\%\] {
   line-height: 100%;
 }
@@ -728,6 +745,10 @@ video {
 
 .leading-normal {
   line-height: 1.5;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-Main_Fonts {
@@ -750,6 +771,11 @@ video {
   color: rgb(180 242 85 / var(--tw-text-opacity));
 }
 
+.text-indigo-50 {
+  --tw-text-opacity: 1;
+  color: rgb(238 242 255 / var(--tw-text-opacity));
+}
+
 .text-text_Color {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -763,4 +789,14 @@ video {
 
 .cardShadow{
   box-shadow: 10.5px 42px 42px 0px rgba(0, 0, 0, 0.25);
+}
+
+.hover\:bg-indigo-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-red-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }

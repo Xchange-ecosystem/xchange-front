@@ -11,7 +11,7 @@
     "watch:storybook": "ng run ecosystem-web:storybook",
     "watch:tailwind": "npx tailwindcss -i ./src/styles.scss -o ./projects/ngx-xchange-ui/src/assets/css/base.css --watch",
     "build-storybook": "ng run ecosystem-web:build-storybook",
-    "build:lib": "ng build ngx-xchange-ui && cd dist/ngx-xchange-ui && npm pack"
+    "build:lib": "ng build ngx-xchange-ui"
   },
   "private": true,
   "dependencies": {

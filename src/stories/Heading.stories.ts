@@ -5,7 +5,7 @@ import { TittleDirective } from 'projects/ngx-xchange-ui/src/directives/tittle/t
 @Component({
   selector: 'adr-dummy',
   template: `
-      <p xcTittle >Click</p>`
+      <p [xcTittle]="'button'" >Click</p>`
 })
 class DummyComponent {
 }
