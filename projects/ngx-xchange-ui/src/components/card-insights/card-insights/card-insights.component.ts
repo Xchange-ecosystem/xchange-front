@@ -6,14 +6,14 @@ import { Component , Input } from '@angular/core';
   styleUrls: ['./card-insights.component.css']
 })
 
-//styleUrls: ['../../assets/css/tailwind.scss']
+
 export class CardInsightsComponent {
   @Input()
   insights: {
-    completedObjectives: Number;
-    activeObjectives: Number;
-    suggestedNextSteps: Number;
-    involvedProjects: Number;
+    completedObjectives: Number | null;
+    activeObjectives: Number | null;
+    suggestedNextSteps: Number | null;
+    involvedProjects: Number | null;
   }
 
   constructor(){

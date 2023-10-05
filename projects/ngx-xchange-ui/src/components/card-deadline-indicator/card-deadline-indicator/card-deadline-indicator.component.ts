@@ -7,17 +7,20 @@ import { Component, Input } from '@angular/core';
 })
 export class CardDeadlineIndicatorComponent {
 @Input()
-deadline: Date | undefined;
+deadline: String | undefined;
 @Input()
 deadLineToShow: String
+@Input()
+icon: String
 
 constructor() {
   this.deadLineToShow = ''
+  this.icon = ''
 }
 
 ngOnInit(){
-  if(this.deadline !== undefined) {
-    const[year, month, day] = this.deadline.toISOString().split("T")[0].split("-");
+ if(this.deadline !== undefined && this.deadline !== "" && this.deadline !== " "){
+    const[year, month, day] = this.deadline.split("T")[0].split("-");
     const numericMonth = parseInt(month)
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dic'];
     this.deadLineToShow = `${day}, ${months[ numericMonth - 1 ]} ${year}`;
@@ -25,6 +28,7 @@ ngOnInit(){
     this.deadLineToShow = "Deadline date";
   }
 }
+
 
 
 }

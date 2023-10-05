@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TagDirective } from 'projects/ngx-xchange-ui/src/directives/tag.directive';
+import { TagDirective } from '../../../directives/tag.directive';
 
 
 @Component({

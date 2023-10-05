@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';
     AppRoutingModule,
     CoreModule,
     CardInsightsModule,
+    CardDeadlineIndicatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
