@@ -67,12 +67,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".background{\r\n  background-color: rgb(255, 245, 245);\r\n}",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<router-outlet></router-outlet>\r\n<xc-card-insights [insights]=\"{\r\n  completedObjectives: 5,\r\n  activeObjectives: 6,\r\n  suggestedNextSteps: 7,\r\n  involvedProjects: 8\r\n}\"></xc-card-insights>\r\n"
+            "templateData": "<div class=\"background\">\r\n  <router-outlet></router-outlet>\r\n\r\n<br><br>\r\n<xc-card-deadline-indicator\r\ndeadline=\"2023-03-29T14:25:53.4393092+00:00\"\r\nicon=\"./assets/icons/u_file-check-alt.svg\"\r\n>\r\n</xc-card-deadline-indicator>\r\n</div>"
         },
         {
             "name": "ButtonComponent",
@@ -605,7 +605,7 @@
         },
         {
             "name": "PublicComponent",
-            "id": "component-PublicComponent-2a95a7955c8fdb6a38f444d25e2ce8f15dd655b299101aab530f1db3d41e8cd975974c0af66ae4411564cda425e47dff2fbd4e27148cbafe09c96b3bbdd12da3",
+            "id": "component-PublicComponent-82a590c0af640126ca2902ed3911b541ef6ecb638288f432530568951c271926e8114c697d39b699651e727675eb63437527a51ac6a697bf296a75665fdc6ca4",
             "file": "src/app/public/public.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -632,7 +632,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 13,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -646,7 +646,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n@Component({\r\n  selector: 'app-public',\r\n  templateUrl: './public.component.html',\r\n  styleUrls: ['./public.component.scss']\r\n})\r\n\r\nexport class PublicComponent implements OnInit {\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}",
+            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n\r\n@Component({\r\n  selector: 'app-public',\r\n  templateUrl: './public.component.html',\r\n  styleUrls: ['./public.component.scss']\r\n})\r\n\r\nexport class PublicComponent implements OnInit {\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -661,7 +661,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 9
+                "line": 10
             },
             "implements": [
                 "OnInit"
@@ -770,19 +770,19 @@
                 "args": [],
                 "line": 11
             },
-            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
+            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow bg-white\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-01b9e22c184a2a37db1b707dd71ff29633904582f7c7a30584e870df16e0fa872e1841b9f2d32f7b651c4339787248e791c06bc56ee8d5fffb6ffded3ec67a58",
+            "id": "module-AppModule-6211685159ee254a9ba2fa86106633eaa02314e87a00eb9399a5a43edd892bd1b3c942e7284707cbbbd1c2948ab596d064db7d051367a55348834ed4f30c5e17",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CardDeadlineIndicatorModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -899,13 +899,13 @@
         },
         {
             "name": "PublicModule",
-            "id": "module-PublicModule-334299db55fc14e6b135a12e06458145a0465dd47b5e2408668751a016fc5b539f01681cc1bd911322fc3df6bd09877bc726d81202589b7f9c00b3e800845340",
+            "id": "module-PublicModule-2286c9eb26520339aaed64d615e39056f6fa1c984f11f9780a4baeb1afb68eca2c71850c4ce6d12a6ed982cc4e6792d3e3905e005e743c7c2b40b419673da2da",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/public/public.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\nimport { CardDeadlineIndicatorModule } from \"ngx-xchange-ui\";\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n        CardDeadlineIndicatorModule\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent,\r\n       \r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1116,6 +1116,46 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardDeadlineIndicatorComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Deadline Indicator Component',\r\n  component: CardDeadlineIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardDeadlineIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardParagraph.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardParagraphComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Paragraph Component',\r\n  component: CardParagraphComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardParagraphComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardProofIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardProofsIndicatorComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Proof Indicator Component',\r\n  component: CardProofsIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardProofsIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardTasksIndicatorComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Tasks Indicator Component',\r\n  component: CardTasksIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardTasksIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1140,7 +1180,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TagComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/TagComponent',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1150,7 +1190,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TitleH3Component>",
-                "defaultValue": "{\r\n  title: 'xChange/TitleH3Component',\r\n  component: TitleH3Component,\r\n  tags: ['autodocs'],\r\n  render: (args: TitleH3Component) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'xChange/Title H3 Component',\r\n  component: TitleH3Component,\r\n  tags: ['autodocs'],\r\n  render: (args: TitleH3Component) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1196,6 +1236,46 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/discord.svg\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardParagraph.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardProofIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    completeTasks: 4,\r\n    tasks: 5\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1210,7 +1290,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Objective\"\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Objective title\"\r\n  },\r\n}"
             },
             {
                 "name": "Secondary",
@@ -1262,6 +1342,50 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardInsightsComponent>",
                 "file": "src/stories/Card-insight.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardDeadlineIndicatorComponent>",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardParagraphComponent>",
+                "file": "src/stories/CardParagraph.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardProofsIndicatorComponent>",
+                "file": "src/stories/CardProofIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardTasksIndicatorComponent>",
+                "file": "src/stories/CardTasksIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1463,6 +1587,94 @@
                     "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
                 }
             ],
+            "src/stories/CardDeadlineIndicator.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardDeadlineIndicatorComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Deadline Indicator Component',\r\n  component: CardDeadlineIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardDeadlineIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/discord.svg\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/CardParagraph.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardParagraph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardParagraphComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Paragraph Component',\r\n  component: CardParagraphComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardParagraphComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardParagraph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/CardProofIndicator.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardProofsIndicatorComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Proof Indicator Component',\r\n  component: CardProofsIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardProofsIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/CardTasksIndicator.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardTasksIndicatorComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Tasks Indicator Component',\r\n  component: CardTasksIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardTasksIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    completeTasks: 4,\r\n    tasks: 5\r\n  },\r\n}"
+                }
+            ],
             "src/stories/tag.stories.ts": [
                 {
                     "name": "meta",
@@ -1472,7 +1684,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TagComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/TagComponent',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1494,7 +1706,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TitleH3Component>",
-                    "defaultValue": "{\r\n  title: 'xChange/TitleH3Component',\r\n  component: TitleH3Component,\r\n  tags: ['autodocs'],\r\n  render: (args: TitleH3Component) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'xChange/Title H3 Component',\r\n  component: TitleH3Component,\r\n  tags: ['autodocs'],\r\n  render: (args: TitleH3Component) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1504,7 +1716,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Objective\"\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Objective title\"\r\n  },\r\n}"
                 }
             ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
@@ -1565,6 +1777,58 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardInsightsComponent>",
                     "file": "src/stories/Card-insight.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/CardDeadlineIndicator.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardDeadlineIndicatorComponent>",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/CardParagraph.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardParagraphComponent>",
+                    "file": "src/stories/CardParagraph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/CardProofIndicator.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardProofsIndicatorComponent>",
+                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/CardTasksIndicator.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardTasksIndicatorComponent>",
+                    "file": "src/stories/CardTasksIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1864,6 +2128,86 @@
             },
             {
                 "filePath": "src/stories/Card-insight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardParagraph.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardParagraph.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardProofIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardProofIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardTasksIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardTasksIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

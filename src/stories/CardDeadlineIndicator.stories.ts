@@ -23,6 +23,13 @@ type Story = StoryObj<CardDeadlineIndicatorComponent>;
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {
   args: {
-    deadline: "2023-01-29T14:25:53.4393092+00:00"
+    deadline: "2023-01-29T14:25:53.4393092+00:00",
+    icon: "static/media/src/stories/assets/u_calendar-alt.svg"
+  },
+};
+export const Secondary: Story = {
+  args: {
+    deadline: "2023-01-29T14:25:53.4393092+00:00",
+    icon: "./assets/u_calendar-alt.svg"
   },
 };

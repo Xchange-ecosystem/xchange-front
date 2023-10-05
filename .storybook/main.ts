@@ -15,5 +15,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs:[{from:'../projects/ngx-xchange-ui/src/assets/icons/unicons', to: 'assets/' }],
 };
 export default config;
