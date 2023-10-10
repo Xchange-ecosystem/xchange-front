@@ -4,15 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { CardInsightsModule, TittleDirective } from 'projects/ngx-xchange-ui/src/public-api';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TittleDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    CardInsightsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

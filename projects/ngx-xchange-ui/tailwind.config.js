@@ -15,7 +15,6 @@ module.exports = {
   },
   content: [
     "./src/**/*.{html,ts}",
-    "./projects/ngx-xchange-ui/src/**/*.{html,ts}",
   ],
   theme: {
     extend: {
