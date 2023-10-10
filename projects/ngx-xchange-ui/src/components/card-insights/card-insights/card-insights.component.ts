@@ -6,7 +6,6 @@ import { Component , Input } from '@angular/core';
   styleUrls: ['./card-insights.component.css']
 })
 
-
 export class CardInsightsComponent {
   @Input()
   insights: {
@@ -15,6 +14,8 @@ export class CardInsightsComponent {
     suggestedNextSteps: Number | null;
     involvedProjects: Number | null;
   }
+  @Input()
+  imgSrc: string = "";
 
   constructor(){
     this.insights = {
