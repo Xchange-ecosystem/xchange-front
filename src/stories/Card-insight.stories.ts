@@ -28,6 +28,7 @@ export const Primary: Story = {
       completedObjectives:6,
       involvedProjects:7,
       suggestedNextSteps: 8
-    }
+    },
+    imgSrc: '/assetsExample/img/card-insights-example.jpg'
   },
 };

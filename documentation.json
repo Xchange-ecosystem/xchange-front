@@ -63,7 +63,41 @@
         },
         {
             "name": "DummyComponent",
-            "id": "component-DummyComponent-73c3461b201340ccd7c13a807f13f168f9a94829472eade5b4938c220c482ee36fc66990a0ef003d52db2db48f147b9cbcb31cd7b79402a3ea11795af4b6f179",
+            "id": "component-DummyComponent-f08b8df8d52005e1f42ef81329e87eb68cf19c37b733cedcfa8530fa000b833545463bc622214cc938b392d96ccab4a0d640800c0cec9467a25e75a5316b1eb2",
+            "file": "src/stories/Button-View-More.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "adr-dummy",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<img src=\"\" alt=\"Icon\">\n<p [xcButtonView]=\"'button'\" >View</p>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { ButtonViewDirective } from 'projects/ngx-xchange-ui/src/directives/button-view/button-view.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <img src=\"\" alt=\"Icon\">\r\n      <p [xcButtonView]=\"'button'\" >View</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
+            "name": "DummyComponent",
+            "id": "component-DummyComponent-73c3461b201340ccd7c13a807f13f168f9a94829472eade5b4938c220c482ee36fc66990a0ef003d52db2db48f147b9cbcb31cd7b79402a3ea11795af4b6f179-1",
             "file": "src/stories/Heading.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -93,7 +127,10 @@
             "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { TittleDirective } from 'projects/ngx-xchange-ui/src/directives/tittle/tittle.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <p [xcTittle]=\"'button'\" >Click</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": ""
+            "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "DummyComponent-1"
         },
         {
             "name": "HeaderCardComponent",
@@ -776,6 +813,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DummyComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -866,11 +913,21 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -955,6 +1012,17 @@
         ],
         "functions": [],
         "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DummyComponent>",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -1046,6 +1114,28 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/Button-View-More.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DummyComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n}"
+                }
+            ],
             "src/stories/Card-insight.stories.ts": [
                 {
                     "name": "meta",
@@ -1065,7 +1155,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
                 }
             ],
             "src/stories/CardDeadlineIndicator.stories.ts": [
@@ -1248,6 +1338,19 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "src/stories/Button-View-More.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DummyComponent>",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
             "src/stories/Card-insight.stories.ts": [
                 {
                     "name": "Story",
@@ -1516,6 +1619,35 @@
                 "name": "PublicComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DummyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
