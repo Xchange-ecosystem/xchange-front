@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'xc-card-button-view',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-button-view.component.css']
 })
 export class CardButtonViewComponent {
+
+  @Input()
+  icon: String
+
+  constructor(){
+    this.icon = ""
+  }
 
 }

@@ -10,6 +10,9 @@ import { CardButtonViewComponent } from './card-button-view/card-button-view.com
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CardButtonViewComponent
   ]
 })
 export class CarButtonViewModule { }

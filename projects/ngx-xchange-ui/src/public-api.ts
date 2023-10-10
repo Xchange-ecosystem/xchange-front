@@ -25,4 +25,10 @@ export * from './components/header/header.module';
 export * from './components/header/header/header.component';
 export * from './directives/tittle/tittle.module';
 export * from './directives/tittle/tittle.directive';
+export * from './directives/button-view/button-view.module'
+export * from './directives/button-view/button-view.directive'
+export * from './components/car-button-view/car-button-view.module'
+export * from './components/car-button-view/card-button-view/card-button-view.component'
+export * from './components/main-title/main-title.module'
+export * from './components/main-title/main-title/main-title.component'
 

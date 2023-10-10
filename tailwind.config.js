@@ -34,9 +34,9 @@ module.exports = {
         text_Color: "#000000"
       },
       fontSize: {
-        titles: "48px",
+        Main_Titles: "48px",
         subtitles:"32px",
-        objectiveTitle: "24px",
+        projectTitle: "24px",
         cardsTitles: "18px",
         paragraph: "16px",
         tags: "14px",
@@ -67,7 +67,8 @@ module.exports = {
   },
   leading: {
     "tag": "28px",
-    "tag_indicator": "16.8px"
+    "tag_indicator": "16.8px",
+    "title": "48px"
   },
   plugins: [],
 }

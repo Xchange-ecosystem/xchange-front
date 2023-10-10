@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { CardInsightsModule, TittleModule } from 'projects/ngx-xchange-ui/src/public-api';
-import { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';
+import { CardInsightsModule, TittleModule, CardTasksIndicatorModule, CarButtonViewModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { TagModule } from 'ngx-xchange-ui';
 
 
 @NgModule({
@@ -18,8 +18,11 @@ import { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';
     AppRoutingModule,
     CoreModule,
     CardInsightsModule,
-    CardDeadlineIndicatorModule,
-    TittleModule
+    TittleModule,
+    CarButtonViewModule,
+    TagModule,
+    CardTasksIndicatorModule,
+    CarButtonViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

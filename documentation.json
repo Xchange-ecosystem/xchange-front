@@ -59,11 +59,45 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"background\">\r\n  <router-outlet></router-outlet>\r\n  <br><br>\r\n  <h1 [xcTittle]=\"'sadfsdf'\">Hola mundo</h1>\r\n\r\n<br><br>\r\n<xc-card-deadline-indicator\r\ndeadline=\"2023-03-29T14:25:53.4393092+00:00\"\r\nicon=\"./assets/icons/u_file-check-alt.svg\"\r\n>\r\n</xc-card-deadline-indicator>\r\n</div>"
+            "templateData": "<div class=\"background\">\r\n  <router-outlet></router-outlet>\r\n  <br><br>\r\n  <h1 [xcTittle]=\"'sadfsdf'\">Hola mundo</h1>\r\n\r\n<br><br>\r\n<xc-card-deadline-indicator\r\ndeadline=\"2023-03-29T14:25:53.4393092+00:00\"\r\nicon=\"./assets/icons/u_file-check-alt.svg\"\r\n>\r\n</xc-card-deadline-indicator>\r\n<br><br><br>\r\n<xc-card-button-view \r\n[icon]=\"'./assets/icons/Right_4.svg'\"\r\n></xc-card-button-view>\r\n<br><br><br>\r\n</div>"
         },
         {
             "name": "DummyComponent",
-            "id": "component-DummyComponent-73c3461b201340ccd7c13a807f13f168f9a94829472eade5b4938c220c482ee36fc66990a0ef003d52db2db48f147b9cbcb31cd7b79402a3ea11795af4b6f179",
+            "id": "component-DummyComponent-f08b8df8d52005e1f42ef81329e87eb68cf19c37b733cedcfa8530fa000b833545463bc622214cc938b392d96ccab4a0d640800c0cec9467a25e75a5316b1eb2",
+            "file": "src/stories/Button-View-More.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "adr-dummy",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<img src=\"\" alt=\"Icon\">\n<p [xcButtonView]=\"'button'\" >View</p>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { ButtonViewDirective } from 'projects/ngx-xchange-ui/src/directives/button-view/button-view.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <img src=\"\" alt=\"Icon\">\r\n      <p [xcButtonView]=\"'button'\" >View</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": ""
+        },
+        {
+            "name": "DummyComponent",
+            "id": "component-DummyComponent-73c3461b201340ccd7c13a807f13f168f9a94829472eade5b4938c220c482ee36fc66990a0ef003d52db2db48f147b9cbcb31cd7b79402a3ea11795af4b6f179-1",
             "file": "src/stories/Heading.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -93,7 +127,10 @@
             "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { TittleDirective } from 'projects/ngx-xchange-ui/src/directives/tittle/tittle.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <p [xcTittle]=\"'button'\" >Click</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": ""
+            "stylesData": "",
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "DummyComponent-1"
         },
         {
             "name": "HeaderCardComponent",
@@ -506,13 +543,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-2dbd71ae884489fa941faabcb4312f906c901c0816a828590ed8eeeda2fb93b984bb2427fc72e0e466c5a451d1b861e156eed32d1c37bb8d73722132db336c44",
+            "id": "module-AppModule-5c29cb92a3ef351d3ddacf5325c0505beb80169939deda656ff7901009d560b4845fabf0e20b1818c999c23b5cfa10079ec3685bb201b7533b2deb0bfd1de104",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, TittleModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CardDeadlineIndicatorModule,\r\n    TittleModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, TittleModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';\r\nimport { CarButtonViewModule } from 'projects/ngx-xchange-ui/src/components/car-button-view/car-button-view.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CardDeadlineIndicatorModule,\r\n    TittleModule,\r\n    CarButtonViewModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -776,6 +813,26 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DummyComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button-View.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardButtonViewComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Button Porbe',\r\n  component: CardButtonViewComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardButtonViewComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -861,6 +918,26 @@
                 "deprecationMessage": "",
                 "type": "Preview",
                 "defaultValue": "{\r\n  parameters: {\r\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\r\n    controls: {\r\n      matchers: {\r\n        color: /(background|color)$/i,\r\n        date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button-View.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -959,6 +1036,28 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<DummyComponent>",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardButtonViewComponent>",
+                "file": "src/stories/Button-View.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<CardInsightsComponent>",
                 "file": "src/stories/Card-insight.stories.ts",
                 "deprecated": false,
@@ -1046,6 +1145,50 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/Button-View-More.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DummyComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n}"
+                }
+            ],
+            "src/stories/Button-View.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button-View.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardButtonViewComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Button Porbe',\r\n  component: CardButtonViewComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardButtonViewComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button-View.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
+                }
+            ],
             "src/stories/Card-insight.stories.ts": [
                 {
                     "name": "meta",
@@ -1248,6 +1391,32 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "src/stories/Button-View-More.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DummyComponent>",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Button-View.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardButtonViewComponent>",
+                    "file": "src/stories/Button-View.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
             "src/stories/Card-insight.stories.ts": [
                 {
                     "name": "Story",
@@ -1516,6 +1685,55 @@
                 "name": "PublicComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DummyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

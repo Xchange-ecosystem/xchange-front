@@ -7,14 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class CardTasksIndicatorComponent {
   @Input()
-  completeTasks: Number;
+  icon: String;
   @Input()
-  tasks: Number;
+  content: String;
 
 
   constructor() {
-    this.completeTasks = 0;
-    this.tasks = 0;
+    this.icon = "";
+    this.content = "";
   }
 
 }
