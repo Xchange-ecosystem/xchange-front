@@ -4,18 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { CardInsightsModule, TittleDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, MainHeadingModule } from 'projects/ngx-xchange-ui/src/public-api';
+import {  TagModule } from 'ngx-xchange-ui';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TittleDirective
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    CardInsightsModule
+    CardInsightsModule,
+    CarButtonViewModule,
+    TagModule,
+    CardTasksIndicatorModule,
+    CarButtonViewModule,
+    MainHeadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

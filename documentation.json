@@ -1,19 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "User",
-            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400",
-            "file": "src/stories/User.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "export interface User {}\r\n",
-            "properties": [],
-            "indexSignatures": [],
-            "methods": []
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -67,149 +54,17 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".background{\r\n  background-color: rgb(255, 245, 245);\r\n}",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<router-outlet></router-outlet>\r\n<xc-card-insights [insights]=\"{\r\n  completedObjectives: 5,\r\n  activeObjectives: 6,\r\n  suggestedNextSteps: 7,\r\n  involvedProjects: 8\r\n}\"></xc-card-insights>\r\n<p xcTittle>hello</p>\r\n"
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-502c6abda417339da493e76cd3c2a684c773d3fc72909f801205fbff5530b3d366380f430857d0cdf5d633f8408ab2890bd97bda38dd5ff2b9aeddc5780cee29",
-            "file": "src/stories/button.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
-            "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat background color to use\n",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 28,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 824,
-                            "end": 838,
-                            "flags": 8421376,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 330,
-                            "tagName": {
-                                "pos": 825,
-                                "end": 833,
-                                "flags": 8421376,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 42,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 22,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nHow large should the button be?\n",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 34,
-                    "type": "\"small\" | \"medium\" | \"large\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 48,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [
-                {
-                    "name": "CommonModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  imports: [CommonModule],\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-button {\r\n  @apply font-manrope font-extrabold rounded-[3rem] cursor-pointer inline-block leading-none;\r\n  /* font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1; */\r\n}\r\n.storybook-button--primary {\r\n  @apply text-Background  bg-pink-200\r\n  /* color: white;\r\n  background-color: #1ea7fd; */\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 50
-                    }
-                }
-            }
+            "templateData": "<nav\r\n  class=\"bg-black w-full h-[72px] py-2 px-6 flex justify-between items-center shrink-0\"\r\n>\r\n  <div\r\n    class=\"bg-cover bg-center w-[139px] h-[56px]\"\r\n    style=\"\r\n      background-image: url(https://s3-alpha-sig.figma.com/img/66ac/5656/d05aaca315d86a803ae2c8c657d4b327?Expires=1698019200&Signature=DSh3-yC4Jo8eqW1AUnNlVgZSKJpV5GqIyFw~T0F~aGPmSde5exJxakDuvD~VGfG~l8hbPdS1gNa93wRH2SY7A9s-rO~bpHrPOiv3bn81bbZb0WkBrbQV~g9Fpxpk2syxvgGoG1X6ERIJNjSEA-231H5qEhfrJfAVa4aL3C~3AcT65ked8dFD1JN0p7abbjldbmPlSpgrUPtQvElSkbErKW~v0Am~gUZSBUEYrvnXeWurccmdZKrU9Jig2nKADZpqT96I1fAEuePP~aSSQPVMfqXluXZQJNLRYQ~JOG1qxauiyWYSonawCPtB7dSZSEC2eu2yc~YBSDT7NjRmG9X9WQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n    \"\r\n  ></div>\r\n  <section class=\"flex items-center gap-4\">\r\n    <a href=\"#\"\r\n      ><img src=\"../assets/icons/fi_search.svg\" alt=\"Navbar icon\"\r\n    /></a>\r\n    <a href=\"#\"\r\n      ><img src=\"../assets/icons/Notification Indicator.svg\" alt=\"Navbar icon\"\r\n    /></a>\r\n    <a href=\"#\"><img src=\"../assets/icons/fi_user.svg\" alt=\"Navbar icon\" /></a>\r\n    <a><img src=\"../assets/icons/fi_info.svg\" alt=\"Navbar icon\" /></a>\r\n  </section>\r\n</nav>\r\n<aside\r\n  class=\"bg-black absolute top-[72px] left-0 w-[72px] h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0\"\r\n>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/u_rocket.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/u_create-dashboard.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/fi_users.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n</aside>\r\n<div class=\"mt-4 ml-[96px] mr-[40px] p-[30px]\">\r\n  <header\r\n    class=\"flex flex-col items-start w-full h-[256px] p-8 gap-8 bg-cover bg-center relative\"\r\n    style=\"background-image: url(../assets/images/Header.svg)\"\r\n  >\r\n    <h1\r\n      class=\"text-Main_Titles text-Secondary_Fonts font-manrope font-semibold leading-[48px]\"\r\n    >\r\n      Welcome to the Venture Builder Operating System\r\n    </h1>\r\n    <xc-card-insights\r\n      [insights]=\"{\r\n        completedObjectives: 5,\r\n        activeObjectives: 6,\r\n        suggestedNextSteps: 7,\r\n        involvedProjects: 8\r\n      }\"\r\n    ></xc-card-insights>\r\n    <div\r\n      class=\"absolute top-[149px] right-[105px] bg-white rounded-full flex justify-center items-center w-[214px] h-[214px]\"\r\n    >\r\n      <div\r\n        class=\"bg-cover bg-center w-[204px] h-[204px]\"\r\n        style=\"\r\n          background-image: url(https://s3-alpha-sig.figma.com/img/24f0/c9ff/cb2865fc85cfa30c066c9e70b5c87ffd?Expires=1698019200&Signature=PwqZWLT2Sbty3NBNWhquqROjo8URJtAQjFaWhYHM9EkratxVapyt0JiRYxWNTazLd6GSMhXMrmwh7fc370z8adsXZOYCatFVpA~IWsMlqwmxsQDDwe3ayL3Zh-ADmkFaI44zAv9eeQn5vDu96z6Adtx~cxqZtsQVUiMjxZaxAnzT4P8m9Eo2HwSWK1PCFISSgnXOlxlI6V2sQdvrZjMj6LCO3tFEHmq33LaUMSrwFfkm24qTADImx3cB66A5~aJtSqUtJDCTyVN9xjPkXNT4NRpPkdD4muPh2rxj4OFnV7yCg5TpLoIMmOcdOLQ-GNt~GFUcVYnD6hKCuua46IpDnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n        \"\r\n      ></div>\r\n    </div>\r\n  </header>\r\n  <main class=\"w-full flex justify-center items-start gap-8 mt-[80px]\">\r\n    <section class=\"p-8 w-[682px] flex flex-col items-center gap-8\">\r\n      <h2\r\n        class=\"text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]\"\r\n      >\r\n        My projects\r\n      </h2>\r\n      <article class=\"flex w-full p-4 projectCrdShadow rounded-lg\">\r\n        <div class=\"flex flex-col justify-start w-full p-4 gap-4\">\r\n          <div\r\n            class=\"bg-cover bg-center bg-no-repeat w-full h-[255px] p-8 items-stretch\"\r\n            style=\"\r\n              background-image: url(https://s3-alpha-sig.figma.com/img/cc40/8650/666516dd3c0f2d2cabc52cff45555fa5?Expires=1698019200&Signature=gxgiVvunsIAuFGiBzJPiFzOIzpusZlzbPmFVnIlM30jtRX7-GQw487h7yaitHMR9XaWRtDInoFhYEP6F-IHwAU~fPQ97eK8l9paYK0fl9N5kuyIMZ0zhb9XX5LYOL2xgskHzwi0ZrU8VnJGI2fucQyeMHNIBaKk~KkEtqhaDS8-4TN7NbwthXTWSPXTlnszgSU~AXr86yslOZVaErPGDcrGJMcqVjx3EvAo8PjYw44yyzmSWwRR5ZyM-ijdUQ-32d4BmxminS69wWEZbKxmGkz3cJn~yyg74cisFBc0V-y2UHKSPjps-bEHws1hlqRK6HfCVkJTOOwfOOSOAppTAXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n            \"\r\n          ></div>\r\n          <div class=\"flex justify-between items-center\">\r\n            <h3\r\n              class=\"text-Main_Fonts text-projectTitle font-manrope font-medium\"\r\n            >\r\n              Project title\r\n            </h3>\r\n            <xc-tag [tagContent]=\"'Role'\"></xc-tag>\r\n          </div>\r\n          <p\r\n            class=\"text-Main_Fonts text-paragraph font-normal font-manrope leading-normal self-stretch\"\r\n          >\r\n            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt\r\n            in mauris eu tortor porttitor accumsan. Duis aute irure dolor in\r\n            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\r\n            pariatur. Nullam sit amet magna in magna gravida.\r\n          </p>\r\n        </div>\r\n      </article>\r\n    </section>\r\n    <section class=\"p-8 w-[682px] flex flex-col items-center gap-8\">\r\n      <h2\r\n        class=\"text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]\"\r\n      >\r\n        My objectives\r\n      </h2>\r\n      <article\r\n        class=\"w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg\"\r\n      >\r\n        <h3\r\n          class=\"text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal\"\r\n        >\r\n          Objective title\r\n        </h3>\r\n        <div class=\"flex gap-8\">\r\n          <xc-tag [tagContent]=\"'Project'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Role'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Dimension'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Category'\"></xc-tag>\r\n        </div>\r\n        <p\r\n          class=\"text-Secondary_Fonts text-paragraph font-normal leading-normal\"\r\n        >\r\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in\r\n          mauris eu tortor porttitor accumsan. (...)\r\n        </p>\r\n        <div class=\"pt-4 flex justify-between items-center\">\r\n          <div class=\"flex\">\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n          </div>\r\n          <xc-card-button-view\r\n            [icon]=\"'../assets/icons/Right_4.svg'\"\r\n          ></xc-card-button-view>\r\n        </div>\r\n      </article>\r\n      <article\r\n        class=\"w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg\"\r\n      >\r\n        <h3\r\n          class=\"text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal\"\r\n        >\r\n          Objective title\r\n        </h3>\r\n        <div class=\"flex gap-8\">\r\n          <xc-tag [tagContent]=\"'Project'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Role'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Dimension'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Category'\"></xc-tag>\r\n        </div>\r\n        <p\r\n          class=\"text-Secondary_Fonts text-paragraph font-normal leading-normal\"\r\n        >\r\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in\r\n          mauris eu tortor porttitor accumsan. (...)\r\n        </p>\r\n        <div class=\"pt-4 flex justify-between items-center\">\r\n          <div class=\"flex\">\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n          </div>\r\n          <xc-card-button-view\r\n            [icon]=\"'../assets/icons/Right_4.svg'\"\r\n          ></xc-card-button-view>\r\n        </div>\r\n      </article>\r\n    </section>\r\n  </main>\r\n</div>\r\n<br><br><br><br>\r\n<h1 [xcMainHeading]>hola mundo</h1>"
         },
         {
             "name": "DummyComponent",
-            "id": "component-DummyComponent-17a29581ffbfebd05d5f9908e96b1d6183f6e4be5d179468ecb0eb1dab5e0a99bf2613cb8cc63c18481a074795a7c7634c69a73f2b792d110dba010d85d09036",
-            "file": "src/stories/Heading.stories.ts",
+            "id": "component-DummyComponent-f08b8df8d52005e1f42ef81329e87eb68cf19c37b733cedcfa8530fa000b833545463bc622214cc938b392d96ccab4a0d640800c0cec9467a25e75a5316b1eb2",
+            "file": "src/stories/Button-View-More.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -218,7 +73,7 @@
             "selector": "adr-dummy",
             "styleUrls": [],
             "styles": [],
-            "template": "<p xcTittle >Click</p>",
+            "template": "<img src=\"\" alt=\"Icon\">\n<p [xcButtonView]=\"'button'\" >View</p>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -235,7 +90,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { TittleDirective } from 'projects/ngx-xchange-ui/src/directives/tittle/tittle.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <p xcTittle >Click</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { ButtonViewDirective } from 'projects/ngx-xchange-ui/src/directives/button-view/button-view.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <img src=\"\" alt=\"Icon\">\r\n      <p [xcButtonView]=\"'button'\" >View</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
@@ -282,82 +137,6 @@
             ],
             "stylesData": "",
             "templateData": "<button class=\"text-Main_accent bg-slate-300 w-9 h-4\">Mi boton</button>\r\n"
-        },
-        {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-2be65d757903e1068f51ac561d212aac4eff48aa0ca9141c5d1f0e51915091c22b983193c432fa9d236673f3cb7bbabb05b7f4c417044a2de0260d85dc1263a8",
-            "file": "src/stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 65,
-                    "type": "User | null",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 74,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 68,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 71,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-header',\r\n  template: `<header>\r\n    <div class=\"storybook-header\">\r\n      <div>\r\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\r\n              fill=\"#FFF\"\r\n            />\r\n            <path\r\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\r\n              fill=\"#555AB9\"\r\n            />\r\n            <path\r\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\r\n              fill=\"#91BAF8\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        <h1>Acme</h1>\r\n      </div>\r\n      <div>\r\n        <div *ngIf=\"user\">\r\n          <span class=\"welcome\">\r\n            Welcome, <b>{{ user.name }}</b\r\n            >!\r\n          </span>\r\n          <storybook-button\r\n            *ngIf=\"user\"\r\n            size=\"small\"\r\n            (onClick)=\"onLogout.emit($event)\"\r\n            label=\"Log out\"\r\n          ></storybook-button>\r\n        </div>\r\n        <div *ngIf=\"!user\">\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            size=\"small\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onLogin.emit($event)\"\r\n            label=\"Log in\"\r\n          ></storybook-button>\r\n          <storybook-button\r\n            *ngIf=\"!user\"\r\n            primary\r\n            size=\"small\"\r\n            primary=\"true\"\r\n            class=\"margin-left\"\r\n            (onClick)=\"onCreateAccount.emit($event)\"\r\n            label=\"Sign up\"\r\n          ></storybook-button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </header>`,\r\n  styleUrls: ['./header.css'],\r\n})\r\nexport default class HeaderComponent {\r\n  @Input()\r\n  user: User | null = null;\r\n\r\n  @Output()\r\n  onLogin = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onLogout = new EventEmitter<Event>();\r\n\r\n  @Output()\r\n  onCreateAccount = new EventEmitter<Event>();\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\n.storybook-header svg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 20px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header button + button {\r\n  margin-left: 10px;\r\n}\r\n\r\n.storybook-header .welcome {\r\n  color: #333;\r\n  font-size: 14px;\r\n  margin-right: 10px;\r\n}\r\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": ""
         },
         {
             "name": "HomeComponent",
@@ -422,7 +201,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<h3 class=\"text-[#b4f255] font-bold font-manrope text-titles bg-[red]\">Esta sera la home del proyecto</h3>\r\n<br><br><br><br>\r\n<app-user-name-card name=\"Jose Manuel\" lastName=\"Cabrera Rojas\"></app-user-name-card>\r\n<br><br><br><br>\r\n"
+            "templateData": ""
         },
         {
             "name": "LoginComponent",
@@ -555,91 +334,8 @@
             "templateData": "<p>Error 404, page not found!</p>\r\n"
         },
         {
-            "name": "PageComponent",
-            "id": "component-PageComponent-65ac8f4d96f3d447fcc29e2616666b0b362372cb976d10a41ae9bd2db64613ce5e69356d9548c49510c5b2df2826dfe04eed6119a7513d6148781725511fb52c",
-            "file": "src/stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "User | null",
-                    "optional": false,
-                    "description": "",
-                    "line": 64
-                }
-            ],
-            "methodsClass": [
-                {
-                    "name": "doCreateAccount",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 74,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogin",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 70,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                },
-                {
-                    "name": "doLogout",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 66,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport type { User } from './User';\r\n\r\n@Component({\r\n  selector: 'storybook-page',\r\n  template: `<article>\r\n    <storybook-header\r\n      [user]=\"user\"\r\n      (onLogout)=\"doLogout()\"\r\n      (onLogin)=\"doLogin()\"\r\n      (onCreateAccount)=\"doCreateAccount()\"\r\n    ></storybook-header>\r\n    <section class=\"storybook-page\">\r\n      <h2>Pages in Storybook</h2>\r\n      <p>\r\n        We recommend building UIs with a\r\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          <strong>component-driven</strong>\r\n        </a>\r\n        process starting with atomic components and ending with pages.\r\n      </p>\r\n      <p>\r\n        Render pages with mock data. This makes it easy to build and review page states without\r\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\r\n        in Storybook:\r\n      </p>\r\n      <ul>\r\n        <li>\r\n          Use a higher-level connected component. Storybook helps you compose such data from the\r\n          \"args\" of child component stories\r\n        </li>\r\n        <li>\r\n          Assemble data in the page component from your services. You can mock these services out\r\n          using Storybook.\r\n        </li>\r\n      </ul>\r\n      <p>\r\n        Get a guided tutorial on component-driven development at\r\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n          Storybook tutorials\r\n        </a>\r\n        . Read more in the\r\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\r\n        .\r\n      </p>\r\n      <div class=\"tip-wrapper\">\r\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\r\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <g fill=\"none\" fillRule=\"evenodd\">\r\n            <path\r\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\r\n              id=\"a\"\r\n              fill=\"#999\"\r\n            />\r\n          </g>\r\n        </svg>\r\n        Viewports addon in the toolbar\r\n      </div>\r\n    </section>\r\n  </article>`,\r\n  styleUrls: ['./page.css'],\r\n})\r\nexport default class PageComponent {\r\n  user: User | null = null;\r\n\r\n  doLogout() {\r\n    this.user = null;\r\n  }\r\n\r\n  doLogin() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n\r\n  doCreateAccount() {\r\n    this.user = { name: 'Jane Doe' };\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-page {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-size: 14px;\r\n  line-height: 24px;\r\n  padding: 48px 20px;\r\n  margin: 0 auto;\r\n  max-width: 600px;\r\n  color: #333;\r\n}\r\n\r\n.storybook-page h2 {\r\n  font-weight: 700;\r\n  font-size: 32px;\r\n  line-height: 1;\r\n  margin: 0 0 4px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-page p {\r\n  margin: 1em 0;\r\n}\r\n\r\n.storybook-page a {\r\n  text-decoration: none;\r\n  color: #1ea7fd;\r\n}\r\n\r\n.storybook-page ul {\r\n  padding-left: 30px;\r\n  margin: 1em 0;\r\n}\r\n\r\n.storybook-page li {\r\n  margin-bottom: 8px;\r\n}\r\n\r\n.storybook-page .tip {\r\n  display: inline-block;\r\n  border-radius: 1em;\r\n  font-size: 11px;\r\n  line-height: 12px;\r\n  font-weight: 700;\r\n  background: #e7fdd8;\r\n  color: #66bf3c;\r\n  padding: 4px 12px;\r\n  margin-right: 10px;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-page .tip-wrapper {\r\n  font-size: 13px;\r\n  line-height: 20px;\r\n  margin-top: 40px;\r\n  margin-bottom: 40px;\r\n}\r\n\r\n.storybook-page .tip-wrapper svg {\r\n  display: inline-block;\r\n  height: 12px;\r\n  width: 12px;\r\n  margin-right: 4px;\r\n  vertical-align: top;\r\n  margin-top: 3px;\r\n}\r\n\r\n.storybook-page .tip-wrapper svg path {\r\n  fill: #1ea7fd;\r\n}\r\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
-            "stylesData": ""
-        },
-        {
             "name": "PublicComponent",
-            "id": "component-PublicComponent-2a95a7955c8fdb6a38f444d25e2ce8f15dd655b299101aab530f1db3d41e8cd975974c0af66ae4411564cda425e47dff2fbd4e27148cbafe09c96b3bbdd12da3",
+            "id": "component-PublicComponent-82a590c0af640126ca2902ed3911b541ef6ecb638288f432530568951c271926e8114c697d39b699651e727675eb63437527a51ac6a697bf296a75665fdc6ca4",
             "file": "src/app/public/public.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -666,7 +362,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 13,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -680,7 +376,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n@Component({\r\n  selector: 'app-public',\r\n  templateUrl: './public.component.html',\r\n  styleUrls: ['./public.component.scss']\r\n})\r\n\r\nexport class PublicComponent implements OnInit {\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}",
+            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n\r\n@Component({\r\n  selector: 'app-public',\r\n  templateUrl: './public.component.html',\r\n  styleUrls: ['./public.component.scss']\r\n})\r\n\r\nexport class PublicComponent implements OnInit {\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -695,7 +391,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 9
+                "line": 10
             },
             "implements": [
                 "OnInit"
@@ -804,19 +500,19 @@
                 "args": [],
                 "line": 11
             },
-            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
+            "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow bg-white\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-26bf95915ec43e747b2ebdc9488d86f3a446e44dfb34f79b9cfe95d2423eb7e69f0f7f68d43e5f7b4b9772a88a7a04444bac0c9264f8154282ac5b51728cd3cb",
+            "id": "module-AppModule-e716b8164ee5631034a6e3caf402846c7e9892e3a2667507a7323923fb07adfc376a9ca36c39a6a6ea32c79019cbebde3e70c933cb15c7b0117d6c488e70dab3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, TittleDirective } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    TittleDirective\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, MainHeadingModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport {  TagModule } from 'ngx-xchange-ui';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CarButtonViewModule,\r\n    TagModule,\r\n    CardTasksIndicatorModule,\r\n    CarButtonViewModule,\r\n    MainHeadingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -933,13 +629,13 @@
         },
         {
             "name": "PublicModule",
-            "id": "module-PublicModule-334299db55fc14e6b135a12e06458145a0465dd47b5e2408668751a016fc5b539f01681cc1bd911322fc3df6bd09877bc726d81202589b7f9c00b3e800845340",
+            "id": "module-PublicModule-445696ea3b452f55c9a8195074196aa0be3058e613b66d28f3f9fb572fed8faca92c23a4035b53b7b58fb7197ab88ef5d58ae243a2145491acad19825552c5c2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/public/public.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\nimport { CardDeadlineIndicatorModule } from \"ngx-xchange-ui\";\r\nimport { MainTitleModule } from \"projects/ngx-xchange-ui/src/public-api\";\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n        CardDeadlineIndicatorModule,\r\n        MainTitleModule\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent,\r\n       \r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1031,13 +727,13 @@
         },
         {
             "name": "ShareModule",
-            "id": "module-ShareModule-b56aaad582ad022ec2b22e66bc2b3e964fc6da2e71ffbab00fe9623b8e0241e9d48e7ba9823495ef75a22d7d3036b0b0bba0a9bcdc68cb504651b884b37d05f2",
+            "id": "module-ShareModule-2b4feb74ce71baeb42213ab9c176627c03146f00f285583348018e2c2f0d0e6e4638f46d3b4f48c58e1c1ce5897b215346067f44828e97a42d3c874e56e9bae6",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/core/share/share.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { RouterModule } from \"@angular/router\";\r\n\r\nimport { NotFoundComponent } from './components/not-found/not-found.component'\r\n\r\n@NgModule({\r\n    imports: [\r\n        HttpClientModule,\r\n        RouterModule\r\n    ],\r\n    declarations: [\r\n    NotFoundComponent\r\n  ],\r\n    exports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n        NotFoundComponent,\r\n    ],\r\n    providers: []\r\n})\r\n\r\nexport class ShareModule{\r\n    constructor() {}\r\n}",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { RouterModule } from \"@angular/router\";\r\n\r\nimport { NotFoundComponent } from './components/not-found/not-found.component'\r\nimport { MainTitleModule } from \"projects/ngx-xchange-ui/src/public-api\";\r\n\r\n\r\n@NgModule({\r\n    imports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n    ],\r\n    declarations: [\r\n    NotFoundComponent\r\n  ],\r\n    exports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n        NotFoundComponent,\r\n    ],\r\n    providers: []\r\n})\r\n\r\nexport class ShareModule{\r\n    constructor() {}\r\n}",
             "children": [
                 {
                     "type": "providers",
@@ -1077,64 +773,24 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "Large",
+                "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/Button-View-More.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const loginButton = await canvas.getByRole('button', {\r\n      name: /Log in/i,\r\n    });\r\n    await userEvent.click(loginButton);\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n}"
+                "type": "Meta<DummyComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/Button-View.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<Button>",
-                "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n}"
+                "type": "Meta<CardButtonViewComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Button Porbe',\r\n  component: CardButtonViewComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardButtonViewComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1150,31 +806,51 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Header.stories.ts",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<Header>",
-                "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component: Header,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "type": "Meta<CardDeadlineIndicatorComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Deadline Indicator Component',\r\n  component: CardDeadlineIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardDeadlineIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Heading.stories.ts",
+                "file": "src/stories/CardParagraph.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<DummyComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                "type": "Meta<CardParagraphComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Paragraph Component',\r\n  component: CardParagraphComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardParagraphComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Page.stories.ts",
+                "file": "src/stories/CardProofIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<Page>",
-                "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
+                "type": "Meta<CardProofsIndicatorComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Proof Indicator Component',\r\n  component: CardProofsIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardProofsIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardTasksIndicatorComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Card Tasks Indicator Component',\r\n  component: CardTasksIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardTasksIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tag.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TagComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1200,11 +876,21 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/Button-View-More.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n  },\r\n}"
+                "defaultValue": "{\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button-View.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1214,37 +900,67 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Heading.stories.ts",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"static/media/src/stories/assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardParagraph.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardProofIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/u_file-check-alt.svg\",\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tag.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
             },
             {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Button',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/u_calendar-alt.svg\"\r\n  },\r\n}"
             },
             {
                 "name": "User_Card_Name",
@@ -1263,8 +979,19 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Button>",
-                "file": "src/stories/Button.stories.ts",
+                "rawtype": "StoryObj<DummyComponent>",
+                "file": "src/stories/Button-View-More.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardButtonViewComponent>",
+                "file": "src/stories/Button-View.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1285,8 +1012,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Header>",
-                "file": "src/stories/Header.stories.ts",
+                "rawtype": "StoryObj<CardDeadlineIndicatorComponent>",
+                "file": "src/stories/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1296,8 +1023,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DummyComponent>",
-                "file": "src/stories/Heading.stories.ts",
+                "rawtype": "StoryObj<CardParagraphComponent>",
+                "file": "src/stories/CardParagraph.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1307,8 +1034,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<Page>",
-                "file": "src/stories/Page.stories.ts",
+                "rawtype": "StoryObj<CardProofsIndicatorComponent>",
+                "file": "src/stories/CardProofIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CardTasksIndicatorComponent>",
+                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 180
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TagComponent>",
+                "file": "src/stories/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1328,120 +1077,48 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/Button.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
+            "src/stories/Button-View-More.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/Button-View-More.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<Button>",
-                    "defaultValue": "{\r\n  title: 'Example/Button',\r\n  component: Button,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n}"
+                    "type": "Meta<DummyComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
                 },
                 {
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
+                    "file": "src/stories/Button-View-More.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Button',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n}"
                 }
             ],
-            "src/stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
+            "src/stories/Button-View.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Header.stories.ts",
+                    "file": "src/stories/Button-View.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<Header>",
-                    "defaultValue": "{\r\n  title: 'Example/Header',\r\n  component: Header,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/angular/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  render: (args) => ({ props: args }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
-                }
-            ],
-            "src/stories/Page.stories.ts": [
+                    "type": "Meta<CardButtonViewComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Button Porbe',\r\n  component: CardButtonViewComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardButtonViewComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
                 {
-                    "name": "LoggedIn",
+                    "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
+                    "file": "src/stories/Button-View.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement);\r\n    const loginButton = await canvas.getByRole('button', {\r\n      name: /Log in/i,\r\n    });\r\n    await userEvent.click(loginButton);\r\n  },\r\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  render: (args: Page) => ({\r\n    props: args,\r\n  }),\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Page.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<Page>",
-                    "defaultValue": "{\r\n  title: 'Example/Page',\r\n  component: Page,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/angular/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [Button, Header],\r\n      imports: [CommonModule],\r\n    }),\r\n  ],\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
                 }
             ],
             "src/stories/Card-insight.stories.ts": [
@@ -1463,29 +1140,127 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    }\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
                 }
             ],
-            "src/stories/Heading.stories.ts": [
+            "src/stories/CardDeadlineIndicator.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Heading.stories.ts",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<DummyComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                    "type": "Meta<CardDeadlineIndicatorComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Deadline Indicator Component',\r\n  component: CardDeadlineIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardDeadlineIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Heading.stories.ts",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"static/media/src/stories/assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/CardParagraph.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardParagraph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardParagraphComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Paragraph Component',\r\n  component: CardParagraphComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardParagraphComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardParagraph.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/CardProofIndicator.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardProofsIndicatorComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Proof Indicator Component',\r\n  component: CardProofsIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardProofsIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/CardTasksIndicator.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardTasksIndicatorComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Card Tasks Indicator Component',\r\n  component: CardTasksIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardTasksIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/u_file-check-alt.svg\",\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/tag.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tag.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TagComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tag.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
                 }
             ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
@@ -1526,13 +1301,26 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "src/stories/Button.stories.ts": [
+            "src/stories/Button-View-More.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<Button>",
-                    "file": "src/stories/Button.stories.ts",
+                    "rawtype": "StoryObj<DummyComponent>",
+                    "file": "src/stories/Button-View-More.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/Button-View.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardButtonViewComponent>",
+                    "file": "src/stories/Button-View.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1552,39 +1340,65 @@
                     "kind": 180
                 }
             ],
-            "src/stories/Header.stories.ts": [
+            "src/stories/CardDeadlineIndicator.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<Header>",
-                    "file": "src/stories/Header.stories.ts",
+                    "rawtype": "StoryObj<CardDeadlineIndicatorComponent>",
+                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 180
                 }
             ],
-            "src/stories/Heading.stories.ts": [
+            "src/stories/CardParagraph.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<DummyComponent>",
-                    "file": "src/stories/Heading.stories.ts",
+                    "rawtype": "StoryObj<CardParagraphComponent>",
+                    "file": "src/stories/CardParagraph.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 180
                 }
             ],
-            "src/stories/Page.stories.ts": [
+            "src/stories/CardProofIndicator.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<Page>",
-                    "file": "src/stories/Page.stories.ts",
+                    "rawtype": "StoryObj<CardProofsIndicatorComponent>",
+                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/CardTasksIndicator.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CardTasksIndicatorComponent>",
+                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 180
+                }
+            ],
+            "src/stories/tag.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TagComponent>",
+                    "file": "src/stories/tag.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1665,7 +1479,7 @@
         ]
     },
     "coverage": {
-        "count": 2,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -1771,17 +1585,16 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
+                "filePath": "src/stories/Button-View-More.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DummyComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/Button-View-More.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1791,7 +1604,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/Button-View-More.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1801,7 +1614,67 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
+                "filePath": "src/stories/Button-View.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button-View.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Card-insight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Card-insight.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1811,17 +1684,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Card-insight.stories.ts",
+                "filePath": "src/stories/CardParagraph.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1831,7 +1694,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Card-insight.stories.ts",
+                "filePath": "src/stories/CardParagraph.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1841,27 +1704,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Header.stories.ts",
+                "filePath": "src/stories/CardProofIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1871,26 +1714,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Heading.stories.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "DummyComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Heading.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Heading.stories.ts",
+                "filePath": "src/stories/CardProofIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1900,27 +1724,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedIn",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Page.stories.ts",
+                "filePath": "src/stories/CardTasksIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1930,39 +1734,33 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/User.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
+                "filePath": "src/stories/CardTasksIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
-            },
-            {
-                "filePath": "src/stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
+                "filePath": "src/stories/tag.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
+                "filePath": "src/stories/tag.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
                 "status": "low"
             }
         ]

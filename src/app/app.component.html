@@ -1,8 +1,193 @@
-<router-outlet></router-outlet>
-<xc-card-insights [insights]="{
-  completedObjectives: 5,
-  activeObjectives: 6,
-  suggestedNextSteps: 7,
-  involvedProjects: 8
-}"></xc-card-insights>
-<p xcTittle>hello</p>
+<nav
+  class="bg-black w-full h-[72px] py-2 px-6 flex justify-between items-center shrink-0"
+>
+  <div
+    class="bg-cover bg-center w-[139px] h-[56px]"
+    style="
+      background-image: url(https://s3-alpha-sig.figma.com/img/66ac/5656/d05aaca315d86a803ae2c8c657d4b327?Expires=1698019200&Signature=DSh3-yC4Jo8eqW1AUnNlVgZSKJpV5GqIyFw~T0F~aGPmSde5exJxakDuvD~VGfG~l8hbPdS1gNa93wRH2SY7A9s-rO~bpHrPOiv3bn81bbZb0WkBrbQV~g9Fpxpk2syxvgGoG1X6ERIJNjSEA-231H5qEhfrJfAVa4aL3C~3AcT65ked8dFD1JN0p7abbjldbmPlSpgrUPtQvElSkbErKW~v0Am~gUZSBUEYrvnXeWurccmdZKrU9Jig2nKADZpqT96I1fAEuePP~aSSQPVMfqXluXZQJNLRYQ~JOG1qxauiyWYSonawCPtB7dSZSEC2eu2yc~YBSDT7NjRmG9X9WQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+    "
+  ></div>
+  <section class="flex items-center gap-4">
+    <a href="#"
+      ><img src="../assets/icons/fi_search.svg" alt="Navbar icon"
+    /></a>
+    <a href="#"
+      ><img src="../assets/icons/Notification Indicator.svg" alt="Navbar icon"
+    /></a>
+    <a href="#"><img src="../assets/icons/fi_user.svg" alt="Navbar icon" /></a>
+    <a><img src="../assets/icons/fi_info.svg" alt="Navbar icon" /></a>
+  </section>
+</nav>
+<aside
+  class="bg-black absolute top-[72px] left-0 w-[72px] h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0"
+>
+  <a
+    href="#"
+    class="bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]"
+    ><img src="../assets/icons/u_rocket.svg" alt="Nav icon"
+  /></a>
+  <a
+    href="#"
+    class="bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]"
+    ><img src="../assets/icons/u_create-dashboard.svg" alt="Nav icon"
+  /></a>
+  <a
+    href="#"
+    class="bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]"
+    ><img src="../assets/icons/fi_users.svg" alt="Nav icon"
+  /></a>
+</aside>
+<div class="mt-4 ml-[96px] mr-[40px] p-[30px]">
+  <header
+    class="flex flex-col items-start w-full h-[256px] p-8 gap-8 bg-cover bg-center relative"
+    style="background-image: url(../assets/images/Header.svg)"
+  >
+    <h1
+      class="text-Main_Titles text-Secondary_Fonts font-manrope font-semibold leading-[48px]"
+    >
+      Welcome to the Venture Builder Operating System
+    </h1>
+    <xc-card-insights
+      [insights]="{
+        completedObjectives: 5,
+        activeObjectives: 6,
+        suggestedNextSteps: 7,
+        involvedProjects: 8
+      }"
+    ></xc-card-insights>
+    <div
+      class="absolute top-[149px] right-[105px] bg-white rounded-full flex justify-center items-center w-[214px] h-[214px]"
+    >
+      <div
+        class="bg-cover bg-center w-[204px] h-[204px]"
+        style="
+          background-image: url(https://s3-alpha-sig.figma.com/img/24f0/c9ff/cb2865fc85cfa30c066c9e70b5c87ffd?Expires=1698019200&Signature=PwqZWLT2Sbty3NBNWhquqROjo8URJtAQjFaWhYHM9EkratxVapyt0JiRYxWNTazLd6GSMhXMrmwh7fc370z8adsXZOYCatFVpA~IWsMlqwmxsQDDwe3ayL3Zh-ADmkFaI44zAv9eeQn5vDu96z6Adtx~cxqZtsQVUiMjxZaxAnzT4P8m9Eo2HwSWK1PCFISSgnXOlxlI6V2sQdvrZjMj6LCO3tFEHmq33LaUMSrwFfkm24qTADImx3cB66A5~aJtSqUtJDCTyVN9xjPkXNT4NRpPkdD4muPh2rxj4OFnV7yCg5TpLoIMmOcdOLQ-GNt~GFUcVYnD6hKCuua46IpDnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+        "
+      ></div>
+    </div>
+  </header>
+  <main class="w-full flex justify-center items-start gap-8 mt-[80px]">
+    <section class="p-8 w-[682px] flex flex-col items-center gap-8">
+      <h2
+        class="text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]"
+      >
+        My projects
+      </h2>
+      <article class="flex w-full p-4 projectCrdShadow rounded-lg">
+        <div class="flex flex-col justify-start w-full p-4 gap-4">
+          <div
+            class="bg-cover bg-center bg-no-repeat w-full h-[255px] p-8 items-stretch"
+            style="
+              background-image: url(https://s3-alpha-sig.figma.com/img/cc40/8650/666516dd3c0f2d2cabc52cff45555fa5?Expires=1698019200&Signature=gxgiVvunsIAuFGiBzJPiFzOIzpusZlzbPmFVnIlM30jtRX7-GQw487h7yaitHMR9XaWRtDInoFhYEP6F-IHwAU~fPQ97eK8l9paYK0fl9N5kuyIMZ0zhb9XX5LYOL2xgskHzwi0ZrU8VnJGI2fucQyeMHNIBaKk~KkEtqhaDS8-4TN7NbwthXTWSPXTlnszgSU~AXr86yslOZVaErPGDcrGJMcqVjx3EvAo8PjYw44yyzmSWwRR5ZyM-ijdUQ-32d4BmxminS69wWEZbKxmGkz3cJn~yyg74cisFBc0V-y2UHKSPjps-bEHws1hlqRK6HfCVkJTOOwfOOSOAppTAXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);
+            "
+          ></div>
+          <div class="flex justify-between items-center">
+            <h3
+              class="text-Main_Fonts text-projectTitle font-manrope font-medium"
+            >
+              Project title
+            </h3>
+            <xc-tag [tagContent]="'Role'"></xc-tag>
+          </div>
+          <p
+            class="text-Main_Fonts text-paragraph font-normal font-manrope leading-normal self-stretch"
+          >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt
+            in mauris eu tortor porttitor accumsan. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Nullam sit amet magna in magna gravida.
+          </p>
+        </div>
+      </article>
+    </section>
+    <section class="p-8 w-[682px] flex flex-col items-center gap-8">
+      <h2
+        class="text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]"
+      >
+        My objectives
+      </h2>
+      <article
+        class="w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg"
+      >
+        <h3
+          class="text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal"
+        >
+          Objective title
+        </h3>
+        <div class="flex gap-8">
+          <xc-tag [tagContent]="'Project'"></xc-tag>
+          <xc-tag [tagContent]="'Role'"></xc-tag>
+          <xc-tag [tagContent]="'Dimension'"></xc-tag>
+          <xc-tag [tagContent]="'Category'"></xc-tag>
+        </div>
+        <p
+          class="text-Secondary_Fonts text-paragraph font-normal leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in
+          mauris eu tortor porttitor accumsan. (...)
+        </p>
+        <div class="pt-4 flex justify-between items-center">
+          <div class="flex">
+            <xc-card-tasks-indicator
+              [icon]="'../assets/icons/u_file-check-alt.svg'"
+              [content]="'4/5 complete'"
+            ></xc-card-tasks-indicator>
+            <xc-card-tasks-indicator
+              [icon]="'../assets/icons/u_file-check-alt.svg'"
+              [content]="'4/5 complete'"
+            ></xc-card-tasks-indicator>
+            <xc-card-tasks-indicator
+              [icon]="'../assets/icons/u_file-check-alt.svg'"
+              [content]="'4/5 complete'"
+            ></xc-card-tasks-indicator>
+          </div>
+          <xc-card-button-view
+            [icon]="'../assets/icons/Right_4.svg'"
+          ></xc-card-button-view>
+        </div>
+      </article>
+      <article
+        class="w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg"
+      >
+        <h3
+          class="text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal"
+        >
+          Objective title
+        </h3>
+        <div class="flex gap-8">
+          <xc-tag [tagContent]="'Project'"></xc-tag>
+          <xc-tag [tagContent]="'Role'"></xc-tag>
+          <xc-tag [tagContent]="'Dimension'"></xc-tag>
+          <xc-tag [tagContent]="'Category'"></xc-tag>
+        </div>
+        <p
+          class="text-Secondary_Fonts text-paragraph font-normal leading-normal"
+        >
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in
+          mauris eu tortor porttitor accumsan. (...)
+        </p>
+        <div class="pt-4 flex justify-between items-center">
+          <div class="flex">
+            <xc-card-tasks-indicator
+              [icon]="'../assets/icons/u_file-check-alt.svg'"
+              [content]="'4/5 complete'"
+            ></xc-card-tasks-indicator>
+            <xc-card-tasks-indicator
+              [icon]="'../assets/icons/u_file-check-alt.svg'"
+              [content]="'4/5 complete'"
+            ></xc-card-tasks-indicator>
+            <xc-card-tasks-indicator
+              [icon]="'../assets/icons/u_file-check-alt.svg'"
+              [content]="'4/5 complete'"
+            ></xc-card-tasks-indicator>
+          </div>
+          <xc-card-button-view
+            [icon]="'../assets/icons/Right_4.svg'"
+          ></xc-card-button-view>
+        </div>
+      </article>
+    </section>
+  </main>
+</div>
+<br><br><br><br>
+<h1 [xcMainHeading]>hola mundo</h1>

@@ -15,6 +15,7 @@ module.exports = {
   },
   content: [
     "./src/**/*.{html,ts}",
+    "./projects/ngx-xchange-ui/src/**/*.{html,ts}"
   ],
   theme: {
     extend: {
@@ -28,12 +29,12 @@ module.exports = {
         Main_Fonts: "#111111",
         Secondary_Fonts: "#5D5D5D",
         Tertiary_Fonts: "#A7A7A7",
-        Quaternary_Fonts: "F3F4F4",
+        Quaternary_Fonts: "#F3F4F4",
         Background: "#FFFFFF",
         text_Color: "#000000"
       },
       fontSize: {
-        titles: "48px",
+        Main_Titles: "48px",
         subtitles:"32px",
         objectiveTitle: "24px",
         cardsTitles: "18px",
@@ -53,16 +54,21 @@ module.exports = {
         extrabold: '800',
         black: '900',
       },
+      screens: {
+        'xsm': '375px',
+        'sm': '414px',
+        'spc600': '600px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1440px',
+        '2xl': '1536px',
+      },
+      leading: {
+        "tag": "28px",
+        "tag_indicator": "16.8px",
+        "title": "48px"
+      },
     },
-  },
-  screens: {
-    'xsm': '375px',
-    'sm': '414px',
-    'spc600': '600px',
-    'md': '768px',
-    'lg': '1024px',
-    'xl': '1440px',
-    '2xl': '1536px',
   },
   plugins: [],
 }

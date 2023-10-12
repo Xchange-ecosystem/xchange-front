@@ -30,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/css/styles.scss"
             ],
             "scripts": []
           },
@@ -159,6 +159,36 @@
               "zone.js",
               "zone.js/testing"
             ]
+          }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/ngx-xchange-ui/.storybook",
+            "browserTarget": "ngx-xchange-ui:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ngx-xchange-ui"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/ngx-xchange-ui/.storybook",
+            "browserTarget": "ngx-xchange-ui:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ngx-xchange-ui"
+            ],
+            "outputDir": "dist/storybook/ngx-xchange-ui"
           }
         }
       }
