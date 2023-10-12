@@ -1,5 +1,5 @@
 import { Directive, HostBinding, Input, OnInit } from '@angular/core';
-import { APP_TAILWIND_STYLES } from '../styles';
+import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
   selector: '[xcButtonView]'
@@ -19,8 +19,7 @@ export class ButtonViewDirective implements OnInit {
     return this.twClasses
   }
   ngOnInit() {
-  //  this.el.nativeElement.style.backgroundColor = 'yellow';
-    // this.el.nativeElement.class = 'button';
+
   }
 
 }

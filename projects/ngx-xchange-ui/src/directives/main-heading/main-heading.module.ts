@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TittleDirective } from './tittle.directive';
+import { MainHeadingDirective } from './main-heading.directive';
+
+
+
 @NgModule({
   declarations: [
-    TittleDirective
+    MainHeadingDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    TittleDirective
+    MainHeadingDirective
   ]
 })
-
-
-export class TittleModule { }
+export class MainHeadingModule { }

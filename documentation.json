@@ -59,7 +59,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"background\">\r\n  <router-outlet></router-outlet>\r\n  <br><br>\r\n  <h1 [xcTittle]=\"'sadfsdf'\">Hola mundo</h1>\r\n\r\n<br><br>\r\n<xc-card-deadline-indicator\r\ndeadline=\"2023-03-29T14:25:53.4393092+00:00\"\r\nicon=\"./assets/icons/u_file-check-alt.svg\"\r\n>\r\n</xc-card-deadline-indicator>\r\n<br><br><br>\r\n<xc-card-button-view \r\n[icon]=\"'./assets/icons/Right_4.svg'\"\r\n></xc-card-button-view>\r\n<br><br><br>\r\n</div>"
+            "templateData": "<nav\r\n  class=\"bg-black w-full h-[72px] py-2 px-6 flex justify-between items-center shrink-0\"\r\n>\r\n  <div\r\n    class=\"bg-cover bg-center w-[139px] h-[56px]\"\r\n    style=\"\r\n      background-image: url(https://s3-alpha-sig.figma.com/img/66ac/5656/d05aaca315d86a803ae2c8c657d4b327?Expires=1698019200&Signature=DSh3-yC4Jo8eqW1AUnNlVgZSKJpV5GqIyFw~T0F~aGPmSde5exJxakDuvD~VGfG~l8hbPdS1gNa93wRH2SY7A9s-rO~bpHrPOiv3bn81bbZb0WkBrbQV~g9Fpxpk2syxvgGoG1X6ERIJNjSEA-231H5qEhfrJfAVa4aL3C~3AcT65ked8dFD1JN0p7abbjldbmPlSpgrUPtQvElSkbErKW~v0Am~gUZSBUEYrvnXeWurccmdZKrU9Jig2nKADZpqT96I1fAEuePP~aSSQPVMfqXluXZQJNLRYQ~JOG1qxauiyWYSonawCPtB7dSZSEC2eu2yc~YBSDT7NjRmG9X9WQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n    \"\r\n  ></div>\r\n  <section class=\"flex items-center gap-4\">\r\n    <a href=\"#\"\r\n      ><img src=\"../assets/icons/fi_search.svg\" alt=\"Navbar icon\"\r\n    /></a>\r\n    <a href=\"#\"\r\n      ><img src=\"../assets/icons/Notification Indicator.svg\" alt=\"Navbar icon\"\r\n    /></a>\r\n    <a href=\"#\"><img src=\"../assets/icons/fi_user.svg\" alt=\"Navbar icon\" /></a>\r\n    <a><img src=\"../assets/icons/fi_info.svg\" alt=\"Navbar icon\" /></a>\r\n  </section>\r\n</nav>\r\n<aside\r\n  class=\"bg-black absolute top-[72px] left-0 w-[72px] h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0\"\r\n>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/u_rocket.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/u_create-dashboard.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/fi_users.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n</aside>\r\n<div class=\"mt-4 ml-[96px] mr-[40px] p-[30px]\">\r\n  <header\r\n    class=\"flex flex-col items-start w-full h-[256px] p-8 gap-8 bg-cover bg-center relative\"\r\n    style=\"background-image: url(../assets/images/Header.svg)\"\r\n  >\r\n    <h1\r\n      class=\"text-Main_Titles text-Secondary_Fonts font-manrope font-semibold leading-[48px]\"\r\n    >\r\n      Welcome to the Venture Builder Operating System\r\n    </h1>\r\n    <xc-card-insights\r\n      [insights]=\"{\r\n        completedObjectives: 5,\r\n        activeObjectives: 6,\r\n        suggestedNextSteps: 7,\r\n        involvedProjects: 8\r\n      }\"\r\n    ></xc-card-insights>\r\n    <div\r\n      class=\"absolute top-[149px] right-[105px] bg-white rounded-full flex justify-center items-center w-[214px] h-[214px]\"\r\n    >\r\n      <div\r\n        class=\"bg-cover bg-center w-[204px] h-[204px]\"\r\n        style=\"\r\n          background-image: url(https://s3-alpha-sig.figma.com/img/24f0/c9ff/cb2865fc85cfa30c066c9e70b5c87ffd?Expires=1698019200&Signature=PwqZWLT2Sbty3NBNWhquqROjo8URJtAQjFaWhYHM9EkratxVapyt0JiRYxWNTazLd6GSMhXMrmwh7fc370z8adsXZOYCatFVpA~IWsMlqwmxsQDDwe3ayL3Zh-ADmkFaI44zAv9eeQn5vDu96z6Adtx~cxqZtsQVUiMjxZaxAnzT4P8m9Eo2HwSWK1PCFISSgnXOlxlI6V2sQdvrZjMj6LCO3tFEHmq33LaUMSrwFfkm24qTADImx3cB66A5~aJtSqUtJDCTyVN9xjPkXNT4NRpPkdD4muPh2rxj4OFnV7yCg5TpLoIMmOcdOLQ-GNt~GFUcVYnD6hKCuua46IpDnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n        \"\r\n      ></div>\r\n    </div>\r\n  </header>\r\n  <main class=\"w-full flex justify-center items-start gap-8 mt-[80px]\">\r\n    <section class=\"p-8 w-[682px] flex flex-col items-center gap-8\">\r\n      <h2\r\n        class=\"text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]\"\r\n      >\r\n        My projects\r\n      </h2>\r\n      <article class=\"flex w-full p-4 projectCrdShadow rounded-lg\">\r\n        <div class=\"flex flex-col justify-start w-full p-4 gap-4\">\r\n          <div\r\n            class=\"bg-cover bg-center bg-no-repeat w-full h-[255px] p-8 items-stretch\"\r\n            style=\"\r\n              background-image: url(https://s3-alpha-sig.figma.com/img/cc40/8650/666516dd3c0f2d2cabc52cff45555fa5?Expires=1698019200&Signature=gxgiVvunsIAuFGiBzJPiFzOIzpusZlzbPmFVnIlM30jtRX7-GQw487h7yaitHMR9XaWRtDInoFhYEP6F-IHwAU~fPQ97eK8l9paYK0fl9N5kuyIMZ0zhb9XX5LYOL2xgskHzwi0ZrU8VnJGI2fucQyeMHNIBaKk~KkEtqhaDS8-4TN7NbwthXTWSPXTlnszgSU~AXr86yslOZVaErPGDcrGJMcqVjx3EvAo8PjYw44yyzmSWwRR5ZyM-ijdUQ-32d4BmxminS69wWEZbKxmGkz3cJn~yyg74cisFBc0V-y2UHKSPjps-bEHws1hlqRK6HfCVkJTOOwfOOSOAppTAXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n            \"\r\n          ></div>\r\n          <div class=\"flex justify-between items-center\">\r\n            <h3\r\n              class=\"text-Main_Fonts text-projectTitle font-manrope font-medium\"\r\n            >\r\n              Project title\r\n            </h3>\r\n            <xc-tag [tagContent]=\"'Role'\"></xc-tag>\r\n          </div>\r\n          <p\r\n            class=\"text-Main_Fonts text-paragraph font-normal font-manrope leading-normal self-stretch\"\r\n          >\r\n            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt\r\n            in mauris eu tortor porttitor accumsan. Duis aute irure dolor in\r\n            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\r\n            pariatur. Nullam sit amet magna in magna gravida.\r\n          </p>\r\n        </div>\r\n      </article>\r\n    </section>\r\n    <section class=\"p-8 w-[682px] flex flex-col items-center gap-8\">\r\n      <h2\r\n        class=\"text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]\"\r\n      >\r\n        My objectives\r\n      </h2>\r\n      <article\r\n        class=\"w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg\"\r\n      >\r\n        <h3\r\n          class=\"text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal\"\r\n        >\r\n          Objective title\r\n        </h3>\r\n        <div class=\"flex gap-8\">\r\n          <xc-tag [tagContent]=\"'Project'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Role'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Dimension'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Category'\"></xc-tag>\r\n        </div>\r\n        <p\r\n          class=\"text-Secondary_Fonts text-paragraph font-normal leading-normal\"\r\n        >\r\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in\r\n          mauris eu tortor porttitor accumsan. (...)\r\n        </p>\r\n        <div class=\"pt-4 flex justify-between items-center\">\r\n          <div class=\"flex\">\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n          </div>\r\n          <xc-card-button-view\r\n            [icon]=\"'../assets/icons/Right_4.svg'\"\r\n          ></xc-card-button-view>\r\n        </div>\r\n      </article>\r\n      <article\r\n        class=\"w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg\"\r\n      >\r\n        <h3\r\n          class=\"text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal\"\r\n        >\r\n          Objective title\r\n        </h3>\r\n        <div class=\"flex gap-8\">\r\n          <xc-tag [tagContent]=\"'Project'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Role'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Dimension'\"></xc-tag>\r\n          <xc-tag [tagContent]=\"'Category'\"></xc-tag>\r\n        </div>\r\n        <p\r\n          class=\"text-Secondary_Fonts text-paragraph font-normal leading-normal\"\r\n        >\r\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in\r\n          mauris eu tortor porttitor accumsan. (...)\r\n        </p>\r\n        <div class=\"pt-4 flex justify-between items-center\">\r\n          <div class=\"flex\">\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n          </div>\r\n          <xc-card-button-view\r\n            [icon]=\"'../assets/icons/Right_4.svg'\"\r\n          ></xc-card-button-view>\r\n        </div>\r\n      </article>\r\n    </section>\r\n  </main>\r\n</div>\r\n<br><br><br><br>\r\n<h1 [xcMainHeading]>hola mundo</h1>"
         },
         {
             "name": "DummyComponent",
@@ -94,43 +94,6 @@
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": ""
-        },
-        {
-            "name": "DummyComponent",
-            "id": "component-DummyComponent-73c3461b201340ccd7c13a807f13f168f9a94829472eade5b4938c220c482ee36fc66990a0ef003d52db2db48f147b9cbcb31cd7b79402a3ea11795af4b6f179-1",
-            "file": "src/stories/Heading.stories.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "adr-dummy",
-            "styleUrls": [],
-            "styles": [],
-            "template": "<p [xcTittle]=\"'button'\" >Click</p>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { TittleDirective } from 'projects/ngx-xchange-ui/src/directives/tittle/tittle.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <p [xcTittle]=\"'button'\" >Click</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "DummyComponent-1"
         },
         {
             "name": "HeaderCardComponent",
@@ -238,7 +201,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<h3 class=\"text-[#b4f255] font-bold font-manrope text-titles bg-[red]\">Esta sera la home del proyecto</h3>\r\n<br><br><br><br>\r\n<app-user-name-card name=\"Jose Manuel\" lastName=\"Cabrera Rojas\"></app-user-name-card>\r\n<br><br><br><br>\r\n"
+            "templateData": ""
         },
         {
             "name": "LoginComponent",
@@ -543,13 +506,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-5c29cb92a3ef351d3ddacf5325c0505beb80169939deda656ff7901009d560b4845fabf0e20b1818c999c23b5cfa10079ec3685bb201b7533b2deb0bfd1de104",
+            "id": "module-AppModule-e716b8164ee5631034a6e3caf402846c7e9892e3a2667507a7323923fb07adfc376a9ca36c39a6a6ea32c79019cbebde3e70c933cb15c7b0117d6c488e70dab3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, TittleModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport { CardDeadlineIndicatorModule } from 'ngx-xchange-ui';\r\nimport { CarButtonViewModule } from 'projects/ngx-xchange-ui/src/components/car-button-view/car-button-view.module';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CardDeadlineIndicatorModule,\r\n    TittleModule,\r\n    CarButtonViewModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, MainHeadingModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport {  TagModule } from 'ngx-xchange-ui';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CarButtonViewModule,\r\n    TagModule,\r\n    CardTasksIndicatorModule,\r\n    CarButtonViewModule,\r\n    MainHeadingModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -666,13 +629,13 @@
         },
         {
             "name": "PublicModule",
-            "id": "module-PublicModule-2286c9eb26520339aaed64d615e39056f6fa1c984f11f9780a4baeb1afb68eca2c71850c4ce6d12a6ed982cc4e6792d3e3905e005e743c7c2b40b419673da2da",
+            "id": "module-PublicModule-445696ea3b452f55c9a8195074196aa0be3058e613b66d28f3f9fb572fed8faca92c23a4035b53b7b58fb7197ab88ef5d58ae243a2145491acad19825552c5c2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/public/public.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\nimport { CardDeadlineIndicatorModule } from \"ngx-xchange-ui\";\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n        CardDeadlineIndicatorModule\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent,\r\n       \r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\nimport { CardDeadlineIndicatorModule } from \"ngx-xchange-ui\";\r\nimport { MainTitleModule } from \"projects/ngx-xchange-ui/src/public-api\";\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n        CardDeadlineIndicatorModule,\r\n        MainTitleModule\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent,\r\n       \r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -764,13 +727,13 @@
         },
         {
             "name": "ShareModule",
-            "id": "module-ShareModule-b56aaad582ad022ec2b22e66bc2b3e964fc6da2e71ffbab00fe9623b8e0241e9d48e7ba9823495ef75a22d7d3036b0b0bba0a9bcdc68cb504651b884b37d05f2",
+            "id": "module-ShareModule-2b4feb74ce71baeb42213ab9c176627c03146f00f285583348018e2c2f0d0e6e4638f46d3b4f48c58e1c1ce5897b215346067f44828e97a42d3c874e56e9bae6",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/core/share/share.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { RouterModule } from \"@angular/router\";\r\n\r\nimport { NotFoundComponent } from './components/not-found/not-found.component'\r\n\r\n@NgModule({\r\n    imports: [\r\n        HttpClientModule,\r\n        RouterModule\r\n    ],\r\n    declarations: [\r\n    NotFoundComponent\r\n  ],\r\n    exports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n        NotFoundComponent,\r\n    ],\r\n    providers: []\r\n})\r\n\r\nexport class ShareModule{\r\n    constructor() {}\r\n}",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { RouterModule } from \"@angular/router\";\r\n\r\nimport { NotFoundComponent } from './components/not-found/not-found.component'\r\nimport { MainTitleModule } from \"projects/ngx-xchange-ui/src/public-api\";\r\n\r\n\r\n@NgModule({\r\n    imports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n    ],\r\n    declarations: [\r\n    NotFoundComponent\r\n  ],\r\n    exports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n        NotFoundComponent,\r\n    ],\r\n    providers: []\r\n})\r\n\r\nexport class ShareModule{\r\n    constructor() {}\r\n}",
             "children": [
                 {
                     "type": "providers",
@@ -883,16 +846,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Heading.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<DummyComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -987,17 +940,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    completeTasks: 4,\r\n    tasks: 5\r\n  },\r\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/Heading.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/u_file-check-alt.svg\",\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1104,17 +1047,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardTasksIndicatorComponent>",
                 "file": "src/stories/CardTasksIndicator.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 180
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<DummyComponent>",
-                "file": "src/stories/Heading.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1306,29 +1238,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    completeTasks: 4,\r\n    tasks: 5\r\n  },\r\n}"
-                }
-            ],
-            "src/stories/Heading.stories.ts": [
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Heading.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<DummyComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/HeaderComponent',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, TittleDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/Heading.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/u_file-check-alt.svg\",\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
                 }
             ],
             "src/stories/tag.stories.ts": [
@@ -1476,19 +1386,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardTasksIndicatorComponent>",
                     "file": "src/stories/CardTasksIndicator.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 180
-                }
-            ],
-            "src/stories/Heading.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<DummyComponent>",
-                    "file": "src/stories/Heading.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1838,35 +1735,6 @@
             },
             {
                 "filePath": "src/stories/CardTasksIndicator.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Heading.stories.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "DummyComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Heading.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/Heading.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

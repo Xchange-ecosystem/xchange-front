@@ -54,21 +54,21 @@ module.exports = {
         extrabold: '800',
         black: '900',
       },
+      screens: {
+        'xsm': '375px',
+        'sm': '414px',
+        'spc600': '600px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1440px',
+        '2xl': '1536px',
+      },
+      leading: {
+        "tag": "28px",
+        "tag_indicator": "16.8px",
+        "title": "48px"
+      },
     },
-  },
-  screens: {
-    'xsm': '375px',
-    'sm': '414px',
-    'spc600': '600px',
-    'md': '768px',
-    'lg': '1024px',
-    'xl': '1440px',
-    '2xl': '1536px',
-  },
-  leading: {
-    "tag": "28px",
-    "tag_indicator": "16.8px",
-    "title": "48px"
   },
   plugins: [],
 }
