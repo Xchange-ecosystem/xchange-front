@@ -31,4 +31,4 @@ export * from './components/main-title/main-title.module'
 export * from './components/main-title/main-title/main-title.component'
 export * from './directives/main-heading/main-heading.module'
 export * from './directives/main-heading/main-heading.directive'
-
+export * from './components/rounded-image/rounded-image/rounded-image.component'
