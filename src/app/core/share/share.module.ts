@@ -3,7 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from "@angular/router";
 
 import { NotFoundComponent } from './components/not-found/not-found.component'
-import { MainTitleModule } from "projects/ngx-xchange-ui/src/public-api";
+
 
 
 @NgModule({

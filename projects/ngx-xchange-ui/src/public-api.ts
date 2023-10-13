@@ -9,10 +9,6 @@ export * from './lib/ngx-xchange-ui.component';
 export * from './lib/ngx-xchange-ui.module';
 export * from './components/card-insights/card-insights.module';
 export * from './components/card-insights/card-insights/card-insights.component';
-export * from './components/tag/tag/tag.component';
-export * from './components/tag/tag.module';
-export * from './components/title-h3/title-h3/title-h3.component';
-export * from './components/title-h3/title-h3.module';
 export * from './components/card-paragraph/card-paragraph/card-paragraph.component';
 export * from './components/card-paragraph/card-paragraph.module';
 export * from './components/card-tasks-indicator/card-tasks-indicator/card-tasks-indicator.component';
@@ -27,8 +23,24 @@ export * from './directives/button-view/button-view.module'
 export * from './directives/button-view/button-view.directive'
 export * from './components/car-button-view/car-button-view.module'
 export * from './components/car-button-view/card-button-view/card-button-view.component'
-export * from './components/main-title/main-title.module'
-export * from './components/main-title/main-title/main-title.component'
 export * from './directives/main-heading/main-heading.module'
 export * from './directives/main-heading/main-heading.directive'
+export * from './directives/aside-nav-button/aside-nav-button.module';
+export * from './directives/aside-nav-button/aside-nav-button.directive';
+export * from './directives/aside-nav/aside-nav.module';
+export * from './directives/aside-nav/aside-nav.directive';
+export * from './directives/header-nav/header-nav.module';
+export * from './directives/header-nav/header-nav.directive';
+export * from './directives/tag/tag.module';
+export * from './directives/tag/tag.directive';
+export * from './directives/tenant-logo/tenant-logo.module';
+export * from './directives/tenant-logo/tenant-logo.directive';
+export * from './components/tag-component/tag-component.module'
+export * from './components/tag-component/tag-component/tag-component.component';
+export * from './components/titles/titles.module';
+export * from './components/titles/titles/titles.component';
+export * from './directives/paragraph/paragraph.module';
+export * from './directives/paragraph/paragraph.directive';
+
+
 

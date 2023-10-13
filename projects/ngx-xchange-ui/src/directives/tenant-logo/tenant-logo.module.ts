@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleH3Component } from './title-h3/title-h3.component';
+import { TenantLogoDirective } from './tenant-logo.directive';
 
 
 
 @NgModule({
   declarations: [
-    TitleH3Component
+    TenantLogoDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    TitleH3Component
+    TenantLogoDirective
   ]
 })
-export class TitleH3Module { }
+export class TenantLogoModule { }

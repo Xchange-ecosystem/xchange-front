@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleH3Component } from './title-h3.component';
+import { TitlesComponent } from './titles.component';
 
-describe('TitleH3Component', () => {
-  let component: TitleH3Component;
-  let fixture: ComponentFixture<TitleH3Component>;
+describe('TitlesComponent', () => {
+  let component: TitlesComponent;
+  let fixture: ComponentFixture<TitlesComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TitleH3Component]
+      declarations: [TitlesComponent]
     });
-    fixture = TestBed.createComponent(TitleH3Component);
+    fixture = TestBed.createComponent(TitlesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

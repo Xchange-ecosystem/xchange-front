@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainTitleComponent } from './main-title/main-title.component';
+import { ParagraphDirective } from './paragraph.directive';
 
 
 
 @NgModule({
   declarations: [
-    MainTitleComponent
+    ParagraphDirective
   ],
   imports: [
     CommonModule
-  ], 
+  ],
   exports: [
-    MainTitleComponent
+    ParagraphDirective
   ]
 })
-export class MainTitleModule { }
+export class ParagraphModule { }

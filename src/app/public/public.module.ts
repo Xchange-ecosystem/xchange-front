@@ -8,14 +8,12 @@ import { HeaderCardComponent } from './components/header-card/header-card.compon
 import { UserNameCardComponent } from './components/user-name-card/user-name-card.component';
 import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 import { CardDeadlineIndicatorModule } from "ngx-xchange-ui";
-import { MainTitleModule } from "projects/ngx-xchange-ui/src/public-api";
 
 @NgModule({
     imports: [
         PublicRoutingModule,
         ShareModule,
         CardDeadlineIndicatorModule,
-        MainTitleModule
     ],
     declarations: [
         PublicComponent,

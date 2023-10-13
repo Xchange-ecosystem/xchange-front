@@ -542,6 +542,10 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -550,12 +554,20 @@ video {
   right: 105px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .top-\[149px\] {
   top: 149px;
 }
 
 .top-\[72px\] {
   top: 72px;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .ml-\[96px\] {
@@ -732,10 +744,6 @@ video {
 
 .self-stretch {
   align-self: stretch;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .text-ellipsis {

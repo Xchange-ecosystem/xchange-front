@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { TagComponent } from '../../projects/ngx-xchange-ui/src/public-api';
+import { TagComponentComponent} from '../../projects/ngx-xchange-ui/src/public-api';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
-const meta: Meta<TagComponent> = {
+const meta: Meta<TagComponentComponent> = {
   title: 'xChange/Tag Component',
-  component: TagComponent,
+  component: TagComponentComponent,
   tags: ['autodocs'],
-  render: (args: TagComponent) => ({
+  render: (args: TagComponentComponent) => ({
     props: {
       backgroundColor: null,
       ...args,
@@ -18,7 +18,7 @@ const meta: Meta<TagComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<TagComponent>;
+type Story = StoryObj<TagComponentComponent>;
 
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {

@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TagComponent } from './tag/tag.component';
+import { AsideNavDirective } from './aside-nav.directive';
+
 
 
 @NgModule({
   declarations: [
-    TagComponent
+    AsideNavDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    TagComponent
+    AsideNavDirective
   ]
 })
-export class TagModule { }
+export class AsideNavModule { }

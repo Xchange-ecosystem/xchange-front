@@ -25,5 +25,6 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   font-manrope
   font-medium
   leading-normal
-  `
+  `,
+  
 };
