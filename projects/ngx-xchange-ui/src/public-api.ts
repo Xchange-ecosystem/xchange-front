@@ -41,6 +41,4 @@ export * from './components/titles/titles.module';
 export * from './components/titles/titles/titles.component';
 export * from './directives/paragraph/paragraph.module';
 export * from './directives/paragraph/paragraph.directive';
-
-
-
+export * from './components/rounded-image/rounded-image/rounded-image.component'
