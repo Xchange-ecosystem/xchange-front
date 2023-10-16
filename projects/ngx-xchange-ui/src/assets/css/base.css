@@ -542,20 +542,12 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .left-0 {
   left: 0px;
 }
 
 .right-\[105px\] {
   right: 105px;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .top-\[149px\] {
@@ -638,12 +630,12 @@ video {
   height: 72px;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-6 {
@@ -963,8 +955,20 @@ video {
   line-height: 48px;
 }
 
+.leading-more {
+  line-height: 33.6px;
+}
+
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-tag {
+  line-height: 28px;
+}
+
+.leading-tag_indicator {
+  line-height: 16.8px;
 }
 
 .text-Main_Fonts {

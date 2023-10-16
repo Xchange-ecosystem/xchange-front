@@ -9,7 +9,10 @@ import { RoundedImageComponent } from './rounded-image/rounded-image.component';
     RoundedImageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+  ],
+  exports: [
+    RoundedImageComponent
   ]
 })
 export class RoundedImageModule { }

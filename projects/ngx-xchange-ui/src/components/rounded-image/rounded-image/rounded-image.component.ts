@@ -3,8 +3,6 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'xc-rounded-image',
-  standalone:true,
-  imports: [CommonModule],
   templateUrl: './rounded-image.component.html',
   styleUrls: ['./rounded-image.component.css']
 })
