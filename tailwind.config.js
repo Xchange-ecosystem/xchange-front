@@ -69,7 +69,8 @@ module.exports = {
         'title': "48px",
         'more': "33.6px",
         'project-bar': "24px",
-        'filter-bar': "22.4px"
+        'filter-bar': "22.4px",
+        'insights': "19.8px"
       },
     },
   },

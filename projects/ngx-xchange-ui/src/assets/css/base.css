@@ -690,10 +690,6 @@ video {
   width: 100%;
 }
 
-.max-w-\[510px\] {
-  max-width: 510px;
-}
-
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -935,6 +931,10 @@ video {
   font-weight: 400;
 }
 
+.font-regular {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -943,16 +943,16 @@ video {
   line-height: 100%;
 }
 
-.leading-\[120\%\] {
-  line-height: 120%;
-}
-
 .leading-\[32px\] {
   line-height: 32px;
 }
 
 .leading-\[48px\] {
   line-height: 48px;
+}
+
+.leading-insights {
+  line-height: 19.8px;
 }
 
 .leading-more {

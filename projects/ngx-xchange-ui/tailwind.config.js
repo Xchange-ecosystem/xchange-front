@@ -63,10 +63,14 @@ module.exports = {
         'xl': '1440px',
         '2xl': '1536px',
       },
-      leading: {
-        "tag": "28px",
-        "tag_indicator": "16.8px",
-        "title": "48px"
+      lineHeight: {
+        'tag': "28px",
+        'tag_indicator': "16.8px",
+        'title': "48px",
+        'more': "33.6px",
+        'project-bar': "24px",
+        'filter-bar': "22.4px",
+        'insights': "19.8px"
       },
     },
   },

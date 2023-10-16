@@ -19,4 +19,4 @@ export class ParagraphDirective {
   }
 }
 
-type paragraphTypes = 'main' | 'secondary';
+type paragraphTypes = 'main' | 'secondary' | 'tertiary';

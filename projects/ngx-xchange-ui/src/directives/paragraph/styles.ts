@@ -13,5 +13,14 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   font-normal
   leading-normal
   font-manrope
+  `,
+  tertiary: `
+  text-Secondary_Fonts
+  text-small
+  font-regular
+  leading-normal
+  font-manrope
+  leading-tag_indicator
+  text-center
   `
 }
