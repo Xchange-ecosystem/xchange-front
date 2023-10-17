@@ -6,11 +6,9 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule } from 'projects/ngx-xchange-ui/src/public-api';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,
