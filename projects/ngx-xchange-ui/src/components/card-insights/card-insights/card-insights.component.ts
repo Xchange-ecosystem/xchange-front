@@ -8,22 +8,13 @@ import { Component , Input } from '@angular/core';
 
 export class CardInsightsComponent {
   @Input()
-  insights: {
-    completedObjectives: Number | null;
-    activeObjectives: Number | null;
-    suggestedNextSteps: Number | null;
-    involvedProjects: Number | null;
-  }
+    value: Number | null;
   @Input()
-  imgSrc: string = "";
+    description: String | null;
 
   constructor(){
-    this.insights = {
-      completedObjectives: 0,
-      activeObjectives: 0,
-      suggestedNextSteps: 0,
-      involvedProjects: 0
-    }
+    this.value = 0;
+    this.description = "";
   }
 }
 

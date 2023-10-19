@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardInsightsComponent } from './card-insights/card-insights.component';
+import { TagDirective } from './tag.directive';
+
+
 
 @NgModule({
   declarations: [
-    CardInsightsComponent
+    TagDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardInsightsComponent
+    TagDirective
   ]
 })
-export class CardInsightsModule { }
+export class TagModule { }

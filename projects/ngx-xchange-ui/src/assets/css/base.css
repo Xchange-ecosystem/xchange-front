@@ -558,6 +558,10 @@ video {
   top: 72px;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .ml-\[96px\] {
   margin-left: 96px;
 }
@@ -626,6 +630,10 @@ video {
   height: 72px;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -682,10 +690,6 @@ video {
   width: 100%;
 }
 
-.max-w-\[510px\] {
-  max-width: 510px;
-}
-
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -732,10 +736,6 @@ video {
 
 .self-stretch {
   align-self: stretch;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
 
 .text-ellipsis {
@@ -931,16 +931,16 @@ video {
   font-weight: 400;
 }
 
+.font-regular {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
 }
 
 .leading-\[100\%\] {
   line-height: 100%;
-}
-
-.leading-\[120\%\] {
-  line-height: 120%;
 }
 
 .leading-\[32px\] {
@@ -951,8 +951,28 @@ video {
   line-height: 48px;
 }
 
+.leading-insights {
+  line-height: 19.8px;
+}
+
+.leading-more {
+  line-height: 33.6px;
+}
+
+.leading-name-card {
+  line-height: 44.8px;
+}
+
 .leading-normal {
   line-height: 1.5;
+}
+
+.leading-tag {
+  line-height: 28px;
+}
+
+.leading-tag_indicator {
+  line-height: 16.8px;
 }
 
 .text-Main_Fonts {

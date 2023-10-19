@@ -2,21 +2,22 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcMainHeading]',
+  selector: '[xcAsideNavButton]'
 })
-export class MainHeadingDirective {
+export class AsideNavButtonDirective {
   private twClasses = '';
   @HostBinding('class')
   @Input()
-  set xcMainHeading(klasses: headingTypes) {
-    this.twClasses = (!klasses ? 'mainHeading' : klasses)
+  set xcAsideNavButton(klasses: asideNavButtonTypes) {
+    this.twClasses = (!klasses ? 'asideNavButton' : klasses)
       .split(' ')
       .map((k) => APP_TAILWIND_STYLES[k] ?? k)
       .join(' ');
   }
-  get xcMainHeading(): String {
+  get xcAsideNavButton(): String {
     return this.twClasses;
   }
+
 }
 
-type headingTypes = 'mainHeading' | 'secondaryHeading' | 'tertiaryHeading' | 'fourthHeading' | String;
+type asideNavButtonTypes = 'asideNavButton';

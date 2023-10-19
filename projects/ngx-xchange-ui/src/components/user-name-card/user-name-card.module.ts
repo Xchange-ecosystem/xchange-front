@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardInsightsComponent } from './card-insights/card-insights.component';
+import { UserNameCardComponent } from './user-name-card/user-name-card.component';
+
+
 
 @NgModule({
   declarations: [
-    CardInsightsComponent
+    UserNameCardComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardInsightsComponent
+    UserNameCardComponent
   ]
 })
-export class CardInsightsModule { }
+export class UserNameCardModule { }

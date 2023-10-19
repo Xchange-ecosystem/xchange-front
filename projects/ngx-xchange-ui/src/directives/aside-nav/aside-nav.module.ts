@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardInsightsComponent } from './card-insights/card-insights.component';
+import { AsideNavDirective } from './aside-nav.directive';
+
+
 
 @NgModule({
   declarations: [
-    CardInsightsComponent
+    AsideNavDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardInsightsComponent
+    AsideNavDirective
   ]
 })
-export class CardInsightsModule { }
+export class AsideNavModule { }

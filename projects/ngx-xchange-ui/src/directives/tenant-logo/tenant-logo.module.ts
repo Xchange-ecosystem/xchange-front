@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardInsightsComponent } from './card-insights/card-insights.component';
+import { TenantLogoDirective } from './tenant-logo.directive';
+
+
 
 @NgModule({
   declarations: [
-    CardInsightsComponent
+    TenantLogoDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardInsightsComponent
+    TenantLogoDirective
   ]
 })
-export class CardInsightsModule { }
+export class TenantLogoModule { }

@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardInsightsComponent } from './card-insights/card-insights.component';
+import { ParagraphDirective } from './paragraph.directive';
+
+
 
 @NgModule({
   declarations: [
-    CardInsightsComponent
+    ParagraphDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    CardInsightsComponent
+    ParagraphDirective
   ]
 })
-export class CardInsightsModule { }
+export class ParagraphModule { }

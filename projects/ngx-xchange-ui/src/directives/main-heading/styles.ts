@@ -25,5 +25,13 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   font-manrope
   font-medium
   leading-normal
-  `
+  `,
+  fifthHeading: `
+  text-projectTitle
+  text-Main_Fonts
+  font-manrope
+  font-medium
+  leading-more
+  `,
+
 };
