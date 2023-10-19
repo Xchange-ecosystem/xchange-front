@@ -12,6 +12,8 @@
     "watch:tailwind": "npx tailwindcss -i ./src/assets/css/styles.scss -o ./projects/ngx-xchange-ui/src/assets/css/base.css --watch",
     "build-storybook": "ng run ecosystem-web:build-storybook",
     "build:lib": "npx tailwindcss -i ./src/assets/css/styles.scss -o ./projects/ngx-xchange-ui/src/assets/css/base.css && ng build ngx-xchange-ui",
+    "perbuild:icons": "node ./projects/ngx-xchange-ui/prebuild.js",
+    "build:icons": "ng build ngx-xchange-icons",
     "build:lib:watch": "ng build ngx-xchange-ui --watch"
   },
   "private": true,
@@ -45,6 +47,7 @@
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.1",
+    "handlebars": "4.7.8",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

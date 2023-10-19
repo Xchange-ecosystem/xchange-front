@@ -12,6 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
+      "ngx-xchange-icons": [
+        "dist/ngx-xchange-icons"
+      ],
       "ngx-xchange-ui": [
         "dist/ngx-xchange-ui"
       ]
