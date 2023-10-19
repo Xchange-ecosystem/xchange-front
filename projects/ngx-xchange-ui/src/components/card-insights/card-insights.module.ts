@@ -9,6 +9,8 @@ import { CardInsightsComponent } from './card-insights/card-insights.component';
   imports: [
     CommonModule
   ],
-  exports: [CardInsightsComponent]
+  exports: [
+    CardInsightsComponent
+  ]
 })
 export class CardInsightsModule { }
