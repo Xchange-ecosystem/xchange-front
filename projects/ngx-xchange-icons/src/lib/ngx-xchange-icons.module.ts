@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
-import { NgxXchangeIconsComponent } from './ngx-xchange-icons.component';
+import { NgxXchangeIconCalendarAltComponent } from './calendar-alt.component';
 
 
 
 @NgModule({
   declarations: [
-    NgxXchangeIconsComponent
+    NgxXchangeIconCalendarAltComponent
   ],
   imports: [
   ],
   exports: [
-    NgxXchangeIconsComponent
+    NgxXchangeIconCalendarAltComponent
   ]
 })
 export class NgxXchangeIconsModule { }
