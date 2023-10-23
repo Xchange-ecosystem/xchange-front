@@ -742,6 +742,10 @@ video {
   text-overflow: ellipsis;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -883,6 +887,10 @@ video {
   padding-left: 2rem;
 }
 
+.ps-4 {
+  padding-inline-start: 1rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -923,6 +931,10 @@ video {
   font-size: 14px;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -949,6 +961,10 @@ video {
 
 .leading-\[48px\] {
   line-height: 48px;
+}
+
+.leading-filter-bar {
+  line-height: 22.4px;
 }
 
 .leading-insights {
