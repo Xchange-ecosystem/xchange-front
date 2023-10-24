@@ -1,5 +1,5 @@
 {
-  "name": "ecosystem-web",
+  "name": "@indziaki/xchange-front",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "concurrently 'npm:watch:*'",
-    "watch:storybook": "ng run ecosystem-web:storybook",
+    "watch:storybook": "ng run xchange-front:storybook",
     "watch:tailwind": "npx tailwindcss -i ./src/assets/css/styles.scss -o ./projects/ngx-xchange-ui/src/assets/css/base.css --watch",
-    "build-storybook": "ng run ecosystem-web:build-storybook",
+    "build-storybook": "ng run xchange-front:build-storybook",
     "build:lib": "npx tailwindcss -i ./src/assets/css/styles.scss -o ./projects/ngx-xchange-ui/src/assets/css/base.css && ng build ngx-xchange-ui",
     "perbuild:icons": "node ./projects/ngx-xchange-ui/prebuild.js",
     "build:icons": "ng build ngx-xchange-icons",
@@ -63,6 +63,6 @@
     "typescript": "~5.1.3"
   },
   "publishConfig": {
-    "@Indziaki:registry": "https://npm.pkg.github.com"
+    "@indziaki:registry": "https://npm.pkg.github.com"
   }
 }
