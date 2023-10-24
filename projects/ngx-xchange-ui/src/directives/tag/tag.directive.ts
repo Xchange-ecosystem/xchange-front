@@ -20,4 +20,4 @@ export class TagDirective {
 
 }
 
-type tagTypes = 'main';
+export type tagTypes = 'gray' | 'green' | 'yellow' | 'purple';
