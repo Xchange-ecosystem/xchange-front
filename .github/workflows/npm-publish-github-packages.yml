@@ -35,7 +35,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm publish
-        working-directory: projects/ngx-xchange-icons
+        working-directory: dist/ngx-xchange-icons
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
@@ -53,6 +53,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
       - run: npm publish
-        working-directory: projects/ngx-xchange-ui
+        working-directory: dist/ngx-xchange-ui
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
