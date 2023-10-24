@@ -16,7 +16,7 @@
     "build:icons": "ng build ngx-xchange-icons",
     "build:lib:watch": "ng build ngx-xchange-ui --watch"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^16.1.0",
     "@angular/common": "^16.1.0",
