@@ -6,7 +6,7 @@ name: Node.js Package Icons and UI
 on:
   push:
     branches:
-      - develop
+      - master
   workflow_dispatch:
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: node-packages
-          path: ./dist/ngx-xchange-ui
+          path: ./dist
 
   publish-ui:
     needs: build
@@ -43,10 +43,34 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: node-packages
-          path: dist/ngx-xchange-ui
+          path: dist
       - run: ls -R
       - run: npm publish
         working-directory: ./dist/ngx-xchange-ui
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  publish-icons:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: node-packages
+          path: dist
+      - run: ls -R
+      - run: npm publish
+        working-directory: ./dist/ngx-xchange-icons
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
