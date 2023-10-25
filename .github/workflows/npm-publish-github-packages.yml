@@ -24,9 +24,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: node-packages
-          path: ./dist
+          path: ./dist/ngx-xchange-ui
 
-  publish-icons:
+  publish-ui:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -34,9 +34,19 @@ jobs:
       packages: write
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - uses: actions/download-artifact@v2
         with:
           name: node-packages
-          path: dist
+          path: dist/ngx-xchange-ui
       - run: ls -R
+      - run: npm publish
+        working-directory: ./dist/ngx-xchange-ui
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
