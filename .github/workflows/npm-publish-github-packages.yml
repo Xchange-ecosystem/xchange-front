@@ -21,6 +21,12 @@ jobs:
       - run: npm run build:icons
       - run: npm run build:lib
 
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v3
+      with:
+        name: node-packages
+        path: ./dist
+
   publish-icons:
     needs: build
     runs-on: ubuntu-latest
@@ -28,6 +34,12 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: node-packages
+          path: dist
+
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
@@ -46,6 +58,12 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: node-packages
+          path: dist
+          
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
