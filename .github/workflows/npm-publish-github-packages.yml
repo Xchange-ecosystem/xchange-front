@@ -38,40 +38,5 @@ jobs:
         with:
           name: node-packages
           path: dist
+        run: ls -R
 
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: ls -R
-      - run: npm ci
-      - run: npm publish
-        working-directory: dist/ngx-xchange-icons
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-  publish-ui:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: node-packages
-          path: dist
-          
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://npm.pkg.github.com/
-      - run: ls -R
-      - run: npm ci
-      - run: npm publish
-        working-directory: dist/ngx-xchange-ui
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
