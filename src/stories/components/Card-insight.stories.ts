@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { CardInsightsComponent} from '../../../projects/ngx-xchange-ui/src/public-api';
 
-// More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<CardInsightsComponent> = {
   title: 'xChange/CardInsightsComponent',
   component: CardInsightsComponent,
@@ -20,10 +19,9 @@ const meta: Meta<CardInsightsComponent> = {
 export default meta;
 type Story = StoryObj<CardInsightsComponent>;
 
-// More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {
   args: {
-    value: 56,
-    description: "Willkoment Aslanders"
+    value: 5,
+    description: 'Just an example'
   },
 };

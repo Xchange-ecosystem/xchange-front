@@ -27,8 +27,6 @@ export * from './directives/main-heading/main-heading.module'
 export * from './directives/main-heading/main-heading.directive'
 export * from './directives/aside-nav-button/aside-nav-button.module';
 export * from './directives/aside-nav-button/aside-nav-button.directive';
-export * from './directives/aside-nav/aside-nav.module';
-export * from './directives/aside-nav/aside-nav.directive';
 export * from './directives/header-nav/header-nav.module';
 export * from './directives/header-nav/header-nav.directive';
 export * from './directives/tag/tag.module';
@@ -45,3 +43,5 @@ export * from './components/rounded-image/rounded-image/rounded-image.component'
 export * from './components/rounded-image/rounded-image.module';
 export * from './components/user-name-card/user-name-card.module';
 export *  from './components/user-name-card/user-name-card/user-name-card.component';
+export * from './components/aside-nav/aside-nav.module';
+export * from './components/aside-nav/aside-nav/aside-nav.component';

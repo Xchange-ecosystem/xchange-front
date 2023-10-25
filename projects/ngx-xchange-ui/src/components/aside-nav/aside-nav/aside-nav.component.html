@@ -1,0 +1,15 @@
+<aside class="absolute">
+  <div
+    class="left-0 h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0 w-[72px] bg-black"
+    [ngClass]="isOpen ? 'visible' : 'invisible'">
+      <ng-content></ng-content>
+  </div>
+  <footer *ngIf="canClose">
+    <button
+    (click)="toogleOpen()"
+    class="h-[128px] rounded-e-lg border-white border w-8 text-white fill-current relative bg-black bottom-[150px]">
+      <xc-icon-angle-right-b *ngIf="isOpen"/>
+      <xc-icon-angle-left-b *ngIf="!isOpen"/>
+    </button>
+  </footer>
+</aside>
