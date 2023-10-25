@@ -33,5 +33,12 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   font-medium
   leading-more
   `,
+  sixthHeading:`
+  text-paragraph
+  text-Main_Fonts
+  font-manrope
+  font-bold
+  leading-filter-bar
+  `
 
 };

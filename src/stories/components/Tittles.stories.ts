@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { TitlesComponent } from '../../projects/ngx-xchange-ui/src/public-api';
+import { TitlesComponent } from '../../../projects/ngx-xchange-ui/src/public-api';
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<TitlesComponent> = {
