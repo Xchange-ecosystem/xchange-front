@@ -38,5 +38,5 @@ jobs:
         with:
           name: node-packages
           path: dist
-        run: ls -R
+          run: ls -R
 
