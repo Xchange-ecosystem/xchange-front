@@ -13,5 +13,6 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   gap-4
   items-center
   shrink-0
+  z-4
   `
 };
