@@ -44,6 +44,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
+      - run: ls -R
       - run: npm ci
       - run: npm publish
         working-directory: dist/ngx-xchange-icons
@@ -68,6 +69,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://npm.pkg.github.com/
+      - run: ls -R
       - run: npm ci
       - run: npm publish
         working-directory: dist/ngx-xchange-ui
