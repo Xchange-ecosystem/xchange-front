@@ -6,6 +6,13 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
     font-semibold 
     leading-[48px]
   `,
+  mainHeadingLanding: `
+    text-Main_Titles 
+    text-white
+    font-manrope 
+    font-semibold 
+    leading-[48px]
+  `,
   secondaryHeading: `
     text-Secondary_Fonts 
     text-subtitles 
@@ -39,6 +46,12 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   font-manrope
   font-bold
   leading-filter-bar
+  `,
+  seventh:`
+  text-cardsTitles
+  text-white
+  font-manrope
+  font-semibold
+  leading-filter-bar
   `
-
 };
