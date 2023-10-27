@@ -43,3 +43,5 @@ export * from './directives/paragraph/paragraph.module';
 export * from './directives/paragraph/paragraph.directive';
 export * from './components/rounded-image/rounded-image/rounded-image.component';
 export * from './components/rounded-image/rounded-image.module';
+export * from './components/user-name-card/user-name-card.module';
+export *  from './components/user-name-card/user-name-card/user-name-card.component';
