@@ -783,8 +783,6 @@
                 "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"fourthHeading\"\r\n  },\r\n}"
             },
             {
-<<<<<<< Updated upstream
-=======
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -795,7 +793,6 @@
                 "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: AsideNavComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
->>>>>>> Stashed changes
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -943,11 +940,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-<<<<<<< Updated upstream
                 "defaultValue": "{\r\n  args: {\r\n    value: 56,\r\n    description: \"lkdsajflkdsjflks\"\r\n  },\r\n}"
-=======
-                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just an example'\r\n  },\r\n}"
->>>>>>> Stashed changes
             },
             {
                 "name": "Primary",
@@ -1228,8 +1221,6 @@
                     "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"tertiaryHeading\"\r\n  },\r\n}"
                 }
             ],
-<<<<<<< Updated upstream
-=======
             "src/stories/AsideNav.stories.ts": [
                 {
                     "name": "meta",
@@ -1252,7 +1243,6 @@
                     "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
                 }
             ],
->>>>>>> Stashed changes
             "src/stories/Button-View-More.stories.ts": [
                 {
                     "name": "meta",
@@ -1316,11 +1306,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-<<<<<<< Updated upstream
-                    "defaultValue": "{\r\n  args: {\r\n    value: 56,\r\n    description: \"lkdsajflkdsjflks\"\r\n  },\r\n}"
-=======
                     "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just an example'\r\n  },\r\n}"
->>>>>>> Stashed changes
                 }
             ],
             "src/stories/CardDeadlineIndicator.stories.ts": [
