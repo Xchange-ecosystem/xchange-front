@@ -12,10 +12,10 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-xchange-icons": [
+      "@indziaki/ngx-xchange-icons": [
         "dist/ngx-xchange-icons"
       ],
-      "ngx-xchange-ui": [
+      "@indziaki/ngx-xchange-ui": [
         "dist/ngx-xchange-ui"
       ]
     },

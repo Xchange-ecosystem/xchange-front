@@ -5,7 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
-
+/projects/ngx-xchange-ui/src/assets/css/base.css
 # Node
 /node_modules
 npm-debug.log
