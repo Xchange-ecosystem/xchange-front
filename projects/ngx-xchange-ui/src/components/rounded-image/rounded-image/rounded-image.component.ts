@@ -10,6 +10,7 @@ export class RoundedImageComponent {
   @Input() color?: string;
   @Input() image: string = '';
   @Input() marginSize: number = 10;
+  @Input() defaultImage: string = '';
   marginSizeStr: string = ''
   constructor() {
     this.color = 'white'
