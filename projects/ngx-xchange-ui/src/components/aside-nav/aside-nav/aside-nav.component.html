@@ -25,7 +25,7 @@ z-2
 <button
 *ngIf="canClose"
 (click)="toogleOpen()"
-class="fixed bottom-[64px] left-0 w-[32px] h-[120px] px-1 flex justify-center items-center border-s-0 border border-white bg-black text-white rounded-e-lg z-2 fill-current">
+class="fixed bottom-[64px] left-0 w-[32px] h-[120px] px-1 flex justify-center items-center border-t border-r border-b border-white border-l-0 bg-black text-white rounded-e-lg z-2 fill-current">
   <xc-icon-angle-right-b *ngIf="!isOpen"/>
   <xc-icon-angle-left-b *ngIf="isOpen"/>
 </button>
