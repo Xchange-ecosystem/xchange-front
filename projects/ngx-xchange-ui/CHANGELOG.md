@@ -1,3 +1,9 @@
+# 0.0.5 - 06/11/2023
+* (change) Navbar aside left styles 
+
+# 0.0.4 - 04/11/2023
+* (Feature) Add default image to Rounded Image component 
+
 # 0.0.3 - 01/11/2023
 * (Change) Navbar aside left styles and behavior 
 
