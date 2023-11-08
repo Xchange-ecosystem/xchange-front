@@ -1,3 +1,6 @@
+# 0.0.6 - 07/11/2023
+* (Fix) Fix aside nav styles 
+
 # 0.0.5 - 06/11/2023
 * (change) Navbar aside left styles 
 
