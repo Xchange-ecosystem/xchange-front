@@ -1,3 +1,6 @@
+# 0.0.3 - 27/11/2023
+* (add) Icon arrow right objective card 
+
 # 0.0.2 - 06/11/2023
 * (add) Icons from feather icons library used on ecosystem settings
 
