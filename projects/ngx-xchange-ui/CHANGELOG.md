@@ -1,3 +1,8 @@
+# 0.0.7 - 23/11/2023
+* (add) ng-content to card task indicator component
+* (remove) Min width from card task component
+* (remove) Image tag from card task component
+
 # 0.0.6 - 07/11/2023
 * (Fix) Fix aside nav styles 
 
