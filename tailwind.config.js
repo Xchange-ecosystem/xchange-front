@@ -3,7 +3,7 @@ module.exports = {
   mode: 'jit',
   module: {
     rules: [
-      {
+      { 
         test: /\.scss$/,
         use: [
           'style-loader',
