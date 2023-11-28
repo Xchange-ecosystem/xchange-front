@@ -45,3 +45,7 @@ export * from './components/user-name-card/user-name-card.module';
 export *  from './components/user-name-card/user-name-card/user-name-card.component';
 export * from './components/aside-nav/aside-nav.module';
 export * from './components/aside-nav/aside-nav/aside-nav.component';
+export * from './components/modal/modal.module';
+export * from './components/modal/modal/modal.component';
+export * from './components/details/details.module';
+export * from './components/details/details/details.component';

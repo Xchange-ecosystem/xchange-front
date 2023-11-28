@@ -1131,3 +1131,4 @@ export * from './lib/youtube.component';
 export * from './lib/email.component';
 export * from './lib/user-x.component';
 export * from './lib/arrow-right-card-button.component';
+export * from './lib/send.component';
