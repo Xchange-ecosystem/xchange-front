@@ -49,3 +49,5 @@ export * from './components/modal/modal.module';
 export * from './components/modal/modal/modal.component';
 export * from './components/details/details.module';
 export * from './components/details/details/details.component';
+export * from './directives/input/input.directive'
+export * from './directives/input/input.module'
