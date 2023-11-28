@@ -3,7 +3,7 @@ inputPrimary: `
 flex
 items-center
 w-full
-border
+border-2
 border-base
 px-4
 bg-white
