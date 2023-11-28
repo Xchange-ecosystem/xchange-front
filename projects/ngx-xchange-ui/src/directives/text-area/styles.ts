@@ -7,7 +7,7 @@ text-input
 font-manrope
 font-regular
 leading-[22.4px]
-border
+border-2 
 border-Secondary_Fonts
 rounded-lg
 `
