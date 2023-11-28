@@ -8,7 +8,7 @@ font-manrope
 font-regular
 leading-[22.4px]
 border-2 
-border-Secondary_Fonts
+border-base
 rounded-lg
 `
 }
