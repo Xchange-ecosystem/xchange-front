@@ -1,3 +1,9 @@
+# 0.0.8 - 28/11/2023
+* (Add) Details component
+* (Add) Modal component
+* (Add) Input directive  
+* (Add) TextArea directive
+
 # 0.0.7 - 23/11/2023
 * (add) ng-content to card task indicator component
 * (remove) Min width from card task component

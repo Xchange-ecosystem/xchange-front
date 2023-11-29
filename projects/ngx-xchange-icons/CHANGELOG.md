@@ -1,3 +1,6 @@
+# 0.0.4 - 28/11/2023
+* (add) Icon send
+
 # 0.0.3 - 27/11/2023
 * (add) Icon arrow right objective card 
 
