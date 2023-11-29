@@ -1,3 +1,9 @@
+# 0.0.5 - 29/11/2023
+* (add) Icon yellow star
+* (add) Icon gray star
+* (add) Icon add
+* (add) Icon dismiss
+
 # 0.0.4 - 28/11/2023
 * (add) Icon send
 
