@@ -1,0 +1,8 @@
+<details class="group bg-base rounded-b-lg" #detailsElm>
+  <summary class="bg-Second_accent rounded-t-lg list-none flex justify-between py-2 px-4">{{title}}
+    <span  [class.rotate-270]="!isOpen"><xc-icon-angle-down/></span>
+  </summary>
+  <section class="flex flex-col p-4">
+    <ng-content></ng-content>
+  </section>
+</details>

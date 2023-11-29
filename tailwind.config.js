@@ -31,12 +31,14 @@ module.exports = {
         Tertiary_Fonts: "#A7A7A7",
         Quaternary_Fonts: "#F3F4F4",
         Background: "#FFFFFF",
-        text_Color: "#000000"
+        text_Color: "#000000",
+        base: '#F4F4F4  '
       },
       fontSize: {
         Main_Titles: "48px",
         subtitles:"32px",
         projectTitle: "24px",
+        input: "20px",
         cardsTitles: "18px",
         paragraph: "16px",
         tags: "14px",
