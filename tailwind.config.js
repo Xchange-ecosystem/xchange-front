@@ -32,7 +32,7 @@ module.exports = {
         Quaternary_Fonts: "#F3F4F4",
         Background: "#FFFFFF",
         text_Color: "#000000",
-        base: '#F4F4F4  '
+        base: '#F4F4F4'
       },
       fontSize: {
         Main_Titles: "48px",

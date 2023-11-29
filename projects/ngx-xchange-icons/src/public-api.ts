@@ -1132,3 +1132,7 @@ export * from './lib/email.component';
 export * from './lib/user-x.component';
 export * from './lib/arrow-right-card-button.component';
 export * from './lib/send.component';
+export * from './lib/yellow-star.component';
+export * from './lib/gray-star.component';
+export * from './lib/add-icon.component';
+export * from './lib/dismiss-icon.component'
