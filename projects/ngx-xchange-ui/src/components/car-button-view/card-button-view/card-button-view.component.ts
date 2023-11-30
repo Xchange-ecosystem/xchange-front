@@ -8,10 +8,10 @@ import { Component, Input } from '@angular/core';
 export class CardButtonViewComponent {
 
   @Input()
-  icon: String
+  description: String
 
   constructor(){
-    this.icon = ""
+    this.description = ""
   }
 
 }

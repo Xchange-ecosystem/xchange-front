@@ -1,10 +1,10 @@
-<a href="#">
-  <div class="flex justify-center items-center gap-2 border-[1px] border-Main_Fonts rounded-lg px-3 py-1 w-[120px] h-[36px]">
-    <p class="text-Secondary_Fonts">View</p>    
-    <img 
-    src={{icon}} 
-    alt="Icon link"
-    class="h-[24px] w-[24px] text-Secondary_Fonts"
-    >
+<div>
+  <div
+  class="flex justify-center items-center gap-2 border-[1px] border-Main_Fonts rounded-lg px-3 py-1 w-[120px] h-[36px]"
+  >
+  <div>
+    <ng-content></ng-content>
   </div>
-</a>
+    <p class="text-Secondary_Fonts">´{{description}}</p>
+  </div>
+</div>
