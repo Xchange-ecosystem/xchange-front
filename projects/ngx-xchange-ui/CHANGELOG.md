@@ -1,6 +1,10 @@
+# 0.0.10 - 01/12/2023
+* (Remove) z-index from aside nav and header 
+
 # 0.0.9 - 30/11/2023
 * (Change) Change style for button view
 * (Add) ng-content for icon integration
+
 # 0.0.8 - 28/11/2023
 * (Add) Details component
 * (Add) Modal component
