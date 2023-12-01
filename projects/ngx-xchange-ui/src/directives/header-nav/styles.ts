@@ -1,6 +1,5 @@
 export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   headerNav: `
-  z-4
   bg-black
   w-full
   h-[72px]
