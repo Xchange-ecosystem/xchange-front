@@ -7,31 +7,34 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ChipComponent implements OnInit {
   ngOnInit(): void {
-    this.notChosen = this.dataset.filter(
-      (ds) => !this.chosen.map((c)=>c.key).includes(ds.key)
-    )
-      .map((ds) => ds.key)
+    this.notChosen = this.dataset.filter((ds) => !this.chosen.map((c)=>c.key).includes(ds.key)).map((ds) => ds.key)
   }
 
   @Input() dataset: chipData[] = []
   @Input() label: string = "";
+  @Input() placeholder: string = "";
   @Input() chosen: chipData[] = []
   @Output() chosenChange = new EventEmitter<chipData[]>();
 
+  isVisible: boolean = false;
   notChosen: string[] = []
+
+  showOptions(visible: boolean) {
+    this.isVisible = visible
+  }
 
   addKey(item: chipData) {
     let isAdded = this.chosen.some((c) => c.key === item.key)
-    if(isAdded)
-      return
-
+    if(isAdded) return
     this.chosen = [...this.chosen, item ]
     this.notChosen = this.notChosen.filter((nc) => nc !== item.key )
     this.emitChosen()
   }
 
-  getNotChosen() {
-    return this.dataset.filter((ds) => this.notChosen.includes(ds.key))
+  getNotChosen(filter:string) {
+    return this.dataset
+      .filter((ds) => this.notChosen.includes(ds.key))
+      .filter((nc) => nc.value.includes(filter))
   }
 
   getChosen() {
@@ -58,6 +61,7 @@ export class ChipComponent implements OnInit {
     this.chosen = [...this.chosen, {key: '-1', value: event.target.value}]
     this.emitChosen()
   }
+
 }
 
 type chipData = {

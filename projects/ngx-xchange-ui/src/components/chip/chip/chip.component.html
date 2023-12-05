@@ -1,19 +1,33 @@
 <div class="">
-  <label >{{label}}</label>
-  <div>
+  <label>{{label}}</label>
+  <div class="flex gap-4">
     <label *ngFor="let dt of getChosen()"
-      class="flex"
+      class="flex bg-base px-2 rounded gap-2"
     >
       {{dt.value}}
-      <xc-icon-multiply (click)="removeItem(dt)"/>
+      <span class="w-[15px]">
+        <xc-icon-multiply (click)="removeItem(dt)"/>
+      </span>
     </label>
   </div>
-  <input (keydown.enter)="addUnregister($event)" class="border" placeholder="choseme" type="text"/>
-  <div class="border p-2">
+  <div [tabIndex]="0" (focusout)="showOptions(false)" (focusin)="showOptions(true)">
+  <input
+    #fi
+    (keydown.enter)="addUnregister($event)"
+    (keyup)="getNotChosen(fi.value)"
+    class="border"
+    [placeholder]="placeholder"
+    type="text"
+
+    />
+  <div
+    *ngIf="isVisible"
+    class="border p-2">
     <div
-      *ngFor="let dt of getNotChosen()"
+      *ngFor="let dt of getNotChosen(fi.value)"
       (click)="addKey(dt)"
       class=" hover:bg-black hover:text-white"
     >{{dt.value}}</div>
   </div>
+</div>
 </div>
