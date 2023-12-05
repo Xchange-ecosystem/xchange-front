@@ -12,7 +12,7 @@
   <div class="border p-2">
     <div
       *ngFor="let dt of getNotChosen()"
-      (click)="addKey(dt.key)"
+      (click)="addKey(dt)"
       class=" hover:bg-black hover:text-white"
     >{{dt.value}}</div>
   </div>

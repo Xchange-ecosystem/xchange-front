@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'xc-chip',
@@ -7,23 +7,26 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angu
 })
 export class ChipComponent implements OnInit {
   ngOnInit(): void {
-    this.notChosen = this.dataset.filter((ds) => !this.chosen.includes(ds.key)).map((ds) => ds.key)
+    this.notChosen = this.dataset.filter(
+      (ds) => !this.chosen.map((c)=>c.key).includes(ds.key)
+    )
+      .map((ds) => ds.key)
   }
 
   @Input() dataset: chipData[] = []
   @Input() label: string = "";
-  @Input() chosen: string[] = []
-  @Output() chosenChange = new EventEmitter<string[]>();
+  @Input() chosen: chipData[] = []
+  @Output() chosenChange = new EventEmitter<chipData[]>();
 
   notChosen: string[] = []
 
-  addKey(key: chipData["key"]) {
-    let isAdded = this.chosen.some((c) => c === key)
+  addKey(item: chipData) {
+    let isAdded = this.chosen.some((c) => c.key === item.key)
     if(isAdded)
       return
 
-    this.chosen = [...this.chosen, key ]
-    this.notChosen = this.notChosen.filter((nc) => nc !== key )
+    this.chosen = [...this.chosen, item ]
+    this.notChosen = this.notChosen.filter((nc) => nc !== item.key )
     this.emitChosen()
   }
 
@@ -32,11 +35,15 @@ export class ChipComponent implements OnInit {
   }
 
   getChosen() {
-    return this.dataset.filter((ds) => this.chosen.includes(ds.key))
+    return this.chosen
   }
 
   removeItem(item: chipData) {
-    this.chosen = this.chosen.filter( (c) => c !== item.key );
+    if(item.key === '-1')
+      this.chosen = this.chosen.filter( (c) => c.value !== item.value );
+    else
+      this.chosen = this.chosen.filter((c) => c.key !== item.key);
+
     this.notChosen = [...this.notChosen, item.key]
     this.emitChosen()
   }
@@ -46,6 +53,10 @@ export class ChipComponent implements OnInit {
   }
 
   addUnregister( event: any ) {
+    let exist = this.chosen.some((c) => c.key === '-1' && c.value === event.target.value )
+    if(exist) return
+    this.chosen = [...this.chosen, {key: '-1', value: event.target.value}]
+    this.emitChosen()
   }
 }
 
