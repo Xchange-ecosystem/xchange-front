@@ -1,3 +1,6 @@
+# 0.0.6 - 29/11/23
+* (remove) Delete width and height in multiply icon
+
 # 0.0.5 - 29/11/2023
 * (add) Icon yellow star
 * (add) Icon gray star

@@ -1,0 +1,36 @@
+<div class=" flex flex-col gap-2">
+  <label>{{label}}</label>
+  <div class="flex gap-2">
+    <label *ngFor="let dt of getChosen()"
+      class="flex bg-base px-2 py-0.5 rounded gap-2 items-center justify-center"
+    >
+      {{dt.value}}
+      <span 
+      class="h-[12px] w-[12px] flex justify-center items-center pb-0.5 rounded-full bg-Secondary_Fonts text-white text-[8px]"
+      (click)="removeItem(dt)"
+      >
+        x
+      </span>
+    </label>
+  </div>
+  <div [tabIndex]="0" (focusout)="showOptions(false)" (focusin)="showOptions(true)">
+  <input
+    #fi
+    (keydown.enter)="addUnregister($event)"
+    (keyup)="getNotChosen(fi.value)"
+    class="border-2 border-base rounded-lg px-2 py-0.5 font-manrope text-Main_Fonts"
+    [placeholder]="placeholder"
+    type="text"
+
+    />
+  <div
+    *ngIf="isVisible"
+    class="border p-2">
+    <div
+      *ngFor="let dt of getNotChosen(fi.value)"
+      (click)="addKey(dt)"
+      class=" hover:bg-black hover:text-white"
+    >{{dt.value}}</div>
+  </div>
+</div>
+</div>

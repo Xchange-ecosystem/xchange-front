@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { CardInsightsComponent} from '../../../projects/ngx-xchange-ui/src/public-api';
+import { CardInsightsComponent } from '../../../projects/ngx-xchange-ui/src/public-api';
 
 const meta: Meta<CardInsightsComponent> = {
   title: 'xChange/CardInsightsComponent',
