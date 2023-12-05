@@ -1,3 +1,6 @@
+# 0.0.11 - 05/12/2023
+* (Add) Create chip component
+
 # 0.0.10 - 01/12/2023
 * (Remove) z-index from aside nav and header 
 

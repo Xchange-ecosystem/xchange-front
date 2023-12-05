@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ChipModule } from 'projects/ngx-xchange-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, Asid
     CarButtonViewModule,
     CardTasksIndicatorModule,
     CarButtonViewModule,
-    AsideNavModule
+    AsideNavModule,
+    ChipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
