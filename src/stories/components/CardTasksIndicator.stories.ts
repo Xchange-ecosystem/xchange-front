@@ -23,7 +23,6 @@ type Story = StoryObj<CardTasksIndicatorComponent>;
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {
   args: {
-    icon: "./assets/u_file-check-alt.svg",
     content: "4/5 complete"
   },
 };

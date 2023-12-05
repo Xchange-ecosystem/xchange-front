@@ -1,12 +1,15 @@
-<div class="">
+<div class=" flex flex-col gap-2">
   <label>{{label}}</label>
-  <div class="flex gap-4">
+  <div class="flex gap-2">
     <label *ngFor="let dt of getChosen()"
-      class="flex bg-base px-2 rounded gap-2"
+      class="flex bg-base px-2 py-0.5 rounded gap-2 items-center justify-center"
     >
       {{dt.value}}
-      <span class="w-[15px]">
-        <xc-icon-multiply (click)="removeItem(dt)"/>
+      <span 
+      class="h-[12px] w-[12px] flex justify-center items-center pb-0.5 rounded-full bg-Secondary_Fonts text-white text-[8px]"
+      (click)="removeItem(dt)"
+      >
+        x
       </span>
     </label>
   </div>
@@ -15,7 +18,7 @@
     #fi
     (keydown.enter)="addUnregister($event)"
     (keyup)="getNotChosen(fi.value)"
-    class="border"
+    class="border-2 border-base rounded-lg px-2 py-0.5 font-manrope text-Main_Fonts"
     [placeholder]="placeholder"
     type="text"
 

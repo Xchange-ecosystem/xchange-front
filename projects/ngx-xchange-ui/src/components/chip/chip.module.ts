@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ChipComponent} from './chip/chip.component';
 import { XcIconMultiplyComponent } from '@indziaki/ngx-xchange-icons';
+import { TagModule } from '../../public-api';
 
 
 
@@ -11,6 +12,7 @@ import { XcIconMultiplyComponent } from '@indziaki/ngx-xchange-icons';
   ],
   imports: [
     CommonModule,
+    TagModule,
     XcIconMultiplyComponent
   ],
   exports: [
