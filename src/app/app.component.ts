@@ -11,6 +11,18 @@ export class AppComponent {
     {key:'1', value: 'cat'},
     {key:'2', value: 'dog'},
     {key:'3', value: 'fish'},
+    {key:'1', value: 'cat'},
+    {key:'2', value: 'dog'},
+    {key:'3', value: 'fish'},
+    {key:'1', value: 'cat'},
+    {key:'2', value: 'dog'},
+    {key:'3', value: 'fish'},
+    {key:'1', value: 'cat'},
+    {key:'2', value: 'dog'},
+    {key:'3', value: 'fish'},
+    {key:'1', value: 'cat'},
+    {key:'2', value: 'dog'},
+    {key:'3', value: 'fish'},
   ]
 
   elegidos = [

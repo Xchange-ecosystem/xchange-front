@@ -1,6 +1,6 @@
-<div class=" flex flex-col gap-2">
+<div class=" flex flex-col  gap-2">
   <label>{{label}}</label>
-  <div class="flex gap-2">
+  <div class="flex gap-2 max-w-[680px] flex-wrap">
     <label *ngFor="let dt of getChosen()"
       class="flex bg-base px-2 py-0.5 rounded gap-2 items-center justify-center"
     >
@@ -25,7 +25,7 @@
     />
   <div
     *ngIf="isVisible"
-    class="border p-2">
+    class="border p-2 max-h-[120px] overflow-y-scroll">
     <div
       *ngFor="let dt of getNotChosen(fi.value)"
       (click)="addKey(dt)"
