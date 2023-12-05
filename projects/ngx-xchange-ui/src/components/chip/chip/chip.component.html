@@ -1,0 +1,19 @@
+<div class="">
+  <label >{{label}}</label>
+  <div>
+    <label *ngFor="let dt of getChosen()"
+      class="flex"
+    >
+      {{dt.value}}
+      <xc-icon-multiply (click)="removeItem(dt)"/>
+    </label>
+  </div>
+  <input (keydown.enter)="addUnregister($event)" class="border" placeholder="choseme" type="text"/>
+  <div class="border p-2">
+    <div
+      *ngFor="let dt of getNotChosen()"
+      (click)="addKey(dt.key)"
+      class=" hover:bg-black hover:text-white"
+    >{{dt.value}}</div>
+  </div>
+</div>
