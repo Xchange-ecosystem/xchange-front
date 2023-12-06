@@ -1,3 +1,6 @@
+# 0.0.12 - 05/12/2023
+* (Change) Style chip options section
+
 # 0.0.11 - 05/12/2023
 * (Add) Create chip component
 * (Change) Style chips
