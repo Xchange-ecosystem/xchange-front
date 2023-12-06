@@ -1,3 +1,6 @@
+# 0.0.13 - 06/12/2023
+* (Remove) Symbol ' on button view component
+
 # 0.0.12 - 05/12/2023
 * (Change) Style chip options section
 
