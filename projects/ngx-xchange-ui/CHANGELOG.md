@@ -1,5 +1,6 @@
 # 0.0.15 - 08/12/2023
 * (Refactor) Refactor details, two way open attribute
+* (add) Card insights metrics
 
 # 0.0.14 - 08/12/2023
 * (Add) Create rate component
