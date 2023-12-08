@@ -1,20 +1,7 @@
-<xc-chip
-  [dataset]="ds"
-  [(chosen)]="elegidos"
-label=""
-placeholder="Edit Tags"
->
-</xc-chip>
-
-
-<br><br><br>
-<hr>
-
-<h2>datos</h2>
-  <div *ngFor="let dt of ds" >{{dt.value}}</div>
-  <h2>los que faltan</h2>
-<h2>Seleccionados</h2>
-<div *ngFor="let s of elegidos">
-  {{s.value}}
-  {{s.key}}
+<div>
+<xc-rate [(rate)]="myRate"></xc-rate>
 </div>
+
+<br>
+
+<p>the chose is {{myRate}}</p>

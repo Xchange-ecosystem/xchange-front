@@ -1,3 +1,6 @@
+# 0.0.14 - 08/12/2023
+* (Add) Create rate component
+
 # 0.0.13 - 06/12/2023
 * (Remove) Symbol ' on button view component
 
