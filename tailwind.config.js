@@ -3,7 +3,7 @@ module.exports = {
   mode: 'jit',
   module: {
     rules: [
-      { 
+      {
         test: /\.scss$/,
         use: [
           'style-loader',
@@ -19,6 +19,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      rotate: {
+        '270': '270deg',
+      },
       fontFamily: {
         manrope: ["manrope"],
       },
