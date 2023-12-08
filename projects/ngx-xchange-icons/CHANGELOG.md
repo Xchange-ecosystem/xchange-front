@@ -1,4 +1,7 @@
-# 0.0.6 - 29/11/23
+# 0.0.7 - 08/12/2023
+* (add) Icon custom star with no fill
+
+# 0.0.6 - 29/11/2023
 * (remove) Delete width and height in multiply icon
 
 # 0.0.5 - 29/11/2023

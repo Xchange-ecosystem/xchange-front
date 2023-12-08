@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'xc-details',
@@ -6,15 +6,13 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular
   styleUrls: ['./details.component.css']
 })
 
-export class DetailsComponent implements AfterViewInit {
-  @ViewChild('detailsElm', { static: false }) detailsElm!: ElementRef ;
+export class DetailsComponent {
   @Input() title: string = '';
-  @Input() isOpen: boolean = true;
+  @Input() isOpen!: boolean;
+  @Output() isOpenChange = new EventEmitter<boolean>();
 
-  ngAfterViewInit() {
-    this.detailsElm.nativeElement.open = this.isOpen
-    this.detailsElm.nativeElement.addEventListener('toggle', () => {
-      this.isOpen = this.detailsElm.nativeElement.open;
-    })
+  toggleIsClose() {
+    this.isOpen = !this.isOpen
+    this.isOpenChange.emit(this.isOpen)
   }
 }
