@@ -55,3 +55,5 @@ export * from './directives/text-area/text-area.directive';
 export * from './directives/text-area/text-area.module';
 export * from './components/chip/chip.module';
 export * from './components/chip/chip/chip.component';
+export * from './components/rate/rate.module';
+export * from './components/rate/rate/rate.component';

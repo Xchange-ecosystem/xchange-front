@@ -1,0 +1,12 @@
+xc-icon-custom-star {
+  fill:#F4F4F4;
+  cursor: pointer;
+}
+
+.chose,
+.chose ~ xc-icon-custom-star,
+xc-icon-custom-star:hover,
+xc-icon-custom-star:hover ~ xc-icon-custom-star
+{
+  fill:#FAE651;
+}

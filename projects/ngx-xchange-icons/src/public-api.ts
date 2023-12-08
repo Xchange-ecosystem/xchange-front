@@ -1135,4 +1135,5 @@ export * from './lib/send.component';
 export * from './lib/yellow-star.component';
 export * from './lib/gray-star.component';
 export * from './lib/add-icon.component';
-export * from './lib/dismiss-icon.component'
+export * from './lib/dismiss-icon.component';
+export * from './lib/custom-star.component';
