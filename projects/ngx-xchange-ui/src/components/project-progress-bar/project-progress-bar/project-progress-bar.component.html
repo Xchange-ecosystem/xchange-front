@@ -1,0 +1,71 @@
+
+<div class="w-full h-[20px] flex bg-Quaternary_Fonts rounded-lg">
+  <!--el verde-->
+  <div
+    *ngIf="completed > 0"
+    class="bg-Second_accent rounded-l-lg h-full"
+    [style.width]="
+      getSize(
+        completed,
+        objectivesInProject
+      )
+    "
+  >
+    <div
+      class="bg-Main_accent rounded-lg h-full flex items-center justify-center"
+    >
+      <span
+        class="text-paragraph text-center font-manrope font-regular leading-project-bar"
+        >{{ completed }}</span
+      >
+    </div>
+  </div>
+  <!--amarillo-->
+  <div
+    class="bg-Quaternary_Fonts"
+    *ngIf="open > 0"
+    [style.width]="
+      getSize(
+        open,
+        objectivesInProject
+      )
+    "
+    [class.rounded-l-lg]="completed === 0"
+  >
+    <div
+      class="bg-Second_accent rounded-e-lg h-full flex items-center justify-center"
+      [class.rounded-l-lg]="completed === 0"
+    >
+      <span
+        class="text-paragraph text-center font-manrope font-regular leading-project-bar"
+        >{{ open }}</span
+      >
+    </div>
+  </div>
+  <!--Gris-->
+  <div
+    *ngIf="
+      objectivesInProject -
+        open -
+        completed >
+      0
+    "
+    class="bg-Quaternary_Fonts rounded-e-lg h-full flex items-center justify-center"
+    [style.width]="
+      getSize(
+        objectivesInProject -
+          open -
+          completed,
+        objectivesInProject
+      )
+    "
+  >
+    <span
+      class="text-paragraph text-center font-manrope font-regular leading-project-bar"
+      >{{ objectivesInProject }}</span
+    >
+    <div
+      class="h-full w-[10px] bg-Quaternary_Fonts rounded-e-lg"
+    ></div>
+  </div>
+</div>
