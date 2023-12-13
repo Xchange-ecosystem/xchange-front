@@ -1,3 +1,9 @@
+# 0.0.17 - 12/12/2023
+* (Add) Create component ProjectProgressBar
+
+# 0.0.16 - 09/12/2023
+* (Fix) Add metrics to public api
+
 # 0.0.15 - 08/12/2023
 * (Refactor) Refactor details, two way open attribute
 * (add) Card insights metrics
