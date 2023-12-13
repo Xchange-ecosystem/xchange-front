@@ -59,3 +59,5 @@ export * from './components/rate/rate.module';
 export * from './components/rate/rate/rate.component';
 export * from './components/card-metrics/card-metrics.module';
 export * from './components/card-metrics/card-metrics/card-metrics.component';
+export * from './components/project-progress-bar/project-progress-bar.module';
+export * from './components/project-progress-bar/project-progress-bar/project-progress-bar.component';
