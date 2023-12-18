@@ -1,3 +1,9 @@
+# 0.0.18 - 18/122023
+* (Change) Tailwind font size title
+* (Fix) Progress bar design and for empty and full cases
+* (Fix) User name card flex behavior
+* (Add) Main heading type
+
 # 0.0.17 - 12/12/2023
 * (Add) Create component ProjectProgressBar
 

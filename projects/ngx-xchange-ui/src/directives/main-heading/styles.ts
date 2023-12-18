@@ -53,5 +53,12 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   font-manrope
   font-semibold
   leading-filter-bar
+  `,
+  eighth: `
+  text-Secondary_Fonts 
+  text-projectTitle
+  font-manrope 
+  font-semibold 
+  leading-[32px]
   `
 };

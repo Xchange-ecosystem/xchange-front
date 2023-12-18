@@ -36,7 +36,7 @@ module.exports = {
       fontSize: {
         Main_Titles: "48px",
         subtitles:"32px",
-        objectiveTitle: "24px",
+        projectTitle: "24px",
         cardsTitles: "18px",
         paragraph: "16px",
         tags: "14px",
