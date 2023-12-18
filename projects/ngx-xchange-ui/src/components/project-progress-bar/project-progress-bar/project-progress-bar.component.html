@@ -3,7 +3,12 @@
   <!--el verde-->
   <div
     *ngIf="completed > 0"
-    class="bg-Second_accent rounded-l-lg h-full"
+    [ngClass]="
+    getCompleteClass(
+      objectivesInProject,
+      completed
+    )
+    "
     [style.width]="
       getSize(
         completed,
@@ -22,7 +27,6 @@
   </div>
   <!--amarillo-->
   <div
-    class="bg-Quaternary_Fonts"
     *ngIf="open > 0"
     [style.width]="
       getSize(
@@ -31,6 +35,12 @@
       )
     "
     [class.rounded-l-lg]="completed === 0"
+    [ngClass]="
+    getOpenClass(
+      objectivesInProject,
+      open
+    )
+    "
   >
     <div
       class="bg-Second_accent rounded-e-lg h-full flex items-center justify-center"
@@ -50,7 +60,12 @@
         completed >
       0
     "
-    class="bg-Quaternary_Fonts rounded-e-lg h-full flex items-center justify-center"
+    [ngClass]="
+    getTotalClass(
+      open,
+      completed
+    )
+    "
     [style.width]="
       getSize(
         objectivesInProject -
@@ -62,7 +77,7 @@
   >
     <span
       class="text-paragraph text-center font-manrope font-regular leading-project-bar"
-      >{{ objectivesInProject }}</span
+      >{{ objectivesInProject - open - completed }}</span
     >
     <div
       class="h-full w-[10px] bg-Quaternary_Fonts rounded-e-lg"
