@@ -1,3 +1,6 @@
+# 0.0.19 - 19/12/2023
+* (Change) heading title name
+
 # 0.0.18 - 18/122023
 * (Change) Tailwind font size title
 * (Fix) Progress bar design and for empty and full cases
