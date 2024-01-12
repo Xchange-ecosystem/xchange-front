@@ -1,3 +1,7 @@
+# 0.0.8 - 12/01/2024
+* (add) Icon goals
+* (add) Icon rewards 
+
 # 0.0.7 - 08/12/2023
 * (add) Icon custom star with no fill
 
