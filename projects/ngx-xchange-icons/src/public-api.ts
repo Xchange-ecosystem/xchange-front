@@ -1137,3 +1137,5 @@ export * from './lib/gray-star.component';
 export * from './lib/add-icon.component';
 export * from './lib/dismiss-icon.component';
 export * from './lib/custom-star.component';
+export * from './lib/goals-aim.component'
+export * from './lib/rewards-star.component'
