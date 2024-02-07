@@ -8,9 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class RoundedImageComponent {
   @Input() color?: string;
-  @Input() image: string = '';
+  @Input() image:  string | null = null;
   @Input() marginSize: number = 10;
-  @Input() defaultImage: string = '';
   marginSizeStr: string = ''
   constructor() {
     this.color = 'white'

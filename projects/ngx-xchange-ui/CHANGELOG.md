@@ -1,3 +1,6 @@
+# 0.0.20 - 25/01/2024
+* (fix) rounded image default image hide behavior
+
 # 0.0.19 - 19/12/2023
 * (Change) heading title name
 
