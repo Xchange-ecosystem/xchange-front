@@ -1,3 +1,6 @@
+# 0.0.9 - 07/01/2024
+* (add) Icon three dots
+
 # 0.0.8 - 12/01/2024
 * (add) Icon goals
 * (add) Icon rewards 
