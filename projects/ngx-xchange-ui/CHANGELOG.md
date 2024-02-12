@@ -1,3 +1,6 @@
+# 0.0.21 - 12/02/2024
+* (fix) min height on xc card insights
+
 # 0.0.20 - 25/01/2024
 * (fix) rounded image default image hide behavior
 
