@@ -9,6 +9,11 @@ export class ProjectProgressBarComponent {
   @Input() completed: number = 0;
   @Input() objectivesInProject: number = 0;
   @Input() open: number = 0;
+  @Input() showMarkers: boolean = false;
+
+  public mouseMarkersActionComplete: boolean = false;
+  public mouseMarkersActionOpen: boolean = false;
+  public mouseMarkersActionObjectives: boolean = false;
 
   getSize(amount: number, total:number): string{
     return String((100 / total ) * amount ) + '%'
