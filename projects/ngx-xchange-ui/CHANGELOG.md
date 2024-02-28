@@ -1,3 +1,6 @@
+# 0.0.24 - 27/02/2024
+* (fix) aside left menu height value 
+
 # 0.0.23 - 27/02/2024
 * (add) card welcome metrics
 
