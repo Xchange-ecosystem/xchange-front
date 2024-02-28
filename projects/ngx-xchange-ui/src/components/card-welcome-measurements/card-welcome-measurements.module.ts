@@ -10,6 +10,9 @@ import { CardWelcomeMeasurementsComponent } from './card-welcome-measurements/ca
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    CardWelcomeMeasurementsComponent
   ]
 })
 export class CardWelcomeMeasurementsModule { }
