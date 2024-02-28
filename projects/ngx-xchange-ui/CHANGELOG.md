@@ -1,3 +1,6 @@
+# 0.0.23 - 27/02/2024
+* (add) card welcome metrics
+
 # 0.0.22 - 23/02/2024
 * (add) hover labels indicator to progress bar
 
