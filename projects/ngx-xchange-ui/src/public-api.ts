@@ -61,3 +61,5 @@ export * from './components/card-metrics/card-metrics.module';
 export * from './components/card-metrics/card-metrics/card-metrics.component';
 export * from './components/project-progress-bar/project-progress-bar.module';
 export * from './components/project-progress-bar/project-progress-bar/project-progress-bar.component';
+export * from './components/card-welcome-measurements/card-welcome-measurements.module';
+export * from './components/card-welcome-measurements/card-welcome-measurements/card-welcome-measurements.component';
