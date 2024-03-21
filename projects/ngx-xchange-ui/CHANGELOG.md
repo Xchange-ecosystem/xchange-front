@@ -1,3 +1,6 @@
+# 0.0.25 - 21/03/2024
+* (fix) background color white on chips dorp section
+
 # 0.0.24 - 27/02/2024
 * (fix) aside left menu height value 
 
