@@ -1,3 +1,6 @@
+# 0.0.26 - 22/03/2024
+* (add) non scroll directive
+
 # 0.0.25 - 21/03/2024
 * (fix) background color white on chips dorp section
 
