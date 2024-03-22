@@ -63,3 +63,5 @@ export * from './components/project-progress-bar/project-progress-bar.module';
 export * from './components/project-progress-bar/project-progress-bar/project-progress-bar.component';
 export * from './components/card-welcome-measurements/card-welcome-measurements.module';
 export * from './components/card-welcome-measurements/card-welcome-measurements/card-welcome-measurements.component';
+export * from './directives/non-scroll/non-scroll.directive';
+export * from './directives/non-scroll/non-scroll.module';
