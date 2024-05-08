@@ -5,7 +5,7 @@ const meta: Meta<ChipComponent> = {
   title: 'xChange/ChipComponent',
   component: ChipComponent,
   tags: ['autodocs'],
-  render: (args: ChipComponent) => ({
+  render: (args: any) => ({
     props: {
       backgroundColor: null,
       ...args,
