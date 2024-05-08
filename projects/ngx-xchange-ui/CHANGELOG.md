@@ -1,3 +1,6 @@
+# 0.0.27 - 08/05/2024
+* (change) rating stars behavior of no rate and rate mode
+
 # 0.0.26 - 22/03/2024
 * (add) non scroll directive
 
