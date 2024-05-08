@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class RateComponent implements OnInit {
   @Input() maxRate: number = 5;
   @Input() rate:number = 0;
+  @Input() isToRate: boolean = false;
   @Output() rateChange = new EventEmitter<number>()
   index: number[] = []
 
