@@ -1,13 +1,13 @@
-import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
+import { AngularRenderer, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { AsideNavButtonDirective, AsideNavComponent } from '../../projects/ngx-xchange-ui/src/public-api';
-import {XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent} from 'ngx-xchange-icons';
+import {XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent} from '../../projects/ngx-xchange-icons/src/public-api';
 import { CommonModule } from '@angular/common';
-
+import { EventEmitter } from '@angular/core';
 const meta: Meta<AsideNavComponent> = {
   title: 'Components/ Aside Nav',
   component: AsideNavComponent,
   tags: ['autodocs'],
-  render: (args: AsideNavComponent) => ({
+  render: (args: any) => ({
     props: {
       backgroundColor: null,
       ...args,
