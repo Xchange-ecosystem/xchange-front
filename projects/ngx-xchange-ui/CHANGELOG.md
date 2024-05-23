@@ -1,3 +1,6 @@
+# 0.0.28 - 23/05/2024
+* (change) change behavior of color change for tenant reconcile
+
 # 0.0.27 - 08/05/2024
 * (change) rating stars behavior of no rate and rate mode
 
