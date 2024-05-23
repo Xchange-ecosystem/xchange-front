@@ -7,10 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class AsideNavComponent {
 
   @Input() isOpen: boolean = true;
+  @Input() reconcile: boolean = false;
   @Output() isOpenChange = new EventEmitter<boolean>();
   @Input()
   canClose: boolean = true;
-  toogleOpen() {
+  toggleOpen() {
     this.isOpen = !(this.isOpen)
     this.isOpenChange.emit(this.isOpen)
   }
