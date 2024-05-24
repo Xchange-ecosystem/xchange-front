@@ -1,7 +1,8 @@
 <aside
-  [ngClass]="isOpen ? '' : 'hidden'"
+  [ngClass]="{'hidden': !isOpen, 'bg-white': reconcile}"
   class="bg-black fixed left-0 w-[72px] min-h-full px-2 py-4 flex-col gap-4 items-center shrink-0">
   <div
+  [ngClass]="{'bg-white': reconcile}"
     class="left-0 h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0 bg-black"
     >
       <ng-content></ng-content>
@@ -10,7 +11,7 @@
 </aside>
 <button
 *ngIf="canClose"
-(click)="toogleOpen()"
+(click)="toggleOpen()"
 class="fixed bottom-[64px] left-0 w-[32px] h-[120px] px-1 flex justify-center items-center border-t border-r border-b border-white border-l-0 bg-black text-white rounded-e-lg z-2 fill-current">
   <xc-icon-angle-right-b *ngIf="!isOpen"/>
   <xc-icon-angle-left-b *ngIf="isOpen"/>
