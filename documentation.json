@@ -1,6 +1,33 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "ExtendedCardMetricsComponent",
+            "id": "interface-ExtendedCardMetricsComponent-5e16f310dbfdaed6cb8cbf7b2926f283aa27988f535e23ee1ace55b8ea0e4eac65ca41b1ad7be748220b555b2a776aed7833e5631cfb6f813def57a76e37126a",
+            "file": "src/stories/components/Card-Metrics.stories.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { CardMetricsComponent } from '@indziaki/ngx-xchange-ui';\r\ninterface ExtendedCardMetricsComponent extends CardMetricsComponent{\r\n  symbol: string | null;\r\n}\r\nconst meta: Meta<CardMetricsComponent> = {\r\n  title: 'xChange/MetricsComponent',\r\n  component: CardMetricsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardMetricsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<ExtendedCardMetricsComponent>;\r\n\r\nexport const Primary: Story = {\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '&#8364;'\r\n  },\r\n};\r\n",
+            "properties": [
+                {
+                    "name": "symbol",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": [
+                "CardMetricsComponent"
+            ]
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -9,7 +36,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-48ce9b57693281728e1884e58f1742900fd2c4dcc60ec7009add6907812c386e4aa5e506adb61b892ff6bb3dde6d1470d994644d6823f13dd9d2e791cbd8686d",
+            "id": "component-AppComponent-7bb57c4dcd2c09482d264d807eaf5dafbfa63e2b7f71325b92a8ebe8ff4e75764e6ec0ba08298078a17024fd2357e4fe058f125f66bd892cfb33e0c290761940",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -30,11 +57,11 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "title",
-                    "defaultValue": "'ecosystem-web'",
+                    "name": "abierto",
+                    "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "",
                     "optional": false,
                     "description": "",
                     "line": 9
@@ -50,7 +77,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  title = 'ecosystem-web';\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  abierto=true\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -59,12 +86,13 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<nav\r\n  class=\"bg-black w-full h-[72px] py-2 px-6 flex justify-between items-center shrink-0\"\r\n>\r\n  <div\r\n    class=\"bg-cover bg-center w-[139px] h-[56px]\"\r\n    style=\"\r\n      background-image: url(https://s3-alpha-sig.figma.com/img/66ac/5656/d05aaca315d86a803ae2c8c657d4b327?Expires=1698019200&Signature=DSh3-yC4Jo8eqW1AUnNlVgZSKJpV5GqIyFw~T0F~aGPmSde5exJxakDuvD~VGfG~l8hbPdS1gNa93wRH2SY7A9s-rO~bpHrPOiv3bn81bbZb0WkBrbQV~g9Fpxpk2syxvgGoG1X6ERIJNjSEA-231H5qEhfrJfAVa4aL3C~3AcT65ked8dFD1JN0p7abbjldbmPlSpgrUPtQvElSkbErKW~v0Am~gUZSBUEYrvnXeWurccmdZKrU9Jig2nKADZpqT96I1fAEuePP~aSSQPVMfqXluXZQJNLRYQ~JOG1qxauiyWYSonawCPtB7dSZSEC2eu2yc~YBSDT7NjRmG9X9WQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n    \"\r\n  ></div>\r\n  <section class=\"flex items-center gap-4\">\r\n    <a href=\"#\"\r\n      ><img src=\"../assets/icons/fi_search.svg\" alt=\"Navbar icon\"\r\n    /></a>\r\n    <a href=\"#\"\r\n      ><img src=\"../assets/icons/Notification Indicator.svg\" alt=\"Navbar icon\"\r\n    /></a>\r\n    <a href=\"#\"><img src=\"../assets/icons/fi_user.svg\" alt=\"Navbar icon\" /></a>\r\n    <a><img src=\"../assets/icons/fi_info.svg\" alt=\"Navbar icon\" /></a>\r\n  </section>\r\n</nav>\r\n<aside\r\n  class=\"bg-black absolute top-[72px] left-0 w-[72px] h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0\"\r\n>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/u_rocket.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/u_create-dashboard.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n  <a\r\n    href=\"#\"\r\n    class=\"bg-white rounded-full flex justify-center items-center w-[48px] h-[48px]\"\r\n    ><img src=\"../assets/icons/fi_users.svg\" alt=\"Nav icon\"\r\n  /></a>\r\n</aside>\r\n<div class=\"mt-4 ml-[96px] mr-[40px] p-[30px]\">\r\n  <header\r\n    class=\"flex flex-col items-start w-full h-[256px] p-8 gap-8 bg-cover bg-center relative\"\r\n    style=\"background-image: url(../assets/images/Header.svg)\"\r\n  >\r\n    <h1\r\n      class=\"text-Main_Titles text-Secondary_Fonts font-manrope font-semibold leading-[48px]\"\r\n    >\r\n      Welcome to the Venture Builder Operating System\r\n    </h1>\r\n    <div\r\n      class=\"absolute top-[149px] right-[105px] bg-white rounded-full flex justify-center items-center w-[214px] h-[214px]\"\r\n    >\r\n      <div\r\n        class=\"bg-cover bg-center w-[204px] h-[204px]\"\r\n        style=\"\r\n          background-image: url(https://s3-alpha-sig.figma.com/img/24f0/c9ff/cb2865fc85cfa30c066c9e70b5c87ffd?Expires=1698019200&Signature=PwqZWLT2Sbty3NBNWhquqROjo8URJtAQjFaWhYHM9EkratxVapyt0JiRYxWNTazLd6GSMhXMrmwh7fc370z8adsXZOYCatFVpA~IWsMlqwmxsQDDwe3ayL3Zh-ADmkFaI44zAv9eeQn5vDu96z6Adtx~cxqZtsQVUiMjxZaxAnzT4P8m9Eo2HwSWK1PCFISSgnXOlxlI6V2sQdvrZjMj6LCO3tFEHmq33LaUMSrwFfkm24qTADImx3cB66A5~aJtSqUtJDCTyVN9xjPkXNT4NRpPkdD4muPh2rxj4OFnV7yCg5TpLoIMmOcdOLQ-GNt~GFUcVYnD6hKCuua46IpDnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n        \"\r\n      ></div>\r\n    </div>\r\n  </header>\r\n  <main class=\"w-full flex justify-center items-start gap-8 mt-[80px]\">\r\n    <section class=\"p-8 w-[682px] flex flex-col items-center gap-8\">\r\n      <h2\r\n        class=\"text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]\"\r\n      >\r\n        My projects\r\n      </h2>\r\n      <article class=\"flex w-full p-4 projectCrdShadow rounded-lg\">\r\n        <div class=\"flex flex-col justify-start w-full p-4 gap-4\">\r\n          <div\r\n            class=\"bg-cover bg-center bg-no-repeat w-full h-[255px] p-8 items-stretch\"\r\n            style=\"\r\n              background-image: url(https://s3-alpha-sig.figma.com/img/cc40/8650/666516dd3c0f2d2cabc52cff45555fa5?Expires=1698019200&Signature=gxgiVvunsIAuFGiBzJPiFzOIzpusZlzbPmFVnIlM30jtRX7-GQw487h7yaitHMR9XaWRtDInoFhYEP6F-IHwAU~fPQ97eK8l9paYK0fl9N5kuyIMZ0zhb9XX5LYOL2xgskHzwi0ZrU8VnJGI2fucQyeMHNIBaKk~KkEtqhaDS8-4TN7NbwthXTWSPXTlnszgSU~AXr86yslOZVaErPGDcrGJMcqVjx3EvAo8PjYw44yyzmSWwRR5ZyM-ijdUQ-32d4BmxminS69wWEZbKxmGkz3cJn~yyg74cisFBc0V-y2UHKSPjps-bEHws1hlqRK6HfCVkJTOOwfOOSOAppTAXQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4);\r\n            \"\r\n          ></div>\r\n          <div class=\"flex justify-between items-center\">\r\n            <h3\r\n              class=\"text-Main_Fonts text-projectTitle font-manrope font-medium\"\r\n            >\r\n              Project title\r\n            </h3>\r\n          </div>\r\n          <p\r\n            class=\"text-Main_Fonts text-paragraph font-normal font-manrope leading-normal self-stretch\"\r\n          >\r\n            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt\r\n            in mauris eu tortor porttitor accumsan. Duis aute irure dolor in\r\n            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\r\n            pariatur. Nullam sit amet magna in magna gravida.\r\n          </p>\r\n        </div>\r\n      </article>\r\n    </section>\r\n    <section class=\"p-8 w-[682px] flex flex-col items-center gap-8\">\r\n      <h2\r\n        class=\"text-Secondary_Fonts text-subtitles font-manrope font-semibold leading-[32px]\"\r\n      >\r\n        My objectives\r\n      </h2>\r\n      <article\r\n        class=\"w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg\"\r\n      >\r\n        <h3\r\n          class=\"text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal\"\r\n        >\r\n          Objective title\r\n        </h3>\r\n        <p\r\n          class=\"text-Secondary_Fonts text-paragraph font-normal leading-normal\"\r\n        >\r\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in\r\n          mauris eu tortor porttitor accumsan. (...)\r\n        </p>\r\n        <div class=\"pt-4 flex justify-between items-center\">\r\n          <div class=\"flex\">\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n          </div>\r\n          <xc-card-button-view\r\n            [icon]=\"'../assets/icons/Right_4.svg'\"\r\n          ></xc-card-button-view>\r\n        </div>\r\n      </article>\r\n      <article\r\n        class=\"w-full projectCrdShadow border-l-[10px] border-Second_accent p-4 pl-8 rounded-lg\"\r\n      >\r\n        <h3\r\n          class=\"text-cardsTitles text-Main_Fonts font-manrope font-medium leading-normal\"\r\n        >\r\n          Objective title\r\n        </h3>\r\n        <p\r\n          class=\"text-Secondary_Fonts text-paragraph font-normal leading-normal\"\r\n        >\r\n          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praese nt in\r\n          mauris eu tortor porttitor accumsan. (...)\r\n        </p>\r\n        <div class=\"pt-4 flex justify-between items-center\">\r\n          <div class=\"flex\">\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n            <xc-card-tasks-indicator\r\n              [icon]=\"'../assets/icons/u_file-check-alt.svg'\"\r\n              [content]=\"'4/5 complete'\"\r\n            ></xc-card-tasks-indicator>\r\n          </div>\r\n          <xc-card-button-view\r\n            [icon]=\"'../assets/icons/Right_4.svg'\"\r\n          ></xc-card-button-view>\r\n        </div>\r\n      </article>\r\n    </section>\r\n  </main>\r\n</div>\r\n<br><br><br><br>\r\n"
+            "extends": [],
+            "templateData": "<div>\r\n  <xc-project-progress-bar [completed]=\"5\" [open]=\"3\" [objectivesInProject]=\"17\"/>\r\n</div>\r\n"
         },
         {
             "name": "DummyComponent",
             "id": "component-DummyComponent-f08b8df8d52005e1f42ef81329e87eb68cf19c37b733cedcfa8530fa000b833545463bc622214cc938b392d96ccab4a0d640800c0cec9467a25e75a5316b1eb2",
-            "file": "src/stories/Button-View-More.stories.ts",
+            "file": "src/stories/components/Button-View-More.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -93,7 +121,8 @@
             "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { ButtonViewDirective } from 'projects/ngx-xchange-ui/src/directives/button-view/button-view.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <img src=\"\" alt=\"Icon\">\r\n      <p [xcButtonView]=\"'button'\" >View</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
-            "stylesData": ""
+            "stylesData": "",
+            "extends": []
         },
         {
             "name": "HeaderCardComponent",
@@ -136,6 +165,7 @@
                 }
             ],
             "stylesData": "",
+            "extends": [],
             "templateData": "<button class=\"text-Main_accent bg-slate-300 w-9 h-4\">Mi boton</button>\r\n"
         },
         {
@@ -198,6 +228,7 @@
                 "args": [],
                 "line": 9
             },
+            "extends": [],
             "implements": [
                 "OnInit"
             ],
@@ -263,6 +294,7 @@
                 "args": [],
                 "line": 9
             },
+            "extends": [],
             "implements": [
                 "OnInit"
             ],
@@ -328,6 +360,7 @@
                 "args": [],
                 "line": 8
             },
+            "extends": [],
             "implements": [
                 "OnInit"
             ],
@@ -393,6 +426,7 @@
                 "args": [],
                 "line": 10
             },
+            "extends": [],
             "implements": [
                 "OnInit"
             ],
@@ -439,6 +473,7 @@
                 }
             ],
             "stylesData": "",
+            "extends": [],
             "templateData": "<div ngStyle=\"{'background-image': 'url(' + image + ')'}\" >\r\n</div>"
         },
         {
@@ -500,19 +535,20 @@
                 "args": [],
                 "line": 11
             },
+            "extends": [],
             "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow bg-white\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-2a9139bc7b4c9d86f32e6fbfcd477be5d88f75e3afb7dbcc950ef92b39da2ba455c08f6c785ba968f352ba64fc079443391fe87b5a7bdb1da9ad7e62e7bbb21c",
+            "id": "module-AppModule-95750cf2a4fde20fc2833e7137f43340d12133470b741585b38865b1b96f4c305f2719f52634ddeafe74c11d7c0b19a7e8a9fc20fc668f04d92062c296704f1b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CarButtonViewModule,\r\n    CardTasksIndicatorModule,\r\n    CarButtonViewModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CarButtonViewModule,\r\n    CardTasksIndicatorModule,\r\n    CarButtonViewModule,\r\n    AsideNavModule,\r\n    ProjectProgressBarModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -557,13 +593,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-205d45637f2d0660cd9df356823552dab39aecae1b3fd41c9016d1711d0d047d06c4fcfb6f21a0c3b1da656338cf805322d311a964deb7312f6ef6cf75f1f3a1",
+            "id": "module-AppRoutingModule-194d5ef39693fd7ae52df48a0d3b58b1ef0f2633ac9c393078a6f71882223f2a68ffcdb89de0bfd5c6806b71f4cc6db33c9763ff20a4fafcff541560a51270a4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nimport { NotFoundComponent } from './core/share/components/not-found/not-found.component';\r\n\r\nconst routes: Routes = [\r\n  { path: '', loadChildren: () => \"import('./public/public.module')\\\n  .then(m => m.PublicModule)\" },\r\n  { path: '**', component: NotFoundComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes, {useHash: true})],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nimport { NotFoundComponent } from './core/share/components/not-found/not-found.component';\r\n\r\nconst routes: Routes = [\r\n  { path: '', loadChildren: () => \"import('./public/public.module')\\r\\n\\\n  .then(m => m.PublicModule)\" },\r\n  { path: '**', component: NotFoundComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes, {useHash: true})],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -629,13 +665,13 @@
         },
         {
             "name": "PublicModule",
-            "id": "module-PublicModule-cd358f9a81b09290dc02e7ece660607b8708ae48049589b68afa0137a00d26052188e163f60a1081520f2c8bc9eca6bae75c76c33c330ff593079879897e42c2",
+            "id": "module-PublicModule-79e40442e832d280c1c5f516d5d717ef521626aacdc99005a1475bab6c9aa66b4860c4a7e50286b111104d48694708f55d44b64bc544f1c2bbb1534d57b92bd4",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/public/public.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\nimport { CardDeadlineIndicatorModule } from \"ngx-xchange-ui\";\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n        CardDeadlineIndicatorModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent,\r\n       \r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { PublicRoutingModule } from \"./public-routing.module\";\r\nimport { ShareModule } from \"../core/share/share.module\";\r\nimport { PublicComponent } from \"./public.component\";\r\nimport { HomeComponent } from \"./home/containers/home.component\";\r\nimport { LoginComponent } from \"./login/containers/login.componet\";\r\nimport { HeaderCardComponent } from './components/header-card/header-card.component';\r\nimport { UserNameCardComponent } from './components/user-name-card/user-name-card.component';\r\nimport { UserAvatarComponent } from './components/user-avatar/user-avatar.component';\r\nimport { CardDeadlineIndicatorModule } from \"@indziaki/ngx-xchange-ui\";\r\n\r\n@NgModule({\r\n    imports: [\r\n        PublicRoutingModule,\r\n        ShareModule,\r\n        CardDeadlineIndicatorModule,\r\n    ],\r\n    declarations: [\r\n        PublicComponent,\r\n        HomeComponent,\r\n        LoginComponent,\r\n        HeaderCardComponent,\r\n        UserNameCardComponent,\r\n        UserAvatarComponent,\r\n\r\n    ],\r\n    exports: [],\r\n    providers: []\r\n})\r\n\r\nexport class PublicModule{\r\n    constructor() {}\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -776,7 +812,7 @@
                 "name": "fourth",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Tittles.stories.ts",
+                "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -790,13 +826,13 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AsideNavComponent>",
-                "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: AsideNavComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button-View-More.stories.ts",
+                "file": "src/stories/components/Button-View-More.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DummyComponent>",
@@ -806,7 +842,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button-View.stories.ts",
+                "file": "src/stories/components/Button-View.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardButtonViewComponent>",
@@ -816,7 +852,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Card-insight.stories.ts",
+                "file": "src/stories/components/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardInsightsComponent>",
@@ -826,7 +862,17 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "file": "src/stories/components/Card-Metrics.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CardMetricsComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/MetricsComponent',\r\n  component: CardMetricsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardMetricsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardDeadlineIndicatorComponent>",
@@ -836,7 +882,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardParagraph.stories.ts",
+                "file": "src/stories/components/CardParagraph.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardParagraphComponent>",
@@ -846,7 +892,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardProofIndicator.stories.ts",
+                "file": "src/stories/components/CardProofIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardProofsIndicatorComponent>",
@@ -856,7 +902,7 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "file": "src/stories/components/CardTasksIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardTasksIndicatorComponent>",
@@ -866,7 +912,17 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/tag.stories.ts",
+                "file": "src/stories/components/Chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ChipComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/ChipComponent',\r\n  component: ChipComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TagComponentComponent>",
@@ -876,11 +932,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Tittles.stories.ts",
+                "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TitlesComponent>",
                 "defaultValue": "{\r\n  title: 'xChange/Titles',\r\n  component: TitlesComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TitlesComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/User-Name.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<UserNameCardComponent>",
+                "defaultValue": "{\r\n  title: 'Xchange User Name',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      backgroundColor: \"black\",\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -910,13 +976,13 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: { },\r\n}"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button-View-More.stories.ts",
+                "file": "src/stories/components/Button-View-More.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -926,27 +992,37 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Button-View.stories.ts",
+                "file": "src/stories/components/Button-View.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    // icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Card-insight.stories.ts",
+                "file": "src/stories/components/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    value: 56,\r\n    description: \"lkdsajflkdsjflks\"\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just an example'\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "file": "src/stories/components/Card-Metrics.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '&#8364;'\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -956,7 +1032,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardParagraph.stories.ts",
+                "file": "src/stories/components/CardParagraph.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -966,7 +1042,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardProofIndicator.stories.ts",
+                "file": "src/stories/components/CardProofIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -976,17 +1052,27 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "file": "src/stories/components/CardTasksIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/u_file-check-alt.svg\",\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/tag.stories.ts",
+                "file": "src/stories/components/Chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -996,17 +1082,27 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Tittles.stories.ts",
+                "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"mainHeading\"\r\n  },\r\n}"
             },
             {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/User-Name.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: \"\",\r\n    lastname: \"\",\r\n  },\r\n}"
+            },
+            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1016,7 +1112,7 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Tittles.stories.ts",
+                "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1026,7 +1122,7 @@
                 "name": "Tertiary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Tittles.stories.ts",
+                "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
@@ -1054,106 +1150,139 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<DummyComponent>",
-                "file": "src/stories/Button-View-More.stories.ts",
+                "file": "src/stories/components/Button-View-More.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardButtonViewComponent>",
-                "file": "src/stories/Button-View.stories.ts",
+                "file": "src/stories/components/Button-View.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardInsightsComponent>",
-                "file": "src/stories/Card-insight.stories.ts",
+                "file": "src/stories/components/Card-insight.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ExtendedCardMetricsComponent>",
+                "file": "src/stories/components/Card-Metrics.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardDeadlineIndicatorComponent>",
-                "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardParagraphComponent>",
-                "file": "src/stories/CardParagraph.stories.ts",
+                "file": "src/stories/components/CardParagraph.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardProofsIndicatorComponent>",
-                "file": "src/stories/CardProofIndicator.stories.ts",
+                "file": "src/stories/components/CardProofIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CardTasksIndicatorComponent>",
-                "file": "src/stories/CardTasksIndicator.stories.ts",
+                "file": "src/stories/components/CardTasksIndicator.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ChipComponent>",
+                "file": "src/stories/components/Chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<TagComponentComponent>",
-                "file": "src/stories/tag.stories.ts",
+                "file": "src/stories/components/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<TitlesComponent>",
-                "file": "src/stories/Tittles.stories.ts",
+                "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<UserNameCardComponent>",
+                "file": "src/stories/components/User-Name.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
             },
             {
                 "name": "Story",
@@ -1164,17 +1293,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
-                "kind": 180
+                "kind": 183
             }
         ],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/Tittles.stories.ts": [
+            "src/stories/components/Tittles.stories.ts": [
                 {
                     "name": "fourth",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Tittles.stories.ts",
+                    "file": "src/stories/components/Tittles.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1184,7 +1313,7 @@
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Tittles.stories.ts",
+                    "file": "src/stories/components/Tittles.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TitlesComponent>",
@@ -1194,7 +1323,7 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Tittles.stories.ts",
+                    "file": "src/stories/components/Tittles.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1204,7 +1333,7 @@
                     "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Tittles.stories.ts",
+                    "file": "src/stories/components/Tittles.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1214,7 +1343,7 @@
                     "name": "Tertiary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Tittles.stories.ts",
+                    "file": "src/stories/components/Tittles.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1230,7 +1359,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AsideNavComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: AsideNavComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1240,15 +1369,15 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    insights:{\r\n      activeObjectives:5,\r\n      completedObjectives:6,\r\n      involvedProjects:7,\r\n      suggestedNextSteps: 8\r\n    },\r\n    imgSrc: '/assetsExample/img/card-insights-example.jpg'\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: { },\r\n}"
                 }
             ],
-            "src/stories/Button-View-More.stories.ts": [
+            "src/stories/components/Button-View-More.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button-View-More.stories.ts",
+                    "file": "src/stories/components/Button-View-More.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DummyComponent>",
@@ -1258,19 +1387,19 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button-View-More.stories.ts",
+                    "file": "src/stories/components/Button-View-More.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n}"
                 }
             ],
-            "src/stories/Button-View.stories.ts": [
+            "src/stories/components/Button-View.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button-View.stories.ts",
+                    "file": "src/stories/components/Button-View.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardButtonViewComponent>",
@@ -1280,19 +1409,19 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Button-View.stories.ts",
+                    "file": "src/stories/components/Button-View.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    // icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
                 }
             ],
-            "src/stories/Card-insight.stories.ts": [
+            "src/stories/components/Card-insight.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Card-insight.stories.ts",
+                    "file": "src/stories/components/Card-insight.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardInsightsComponent>",
@@ -1302,19 +1431,41 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/Card-insight.stories.ts",
+                    "file": "src/stories/components/Card-insight.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just an example'\r\n  },\r\n}"
                 }
             ],
-            "src/stories/CardDeadlineIndicator.stories.ts": [
+            "src/stories/components/Card-Metrics.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "file": "src/stories/components/Card-Metrics.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CardMetricsComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/MetricsComponent',\r\n  component: CardMetricsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardMetricsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Card-Metrics.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '&#8364;'\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/components/CardDeadlineIndicator.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardDeadlineIndicatorComponent>",
@@ -1324,7 +1475,7 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
@@ -1334,19 +1485,19 @@
                     "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/u_calendar-alt.svg\"\r\n  },\r\n}"
                 }
             ],
-            "src/stories/CardParagraph.stories.ts": [
+            "src/stories/components/CardParagraph.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardParagraph.stories.ts",
+                    "file": "src/stories/components/CardParagraph.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardParagraphComponent>",
@@ -1356,19 +1507,19 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardParagraph.stories.ts",
+                    "file": "src/stories/components/CardParagraph.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
                 }
             ],
-            "src/stories/CardProofIndicator.stories.ts": [
+            "src/stories/components/CardProofIndicator.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "file": "src/stories/components/CardProofIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardProofsIndicatorComponent>",
@@ -1378,19 +1529,19 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "file": "src/stories/components/CardProofIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
                 }
             ],
-            "src/stories/CardTasksIndicator.stories.ts": [
+            "src/stories/components/CardTasksIndicator.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "file": "src/stories/components/CardTasksIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardTasksIndicatorComponent>",
@@ -1400,19 +1551,41 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "file": "src/stories/components/CardTasksIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    icon: \"./assets/u_file-check-alt.svg\",\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
                 }
             ],
-            "src/stories/tag.stories.ts": [
+            "src/stories/components/Chips.stories.ts": [
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/tag.stories.ts",
+                    "file": "src/stories/components/Chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ChipComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/ChipComponent',\r\n  component: ChipComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/components/tag.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/tag.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TagComponentComponent>",
@@ -1422,11 +1595,33 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/tag.stories.ts",
+                    "file": "src/stories/components/tag.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/components/User-Name.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/User-Name.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<UserNameCardComponent>",
+                    "defaultValue": "{\r\n  title: 'Xchange User Name',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      backgroundColor: \"black\",\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/User-Name.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: \"\",\r\n    lastname: \"\",\r\n  },\r\n}"
                 }
             ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
@@ -1477,124 +1672,163 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/Button-View-More.stories.ts": [
+            "src/stories/components/Button-View-More.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<DummyComponent>",
-                    "file": "src/stories/Button-View-More.stories.ts",
+                    "file": "src/stories/components/Button-View-More.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/Button-View.stories.ts": [
+            "src/stories/components/Button-View.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardButtonViewComponent>",
-                    "file": "src/stories/Button-View.stories.ts",
+                    "file": "src/stories/components/Button-View.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/Card-insight.stories.ts": [
+            "src/stories/components/Card-insight.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardInsightsComponent>",
-                    "file": "src/stories/Card-insight.stories.ts",
+                    "file": "src/stories/components/Card-insight.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/CardDeadlineIndicator.stories.ts": [
+            "src/stories/components/Card-Metrics.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExtendedCardMetricsComponent>",
+                    "file": "src/stories/components/Card-Metrics.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/CardDeadlineIndicator.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardDeadlineIndicatorComponent>",
-                    "file": "src/stories/CardDeadlineIndicator.stories.ts",
+                    "file": "src/stories/components/CardDeadlineIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/CardParagraph.stories.ts": [
+            "src/stories/components/CardParagraph.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardParagraphComponent>",
-                    "file": "src/stories/CardParagraph.stories.ts",
+                    "file": "src/stories/components/CardParagraph.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/CardProofIndicator.stories.ts": [
+            "src/stories/components/CardProofIndicator.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardProofsIndicatorComponent>",
-                    "file": "src/stories/CardProofIndicator.stories.ts",
+                    "file": "src/stories/components/CardProofIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/CardTasksIndicator.stories.ts": [
+            "src/stories/components/CardTasksIndicator.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CardTasksIndicatorComponent>",
-                    "file": "src/stories/CardTasksIndicator.stories.ts",
+                    "file": "src/stories/components/CardTasksIndicator.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/tag.stories.ts": [
+            "src/stories/components/Chips.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ChipComponent>",
+                    "file": "src/stories/components/Chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/tag.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TagComponentComponent>",
-                    "file": "src/stories/tag.stories.ts",
+                    "file": "src/stories/components/tag.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ],
-            "src/stories/Tittles.stories.ts": [
+            "src/stories/components/Tittles.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TitlesComponent>",
-                    "file": "src/stories/Tittles.stories.ts",
+                    "file": "src/stories/components/Tittles.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/User-Name.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<UserNameCardComponent>",
+                    "file": "src/stories/components/User-Name.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
                 }
             ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
@@ -1607,7 +1841,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 180
+                    "kind": 183
                 }
             ]
         }
@@ -1797,7 +2031,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button-View-More.stories.ts",
+                "filePath": "src/stories/components/Button-View-More.stories.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "DummyComponent",
@@ -1806,7 +2040,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button-View-More.stories.ts",
+                "filePath": "src/stories/components/Button-View-More.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1816,7 +2050,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button-View-More.stories.ts",
+                "filePath": "src/stories/components/Button-View-More.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1826,7 +2060,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button-View.stories.ts",
+                "filePath": "src/stories/components/Button-View.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1836,7 +2070,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Button-View.stories.ts",
+                "filePath": "src/stories/components/Button-View.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1846,7 +2080,16 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Card-insight.stories.ts",
+                "filePath": "src/stories/components/Card-Metrics.stories.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ExtendedCardMetricsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Card-Metrics.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1856,7 +2099,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Card-insight.stories.ts",
+                "filePath": "src/stories/components/Card-Metrics.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1866,7 +2109,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "filePath": "src/stories/components/Card-insight.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1876,7 +2119,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "filePath": "src/stories/components/Card-insight.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1886,7 +2129,27 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardDeadlineIndicator.stories.ts",
+                "filePath": "src/stories/components/CardDeadlineIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/CardDeadlineIndicator.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/CardDeadlineIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1896,7 +2159,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardParagraph.stories.ts",
+                "filePath": "src/stories/components/CardParagraph.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1906,7 +2169,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardParagraph.stories.ts",
+                "filePath": "src/stories/components/CardParagraph.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1916,7 +2179,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardProofIndicator.stories.ts",
+                "filePath": "src/stories/components/CardProofIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1926,7 +2189,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardProofIndicator.stories.ts",
+                "filePath": "src/stories/components/CardProofIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1936,7 +2199,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardTasksIndicator.stories.ts",
+                "filePath": "src/stories/components/CardTasksIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1946,7 +2209,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/CardTasksIndicator.stories.ts",
+                "filePath": "src/stories/components/CardTasksIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1956,7 +2219,27 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Tittles.stories.ts",
+                "filePath": "src/stories/components/Chips.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Chips.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Tittles.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1966,7 +2249,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Tittles.stories.ts",
+                "filePath": "src/stories/components/Tittles.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1976,7 +2259,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Tittles.stories.ts",
+                "filePath": "src/stories/components/Tittles.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1986,7 +2269,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Tittles.stories.ts",
+                "filePath": "src/stories/components/Tittles.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1996,7 +2279,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/Tittles.stories.ts",
+                "filePath": "src/stories/components/Tittles.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2006,7 +2289,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/tag.stories.ts",
+                "filePath": "src/stories/components/User-Name.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2016,7 +2299,27 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/tag.stories.ts",
+                "filePath": "src/stories/components/User-Name.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/tag.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/tag.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
