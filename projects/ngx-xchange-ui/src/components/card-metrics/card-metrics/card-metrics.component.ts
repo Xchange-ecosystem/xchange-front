@@ -12,11 +12,13 @@ export class CardMetricsComponent {
   description: string | null;
   @Input()
   width: string | null;
+  @Input() symbol: string | null;
 
   constructor() {
     this.value = 0;
     this.description = ""
     this.width = '84'
+    this.symbol = '€'
   }
   
   getWidth(){

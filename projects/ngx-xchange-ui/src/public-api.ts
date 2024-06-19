@@ -65,3 +65,5 @@ export * from './components/card-welcome-measurements/card-welcome-measurements.
 export * from './components/card-welcome-measurements/card-welcome-measurements/card-welcome-measurements.component';
 export * from './directives/non-scroll/non-scroll.directive';
 export * from './directives/non-scroll/non-scroll.module';
+export * from './directives/disable-click/disable-click.directive';
+export * from './directives/disable-click/disable-click.module';

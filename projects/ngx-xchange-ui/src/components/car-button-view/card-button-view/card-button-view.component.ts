@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 @Component({
   selector: 'xc-card-button-view',
@@ -9,9 +9,16 @@ export class CardButtonViewComponent {
 
   @Input()
   description: String
+  @Input()
+  width: string | null;
 
   constructor(){
     this.description = ""
+    this.width = '120'
+  }
+
+  getWidth(){
+    return this.width!? this.width : '120'
   }
 
 }
