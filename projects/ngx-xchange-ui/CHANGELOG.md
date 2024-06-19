@@ -1,3 +1,8 @@
+# 0.0.29 - 19/06/2024
+* (change) button view width behavior
+* (add) card metrics symbol input
+* (change) update storybook library
+
 # 0.0.28 - 23/05/2024
 * (change) change behavior of color change for tenant reconcile
 

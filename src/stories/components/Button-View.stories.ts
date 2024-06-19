@@ -23,6 +23,7 @@ type Story = StoryObj<CardButtonViewComponent>;
 // More on writing stories with args: https://storybook.js.org/docs/angular/writing-stories/args
 export const Primary: Story = {
   args: {
-    // icon: "./assets/Right_4.svg"
+    width:'200',
+    description: 'add'
   },
 };
