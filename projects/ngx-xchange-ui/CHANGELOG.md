@@ -1,3 +1,6 @@
+# 0.0.30 20/08/2024
+* (add) metrics selector
+
 # 0.0.29 - 19/06/2024
 * (change) button view width behavior
 * (add) card metrics symbol input
