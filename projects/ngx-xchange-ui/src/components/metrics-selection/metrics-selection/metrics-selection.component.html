@@ -1,0 +1,51 @@
+<section
+  (click)="optionsOpen = true"
+  [tabIndex]="0"
+  (focusout)="optionsClose()"
+  class="relative flex justify-center items-center min-w-[210px] max-w-[250px]"
+>
+  <div
+    class="flex justify-between items-center w-full border border-Secondary_Fonts rounded-lg px-4 py-2"
+  >
+    <div class="flex w-4/5 justify-between items-center">
+      <input
+        type="number"
+        (focusin)="optionsOpen = false"
+        *ngIf="userSelection && selection === 'metric'"
+        (keyup)="setUnit($event)"
+        class="flex w-3/5 font-manrope py-1 px-2"
+      />
+      <p
+        class="flex font-manrope"
+        [ngClass]="{
+          'flex justify-center items-center bg-[#aacf64] p-2 rounded-lg':
+            userSelection && selection === 'select',
+          'flex justify-center items-center p-2': selection !== 'select',
+          'w-2/5 flex justify-center items-center p-2':
+            userSelection && selection === 'metric',
+        }"
+      >
+        {{ userSelection ? userSelection : "Select an option" }}
+      </p>
+    </div>
+    <div
+      class="flex w-1/5  items-center"
+      [ngClass]="{ 'rotate-180 justify-start': getOptionStatus() }"
+      [style]="{'justify-content': getOptionStatus() ? 'start' : 'end'}"
+    >
+      <ng-content />
+    </div>
+  </div>
+  <ul
+    *ngIf="getOptionStatus()"
+    class="cardShadow bg-white absolute top-[40px] translate-x-[-50%] left-1/2 flex flex-col gap-4 px-4 py-2 z-2 min-w-[220px] rounded-lg"
+  >
+    <li
+      *ngFor="let option of getTaskOptionsCatalog(selection); index as i"
+      class="ms-4 text-nowrap cursor-pointer hover:border border-Secondary_Fonts rounded-md"
+      (click)="emitSelection(i)"
+    >
+      {{ option }}
+    </li>
+  </ul>
+</section>
