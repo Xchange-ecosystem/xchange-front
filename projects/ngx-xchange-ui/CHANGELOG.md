@@ -1,3 +1,6 @@
+# 0.0.31 21/08/2024
+(change) metrics selecto behavior
+
 # 0.0.30 20/08/2024
 * (add) metrics selector
 
