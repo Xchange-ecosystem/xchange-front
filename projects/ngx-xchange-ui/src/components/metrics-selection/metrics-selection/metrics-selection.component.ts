@@ -20,6 +20,9 @@ type MetricsCatalogKey = keyof typeof MetricsCatalog;
 
 export class MetricsSelectionComponent {
   @Input() selection: MetricsCatalogKey = 'select';
+  @Input() setValue: string | number | undefined;
+  @Input() showMode: string | undefined;
+  @Input() setUnitValue: number | undefined;
   @Output() selectionChosen = new EventEmitter<string | number>();
   @Output() unit = new EventEmitter<number>();
 
@@ -44,7 +47,7 @@ export class MetricsSelectionComponent {
     }, 100);
   }
   getOptionStatus(){
-    return this.optionsOpen;
+    return this.optionsOpen && !this.showMode;
   }
   setUnit(event: Event){
     const value = (event.target as HTMLInputElement).value

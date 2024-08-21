@@ -1,4 +1,5 @@
-<section
+<button
+  [disabled]="showMode"
   (click)="optionsOpen = true"
   [tabIndex]="0"
   (focusout)="optionsClose()"
@@ -10,13 +11,28 @@
     <div class="flex w-4/5 justify-between items-center">
       <input
         type="number"
+        [value]="setUnitValue ? setUnitValue : 0"
         (focusin)="optionsOpen = false"
-        *ngIf="userSelection && selection === 'metric'"
+        *ngIf="userSelection && selection === 'metric' || setUnitValue"
         (keyup)="setUnit($event)"
         class="flex w-3/5 font-manrope py-1 px-2"
       />
       <p
         class="flex font-manrope"
+        *ngIf="showMode"
+        [ngClass]="{
+          'flex justify-center items-center bg-[#aacf64] p-2 rounded-lg':
+            showMode === 'select',
+          'flex justify-center items-center p-2': showMode === 'rating',
+          'w-2/5 flex justify-center items-center p-2':
+            showMode === 'metric',
+        }"
+      >
+        {{ setValue }}
+      </p>
+      <p
+        class="flex font-manrope"
+        *ngIf="!showMode"
         [ngClass]="{
           'flex justify-center items-center bg-[#aacf64] p-2 rounded-lg':
             userSelection && selection === 'select',
@@ -29,9 +45,9 @@
       </p>
     </div>
     <div
-      class="flex w-1/5  items-center"
+      class="flex w-1/5 items-center"
       [ngClass]="{ 'rotate-180 justify-start': getOptionStatus() }"
-      [style]="{'justify-content': getOptionStatus() ? 'start' : 'end'}"
+      [style]="{ 'justify-content': getOptionStatus() ? 'start' : 'end' }"
     >
       <ng-content />
     </div>
@@ -48,4 +64,4 @@
       {{ option }}
     </li>
   </ul>
-</section>
+</button>
