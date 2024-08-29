@@ -18,18 +18,23 @@ type MetricsCatalogKey = keyof typeof MetricsCatalog;
   styleUrl: './metrics-selection.component.css'
 })
 
-export class MetricsSelectionComponent {
+export class MetricsSelectionComponent implements OnInit {
   @Input() selection: MetricsCatalogKey = 'select';
   @Input() setValue: string | number | undefined;
   @Input() showMode: string | undefined;
   @Input() setUnitValue: number | undefined;
+  @Input() blockElement: boolean = false;
   @Output() selectionChosen = new EventEmitter<string | number>();
+  @Output() setValueChange = new EventEmitter<string | number>();
   @Output() unit = new EventEmitter<number>();
 
-  public userSelection!: string | number;
+  public userSelection!: string | number |undefined;
   public optionsOpen: boolean = false;
   
   constructor(){
+  }
+  ngOnInit(): void {
+    if(this.setValue) this.userSelection = this.setValue;
   }
 
   emitSelection(selection: number){
@@ -47,9 +52,10 @@ export class MetricsSelectionComponent {
     }, 100);
   }
   getOptionStatus(){
-    return this.optionsOpen && !this.showMode;
+    return this.optionsOpen;
   }
   setUnit(event: Event){
+    this.optionsOpen = false;
     const value = (event.target as HTMLInputElement).value
     this.unit.emit(parseInt(value))
   }

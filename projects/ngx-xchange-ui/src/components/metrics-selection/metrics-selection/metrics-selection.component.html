@@ -1,5 +1,5 @@
 <button
-  [disabled]="showMode"
+  [disabled]="blockElement"
   (click)="optionsOpen = true"
   [tabIndex]="0"
   (focusout)="optionsClose()"
@@ -10,39 +10,38 @@
   >
     <div class="flex w-4/5 justify-between items-center">
       <input
+        [readOnly]="blockElement"
         type="number"
         [value]="setUnitValue ? setUnitValue : 0"
         (focusin)="optionsOpen = false"
-        *ngIf="userSelection && selection === 'metric' || setUnitValue"
+        *ngIf="(userSelection && selection === 'metric') || setUnitValue"
+        (input)="setUnit($event)"
         (keyup)="setUnit($event)"
+        (click)="setUnit($event)"
         class="flex w-3/5 font-manrope py-1 px-2"
       />
-      <p
-        class="flex font-manrope"
+      <spam
+        class="flex font-manrope items-center justify-center py-2"
         *ngIf="showMode"
         [ngClass]="{
-          'flex justify-center items-center bg-[#aacf64] p-2 rounded-lg':
-            showMode === 'select',
-          'flex justify-center items-center p-2': showMode === 'rating',
-          'w-2/5 flex justify-center items-center p-2':
-            showMode === 'metric',
+          'bg-[#aacf64] rounded-lg px-4': userSelection && showMode === 'select',
+          'px-4': selection !== 'select',
+          'w-2/5': showMode === 'metric',
         }"
       >
         {{ setValue }}
-      </p>
-      <p
-        class="flex font-manrope"
+      </spam>
+      <spam
+        class="flex font-manrope items-center justify-center py-2"
         *ngIf="!showMode"
         [ngClass]="{
-          'flex justify-center items-center bg-[#aacf64] p-2 rounded-lg':
-            userSelection && selection === 'select',
-          'flex justify-center items-center p-2': selection !== 'select',
-          'w-2/5 flex justify-center items-center p-2':
-            userSelection && selection === 'metric',
+          'bg-[#aacf64] rounded-lg px-4':userSelection && selection === 'select',
+          'px-4': selection !== 'select',
+          'w-2/5': userSelection && selection === 'metric',
         }"
       >
         {{ userSelection ? userSelection : "Select an option" }}
-      </p>
+      </spam>
     </div>
     <div
       class="flex w-1/5 items-center"
