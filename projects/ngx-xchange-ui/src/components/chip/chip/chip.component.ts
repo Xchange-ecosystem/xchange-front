@@ -13,8 +13,10 @@ export class ChipComponent implements OnInit {
   @Input() dataset: chipData[] = []
   @Input() label: string = "";
   @Input() placeholder: string = "";
-  @Input() chosen: chipData[] = []
+  @Input() chosen: chipData[] = [];
+  @Input() limitTags: boolean = false;
   @Output() chosenChange = new EventEmitter<chipData[]>();
+  @Output() tagsComplete = new EventEmitter<boolean>(false);
 
   isVisible: boolean = false;
   notChosen: string[] = []
@@ -48,16 +50,21 @@ export class ChipComponent implements OnInit {
       this.chosen = this.chosen.filter((c) => c.key !== item.key);
 
     this.notChosen = [...this.notChosen, item.key]
+    this.tagsComplete.emit(true); 
     this.emitChosen()
   }
 
   emitChosen() {
+    this.tagsComplete.emit(true); 
     this.chosenChange.emit(this.chosen)
   }
 
   addUnregister( event: any ) {
     let exist = this.chosen.some((c) => c.key === '-1' && c.value === event.target.value )
     if(exist) return
+    if(this.chosen.length === 5 && this.limitTags){
+      return;
+    }
     this.chosen = [...this.chosen, {key: '-1', value: event.target.value}]
     this.emitChosen()
   }
