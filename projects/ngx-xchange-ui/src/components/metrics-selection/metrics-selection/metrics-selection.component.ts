@@ -22,7 +22,7 @@ export class MetricsSelectionComponent implements OnInit {
   @Input() selection: MetricsCatalogKey = 'select';
   @Input() setValue: string | number | undefined;
   @Input() showMode: string | undefined;
-  @Input() setUnitValue: number | undefined;
+  @Input() unitValue: number | undefined;
   @Input() blockElement: boolean = false;
   @Output() selectionChosen = new EventEmitter<string | number>();
   @Output() setValueChange = new EventEmitter<string | number>();
