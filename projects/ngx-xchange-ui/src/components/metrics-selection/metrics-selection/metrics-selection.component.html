@@ -12,9 +12,9 @@
       <input
         [readOnly]="blockElement"
         type="number"
-        [value]="setUnitValue ? setUnitValue : 0"
+        [value]="unitValue ? unitValue : 0"
         (focusin)="optionsOpen = false"
-        *ngIf="(userSelection && selection === 'metric') || setUnitValue"
+        *ngIf="(userSelection && selection === 'metric') || unitValue"
         (input)="setUnit($event)"
         (keyup)="setUnit($event)"
         (click)="setUnit($event)"
