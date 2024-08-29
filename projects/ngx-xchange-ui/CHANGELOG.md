@@ -1,3 +1,6 @@
+# 0.0.34 28/08/2024 
+(change) metrics input and output behavior
+
 # 0.0.32 28/08/2024
 (change) metrics selector behavior
 (change) Chips behavior
