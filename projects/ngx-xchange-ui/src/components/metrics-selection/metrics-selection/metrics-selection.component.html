@@ -1,9 +1,9 @@
-<button
+    <button
   [disabled]="blockElement"
   (click)="optionsOpen = true"
   [tabIndex]="0"
   (focusout)="optionsClose()"
-  class="relative flex justify-center items-center min-w-[210px] max-w-[250px]"
+  class="relative flex justify-center items-center w-full"
 >
   <div
     class="flex justify-between items-center w-full border border-Secondary_Fonts rounded-lg px-4 py-2"
@@ -29,10 +29,10 @@
           'w-2/5': showMode === 'metric',
         }"
       >
-        {{ setValue }}
+        {{ getValue() }}
       </spam>
       <spam
-        class="flex font-manrope items-center justify-center py-2"
+        class="flex font-manrope items-center justify-center py-2 text-nowrap"
         *ngIf="!showMode"
         [ngClass]="{
           'bg-[#aacf64] rounded-lg px-4':userSelection && selection === 'select',
