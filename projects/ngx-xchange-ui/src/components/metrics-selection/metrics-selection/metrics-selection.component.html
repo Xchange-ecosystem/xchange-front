@@ -1,4 +1,4 @@
-    <button
+<button
   [disabled]="blockElement"
   (click)="optionsOpen = true"
   [tabIndex]="0"
@@ -24,7 +24,12 @@
         class="flex font-manrope items-center justify-center py-2"
         *ngIf="showMode"
         [ngClass]="{
-          'bg-[#aacf64] rounded-lg px-4': userSelection && showMode === 'select',
+           'bg-Main_accent  ':
+            userSelection ==='Yes' && selection === 'select',
+          'bg-Reconcile_red  ':
+            userSelection ==='No' && selection === 'select',
+          'bg-Quaternary_Fonts  ':
+            userSelection !=='Yes' && userSelection !== 'No' && selection === 'select',
           'px-4': selection !== 'select',
           'w-2/5': showMode === 'metric',
         }"
@@ -32,11 +37,16 @@
         {{ getValue() }}
       </spam>
       <spam
-        class="flex font-manrope items-center justify-center py-2 text-nowrap"
+        class="flex font-manrope items-center justify-center py-2 text-nowrap px-4 rounded-lg"
         *ngIf="!showMode"
         [ngClass]="{
-          'bg-[#aacf64] rounded-lg px-4':userSelection && selection === 'select',
-          'px-4': selection !== 'select',
+          'bg-Main_accent  ':
+            userSelection ==='Yes' && selection === 'select',
+          'bg-Reconcile_red  ':
+            userSelection ==='No' ,
+          'bg-Quaternary_Fonts  ':
+            userSelection !=='Yes' && userSelection !== 'No' && selection === 'select',
+          '': selection !== 'select',
           'w-2/5': userSelection && selection === 'metric',
         }"
       >

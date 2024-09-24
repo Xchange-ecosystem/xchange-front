@@ -1,33 +1,6 @@
 {
     "pipes": [],
-    "interfaces": [
-        {
-            "name": "ExtendedCardMetricsComponent",
-            "id": "interface-ExtendedCardMetricsComponent-5e16f310dbfdaed6cb8cbf7b2926f283aa27988f535e23ee1ace55b8ea0e4eac65ca41b1ad7be748220b555b2a776aed7833e5631cfb6f813def57a76e37126a",
-            "file": "src/stories/components/Card-Metrics.stories.ts",
-            "deprecated": false,
-            "deprecationMessage": "",
-            "type": "interface",
-            "sourceCode": "import type { Meta, StoryObj } from '@storybook/angular';\r\nimport { CardMetricsComponent } from '@indziaki/ngx-xchange-ui';\r\ninterface ExtendedCardMetricsComponent extends CardMetricsComponent{\r\n  symbol: string | null;\r\n}\r\nconst meta: Meta<CardMetricsComponent> = {\r\n  title: 'xChange/MetricsComponent',\r\n  component: CardMetricsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardMetricsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<ExtendedCardMetricsComponent>;\r\n\r\nexport const Primary: Story = {\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '&#8364;'\r\n  },\r\n};\r\n",
-            "properties": [
-                {
-                    "name": "symbol",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string | null",
-                    "optional": false,
-                    "description": "",
-                    "line": 4
-                }
-            ],
-            "indexSignatures": [],
-            "kind": 171,
-            "methods": [],
-            "extends": [
-                "CardMetricsComponent"
-            ]
-        }
-    ],
+    "interfaces": [],
     "injectables": [],
     "guards": [],
     "interceptors": [],
@@ -922,6 +895,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/metric-selection.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<MetricsSelectionComponent>",
+                "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      // metric: args.metric || 3,\r\n      // rating: args.rating,\r\n      // select: args.select,\r\n      setValue: args.setValue,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text' },\r\n    // metric: { control: 'number' },\r\n    // rating: { control: 'number' },\r\n    // select: { control: 'text' },\r\n    setValue: { control: 'text' },\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/tag.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -996,7 +979,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    // icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    width:'200',\r\n    description: 'add'\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1016,7 +999,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '&#8364;'\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '€',\r\n    width: '150'\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1067,6 +1050,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/metric-selection.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    // metric: 3,\r\n    // rating: undefined,\r\n    // select: 'option',\r\n    setValue: 'some value',\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1189,7 +1182,7 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExtendedCardMetricsComponent>",
+                "rawtype": "StoryObj<CardMetricsComponent>",
                 "file": "src/stories/components/Card-Metrics.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1246,6 +1239,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ChipComponent>",
                 "file": "src/stories/components/Chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<MetricsSelectionComponent>",
+                "file": "src/stories/components/metric-selection.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1413,7 +1417,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    // icon: \"./assets/Right_4.svg\"\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    width:'200',\r\n    description: 'add'\r\n  },\r\n}"
                 }
             ],
             "src/stories/components/Card-insight.stories.ts": [
@@ -1457,7 +1461,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '&#8364;'\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '€',\r\n    width: '150'\r\n  },\r\n}"
                 }
             ],
             "src/stories/components/CardDeadlineIndicator.stories.ts": [
@@ -1578,6 +1582,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+                }
+            ],
+            "src/stories/components/metric-selection.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/metric-selection.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<MetricsSelectionComponent>",
+                    "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      // metric: args.metric || 3,\r\n      // rating: args.rating,\r\n      // select: args.select,\r\n      setValue: args.setValue,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text' },\r\n    // metric: { control: 'number' },\r\n    // rating: { control: 'number' },\r\n    // select: { control: 'text' },\r\n    setValue: { control: 'text' },\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/metric-selection.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    // metric: 3,\r\n    // rating: undefined,\r\n    // select: 'option',\r\n    setValue: 'some value',\r\n  },\r\n}"
                 }
             ],
             "src/stories/components/tag.stories.ts": [
@@ -1719,7 +1745,7 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ExtendedCardMetricsComponent>",
+                    "rawtype": "StoryObj<CardMetricsComponent>",
                     "file": "src/stories/components/Card-Metrics.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -1786,6 +1812,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ChipComponent>",
                     "file": "src/stories/components/Chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/metric-selection.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<MetricsSelectionComponent>",
+                    "file": "src/stories/components/metric-selection.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2081,15 +2120,6 @@
             },
             {
                 "filePath": "src/stories/components/Card-Metrics.stories.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "ExtendedCardMetricsComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/2",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/components/Card-Metrics.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2300,6 +2330,26 @@
             },
             {
                 "filePath": "src/stories/components/User-Name.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/metric-selection.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/metric-selection.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
