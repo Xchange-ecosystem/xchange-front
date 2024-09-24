@@ -31,7 +31,8 @@ module.exports = {
         Tertiary_Fonts: "#A7A7A7",
         Quaternary_Fonts: "#F3F4F4",
         Background: "#FFFFFF",
-        text_Color: "#000000"
+        text_Color: "#000000",
+        Reconcile_red: '#D66B61',
       },
       fontSize: {
         Main_Titles: "48px",
