@@ -1,8 +1,11 @@
+# 0.0.37 24/09/2024
+(change) metric component padding 
+
 # 0.0.36 24/09/2024
-(change metrics component colors reaction)
+(change) metrics component colors reaction
 
 # 0.0.35 06/09/2024
-(change metrics component behavior)
+(change) metrics component behavior
 
 # 0.0.34 28/08/2024 
 (change) metrics input and output behavior
