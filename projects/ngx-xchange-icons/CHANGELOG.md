@@ -1,3 +1,6 @@
+# 0.0.11 - 04/1/2024
+* (change) Change send icon size
+
 # 0.0.10 - 04/10/2024
 * (change) Icon user svg template 
 
