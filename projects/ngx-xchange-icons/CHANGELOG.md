@@ -1,3 +1,6 @@
+# 0.0.10 - 04/10/2024
+* (change) Icon user svg template 
+
 # 0.0.9 - 07/01/2024
 * (add) Icon three dots
 
