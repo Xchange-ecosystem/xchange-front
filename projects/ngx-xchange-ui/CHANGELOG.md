@@ -1,3 +1,6 @@
+# 0.0.39 08/10/2024
+(change) name input control from dark to black :O(
+
 # 0.0.38 08/10/2024
 (change) aside navbar directive for color selection
 
