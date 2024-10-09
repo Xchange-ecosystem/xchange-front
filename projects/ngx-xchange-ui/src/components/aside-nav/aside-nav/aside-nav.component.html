@@ -1,8 +1,8 @@
 <aside
-  [ngClass]="{'hidden': !isOpen, 'bg-white': reconcile}"
+  [ngClass]="getAsideClasses()"
   class="bg-black fixed left-0 w-[72px] min-h-full px-2 py-4 flex-col gap-4 items-center shrink-0">
   <div
-  [ngClass]="{'bg-white': reconcile}"
+  [ngClass]="color"
     class="left-0 h-screen px-2 py-4 flex flex-col gap-4 items-center shrink-0 bg-black"
     >
       <ng-content></ng-content>
