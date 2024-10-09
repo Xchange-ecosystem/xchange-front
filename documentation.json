@@ -899,7 +899,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<MetricsSelectionComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      // metric: args.metric || 3,\r\n      // rating: args.rating,\r\n      // select: args.select,\r\n      setValue: args.setValue,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text' },\r\n    // metric: { control: 'number' },\r\n    // rating: { control: 'number' },\r\n    // select: { control: 'text' },\r\n    setValue: { control: 'text' },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      setValue: args.setValue,\r\n      showMode: args.showMode,\r\n      unitValue: args.unitValue,\r\n      blockElement: args.blockElement\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text', options: ['metric', 'rating', 'select'] },\r\n    setValue: { control: 'text' },\r\n    showMode: { control: 'text' },\r\n    unitValue: { control: 'number'},\r\n    blockElement: { control: 'boolean' }\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -1059,7 +1059,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    // metric: 3,\r\n    // rating: undefined,\r\n    // select: 'option',\r\n    setValue: 'some value',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    selection: 'metric',\r\n    setValue: 'Select a value',\r\n    unitValue: 500\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1105,11 +1105,31 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/metric-selection.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/Tittles.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"secondaryHeading\"\r\n  },\r\n}"
+            },
+            {
+                "name": "Tertiary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/metric-selection.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    selection: 'rating',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
             },
             {
                 "name": "Tertiary",
@@ -1593,7 +1613,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<MetricsSelectionComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      // metric: args.metric || 3,\r\n      // rating: args.rating,\r\n      // select: args.select,\r\n      setValue: args.setValue,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text' },\r\n    // metric: { control: 'number' },\r\n    // rating: { control: 'number' },\r\n    // select: { control: 'text' },\r\n    setValue: { control: 'text' },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      setValue: args.setValue,\r\n      showMode: args.showMode,\r\n      unitValue: args.unitValue,\r\n      blockElement: args.blockElement\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text', options: ['metric', 'rating', 'select'] },\r\n    setValue: { control: 'text' },\r\n    showMode: { control: 'text' },\r\n    unitValue: { control: 'number'},\r\n    blockElement: { control: 'boolean' }\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1603,7 +1623,27 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    // metric: 3,\r\n    // rating: undefined,\r\n    // select: 'option',\r\n    setValue: 'some value',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    selection: 'metric',\r\n    setValue: 'Select a value',\r\n    unitValue: 500\r\n  },\r\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/metric-selection.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Tertiary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/metric-selection.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    selection: 'rating',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
                 }
             ],
             "src/stories/components/tag.stories.ts": [
@@ -2354,6 +2394,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/metric-selection.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/metric-selection.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Tertiary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

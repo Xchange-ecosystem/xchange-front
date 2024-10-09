@@ -1,3 +1,6 @@
+# 0.0.38 08/10/2024
+(change) aside navbar directive for color selection
+
 # 0.0.37 24/09/2024
 (change) metric component padding 
 
