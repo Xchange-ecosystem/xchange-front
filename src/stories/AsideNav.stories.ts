@@ -14,7 +14,7 @@ const meta: Meta<AsideNavComponent> = {
     }),
   ],
   argTypes: {
-    theme: {control: 'text', options:['dark', 'white']},
+    theme: {control: 'text', options:['black', 'white']},
     isOpen: {control: 'boolean', options:[true, false]}
   },
 };
@@ -24,7 +24,7 @@ type Story = StoryObj<AsideNavComponent>;
 
 export const Primary: Story = {
   args: { 
-    theme: 'dark',
+    theme: 'black',
     isOpen: true,
   },
   render: (args: any) => ({

@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 })
 export class AsideNavComponent implements OnInit, OnChanges {
   @Input() isOpen: boolean = true;
-  @Input() theme: string = 'dark';
+  @Input() theme: string = 'black';
   @Output() isOpenChange = new EventEmitter<boolean>();
 
   @Input()
@@ -23,7 +23,7 @@ export class AsideNavComponent implements OnInit, OnChanges {
 
   public color: string = 'bg-white';
   public colorsPaled: {[key:string]: string}= {
-    'dark': 'bg-dark',
+    'black': 'bg-black',
     'white': 'bg-white'
   }
   canClose: boolean = true;
