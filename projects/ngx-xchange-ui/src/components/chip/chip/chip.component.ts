@@ -66,6 +66,7 @@ export class ChipComponent implements OnInit {
       return;
     }
     this.chosen = [...this.chosen, {key: '-1', value: event.target.value}]
+    event.target.value = ''
     this.emitChosen()
   }
 

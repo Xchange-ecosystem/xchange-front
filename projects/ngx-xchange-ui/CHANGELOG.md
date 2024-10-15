@@ -1,3 +1,6 @@
+# 0.0.40 08/10/2024
+(fix) clear input chips value when intro
+
 # 0.0.39 08/10/2024
 (change) name input control from dark to black :O(
 

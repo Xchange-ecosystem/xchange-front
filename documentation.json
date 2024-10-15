@@ -799,7 +799,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AsideNavComponent>",
-                "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    theme: {control: 'text', options:['black', 'white']},\r\n    isOpen: {control: 'boolean', options:[true, false]}\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -909,7 +909,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TagComponentComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponentComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponentComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponentComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponentComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    \r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -959,7 +959,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: { },\r\n}"
+                "defaultValue": "{\r\n  args: { \r\n    theme: 'black',\r\n    isOpen: true,\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket style=\"stroke: white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user style=\"stroke: white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
             },
             {
                 "name": "Primary",
@@ -1090,6 +1090,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    name: \"\",\r\n    lastname: \"\",\r\n  },\r\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/AsideNav.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: { \r\n    theme: 'white',\r\n    isOpen: false\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket class=\"stroke-white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user class=\"stroke-white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
             },
             {
                 "name": "Secondary",
@@ -1383,7 +1393,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AsideNavComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n    template: `\r\n    <xc-aside-nav>\r\n      <a href=\"projects\">\r\n        <img src=\"./assetsExample/icons/u_create-dashboard.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n      <a href=\"#\">\r\n        <img src=\"./assetsExample/icons/fi_users.svg\" alt=\"Nav icon\"/>\r\n      </a>\r\n    </xc-aside-nav>`\r\n  }),\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    theme: {control: 'text', options:['black', 'white']},\r\n    isOpen: {control: 'boolean', options:[true, false]}\r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1393,7 +1403,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: { },\r\n}"
+                    "defaultValue": "{\r\n  args: { \r\n    theme: 'black',\r\n    isOpen: true,\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket style=\"stroke: white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user style=\"stroke: white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/AsideNav.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: { \r\n    theme: 'white',\r\n    isOpen: false\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket class=\"stroke-white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user class=\"stroke-white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
                 }
             ],
             "src/stories/components/Button-View-More.stories.ts": [
@@ -1655,7 +1675,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TagComponentComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponentComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponentComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponentComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponentComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    \r\n  },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -2105,6 +2125,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/AsideNav.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
