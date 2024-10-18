@@ -1,3 +1,6 @@
+# 0.0.41 18/10/2024
+(fix) center word on insights card
+
 # 0.0.40 08/10/2024
 (fix) clear input chips value when intro
 
