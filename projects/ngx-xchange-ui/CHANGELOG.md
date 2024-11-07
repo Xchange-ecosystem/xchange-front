@@ -1,3 +1,6 @@
+# 0.0.42 07/11/2024
+(change) chip selector behavior
+
 # 0.0.41 18/10/2024
 (fix) center word on insights card
 
