@@ -15,6 +15,7 @@ export class ChipComponent implements OnInit {
   @Input() placeholder: string = "";
   @Input() chosen: chipData[] = [];
   @Input() limitTags: boolean = false;
+  @Input() readMode: boolean = false;
   @Output() chosenChange = new EventEmitter<chipData[]>();
   @Output() tagsComplete = new EventEmitter<boolean>(false);
 
@@ -22,7 +23,7 @@ export class ChipComponent implements OnInit {
   notChosen: string[] = []
 
   showOptions(visible: boolean) {
-    this.isVisible = visible
+    this.readMode ? '' : this.isVisible = visible
   }
 
   addKey(item: chipData) {
