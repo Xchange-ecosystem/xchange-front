@@ -61,6 +61,7 @@ export class ChipComponent implements OnInit {
   }
 
   addUnregister( event: any ) {
+    if(this.readMode || event === '') return;
     let exist = this.chosen.some((c) => c.key === '-1' && c.value === event.target.value )
     if(exist) return
     if(this.chosen.length === 5 && this.limitTags){
