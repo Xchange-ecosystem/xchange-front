@@ -1,3 +1,6 @@
+# 0.0.43 11/11/2024
+(change) chip selector add new tags behavior 
+
 # 0.0.42 07/11/2024
 (change) chip selector behavior
 
