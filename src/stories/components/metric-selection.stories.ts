@@ -1,9 +1,9 @@
-import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { MetricsSelectionComponent } from 'projects/ngx-xchange-ui/src/public-api';
-import { ChangeDetectorRef } from '@angular/core';
+import { Meta, StoryObj, moduleMetadata } from "@storybook/angular";
+import { MetricsSelectionComponent } from "projects/ngx-xchange-ui/src/public-api";
+import { ChangeDetectorRef } from "@angular/core";
 
 const meta: Meta<MetricsSelectionComponent> = {
-  title: 'xChange/Metrics Selection',
+  title: "xChange/Metrics Selection",
   component: MetricsSelectionComponent,
   decorators: [
     moduleMetadata({
@@ -25,19 +25,19 @@ const meta: Meta<MetricsSelectionComponent> = {
   render: (args) => ({
     props: {
       ...args,
-      selection: args.selection || 'rating',
+      selection: args.selection || "rating",
       setValue: args.setValue,
       showMode: args.showMode,
       unitValue: args.unitValue,
-      blockElement: args.blockElement
+      blockElement: args.blockElement,
     },
   }),
   argTypes: {
-    selection: { control: 'text', options: ['metric', 'rating', 'select'] },
-    setValue: { control: 'text' },
-    showMode: { control: 'text' },
-    unitValue: { control: 'number'},
-    blockElement: { control: 'boolean' }
+    selection: { control: "text", options: ["metric", "rating", "select"] },
+    setValue: { control: "text" },
+    showMode: { control: "text" },
+    unitValue: { control: "number" },
+    blockElement: { control: "boolean" },
   },
 };
 
@@ -46,20 +46,20 @@ type Story = StoryObj<MetricsSelectionComponent>;
 
 export const Primary: Story = {
   args: {
-    selection: 'metric',
-    setValue: 'Select a value',
-    unitValue: 500
+    selection: "metric",
+    setValue: "Select a value",
+    unitValue: 500,
   },
 };
 export const Secondary: Story = {
   args: {
-    selection: 'select',
-    setValue: 'Select a value',
+    selection: "select",
+    setValue: "Select a value",
   },
 };
 export const Tertiary: Story = {
   args: {
-    selection: 'rating',
-    setValue: 'Select a value',
+    selection: "rating",
+    setValue: "Select a value",
   },
 };

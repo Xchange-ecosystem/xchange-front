@@ -7,14 +7,13 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-styling-webpack",
+    "@chromatic-com/storybook"
   ],
   framework: {
     name: "@storybook/angular",
     options: {},
   },
-  docs: {
-    autodocs: "tag",
-  },
+  docs: {},
   staticDirs:[
     {from:'../projects/ngx-xchange-ui/src/assets/icons/unicons', to: 'assets/' },
     {from:'../src/assets', to: 'assetsExample/' }

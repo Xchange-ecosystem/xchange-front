@@ -35,6 +35,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
+                    "indexKey": "",
                     "optional": false,
                     "description": "",
                     "line": 9
@@ -64,7 +65,7 @@
         },
         {
             "name": "DummyComponent",
-            "id": "component-DummyComponent-f08b8df8d52005e1f42ef81329e87eb68cf19c37b733cedcfa8530fa000b833545463bc622214cc938b392d96ccab4a0d640800c0cec9467a25e75a5316b1eb2",
+            "id": "component-DummyComponent-7eb089e519378ea898283ccfa4db2d2a75a4fa3b64a826d0296aea383dd42f9e77d80004811ce6b6a7b158333bb5d0307b2d2b7155183593522b3632955678c3",
             "file": "src/stories/components/Button-View-More.stories.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -74,7 +75,7 @@
             "selector": "adr-dummy",
             "styleUrls": [],
             "styles": [],
-            "template": "<img src=\"\" alt=\"Icon\">\n<p [xcButtonView]=\"'button'\" >View</p>",
+            "template": "<img src=\"\" alt=\"Icon\" />   <p [xcButtonView]=\"'button'\">View</p>",
             "templateUrl": [],
             "viewProviders": [],
             "hostDirectives": [],
@@ -91,7 +92,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport { Meta, StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';\r\nimport { ButtonViewDirective } from 'projects/ngx-xchange-ui/src/directives/button-view/button-view.directive';\r\n@Component({\r\n  selector: 'adr-dummy',\r\n  template: `\r\n      <img src=\"\" alt=\"Icon\">\r\n      <p [xcButtonView]=\"'button'\" >View</p>`\r\n})\r\nclass DummyComponent {\r\n}\r\n\r\nconst meta: Meta<DummyComponent> = {\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<DummyComponent>;\r\nexport const Primary: Story = {\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from \"@angular/common\";\nimport { Component, Input } from \"@angular/core\";\nimport {\n  Meta,\n  StoryObj,\n  componentWrapperDecorator,\n  moduleMetadata,\n} from \"@storybook/angular\";\nimport { ButtonViewDirective } from \"projects/ngx-xchange-ui/src/directives/button-view/button-view.directive\";\n@Component({\n  selector: \"adr-dummy\",\n  template: ` <img src=\"\" alt=\"Icon\" />\n    <p [xcButtonView]=\"'button'\">View</p>`,\n})\nclass DummyComponent {}\n\nconst meta: Meta<DummyComponent> = {\n  title: \"xChange/ Button View directive\",\n  component: DummyComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [DummyComponent, ButtonViewDirective],\n      imports: [CommonModule],\n    }),\n    //componentWrapperDecorator(\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\n    //),\n  ],\n};\n\nexport default meta;\ntype Story = StoryObj<DummyComponent>;\nexport const Primary: Story = {};\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -789,7 +790,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"fourthHeading\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"fourthHeading\",\n  },\n}"
             },
             {
                 "name": "meta",
@@ -799,7 +800,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<AsideNavComponent>",
-                "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    theme: {control: 'text', options:['black', 'white']},\r\n    isOpen: {control: 'boolean', options:[true, false]}\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"Components/ Aside Nav\",\n  component: AsideNavComponent,\n  tags: [\"autodocs\"],\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [\n        CommonModule,\n        XcIconRocketComponent,\n        XcIconCreateDashboardComponent,\n        XcIconUserComponent,\n      ],\n    }),\n  ],\n  argTypes: {\n    theme: { control: \"text\", options: [\"black\", \"white\"] },\n    isOpen: { control: \"boolean\", options: [true, false] },\n  },\n}"
             },
             {
                 "name": "meta",
@@ -809,7 +810,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DummyComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                "defaultValue": "{\n  title: \"xChange/ Button View directive\",\n  component: DummyComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [DummyComponent, ButtonViewDirective],\n      imports: [CommonModule],\n    }),\n    //componentWrapperDecorator(\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\n    //),\n  ],\n}"
             },
             {
                 "name": "meta",
@@ -819,7 +820,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardButtonViewComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Card Button Porbe',\r\n  component: CardButtonViewComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardButtonViewComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Card Button Porbe\",\n  component: CardButtonViewComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardButtonViewComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -829,7 +830,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardInsightsComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/CardInsightsComponent',\r\n  component: CardInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardInsightsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/CardInsightsComponent\",\n  component: CardInsightsComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardInsightsComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -839,7 +840,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardMetricsComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/MetricsComponent',\r\n  component: CardMetricsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardMetricsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/MetricsComponent\",\n  component: CardMetricsComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardMetricsComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -849,7 +850,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardDeadlineIndicatorComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Card Deadline Indicator Component',\r\n  component: CardDeadlineIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardDeadlineIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Card Deadline Indicator Component\",\n  component: CardDeadlineIndicatorComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardDeadlineIndicatorComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -859,7 +860,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardParagraphComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Card Paragraph Component',\r\n  component: CardParagraphComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardParagraphComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Card Paragraph Component\",\n  component: CardParagraphComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardParagraphComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -869,7 +870,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardProofsIndicatorComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Card Proof Indicator Component',\r\n  component: CardProofsIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardProofsIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Card Proof Indicator Component\",\n  component: CardProofsIndicatorComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardProofsIndicatorComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -879,7 +880,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CardTasksIndicatorComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Card Tasks Indicator Component',\r\n  component: CardTasksIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardTasksIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Card Tasks Indicator Component\",\n  component: CardTasksIndicatorComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardTasksIndicatorComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -889,7 +890,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ChipComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/ChipComponent',\r\n  component: ChipComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/ChipComponent\",\n  component: ChipComponent,\n  tags: [\"autodocs\"],\n  render: (args: any) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -899,7 +900,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<MetricsSelectionComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      setValue: args.setValue,\r\n      showMode: args.showMode,\r\n      unitValue: args.unitValue,\r\n      blockElement: args.blockElement\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text', options: ['metric', 'rating', 'select'] },\r\n    setValue: { control: 'text' },\r\n    showMode: { control: 'text' },\r\n    unitValue: { control: 'number'},\r\n    blockElement: { control: 'boolean' }\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Metrics Selection\",\n  component: MetricsSelectionComponent,\n  decorators: [\n    moduleMetadata({\n      // Mocking ChangeDetectorRef or other dependencies\n      providers: [\n        {\n          provide: ChangeDetectorRef,\n          useValue: {\n            markForCheck: () => {},\n            detectChanges: () => {},\n            detach: () => {},\n            reattach: () => {},\n            checkNoChanges: () => {},\n          },\n        },\n      ],\n    }),\n  ],\n  render: (args) => ({\n    props: {\n      ...args,\n      selection: args.selection || \"rating\",\n      setValue: args.setValue,\n      showMode: args.showMode,\n      unitValue: args.unitValue,\n      blockElement: args.blockElement,\n    },\n  }),\n  argTypes: {\n    selection: { control: \"text\", options: [\"metric\", \"rating\", \"select\"] },\n    setValue: { control: \"text\" },\n    showMode: { control: \"text\" },\n    unitValue: { control: \"number\" },\n    blockElement: { control: \"boolean\" },\n  },\n}"
             },
             {
                 "name": "meta",
@@ -909,7 +910,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TagComponentComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponentComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponentComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    \r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Tag Component\",\n  component: TagComponentComponent,\n  tags: [\"autodocs\"],\n  render: (args: TagComponentComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -919,7 +920,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TitlesComponent>",
-                "defaultValue": "{\r\n  title: 'xChange/Titles',\r\n  component: TitlesComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TitlesComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"xChange/Titles\",\n  component: TitlesComponent,\n  tags: [\"autodocs\"],\n  render: (args: TitlesComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -929,7 +930,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<UserNameCardComponent>",
-                "defaultValue": "{\r\n  title: 'Xchange User Name',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      backgroundColor: \"black\",\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                "defaultValue": "{\n  title: \"Xchange User Name\",\n  component: UserNameCardComponent,\n  tags: [\"autodocs\"],\n  render: (args: UserNameCardComponent) => ({\n    props: {\n      backgroundColor: \"black\",\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
             },
             {
                 "name": "meta",
@@ -939,7 +940,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<UserNameCardComponent>",
-                "defaultValue": "{\r\n  title: 'Example/UserNameCardComponent',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                "defaultValue": "{\n  title: \"Example/UserNameCardComponent\",\n  component: UserNameCardComponent,\n  tags: [\"autodocs\"],\n  render: (args: UserNameCardComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n}"
             },
             {
                 "name": "preview",
@@ -959,7 +960,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: { \r\n    theme: 'black',\r\n    isOpen: true,\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket style=\"stroke: white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user style=\"stroke: white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
+                "defaultValue": "{\n  args: {\n    theme: \"black\",\n    isOpen: true,\n  },\n  render: (args: any) => ({\n    props: {\n      ...args,\n    },\n    template: `\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\n        <!-- Aquí se proyectan los íconos usando ng-content -->\n        <a href=\"projects\">\n          <xc-icon-rocket style=\"stroke: white\"></xc-icon-rocket>\n        </a>\n        <a href=\"users\">\n          <xc-icon-user style=\"stroke: white\"></xc-icon-user>\n        </a>\n      </xc-aside-nav>`,\n  }),\n}"
             },
             {
                 "name": "Primary",
@@ -969,7 +970,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n}"
+                "defaultValue": "{}"
             },
             {
                 "name": "Primary",
@@ -979,7 +980,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    width:'200',\r\n    description: 'add'\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    width: \"200\",\n    description: \"add\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -989,7 +990,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just an example'\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    value: 5,\n    description: \"Just an example\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -999,7 +1000,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '€',\r\n    width: '150'\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    value: 5,\n    description: \"Just\",\n    symbol: \"€\",\n    width: \"150\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1009,7 +1010,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"static/media/src/stories/assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\n    icon: \"static/media/src/stories/assets/u_calendar-alt.svg\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1019,7 +1020,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    titleContent:\n      \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1029,7 +1030,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    proofsCount: 2,\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1039,7 +1040,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    content: \"4/5 complete\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1049,7 +1050,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    dataset: [\n      {\n        key: \"01\",\n        value: \"orange\",\n      },\n      {\n        key: \"02\",\n        value: \"banana\",\n      },\n      {\n        key: \"03\",\n        value: \"apple\",\n      },\n      {\n        key: \"04\",\n        value: \"melon\",\n      },\n    ],\n    label: \"Just an example\",\n    placeholder: \"edit tags\",\n    chosen: [\n      {\n        key: \"05\",\n        value: \"kiwi\",\n      },\n    ],\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1059,7 +1060,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selection: 'metric',\r\n    setValue: 'Select a value',\r\n    unitValue: 500\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    selection: \"metric\",\n    setValue: \"Select a value\",\n    unitValue: 500,\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1069,7 +1070,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    tagContent: \"Projects\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1079,7 +1080,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"mainHeading\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"mainHeading\",\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1089,7 +1090,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: \"\",\r\n    lastname: \"\",\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    name: \"\",\n    lastname: \"\",\n  },\n}"
             },
             {
                 "name": "Secondary",
@@ -1099,7 +1100,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: { \r\n    theme: 'white',\r\n    isOpen: false\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket class=\"stroke-white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user class=\"stroke-white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
+                "defaultValue": "{\n  args: {\n    theme: \"white\",\n    isOpen: false,\n  },\n  render: (args: any) => ({\n    props: {\n      ...args,\n    },\n    template: `\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\n        <!-- Aquí se proyectan los íconos usando ng-content -->\n        <a href=\"projects\">\n          <xc-icon-rocket class=\"stroke-white\"></xc-icon-rocket>\n        </a>\n        <a href=\"users\">\n          <xc-icon-user class=\"stroke-white\"></xc-icon-user>\n        </a>\n      </xc-aside-nav>`,\n  }),\n}"
             },
             {
                 "name": "Secondary",
@@ -1109,7 +1110,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\n    icon: \"./assets/u_calendar-alt.svg\",\n  },\n}"
             },
             {
                 "name": "Secondary",
@@ -1119,7 +1120,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    selection: \"select\",\n    setValue: \"Select a value\",\n  },\n}"
             },
             {
                 "name": "Secondary",
@@ -1129,7 +1130,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"secondaryHeading\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"secondaryHeading\",\n  },\n}"
             },
             {
                 "name": "Tertiary",
@@ -1139,7 +1140,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selection: 'rating',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    selection: \"rating\",\n    setValue: \"Select a value\",\n  },\n}"
             },
             {
                 "name": "Tertiary",
@@ -1149,7 +1150,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"tertiaryHeading\"\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"tertiaryHeading\",\n  },\n}"
             },
             {
                 "name": "User_Card_Name",
@@ -1159,7 +1160,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'User',\r\n    lastName: 'Name',\r\n  },\r\n}"
+                "defaultValue": "{\n  args: {\n    name: \"User\",\n    lastName: \"Name\",\n  },\n}"
             }
         ],
         "functions": [],
@@ -1341,7 +1342,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"fourthHeading\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"fourthHeading\",\n  },\n}"
                 },
                 {
                     "name": "meta",
@@ -1351,7 +1352,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TitlesComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Titles',\r\n  component: TitlesComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TitlesComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Titles\",\n  component: TitlesComponent,\n  tags: [\"autodocs\"],\n  render: (args: TitlesComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1361,7 +1362,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"mainHeading\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"mainHeading\",\n  },\n}"
                 },
                 {
                     "name": "Secondary",
@@ -1371,7 +1372,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"secondaryHeading\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"secondaryHeading\",\n  },\n}"
                 },
                 {
                     "name": "Tertiary",
@@ -1381,7 +1382,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"tertiaryHeading\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    title: \"Welcome to Xscale\",\n    type: \"tertiaryHeading\",\n  },\n}"
                 }
             ],
             "src/stories/AsideNav.stories.ts": [
@@ -1393,7 +1394,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<AsideNavComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    theme: {control: 'text', options:['black', 'white']},\r\n    isOpen: {control: 'boolean', options:[true, false]}\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"Components/ Aside Nav\",\n  component: AsideNavComponent,\n  tags: [\"autodocs\"],\n  decorators: [\n    moduleMetadata({\n      declarations: [],\n      imports: [\n        CommonModule,\n        XcIconRocketComponent,\n        XcIconCreateDashboardComponent,\n        XcIconUserComponent,\n      ],\n    }),\n  ],\n  argTypes: {\n    theme: { control: \"text\", options: [\"black\", \"white\"] },\n    isOpen: { control: \"boolean\", options: [true, false] },\n  },\n}"
                 },
                 {
                     "name": "Primary",
@@ -1403,7 +1404,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: { \r\n    theme: 'black',\r\n    isOpen: true,\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket style=\"stroke: white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user style=\"stroke: white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
+                    "defaultValue": "{\n  args: {\n    theme: \"black\",\n    isOpen: true,\n  },\n  render: (args: any) => ({\n    props: {\n      ...args,\n    },\n    template: `\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\n        <!-- Aquí se proyectan los íconos usando ng-content -->\n        <a href=\"projects\">\n          <xc-icon-rocket style=\"stroke: white\"></xc-icon-rocket>\n        </a>\n        <a href=\"users\">\n          <xc-icon-user style=\"stroke: white\"></xc-icon-user>\n        </a>\n      </xc-aside-nav>`,\n  }),\n}"
                 },
                 {
                     "name": "Secondary",
@@ -1413,7 +1414,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: { \r\n    theme: 'white',\r\n    isOpen: false\r\n  },\r\n  render: (args: any) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n    template: `\r\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\r\n        <!-- Aquí se proyectan los íconos usando ng-content -->\r\n        <a href=\"projects\">\r\n          <xc-icon-rocket class=\"stroke-white\"></xc-icon-rocket>\r\n        </a>\r\n        <a href=\"users\">\r\n          <xc-icon-user class=\"stroke-white\"></xc-icon-user>\r\n        </a>\r\n      </xc-aside-nav>`\r\n  }),\r\n}"
+                    "defaultValue": "{\n  args: {\n    theme: \"white\",\n    isOpen: false,\n  },\n  render: (args: any) => ({\n    props: {\n      ...args,\n    },\n    template: `\n          <xc-aside-nav [theme]=\"theme\" [isOpen]=\"isOpen\">\n        <!-- Aquí se proyectan los íconos usando ng-content -->\n        <a href=\"projects\">\n          <xc-icon-rocket class=\"stroke-white\"></xc-icon-rocket>\n        </a>\n        <a href=\"users\">\n          <xc-icon-user class=\"stroke-white\"></xc-icon-user>\n        </a>\n      </xc-aside-nav>`,\n  }),\n}"
                 }
             ],
             "src/stories/components/Button-View-More.stories.ts": [
@@ -1425,7 +1426,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DummyComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/ Button View directive',\r\n  component: DummyComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [DummyComponent, ButtonViewDirective],\r\n      imports: [CommonModule],\r\n    }),\r\n    //componentWrapperDecorator(\r\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\r\n    //),\r\n  ],\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/ Button View directive\",\n  component: DummyComponent,\n  decorators: [\n    moduleMetadata({\n      declarations: [DummyComponent, ButtonViewDirective],\n      imports: [CommonModule],\n    }),\n    //componentWrapperDecorator(\n    //  (story) => `<div style=\"margin: 3em\">${story}</div>`\n    //),\n  ],\n}"
                 },
                 {
                     "name": "Primary",
@@ -1435,7 +1436,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n}"
+                    "defaultValue": "{}"
                 }
             ],
             "src/stories/components/Button-View.stories.ts": [
@@ -1447,7 +1448,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardButtonViewComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Card Button Porbe',\r\n  component: CardButtonViewComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardButtonViewComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Card Button Porbe\",\n  component: CardButtonViewComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardButtonViewComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1457,7 +1458,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    width:'200',\r\n    description: 'add'\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    width: \"200\",\n    description: \"add\",\n  },\n}"
                 }
             ],
             "src/stories/components/Card-insight.stories.ts": [
@@ -1469,7 +1470,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardInsightsComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/CardInsightsComponent',\r\n  component: CardInsightsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardInsightsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/CardInsightsComponent\",\n  component: CardInsightsComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardInsightsComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1479,7 +1480,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just an example'\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    value: 5,\n    description: \"Just an example\",\n  },\n}"
                 }
             ],
             "src/stories/components/Card-Metrics.stories.ts": [
@@ -1491,7 +1492,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardMetricsComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/MetricsComponent',\r\n  component: CardMetricsComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardMetricsComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/MetricsComponent\",\n  component: CardMetricsComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardMetricsComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1501,7 +1502,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    value: 5,\r\n    description: 'Just',\r\n    symbol: '€',\r\n    width: '150'\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    value: 5,\n    description: \"Just\",\n    symbol: \"€\",\n    width: \"150\",\n  },\n}"
                 }
             ],
             "src/stories/components/CardDeadlineIndicator.stories.ts": [
@@ -1513,7 +1514,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardDeadlineIndicatorComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Card Deadline Indicator Component',\r\n  component: CardDeadlineIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardDeadlineIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Card Deadline Indicator Component\",\n  component: CardDeadlineIndicatorComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardDeadlineIndicatorComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1523,7 +1524,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"static/media/src/stories/assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\n    icon: \"static/media/src/stories/assets/u_calendar-alt.svg\",\n  },\n}"
                 },
                 {
                     "name": "Secondary",
@@ -1533,7 +1534,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\r\n    icon: \"./assets/u_calendar-alt.svg\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    deadline: \"2023-01-29T14:25:53.4393092+00:00\",\n    icon: \"./assets/u_calendar-alt.svg\",\n  },\n}"
                 }
             ],
             "src/stories/components/CardParagraph.stories.ts": [
@@ -1545,7 +1546,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardParagraphComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Card Paragraph Component',\r\n  component: CardParagraphComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardParagraphComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Card Paragraph Component\",\n  component: CardParagraphComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardParagraphComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1555,7 +1556,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    titleContent: \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    titleContent:\n      \"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, doloremque commodi numquam, voluptas suscipit minima architecto totam quo deleniti molestias ab molestiae eveniet ullam fugit.\",\n  },\n}"
                 }
             ],
             "src/stories/components/CardProofIndicator.stories.ts": [
@@ -1567,7 +1568,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardProofsIndicatorComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Card Proof Indicator Component',\r\n  component: CardProofsIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardProofsIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Card Proof Indicator Component\",\n  component: CardProofsIndicatorComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardProofsIndicatorComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1577,7 +1578,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n   proofsCount: 2,\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    proofsCount: 2,\n  },\n}"
                 }
             ],
             "src/stories/components/CardTasksIndicator.stories.ts": [
@@ -1589,7 +1590,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CardTasksIndicatorComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Card Tasks Indicator Component',\r\n  component: CardTasksIndicatorComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: CardTasksIndicatorComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Card Tasks Indicator Component\",\n  component: CardTasksIndicatorComponent,\n  tags: [\"autodocs\"],\n  render: (args: CardTasksIndicatorComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1599,7 +1600,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    content: \"4/5 complete\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    content: \"4/5 complete\",\n  },\n}"
                 }
             ],
             "src/stories/components/Chips.stories.ts": [
@@ -1611,7 +1612,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ChipComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/ChipComponent',\r\n  component: ChipComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: any) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/ChipComponent\",\n  component: ChipComponent,\n  tags: [\"autodocs\"],\n  render: (args: any) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1621,7 +1622,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    dataset: [\n      {\n        key: \"01\",\n        value: \"orange\",\n      },\n      {\n        key: \"02\",\n        value: \"banana\",\n      },\n      {\n        key: \"03\",\n        value: \"apple\",\n      },\n      {\n        key: \"04\",\n        value: \"melon\",\n      },\n    ],\n    label: \"Just an example\",\n    placeholder: \"edit tags\",\n    chosen: [\n      {\n        key: \"05\",\n        value: \"kiwi\",\n      },\n    ],\n  },\n}"
                 }
             ],
             "src/stories/components/metric-selection.stories.ts": [
@@ -1633,7 +1634,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<MetricsSelectionComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      setValue: args.setValue,\r\n      showMode: args.showMode,\r\n      unitValue: args.unitValue,\r\n      blockElement: args.blockElement\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text', options: ['metric', 'rating', 'select'] },\r\n    setValue: { control: 'text' },\r\n    showMode: { control: 'text' },\r\n    unitValue: { control: 'number'},\r\n    blockElement: { control: 'boolean' }\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Metrics Selection\",\n  component: MetricsSelectionComponent,\n  decorators: [\n    moduleMetadata({\n      // Mocking ChangeDetectorRef or other dependencies\n      providers: [\n        {\n          provide: ChangeDetectorRef,\n          useValue: {\n            markForCheck: () => {},\n            detectChanges: () => {},\n            detach: () => {},\n            reattach: () => {},\n            checkNoChanges: () => {},\n          },\n        },\n      ],\n    }),\n  ],\n  render: (args) => ({\n    props: {\n      ...args,\n      selection: args.selection || \"rating\",\n      setValue: args.setValue,\n      showMode: args.showMode,\n      unitValue: args.unitValue,\n      blockElement: args.blockElement,\n    },\n  }),\n  argTypes: {\n    selection: { control: \"text\", options: [\"metric\", \"rating\", \"select\"] },\n    setValue: { control: \"text\" },\n    showMode: { control: \"text\" },\n    unitValue: { control: \"number\" },\n    blockElement: { control: \"boolean\" },\n  },\n}"
                 },
                 {
                     "name": "Primary",
@@ -1643,7 +1644,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selection: 'metric',\r\n    setValue: 'Select a value',\r\n    unitValue: 500\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    selection: \"metric\",\n    setValue: \"Select a value\",\n    unitValue: 500,\n  },\n}"
                 },
                 {
                     "name": "Secondary",
@@ -1653,7 +1654,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selection: 'select',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    selection: \"select\",\n    setValue: \"Select a value\",\n  },\n}"
                 },
                 {
                     "name": "Tertiary",
@@ -1663,7 +1664,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selection: 'rating',\r\n    setValue: 'Select a value',\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    selection: \"rating\",\n    setValue: \"Select a value\",\n  },\n}"
                 }
             ],
             "src/stories/components/tag.stories.ts": [
@@ -1675,7 +1676,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TagComponentComponent>",
-                    "defaultValue": "{\r\n  title: 'xChange/Tag Component',\r\n  component: TagComponentComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: TagComponentComponent) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    \r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"xChange/Tag Component\",\n  component: TagComponentComponent,\n  tags: [\"autodocs\"],\n  render: (args: TagComponentComponent) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1685,7 +1686,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    tagContent: \"Projects\"\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    tagContent: \"Projects\",\n  },\n}"
                 }
             ],
             "src/stories/components/User-Name.stories.ts": [
@@ -1697,7 +1698,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<UserNameCardComponent>",
-                    "defaultValue": "{\r\n  title: 'Xchange User Name',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      backgroundColor: \"black\",\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n\r\n  },\r\n}"
+                    "defaultValue": "{\n  title: \"Xchange User Name\",\n  component: UserNameCardComponent,\n  tags: [\"autodocs\"],\n  render: (args: UserNameCardComponent) => ({\n    props: {\n      backgroundColor: \"black\",\n      ...args,\n    },\n  }),\n  argTypes: {},\n}"
                 },
                 {
                     "name": "Primary",
@@ -1707,7 +1708,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: \"\",\r\n    lastname: \"\",\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    name: \"\",\n    lastname: \"\",\n  },\n}"
                 }
             ],
             "src/app/public/components/user-name-card/user-name-card.component.stories.ts": [
@@ -1719,7 +1720,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<UserNameCardComponent>",
-                    "defaultValue": "{\r\n  title: 'Example/UserNameCardComponent',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+                    "defaultValue": "{\n  title: \"Example/UserNameCardComponent\",\n  component: UserNameCardComponent,\n  tags: [\"autodocs\"],\n  render: (args: UserNameCardComponent) => ({\n    props: {\n      ...args,\n    },\n  }),\n}"
                 },
                 {
                     "name": "User_Card_Name",
@@ -1729,7 +1730,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'User',\r\n    lastName: 'Name',\r\n  },\r\n}"
+                    "defaultValue": "{\n  args: {\n    name: \"User\",\n    lastName: \"Name\",\n  },\n}"
                 }
             ],
             ".storybook/preview.ts": [
@@ -2074,6 +2075,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/public/components/user-name-card/user-name-card.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2140,6 +2151,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/AsideNav.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Button-View-More.stories.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2169,6 +2190,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/Button-View-More.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Button-View.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2184,6 +2215,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-View.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2209,6 +2250,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/Card-Metrics.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Card-insight.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2224,6 +2275,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Card-insight.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2259,6 +2320,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/CardDeadlineIndicator.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/CardParagraph.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2274,6 +2345,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/CardParagraph.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2299,6 +2380,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/CardProofIndicator.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/CardTasksIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2319,6 +2410,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/CardTasksIndicator.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Chips.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2334,6 +2435,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Chips.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2389,6 +2500,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/Tittles.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/User-Name.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2404,6 +2525,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/User-Name.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2449,6 +2580,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/metric-selection.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/tag.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2464,6 +2605,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/tag.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

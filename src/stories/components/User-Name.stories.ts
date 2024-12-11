@@ -1,20 +1,18 @@
-import type { Meta, StoryObj } from '@storybook/angular';
-import { UserNameCardComponent} from '../../../projects/ngx-xchange-ui/src/public-api';
+import type { Meta, StoryObj } from "@storybook/angular";
+import { UserNameCardComponent } from "../../../projects/ngx-xchange-ui/src/public-api";
 
 // More on how to set up stories at: https://storybook.js.org/docs/angular/writing-stories/introduction
 const meta: Meta<UserNameCardComponent> = {
-  title: 'Xchange User Name',
+  title: "Xchange User Name",
   component: UserNameCardComponent,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   render: (args: UserNameCardComponent) => ({
     props: {
       backgroundColor: "black",
       ...args,
     },
   }),
-  argTypes: {
-
-  },
+  argTypes: {},
 };
 
 export default meta;
