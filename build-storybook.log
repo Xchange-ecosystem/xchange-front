@@ -1,6 +1,6 @@
 
 > @indziaki/xchange-front@0.0.0 build-storybook
-> ng run ecosystem-web:build-storybook --output-dir=C:\Users\LENOVO\AppData\Local\Temp\chromatic--30176-UIw7NPPYakPG
+> ng run ecosystem-web:build-storybook --output-dir=C:\Users\LENOVO\AppData\Local\Temp\chromatic--4432-0qXEZAMOwxoU
 
 [0m
 [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [48;5;255m [48;5;255m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m [0m
@@ -25,267 +25,267 @@ Node.js version : v22.12.0
 
 Operating system : Windows 10
 
-[10:12:46] [33mNo configuration file found, switching to CLI flags.[39m
-[10:12:46] [32mUsing tsconfig file : C:\Users\LENOVO\Documents\Xchange\xchange-front\.storybook\tsconfig.json[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/.storybook/preview.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/favicon.ico[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/index.html[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/main.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app-routing.module.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.module.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/AsideNav.stories.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/styles/tailwind.css[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/css/styles.scss[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/fonts/Manrope-VariableFont_wght.ttf[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/images/Header.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_info.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_search.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_user.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_users.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/Notification Indicator.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/Right_4.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_calendar-alt.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_create-dashboard.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_file-check-alt.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_paperclip.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_rocket.svg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/img/card-insights-example.jpg[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/img/user-image-profile.png[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/core.module.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public-routing.module.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.module.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View-More.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-insight.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-Metrics.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardDeadlineIndicator.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardParagraph.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardProofIndicator.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardTasksIndicator.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Chips.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/metric-selection.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/tag.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Tittles.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/User-Name.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/share.module.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.html[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.stories.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.spect.ts[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.componet.ts[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.html[39m
-[10:12:46] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.scss[39m
-[10:12:46] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.ts[39m
-[10:12:46] [32mSearching package.json file[39m
-[10:12:46] [32mpackage.json file found[39m
-[10:12:46] [32mProcessing package.json dependencies[39m
-[10:12:46] [32mSearching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files[39m
-[10:12:46] [32mREADME.md file found[39m
-[10:12:46] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\CHANGELOG read[39m
-[10:12:46] [33mContinuing without CHANGELOG.md file[39m
-[10:12:46] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\CONTRIBUTING read[39m
-[10:12:46] [33mContinuing without CONTRIBUTING.md file[39m
-[10:12:46] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\LICENSE read[39m
-[10:12:46] [33mContinuing without LICENSE.md file[39m
-[10:12:46] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\TODO read[39m
-[10:12:46] [33mContinuing without TODO.md file[39m
-[10:12:46] [32mGet dependencies data[39m
-[10:12:46] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/.storybook/preview.ts[39m
-[10:12:46] [36mfound          : preview[39m
-[10:12:46] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/main.ts[39m
-[10:12:46] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app-routing.module.ts[39m
-[10:12:46] [32mAnalysing routes definitions and clean them if necessary[39m
-[10:12:47] [36mfound          : AppRoutingModule[39m
-[10:12:47] [36m               : - imports:[39m
-[10:12:47] [36m               : 	- RouterModule[39m
-[10:12:47] [36m               : - exports:[39m
-[10:12:47] [36m               : 	- RouterModule[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.ts[39m
-[10:12:47] [36mfound          : AppComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.module.ts[39m
-[10:12:47] [36mfound          : AppModule[39m
-[10:12:47] [36m               : - imports:[39m
-[10:12:47] [36m               : 	- BrowserModule[39m
-[10:12:47] [36m               : 	- AppRoutingModule[39m
-[10:12:47] [36m               : 	- CoreModule[39m
-[10:12:47] [36m               : 	- CardInsightsModule[39m
-[10:12:47] [36m               : 	- CarButtonViewModule[39m
-[10:12:47] [36m               : 	- CardTasksIndicatorModule[39m
-[10:12:47] [36m               : 	- CarButtonViewModule[39m
-[10:12:47] [36m               : 	- AsideNavModule[39m
-[10:12:47] [36m               : 	- ProjectProgressBarModule[39m
-[10:12:47] [36m               : - declarations:[39m
-[10:12:47] [36m               : 	- AppComponent[39m
-[10:12:47] [36m               : - bootstrap:[39m
-[10:12:47] [36m               : 	- AppComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/AsideNav.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [36mfound          : Secondary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/core.module.ts[39m
-[10:12:47] [36mfound          : CoreModule[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public-routing.module.ts[39m
-[10:12:47] [32mAnalysing routes definitions and clean them if necessary[39m
-[10:12:47] [36mfound          : PublicRoutingModule[39m
-[10:12:47] [36m               : - imports:[39m
-[10:12:47] [36m               : 	- RouterModule[39m
-[10:12:47] [36m               : - exports:[39m
-[10:12:47] [36m               : 	- RouterModule[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.ts[39m
-[10:12:47] [36mfound          : PublicComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.module.ts[39m
-[10:12:47] [36mfound          : PublicModule[39m
-[10:12:47] [36m               : - imports:[39m
-[10:12:47] [36m               : 	- PublicRoutingModule[39m
-[10:12:47] [36m               : 	- ShareModule[39m
-[10:12:47] [36m               : 	- CardDeadlineIndicatorModule[39m
-[10:12:47] [36m               : - declarations:[39m
-[10:12:47] [36m               : 	- PublicComponent[39m
-[10:12:47] [36m               : 	- HomeComponent[39m
-[10:12:47] [36m               : 	- LoginComponent[39m
-[10:12:47] [36m               : 	- HeaderCardComponent[39m
-[10:12:47] [36m               : 	- UserNameCardComponent[39m
-[10:12:47] [36m               : 	- UserAvatarComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View-More.stories.ts[39m
-[10:12:47] [36mfound          : DummyComponent[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-insight.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-Metrics.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardDeadlineIndicator.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [36mfound          : Secondary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardParagraph.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardProofIndicator.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardTasksIndicator.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Chips.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/metric-selection.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [36mfound          : Secondary[39m
-[10:12:47] [36mfound          : Tertiary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/tag.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Tittles.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [36mfound          : Secondary[39m
-[10:12:47] [36mfound          : Tertiary[39m
-[10:12:47] [36mfound          : fourth[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/User-Name.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : Primary[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/share.module.ts[39m
-[10:12:47] [36mfound          : ShareModule[39m
-[10:12:47] [36m               : - imports:[39m
-[10:12:47] [36m               : 	- HttpClientModule[39m
-[10:12:47] [36m               : 	- RouterModule[39m
-[10:12:47] [36m               : - exports:[39m
-[10:12:47] [36m               : 	- HttpClientModule[39m
-[10:12:47] [36m               : 	- RouterModule[39m
-[10:12:47] [36m               : 	- NotFoundComponent[39m
-[10:12:47] [36m               : - declarations:[39m
-[10:12:47] [36m               : 	- NotFoundComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.ts[39m
-[10:12:47] [36mfound          : UserAvatarComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.stories.ts[39m
-[10:12:47] [36mfound          : meta[39m
-[10:12:47] [36mfound          : Story[39m
-[10:12:47] [36mfound          : User_Card_Name[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.ts[39m
-[10:12:47] [36mfound          : UserNameCardComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.ts[39m
-[10:12:47] [36mfound          : HeaderCardComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.spect.ts[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.ts[39m
-[10:12:47] [36mfound          : HomeComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.componet.ts[39m
-[10:12:47] [36mfound          : LoginComponent[39m
-[10:12:47] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.ts[39m
-[10:12:47] [36mfound          : NotFoundComponent[39m
-[10:12:47] [32m-------------------[39m
-[10:12:47] [32mProject statistics [39m
-[10:12:47] [32m- files        : 33[39m
-[10:12:47] [32m- module       : 6[39m
-[10:12:47] [32m- component    : 9[39m
-[10:12:47] [32m- route        : 10[39m
-[10:12:47] [32m- type aliases : 15[39m
-[10:12:47] [32m-------------------[39m
-[10:12:47] [32mPrepare components[39m
-[10:12:47] [32m AppComponent has a templateUrl, include it[39m
-[10:12:47] [32m AppComponent has styleUrls, include them[39m
-[10:12:47] [32m HeaderCardComponent has a templateUrl, include it[39m
-[10:12:47] [32m HeaderCardComponent has styleUrls, include them[39m
-[10:12:47] [32m HomeComponent has a templateUrl, include it[39m
-[10:12:47] [32m HomeComponent has styleUrls, include them[39m
-[10:12:47] [32m LoginComponent has a templateUrl, include it[39m
-[10:12:47] [32m LoginComponent has styleUrls, include them[39m
-[10:12:47] [32m NotFoundComponent has a templateUrl, include it[39m
-[10:12:47] [32m NotFoundComponent has styleUrls, include them[39m
-[10:12:47] [32m PublicComponent has a templateUrl, include it[39m
-[10:12:47] [32m PublicComponent has styleUrls, include them[39m
-[10:12:47] [32m UserAvatarComponent has a templateUrl, include it[39m
-[10:12:47] [32m UserAvatarComponent has styleUrls, include them[39m
-[10:12:47] [32m UserNameCardComponent has a templateUrl, include it[39m
-[10:12:47] [32mPrepare modules[39m
-[10:12:47] [32mProcess routes[39m
-[10:12:47] [32mPrepare miscellaneous[39m
-[10:12:47] [32mProcess documentation coverage report[39m
-[10:12:47] [32mGenerating documentation in export format json[39m
-[10:12:47] [32mDocumentation generated in ./ in 1.061 seconds[39m
-info => Cleaning outputDir: [36m..\..\..\AppData\Local\Temp\chromatic--30176-UIw7NPPYakPG[39m
+[11:08:03] [33mNo configuration file found, switching to CLI flags.[39m
+[11:08:03] [32mUsing tsconfig file : C:\Users\LENOVO\Documents\Xchange\xchange-front\.storybook\tsconfig.json[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/.storybook/preview.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/favicon.ico[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/index.html[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/main.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app-routing.module.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.module.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/AsideNav.stories.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/styles/tailwind.css[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/core.module.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public-routing.module.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.module.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/css/styles.scss[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/fonts/Manrope-VariableFont_wght.ttf[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_info.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_search.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_user.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/fi_users.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/Notification Indicator.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/Right_4.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_calendar-alt.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_create-dashboard.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_file-check-alt.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_paperclip.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/icons/u_rocket.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/images/Header.svg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/img/card-insights-example.jpg[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/assets/img/user-image-profile.png[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View-More.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-insight.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-Metrics.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardDeadlineIndicator.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardParagraph.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardProofIndicator.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardTasksIndicator.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Chips.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/metric-selection.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/tag.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Tittles.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/User-Name.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/share.module.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.componet.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.spect.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.html[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.stories.ts[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.ts[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.html[39m
+[11:08:03] [33mExcluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.scss[39m
+[11:08:03] [36mIncluding      : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.ts[39m
+[11:08:03] [32mSearching package.json file[39m
+[11:08:03] [32mpackage.json file found[39m
+[11:08:03] [32mProcessing package.json dependencies[39m
+[11:08:03] [32mSearching README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE.md, TODO.md files[39m
+[11:08:03] [32mREADME.md file found[39m
+[11:08:03] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\CHANGELOG read[39m
+[11:08:03] [33mContinuing without CHANGELOG.md file[39m
+[11:08:03] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\CONTRIBUTING read[39m
+[11:08:03] [33mContinuing without CONTRIBUTING.md file[39m
+[11:08:03] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\LICENSE read[39m
+[11:08:03] [33mContinuing without LICENSE.md file[39m
+[11:08:03] [33mError during C:\Users\LENOVO\Documents\Xchange\xchange-front\TODO read[39m
+[11:08:03] [33mContinuing without TODO.md file[39m
+[11:08:03] [32mGet dependencies data[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/.storybook/preview.ts[39m
+[11:08:03] [36mfound          : preview[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/main.ts[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app-routing.module.ts[39m
+[11:08:03] [32mAnalysing routes definitions and clean them if necessary[39m
+[11:08:03] [36mfound          : AppRoutingModule[39m
+[11:08:03] [36m               : - imports:[39m
+[11:08:03] [36m               : 	- RouterModule[39m
+[11:08:03] [36m               : - exports:[39m
+[11:08:03] [36m               : 	- RouterModule[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.ts[39m
+[11:08:03] [36mfound          : AppComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.module.ts[39m
+[11:08:03] [36mfound          : AppModule[39m
+[11:08:03] [36m               : - imports:[39m
+[11:08:03] [36m               : 	- BrowserModule[39m
+[11:08:03] [36m               : 	- AppRoutingModule[39m
+[11:08:03] [36m               : 	- CoreModule[39m
+[11:08:03] [36m               : 	- CardInsightsModule[39m
+[11:08:03] [36m               : 	- CarButtonViewModule[39m
+[11:08:03] [36m               : 	- CardTasksIndicatorModule[39m
+[11:08:03] [36m               : 	- CarButtonViewModule[39m
+[11:08:03] [36m               : 	- AsideNavModule[39m
+[11:08:03] [36m               : 	- ProjectProgressBarModule[39m
+[11:08:03] [36m               : - declarations:[39m
+[11:08:03] [36m               : 	- AppComponent[39m
+[11:08:03] [36m               : - bootstrap:[39m
+[11:08:03] [36m               : 	- AppComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/AsideNav.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [36mfound          : Secondary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/core.module.ts[39m
+[11:08:03] [36mfound          : CoreModule[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public-routing.module.ts[39m
+[11:08:03] [32mAnalysing routes definitions and clean them if necessary[39m
+[11:08:03] [36mfound          : PublicRoutingModule[39m
+[11:08:03] [36m               : - imports:[39m
+[11:08:03] [36m               : 	- RouterModule[39m
+[11:08:03] [36m               : - exports:[39m
+[11:08:03] [36m               : 	- RouterModule[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.component.ts[39m
+[11:08:03] [36mfound          : PublicComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/public.module.ts[39m
+[11:08:03] [36mfound          : PublicModule[39m
+[11:08:03] [36m               : - imports:[39m
+[11:08:03] [36m               : 	- PublicRoutingModule[39m
+[11:08:03] [36m               : 	- ShareModule[39m
+[11:08:03] [36m               : 	- CardDeadlineIndicatorModule[39m
+[11:08:03] [36m               : - declarations:[39m
+[11:08:03] [36m               : 	- PublicComponent[39m
+[11:08:03] [36m               : 	- HomeComponent[39m
+[11:08:03] [36m               : 	- LoginComponent[39m
+[11:08:03] [36m               : 	- HeaderCardComponent[39m
+[11:08:03] [36m               : 	- UserNameCardComponent[39m
+[11:08:03] [36m               : 	- UserAvatarComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View-More.stories.ts[39m
+[11:08:03] [36mfound          : DummyComponent[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Button-View.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-insight.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Card-Metrics.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardDeadlineIndicator.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [36mfound          : Secondary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardParagraph.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardProofIndicator.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/CardTasksIndicator.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Chips.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/metric-selection.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [36mfound          : Secondary[39m
+[11:08:03] [36mfound          : Tertiary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/tag.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/Tittles.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [36mfound          : Secondary[39m
+[11:08:03] [36mfound          : Tertiary[39m
+[11:08:03] [36mfound          : fourth[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/stories/components/User-Name.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : Primary[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/share.module.ts[39m
+[11:08:03] [36mfound          : ShareModule[39m
+[11:08:03] [36m               : - imports:[39m
+[11:08:03] [36m               : 	- HttpClientModule[39m
+[11:08:03] [36m               : 	- RouterModule[39m
+[11:08:03] [36m               : - exports:[39m
+[11:08:03] [36m               : 	- HttpClientModule[39m
+[11:08:03] [36m               : 	- RouterModule[39m
+[11:08:03] [36m               : 	- NotFoundComponent[39m
+[11:08:03] [36m               : - declarations:[39m
+[11:08:03] [36m               : 	- NotFoundComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-avatar/user-avatar.component.ts[39m
+[11:08:03] [36mfound          : UserAvatarComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/header-card/header-card.component.ts[39m
+[11:08:03] [36mfound          : HeaderCardComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/login/containers/login.componet.ts[39m
+[11:08:03] [36mfound          : LoginComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.spect.ts[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/home/containers/home.component.ts[39m
+[11:08:03] [36mfound          : HomeComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.stories.ts[39m
+[11:08:03] [36mfound          : meta[39m
+[11:08:03] [36mfound          : Story[39m
+[11:08:03] [36mfound          : User_Card_Name[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/public/components/user-name-card/user-name-card.component.ts[39m
+[11:08:03] [36mfound          : UserNameCardComponent[39m
+[11:08:03] [32mparsing        : C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/core/share/components/not-found/not-found.component.ts[39m
+[11:08:03] [36mfound          : NotFoundComponent[39m
+[11:08:03] [32m-------------------[39m
+[11:08:03] [32mProject statistics [39m
+[11:08:03] [32m- files        : 33[39m
+[11:08:03] [32m- module       : 6[39m
+[11:08:03] [32m- component    : 9[39m
+[11:08:03] [32m- route        : 10[39m
+[11:08:03] [32m- type aliases : 15[39m
+[11:08:03] [32m-------------------[39m
+[11:08:03] [32mPrepare components[39m
+[11:08:03] [32m AppComponent has a templateUrl, include it[39m
+[11:08:03] [32m AppComponent has styleUrls, include them[39m
+[11:08:03] [32m HeaderCardComponent has a templateUrl, include it[39m
+[11:08:03] [32m HeaderCardComponent has styleUrls, include them[39m
+[11:08:03] [32m HomeComponent has a templateUrl, include it[39m
+[11:08:03] [32m HomeComponent has styleUrls, include them[39m
+[11:08:03] [32m LoginComponent has a templateUrl, include it[39m
+[11:08:03] [32m LoginComponent has styleUrls, include them[39m
+[11:08:03] [32m NotFoundComponent has a templateUrl, include it[39m
+[11:08:03] [32m NotFoundComponent has styleUrls, include them[39m
+[11:08:03] [32m PublicComponent has a templateUrl, include it[39m
+[11:08:03] [32m PublicComponent has styleUrls, include them[39m
+[11:08:03] [32m UserAvatarComponent has a templateUrl, include it[39m
+[11:08:03] [32m UserAvatarComponent has styleUrls, include them[39m
+[11:08:03] [32m UserNameCardComponent has a templateUrl, include it[39m
+[11:08:03] [32mPrepare modules[39m
+[11:08:03] [32mProcess routes[39m
+[11:08:03] [32mPrepare miscellaneous[39m
+[11:08:03] [32mProcess documentation coverage report[39m
+[11:08:03] [32mGenerating documentation in export format json[39m
+[11:08:03] [32mDocumentation generated in ./ in 1.483 seconds[39m
+info => Cleaning outputDir: [36m..\..\..\AppData\Local\Temp\chromatic--4432-0qXEZAMOwxoU[39m
 
 info => Loading presets
 info => Building manager..
-info => Manager built ([38;2;181;126;229m542 ms[39m)
+info => Manager built ([38;2;181;126;229m820 ms[39m)
 info => Building preview..
 info Addon-docs: using MDX3
 WARN No story files found for the specified pattern: [34msrc\**\*.mdx[39m
@@ -294,8 +294,8 @@ info => Using angular browser target options from "ecosystem-web:build"
 info => Using angular project with "tsConfig:C:\Users\LENOVO\Documents\Xchange\xchange-front\.storybook\tsconfig.json"
 info => [[38;2;241;97;140m@storybook/addon-styling-webpack[39m] Applying custom Storybook webpack configuration styling.
 info => Using default Webpack5 setup
-info => Copying static files: [36mprojects\ngx-xchange-ui\src\assets\icons\unicons[39m at [36m..\..\..\AppData\Local\Temp\chromatic--30176-UIw7NPPYakPG\assets[39m
-info => Copying static files: [36msrc\assets[39m at [36m..\..\..\AppData\Local\Temp\chromatic--30176-UIw7NPPYakPG\assetsExample[39m
+info => Copying static files: [36mprojects\ngx-xchange-ui\src\assets\icons\unicons[39m at [36m..\..\..\AppData\Local\Temp\chromatic--4432-0qXEZAMOwxoU\assets[39m
+info => Copying static files: [36msrc\assets[39m at [36m..\..\..\AppData\Local\Temp\chromatic--4432-0qXEZAMOwxoU\assetsExample[39m
 WARN C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app-routing.module.ts is part of the TypeScript compilation but it's unused.
 WARN Add only entry points to the 'files' or 'include' properties in your tsconfig.
 WARN C:/Users/LENOVO/Documents/Xchange/xchange-front/src/app/app.component.ts is part of the TypeScript compilation but it's unused.
@@ -339,5 +339,5 @@ WARN       950.8befbb4e.iframe.bundle.js
 WARN       main.234028edbcd295d22d21.css
 WARN       main.50da7f48.iframe.bundle.js
 WARN 
-info => Preview built ([38;2;181;126;229m2.02 min[39m)
-info => Output directory: C:\Users\LENOVO\AppData\Local\Temp\chromatic--30176-UIw7NPPYakPG
+info => Preview built ([38;2;181;126;229m2.13 min[39m)
+info => Output directory: C:\Users\LENOVO\AppData\Local\Temp\chromatic--4432-0qXEZAMOwxoU
