@@ -24,7 +24,7 @@ export const Primary: Story = {
     dataset: [
       {
         key: '01',
-        value: 'orange',
+        value: 'Orange',
       },
       {
         key: '02',
@@ -32,10 +32,26 @@ export const Primary: Story = {
       },
       {
         key: '03',
-        value: 'apple',
+        value: 'Apple',
       },
       {
         key: '04',
+        value: 'melon',
+      },
+      {
+        key: '11',
+        value: 'Apple',
+      },
+      {
+        key: '07',
+        value: 'Melon',
+      },
+      {
+        key: '08',
+        value: 'apple',
+      },
+      {
+        key: '09',
         value: 'melon',
       }
     ],
