@@ -28,7 +28,7 @@
     class="absolute border max-h-[120px] overflow-y-auto bg-white min-w-[210px] rounded-lg m-1">
     <div
       *ngFor="let dt of getNotChosen(fi.value)"
-      (click)="addKey(dt)"
+      (mousedown)="addKey(dt)"
       class=" hover:bg-base p-2"
     >{{dt.value}}</div>
   </div>

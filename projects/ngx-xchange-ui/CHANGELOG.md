@@ -1,3 +1,6 @@
+# 0.0.44 18/12/2024
+(fix) select new tags on list method to select with no click
+
 # 0.0.43 11/11/2024
 (change) chip selector add new tags behavior 
 

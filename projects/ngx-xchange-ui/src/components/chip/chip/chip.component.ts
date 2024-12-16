@@ -37,7 +37,7 @@ export class ChipComponent implements OnInit {
   getNotChosen(filter:string) {
     return this.dataset
       .filter((ds) => this.notChosen.includes(ds.key))
-      .filter((nc) => nc.value.includes(filter))
+      .filter((nc) => nc.value.toLowerCase().includes(filter.toLowerCase()))
   }
 
   getChosen() {
