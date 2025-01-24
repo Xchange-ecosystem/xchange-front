@@ -1,0 +1,5 @@
+    <label [htmlFor]="this.id">
+        <ng-content></ng-content>
+        <span> > </span>
+        <input type="radio" [id]="this.id" [checked]="this.checked" [name]="this.name" (change)="this.toggleChequed()">
+    </label>
