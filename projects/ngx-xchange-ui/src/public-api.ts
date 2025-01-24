@@ -68,4 +68,6 @@ export * from './directives/non-scroll/non-scroll.module';
 export * from './directives/disable-click/disable-click.directive';
 export * from './directives/disable-click/disable-click.module';
 export * from './components/metrics-selection/metrics-selection.module';
-export * from './components/metrics-selection/metrics-selection/metrics-selection.component'
+export * from './components/metrics-selection/metrics-selection/metrics-selection.component';
+export * from './components/list-item-selector/list-item-selector.module';
+export * from './components/list-item-selector/list-item-selector/list-item-selector.component';
