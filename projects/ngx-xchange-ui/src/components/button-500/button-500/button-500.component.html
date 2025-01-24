@@ -1,0 +1,8 @@
+<button
+  class="p-4 border border-Black500 text-Black500 flex justify-center items-center"
+  [ngClass]="buttonSelector()"
+  (click)="onClick($event)"
+>
+  <ng-content></ng-content>
+  <p>{{ description }}</p>
+</button>
