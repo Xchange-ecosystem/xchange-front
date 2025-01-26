@@ -1,8 +1,14 @@
 <button
-  class="p-4 border border-Black500 text-Black500 text-Headline-200-font-size font-bold flex justify-center items-center"
+  class="border border-Black500 text-Black500 text-Headline-200-font-size font-bold flex justify-center items-center"
   [ngClass]="buttonSelector()"
   (click)="onClick($event)"
 >
-  <ng-content></ng-content>
-  <p>{{ description }}</p>
+  <ng-content *ngIf="type !== 'round' && type !== 'round_xl'" />
+  <p *ngIf="type !== 'round' && type !== 'round_xl'">{{ description }}</p>
+  <div *ngIf="type === 'round'" class="w-[19px] h-[19px] flex">
+    <xc-icon-search class="w-[19px] h-[19px]"/>
+  </div>
+  <div *ngIf="type === 'round_xl'" class="w-[42px] h-[42px]">
+    <xc-icon-close-xl />
+  </div>
 </button>
