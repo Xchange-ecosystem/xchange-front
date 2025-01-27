@@ -1,8 +1,18 @@
 <button
-  class="p-4 border border-Black500 text-Black500 text-Copy-300-Medium-font-size font-bold flex justify-center items-center"
+  class="border border-Black500 text-Black500 text-Copy-300-Medium-font-size font-bold flex justify-center items-center"
   [ngClass]="buttonSelector()"
   (click)="onClick($event)"
 >
-  <ng-content></ng-content>
-  <p>{{ description }}</p>
+  <ng-content *ngIf="type !== 'round_options' && type !== 'round_cancel' && type !== 'round_back' && type !== 'round_back_inactive' && type !== 'ai_button'"></ng-content>
+  <xc-icon-ai *ngIf="type === 'ai_button'" class="w-[16px] h-[16px]"/>
+  <p *ngIf="type !== 'round_options' && type !== 'round_cancel' && type !== 'round_back'">{{ description }}</p>
+  <div *ngIf="type === 'round_options'" class="w-[22px] h-[22px] flex items-center justify-center">
+    <xc-icon-more-three-dots  class="w-[22px] h-[22px]"/>
+  </div>
+  <div *ngIf="type === 'round_cancel'" class="w-[22px] h-[22px] flex items-center justify-center">
+    <xc-icon-close-s class="w-[22px] h-[22px]"/>
+  </div>
+  <div *ngIf="type === 'round_back' || type === 'round_back_inactive'" class="w-[22px] h-[22px] flex items-center justify-center">
+    <xc-icon-angle-left class="w-[22px] h-[22px]"/>
+  </div>
 </button>
