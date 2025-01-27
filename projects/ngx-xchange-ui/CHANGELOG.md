@@ -1,3 +1,7 @@
+# 0.1.0 27/01/2025
+* (add) - button 500 from new iu ux design
+* (add) - button 440 from new IU ux
+
 # 0.0.44 18/12/2024
 (fix) select new tags on list method to select with no click
 
