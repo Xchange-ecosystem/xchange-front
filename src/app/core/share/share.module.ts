@@ -1,26 +1,19 @@
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { RouterModule } from "@angular/router";
 
 import { NotFoundComponent } from './components/not-found/not-found.component'
 
 
 
-@NgModule({
-    imports: [
-        HttpClientModule,
-        RouterModule,
+@NgModule({ declarations: [
+        NotFoundComponent
     ],
-    declarations: [
-    NotFoundComponent
-  ],
     exports: [
         HttpClientModule,
         RouterModule,
         NotFoundComponent,
-    ],
-    providers: []
-})
+    ], imports: [RouterModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 
 export class ShareModule{
     constructor() {}
