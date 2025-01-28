@@ -4,7 +4,7 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   pt-[6px]
   pb-[7px]
   px-[10px] 
-  rounded
+  rounded-2xl
   text-tags
   text-Grey500
   font-manrope
@@ -40,6 +40,18 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   rounded
   text-tags
   text-white
+  font-manrope
+  font-normal
+  leading-tag
+  `,
+  accepted: `
+  bg-[rgba(18, 212, 100, 0.15)]
+  pt-[6px]
+  pb-[7px]
+  px-[10px] 
+  rounded-2xl
+  text-tags
+  text-Complete
   font-manrope
   font-normal
   leading-tag

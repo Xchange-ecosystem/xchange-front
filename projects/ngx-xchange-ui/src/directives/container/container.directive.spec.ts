@@ -1,4 +1,4 @@
-import { ContainerDirective } from './container/container/container.directive';
+import { ContainerDirective } from './container.directive';
 
 describe('ContainerDirective', () => {
   it('should create an instance', () => {

@@ -11,6 +11,8 @@ export class ListItemSelectorComponent implements OnInit {
   @Input() name: string = '';
   @Input() completed: boolean = false;
   @Input() userItem: boolean = false;
+  @Input() bigItem: boolean = false;
+  @Input() transparent: boolean = false
   
     @Output() checkedChange = new EventEmitter<boolean>();
   

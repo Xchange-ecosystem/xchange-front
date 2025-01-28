@@ -9,17 +9,18 @@ export class ContainerDirective {
 private twClasses = ''
   @HostBinding('class')
   @Input()
-  set xcButtonView(klasses: string){
+  set xcContainer(klasses: containerTypes){
     this.twClasses = klasses
     .split(' ')
     .map((k) => APP_TAILWIND_STYLES[k] ?? k)
     .join(' ')
   }
 
-  get xcButtonView(): String{
+  get xcContainer(): String{
     return this.twClasses
-  }
-  ngOnInit() {
-
-  }
+  }  
 }
+type containerTypes =
+|'listSelector'
+|'assignmentCard'
+|'rightSideModal'
