@@ -68,7 +68,8 @@ module.exports = {
         'Light_Grey': 'linear-gradient(289deg, rgba(219, 224, 220, 0.70) 26.17%, rgba(232, 237, 233, 0.60) 78.35%)',
         'Light_Grey_On_White': 'linear-gradient(289deg, rgba(219, 224, 220, 0.40) 26.17%, rgba(232, 237, 233, 0.30) 78.35%)',
         'Light_Blue_Gradient': 'linear-gradient(109deg, #B8FBFF 33.19%, #A4F8C0 85.37%)',
-        'Medium_Blue_Gradient': 'linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%)'
+        'Medium_Blue_Gradient': 'linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%)',
+        'Checked': "url('./src/assets/icons/checked.svg')"
       },
       fontSize: {
         'Main_Titles': "48px",

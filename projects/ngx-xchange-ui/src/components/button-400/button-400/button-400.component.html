@@ -1,7 +1,7 @@
 <button
   class="border border-Black500 text-Black500 text-Copy-300-Medium-font-size font-bold flex justify-center items-center"
   [ngClass]="buttonSelector()"
-  (click)="onClick($event)"
+  (click)="handleClick($event)"
 >
   <ng-content *ngIf="type !== 'round_options' && type !== 'round_cancel' && type !== 'round_back' && type !== 'round_back_inactive' && type !== 'ai_button'"></ng-content>
   <xc-icon-ai *ngIf="type === 'ai_button'" class="w-[16px] h-[16px]"/>

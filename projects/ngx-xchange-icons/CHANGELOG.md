@@ -1,3 +1,11 @@
+# 0.1.1 - 27/01/2025
+* (change) - SVG check icon 
+* (change) - SVG button search
+* (change) - SVG close xl icon
+* (change) - SVG close s icon
+* (change) - SVG icon
+* (change) - SVG icon AI 
+
 # 0.1.0 - 27/01/2025
 * (change) - SVG button search
 * (add) - add SVG close xl icon

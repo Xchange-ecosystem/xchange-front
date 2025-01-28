@@ -1,4 +1,4 @@
-input[type='radio'] { 
+/* input[type='radio'] { 
     display: none;
 }
 
@@ -20,4 +20,4 @@ span {
 
 span:not(:has(+ input[type='radio']:checked)) {
     display: none;
-}
+} */

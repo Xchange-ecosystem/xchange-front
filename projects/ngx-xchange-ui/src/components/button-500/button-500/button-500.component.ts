@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonType } from 'projects/ngx-xchange-ui/src/types';
 
 @Component({
@@ -9,12 +9,11 @@ import { ButtonType } from 'projects/ngx-xchange-ui/src/types';
 export class Button500Component {
   @Input() type: string;
   @Input() description: string;
-  @Input() onClick: Function;
+  @Output() onClick = new EventEmitter<Event>;
   
   constructor() { 
     this.type = '';
     this.description = '';
-    this.onClick = () => {};
   } 
   
   buttonSelector() {
@@ -29,5 +28,8 @@ export class Button500Component {
       'round_inactive': 'w-[38px] h-[38px] bg-Grey200 text-Black500 rounded-full border-none fill-black',
     }
     return buttonCatalog[this.type];
+  }
+  handleClick(event: Event){
+    this.onClick.emit(event)
   }
 }

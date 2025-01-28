@@ -1,11 +1,12 @@
 export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   gray: `
-  bg-Quaternary_Fonts 
-  px-2
-  py-[2px] 
+  bg-Grey100
+  pt-[6px]
+  pb-[7px]
+  px-[10px] 
   rounded
   text-tags
-  text-Secondary_Fonts
+  text-Grey500
   font-manrope
   font-normal
   leading-tag

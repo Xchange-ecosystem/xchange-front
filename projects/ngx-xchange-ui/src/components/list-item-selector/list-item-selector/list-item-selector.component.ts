@@ -9,6 +9,8 @@ export class ListItemSelectorComponent implements OnInit {
   @Input() label: string = '';
   @Input() checked: boolean = false;
   @Input() name: string = '';
+  @Input() completed: boolean = false;
+  
     @Output() checkedChange = new EventEmitter<boolean>();
   
     toggleChequed() {

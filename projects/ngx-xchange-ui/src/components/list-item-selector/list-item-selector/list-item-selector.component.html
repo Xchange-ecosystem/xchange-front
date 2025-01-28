@@ -1,5 +1,10 @@
-    <label [htmlFor]="this.id">
+    <label [ngClass]="{'bg-Light_Grey': this.checked }" [htmlFor]="this.id" class="border-[1.5px] border-Grey100 rounded-lg bg-white hover:bg-Light_Grey flex justify-between items-center p-4 pñ-[14px]">
+      <div class=" relative flex gap-2 items-center justify-center text-Black500 text-Headline-200-font-size font-Headline-200-font-weight leading-Headline-300-line-Height">
+        <div *ngIf="this.completed" class="w-6 h-6 flex items-center justify-center rounded-full bg-Light_Green">
+            <xc-icon-check class="fill-[#1CCD66]"/>
+        </div>
+        <input class="border-[1.5px] border-Grey100 rounded-full hover:border-Grey500  bg-Checked w-6 h-6 appearance-none cursor-pointer" type="checkbox" [ngClass]="{'opacity-0 w-0 h-0 fixed right-0 left-0': this.completed}" [id]="this.id" [checked]="this.checked" [name]="this.name" (change)="this.toggleChequed()">
         <ng-content></ng-content>
+      </div>
         <span> > </span>
-        <input type="radio" [id]="this.id" [checked]="this.checked" [name]="this.name" (change)="this.toggleChequed()">
     </label>
