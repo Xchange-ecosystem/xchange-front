@@ -10,6 +10,7 @@ export class ListItemSelectorComponent implements OnInit {
   @Input() checked: boolean = false;
   @Input() name: string = '';
   @Input() completed: boolean = false;
+  @Input() userItem: boolean = false;
   
     @Output() checkedChange = new EventEmitter<boolean>();
   
