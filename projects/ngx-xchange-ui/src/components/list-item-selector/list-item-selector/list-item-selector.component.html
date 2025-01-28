@@ -1,4 +1,4 @@
-    <label [ngClass]="{'bg-Light_Grey': this.checked }" [htmlFor]="this.id" class="relative z-2 border-[1.5px] border-Grey100 rounded-lg bg-white hover:bg-Light_Grey flex justify-between items-center p-4 pñ-[14px]">
+    <label [ngClass]="{'bg-Light_Grey': this.checked, 'max-h-[44px]': !this.userItem}" [htmlFor]="this.id" class="relative z-2 border-[1.5px] border-Grey100 rounded-lg bg-white hover:bg-Light_Grey flex justify-between items-center p-4 pñ-[14px]">
       <div class=" relative flex gap-2 items-center justify-center text-Black500 text-Headline-200-font-size font-Headline-200-font-weight leading-Headline-300-line-Height">
         <div *ngIf="(this.completed && !this.userItem)" class="w-6 h-6 flex items-center justify-center rounded-full bg-Light_Green">
             <xc-icon-check class="fill-[#1CCD66]"/>
