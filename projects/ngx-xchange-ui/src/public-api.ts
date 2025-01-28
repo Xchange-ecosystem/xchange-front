@@ -75,3 +75,5 @@ export * from './components/button-400/button-400.module';
 export * from './components/button-400/button-400/button-400.component';
 export * from './components/button-500/button-500.module';
 export * from './components/button-500/button-500/button-500.component';
+export * from './directives/container/container.module';
+export * from './directives/container/container.directive';
