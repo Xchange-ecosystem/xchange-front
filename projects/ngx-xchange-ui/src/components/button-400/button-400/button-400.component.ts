@@ -1,0 +1,37 @@
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ButtonType } from 'projects/ngx-xchange-ui/src/types';
+
+@Component({
+  selector: 'xc-button-400',
+  templateUrl: './button-400.component.html',
+  styleUrl: './button-400.component.css',
+})
+export class Button400Component {
+  @Input() type: string;
+  @Input() description: string;
+  @Output() onClick = new EventEmitter<Event>;
+
+  constructor() {
+    this.type = '';
+    this.description = '';
+  }
+
+  buttonSelector() {
+    const buttonCatalog: ButtonType = {
+      '': 'rounded-lg gap-1 hover:text-Grey500 hover:border-Grey500 hover:fill-Grey500 p-4',
+      'outline_inactive': 'opacity-[0.2] rounded-lg hover:cursor-default gap-1 p-4',
+      'cancel': 'rounded-lg gap-1 bg-white text-Blocked border-Blocked fill-Blocked gap-1 hover:opacity-[0.6] p-4',
+      'filled': 'bg-Black500 text-white rounded-lg fill-white hover:bg-Black400 py-[10px] gap-1 p-4',
+      'filled_inactive': 'bg-Black500 text-white opacity-[0.2] rounded-lg fill-white gap-1 py-[10px] hover:cursor-default p-4',
+      'round_options': 'w-[30px] h-[30px] bg-Light_Grey text-Black500 rounded-full p-2 hover:bg-Grey200 border-none fill-black',
+      'round_cancel': 'w-[30px] h-[30px]  bg-Light_Grey text-Black500 rounded-full p-2 hover:bg-Grey200 border-none fill-black',
+      'round_back': 'w-[30px] h-[30px]  bg-white text-Black500 rounded-full p-2 hover:bg-Grey200 border-none fill-black stroke-black',
+      'round_back_inactive': 'w-[30px] h-[30px]  bg-white text-Grey400 rounded-full border-none fill-Grey400 stroke-Grey400',
+      'ai_button': 'p-4 rounded-lg gap-1 bg-Light_Blue_Gradient pl-[14px] hover:bg-Medium_Blue_Gradient'
+    };
+    return buttonCatalog[this.type];
+  }
+  handleClick(event: Event){
+    this.onClick.emit(event)
+  }
+}

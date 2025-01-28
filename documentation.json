@@ -35,6 +35,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
+                    "indexKey": "",
                     "optional": false,
                     "description": "",
                     "line": 9
@@ -1049,7 +1050,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'Orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'Apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      },\r\n      {\r\n        key: '11',\r\n        value: 'Apple',\r\n      },\r\n      {\r\n        key: '07',\r\n        value: 'Melon',\r\n      },\r\n      {\r\n        key: '08',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '09',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
             },
             {
                 "name": "Primary",
@@ -1621,7 +1622,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    dataset: [\r\n      {\r\n        key: '01',\r\n        value: 'Orange',\r\n      },\r\n      {\r\n        key: '02',\r\n        value: 'banana',\r\n      },\r\n      {\r\n        key: '03',\r\n        value: 'Apple',\r\n      },\r\n      {\r\n        key: '04',\r\n        value: 'melon',\r\n      },\r\n      {\r\n        key: '11',\r\n        value: 'Apple',\r\n      },\r\n      {\r\n        key: '07',\r\n        value: 'Melon',\r\n      },\r\n      {\r\n        key: '08',\r\n        value: 'apple',\r\n      },\r\n      {\r\n        key: '09',\r\n        value: 'melon',\r\n      }\r\n    ],\r\n    label: 'Just an example',\r\n    placeholder: 'edit tags',\r\n    chosen: [\r\n      {\r\n        key: '05',\r\n        value: 'kiwi',\r\n      }\r\n    ]\r\n  },\r\n}"
                 }
             ],
             "src/stories/components/metric-selection.stories.ts": [
@@ -2074,6 +2075,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/public/components/user-name-card/user-name-card.component.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/public/components/user-name-card/user-name-card.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2140,6 +2151,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/AsideNav.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Button-View-More.stories.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2169,6 +2190,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/Button-View-More.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Button-View.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2184,6 +2215,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-View.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2209,6 +2250,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/Card-Metrics.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Card-insight.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2224,6 +2275,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Card-insight.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2259,6 +2320,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/CardDeadlineIndicator.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/CardParagraph.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2274,6 +2345,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/CardParagraph.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2299,6 +2380,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/CardProofIndicator.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/CardTasksIndicator.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2319,6 +2410,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/CardTasksIndicator.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/Chips.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2334,6 +2435,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Chips.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2389,6 +2500,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/Tittles.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/User-Name.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2404,6 +2525,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/User-Name.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2449,6 +2580,16 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/metric-selection.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/tag.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2464,6 +2605,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/tag.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
