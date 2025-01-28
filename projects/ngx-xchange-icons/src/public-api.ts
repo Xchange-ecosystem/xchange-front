@@ -1140,3 +1140,6 @@ export * from './lib/custom-star.component';
 export * from './lib/goals-aim.component';
 export * from './lib/rewards-star.component';
 export * from './lib/more-three-dots.component';
+export * from './lib/close-xl.component';
+export * from './lib/close-s.component';
+export * from './lib/ai.component';

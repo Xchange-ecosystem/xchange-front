@@ -1,3 +1,18 @@
+# 0.1.1 - 27/01/2025
+* (change) - SVG check icon 
+* (change) - SVG button search
+* (change) - SVG close xl icon
+* (change) - SVG close s icon
+* (change) - SVG icon
+* (change) - SVG icon AI 
+
+# 0.1.0 - 27/01/2025
+* (change) - SVG button search
+* (add) - add SVG close xl icon
+* (add) - add SVG close s icon
+* (change) - three dots SVG icon
+* (add) - icon AI of button 400 component
+
 # 0.0.11 - 04/1/2024
 * (change) Change send icon size
 

@@ -1,0 +1,23 @@
+/* input[type='radio'] { 
+    display: none;
+}
+
+label {
+    padding: 1rem;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+label:has(input[type='radio']:checked) {
+    border-radius: 8px;
+    background: var(--Gradients-Light-Grey, linear-gradient(289deg, rgba(219, 224, 220, 0.70) 26.17%, rgba(232, 237, 233, 0.60) 78.35%));
+}
+
+span {
+    font-weight: bold;
+}
+
+span:not(:has(+ input[type='radio']:checked)) {
+    display: none;
+} */
