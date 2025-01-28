@@ -3,7 +3,7 @@
         <div *ngIf="(this.completed && !this.userItem)" class="w-6 h-6 flex items-center justify-center rounded-full bg-Light_Green">
             <xc-icon-check class="fill-[#1CCD66]"/>
         </div>
-        <input class="border-[1.5px] border-Grey100 rounded-full hover:border-Grey500  bg-Checked w-6 h-6 appearance-none cursor-pointer" type="checkbox" [ngClass]="{'opacity-0 w-0 h-0 absolute right-0 left-0': (this.completed || this.userItem)}" [id]="this.id" [checked]="this.checked" [name]="this.name" (change)="this.toggleChequed()">
+        <input class="border-[1.5px] border-Grey100 bg-white rounded-full hover:border-Grey500  bg-Checked w-6 h-6 appearance-none cursor-pointer" type="checkbox" [ngClass]="{'opacity-0 w-0 h-0 absolute right-0 left-0': (this.completed || this.userItem)}" [id]="this.id" [checked]="this.checked" [name]="this.name" (change)="this.toggleChequed()">
         <ng-content></ng-content>
       </div>
         <span> > </span>
