@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input, OnInit } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcButtonView]'
+    selector: '[xcButtonView]',
+    standalone: false
 })
 export class ButtonViewDirective implements OnInit {
   private twClasses = ''

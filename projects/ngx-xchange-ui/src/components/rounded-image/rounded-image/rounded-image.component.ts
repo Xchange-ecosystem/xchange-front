@@ -2,9 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-rounded-image',
-  templateUrl: './rounded-image.component.html',
-  styleUrls: ['./rounded-image.component.css']
+    selector: 'xc-rounded-image',
+    templateUrl: './rounded-image.component.html',
+    styleUrls: ['./rounded-image.component.css'],
+    standalone: false
 })
 export class RoundedImageComponent {
   @Input() color?: string;

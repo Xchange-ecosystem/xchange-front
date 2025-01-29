@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-card-tasks-indicator',
-  templateUrl: './card-tasks-indicator.component.html',
-  styleUrls: ['./card-tasks-indicator.component.css']
+    selector: 'xc-card-tasks-indicator',
+    templateUrl: './card-tasks-indicator.component.html',
+    styleUrls: ['./card-tasks-indicator.component.css'],
+    standalone: false
 })
 export class CardTasksIndicatorComponent {
   @Input()

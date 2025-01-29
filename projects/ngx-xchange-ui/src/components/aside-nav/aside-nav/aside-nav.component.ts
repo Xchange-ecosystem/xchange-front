@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 @Component({
-  selector: 'xc-aside-nav',
-  templateUrl: './aside-nav.component.html',
-  styleUrls: ['./aside-nav.component.css'],
+    selector: 'xc-aside-nav',
+    templateUrl: './aside-nav.component.html',
+    styleUrls: ['./aside-nav.component.css'],
+    standalone: false
 })
 export class AsideNavComponent implements OnInit, OnChanges {
   @Input() isOpen: boolean = true;

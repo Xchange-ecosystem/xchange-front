@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-card-deadline-indicator',
-  templateUrl: './card-deadline-indicator.component.html',
-  styleUrls: ['./card-deadline-indicator.component.css']
+    selector: 'xc-card-deadline-indicator',
+    templateUrl: './card-deadline-indicator.component.html',
+    styleUrls: ['./card-deadline-indicator.component.css'],
+    standalone: false
 })
 export class CardDeadlineIndicatorComponent {
 @Input()

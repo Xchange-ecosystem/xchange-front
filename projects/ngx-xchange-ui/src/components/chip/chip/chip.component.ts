@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'xc-chip',
-  templateUrl: './chip.component.html',
-  styleUrls: ['./chip.component.css']
+    selector: 'xc-chip',
+    templateUrl: './chip.component.html',
+    styleUrls: ['./chip.component.css'],
+    standalone: false
 })
 export class ChipComponent implements OnInit {
   ngOnInit(): void {

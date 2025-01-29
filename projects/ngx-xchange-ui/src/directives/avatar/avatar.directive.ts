@@ -1,7 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[xcAvatar]'
+    selector: '[xcAvatar]',
+    standalone: false
 })
 export class AvatarDirective {
   

@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ecosystem-web:build:production"
+              "buildTarget": "ecosystem-web:build:production"
             },
             "development": {
-              "browserTarget": "ecosystem-web:build:development"
+              "buildTarget": "ecosystem-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ecosystem-web:build"
+            "buildTarget": "ecosystem-web:build"
           }
         },
         "test": {

@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-user-name-card',
-  templateUrl: './user-name-card.component.html',
-  styleUrls: ['./user-name-card.component.css']
+    selector: 'xc-user-name-card',
+    templateUrl: './user-name-card.component.html',
+    styleUrls: ['./user-name-card.component.css'],
+    standalone: false
 })
 export class UserNameCardComponent {
   @Input()

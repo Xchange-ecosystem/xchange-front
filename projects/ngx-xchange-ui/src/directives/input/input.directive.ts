@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcInput]'
+    selector: '[xcInput]',
+    standalone: false
 })
 export class InputDirective {
   private twClasses = '';

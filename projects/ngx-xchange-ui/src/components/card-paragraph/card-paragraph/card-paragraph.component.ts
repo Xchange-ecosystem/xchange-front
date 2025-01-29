@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-card-paragraph',
-  templateUrl: './card-paragraph.component.html',
-  styleUrls: ['./card-paragraph.component.css']
+    selector: 'xc-card-paragraph',
+    templateUrl: './card-paragraph.component.html',
+    styleUrls: ['./card-paragraph.component.css'],
+    standalone: false
 })
 export class CardParagraphComponent {
 @Input()

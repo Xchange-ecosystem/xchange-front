@@ -3,7 +3,8 @@ import { AfterViewInit, Directive, ElementRef, EventEmitter, HostListener, Injec
 import { filter, fromEvent, Subscription } from 'rxjs';
 
 @Directive({
-  selector: '[xcDisableCLick]',
+    selector: '[xcDisableCLick]',
+    standalone: false
 })
 export class DisableCLickDirective implements AfterViewInit, OnDestroy{
 

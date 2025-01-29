@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-user-name-card',
-  templateUrl: './user-name-card.component.html',
+    selector: 'app-user-name-card',
+    templateUrl: './user-name-card.component.html',
+    standalone: false
 })
 export class UserNameCardComponent {
   @Input()

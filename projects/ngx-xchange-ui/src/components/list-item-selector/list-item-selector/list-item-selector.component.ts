@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'xc-list-item-selector',
-  templateUrl: './list-item-selector.component.html',
-  styleUrl: './list-item-selector.component.css'
+    selector: 'xc-list-item-selector',
+    templateUrl: './list-item-selector.component.html',
+    styleUrl: './list-item-selector.component.css',
+    standalone: false
 })
 export class ListItemSelectorComponent implements OnInit {
   @Input() label: string = '';

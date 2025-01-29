@@ -1,7 +1,8 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[xcTag]'
+    selector: '[xcTag]',
+    standalone: false
 })
 export class TagDirective {
 

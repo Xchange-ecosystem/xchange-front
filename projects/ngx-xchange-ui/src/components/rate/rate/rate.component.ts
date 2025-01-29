@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'xc-rate',
-  templateUrl: './rate.component.html',
-  styleUrls: ['./rate.component.css']
+    selector: 'xc-rate',
+    templateUrl: './rate.component.html',
+    styleUrls: ['./rate.component.css'],
+    standalone: false
 })
 export class RateComponent implements OnInit {
   @Input() maxRate: number = 5;

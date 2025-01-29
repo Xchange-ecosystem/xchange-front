@@ -18,11 +18,10 @@ const MetricsCatalog = {
 type MetricsCatalogKey = keyof typeof MetricsCatalog;
 
 @Component({
-  selector: 'xc-metrics-selection',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './metrics-selection.component.html',
-  styleUrl: './metrics-selection.component.css',
+    selector: 'xc-metrics-selection',
+    imports: [CommonModule],
+    templateUrl: './metrics-selection.component.html',
+    styleUrl: './metrics-selection.component.css'
 })
 export class MetricsSelectionComponent implements OnInit, OnChanges {
   @Input() selection: MetricsCatalogKey = 'select';

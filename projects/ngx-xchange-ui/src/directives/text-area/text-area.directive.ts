@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcTextArea]'
+    selector: '[xcTextArea]',
+    standalone: false
 })
 export class TextAreaDirective {
   private twClasses = '';

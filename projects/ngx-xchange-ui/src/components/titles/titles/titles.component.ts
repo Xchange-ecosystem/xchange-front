@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-titles',
-  templateUrl: './titles.component.html',
-  styleUrls: ['./titles.component.css']
+    selector: 'xc-titles',
+    templateUrl: './titles.component.html',
+    styleUrls: ['./titles.component.css'],
+    standalone: false
 })
 export class TitlesComponent {
 @Input()

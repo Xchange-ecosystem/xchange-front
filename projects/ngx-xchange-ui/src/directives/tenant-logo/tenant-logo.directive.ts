@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcTenantLogo]'
+    selector: '[xcTenantLogo]',
+    standalone: false
 })
 export class TenantLogoDirective {
   private twClasses = '';

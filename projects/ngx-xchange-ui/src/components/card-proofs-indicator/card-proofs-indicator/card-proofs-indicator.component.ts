@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-card-proofs-indicator',
-  templateUrl: './card-proofs-indicator.component.html',
-  styleUrls: ['./card-proofs-indicator.component.css']
+    selector: 'xc-card-proofs-indicator',
+    templateUrl: './card-proofs-indicator.component.html',
+    styleUrls: ['./card-proofs-indicator.component.css'],
+    standalone: false
 })
 export class CardProofsIndicatorComponent {
 @Input()

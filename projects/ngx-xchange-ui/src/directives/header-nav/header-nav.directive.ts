@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcHeaderNav]'
+    selector: '[xcHeaderNav]',
+    standalone: false
 })
 export class HeaderNavDirective {
   private twClasses = '';

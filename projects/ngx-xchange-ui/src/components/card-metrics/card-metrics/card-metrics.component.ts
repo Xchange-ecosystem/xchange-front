@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'xc-card-metrics',
-  templateUrl: './card-metrics.component.html',
-  styleUrls: ['./card-metrics.component.css']
+    selector: 'xc-card-metrics',
+    templateUrl: './card-metrics.component.html',
+    styleUrls: ['./card-metrics.component.css'],
+    standalone: false
 })
 export class CardMetricsComponent {
   @Input()

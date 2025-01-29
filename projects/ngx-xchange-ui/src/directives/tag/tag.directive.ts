@@ -2,7 +2,8 @@ import { Directive, HostBinding, Input } from '@angular/core';
 import { APP_TAILWIND_STYLES } from './styles';
 
 @Directive({
-  selector: '[xcTag]'
+    selector: '[xcTag]',
+    standalone: false
 })
 export class TagDirective {
   private twClasses = '';
