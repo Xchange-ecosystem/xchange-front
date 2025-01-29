@@ -10,10 +10,12 @@ import { NotFoundComponent } from './components/not-found/not-found.component'
         NotFoundComponent
     ],
     exports: [
-        HttpClientModule,
         RouterModule,
         NotFoundComponent,
-    ], imports: [RouterModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+    ], 
+    imports: [RouterModule], 
+    providers: [provideHttpClient(withInterceptorsFromDi())],
+})
 
 export class ShareModule{
     constructor() {}
