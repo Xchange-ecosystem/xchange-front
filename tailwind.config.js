@@ -42,6 +42,7 @@
           'Blocked': '#EF4444',
           'Suggestion': '#AF71F1',
           'Collaboration': '#71D7D7',
+          'Yellow_Tag': '#AF9E1C',
           'Project': '#3CA7FF',
           'Health': '#FFA931',
           'Blue500': '#01165A',
