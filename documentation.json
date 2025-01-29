@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-7bb57c4dcd2c09482d264d807eaf5dafbfa63e2b7f71325b92a8ebe8ff4e75764e6ec0ba08298078a17024fd2357e4fe058f125f66bd892cfb33e0c290761940",
+            "id": "component-AppComponent-16a94f6170e4d42f701b9e93bf16b9233330abec77348bb1d097142f2eaf2d2dd1592453a12e2d8d074416e43af1ffa68b2a2f4e9b164852a8d1937252606ff6",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -38,7 +38,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 9
+                    "line": 10
                 }
             ],
             "methodsClass": [],
@@ -51,7 +51,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  abierto=true\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\n    selector: 'app-root',\n    templateUrl: './app.component.html',\n    styleUrls: ['./app.component.scss'],\n    standalone: false\n})\r\nexport class AppComponent {\r\n  abierto=true\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -100,7 +100,7 @@
         },
         {
             "name": "HeaderCardComponent",
-            "id": "component-HeaderCardComponent-9f87168c48a918c2eaee27a8ad779a0bda9c91f0f8c736d41274442648ad4bf50f48c0caf5fc34e07823dfc4a7a931f939de3e11d4835c36878b2dcc8f183e9e",
+            "id": "component-HeaderCardComponent-a3e8daa1748ae53a0e2406815cdcaac7a3e51fda3136e1f118ac482258989b425990981c2ddee3ec47dace66c89c89a4faa442afe0ee05c9cdc8070d7dd00a1d",
             "file": "src/app/public/components/header-card/header-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -130,7 +130,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-header-card',\r\n  templateUrl: './header-card.component.html',\r\n  styleUrls: ['./header-card.component.scss']\r\n})\r\nexport class HeaderCardComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\n    selector: 'app-header-card',\n    templateUrl: './header-card.component.html',\n    styleUrls: ['./header-card.component.scss'],\n    standalone: false\n})\r\nexport class HeaderCardComponent {\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -144,7 +144,7 @@
         },
         {
             "name": "HomeComponent",
-            "id": "component-HomeComponent-86ba7a1bc869e2aa0dddca7c8aee7ce80bc908e5c00c4711acac41b98aa78320782a3239430c2f9e0d829942e39848cf59dd35c6d858a4fbc6c941b04acd6130",
+            "id": "component-HomeComponent-45dd33adcbed68de3a3a902989eedc04ac0f4a8e958e965937973aac22c331011cd635a036cf264d2ddfe30390f6193d6f82ab68c2171e41b7e3fd1ec8d10709",
             "file": "src/app/public/home/containers/home.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -171,7 +171,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 11,
+                    "line": 12,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -185,7 +185,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n@Component({\r\n  selector: 'app-home',\r\n  templateUrl: './home.component.html',\r\n  styleUrls: ['./home.component.scss']\r\n})\r\n\r\nexport class HomeComponent implements OnInit {\r\n  constructor() {}\r\n   ngOnInit(): void {\r\n     \r\n   }\r\n}",
+            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n@Component({\n    selector: 'app-home',\n    templateUrl: './home.component.html',\n    styleUrls: ['./home.component.scss'],\n    standalone: false\n})\r\n\r\nexport class HomeComponent implements OnInit {\r\n  constructor() {}\r\n   ngOnInit(): void {\r\n     \r\n   }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -200,7 +200,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 9
+                "line": 10
             },
             "extends": [],
             "implements": [
@@ -210,7 +210,7 @@
         },
         {
             "name": "LoginComponent",
-            "id": "component-LoginComponent-e902c3c0fb5f5f6f3a82fff85cf75c19279de18be8505791bdc02d548abb2cbbeb7eee9491c9023fb29ff8fdbcb89598a724e1285cf0d8788580bc08a952dc41",
+            "id": "component-LoginComponent-3a50e4754402e17d8e640eadcddbc84c6c988653aceea08cf7aa52406618cbe7618d36f281af4e6143e8f8d36ee523f6af231e07ed242a374164db20b0ad2767",
             "file": "src/app/public/login/containers/login.componet.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -237,7 +237,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 11,
+                    "line": 12,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -251,7 +251,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss']\r\n})\r\n\r\nexport class LoginComponent implements OnInit {\r\n  constructor() {}\r\n   ngOnInit(): void {\r\n     \r\n   }\r\n}",
+            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n@Component({\n    selector: 'app-login',\n    templateUrl: './login.component.html',\n    styleUrls: ['./login.component.scss'],\n    standalone: false\n})\r\n\r\nexport class LoginComponent implements OnInit {\r\n  constructor() {}\r\n   ngOnInit(): void {\r\n     \r\n   }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -266,7 +266,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 9
+                "line": 10
             },
             "extends": [],
             "implements": [
@@ -276,7 +276,7 @@
         },
         {
             "name": "NotFoundComponent",
-            "id": "component-NotFoundComponent-4f12df90bf54ceed4cf21d09cc7d4ffb386b271b2b69d669043986528d8ccc6656b5d1dc60755400a9b5d76d04427d3fe7347d96eba072e7447ae959010e6ed1",
+            "id": "component-NotFoundComponent-4b4afce100d956075b85c277923682d6ecc365c69e593371bf9c5b6d87d8a299a67d76eccb3b846fb6039ce1a91cd9a5b7115209ee5f41b186bd5b1d7fdea20a",
             "file": "src/app/core/share/components/not-found/not-found.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -303,7 +303,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 11,
+                    "line": 12,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -317,7 +317,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-not-found',\r\n  templateUrl: './not-found.component.html',\r\n  styleUrls: ['./not-found.component.scss']\r\n})\r\nexport class NotFoundComponent implements OnInit{\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\n    selector: 'app-not-found',\n    templateUrl: './not-found.component.html',\n    styleUrls: ['./not-found.component.scss'],\n    standalone: false\n})\r\nexport class NotFoundComponent implements OnInit{\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -332,7 +332,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 9
             },
             "extends": [],
             "implements": [
@@ -342,7 +342,7 @@
         },
         {
             "name": "PublicComponent",
-            "id": "component-PublicComponent-82a590c0af640126ca2902ed3911b541ef6ecb638288f432530568951c271926e8114c697d39b699651e727675eb63437527a51ac6a697bf296a75665fdc6ca4",
+            "id": "component-PublicComponent-6b589a88f880b22008508b3701226422b63e71efc60d17d0cc977691920dd8e4c82da09e12e26aab337c49174cbc025a67279c96aa53a0c6b8cc3f8eb24979f9",
             "file": "src/app/public/public.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -369,7 +369,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 13,
+                    "line": 14,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -383,7 +383,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n\r\n@Component({\r\n  selector: 'app-public',\r\n  templateUrl: './public.component.html',\r\n  styleUrls: ['./public.component.scss']\r\n})\r\n\r\nexport class PublicComponent implements OnInit {\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}",
+            "sourceCode": "import { Component, OnInit } from '@angular/core'\r\n\r\n\r\n@Component({\n    selector: 'app-public',\n    templateUrl: './public.component.html',\n    styleUrls: ['./public.component.scss'],\n    standalone: false\n})\r\n\r\nexport class PublicComponent implements OnInit {\r\n  constructor () {}\r\n\r\n  ngOnInit(): void {\r\n    \r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -398,7 +398,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 10
+                "line": 11
             },
             "extends": [],
             "implements": [
@@ -408,7 +408,7 @@
         },
         {
             "name": "UserAvatarComponent",
-            "id": "component-UserAvatarComponent-a10d7cf5761deda14c479daf979462ce8486489def34886be5495b022e724cf36959d4e065d06a1b038ddd7ccd407901cac644872dbaf980c64c48d8838ef86f",
+            "id": "component-UserAvatarComponent-4877936503bf5418851448cb5b6dd63b24c8811357a62731d5af9eedd4723371f5177da7074fe45dc01b80a442cbb88ac8c20943423a9b04d1d6d5417b8a3277",
             "file": "src/app/public/components/user-avatar/user-avatar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -438,7 +438,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'app-user-avatar',\r\n  templateUrl: './user-avatar.component.html',\r\n  styleUrls: ['./user-avatar.component.scss']\r\n})\r\nexport class UserAvatarComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n\r\n@Component({\n    selector: 'app-user-avatar',\n    templateUrl: './user-avatar.component.html',\n    styleUrls: ['./user-avatar.component.scss'],\n    standalone: false\n})\r\nexport class UserAvatarComponent {\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -452,7 +452,7 @@
         },
         {
             "name": "UserNameCardComponent",
-            "id": "component-UserNameCardComponent-0b6156b06089785f65db7256173a1234eb8b59991b1ce2818f759422553fa713b3b2b5cad2002056290a2889da74609c1d0b2d80365729883a0eff055076bbad",
+            "id": "component-UserNameCardComponent-97b329f531931c9ff673daeef0d02da4e0b054f9298349181b658bf933b2611170165df707000072db045b027f3b1b950e528ad883051870bee359a2315e678b",
             "file": "src/app/public/components/user-name-card/user-name-card.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -472,7 +472,7 @@
                     "name": "lastName",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 12,
                     "type": "String",
                     "decorators": []
                 },
@@ -480,7 +480,7 @@
                     "name": "name",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 10,
                     "type": "String",
                     "decorators": []
                 }
@@ -497,7 +497,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-user-name-card',\r\n  templateUrl: './user-name-card.component.html',\r\n})\r\nexport class UserNameCardComponent {\r\n  @Input()\r\n  name: String;\r\n  @Input()\r\n  lastName: String;\r\n  \r\n  constructor() {\r\n    this.name = '';\r\n    this.lastName = '';\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\n    selector: 'app-user-name-card',\n    templateUrl: './user-name-card.component.html',\n    standalone: false\n})\r\nexport class UserNameCardComponent {\r\n  @Input()\r\n  name: String;\r\n  @Input()\r\n  lastName: String;\r\n  \r\n  constructor() {\r\n    this.name = '';\r\n    this.lastName = '';\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -507,7 +507,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 11
+                "line": 12
             },
             "extends": [],
             "templateData": "<article class=\"p-4 pe-16 inline-block rounded-md cardShadow bg-white\">\r\n  <h1 class=\"text-subtitles text-text_Color font-medium\">{{name}}&nbsp;{{lastName}}</h1>\r\n</article>\r\n"
@@ -737,13 +737,13 @@
         },
         {
             "name": "ShareModule",
-            "id": "module-ShareModule-7a8ffe2211fe2863144db7f0ba2738a8c98b3be9b8b6478214fa0f26833467234420b28400654227dc8c6720ff9f80ddce7b0e2045d17e5394b618aae484b2e4",
+            "id": "module-ShareModule-e7198c03bd9ab9cba88e7705ef39a46c701afa3185f49bd63369d69a0648928e29cbf6cbb9e5d677da2d9fbba30ace8e9797da4155dc609c6a51b79fd025de66",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/core/share/share.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { RouterModule } from \"@angular/router\";\r\n\r\nimport { NotFoundComponent } from './components/not-found/not-found.component'\r\n\r\n\r\n\r\n@NgModule({\r\n    imports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n    ],\r\n    declarations: [\r\n    NotFoundComponent\r\n  ],\r\n    exports: [\r\n        HttpClientModule,\r\n        RouterModule,\r\n        NotFoundComponent,\r\n    ],\r\n    providers: []\r\n})\r\n\r\nexport class ShareModule{\r\n    constructor() {}\r\n}",
+            "sourceCode": "import { NgModule } from \"@angular/core\";\r\nimport { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';\r\nimport { RouterModule } from \"@angular/router\";\r\n\r\nimport { NotFoundComponent } from './components/not-found/not-found.component'\r\n\r\n\r\n\r\n@NgModule({ declarations: [\r\n        NotFoundComponent\r\n    ],\r\n    exports: [\r\n        RouterModule,\r\n        NotFoundComponent,\r\n    ], \r\n    imports: [RouterModule], \r\n    providers: [provideHttpClient(withInterceptorsFromDi())],\r\n})\r\n\r\nexport class ShareModule{\r\n    constructor() {}\r\n}",
             "children": [
                 {
                     "type": "providers",
