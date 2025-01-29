@@ -20,4 +20,21 @@ export class MainHeadingDirective {
   }
 }
 
-type headingTypes = 'mainHeading' | 'secondaryHeading' | 'tertiaryHeading' | 'fourthHeading' | String;
+type headingTypes =
+  | 'mainHeading'
+  | 'secondaryHeading'
+  | 'tertiaryHeading'
+  | 'fourthHeading'
+  | 'Headline500'
+  | 'Headline400'
+  | 'Headline300'
+  | 'Headline200'
+  | 'Headline100'
+  | 'Copy400Regular'
+  | 'Copy400Medium'
+  | 'Copy400Bold'
+  | 'Copy300Medium'
+  | 'Copy300Bold'
+  | 'Copy200Medium'
+  | 'Copy200Bold'
+  | String;

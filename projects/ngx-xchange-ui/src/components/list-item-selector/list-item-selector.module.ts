@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListItemSelectorComponent } from './list-item-selector/list-item-selector.component';
-import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleDownComponent, XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
 
 
 
@@ -9,7 +9,8 @@ import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
   declarations: [ListItemSelectorComponent],
   imports: [
     CommonModule,
-    XcIconAngleDownComponent
+    XcIconAngleDownComponent,
+    XcIconCheckComponent
   ],
   exports: [
     ListItemSelectorComponent
