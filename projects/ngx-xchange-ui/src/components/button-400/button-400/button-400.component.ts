@@ -10,6 +10,8 @@ export class Button400Component {
   @Input() type: string;
   @Input() description: string;
   @Output() onClick = new EventEmitter<Event>;
+  @Input() full: boolean = false;
+  
 
   constructor() {
     this.type = '';
@@ -29,6 +31,9 @@ export class Button400Component {
       'round_back_inactive': 'w-[30px] h-[30px]  bg-white text-Grey400 rounded-full border-none fill-Grey400 stroke-Grey400',
       'ai_button': 'p-4 rounded-lg gap-1 bg-Light_Blue_Gradient pl-[14px] hover:bg-Medium_Blue_Gradient'
     };
+    if(this.full){
+      return `${buttonCatalog[this.type]} w-full`
+    }
     return buttonCatalog[this.type];
   }
   handleClick(event: Event){

@@ -149,4 +149,11 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   leading-Copy-300-Bold-line-height
   text-Black400
   `,
+  Copy300RegularGrey: `
+  font-manrope 
+  font-Copy-400-Medium-font-weight
+  text-Copy-300-Medium-font-size 
+  text-Grey500 
+  leading-Copy-300-Medium-line-Height
+  `
 };

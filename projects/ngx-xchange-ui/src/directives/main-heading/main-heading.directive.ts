@@ -36,4 +36,5 @@ type headingTypes =
   | 'Copy300Bold'
   | 'Copy200Medium'
   | 'Copy200Bold'
+  | 'Copy300RegularGrey'
   | String;

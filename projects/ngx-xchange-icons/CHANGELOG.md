@@ -1,3 +1,6 @@
+# 0.1.2 31/01/2025
+* (change) - SVG icon add
+
 # 0.1.1 - 27/01/2025
 * (change) - SVG check icon 
 * (change) - SVG button search
