@@ -25,7 +25,7 @@ export class Button400Component implements OnChanges {
 
   buttonSelector() {
     const buttonCatalog: ButtonType = {
-      '': 'rounded-lg gap-1 hover:text-Grey500 hover:border-Grey500 hover:fill-Grey500 p-4',
+      '': 'rounded-lg gap-1 hover:text-Grey500 hover:border-Grey500 hover:fill-Grey500 p-4 hover:opacity-[0.6]',
       'outline_inactive': 'opacity-[0.2] rounded-lg hover:cursor-default gap-1 p-4',
       'cancel': 'rounded-lg gap-1 bg-white text-Blocked border-Blocked fill-Blocked gap-1 hover:opacity-[0.6] p-4',
       'filled': 'bg-Black500 text-white rounded-lg fill-white hover:bg-Black400 py-[10px] gap-1 p-4',
