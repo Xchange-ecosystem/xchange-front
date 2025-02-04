@@ -1,0 +1,12 @@
+
+<div class="flex items-center justify-center gap-2 w-full">
+    <input 
+    type="range" 
+    min="0" 
+    [disabled]="readOnly"
+    [max]="this.maxRate" 
+    [(ngModel)]="this.rating" 
+    (change)="ratingChange.emit(+rating)"
+    class="slider" [style.background]="'linear-gradient(to right, var(--xc-brand-medium-blue) 0%, var(--xc-brand-gradient-green) '+(stepValue * (+ rating)) +'%, var(--xc-grey100) ' + (stepValue * (+ rating)) + '%, var(--xc-grey100) 100%)'">
+    <span class="text-nowrap" *ngIf="percentageView">{{(stepValue * (+ rating))}} %</span>
+</div>

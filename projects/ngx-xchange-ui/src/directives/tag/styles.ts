@@ -5,44 +5,52 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   pb-[7px]
   px-[10px] 
   rounded-2xl
-  text-tags
+  text-Copy-200-Bold-font-size
   text-Grey500
   font-manrope
-  font-normal
-  leading-tag
+  Copy-200-Bold-font-weight
+  leading-Copy-200-Medium-line-Height
   `,
-  green:`
-  bg-Main_accent
-  px-2
-  py-[2px] 
-  rounded
-  text-tags
-  text-Secondary_Fonts
+  green: `
+  bg-Completed
+  bg-opacity-[15%]
+  pt-[6px]
+  pb-[7px]
+  px-[10px] 
+  rounded-2xl
+  text-Copy-200-Bold-font-size
+  text-Completed
   font-manrope
-  font-normal
-  leading-tag
+  Copy-200-Bold-font-weight
+  leading-Copy-200-Medium-line-Height
   `,
   yellow: `
-  bg-Second_accent 
-  px-2
-  py-[2px] 
-  rounded
-  text-tags
-  text-Secondary_Fonts
+  relative
+  bg-Progress
+  bg-opacity-50 
+  pt-[6px]
+  pb-[7px]
+  px-[10px] 
+  rounded-2xl
+  text-Copy-200-Bold-font-size
+  text-Yellow_Tag
   font-manrope
-  font-normal
-  leading-tag
+  Copy-200-Bold-font-weight
+  leading-Copy-200-Medium-line-Height
+
   `,
   purple: `
-  bg-Warning_Alert 
-  px-2
-  py-[2px] 
-  rounded
-  text-tags
+  bg-Suggestion 
+  pt-[6px]
+  pb-[7px]
+  px-[10px]  
+  rounded-2xl
+  text-Copy-200-Bold-font-size
   text-white
   font-manrope
-  font-normal
-  leading-tag
+  Copy-200-Bold-font-weight
+  leading-Copy-200-Medium-line-Height
+
   `,
   accepted: `
   bg-[rgba(18, 212, 100, 0.15)]
@@ -54,6 +62,6 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   text-Complete
   font-manrope
   font-normal
-  leading-tag
+  leading-Copy-200-Medium-line-Height
   `,
 };

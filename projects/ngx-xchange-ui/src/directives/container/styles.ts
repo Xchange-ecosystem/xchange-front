@@ -22,6 +22,6 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
     bg-white 
     rounded-r-2xl 
     pt-12 
-    px-8
+    px-4
     `
 }

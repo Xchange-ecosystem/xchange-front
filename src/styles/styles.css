@@ -1,0 +1,34 @@
+:root{
+    --xc-black500: #b8cd1a;
+    --xc-black400: #343434;
+    --xc-white: #ffffff;
+    --xc-grey500: #8A8E8B;
+    --xc-grey400: #AEB4B1;
+    --xc-grey300: #C5CBC6;
+    --xc-grey200: #DBE0DC;
+    --xc-grey100: #E8EDE9;
+    --xc-grey50: #F5F8F6;
+    --xc-brand-medium-green: #A4F8C0;
+    --xc-brand-medium-blue: #47E3E3;
+    --xc-brand-gradient-green: #78F7AD;
+    --xc-brand-light-gree: #A4F8C0;
+    --xc-brand-light-blue: #B8FBFF;
+    --xc-gradient-light-green: linear-gradient(289deg, rgba(219, 224, 220, 0.70) 26.17%, rgba(232, 237, 233, 0.60) 78.35%);
+    --xc-gradient-light-grey-on-white: linear-gradient(289deg, rgba(219, 224, 220, 0.40) 26.17%, rgba(232, 237, 233, 0.30) 78.35%);
+    --xc-gradient-light-blue: linear-gradient(109deg, #B8FBFF 33.19%, #A4F8C0 85.37%);
+    --xc-gradient-medium-green: linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%);
+    --xc-categories-progress: #FAE651;
+    --xc-categories-yellow-tag: #AF9E1C;
+    --xc-categories-completed: #1ccd66;
+    --xc-categories-blocked: #EF4444;
+    --xc-categories-suggestion: #AF71F1;
+    --xc-categories-collaboration: #71D7D7;
+    --xc-categories-project: #3CA7FF;
+    --xc-categories-health: #FFA931;
+    --xc-data-viz-blue500: #01165A;
+    --xc-data-viz-blue400: #1E40AF;
+    --xc-data-viz-blue300: #2563EB;
+    --xc-data-viz-blue200: #60A5FA;
+    --xc-data-viz-blue100: #BFDBFE;
+    --xc-data-viz-blue50: #EFF6FF;
+}
