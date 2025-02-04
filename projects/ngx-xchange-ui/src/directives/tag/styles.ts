@@ -13,7 +13,7 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   `,
   green: `
   bg-Completed
-  bg-opacity-50
+  bg-opacity-[15%]
   pt-[6px]
   pb-[7px]
   px-[10px] 
