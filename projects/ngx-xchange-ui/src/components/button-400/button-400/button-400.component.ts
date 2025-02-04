@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { ButtonType } from 'projects/ngx-xchange-ui/src/types';
 
 @Component({
@@ -6,7 +6,7 @@ import { ButtonType } from 'projects/ngx-xchange-ui/src/types';
   templateUrl: './button-400.component.html',
   styleUrl: './button-400.component.css',
 })
-export class Button400Component {
+export class Button400Component implements OnChanges {
   @Input() type: string;
   @Input() description: string;
   @Output() onClick = new EventEmitter<Event>;
@@ -16,6 +16,11 @@ export class Button400Component {
   constructor() {
     this.type = '';
     this.description = '';
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['type']){
+      this.type = changes['type'].currentValue; 
+    }
   }
 
   buttonSelector() {
