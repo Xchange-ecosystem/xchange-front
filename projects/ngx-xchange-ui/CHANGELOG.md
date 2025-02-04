@@ -1,3 +1,12 @@
+# 0.1.3 04/02/2025
+* (add) - bar rating component
+* (change) - button 400 dynamic style behavior
+* (change) - tag green color opacity
+
+# 0.1.2 31/01/2025
+* (add) -  Main heading styles
+* (add) - container directive
+
 # 0.1.1 28/01/2025
 * (change) - list item selector component
 

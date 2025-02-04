@@ -1,0 +1,26 @@
+    .slider {
+      height: 10px;
+      border-radius: 10px;
+      -webkit-appearance: none;
+      background: linear-gradient(to right, green 0%, green 50%, #fff 50%, #fff 100%); 
+      transition: background 450ms ease-in;
+      cursor: pointer;
+    }
+    
+    .slider::-webkit-slider-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        background: var(--xc-grey500);
+        border: solid 6px black;
+
+      }
+      .slider:disabled {
+        cursor: default;
+      }
+      .slider:disabled::-webkit-slider-thumb{
+        display: none;
+      }
+      
+

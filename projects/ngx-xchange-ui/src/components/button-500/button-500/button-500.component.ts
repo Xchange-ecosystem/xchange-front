@@ -10,6 +10,7 @@ export class Button500Component {
   @Input() type: string;
   @Input() description: string;
   @Output() onClick = new EventEmitter<Event>;
+  @Input() full: boolean = false;
   
   constructor() { 
     this.type = '';
@@ -26,6 +27,9 @@ export class Button500Component {
       'round_xl_inactive': 'w-[56px] h-[56px] bg-white text-Black500 rounded-full border-none fill-black',
       'round': 'w-[38px] h-[38px] bg-Light_Grey text-Black500 rounded-full p-2 hover:bg-Grey200 border-none fill-black pb-[10px]',
       'round_inactive': 'w-[38px] h-[38px] bg-Grey200 text-Black500 rounded-full border-none fill-black',
+    }
+    if(this.full){
+      return `${buttonCatalog[this.type]} w-full`
     }
     return buttonCatalog[this.type];
   }
