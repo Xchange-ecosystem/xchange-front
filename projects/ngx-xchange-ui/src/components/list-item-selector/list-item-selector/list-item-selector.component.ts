@@ -12,13 +12,16 @@ export class ListItemSelectorComponent implements OnInit {
   @Input() completed: boolean = false;
   @Input() userItem: boolean = false;
   @Input() bigItem: boolean = false;
-  @Input() transparent: boolean = false
+  @Input() transparent: boolean = false;
+  @Input() data: any;
   
-    @Output() checkedChange = new EventEmitter<boolean>();
+  @Output() dataChange = new EventEmitter<any>();
+  @Output() checkedChange = new EventEmitter<boolean>();
   
     toggleChequed() {
       this.checked = !this.checked
       this.checkedChange.emit(this.checked)
+      this.dataChange.emit({data: this.data, checked:this.checked})
     }
   
   public id = crypto.randomUUID();
