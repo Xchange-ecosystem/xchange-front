@@ -1,4 +1,9 @@
-# 0.1.3 04/02/2025
+# 0.1.5 14/02/2025 
+* (add) - add complete objective user card component
+* (change) - rounded image component
+* (change) - tags directive font style
+
+# 0.1.4 04/02/2025
 * (change) - list-item-selector acept and emit data when chequed change
 
 # 0.1.3 04/02/2025
