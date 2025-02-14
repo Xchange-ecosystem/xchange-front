@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CompleteObjectiveUserCardComponent } from './complete-objective-user-card/complete-objective-user-card.component';
-import { XcIconClockComponent } from '@indziaki/ngx-xchange-icons';
-import { XcIconClockFiveComponent } from "../../../../ngx-xchange-icons/src/lib/clock-five.component";
+import { XcIconClockComponent, XcIconClockFiveComponent } from '@indziaki/ngx-xchange-icons';
 import { RatingBarModule } from '../rating-bar/rating-bar.module';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { TagModule } from '../../directives/tag/tag.module';
+import { NgxXchangeUiModule } from '../../public-api';
 
 
 
@@ -19,7 +19,7 @@ import { TagModule } from '../../directives/tag/tag.module';
     TagModule,
     XcIconClockComponent,
     XcIconClockFiveComponent,
-    RatingBarModule
+    RatingBarModule,
 ],
   exports: [
     CompleteObjectiveUserCardComponent

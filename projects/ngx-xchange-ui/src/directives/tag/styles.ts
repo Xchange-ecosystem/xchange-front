@@ -8,7 +8,7 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   text-Copy-200-Bold-font-size
   text-Grey500
   font-manrope
-  Copy-200-Bold-font-weight
+  font-Copy-200-Bold-font-weight
   leading-Copy-200-Medium-line-Height
   `,
   green: `
@@ -21,7 +21,7 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   text-Copy-200-Bold-font-size
   text-Completed
   font-manrope
-  Copy-200-Bold-font-weight
+  font-Copy-200-Bold-font-weight
   leading-Copy-200-Medium-line-Height
   `,
   yellow: `
@@ -35,7 +35,7 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   text-Copy-200-Bold-font-size
   text-Yellow_Tag
   font-manrope
-  Copy-200-Bold-font-weight
+  font-Copy-200-Bold-font-weight
   leading-Copy-200-Medium-line-Height
 
   `,
@@ -48,7 +48,7 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
   text-Copy-200-Bold-font-size
   text-white
   font-manrope
-  Copy-200-Bold-font-weight
+  font-Copy-200-Bold-font-weight
   leading-Copy-200-Medium-line-Height
 
   `,
