@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 interface UserData {
@@ -12,7 +12,7 @@ interface UserData {
   proofCount: number;
   ratingCount: number;
   ratingAverage: number;
-  completed: boolean;
+  isCompleted: boolean;
 }
 
 @Component({
@@ -21,17 +21,22 @@ interface UserData {
   templateUrl: './complete-objective-user-card.component.html',
   styleUrl: './complete-objective-user-card.component.css',
 })
-export class CompleteObjectiveUserCardComponent implements OnInit {
+export class CompleteObjectiveUserCardComponent implements OnInit, OnChanges {
   @Input() userData:UserData | undefined = undefined;
   @Output() checked: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public readMode = false;
-
+  
   ngOnInit(): void {
-    this.readMode = this.userData?.completed ? this.userData.completed : false;
+    this.readMode = this.userData?.isCompleted ? this.userData.isCompleted : false;
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['userData']){
+      this.userData = changes['userData'].currentValue
+    }
   }
   emitChecked(){
-    this.checked.next(!this.userData?.completed)
+    this.checked.next(!this.userData?.isCompleted)
     if(this.userData)
-      this.userData.completed = !this.userData.completed;
+      this.userData.isCompleted = !this.userData.isCompleted;
   }
 }

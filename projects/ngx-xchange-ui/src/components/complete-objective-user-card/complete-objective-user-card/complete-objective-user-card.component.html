@@ -4,7 +4,7 @@
             <input 
             id="containerCompleted"
             type="checkbox"
-            [checked]="userData?.completed"
+            [checked]="userData?.isCompleted"
             [disabled]="readMode"
             (change)="emitChecked()"
             >
