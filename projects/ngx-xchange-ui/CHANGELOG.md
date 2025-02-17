@@ -1,3 +1,7 @@
+# 0.1.6 17/08/2025
+* (change) - boder radius on objective card
+* (change ) - tailwind configuration 
+
 # 0.1.5 14/02/2025 
 * (add) - add complete objective user card component
 * (change) - rounded image component
