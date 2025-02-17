@@ -1,0 +1,39 @@
+label{
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Estilo para el contenedor del checkbox */
+  .checkbox-container {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #d3d3d3;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  /* Estilo cuando el checkbox está marcado (checked) */
+  input[type="checkbox"]:checked + .checkbox-container {
+    background-color: var( --xc-brand-light-gree);
+    border-color: var( --xc-brand-light-gree);
+  }
+
+  /* Estilo de la palomita verde fuerte */
+  input[type="checkbox"]:checked + .checkbox-container::after {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--xc-categories-completed); /* Verde fuerte */
+    font-size: 24px;
+    font-weight: 900;
+  }

@@ -94,6 +94,7 @@
         boxShadow: {
           Shadow500: '0px 0px 30px 0px rgba(17, 17, 17, 0.14)',
           Shadow400: '0px 0px 30px 0px rgba(17, 17, 17, 0.05)',
+        'userCadComplete': '0px 0px 20px 0px rgba(17, 17, 17, 0.05)'
         },
         rounded: {
           'Corner_Rounding_16': '16px',
