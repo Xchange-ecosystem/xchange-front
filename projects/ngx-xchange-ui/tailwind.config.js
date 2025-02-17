@@ -132,6 +132,9 @@ module.exports = {
         'xl': '1440px',
         'dos_xl': '1536px',
       },
+      boxShadow:{
+        'userCadComplete': '0px 0px 20px 0px rgba(17, 17, 17, 0.05)'
+      },
       lineHeight: {
         'tag': "28px",
         'edit_button': '20px',

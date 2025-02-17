@@ -77,3 +77,5 @@ export * from './components/button-500/button-500.module';
 export * from './components/button-500/button-500/button-500.component';
 export * from './directives/container/container.module';
 export * from './directives/container/container.directive';
+export * from './components/complete-objective-user-card/complete-objective-user-card.module';
+export * from './components/complete-objective-user-card/complete-objective-user-card/complete-objective-user-card.component';

@@ -1,3 +1,6 @@
+# 0.1.3 14/02/2025
+* (change) - icon clock size and color
+
 # 0.1.2 31/01/2025
 * (change) - SVG icon add
 
