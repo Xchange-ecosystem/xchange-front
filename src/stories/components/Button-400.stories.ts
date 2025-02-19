@@ -13,7 +13,9 @@ import { XcIconClockComponent } from '@indziaki/ngx-xchange-icons';
     template: `
     <section class="flex flex-col gap-4 p-4">
         <xc-button-400 [type]='type' [description]="description" [full]="full" (onClick)="printTest($event)">
+            <div class="w-4 h-4 fill-white stroke-white">
             <xc-icon-clock />
+            </div>
         </xc-button-400>
     </section>` 
 })

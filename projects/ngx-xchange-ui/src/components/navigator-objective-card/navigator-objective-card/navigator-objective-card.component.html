@@ -5,13 +5,19 @@ class="flex-flex-col gap-1 justify-start items-center w-full border-l-8 border-G
     <h1 xcMainHeading="Headline200">{{objectiveInformation.name}}</h1>
     <div class="flex flex-col gap-1 justify-center items-start py-2">
         <xc-card-tasks-indicator [content]="objectiveInformation.tasksCompleted + ('/')+ objectiveInformation.totalTasks + (' completed')">
-            <xc-icon-file-check-alt />
+            <div class="w-4 h-4 fill-Grey500 stroke-Grey500">
+                <xc-icon-file-check-alt />
+            </div>
          </xc-card-tasks-indicator>
         <xc-card-tasks-indicator [content]="objectiveInformation.proofsCount + (' proofs')">
-            <xc-icon-paperclip />
+            <div class="w-4 h-4 fill-Grey500 stroke-Grey500">
+                <xc-icon-paperclip />
+            </div>
         </xc-card-tasks-indicator>
         <xc-card-tasks-indicator [content]="objectiveInformation.startDate">
-            <xc-icon-calendar-alt />
+            <div class="w-4 h-4 fill-Grey500 stroke-Grey500">
+                <xc-icon-calendar-alt />
+            </div>
         </xc-card-tasks-indicator>
     </div>
 </article>
