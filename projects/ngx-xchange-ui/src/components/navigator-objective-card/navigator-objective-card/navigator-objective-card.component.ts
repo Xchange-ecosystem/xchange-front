@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 type ObjectiveCardInformation = {
-  objectiveName: string;
+  name: string;
   totalTasks: number;
   tasksCompleted: number;
   proofsCount: number;
@@ -20,7 +20,7 @@ type Status = 'new' |'completed' | 'open' | 'suggested'
 export class NavigatorObjectiveCardComponent {
 
   @Input() objectiveInformation: ObjectiveCardInformation = {
-    objectiveName: '',
+    name: '',
     totalTasks: 0,
     tasksCompleted: 0,
     proofsCount: 0,
@@ -30,10 +30,10 @@ export class NavigatorObjectiveCardComponent {
 
   selectObjectiveCardColor(status: Status){
     const colorObjectiveStatusOption = {
-      'open':'bg-[var(--xc-categories-progress)]' ,
-      'completed':'bg-[var(--xc-categories-completed)]',
-      'suggested':'bg-[var(--xc-categories-suggestion)]',
-      'new':'bg-[var(--xc-grey200)]',
+      'open':'border-[var(--xc-categories-progress)]' ,
+      'completed':'border-[var(--xc-categories-completed)]',
+      'suggested':'border-[var(--xc-categories-suggestion)]',
+      'new':'border-[var(--xc-grey200)]',
     }
     return  colorObjectiveStatusOption[status];
   }  

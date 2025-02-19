@@ -1,9 +1,9 @@
 <article 
-class="flex-flex-col gap-1 justify-start items-center w-full border-2 border-Grey-200 bg-white rounded-lg shadow-objectiveCard"
+class="flex-flex-col gap-1 justify-start items-center w-full border-l-8 border-Grey200 bg-white rounded-lg shadow-objectiveCard p-4 pb-2 ps-6"
 [ngClass]="selectObjectiveCardColor(objectiveInformation.status)"
 >
-    <h1></h1>
-    <div class="flex flex-col gap-1 justify-start items-center p-4 pb-2 ps-6">
+    <h1 xcMainHeading="Headline200">{{objectiveInformation.name}}</h1>
+    <div class="flex flex-col gap-1 justify-center items-start py-2">
         <xc-card-tasks-indicator [content]="objectiveInformation.tasksCompleted + ('/')+ objectiveInformation.totalTasks + (' completed')">
             <xc-icon-file-check-alt />
          </xc-card-tasks-indicator>
