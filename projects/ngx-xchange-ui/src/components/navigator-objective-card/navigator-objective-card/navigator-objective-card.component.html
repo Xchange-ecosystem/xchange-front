@@ -1,0 +1,17 @@
+<article 
+class="flex-flex-col gap-1 justify-start items-center w-full border-2 border-Grey-200 bg-white rounded-lg shadow-objectiveCard"
+[ngClass]="selectObjectiveCardColor(objectiveInformation.status)"
+>
+    <h1></h1>
+    <div class="flex flex-col gap-1 justify-start items-center p-4 pb-2 ps-6">
+        <xc-card-tasks-indicator [content]="objectiveInformation.tasksCompleted + ('/')+ objectiveInformation.totalTasks + (' completed')">
+            <xc-icon-file-check-alt />
+         </xc-card-tasks-indicator>
+        <xc-card-tasks-indicator [content]="objectiveInformation.proofsCount + (' proofs')">
+            <xc-icon-paperclip />
+        </xc-card-tasks-indicator>
+        <xc-card-tasks-indicator [content]="objectiveInformation.startDate">
+            <xc-icon-calendar-alt />
+        </xc-card-tasks-indicator>
+    </div>
+</article>
