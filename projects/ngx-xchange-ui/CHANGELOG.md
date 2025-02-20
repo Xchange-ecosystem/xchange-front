@@ -1,3 +1,10 @@
+# 0.1.7 19/02/2025
+* (add) - Navigator objective card component
+* (add) - Navigator toggle button component
+* (add) - Navigator status filter component
+* (change) - styles colors for toggle buttons
+* (change) - change library version and change log file
+
 # 0.1.6 17/08/2025
 * (change) - boder radius on objective card
 * (change ) - tailwind configuration 

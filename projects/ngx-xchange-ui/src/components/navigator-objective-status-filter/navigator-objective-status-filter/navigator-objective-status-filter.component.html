@@ -1,0 +1,34 @@
+<section class="flex flex-col gap-4 p-4 bg-white rounded-lg shadow-Shadow500 w-[190px]">
+<div class="flex justify-between items-center">
+    <span class="font-manrope text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight leading-Copy-400-Regular-line-Height">Suggestions</span>
+    <div class="w-[30px] h-[18px]">
+            <xc-navigator-filter-toggle [index]="0" [status]="'suggested'" [(value)]="selectOptions.suggestions"/>
+    </div>
+</div>
+<div class="flex justify-between items-center">
+    <span class="font-manrope text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight leading-Copy-400-Regular-line-Height">Active</span>
+    <div class="w-[30px] h-[18px]">
+            <xc-navigator-filter-toggle [index]="1" [status]="'open'" [(value)]="selectOptions.open"/>
+    </div>
+</div>
+<div class="flex justify-between items-center">
+    <span class="font-manrope text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight leading-Copy-400-Regular-line-Height">Complete</span>
+    <div class="w-[30px] h-[18px]">
+            <xc-navigator-filter-toggle [index]="2" [status]="'complete'" [(value)]="selectOptions.complete"/>
+    </div>
+</div>
+<div class="flex justify-between items-center">
+    <span class="font-manrope text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight leading-Copy-400-Regular-line-Height">Not open</span>
+    <div class="w-[30px] h-[18px]">
+            <xc-navigator-filter-toggle [index]="3" [status]="'new'" [(value)]="selectOptions.notOpen"/>
+    </div>
+</div>
+<div class="flex justify-end item-center gap-1">
+    <div class="w-6 h-6 fill-Blocked stroke-Blocked cursor-pointer" (click)="resetSelectOptions()">
+        <xc-icon-times />
+    </div>
+    <div class="w-6 h-6 fill-Completed stroke-Completed cursor-pointer" (click)="sendOptionsSelected()">
+        <xc-icon-check />
+    </div>
+</div>
+</section>
