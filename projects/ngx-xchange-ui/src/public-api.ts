@@ -85,4 +85,5 @@ export * from './components/navigator-objective-status-filter/navigator-objectiv
 export * from './components/navigator-objective-status-filter/navigator-objective-status-filter/navigator-objective-status-filter.component';
 export * from './components/navigator-filter-toggle/navigator-filter-toggle.module';
 export * from './components/navigator-filter-toggle/navigator-filter-toggle/navigator-filter-toggle.component';
-
+export * from './components/navigator-users-filter/navigator-users-filter.module';
+export * from './components/navigator-users-filter/navigator-users-filter/navigator-users-filter.component';
