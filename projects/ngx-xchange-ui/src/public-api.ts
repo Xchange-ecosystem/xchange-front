@@ -79,6 +79,8 @@ export * from './directives/container/container.module';
 export * from './directives/container/container.directive';
 export * from './components/complete-objective-user-card/complete-objective-user-card.module';
 export * from './components/complete-objective-user-card/complete-objective-user-card/complete-objective-user-card.component';
+export * from './components/navigator-objective-card/navigator-objective-card.module';
+export * from './components/navigator-objective-card/navigator-objective-card/navigator-objective-card.component';
 export * from './components/navigator-objective-status-filter/navigator-objective-status-filter.module';
 export * from './components/navigator-objective-status-filter/navigator-objective-status-filter/navigator-objective-status-filter.component';
 export * from './components/navigator-filter-toggle/navigator-filter-toggle.module';
