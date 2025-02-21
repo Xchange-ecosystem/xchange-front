@@ -25,6 +25,7 @@ export class NavigatorObjectiveCardComponent {
     tasksCompleted: 0,
     proofsCount: 0,
     startDate: '',
+    
     status: 'new'
   }
 
