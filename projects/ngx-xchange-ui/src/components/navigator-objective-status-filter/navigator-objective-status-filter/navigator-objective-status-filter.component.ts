@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ShareReplayConfig } from 'rxjs';
 
 type SelectOptions = {
   suggestions: boolean;
@@ -21,15 +21,9 @@ export class NavigatorObjectiveStatusFilterComponent {
     complete: false,
     notOpen: false,
   };
-  @Output() selectOptionsChange: BehaviorSubject<SelectOptions> = new BehaviorSubject<SelectOptions>(
-    {
-      suggestions: false,
-      open: false,
-      complete: false,
-      notOpen: false,
-    }
-  );
-  @Output() visible: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true)
+  @Output() selectOptionsChange = new EventEmitter<SelectOptions> 
+  @Input() visible: boolean = false
+  @Output() visibleChange = new EventEmitter<boolean>()
 
   resetSelectOptions(){
     this.selectOptions = {
@@ -38,11 +32,11 @@ export class NavigatorObjectiveStatusFilterComponent {
       complete: false,
       notOpen: false,
     }
-    this.selectOptionsChange.next(this.selectOptions)
-    this.visible.next(false)
+    this.selectOptionsChange.emit(this.selectOptions)
+    this.visibleChange.emit(false)
   }
   sendOptionsSelected(){
-    this.selectOptionsChange.next(this.selectOptions)
-    this.visible.next(false)
+    this.selectOptionsChange.emit(this.selectOptions)
+    this.visibleChange.emit(false)
   }
 }

@@ -1,0 +1,12 @@
+<label [for]="'containerCompleted-'+index">
+    <input 
+    [id]="'containerCompleted-'+index"
+    type="checkbox"
+    [checked]="statusCheck"
+    (change)="statusCheckChange.next(!statusCheck)"
+    >
+    <div 
+    class="checkbox-container"
+    >
+    </div>
+</label>
