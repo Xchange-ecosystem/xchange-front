@@ -87,3 +87,7 @@ export * from './components/navigator-filter-toggle/navigator-filter-toggle.modu
 export * from './components/navigator-filter-toggle/navigator-filter-toggle/navigator-filter-toggle.component';
 export * from './components/navigator-users-filter/navigator-users-filter.module';
 export * from './components/navigator-users-filter/navigator-users-filter/navigator-users-filter.component';
+export * from './components/navigator-filter-selector-switch-view-option/navigator-filter-selector-switch-view-option.module'
+export * from './components/navigator-filter-selector-switch-view-option/navigator-filter-selector-switch-view-option/navigator-filter-selector-switch-view-option.component'
+export * from './components/navigator-filter-type-selector/navigator-filter-type-selector.module'
+export * from './components/navigator-filter-type-selector/navigator-filter-type-selector/navigator-filter-type-selector.component'

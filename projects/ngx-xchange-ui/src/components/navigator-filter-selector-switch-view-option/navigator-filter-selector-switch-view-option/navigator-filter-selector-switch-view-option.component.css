@@ -1,0 +1,20 @@
+.switchOptionButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    border: 1pk solid black;
+}
+.switchOptionButton input{
+    display: none;
+}
+
+.switchOptionButton .icon{
+    z-index: 2;
+}
+.switchOptionButton:has(input:checked){
+    background-color: var(--xc-grey50);
+}
