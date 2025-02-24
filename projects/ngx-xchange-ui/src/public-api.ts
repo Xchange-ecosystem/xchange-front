@@ -91,3 +91,7 @@ export * from './components/navigator-filter-selector-switch-view-option/navigat
 export * from './components/navigator-filter-selector-switch-view-option/navigator-filter-selector-switch-view-option/navigator-filter-selector-switch-view-option.component'
 export * from './components/navigator-filter-type-selector/navigator-filter-type-selector.module'
 export * from './components/navigator-filter-type-selector/navigator-filter-type-selector/navigator-filter-type-selector.component'
+export * from './components/navigator-user-text-input-filter/navigator-user-text-input-filter.module';
+export * from './components/navigator-user-text-input-filter/navigator-user-text-input-filter/navigator-user-text-input-filter.component';
+export * from './directives/ng-keyup/ng-keyup.module';
+export * from './directives/ng-keyup/ng-keyup.directive'

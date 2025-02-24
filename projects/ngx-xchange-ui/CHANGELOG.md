@@ -7,6 +7,8 @@
 * (add) - Navigator filter selector switch component
 * (add) - Navigator filter type selector component
 * (add) - Components to public file
+* (add) - navigator user searching text input
+* (add) - keyup directive for different key values with hostlistener
 
 # 0.1.6 17/08/2025
 * (change) - boder radius on objective card
