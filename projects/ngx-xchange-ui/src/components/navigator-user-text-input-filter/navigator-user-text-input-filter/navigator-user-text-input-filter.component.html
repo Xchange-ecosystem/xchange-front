@@ -1,17 +1,18 @@
 <form
   action="submit"
-  class="flex gap-2 items-center py-[11px] px-3 rounded-lg shadow-Shadow400"
+  class="flex gap-2 items-center py-[11px]"
   [formGroup]="formInput"
 >
   <input
     id="textInput"
     formControlName="textInput"
-    class="text-Grey500 text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight font-manrope leading-Copy-400-Regular-line-Height py-[10px] px-4 focus-within:border-Grey400 focus-within:shadow-Shadow400 border-2 border-Grey200 rounded-lg outline-none w-[450px]"
-    type="text"
+    class="bg-transparent text-Grey500 text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight font-manrope leading-Copy-400-Regular-line-Height  focus-within:shadow-Shadow400 border-none rounded-lg outline-none w-[200px]"
+    type="search"
     xcNgKeyup="Enter"
     (onKeyUp)="sendOptionsSelected()"
+    placeholder="What are you looking for?"
   />
-  <div class="flex items-center gap-1">
+  <!-- <div class="flex items-center gap-1">
     <div
       class="w-6 h-6 fill-Blocked stroke-Blocked cursor-pointer"
       (click)="resetSelectOptions()"
@@ -24,5 +25,5 @@
     >
       <xc-icon-check />
     </div>
-  </div>
+  </div> -->
 </form>

@@ -1,27 +1,38 @@
-.filterSelector{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding: 8px 10px 8px 11px;
+.filterSelector {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 8px 10px 8px 11px;
 }
-.circleButton{
-    border-radius: 50%;
-    width: 2.375rem;
-    height: 2.375rem;
-    padding: 0.5625rem;
-    background: var(--xc-gradient-light-green);
+.circleButton {
+  border-radius: 50%;
+  width: 2.375rem;
+  height: 2.375rem;
+  padding: 0.5625rem;
+  background: var(--xc-gradient-light-green);
 }
-.filterSelector Input{
-    display: none;
+.filterSelector Input {
+  display: none;
 }
-.filterSelector .selectorContainer{
-    display: flex;
-    align-items: center;
-    gap: 28px
+.filterSelector .selectorContainer {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
-input:checked  +.selectorContainer .iconContainer {
-    transform: rotate(180deg);
+input:checked + .selectorContainer .iconContainer {
+  transform: rotate(180deg);
 }
-input:checked + .selectorContainer p    {
-    color: black;
+input:checked + .selectorContainer p {
+  color: black;
+}
+.inputContainer {
+  display: flex;
+  align-items: center;
+  background: var(--xc-gradient-light-grey-on-white);
+  border-radius: 19px;
+  padding: 0px 0px 0px 16px;
+  max-height: 38px;
+}
+.staticPosition{
+    position: static;
 }
