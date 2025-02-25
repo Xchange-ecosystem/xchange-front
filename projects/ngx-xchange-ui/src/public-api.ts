@@ -95,3 +95,5 @@ export * from './components/navigator-user-text-input-filter/navigator-user-text
 export * from './components/navigator-user-text-input-filter/navigator-user-text-input-filter/navigator-user-text-input-filter.component';
 export * from './directives/ng-keyup/ng-keyup.module';
 export * from './directives/ng-keyup/ng-keyup.directive'
+export * from './components/navigator-filter-selector/navigator-filter-selector.module'
+export * from './components/navigator-filter-selector/navigator-filter-selector/navigator-filter-selector.component'
