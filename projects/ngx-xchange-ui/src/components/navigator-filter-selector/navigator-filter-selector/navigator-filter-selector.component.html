@@ -1,0 +1,34 @@
+<div 
+class="relative"
+(focusout)="focusOut()"
+[tabindex]="0"
+>
+  <label
+    [for]="labelName"
+    class="filterSelector"
+    [ngClass]="{ circleButton: filterDescription === 'User Input Search' }"
+  >
+    <input
+      [id]="labelName"
+      type="checkbox"
+      (change)="this.selectionChange.emit(selection)"
+      [(ngModel)]="selection"
+    />
+
+    <section
+      class="selectorContainer"
+      *ngIf="filterDescription !== 'User Input Search'"
+    >
+      <p>{{ filterDescription }}</p>
+      <div class="w-6 h-6 fill-black stroke-black iconContainer">
+        <xc-icon-angle-down />
+      </div>
+    </section>
+    <section *ngIf="filterDescription === 'User Input Search'">
+      <xc-icon-search />
+    </section>
+  </label>
+  <div *ngIf="selection" class="absolute top-[50px] left-[-10px] flex">
+      <ng-content />
+  </div>
+</div>

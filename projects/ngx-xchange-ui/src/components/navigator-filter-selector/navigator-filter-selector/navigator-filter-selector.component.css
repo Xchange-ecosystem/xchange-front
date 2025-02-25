@@ -1,0 +1,24 @@
+.filterSelector{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 8px 11px;
+}
+.circleButton{
+    border-radius: 50%;
+    width: 2.375rem;
+    height: 2.375rem;
+    padding: 0.5625rem;
+    background: var(--xc-gradient-light-green);
+}
+.filterSelector Input{
+    display: none;
+}
+.filterSelector .selectorContainer{
+    display: flex;
+    align-items: center;
+    gap: 28px
+}
+input:checked  +.selectorContainer .iconContainer {
+    transform: rotate(180deg);
+}
