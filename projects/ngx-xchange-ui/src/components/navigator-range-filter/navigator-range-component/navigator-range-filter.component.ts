@@ -22,8 +22,9 @@ type ValueAnswer = {
 export class NavigatorRangeFilterComponent {
   @Input() type:FilterType = 'date';
   @Input() isVisible: boolean = true;
+  @Input() rangeSelection: DateAnswer | ValueAnswer = {startDate: '', endDate: ''};
   @Output() isVisibleChange = new EventEmitter<boolean>();
-  @Output() rangeSelection: BehaviorSubject<DateAnswer | ValueAnswer> = new BehaviorSubject<DateAnswer | ValueAnswer>({startDate: '', endDate: ''}); 
+  @Output() changeRangeSelection = new EventEmitter<DateAnswer | ValueAnswer>(); 
   private forms = inject(FormBuilder);
   public dateForm: FormGroup;
   public valueForm: FormGroup;
