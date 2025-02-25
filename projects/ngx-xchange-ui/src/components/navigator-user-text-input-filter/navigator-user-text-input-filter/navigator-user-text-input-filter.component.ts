@@ -11,8 +11,9 @@ import { BehaviorSubject } from 'rxjs';
 export class NavigatorUserTextInputFilterComponent {
   private formBuilder = inject(FormBuilder);
   @Input() visible: boolean = false;
+  @Input() textSearching:string = ''
   @Output() VisibleChange = new EventEmitter<boolean>();
-  @Output() textSearching: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  @Output() textSearchingChange= new EventEmitter<string>();
   public formInput: FormGroup;
 
 
@@ -24,7 +25,7 @@ export class NavigatorUserTextInputFilterComponent {
   }
   sendOptionsSelected(){
     const searchingTextReference = this.formInput.value.textInput;
-    this.textSearching.next(searchingTextReference);
+    this.textSearchingChange.emit(searchingTextReference);
     this.VisibleChange.emit(!this.visible);
   }
   

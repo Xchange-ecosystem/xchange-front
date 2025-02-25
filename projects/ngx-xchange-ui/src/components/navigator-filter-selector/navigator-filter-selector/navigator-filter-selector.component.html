@@ -10,7 +10,7 @@ class="relative"
   <label
     [for]="labelName"
     class="filterSelector"
-    [ngClass]="{ circleButton: filterDescription === 'User Input Search' && !selection }"
+    [ngClass]="{ circleButton: (filterDescription === 'User Input Search' && !selection) }"
   >
     <input
       #test
