@@ -1,6 +1,6 @@
 <div 
 class="relative"
-(blur)="focusOut()"
+(blur)="focusOut($event)"
 [tabindex]="0"
 >
   <label
@@ -29,7 +29,7 @@ class="relative"
       <xc-icon-search />
     </section>
   </label>
-  <div *ngIf="selection" class="absolute top-[50px] left-[-10px] flex">
+  <div *ngIf="selection" class="absolute top-[50px] left-[-10px] flex" #dropContainer>
       <ng-content />
   </div>
 </div>

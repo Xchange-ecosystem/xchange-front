@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild, viewChild } from '@angular/core';
 type FilterDescription = 'Goal' | 'Objective state' | 'Members' | 'Date' | 'Value' | 'User Input Search'
 @Component({
   selector: 'xc-navigator-filter-selector',
@@ -12,6 +12,7 @@ export class NavigatorFilterSelectorComponent implements OnInit, OnChanges{
   @Input() selection: boolean = false;
   @Output() selectionChange = new EventEmitter<boolean>();
   public labelName =  ''
+  @ViewChild('dropContainer') dorpContainer!: ElementRef;
   
   ngOnInit(): void {
     this.labelName = `label-${this.index}`
@@ -23,10 +24,12 @@ export class NavigatorFilterSelectorComponent implements OnInit, OnChanges{
     }
   }
 
-focusOut(){
+focusOut(event: FocusEvent){
   setTimeout(() => {
-    this.selectionChange.emit(!this.selection);
-    
-  }, 2000);
+    const relatedTarget = event.relatedTarget as HTMLElement
+    if(!this.dorpContainer.nativeElement.contains(relatedTarget)){
+      this.selectionChange.emit(!this.selection);
+    }
+  }, 150);
 }
 }
