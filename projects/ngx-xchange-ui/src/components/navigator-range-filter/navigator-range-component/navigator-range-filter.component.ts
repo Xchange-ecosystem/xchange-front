@@ -24,7 +24,8 @@ export class NavigatorRangeFilterComponent {
   @Input() isVisible: boolean = true;
   @Input() rangeSelection: DateAnswer | ValueAnswer = {startDate: '', endDate: ''};
   @Output() isVisibleChange = new EventEmitter<boolean>();
-  @Output() changeRangeSelection = new EventEmitter<DateAnswer | ValueAnswer>(); 
+  @Output() changeRangeDateSelection = new EventEmitter<DateAnswer | ValueAnswer>(); 
+  @Output() changeRangeValueSelection = new EventEmitter<DateAnswer | ValueAnswer>(); 
   private forms = inject(FormBuilder);
   public dateForm: FormGroup;
   public valueForm: FormGroup;
@@ -43,10 +44,10 @@ export class NavigatorRangeFilterComponent {
   sendOptionsSelected(){
     if(this.type === 'date'){
       const sendValues = this.dateForm.value;
-      this.changeRangeSelection.emit(sendValues)
+      this.changeRangeDateSelection.emit(sendValues)
     }else{
       const sendValues = this.valueForm.value;
-      this.changeRangeSelection.emit(sendValues)
+      this.changeRangeValueSelection.emit(sendValues)
     }
     this.isVisibleChange.next(false);
   }
