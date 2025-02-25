@@ -7,6 +7,7 @@ type Users  = {
   lastName: string;
   profilePhotoUrl: string | null;
 }
+
 type UserSelectorOptions = Users & {
   status: boolean
 }
@@ -17,38 +18,21 @@ type UserSelectorOptions = Users & {
   templateUrl: './navigator-users-filter.component.html',
   styleUrl: './navigator-users-filter.component.css'
 })
-export class NavigatorUsersFilterComponent implements OnInit {
+export class NavigatorUsersFilterComponent {
 
   @Input() users: Users[] = [];
   @Input() isVisible: boolean = false;
   @Output() isVisibleChange = new EventEmitter<boolean>();
   @Output() selectedUsers: BehaviorSubject<number[]> = new BehaviorSubject<number[]>([]);
-  public userCheckList: UserSelectorOptions[] = [];
   public usersSelectedList: number[] = [];
 
-  ngOnInit(): void {
-    this.userCheckList = this.users.map(user => ({
-      ...user, 
-      status: false
-    }));
-  }
-  
-  setUserStatus(event: boolean, index: number): void {
-    const userId = this.userCheckList[index]?.userId;
-  
-    if (this.usersSelectedList.includes(userId) && !event) {
-      this.userCheckList = this.userCheckList.map(user => 
-        user.userId === userId ? { ...user, status: false } : user
-      );      
-      this.usersSelectedList = this.usersSelectedList.filter(user => user !== userId);
-      return;
+  setUserStatus(event: boolean, userId: number): void {
+      if(event) {
+        this.usersSelectedList = [...this.usersSelectedList, userId]
+      } else {
+        this.usersSelectedList = this.usersSelectedList.filter(uId => userId !== uId )
+      }
     }
-    
-    if (!this.usersSelectedList.includes(userId) && userId) {
-      this.usersSelectedList.push(userId);
-      this.userCheckList[index].status = event;
-    }
-  }
   
   sendSelection(): void {
     this.selectedUsers.next(this.usersSelectedList);
@@ -56,7 +40,6 @@ export class NavigatorUsersFilterComponent implements OnInit {
   }
   
   resetFilter(): void {
-    this.userCheckList = this.userCheckList.map(user => ({ ...user, status: false }));
     this.usersSelectedList = [];
     this.selectedUsers.next(this.usersSelectedList);
     this.isVisibleChange.emit(false)

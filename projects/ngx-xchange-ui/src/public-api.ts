@@ -97,3 +97,5 @@ export * from './directives/ng-keyup/ng-keyup.module';
 export * from './directives/ng-keyup/ng-keyup.directive'
 export * from './components/navigator-filter-selector/navigator-filter-selector.module'
 export * from './components/navigator-filter-selector/navigator-filter-selector/navigator-filter-selector.component'
+export * from './components/navigator-range-filter/navigator-range-filter.module'
+export * from './components/navigator-range-filter/navigator-range-component/navigator-range-filter.component'
