@@ -43,10 +43,10 @@ export class NavigatorRangeFilterComponent {
   sendOptionsSelected(){
     if(this.type === 'date'){
       const sendValues = this.dateForm.value;
-      this.rangeSelection.next(sendValues)
+      this.changeRangeSelection.emit(sendValues)
     }else{
       const sendValues = this.valueForm.value;
-      this.rangeSelection.next(sendValues)
+      this.changeRangeSelection.emit(sendValues)
     }
     this.isVisibleChange.next(false);
   }
