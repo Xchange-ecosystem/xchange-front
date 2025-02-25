@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 type ViewOption = 'table' | 'board' | 'graph' 
 
 @Component({
@@ -13,10 +13,10 @@ export class NavigatorFilterTypeSelectorComponent {
     'board': true,
     'graph': false
   }
+  @Input() selection: ViewOption = 'board'
+  @Output() selectionChange = new EventEmitter<ViewOption>();
 
-  @Output() selection = new EventEmitter<ViewOption>();
-
-  selectorChanger(event: ViewOption, option:ViewOption){
+  selectorChanger(option: ViewOption){
     (Object.keys(this.switchState) as ViewOption[]).forEach(key => {
       if(key !== option){
         this.switchState[key] = false;
@@ -25,6 +25,6 @@ export class NavigatorFilterTypeSelectorComponent {
         this.switchState[key] = true;
       }
     })
-    this.selection.emit(event)
+    this.selectionChange.emit(option)
   }
 }

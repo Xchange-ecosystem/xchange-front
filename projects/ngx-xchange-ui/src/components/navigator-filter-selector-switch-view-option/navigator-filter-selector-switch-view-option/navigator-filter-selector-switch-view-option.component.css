@@ -11,10 +11,6 @@
 .switchOptionButton input{
     display: none;
 }
-
-.switchOptionButton .icon{
-    z-index: 2;
-}
 .switchOptionButton:has(input:checked){
     background-color: var(--xc-grey50);
 }

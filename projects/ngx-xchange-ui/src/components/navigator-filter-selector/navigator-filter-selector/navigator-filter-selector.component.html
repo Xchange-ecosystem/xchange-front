@@ -1,6 +1,6 @@
 <div 
 class="relative"
-(focusout)="focusOut()"
+(blur)="focusOut()"
 [tabindex]="0"
 >
   <label
@@ -9,6 +9,7 @@ class="relative"
     [ngClass]="{ circleButton: filterDescription === 'User Input Search' }"
   >
     <input
+      #test
       [id]="labelName"
       type="checkbox"
       (change)="this.selectionChange.emit(selection)"
@@ -19,7 +20,7 @@ class="relative"
       class="selectorContainer"
       *ngIf="filterDescription !== 'User Input Search'"
     >
-      <p>{{ filterDescription }}</p>
+      <p class="text-Grey500">{{ filterDescription }}</p>
       <div class="w-6 h-6 fill-black stroke-black iconContainer">
         <xc-icon-angle-down />
       </div>

@@ -24,6 +24,9 @@ export class NavigatorFilterSelectorComponent implements OnInit, OnChanges{
   }
 
 focusOut(){
-  this.selectionChange.emit(!this.selection);
+  setTimeout(() => {
+    this.selectionChange.emit(!this.selection);
+    
+  }, 2000);
 }
 }

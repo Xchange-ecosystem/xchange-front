@@ -2,7 +2,7 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    padding: 8px 11px;
+    padding: 8px 10px 8px 11px;
 }
 .circleButton{
     border-radius: 50%;
@@ -21,4 +21,7 @@
 }
 input:checked  +.selectorContainer .iconContainer {
     transform: rotate(180deg);
+}
+input:checked + .selectorContainer p    {
+    color: black;
 }

@@ -33,6 +33,6 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
     bg-white
     shadow-Shadow400
     rounded-lg
-    max-h-[48px]
+    h-[56px]
     `
 }

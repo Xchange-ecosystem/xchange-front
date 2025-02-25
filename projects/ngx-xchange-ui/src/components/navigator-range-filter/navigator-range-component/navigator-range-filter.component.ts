@@ -15,7 +15,7 @@ type ValueAnswer = {
 
 
 @Component({
-  selector: 'xc-navigator-range-component',
+  selector: 'xc-navigator-range-filter',
   templateUrl: './navigator-range-filter.component.html',
   styleUrl: './navigator-range-filter.component.css'
 })
