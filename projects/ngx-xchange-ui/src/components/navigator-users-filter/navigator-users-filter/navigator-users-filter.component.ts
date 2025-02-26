@@ -22,8 +22,9 @@ export class NavigatorUsersFilterComponent {
 
   @Input() users: Users[] = [];
   @Input() isVisible: boolean = false;
+  @Input() selectedUsers: number[] = [];
   @Output() isVisibleChange = new EventEmitter<boolean>();
-  @Output() selectedUsers: BehaviorSubject<number[]> = new BehaviorSubject<number[]>([]);
+  @Output() selectedUsersChange = new EventEmitter<number[]>();
   public usersSelectedList: number[] = [];
 
   setUserStatus(event: boolean, userId: number): void {
@@ -35,13 +36,13 @@ export class NavigatorUsersFilterComponent {
     }
   
   sendSelection(): void {
-    this.selectedUsers.next(this.usersSelectedList);
+    this.selectedUsersChange.emit(this.usersSelectedList);
     this.isVisibleChange.emit(false)
   }
   
   resetFilter(): void {
     this.usersSelectedList = [];
-    this.selectedUsers.next(this.usersSelectedList);
+    this.selectedUsersChange.emit(this.usersSelectedList);
     this.isVisibleChange.emit(false)
   }
   

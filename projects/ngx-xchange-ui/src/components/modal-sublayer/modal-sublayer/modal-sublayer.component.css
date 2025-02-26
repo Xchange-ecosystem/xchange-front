@@ -1,0 +1,19 @@
+.hint{
+    background: var(--xc-brand-light-blue);
+    padding: 20px 30px;
+    display: flex;
+}
+.with_buttons{
+    background: var(--xc-brand-light-blue);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+.success{
+    background: var(--xc-brand-light-blue);    
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
