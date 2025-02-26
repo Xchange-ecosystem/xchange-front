@@ -1,19 +1,30 @@
 .hint{
-    background: var(--xc-brand-light-blue);
+    background: var(--xc-gradient-light-blue);
+    display: inline-flex;
     padding: 20px 30px;
-    display: flex;
+    box-shadow: var();
+    border-radius: 0px 0px 8px 8px;
+}
+.hint #hintInformation{
+    align-items: center;
+    display: inline-flex;
+    gap: 4px;
 }
 .with_buttons{
-    background: var(--xc-brand-light-blue);
-    padding: 20px 30px;
-    display: flex;
+    background: var(--xc-gradient-light-blue);
+    display: inline-flex;
     flex-direction: column;
+    padding: 20px 30px;
+    box-shadow: var();
+    border-radius: 0px 0px 8px 8px;
 }
 .success{
-    background: var(--xc-brand-light-blue);    
-    padding: 20px 30px;
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    background: var(--xc-gradient-light-blue);    
+    display: inline-flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 20px 30px;
+    box-shadow: var();
+    border-radius: 0px 0px 8px 8px;
 }

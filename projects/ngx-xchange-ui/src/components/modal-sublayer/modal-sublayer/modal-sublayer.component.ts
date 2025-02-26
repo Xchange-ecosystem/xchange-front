@@ -8,7 +8,8 @@ type SubLayerType = 'hint' | 'with buttons' | 'success'
   styleUrl: './modal-sublayer.component.css'
 })
 export class ModalSubLayerComponent {
-  @Input() subLayer:SubLayerType = 'hint' 
+  @Input() subLayer:SubLayerType = 'hint';
+  @Input() hintInformation: string = 'Link copied to clipboard'
   public containerStyles = {
     'hint' : 'hint',
     'with buttons': 'with_buttons',
