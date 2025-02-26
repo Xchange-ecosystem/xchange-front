@@ -6,7 +6,7 @@ class="flex flex-col justify-center items-center gap-5 bg-white rounded-lg shado
         <xc-rounded-image [marginSize]="0"  [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'"/>
         </div>
         <p>{{(user.name !== '' ? user.name : 'Users') + ' ' + user.lastName}}</p>
-        <xc-check-rounded-button [index]="i" [statusCheck]="usersSelectedList.includes(user.userId)" (statusCheckChange)="setUserStatus($event,i)"/>
+        <xc-check-rounded-button [index]="i" [statusCheck]="usersSelectedList.includes(user.userId)" (statusCheckChange)="setUserStatus($event,user.userId)"/>
     </div>
     <div class="flex justify-end item-center gap-1 w-full">
         <div class="w-6 h-6 fill-Blocked stroke-Blocked cursor-pointer" (click)="resetFilter()">

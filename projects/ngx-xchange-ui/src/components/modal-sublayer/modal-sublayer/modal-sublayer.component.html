@@ -1,6 +1,8 @@
 <article [ngClass]="getContainerStyle()">
       <section id="hintInformation">
-        <div></div>
+        <div class="w-8 h-8" >
+            <ng-content />
+        </div>
         <p>{{hintInformation}}</p>
       </section>  
 </article>
