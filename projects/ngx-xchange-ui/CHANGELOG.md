@@ -10,6 +10,8 @@
 * (add) - navigator user searching text input
 * (add) - keyUp directive for different key values with hostlistener
 * (add) - navigator filter selector component
+* (add) - modal subLayer component for modal toaster
+
 
 # 0.1.6 17/08/2025
 * (change) - boder radius on objective card

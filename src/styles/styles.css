@@ -35,4 +35,6 @@
     --xc-data-viz-blue200: #60A5FA;
     --xc-data-viz-blue100: #BFDBFE;
     --xc-data-viz-blue50: #EFF6FF;
+    --xc-boxShadow-500:  0px 0px 30px 0px rgba(17, 17, 17, 0.14);
+    --xc-boxShadow-400: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
 }

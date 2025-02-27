@@ -1146,3 +1146,4 @@ export * from './lib/ai.component';
 export * from './lib/navigator-graph-selection.component';
 export * from './lib/navigator-table-selection.component';
 export * from './lib/navigator-board-selection.component';
+export * from './lib/success-icon.component'

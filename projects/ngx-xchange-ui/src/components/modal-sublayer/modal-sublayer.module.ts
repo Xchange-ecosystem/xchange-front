@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalSubLayerComponent } from './modal-sublayer/modal-sublayer.component';
+import { Button400Module } from '../button-400/button-400.module';
+import { MainHeadingModule } from '../../public-api';
+import { XcIconTimesComponent } from 'projects/ngx-xchange-icons/src/public-api';
 
 
 
@@ -9,7 +12,10 @@ import { ModalSubLayerComponent } from './modal-sublayer/modal-sublayer.componen
     ModalSubLayerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    Button400Module,
+    MainHeadingModule,
+    XcIconTimesComponent
   ],
   exports: [
     ModalSubLayerComponent
