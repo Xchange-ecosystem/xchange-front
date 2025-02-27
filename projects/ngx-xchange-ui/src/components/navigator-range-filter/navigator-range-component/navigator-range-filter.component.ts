@@ -24,8 +24,8 @@ export class NavigatorRangeFilterComponent {
   @Input() isVisible: boolean = true;
   @Input() rangeSelection: DateAnswer | ValueAnswer = {startDate: '', endDate: ''};
   @Output() isVisibleChange = new EventEmitter<boolean>();
-  @Output() changeRangeDateSelection = new EventEmitter<DateAnswer | ValueAnswer>(); 
-  @Output() changeRangeValueSelection = new EventEmitter<DateAnswer | ValueAnswer>(); 
+  @Output() changeRangeDateSelection = new EventEmitter<DateAnswer>(); 
+  @Output() changeRangeValueSelection = new EventEmitter<ValueAnswer>(); 
   private forms = inject(FormBuilder);
   public dateForm: FormGroup;
   public valueForm: FormGroup;
