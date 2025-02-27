@@ -1,3 +1,7 @@
+# 0.1.5 26/02/2025
+* (add) - success icon
+* (check) - check icon stroke and fill
+
 # 0.1.4 24/02/2025
 * (add) - Navigator table icon
 * (add) - Navigator board icon

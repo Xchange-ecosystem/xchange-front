@@ -99,3 +99,5 @@ export * from './components/navigator-filter-selector/navigator-filter-selector.
 export * from './components/navigator-filter-selector/navigator-filter-selector/navigator-filter-selector.component'
 export * from './components/navigator-range-filter/navigator-range-filter.module'
 export * from './components/navigator-range-filter/navigator-range-component/navigator-range-filter.component'
+export * from './components/modal-sublayer/modal-sublayer.module'
+export * from './components/modal-sublayer/modal-sublayer/modal-sublayer.component'
