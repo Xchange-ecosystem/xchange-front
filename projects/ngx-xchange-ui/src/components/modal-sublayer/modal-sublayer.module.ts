@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ModalSubLayerComponent } from './modal-sublayer/modal-sublayer.component';
 import { Button400Module } from '../button-400/button-400.module';
 import { MainHeadingModule } from '../../public-api';
-import { XcIconTimesComponent } from 'projects/ngx-xchange-icons/src/public-api';
+import { XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
 
 
 
