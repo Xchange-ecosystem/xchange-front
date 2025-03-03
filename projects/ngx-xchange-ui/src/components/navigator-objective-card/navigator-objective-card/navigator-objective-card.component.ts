@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 
 type ObjectiveCardInformation = {
   name: string;
-  totalTasks?: number;
-  tasksCompleted?: number;
-  proofsCount?: number;
-  startDate?: string;
-  status: Status
+  totalTasks: number;
+  tasksCompleted: number;
+  proofsCount: number;
+  startDate: string;
+  status: Status;
+  isTableView: boolean;
 }
 
 type Status = 'new' |'completed' | 'open' | 'suggested'
@@ -25,8 +26,8 @@ export class NavigatorObjectiveCardComponent {
     tasksCompleted: 0,
     proofsCount: 0,
     startDate: '',
-    
-    status: 'new'
+    status: 'new',
+    isTableView: false
   }
 
   selectObjectiveCardColor(status: Status){

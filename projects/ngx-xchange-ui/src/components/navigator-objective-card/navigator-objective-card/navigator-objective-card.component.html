@@ -3,7 +3,7 @@ class="flex-flex-col gap-1 justify-start items-center w-full border-l-8 bg-white
 [ngClass]="selectObjectiveCardColor(objectiveInformation.status)"
 >
     <h1 xcMainHeading="Headline200">{{objectiveInformation.name}}</h1>
-    <div *ngIf="objectiveInformation.tasksCompleted" class="flex flex-col gap-1 justify-center items-start py-2">
+    <div *ngIf="!objectiveInformation.isTableView" class="flex flex-col gap-1 justify-center items-start py-2">
         <xc-card-tasks-indicator [content]="objectiveInformation.tasksCompleted + ('/')+ objectiveInformation.totalTasks + (' completed')">
             <div class="w-4 h-4 fill-Grey500 stroke-Grey500">
                 <xc-icon-file-check-alt />
@@ -14,7 +14,7 @@ class="flex-flex-col gap-1 justify-start items-center w-full border-l-8 bg-white
                 <xc-icon-paperclip />
             </div>
         </xc-card-tasks-indicator>
-        <xc-card-tasks-indicator [content]="objectiveInformation.startDate ?? ''">
+        <xc-card-tasks-indicator [content]="objectiveInformation.startDate">
             <div class="w-4 h-4 fill-Grey500 stroke-Grey500">
                 <xc-icon-calendar-alt />
             </div>
