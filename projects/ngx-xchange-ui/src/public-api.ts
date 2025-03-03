@@ -101,3 +101,5 @@ export * from './components/navigator-range-filter/navigator-range-filter.module
 export * from './components/navigator-range-filter/navigator-range-component/navigator-range-filter.component'
 export * from './components/modal-sublayer/modal-sublayer.module'
 export * from './components/modal-sublayer/modal-sublayer/modal-sublayer.component'
+export * from './components/objective-options/objective-options.module'
+export * from './components/objective-options/objective-options/objective-options.component'

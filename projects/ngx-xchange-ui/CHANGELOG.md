@@ -1,4 +1,4 @@
-# 0.1.7 24/02/2025
+# 0.1.7 03/03/2025
 * (add) - Navigator objective card component
 * (add) - Navigator toggle button component
 * (add) - Navigator status filter component
@@ -11,6 +11,8 @@
 * (add) - keyUp directive for different key values with hostlistener
 * (add) - navigator filter selector component
 * (add) - modal subLayer component for modal toaster
+* (add) - modal options
+
 
 
 # 0.1.6 17/08/2025
