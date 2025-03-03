@@ -9,13 +9,14 @@ export class ProjectProgressBarComponent {
   @Input() completed: number = 0;
   @Input() objectivesInProject: number = 0;
   @Input() open: number = 0;
+  @Input() suggested: number = 0;
   @Input() showMarkers: boolean = false;
 
   public mouseMarkersActionComplete: boolean = false;
   public mouseMarkersActionOpen: boolean = false;
   public mouseMarkersActionObjectives: boolean = false;
 
-  getSize(amount: number, total:number): string{
+  getSize(amount: number, total: number): string {
     return String((100 / total ) * amount ) + '%'
   }
   getCompleteClass(objectives: number, completeObjectives: number){
@@ -24,9 +25,19 @@ export class ProjectProgressBarComponent {
     "bg-Second_accent rounded-l-lg h-full"
   }
   getOpenClass(objectives: number, completeObjectives: number){
+    const rigthSideColor = this.suggested > 0 ? 'bg-Suggestion': 'bg-Second_accent'
+    const isRound = ((this.completed + this.open + this.suggested) === this.objectivesInProject) ? 'rounded-lg':''
     return completeObjectives === objectives ? 
-    "bg-Second_accent rounded-lg h-full" :
-    "bg-Quaternary_Fonts rounded-l-lg h-full"
+    `${rigthSideColor} ${isRound} h-full` :
+    `${rigthSideColor} opacity-[0.6] rounded-l-lg h-full`
+  }
+  get SuggestedClass() {
+    if(this.suggested > 0) 
+      return 'bg-Suggestion opacity-[0.6] rounded-r-lg'
+    else return ''
+    // return this.objectivesInProject === this.suggested ? 
+    // "bg-Second_accent rounded-lg h-full" :
+    // "bg-Suggestion opacity-[0.6] rounded-l-lg h-full"
   }
   getTotalClass(objectivesOpen: number, objectivesComplete: number){
     return objectivesOpen === 0 && objectivesComplete === 0 ? 

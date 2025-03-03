@@ -1,5 +1,5 @@
 <div class="w-full h-[20px] flex bg-Quaternary_Fonts rounded-lg">
-  <!--el verde-->
+  <!--el verde, completed-->
   <div
     *ngIf="completed > 0"
     [ngClass]="getCompleteClass(objectivesInProject, completed)"
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <!--amarillo-->
+  <!--amarillo, open-->
   <div
     *ngIf="open > 0"
     [style.width]="getSize(open, objectivesInProject)"
@@ -56,6 +56,37 @@
       <div class="flex gap-2 justify-start">
         <div class="bg-Second_accent w-4 h-4 border border-white"></div>
         <span>{{ open }}</span>
+      </div>
+    </div>
+  </div>
+  <!--Morado suggested-->
+  <div
+    *ngIf="suggested > 0"
+    [style.width]="getSize(suggested, objectivesInProject)"
+    [class.rounded-l-lg]="completed === 0"
+    [ngClass]="SuggestedClass"
+    class="relative"
+    (mouseover)="mouseMarkersActionOpen = true"
+    (mouseleave)="mouseMarkersActionOpen = false"
+  >
+    <div
+      class="rounded-e-lg h-full flex items-center justify-center"
+      [class.rounded-l-lg]="completed === 0"
+    >
+      <span
+        class="text-paragraph text-center font-manrope font-regular leading-project-bar"
+        >{{ suggested }}</span
+      >
+    </div>
+    <div
+      *ngIf="suggested > 0 && showMarkers && mouseMarkersActionOpen"
+      class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
+      [ngClass]="{'translate-x-[60%]': suggested <= 2 && completed <= 2, 'translate-x-[80%]':suggested ===0 && completed <= 2}"
+    >
+      <p>Objectives suggested</p>
+      <div class="flex gap-2 justify-start">
+        <div class="bg-Suggestion opacity-[0.6] w-4 h-4 border border-white"></div>
+        <span>{{ suggested }}</span>
       </div>
     </div>
   </div>
