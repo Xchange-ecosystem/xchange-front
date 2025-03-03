@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 
 type ObjectiveCardInformation = {
   name: string;
-  totalTasks: number;
-  tasksCompleted: number;
-  proofsCount: number;
-  startDate: string;
+  totalTasks?: number;
+  tasksCompleted?: number;
+  proofsCount?: number;
+  startDate?: string;
   status: Status
 }
 
