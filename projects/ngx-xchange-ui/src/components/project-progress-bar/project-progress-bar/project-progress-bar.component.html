@@ -1,8 +1,8 @@
-<div class="w-full h-[20px] flex bg-Quaternary_Fonts rounded-lg">
+<div class="w-full h-[20px] flex rounded-lg">
   <!--el verde, completed-->
   <div
     *ngIf="completed > 0"
-    [ngClass]="getCompleteClass(objectivesInProject, completed)"
+    [ngClass]="getCompleteClass"
     [style.width]="getSize(completed, objectivesInProject)"
     class="relative"
     (mouseover)="mouseMarkersActionComplete = true"
@@ -70,8 +70,7 @@
     (mouseleave)="mouseMarkersActionOpen = false"
   >
     <div
-      class="rounded-e-lg h-full flex items-center justify-center"
-      [class.rounded-l-lg]="completed === 0"
+      class="bg-[var(--xc-categories-suggestion)] rounded-e-lg h-full flex items-center justify-center"
     >
       <span
         class="text-paragraph text-center font-manrope font-regular leading-project-bar"
@@ -103,21 +102,21 @@
   >
     <span
       class="text-paragraph text-center font-manrope font-regular leading-project-bar"
-      >{{ objectivesInProject - open - completed }}</span
+      >{{ objectivesInProject - open - suggested - completed }}</span
     >
-    <div class="h-full w-[10px] bg-Quaternary_Fonts rounded-e-lg"></div>
+    <div class="h-full w-[10px] bg-[var(--xc-grey200)]"></div>
     <div
       *ngIf="
         objectivesInProject - open - completed > 0 &&
         showMarkers &&
         mouseMarkersActionObjectives
       "
-      class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
+      class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small bg-black whitespace-nowrap"
     >
       <p>Total objectives</p>
       <div class="flex gap-2 justify-start">
-        <div class="bg-Quaternary_Fonts w-4 h-4 border border-white"></div>
-        <span>{{ objectivesInProject - open - completed }}</span>
+        <div class="bg-[var(--xc-grey200)] w-4 h-4 border border-white"></div>
+        <span>{{ objectivesInProject - open - suggested - completed }}</span>
       </div>
     </div>
   </div>
