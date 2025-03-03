@@ -15,6 +15,7 @@ export class NavigatorFilterTypeSelectorComponent {
   }
   @Input() selection: ViewOption = 'board'
   @Output() selectionChange = new EventEmitter<ViewOption>();
+  @Input() hasTableView: boolean = false
 
   selectorChanger(option: ViewOption){
     (Object.keys(this.switchState) as ViewOption[]).forEach(key => {

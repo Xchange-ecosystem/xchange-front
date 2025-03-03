@@ -1,5 +1,5 @@
 <section class="flex items-center gap-2 py-[11px] px-3 bg-white shadow-Shadow400 rounded-lg max-h-[56px]">
-    <xc-navigator-filter-selector-switch-view-option [index]="0" viewOption="table" (selectionChange)="selectorChanger($event)" [selection]="switchState.table">
+    <xc-navigator-filter-selector-switch-view-option *ngIf="hasTableView" [index]="0" viewOption="table" (selectionChange)="selectorChanger($event)" [selection]="switchState.table">
         <div class="w-16 h-8">
             <xc-icon-navigator-table-selection />
         </div>
