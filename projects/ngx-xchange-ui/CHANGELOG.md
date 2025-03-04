@@ -1,4 +1,4 @@
-# 0.1.7 03/03/2025
+# 0.1.7 04/03/2025
 * (add) - Navigator objective card component
 * (add) - Navigator toggle button component
 * (add) - Navigator status filter component
@@ -12,6 +12,7 @@
 * (add) - navigator filter selector component
 * (add) - modal subLayer component for modal toaster
 * (add) - modal options
+* (add) - user assessment card
 
 
 

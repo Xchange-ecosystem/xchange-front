@@ -19,7 +19,7 @@
     <div
       *ngIf="completed > 0 && showMarkers && mouseMarkersActionComplete"
       class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
-      [ngClass]="{'translate-x-[80%]':(completed <= 2)}"
+      [ngClass]="{ 'translate-x-[80%]': completed <= 2 }"
     >
       <p>Objectives completed</p>
       <div class="flex gap-2 justify-start">
@@ -50,7 +50,10 @@
     <div
       *ngIf="open > 0 && showMarkers && mouseMarkersActionOpen"
       class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
-      [ngClass]="{'translate-x-[60%]': open <= 2 && completed <= 2, 'translate-x-[80%]':open ===0 && completed <= 2}"
+      [ngClass]="{
+        'translate-x-[60%]': open <= 2 && completed <= 2,
+        'translate-x-[80%]': open === 0 && completed <= 2
+      }"
     >
       <p>Objectives open</p>
       <div class="flex gap-2 justify-start">

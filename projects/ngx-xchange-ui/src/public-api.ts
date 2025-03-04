@@ -103,3 +103,5 @@ export * from './components/modal-sublayer/modal-sublayer.module'
 export * from './components/modal-sublayer/modal-sublayer/modal-sublayer.component'
 export * from './components/objective-options/objective-options.module'
 export * from './components/objective-options/objective-options/objective-options.component'
+export * from './components/user-assessment-card/user-assessment-card.module';
+export * from './components/user-assessment-card/user-assessment-card/user-assessment-card.component'
