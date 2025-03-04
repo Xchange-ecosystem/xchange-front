@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { NavigatorUsersFilterModule, CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, Asid
     CardTasksIndicatorModule,
     CarButtonViewModule,
     AsideNavModule,
-    ProjectProgressBarModule
+    ProjectProgressBarModule,
+    NavigatorUsersFilterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
