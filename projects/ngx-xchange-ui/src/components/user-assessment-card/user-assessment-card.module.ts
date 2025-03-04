@@ -4,8 +4,8 @@ import { UserAssessmentCardComponent } from './user-assessment-card/user-assessm
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { XcIconClockFiveComponent } from '@indziaki/ngx-xchange-icons';
 import { RatingBarModule } from '../rating-bar/rating-bar.module';
-import { TagModule } from '@indziaki/ngx-xchange-ui';
 import { XcIconAngleRightBComponent } from 'projects/ngx-xchange-icons/src/public-api';
+import { TagModule } from '../../directives/tag/tag.module';
 
 
 
