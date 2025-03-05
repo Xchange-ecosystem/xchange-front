@@ -1,0 +1,9 @@
+<label [for]="labelName" class="switchButton">
+    <input 
+    [id]="labelName"
+    type="checkbox"
+    [checked]="value"
+    (change)="valueChange.next(!value)"
+    >
+    <div class="slide" [ngClass]="colorSelection()"></div>
+</label>

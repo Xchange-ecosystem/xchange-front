@@ -1,3 +1,23 @@
-<div>
-  <xc-project-progress-bar [completed]="5" [open]="3" [objectivesInProject]="17"/>
-</div>
+<xc-navigator-users-filter [users]="collaborator" [(selectedUsers)]="userArray" [isVisible]="true"/>
+{{ userArray | json }}
+<section>
+  <div>
+    <xc-project-progress-bar [completed]="5" [open]="3" [suggested]="0" [objectivesInProject]="17"/>
+  </div>
+  <div>
+    <xc-project-progress-bar [completed]="5" [open]="3" [suggested]="2" [objectivesInProject]="17"/>
+  </div>
+  <div>
+    <xc-project-progress-bar [completed]="5" [open]="0" [suggested]="0" [objectivesInProject]="17"/>
+  </div>
+  <div>
+    <xc-project-progress-bar [completed]="5" [open]="0" [suggested]="2" [objectivesInProject]="17"/>
+  </div>
+  <div>
+    <xc-project-progress-bar [completed]="0" [open]="1" [suggested]="2" [objectivesInProject]="17"/>
+  </div>
+  <div>
+    <xc-project-progress-bar [completed]="0" [open]="0" [suggested]="2" [objectivesInProject]="17"/>
+  </div>
+</section>
+

@@ -9,29 +9,52 @@ export class ProjectProgressBarComponent {
   @Input() completed: number = 0;
   @Input() objectivesInProject: number = 0;
   @Input() open: number = 0;
+  @Input() suggested: number = 0;
   @Input() showMarkers: boolean = false;
 
   public mouseMarkersActionComplete: boolean = false;
   public mouseMarkersActionOpen: boolean = false;
   public mouseMarkersActionObjectives: boolean = false;
 
-  getSize(amount: number, total:number): string{
+  getSize(amount: number, total: number): string {
     return String((100 / total ) * amount ) + '%'
   }
-  getCompleteClass(objectives: number, completeObjectives: number){
-    return completeObjectives === objectives ? 
-    "bg-Main_accent rounded-lg h-full" :
-    "bg-Second_accent rounded-l-lg h-full"
+
+      // --xc-categories-progress: #FAE651; 
+    // --xc-categories-suggestion: #AF71F1;
+    // --xc-categories-completed: #1ccd66;
+    // --xc-grey200: #DBE0DC;
+    // bg-[var(--xc-grey200)]
+  get getCompleteClass() {
+    
+    let  rigthSideColor = 'bg-[var(--xc-grey200)]'
+    if (this.open > 0) 
+      rigthSideColor = 'bg-[var(--xc-categories-progress)]'
+    else if (this.suggested > 0) 
+      rigthSideColor = 'bg-[var(--xc-categories-suggestion)]'
+    const isRound = (this.completed !== this.objectivesInProject) ? '': ''
+   return `${rigthSideColor} ${isRound} h-full rounded-l-full ` 
   }
   getOpenClass(objectives: number, completeObjectives: number){
+    const rigthSideColor = this.suggested > 0 ? 'bg-[var(--xc-categories-suggestion)]': 'bg-[var(--xc-grey200)]'
+    const isRound = ((this.completed + this.open + this.suggested) === this.objectivesInProject) ? 'rounded-lg':''
     return completeObjectives === objectives ? 
-    "bg-Second_accent rounded-lg h-full" :
-    "bg-Quaternary_Fonts rounded-l-lg h-full"
+    `${rigthSideColor} ${isRound} h-full` :
+    `${rigthSideColor} rounded-l-lg h-full`
+  }
+
+  get SuggestedClass() {
+    if(this.suggested > 0) 
+      return 'bg-[var(--xc-grey200)]'
+    else return ''
+    // return this.objectivesInProject === this.suggested ? 
+    // "bg-Second_accent rounded-lg h-full" :
+    // "bg-Suggestion  rounded-l-lg h-full"
   }
   getTotalClass(objectivesOpen: number, objectivesComplete: number){
     return objectivesOpen === 0 && objectivesComplete === 0 ? 
-    "bg-Quaternary_Fonts rounded-lg h-full flex items-center justify-center":
-    "bg-Quaternary_Fonts rounded-e-lg h-full flex items-center justify-center"
+    "bg-[var(--xc-grey200)] rounded-lg h-full flex items-center justify-center":
+    "bg-[var(--xc-grey200)] rounded-e-lg h-full flex items-center justify-center"
   }
 
 }

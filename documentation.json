@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-7bb57c4dcd2c09482d264d807eaf5dafbfa63e2b7f71325b92a8ebe8ff4e75764e6ec0ba08298078a17024fd2357e4fe058f125f66bd892cfb33e0c290761940",
+            "id": "component-AppComponent-58f805ac7f6c582906d8fcf0a8f40f9cd3e8e4498d441710f37a66105625daae3c5ecf626a41b27db1eba92099476b5c45cc39cacf6cdb0978a1d19ec0328c02",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -38,10 +38,81 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 9
+                    "line": 15
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "{\r\n    suggestions: false,\r\n    open: false,\r\n    complete: false,\r\n    notOpen: false,\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
+                    "modifierKind": [
+                        125
+                    ]
                 }
             ],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "isVisible",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "printStatus",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "InformationToggleView",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 24,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "InformationToggleView",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -51,7 +122,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  abierto=true\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\ntype InformationToggleView ={\r\n  suggestions: boolean;\r\n  open: boolean;\r\n  complete: boolean;\r\n  notOpen: boolean;\r\n}\r\ntype ColorStatus = 'suggestion' | 'open' | 'complete' | 'new'\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n})\r\nexport class AppComponent {\r\n  abierto = true;\r\n\r\n  public options ={\r\n    suggestions: false,\r\n    open: false,\r\n    complete: false,\r\n    notOpen: false,\r\n  }\r\n\r\n  printStatus(event: InformationToggleView){\r\n    this.options = event;\r\n  }\r\n  isVisible(value: boolean){\r\n    this.abierto = value;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -61,7 +132,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div>\r\n  <xc-project-progress-bar [completed]=\"5\" [open]=\"3\" [objectivesInProject]=\"17\"/>\r\n</div>\r\n"
+            "templateData": "<div>\r\n  <!-- <xc-project-progress-bar [completed]=\"5\" [open]=\"3\" [objectivesInProject]=\"17\"/> -->\r\n  <div class=\"bg-white w-full flex flex-col gap-6 justify-center items-center py-8\">\r\n    <xc-navigator-objective-status-filter *ngIf=\"abierto\" [selectOptions]=\"options\" (selectOptionsChange)=\"printStatus($event)\" (visible)=\"isVisible($event)\"/>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "DummyComponent",
@@ -275,6 +346,61 @@
             "templateData": "<h3>Este sera el login</h3>\r\n"
         },
         {
+            "name": "NavigatorCardStory",
+            "id": "component-NavigatorCardStory-77f587bb73be46547074d6855a00621c34611b59b29433566d784d3fd35e83995c70cc585e8ee7a111ec298d4aad918fd4ed8376c6e95d1967902776bd6ce6b5",
+            "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "test",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<section class=\"flex flex-col w-[428px] gap-4 p-4 bg-red\">\n    <xc-navigator-objective-card [objectiveInformation]=\"objectiveInformation\"/>\n</section>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "objectiveInformation",
+                    "defaultValue": "{\r\n        name: '',\r\n        totalTasks: 0,\r\n        tasksCompleted: 0,\r\n        proofsCount: 0,\r\n        startDate: '',\r\n        status: 'new'\r\n    }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ObjectiveCardInformation",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "NavigatorObjectiveCardModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import  { Meta, StoryObj} from '@storybook/angular'\r\nimport { fn } from '@storybook/test'\r\nimport { Button400Component } from 'projects/ngx-xchange-ui/src/public-api'\r\nimport { Event } from '@angular/router';\r\nimport { Component, EventEmitter, Input, input, Output } from '@angular/core';\r\nimport { NavigatorObjectiveCardModule } from 'projects/ngx-xchange-ui/src/components/navigator-objective-card/navigator-objective-card.module';\r\n\r\ntype ObjectiveCardInformation = {\r\n    name: string;\r\n    totalTasks: number;\r\n    tasksCompleted: number;\r\n    proofsCount: number;\r\n    startDate: string;\r\n    status: Status\r\n  };\r\n  \r\n  type Status = 'new' |'completed' | 'open' | 'suggested';\r\n\r\n@Component({\r\n    selector: 'test',\r\n    imports:[NavigatorObjectiveCardModule],\r\n    standalone:true,\r\n    template: `\r\n    <section class=\"flex flex-col w-[428px] gap-4 p-4 bg-red\">\r\n        <xc-navigator-objective-card [objectiveInformation]=\"objectiveInformation\"/>\r\n    </section>` \r\n})\r\n\r\nclass NavigatorCardStory {\r\n    public objectiveInformation: ObjectiveCardInformation = {\r\n        name: '',\r\n        totalTasks: 0,\r\n        tasksCompleted: 0,\r\n        proofsCount: 0,\r\n        startDate: '',\r\n        status: 'new'\r\n    }\r\n}\r\n\r\nconst meta: Meta<NavigatorCardStory> ={\r\n    title: 'xChange-Navigator-Objective-Card', \r\n    component: NavigatorCardStory,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'open'\r\n        }\r\n    }\r\n}\r\n\r\n\r\nexport default meta;\r\ntype Story = StoryObj<NavigatorCardStory>;\r\n\r\nexport const NewObjective: Story = {\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'new'\r\n        }\r\n    }\r\n}\r\nexport const OpenObjective: Story = {\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'open'\r\n        }\r\n    }\r\n}\r\nexport const CompletedObjective: Story = {\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'completed'\r\n        }\r\n    }\r\n}\r\nexport const SuggestedObjective: Story = {\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'suggested'\r\n        }\r\n    }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
             "name": "NotFoundComponent",
             "id": "component-NotFoundComponent-4f12df90bf54ceed4cf21d09cc7d4ffb386b271b2b69d669043986528d8ccc6656b5d1dc60755400a9b5d76d04427d3fe7347d96eba072e7447ae959010e6ed1",
             "file": "src/app/core/share/components/not-found/not-found.component.ts",
@@ -407,6 +533,258 @@
             "templateData": "<router-outlet></router-outlet>\r\n"
         },
         {
+            "name": "testComponent",
+            "id": "component-testComponent-e36bfe9d2613260622c1070adc7aca1636c5b9188c713d6abc3c75f7751c65e0f86c094e2d92aeeec39fa6e1a5d408100c21c26531cfa3f24ae4bab635e140fc",
+            "file": "src/stories/components/Button-400.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "test",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<section class=\"flex flex-col gap-4 p-4\">\n    <xc-button-400 [type]='type' [description]=\"description\" [full]=\"full\" (onClick)=\"printTest($event)\">\n        <div class=\"w-4 h-4 fill-white stroke-white\">\n        <xc-icon-clock />\n        </div>\n    </xc-button-400>\n</section>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "description",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "full",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "printTest",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "Button400Module",
+                    "type": "module"
+                },
+                {
+                    "name": "XcIconClockComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import  { Meta, StoryObj} from '@storybook/angular'\r\nimport { fn } from '@storybook/test'\r\nimport { Button400Component } from 'projects/ngx-xchange-ui/src/public-api'\r\nimport { Event } from '@angular/router';\r\nimport { Component, EventEmitter, Input, input, Output } from '@angular/core';\r\nimport { BehaviorSubject } from 'rxjs';\r\nimport { Button400Module } from '@indziaki/ngx-xchange-ui';\r\nimport { XcIconClockComponent } from '@indziaki/ngx-xchange-icons';\r\n@Component({\r\n    selector: 'test',\r\n    imports:[Button400Module, XcIconClockComponent],\r\n    standalone:true,\r\n    template: `\r\n    <section class=\"flex flex-col gap-4 p-4\">\r\n        <xc-button-400 [type]='type' [description]=\"description\" [full]=\"full\" (onClick)=\"printTest($event)\">\r\n            <div class=\"w-4 h-4 fill-white stroke-white\">\r\n            <xc-icon-clock />\r\n            </div>\r\n        </xc-button-400>\r\n    </section>` \r\n})\r\n\r\nclass testComponent {\r\n    @Input() type: string = ''\r\n    @Input() description: string = ''\r\n    @Input() full: boolean = false;\r\n    // @Output() onClick = new EventEmitter<Event>;\r\n    printTest(event: Event){\r\n        alert('Hola mundo')\r\n    }\r\n}\r\n\r\nconst meta: Meta<testComponent> ={\r\n    title: 'xChange-Button-400', \r\n    component: testComponent,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        full: false,\r\n        description: 'Hello',\r\n        type: ''\r\n    }\r\n}\r\n\r\n\r\nexport default meta;\r\ntype Story = StoryObj<testComponent>;\r\n\r\nexport const Filled: Story = {\r\n    args: {\r\n        description: 'click here',\r\n        type: 'filled',\r\n    }\r\n}\r\nexport const InactiveFilled: Story = {\r\n    args: {\r\n        description: 'Hello',\r\n        type: 'filled_inactive'\r\n    }\r\n}\r\nexport const Cancel: Story = {\r\n    args: {\r\n        description: 'Where aer you',\r\n        type: 'cancel'\r\n    }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "testComponent",
+            "id": "component-testComponent-9e7c9f544255d0a649f75727e9ef310cb76b6989c05fcbb841c97c135045c36978afaf169d199a36b47ddcd05479aaec0163f172ae0e99e9a5744a3e074f4ad2-1",
+            "file": "src/stories/components/complete-objective.user-card.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "test",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<section class=\"flex flex-col gap-4 p-4\">\n    <!-- <xc-button-400 [type]='type' [description]=\"description\" [full]=\"full\" (onClick)=\"printTest($event)\">\n        <xc-icon-clock />\n    </xc-button-400> -->\n    <xc-complete-objective-user-card [userData]=\"userData\" (checked)=\"printTest($event)\" [readMode]=\"readMode\"/>\n</section>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "checked",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "full",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "readMode",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "event",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 39,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "isFirst",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 38,
+                    "modifierKind": [
+                        125
+                    ]
+                },
+                {
+                    "name": "userData",
+                    "defaultValue": "{\r\n        userId: 5,\r\n        profilePhotoUrl: '',\r\n        name: 'Manuel',\r\n        lastName: 'Cabrera',\r\n        role: 'Owner',  \r\n        hours: 5,\r\n        resultCount: 2,\r\n        proofCount: 2,\r\n        ratingCount: 2,\r\n        ratingAverage: 5,\r\n        isCompleted: false\r\n    }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 40,
+                    "modifierKind": [
+                        125
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "printTest",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "Button400Module",
+                    "type": "module"
+                },
+                {
+                    "name": "XcIconClockComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "CompleteObjectiveUserCardModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import  { Meta, StoryObj} from '@storybook/angular'\r\nimport { fn } from '@storybook/test'\r\nimport { Button400Component, Button400Module, CompleteObjectiveUserCardModule } from 'projects/ngx-xchange-ui/src/public-api'\r\nimport { Event } from '@angular/router';\r\nimport { Component, EventEmitter, Input, input, Output } from '@angular/core';\r\nimport { BehaviorSubject } from 'rxjs';\r\nimport { XcIconClockComponent } from '@indziaki/ngx-xchange-icons';\r\n@Component({\r\n    selector: 'test',\r\n    imports:[Button400Module, XcIconClockComponent,\r\n        CompleteObjectiveUserCardModule\r\n    ],\r\n    standalone:true,\r\n    template: `\r\n    <section class=\"flex flex-col gap-4 p-4\">\r\n        <!-- <xc-button-400 [type]='type' [description]=\"description\" [full]=\"full\" (onClick)=\"printTest($event)\">\r\n            <xc-icon-clock />\r\n        </xc-button-400> -->\r\n        <xc-complete-objective-user-card [userData]=\"userData\" (checked)=\"printTest($event)\" [readMode]=\"readMode\"/>\r\n    </section>` \r\n})\r\n\r\nclass testComponent {\r\n    @Input() checked: boolean = false\r\n    @Input() readMode: boolean =false\r\n    @Input() full: boolean = false;\r\n    // @Output() onClick = new EventEmitter<Event>;\r\n    printTest(event: boolean){\r\n        // if(this.isFirst){\r\n        //     this.isFirst = !this.isFirst\r\n        //     return           \r\n        // }\r\n        // if(event !== this.event){\r\n        //     this.event = event\r\n        // }\r\n        alert(`Hola mundo: ${event}`)\r\n    }\r\n    public isFirst = true;\r\n    public event = false;\r\n    public userData = {\r\n        userId: 5,\r\n        profilePhotoUrl: '',\r\n        name: 'Manuel',\r\n        lastName: 'Cabrera',\r\n        role: 'Owner',  \r\n        hours: 5,\r\n        resultCount: 2,\r\n        proofCount: 2,\r\n        ratingCount: 2,\r\n        ratingAverage: 5,\r\n        isCompleted: false\r\n    }\r\n}\r\n\r\nconst meta: Meta<testComponent> ={\r\n    title: 'xChange-Complete-Objective-Card', \r\n    component: testComponent,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        checked: true,\r\n        readMode: false,\r\n    }\r\n}\r\n\r\n\r\nexport default meta;\r\ntype Story = StoryObj<testComponent>;\r\n\r\nexport const Filled: Story = {\r\n    args: {\r\n        checked: true,\r\n        readMode: false,\r\n    }\r\n}\r\nexport const InactiveFilled: Story = {\r\n    args: {\r\n        checked: true,\r\n        readMode: true,\r\n    }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "testComponent-1"
+        },
+        {
             "name": "UserAvatarComponent",
             "id": "component-UserAvatarComponent-a10d7cf5761deda14c479daf979462ce8486489def34886be5495b022e724cf36959d4e065d06a1b038ddd7ccd407901cac644872dbaf980c64c48d8838ef86f",
             "file": "src/app/public/components/user-avatar/user-avatar.component.ts",
@@ -516,13 +894,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-95750cf2a4fde20fc2833e7137f43340d12133470b741585b38865b1b96f4c305f2719f52634ddeafe74c11d7c0b19a7e8a9fc20fc668f04d92062c296704f1b",
+            "id": "module-AppModule-d584c1ada583087552ee10e63259842030ac09f268aaa0496f232fec97e06276e7c97546a1fa689f08dc84e00b9c246a3eaefb11d156e1b6e7b202e311a88868",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    CardInsightsModule,\r\n    CarButtonViewModule,\r\n    CardTasksIndicatorModule,\r\n    CarButtonViewModule,\r\n    AsideNavModule,\r\n    ProjectProgressBarModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { CoreModule } from './core/core.module';\r\nimport { CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';\r\nimport { CompleteObjectiveUserCardModule } from \"../../projects/ngx-xchange-ui/src/components/complete-objective-user-card/complete-objective-user-card.module\";\r\nimport { NavigatorObjectiveCardModule } from 'projects/ngx-xchange-ui/src/components/navigator-objective-card/navigator-objective-card.module';\r\nimport { NavigatorObjectiveStatusFilterModule } from 'projects/ngx-xchange-ui/src/components/navigator-objective-status-filter/navigator-objective-status-filter.module';\r\nimport { NavigatorFilterToggleModule } from 'projects/ngx-xchange-ui/src/components/navigator-filter-toggle/navigator-filter-toggle.module';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    CoreModule,\r\n    NavigatorObjectiveStatusFilterModule,\r\n    NavigatorFilterToggleModule\r\n],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -783,6 +1161,46 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Cancel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button-400.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        description: 'Where aer you',\r\n        type: 'cancel'\r\n    }\r\n}"
+            },
+            {
+                "name": "CompletedObjective",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'completed'\r\n        }\r\n    }\r\n}"
+            },
+            {
+                "name": "Filled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button-400.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        description: 'click here',\r\n        type: 'filled',\r\n    }\r\n}"
+            },
+            {
+                "name": "Filled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        checked: true,\r\n        readMode: false,\r\n    }\r\n}"
+            },
+            {
                 "name": "fourth",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -793,6 +1211,26 @@
                 "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"fourthHeading\"\r\n  },\r\n}"
             },
             {
+                "name": "InactiveFilled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button-400.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        description: 'Hello',\r\n        type: 'filled_inactive'\r\n    }\r\n}"
+            },
+            {
+                "name": "InactiveFilled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        checked: true,\r\n        readMode: true,\r\n    }\r\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -801,6 +1239,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<AsideNavComponent>",
                 "defaultValue": "{\r\n  title: 'Components/ Aside Nav',\r\n  component: AsideNavComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      declarations: [],\r\n      imports: [CommonModule, XcIconRocketComponent, XcIconCreateDashboardComponent, XcIconUserComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    theme: {control: 'text', options:['black', 'white']},\r\n    isOpen: {control: 'boolean', options:[true, false]}\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/Button-400.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<testComponent>",
+                "defaultValue": "{\r\n    title: 'xChange-Button-400', \r\n    component: testComponent,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        full: false,\r\n        description: 'Hello',\r\n        type: ''\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -896,11 +1344,31 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<testComponent>",
+                "defaultValue": "{\r\n    title: 'xChange-Complete-Objective-Card', \r\n    component: testComponent,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        checked: true,\r\n        readMode: false,\r\n    }\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/components/metric-selection.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<MetricsSelectionComponent>",
                 "defaultValue": "{\r\n  title: 'xChange/Metrics Selection',\r\n  component: MetricsSelectionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      // Mocking ChangeDetectorRef or other dependencies\r\n      providers: [\r\n        {\r\n          provide: ChangeDetectorRef,\r\n          useValue: {\r\n            markForCheck: () => {},\r\n            detectChanges: () => {},\r\n            detach: () => {},\r\n            reattach: () => {},\r\n            checkNoChanges: () => {},\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n  ],\r\n  render: (args) => ({\r\n    props: {\r\n      ...args,\r\n      selection: args.selection || 'rating',\r\n      setValue: args.setValue,\r\n      showMode: args.showMode,\r\n      unitValue: args.unitValue,\r\n      blockElement: args.blockElement\r\n    },\r\n  }),\r\n  argTypes: {\r\n    selection: { control: 'text', options: ['metric', 'rating', 'select'] },\r\n    setValue: { control: 'text' },\r\n    showMode: { control: 'text' },\r\n    unitValue: { control: 'number'},\r\n    blockElement: { control: 'boolean' }\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<NavigatorCardStory>",
+                "defaultValue": "{\r\n    title: 'xChange-Navigator-Objective-Card', \r\n    component: NavigatorCardStory,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'open'\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "meta",
@@ -941,6 +1409,26 @@
                 "deprecationMessage": "",
                 "type": "Meta<UserNameCardComponent>",
                 "defaultValue": "{\r\n  title: 'Example/UserNameCardComponent',\r\n  component: UserNameCardComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: UserNameCardComponent) => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  }),\r\n}"
+            },
+            {
+                "name": "NewObjective",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'new'\r\n        }\r\n    }\r\n}"
+            },
+            {
+                "name": "OpenObjective",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'open'\r\n        }\r\n    }\r\n}"
             },
             {
                 "name": "preview",
@@ -1133,6 +1621,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    title:\"Welcome to Xscale\",\r\n    type:\"secondaryHeading\"\r\n  },\r\n}"
             },
             {
+                "name": "SuggestedObjective",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'suggested'\r\n        }\r\n    }\r\n}"
+            },
+            {
                 "name": "Tertiary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1166,11 +1664,66 @@
         "functions": [],
         "typealiases": [
             {
+                "name": "ColorStatus",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"suggestion\" | \"open\" | \"complete\" | \"new\"",
+                "file": "src/app/app.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            },
+            {
+                "name": "InformationToggleView",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/app.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "ObjectiveCardInformation",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "Status",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "\"new\" | \"completed\" | \"open\" | \"suggested\"",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 192
+            },
+            {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<AsideNavComponent>",
                 "file": "src/stories/AsideNav.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<testComponent>",
+                "file": "src/stories/components/Button-400.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1279,8 +1832,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<testComponent>",
+                "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<MetricsSelectionComponent>",
                 "file": "src/stories/components/metric-selection.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<NavigatorCardStory>",
+                "file": "src/stories/components/navigator-objetiove-card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1333,6 +1908,132 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/components/Button-400.stories.ts": [
+                {
+                    "name": "Cancel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Button-400.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        description: 'Where aer you',\r\n        type: 'cancel'\r\n    }\r\n}"
+                },
+                {
+                    "name": "Filled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Button-400.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        description: 'click here',\r\n        type: 'filled',\r\n    }\r\n}"
+                },
+                {
+                    "name": "InactiveFilled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Button-400.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        description: 'Hello',\r\n        type: 'filled_inactive'\r\n    }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/Button-400.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<testComponent>",
+                    "defaultValue": "{\r\n    title: 'xChange-Button-400', \r\n    component: testComponent,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        full: false,\r\n        description: 'Hello',\r\n        type: ''\r\n    }\r\n}"
+                }
+            ],
+            "src/stories/components/navigator-objetiove-card.stories.ts": [
+                {
+                    "name": "CompletedObjective",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'completed'\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<NavigatorCardStory>",
+                    "defaultValue": "{\r\n    title: 'xChange-Navigator-Objective-Card', \r\n    component: NavigatorCardStory,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'open'\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "NewObjective",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'new'\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "OpenObjective",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'open'\r\n        }\r\n    }\r\n}"
+                },
+                {
+                    "name": "SuggestedObjective",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        objectiveInformation: {\r\n            name: 'hola chuy quiobole como andas',\r\n            totalTasks: 6,\r\n            tasksCompleted: 2,\r\n            proofsCount: 6,\r\n            startDate: '30 feb 2024',\r\n            status: 'suggested'\r\n        }\r\n    }\r\n}"
+                }
+            ],
+            "src/stories/components/complete-objective.user-card.stories.ts": [
+                {
+                    "name": "Filled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        checked: true,\r\n        readMode: false,\r\n    }\r\n}"
+                },
+                {
+                    "name": "InactiveFilled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n    args: {\r\n        checked: true,\r\n        readMode: true,\r\n    }\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/components/complete-objective.user-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<testComponent>",
+                    "defaultValue": "{\r\n    title: 'xChange-Complete-Objective-Card', \r\n    component: testComponent,\r\n    excludeStories: /.*Data$/,\r\n    tags: ['autodocs'],\r\n    args:{\r\n        checked: true,\r\n        readMode: false,\r\n    }\r\n}"
+                }
+            ],
             "src/stories/components/Tittles.stories.ts": [
                 {
                     "name": "fourth",
@@ -1749,6 +2450,65 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "src/app/app.component.ts": [
+                {
+                    "name": "ColorStatus",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"suggestion\" | \"open\" | \"complete\" | \"new\"",
+                    "file": "src/app/app.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                },
+                {
+                    "name": "InformationToggleView",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/app.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/stories/components/navigator-objetiove-card.stories.ts": [
+                {
+                    "name": "ObjectiveCardInformation",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                },
+                {
+                    "name": "Status",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "\"new\" | \"completed\" | \"open\" | \"suggested\"",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 192
+                },
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<NavigatorCardStory>",
+                    "file": "src/stories/components/navigator-objetiove-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "src/stories/AsideNav.stories.ts": [
                 {
                     "name": "Story",
@@ -1756,6 +2516,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<AsideNavComponent>",
                     "file": "src/stories/AsideNav.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/Button-400.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<testComponent>",
+                    "file": "src/stories/components/Button-400.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1873,6 +2646,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ChipComponent>",
                     "file": "src/stories/components/Chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/components/complete-objective.user-card.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<testComponent>",
+                    "file": "src/stories/components/complete-objective.user-card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2024,7 +2810,27 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/2",
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ColorStatus",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "InformationToggleView",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -2152,6 +2958,65 @@
             },
             {
                 "filePath": "src/stories/AsideNav.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-400.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "testComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-400.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Cancel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-400.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Filled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-400.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "InactiveFilled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-400.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/Button-400.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -2540,6 +3405,55 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/components/complete-objective.user-card.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "testComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/complete-objective.user-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Filled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/complete-objective.user-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "InactiveFilled",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/complete-objective.user-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/complete-objective.user-card.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/components/metric-selection.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2581,6 +3495,95 @@
             },
             {
                 "filePath": "src/stories/components/metric-selection.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavigatorCardStory",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CompletedObjective",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NewObjective",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "OpenObjective",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SuggestedObjective",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ObjectiveCardInformation",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Status",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/components/navigator-objetiove-card.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

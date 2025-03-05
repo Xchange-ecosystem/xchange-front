@@ -1,8 +1,8 @@
-<div class="w-full h-[20px] flex bg-Quaternary_Fonts rounded-lg">
-  <!--el verde-->
+<div class="w-full h-[20px] flex rounded-lg">
+  <!--el verde, completed-->
   <div
     *ngIf="completed > 0"
-    [ngClass]="getCompleteClass(objectivesInProject, completed)"
+    [ngClass]="getCompleteClass"
     [style.width]="getSize(completed, objectivesInProject)"
     class="relative"
     (mouseover)="mouseMarkersActionComplete = true"
@@ -19,7 +19,7 @@
     <div
       *ngIf="completed > 0 && showMarkers && mouseMarkersActionComplete"
       class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
-      [ngClass]="{'translate-x-[80%]':(completed <= 2)}"
+      [ngClass]="{ 'translate-x-[80%]': completed <= 2 }"
     >
       <p>Objectives completed</p>
       <div class="flex gap-2 justify-start">
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <!--amarillo-->
+  <!--amarillo, open-->
   <div
     *ngIf="open > 0"
     [style.width]="getSize(open, objectivesInProject)"
@@ -50,12 +50,45 @@
     <div
       *ngIf="open > 0 && showMarkers && mouseMarkersActionOpen"
       class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
-      [ngClass]="{'translate-x-[60%]': open <= 2 && completed <= 2, 'translate-x-[80%]':open ===0 && completed <= 2}"
+      [ngClass]="{
+        'translate-x-[60%]': open <= 2 && completed <= 2,
+        'translate-x-[80%]': open === 0 && completed <= 2
+      }"
     >
       <p>Objectives open</p>
       <div class="flex gap-2 justify-start">
         <div class="bg-Second_accent w-4 h-4 border border-white"></div>
         <span>{{ open }}</span>
+      </div>
+    </div>
+  </div>
+  <!--Morado suggested-->
+  <div
+    *ngIf="suggested > 0"
+    [style.width]="getSize(suggested, objectivesInProject)"
+    [class.rounded-l-lg]="completed === 0"
+    [ngClass]="SuggestedClass"
+    class="relative"
+    (mouseover)="mouseMarkersActionOpen = true"
+    (mouseleave)="mouseMarkersActionOpen = false"
+  >
+    <div
+      class="bg-[var(--xc-categories-suggestion)] rounded-e-lg h-full flex items-center justify-center"
+    >
+      <span
+        class="text-paragraph text-center font-manrope font-regular leading-project-bar"
+        >{{ suggested }}</span
+      >
+    </div>
+    <div
+      *ngIf="suggested > 0 && showMarkers && mouseMarkersActionOpen"
+      class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
+      [ngClass]="{'translate-x-[60%]': suggested <= 2 && completed <= 2, 'translate-x-[80%]':suggested ===0 && completed <= 2}"
+    >
+      <p>Objectives suggested</p>
+      <div class="flex gap-2 justify-start">
+        <div class="bg-Suggestion opacity-[0.6] w-4 h-4 border border-white"></div>
+        <span>{{ suggested }}</span>
       </div>
     </div>
   </div>
@@ -72,21 +105,21 @@
   >
     <span
       class="text-paragraph text-center font-manrope font-regular leading-project-bar"
-      >{{ objectivesInProject - open - completed }}</span
+      >{{ objectivesInProject - open - suggested - completed }}</span
     >
-    <div class="h-full w-[10px] bg-Quaternary_Fonts rounded-e-lg"></div>
+    <div class="h-full w-[10px] bg-[var(--xc-grey200)]"></div>
     <div
       *ngIf="
         objectivesInProject - open - completed > 0 &&
         showMarkers &&
         mouseMarkersActionObjectives
       "
-      class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small rounded-lg bg-black whitespace-nowrap"
+      class="absolute translate-x-[50%] translate-y-[20%] right-1/2 top-1/2 p-2 flex flex-col gap text-white font-manrope font font-semibold text-small bg-black whitespace-nowrap"
     >
       <p>Total objectives</p>
       <div class="flex gap-2 justify-start">
-        <div class="bg-Quaternary_Fonts w-4 h-4 border border-white"></div>
-        <span>{{ objectivesInProject - open - completed }}</span>
+        <div class="bg-[var(--xc-grey200)] w-4 h-4 border border-white"></div>
+        <span>{{ objectivesInProject - open - suggested - completed }}</span>
       </div>
     </div>
   </div>

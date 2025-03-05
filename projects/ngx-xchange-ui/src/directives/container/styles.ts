@@ -23,5 +23,16 @@ export const APP_TAILWIND_STYLES: { [key: string]: string } = {
     rounded-r-2xl 
     pt-12 
     px-4
+    `,
+    navigatorFilterContainer: `
+    inline-flex
+    items-center
+    gap-4
+    px-[14px]
+    py-[4px]
+    bg-white
+    shadow-Shadow400
+    rounded-lg
+    h-[56px]
     `
 }

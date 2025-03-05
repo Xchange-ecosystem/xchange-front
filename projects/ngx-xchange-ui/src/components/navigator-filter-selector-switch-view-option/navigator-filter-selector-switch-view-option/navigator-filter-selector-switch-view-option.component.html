@@ -1,0 +1,9 @@
+<label [for]="labelName" class="switchOptionButton">
+    <input 
+    [id]="labelName" 
+    type="checkbox"
+    [checked]="selection"
+    (change)="selectionChange.emit(viewOption)"
+    >
+    <ng-content class="icon"></ng-content>
+</label>

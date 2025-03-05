@@ -1,0 +1,32 @@
+    <article class="subLayerContainer" [ngClass]="getContainerStyle()">
+    <section *ngIf="subLayer === 'hint'" id="hintInformation">
+        <ng-content select="[hint]"/>
+        <p xcMainHeading="Headline300">{{ hintInformation }}</p>
+    </section>
+    <section *ngIf="subLayer === 'with buttons'" id="withButton">
+        <h1 xcMainHeading="Headline300">{{ subLayerInformation.title }}</h1>
+        <p>{{subLayerInformation.description}}</p>
+        <div class="buttonsContainer">
+            <div class="h-[40px]">
+                <xc-button-400 type="cancel" description="Cancel" (onClick)="closeSubLayerUserDecisionCancel()">
+                    <div class="w-4 h-4 fill-Blocked stroke-Blocked">
+                        <xc-icon-times />
+                    </div>
+                </xc-button-400>
+            </div>
+            <div class="h-[40px]">
+                <xc-button-400 [type]="getButtonStyle()" [description]="subLayerInformation.buttonDescription?? 'Accept'" (onClick)="closeSubLayerUserDecisionAccept()">
+                <ng-content select="[button]"/>
+                </xc-button-400>
+            </div>
+        </div>
+    </section>
+    <section *ngIf="subLayer === 'success'" id="success">
+        <div class="buttonContainer">
+            <xc-button-400 type="round_cancel" (onClick)="isVisibleChange.emit(false)"/>
+        </div>
+        <ng-content select="[success]"/>
+        <h1 xcMainHeading="Headline300">Well done!</h1>
+        <h2 xcMainHeading="Copy400Regular">{{subLayerInformation.description}}</h2>
+    </section>
+    </article>
