@@ -15,7 +15,7 @@
                 </xc-button-400>
             </div>
             <div class="h-[40px]">
-                <xc-button-400 type="filled" [description]="subLayerInformation.buttonDescription?? 'Accept'" (onClick)="closeSubLayerUserDecisionAccept()">
+                <xc-button-400 [type]="getButtonStyle()" [description]="subLayerInformation.buttonDescription?? 'Accept'" (onClick)="closeSubLayerUserDecisionAccept()">
                 <ng-content select="[button]"/>
                 </xc-button-400>
             </div>

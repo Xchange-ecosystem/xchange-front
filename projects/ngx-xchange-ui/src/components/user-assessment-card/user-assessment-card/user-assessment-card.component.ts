@@ -51,9 +51,11 @@ export class UserAssessmentCardComponent {
   public id = crypto.randomUUID();
 
   getAssessmentAverage(){
-    return this.userData?.data?.ratings.reduce((acc: number, act: Rating ) => {
+    return this.userData?.data?.ratings.length
+    ? this.userData.data.ratings.reduce((acc: number, act: Rating ) => {
       return acc += act.satisfaction
-    },0)
+    },0) /this.userData.data.ratings.length
+    : 0;
   }
 
   toggleChecked() {

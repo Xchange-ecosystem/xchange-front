@@ -28,6 +28,7 @@ export class Button400Component implements OnChanges {
       '': 'rounded-lg gap-1 hover:text-Grey500 hover:border-Grey500 hover:fill-Grey500 p-4 hover:opacity-[0.6]',
       'outline_inactive': 'opacity-[0.2] rounded-lg hover:cursor-default gap-1 p-4',
       'cancel': 'rounded-lg gap-1 text-Blocked border-Blocked fill-Blocked gap-1 hover:opacity-[0.6] p-4',
+      'cancel_filled': 'rounded-lg gap-1 text-white border-white fill-white gap-1 hover:opacity-[0.6] p-4 bg-Blocked',
       'filled': 'bg-Black500 text-white rounded-lg fill-white hover:bg-Black400 py-[10px] gap-1 p-4',
       'filled_inactive': 'bg-Black500 text-white opacity-[0.2] rounded-lg fill-white gap-1 py-[10px] hover:cursor-default p-4',
       'round_options': 'w-[30px] h-[30px] bg-Light_Grey text-Black500 rounded-full p-2 hover:bg-Grey200 border-none fill-black',

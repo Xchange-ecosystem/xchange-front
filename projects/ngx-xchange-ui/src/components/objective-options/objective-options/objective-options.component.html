@@ -1,38 +1,38 @@
 <section *ngIf="!taskMenu" class="flex flex-col gap-3 items-start justify-center shadow-Shadow500 rounded-lg bg-white p-5">
-    <button (click)="optionSelectedChange.next('reNameObjective')" class="flex gap-1 items-center cursor-pointer">
-        <div class="w-5 h-5 stroke-black fill-black stroke-1">
+    <button (click)="optionSelectedChange.next('reNameObjective')" class="group flex gap-1 items-center cursor-pointer">
+        <div class="w-5 h-5 stroke-black fill-black stroke-1 group-hover:stroke-[var(--xc-brand-medium-blue)] group-hover:fill-[var(--xc-brand-medium-blue)]">
             <xc-icon-edit />
         </div>
         <p xcMainHeading="Copy400Bold" class="hover:text-[var(--xc-brand-medium-blue)]">Re-name Objective</p>
     </button>
-    <button (click)="optionSelectedChange.next('copyObjective')" class="flex gap-1 items-center cursor-pointer">
-        <div class="w-5 h-5 stroke-black fill-black stroke-1">
+    <button (click)="optionSelectedChange.next('copyObjective')" class="group flex gap-1 items-center cursor-pointer">
+        <div class="w-5 h-5 stroke-black fill-black stroke-1 group-hover:stroke-[var(--xc-brand-medium-blue)] group-hover:fill-[var(--xc-brand-medium-blue)]">
             <xc-icon-copy />
         </div>
         <p xcMainHeading="Copy400Bold" class="hover:text-[var(--xc-brand-medium-blue)]">Copy Objective</p>
     </button>
-    <button (click)="optionSelectedChange.next('shareLink')" class="flex gap-1 items-center cursor-pointer">
-        <div class="w-5 h-5 stroke-black fill-black stroke-1">
+    <button (click)="optionSelectedChange.next('shareLink')" class="group flex gap-1 items-center cursor-pointer">
+        <div class="w-5 h-5 stroke-black fill-black stroke-1 group-hover:stroke-[var(--xc-brand-medium-blue)] group-hover:fill-[var(--xc-brand-medium-blue)]">
             <xc-icon-file-share-alt />
         </div>
         <p xcMainHeading="Copy400Bold" class="hover:text-[var(--xc-brand-medium-blue)]">Share link</p>
     </button>
-    <button (click)="optionSelectedChange.next('deleteObjective')" class="flex gap-1 items-center cursor-pointer">
-        <div class="w-5 h-5 stroke-black fill-black stroke-1">
+    <button (click)="optionSelectedChange.next('deleteObjective')" class="group flex gap-1 items-center cursor-pointer">
+        <div class="w-5 h-5 stroke-black fill-black stroke-1 group-hover:stroke-[var(--xc-brand-medium-blue)] group-hover:fill-[var(--xc-brand-medium-blue)]">
             <xc-icon-trash />
         </div>
         <p xcMainHeading="Copy400Bold" class="hover:text-[var(--xc-brand-medium-blue)]">Delete Objective</p>
     </button>
 </section>
 <section *ngIf="taskMenu" class="flex flex-col gap-3 items-start justify-center shadow-Shadow500 rounded-lg bg-white p-5">
-    <button (click)="optionSelectedChange.next('turnTaskIntoObjective')" class="flex gap-1 items-center cursor-pointer">
-        <div class="w-5 h-5 stroke-black fill-black stroke-1">
+    <button (click)="optionSelectedChange.next('turnTaskIntoObjective')" class="group flex gap-1 items-center cursor-pointer">
+        <div class="w-5 h-5 stroke-black fill-black stroke-1 group-hover:stroke-[var(--xc-brand-medium-blue)] group-hover:fill-[var(--xc-brand-medium-blue)]">
             <xc-icon-add />
         </div>
         <p xcMainHeading="Copy400Bold" class="hover:text-[var(--xc-brand-medium-blue)]">Turn task into Objective</p>
     </button>
-    <button (click)="optionSelectedChange.next('deleteTasks')" class="flex gap-1 items-center cursor-pointer">
-        <div class="w-5 h-5 stroke-black fill-black stroke-1">
+    <button (click)="optionSelectedChange.next('deleteTasks')" class="group flex gap-1 items-center cursor-pointer">
+        <div class="w-5 h-5 stroke-black fill-black stroke-1 group-hover:stroke-[var(--xc-brand-medium-blue)] group-hover:fill-[var(--xc-brand-medium-blue)]">
             <xc-icon-trash />
         </div>
         <p xcMainHeading="Copy400Bold" class="hover:text-[var(--xc-brand-medium-blue)]">Delete task</p>

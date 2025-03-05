@@ -1,4 +1,4 @@
-# 0.1.7 04/03/2025
+# 0.1.7 05/03/2025
 * (add) - Navigator objective card component
 * (add) - Navigator toggle button component
 * (add) - Navigator status filter component
@@ -13,6 +13,8 @@
 * (add) - modal subLayer component for modal toaster
 * (add) - modal options
 * (add) - user assessment card
+* (add) - color style in button 400
+* (change) - modal dub layer inputs types and behavior component. Include observers
 
 
 

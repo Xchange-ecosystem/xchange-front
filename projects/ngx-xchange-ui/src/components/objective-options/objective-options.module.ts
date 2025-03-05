@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ObjectiveOptionsComponent } from './objective-options/objective-options.component';
 import { XcIconAddComponent, XcIconCopyComponent, XcIconEditComponent, XcIconFileShareAltComponent, XcIconTrashComponent } from '@indziaki/ngx-xchange-icons';
 import { MainHeadingModule } from '../../public-api';
+import { XcIconBanComponent } from 'projects/ngx-xchange-icons/src/public-api';
 
 
 
