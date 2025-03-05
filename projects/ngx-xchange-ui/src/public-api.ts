@@ -105,3 +105,5 @@ export * from './components/objective-options/objective-options.module'
 export * from './components/objective-options/objective-options/objective-options.component'
 export * from './components/user-assessment-card/user-assessment-card.module';
 export * from './components/user-assessment-card/user-assessment-card/user-assessment-card.component'
+export * from './components/rating-bar/rating-bar.module'
+export * from './components/rating-bar/rating-bar/rating-bar.component'

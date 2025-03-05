@@ -41,7 +41,7 @@ type UserAssessmentSelection = {
   styleUrl: './user-assessment-card.component.css',
 })
 export class UserAssessmentCardComponent {
-  @Input() userData: UserAssessments | undefined;
+  @Input() userData: UserAssessmentSelection | undefined;
   @Output() userSelected = new EventEmitter<UserAssessmentSelection>();
   @Input() label: string = '';
   @Input() checked: boolean = false;
@@ -51,7 +51,7 @@ export class UserAssessmentCardComponent {
   public id = crypto.randomUUID();
 
   getAssessmentAverage(){
-    return this.userData?.ratings.reduce((acc: number, act: Rating ) => {
+    return this.userData?.data?.ratings.reduce((acc: number, act: Rating ) => {
       return acc += act.satisfaction
     },0)
   }
@@ -60,7 +60,7 @@ export class UserAssessmentCardComponent {
     this.checked = !this.checked;
     this.checkedChange.next(this.checked)
     this.userSelected.next({
-      data: this.userData,
+      data: this.userData?.data,
       checked:this.checked
     })
   }
