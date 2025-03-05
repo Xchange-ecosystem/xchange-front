@@ -1,0 +1,51 @@
+<label
+  class="relative w-full flex justify-between items-center p-4 shadow-userCadComplete rounded-lg"
+  [ngClass]="{
+    'bg-Grey200': this.checked,
+    'bg-white': !this.checked
+  }"
+  [htmlFor]="this.id"
+>
+  <input
+    type="radio"
+    class="appearance-none absolute top-0 right-0"
+    [id]="this.id"
+    [checked]="this.checked"
+    [name]="this.name"
+    (change)="this.toggleChecked()"
+  />
+  <section class="flex items-center gap-2">
+    <xc-rounded-image
+      [image]="userData?.data?.profilePhotoUrl ?? null"
+      [marginSize]="0"
+      class="w-[30px] h-[30px] min-w-[30px] min-h-[30px]"
+    />
+    <p
+      class="font-Copy-300-Bold-font-weight text-Copy-300-Bold-font-size line-height-Copy-300-Bold-line-Height text-Grey500 inline-flex"
+    >
+      {{ (userData?.data?.name ?? "User") + " " + userData?.data?.lastName }}
+    </p>
+    <span xcTag="gray">{{ userData?.data?.role ?? "Viewer" }}</span>
+  </section>
+  <section class="flex items-center justify-end gap-4">
+    <div class="flex gap-1 items-center">
+      <div class="text-Grey500 w-6 h-6 fill-grey500 stroke-Grey500">
+        <xc-icon-clock-five />
+      </div>
+      <span
+        class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500"
+        >{{ userData?.data?.hours + "h" }}</span
+      >
+    </div>
+    <div>
+      <xc-rating-bar [rating]="getAssessmentAverage() ?? 0" [readOnly]="true" />
+    </div>
+    <span
+      class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500"
+      >{{ "(" + userData?.data?.ratings?.length + ")" }}</span
+    >
+    <div class="w-6 h-auto fill-black stroke-black" *ngIf="this.checked">
+      <xc-icon-angle-right-b />
+    </div>
+  </section>
+</label>

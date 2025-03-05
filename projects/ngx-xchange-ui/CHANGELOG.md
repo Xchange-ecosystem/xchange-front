@@ -1,3 +1,27 @@
+# 0.1.7 05/03/2025
+* (add) - Navigator objective card component
+* (add) - Navigator toggle button component
+* (add) - Navigator status filter component
+* (change) - styles colors for toggle buttons
+* (change) - change library version and change log file
+* (add) - Navigator filter selector switch component
+* (add) - Navigator filter type selector component
+* (add) - Components to public file
+* (add) - navigator user searching text input
+* (add) - keyUp directive for different key values with hostlistener
+* (add) - navigator filter selector component
+* (add) - modal subLayer component for modal toaster
+* (add) - modal options
+* (add) - user assessment card
+* (add) - color style in button 400
+* (change) - modal dub layer inputs types and behavior component. Include observers
+
+
+
+# 0.1.6 17/08/2025
+* (change) - boder radius on objective card
+* (change ) - tailwind configuration 
+
 # 0.1.5 14/02/2025 
 * (add) - add complete objective user card component
 * (change) - rounded image component

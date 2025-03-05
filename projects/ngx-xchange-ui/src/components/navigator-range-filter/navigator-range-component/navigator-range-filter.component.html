@@ -1,0 +1,72 @@
+<section class="flex flex-col gap-4 p-4 bg-white rounded-lg shadow-Shadow500">
+  <div
+    *ngIf="type === 'value'"
+    [formGroup]="valueForm"
+    class="flex items-center gap-8"
+  >
+    <label for="minValue" class="flex rounded-lg"
+      ><input
+        id="minValue"
+        formControlName="minValue"
+        class="text-Grey500 text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight font-manrope leading-Copy-400-Regular-line-Height px-[11px] py-[10px] w-[130px] focus-within:border-Grey400 focus-within:shadow-Shadow400 border-2 border-Grey200 rounded-lg outline-none"
+        placeholder="Xcoins"
+        type="number"
+    /></label>
+    <div class="h-full"><p>to</p></div>
+    <label for="maxValue" class="flex rounded-lg"
+      ><input
+        id="maxValue"
+        formControlName="maxValue"
+        class="text-Grey500 text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight font-manrope leading-Copy-400-Regular-line-Height px-[11px] py-[10px] w-[130px] focus-within:border-Grey400 focus-within:shadow-Shadow400 border-2 border-Grey200 rounded-lg outline-none"
+        placeholder="Xcoins"
+        type="number"
+    /></label>
+  </div>
+  <div
+    *ngIf="type === 'date'"
+    [formGroup]="dateForm"
+    class="flex items-center gap-8"
+  >
+    <div>
+      <p>Start date</p>
+      <label
+        onclick="document.getElementById('starDate').showPicker();"
+        for="starDate"
+        class="flex rounded-lg"
+        ><input
+          id="starDate"
+          formControlName="starDate"
+          class="text-Grey500 text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight font-manrope leading-Copy-400-Regular-line-Height text-center py-[10px] focus-within:border-Grey400 focus-within:shadow-Shadow400 border-2 border-Grey200 rounded-lg outline-none"
+          type="date"
+      /></label>
+    </div>
+    <div class="pt-8 h-full"><p>to</p></div>
+    <div>
+      <p>End date</p>
+      <label
+        onclick="document.getElementById('endDate').showPicker();"
+        for="endDate"
+        class="flex rounded-lg"
+        ><input
+          id="endDate"
+          formControlName="endDate"
+          class="text-Grey500 text-Copy-400-Regular-font-size font-Copy-400-Regular-font-weight font-manrope leading-Copy-400-Regular-line-Height text-center py-[10px] focus-within:border-Grey400 focus-within:shadow-Shadow400 border-2 border-Grey200 rounded-lg outline-none"
+          type="date"
+      /></label>
+    </div>
+  </div>
+  <div class="flex justify-end item-center gap-1">
+    <div
+      class="w-6 h-6 fill-Blocked stroke-Blocked cursor-pointer"
+      (click)="resetSelectOptions()"
+    >
+      <xc-icon-times />
+    </div>
+    <div
+      class="w-6 h-6 fill-Completed stroke-Completed cursor-pointer"
+      (click)="sendOptionsSelected()"
+    >
+      <xc-icon-check />
+    </div>
+  </div>
+</section>

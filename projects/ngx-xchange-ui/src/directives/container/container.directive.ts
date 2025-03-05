@@ -24,3 +24,4 @@ type containerTypes =
 |'listSelector'
 |'assignmentCard'
 |'rightSideModal'
+|'navigatorFilterContainer'

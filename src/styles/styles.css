@@ -18,10 +18,14 @@
     --xc-gradient-light-blue: linear-gradient(109deg, #B8FBFF 33.19%, #A4F8C0 85.37%);
     --xc-gradient-medium-green: linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%);
     --xc-categories-progress: #FAE651;
+    --xc-categories-progress-opacity: rgba(250,230,81,0.4);
     --xc-categories-yellow-tag: #AF9E1C;
+    --xc-categories-yellow-filter: #E3CA11;
     --xc-categories-completed: #1ccd66;
+    --xc-categories-completed-opacity: rgba(28,205,102,0.2);
     --xc-categories-blocked: #EF4444;
     --xc-categories-suggestion: #AF71F1;
+    --xc-categories-suggestion-opacity: rgba(175,113,241,0.3);
     --xc-categories-collaboration: #71D7D7;
     --xc-categories-project: #3CA7FF;
     --xc-categories-health: #FFA931;
@@ -31,4 +35,6 @@
     --xc-data-viz-blue200: #60A5FA;
     --xc-data-viz-blue100: #BFDBFE;
     --xc-data-viz-blue50: #EFF6FF;
+    --xc-boxShadow-500:  0px 0px 30px 0px rgba(17, 17, 17, 0.14);
+    --xc-boxShadow-400: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
 }

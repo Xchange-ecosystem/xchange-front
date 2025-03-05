@@ -1,0 +1,36 @@
+<div 
+class="relative"
+(blur)="focusOut($event)"
+[tabindex]="0"
+[ngClass]="{'inputContainer': filterDescription === 'User Input Search' && selection}"
+>
+<div *ngIf="selection" class="absolute top-[50px] left-[-10px] flex" #dropContainer [ngClass]="{'staticPosition': filterDescription === 'User Input Search' }">
+    <ng-content />
+</div>
+  <label
+    [for]="labelName"
+    class="filterSelector"
+    [ngClass]="{ circleButton: (filterDescription === 'User Input Search' && !selection) }"
+  >
+    <input
+      #test
+      [id]="labelName"
+      type="checkbox"
+      (change)="this.selectionChange.emit(selection)"
+      [(ngModel)]="selection"
+    />
+    
+    <section
+    class="selectorContainer"
+    *ngIf="filterDescription !== 'User Input Search'"
+    >
+    <p class="text-Grey500">{{ filterDescription }}</p>
+    <div class="w-6 h-6 fill-black stroke-black iconContainer">
+      <xc-icon-angle-down />
+    </div>
+  </section>
+  <section *ngIf="filterDescription === 'User Input Search'" class="w-5 h-5">
+      <xc-icon-search />
+    </section>
+  </label>
+</div>
