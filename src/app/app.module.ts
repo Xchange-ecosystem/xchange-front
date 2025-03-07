@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { NavigatorUsersFilterModule, CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavigatorUsersFilterModule, CardInsightsModule, CardTasksIndicatorModul
     CarButtonViewModule,
     AsideNavModule,
     ProjectProgressBarModule,
-    NavigatorUsersFilterModule
+    NavigatorUsersFilterModule,
+    LoginComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
