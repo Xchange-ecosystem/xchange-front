@@ -5,24 +5,26 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  min-height: calc(100vh - 70px);
-  
+  min-height: 100vh; /* Asegurar que ocupa toda la pantalla */
+  overflow: hidden; /* Evitar desbordamientos */
 }
 
 .app-login {
+  position: relative; /* Asegurar que está sobre el video */
   width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
+  max-width: 500px; /* Opcional, para centrarlo y evitar que sea muy grande */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Opcional, para darle un fondo semitransparente */
+  border-radius: 10px;
+  z-index: 2;
 }
 
 .video-bg {
-  position: absolute;
-  top: 50%;
+  position: fixed; /* Fijamos el video para que siempre esté detrás */
+  top: 0;
   left: 0;
-  transform: translateY(-50%);
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  height: 100vh;
+  z-index: -1; /* Coloca el video en el fondo */
   object-fit: cover;
 }
