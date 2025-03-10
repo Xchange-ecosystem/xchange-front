@@ -1,28 +1,16 @@
-// Variables
-$primary-color: #1a75ff;
-$secondary-color: #c7efba;
-$border-color: lightgrey;
-$background-gradient: linear-gradient(to right,
-    #add16f,
-    #b3d578,
-    #b8d881,
-    #bbd888,
-    #c0d69a,
-    #cad7b3);
-$border-radius: 16px;
-$font-size-base: 17px;
-
 .wrapper {
   overflow: hidden;
-  max-width: 644px;
-  height: 782px;
+  width: 644px;
+  min-height: 780px;
   background: var(--xc-white);
   padding: 32px;
-  border-radius: $border-radius;
+  border-radius: 8px;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .title {
@@ -140,6 +128,7 @@ $font-size-base: 17px;
     gap: 16px;
     align-self: stretch;
     color: var(--xc-grey500);
+
     :hover {
       color: black;
     }
@@ -161,77 +150,6 @@ $font-size-base: 17px;
   }
 }
 
-
-
-
-
-
-
-
 input[type="radio"] {
   display: none;
-}
-
-#signup:checked~.slide-controls__slider-tab {
-  left: 50%;
-}
-
-
-
-.field {
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
-
-  &__input {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    padding-left: 15px;
-    border-radius: $border-radius;
-    border: 1px solid $border-color;
-    border-bottom-width: 2px;
-    font-size: $font-size-base;
-    transition: all 0.3s ease;
-
-    &:focus {
-      border-color: $secondary-color;
-    }
-
-    &::placeholder {
-      color: #999;
-      transition: all 0.3s ease;
-    }
-  }
-}
-
-.password-container {
-  position: relative;
-
-  &__input {
-    height: 100%;
-    left: 0;
-    position: relative;
-    top: 0;
-  }
-}
-
-.password-requirements {
-  padding-top: 8px;
-  list-style: disc;
-  padding-left: 16px;
-
-  &__title {
-    font-size: 12px;
-    font-weight: 600;
-    left: -16px;
-    list-style-type: none;
-    position: relative;
-  }
-
-  &__item {
-    color: red;
-    font-size: 12px;
-    margin-left: 8px;
-  }
 }
