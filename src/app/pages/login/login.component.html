@@ -1,48 +1,71 @@
-<article class="login">
-  <div class="login-header">
-    <img src="" alt="" />
-    <h1 class="login-header_title">camp</h1>
+
+  <div class="wrapper" >
+    <div class="title">
+      <div class="title-logo"></div>
+      <h1 class="title-h1">Camp</h1>
+    </div>
+    <div class="form-container">
+      <div class="slide_controls">
+        <input type="radio" name="slide" id="login" class="slide_controls-login-inp" checked />
+        <label for="login" class="slide_controls-login">Login</label>
+
+        <input type="radio" name="slide" id="signup" />
+        <label for="signup" class="slide signup">Signup</label>
+
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login">
+          <div class="field">
+            <input id="email" formControlName="email" type="text" placeholder="Email Address" required />
+          </div>
+          <div class="field">
+            <input formControlName="password" type="password" placeholder="Password" required />
+          </div>
+          <div class="pass-link">
+            <input type="button" value="Forgot password?" />
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Login" />
+          </div>
+          <div class="signup-link">
+            Not a member? <a href="">Signup now</a>
+          </div>
+        </form>
+        <form action="#" class="signup">
+          <div class="field">
+            <input formControlName="name" type="text" placeholder="First Name" required />
+          </div>
+          <p class="error-message">Required</p>
+          <div class="field">
+            <input formControlName="lastname" type="text" placeholder="Last Name" required />
+          </div>
+          <p class="error-message">Required</p>
+          <div class="field">
+            <input formControlName="email" type="email" placeholder="Email Address" required />
+          </div>
+          <p class="error-message">Required</p>
+          <div class="field passwordContainer">
+            <input class="passwordInput" formControlName="password" placeholder="Password" required />
+          </div>
+          <ul class="passwordRequirements">
+            <li>Password must contain the following:</li>
+            <li>A letter</li>
+            <li>A capital (uppercase) letter</li>
+            <li>A number</li>
+            <li>A special character (,.*+-/%$#&)</li>
+          </ul>
+          <div class="field passwordContainer">
+            <input class="passwordInput" formControlName="confirm" placeholder="Confirm password" required />
+          </div>
+          <p class="error-message">Password not match</p>
+          <p class="error-message">Required</p>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Signup" />
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="login-tabs">
-    <div class="login-tabs_left">
-      <p>Login</p>
-    </div>
-    <div class="login-tabs_right">
-      <p>SignUp</p>
-    </div>
-  </div>
-  <form action="login-form">
-    <div class="login-form_fields">
-      <span class="login-form_fields_email">
-        <label for="email">Email address</label>
-        <input id="email" type="text" placeholder="name@domain.com" />
-      </span>
-      <span class="login-form_fields_password">
-        <label for="password">Password</label>
-        <input id="password" placeholder="***" />
-      </span>
-    </div>
-    <a href="">Forgot your password?</a>
-    <div class="login-form_log">
-      <button class="login-form_logbtn">Log in</button>
-    </div>
-  </form>
-  <div class="login-meta">
-    <ul class="login-meta_links">
-      <li>
-        <a class="login-meta_data_underline" href="/about"
-          >Learn more about Xcamp</a
-        >
-      </li>
-      <li>
-        <a>Imprint</a>
-      </li>
-      <li>
-        <a>Privacy</a>
-      </li>
-      <li>
-        <a>Terms and conditions</a>
-      </li>
-    </ul>
-  </div>
-</article>
