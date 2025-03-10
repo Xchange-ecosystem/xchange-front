@@ -2,16 +2,14 @@
 $primary-color: #1a75ff;
 $secondary-color: #c7efba;
 $border-color: lightgrey;
-$background-gradient: linear-gradient(
-  to right,
-  #add16f,
-  #b3d578,
-  #b8d881,
-  #bbd888,
-  #c0d69a,
-  #cad7b3
-);
-$border-radius: 15px;
+$background-gradient: linear-gradient(to right,
+    #add16f,
+    #b3d578,
+    #b8d881,
+    #bbd888,
+    #c0d69a,
+    #cad7b3);
+$border-radius: 16px;
 $font-size-base: 17px;
 
 .wrapper {
@@ -19,67 +17,166 @@ $font-size-base: 17px;
   max-width: 644px;
   height: 782px;
   background: var(--xc-white);
-  padding: 30px;
+  padding: 32px;
   border-radius: $border-radius;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
 }
 
 .slide_controls {
-  position: relative;
   display: flex;
-  height: 50px;
-  width: 100%;
-  overflow: hidden;
-  margin: 30px 0 10px;
-  justify-content: space-between;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  &-login{
-    color: black;
+  height: 42px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+
+  &-left {
+    background: var(--xc-gradient-light-grey-on-white);
+    display: flex;
+    padding: 8px 10px 8px 11px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px 0px 0px 8px;
   }
 
-  &__slide {
-    height: 100%;
-    width: 100%;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 48px;
-    cursor: pointer;
-    z-index: 1;
-    transition: all 0.6s ease;
-  }
-
-  &__slider-tab {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    left: 0;
-    z-index: 0;
-    border-radius: $border-radius;
-    background: $background-gradient;
-    transition: all 0.6s ease;
+  &-right {
+    display: flex;
+    padding: 7px 10px 7.5px 11px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 0px 8px 8px 0px;
+    border-radius: 0px 8px 8px 0px;
+    border-top: 1.5px solid var(--Base-Grey-100, #E8EDE9);
+    border-right: 1.5px solid var(--Base-Grey-100, #E8EDE9);
+    border-bottom: 1.5px solid var(--Base-Grey-100, #E8EDE9);
   }
 }
+
+.form-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+  padding-top: 12px;
+
+  &-login {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+
+    &_lab {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &_inp {
+      border-radius: 8px;
+      gap: 4px;
+      padding: 10px 10px 10px 10px;
+      align-items: flex-start;
+      gap: 4px;
+      align-self: stretch;
+      border: 1.5px;
+      border-color: var(--xc-grey200);
+      border-style: solid;
+    }
+  }
+
+  .form-inner-login_inp:focus {
+    outline: none;
+    caret-color: linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%);
+    caret: 2px;
+  }
+
+  &-password {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+
+    &_lab {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &_inp {
+      border-radius: 8px;
+      gap: 4px;
+      padding: 10px 10px 10px 10px;
+      align-items: flex-start;
+      gap: 4px;
+      align-self: stretch;
+      border: 1.5px;
+      border-color: var(--xc-grey200);
+      border-style: solid;
+    }
+  }
+
+  &-forgot {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &-button {
+    background: var(--xc-gradient-light-blue);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    gap: 16px;
+    align-self: stretch;
+    color: var(--xc-grey500);
+    :hover {
+      color: black;
+    }
+  }
+}
+
+.meta-links {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 24px;
+  font-size: 12px;
+  color: black;
+
+  &a {
+    :hover {
+      text-decoration: underline, black;
+    }
+  }
+}
+
+
+
+
+
+
+
 
 input[type="radio"] {
   display: none;
 }
 
-#signup:checked ~ .slide-controls__slider-tab {
+#signup:checked~.slide-controls__slider-tab {
   left: 50%;
 }
 
-.form-container {
-  width: 100%;
-  overflow: hidden;
 
-  &__inner {
-    display: flex;
-    width: 200%;
-  }
-}
 
 .field {
   height: 50px;

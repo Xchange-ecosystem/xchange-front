@@ -1,71 +1,82 @@
-
-  <section class="wrapper" >
+<section class="wrapper">
+  <div>
     <div class="title">
       <div class="title-logo"></div>
       <h1 class="title-h1">Camp</h1>
     </div>
     <div class="form-container">
       <div class="slide_controls">
-        <input type="radio" name="slide" id="login" class="slide_controls-login-inp" checked />
-        <label for="login" class="slide_controls-login">Login</label>
+        <span class="slide_controls-left">
+          <label for="login" class="slide_controls-login">Login</label>
+          <input type="radio" name="slide" id="login" class="slide_controls-login-inp" checked />
+        </span>
 
-        <input type="radio" name="slide" id="signup" />
-        <label for="signup" class="slide signup">Signup</label>
-
+        <span class="slide_controls-right">
+          <label for="signup" class="slide signup">Signup</label>
+          <input type="radio" name="slide" id="signup" />
+        </span>
         <div class="slider-tab"></div>
       </div>
       <div class="form-inner">
-        <form action="#" class="login">
-          <div class="field">
-            <input id="email" formControlName="email" type="text" placeholder="Email Address" required />
+        <form action="#" class="form-inner">
+          <div class="form-inner-login">
+            <label for="email" class="form-inner-login_lab">Email address</label>
+            <input class="form-inner-login_inp" id="email" formControlName="email" type="text"
+              placeholder="name@domain.com" required />
           </div>
-          <div class="field">
-            <input formControlName="password" type="password" placeholder="Password" required />
+          <div class="form-inner-password">
+            <label class="form-inner-password_lab" for="password">Password</label>
+            <input class="form-inner-password_inp" formControlName="password" type="password" placeholder="***"
+              required />
           </div>
-          <div class="pass-link">
-            <input type="button" value="Forgot password?" />
+          <div class="form-inner-forgot">
+            <input type="button" value="Forgot password?" class="form-inner-forgt-inp" />
           </div>
-          <div class="field btn">
+          <div class="form-inner-button">
             <div class="btn-layer"></div>
             <input type="submit" value="Login" />
           </div>
-          <div class="signup-link">
-            Not a member? <a href="">Signup now</a>
-          </div>
         </form>
-        <form action="#" class="signup">
-          <div class="field">
-            <input formControlName="name" type="text" placeholder="First Name" required />
-          </div>
-          <p class="error-message">Required</p>
-          <div class="field">
-            <input formControlName="lastname" type="text" placeholder="Last Name" required />
-          </div>
-          <p class="error-message">Required</p>
-          <div class="field">
-            <input formControlName="email" type="email" placeholder="Email Address" required />
-          </div>
-          <p class="error-message">Required</p>
-          <div class="field passwordContainer">
-            <input class="passwordInput" formControlName="password" placeholder="Password" required />
-          </div>
-          <ul class="passwordRequirements">
-            <li>Password must contain the following:</li>
-            <li>A letter</li>
-            <li>A capital (uppercase) letter</li>
-            <li>A number</li>
-            <li>A special character (,.*+-/%$#&)</li>
-          </ul>
-          <div class="field passwordContainer">
-            <input class="passwordInput" formControlName="confirm" placeholder="Confirm password" required />
-          </div>
-          <p class="error-message">Password not match</p>
-          <p class="error-message">Required</p>
-          <div class="field btn">
-            <div class="btn-layer"></div>
-            <input type="submit" value="Signup" />
-          </div>
-        </form>
+        <!-- <form action="#" class="signup">
+        <div class="field">
+          <input formControlName="name" type="text" placeholder="First Name" required />
+        </div>
+        <p class="error-message">Required</p>
+        <div class="field">
+          <input formControlName="lastname" type="text" placeholder="Last Name" required />
+        </div>
+        <p class="error-message">Required</p>
+        <div class="field">
+          <input formControlName="email" type="email" placeholder="Email Address" required />
+        </div>
+        <p class="error-message">Required</p>
+        <div class="field passwordContainer">
+          <input class="passwordInput" formControlName="password" placeholder="Password" required />
+        </div>
+        <ul class="passwordRequirements">
+          <li>Password must contain the following:</li>
+          <li>A letter</li>
+          <li>A capital (uppercase) letter</li>
+          <li>A number</li>
+          <li>A special character (,.*+-/%$#&)</li>
+        </ul>
+        <div class="field passwordContainer">
+          <input class="passwordInput" formControlName="confirm" placeholder="Confirm password" required />
+        </div>
+        <p class="error-message">Password not match</p>
+        <p class="error-message">Required</p>
+        <div class="field btn">
+          <div class="btn-layer"></div>
+          <input type="submit" value="Signup" />
+        </div>
+      </form> -->
       </div>
     </div>
-  </section>
+  </div>
+  <div class="meta-links">
+    <a href="/">Learn more about Xcamp</a>
+    <a href="/">Imprint</a>
+    <a href="/">Privacy</a>
+    <a href="/">Terms and conditions</a>
+  </div>
+</section>
