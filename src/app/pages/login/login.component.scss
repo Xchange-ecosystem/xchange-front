@@ -1,13 +1,108 @@
-login {
+.login {
+  display: flex;
+  width: 644px;
+  height: 782px;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: var(--xc-white);
+  box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.14);
+  &-header{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color:#ffff00;
-
-    &-form{
+      height: 48px;
+      padding: 16px 0px 16px 4px;
+      align-items: center;
+      gap: 6px;
+      align-self: stretch;
+      h1 {
+        overflow: hidden;
+        color: #111;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+      }
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    align-self: stretch;
+    &_tabs {
+      display: flex;
+      height: 42px;
+      align-items: center;
+      align-self: stretch;
+      &_left {
         display: flex;
-        flex-direction: column;
-        color: blue;
+        padding: 8px 10px 8px 11px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex: 1 0 0;
+        border-radius: 8px 0 0 8px;
+        font-size: 14px;
+        background: var(--xc-gradient-light-grey-on-white);
+        color: #111; // cambiar por variable mal creada
+        font-weight: 500;
+        line-height: 20px;
+      }
+      &_right {
+        display: flex;
+        padding: 6px 10px 6px 11px; // ajuste de padding para cumplir figma
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex: 1 0 0;
+        border-radius: 0 8px 8px 0;
+        border-top: 1.5px solid var(--xc-grey100);
+        border-right: 1.5px solid var(--xc-grey100);
+        border-bottom: 1.5px solid var(--xc-grey100);
+        color: var(--xc-grey500);
+        font-size: 14px;
+      }
     }
+    &_fields {
+      height: 100%;
+    }
+    &_log {
+      display: flex;
+      
+      justify-content: flex-end;
+      align-items: flex-end;
+      gap: 16px;
+      align-self: stretch;
+      opacity: 0.4;
+      &_logbtn {
+        display: flex;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex: 1 0 0;
+        border-radius: 8px;
+        background: var(--xc-gradient-light-blue);
+      }
+    }
+  }
+  &-meta {
+    display: flex;
+    padding-top: 277px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: stretch;
+    &_links {
+      display: flex ;
+      gap:24px;
+      &_underline{
+        text-decoration: underline black;
+      }
+    }
+  }
 }

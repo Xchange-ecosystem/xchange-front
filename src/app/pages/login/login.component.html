@@ -1,32 +1,48 @@
-
-
 <article class="login">
-    <form action="login-form">
-    <div class="login-form_header">
-        <img src="" alt="">
-        <h1 class="login-form_header__title">Camp</h1>
+  <div class="login-header">
+    <img src="" alt="" />
+    <h1 class="login-header_title">camp</h1>
+  </div>
+  <div class="login-tabs">
+    <div class="login-tabs_left">
+      <p>Login</p>
     </div>
-    <div class="login-form_tabs">
-        <button>Login</button>
-        <button>SignUp</button>
+    <div class="login-tabs_right">
+      <p>SignUp</p>
     </div>
+  </div>
+  <form action="login-form">
     <div class="login-form_fields">
-        <span>
-            <label for="email">Email address</label>
-            <input id="email" type="text" placeholder="name@domain.com">
-        </span>
-        <span>
-            <label for="password">Password</label>
-            <input id="password" placeholder="***">
-        </span>
+      <span class="login-form_fields_email">
+        <label for="email">Email address</label>
+        <input id="email" type="text" placeholder="name@domain.com" />
+      </span>
+      <span class="login-form_fields_password">
+        <label for="password">Password</label>
+        <input id="password" placeholder="***" />
+      </span>
     </div>
     <a href="">Forgot your password?</a>
-    <button class="login-form_logbtn">Log in</button>
-    </form>
-    <div>
-        <a>Learn more about Xcamp</a>
-        <a>Imprint</a>
-        <a>Privacy</a>
-        <a>Terms and conditions</a>
+    <div class="login-form_log">
+      <button class="login-form_logbtn">Log in</button>
     </div>
+  </form>
+  <div class="login-meta">
+    <ul class="login-meta_links">
+      <li>
+        <a class="login-meta_data_underline" href="/about"
+          >Learn more about Xcamp</a
+        >
+      </li>
+      <li>
+        <a>Imprint</a>
+      </li>
+      <li>
+        <a>Privacy</a>
+      </li>
+      <li>
+        <a>Terms and conditions</a>
+      </li>
+    </ul>
+  </div>
 </article>
