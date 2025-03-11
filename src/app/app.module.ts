@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { NavigatorUsersFilterModule, CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, AsideNavModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { NavigatorUsersFilterModule, CardInsightsModule, CardTasksIndicatorModule, CarButtonViewModule, ProjectProgressBarModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { CommunityComponent } from "./pages/community/community.component";
+import {MainHeadingModule} from "../../projects/ngx-xchange-ui/src/directives/main-heading/main-heading.module";
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { NavigatorUsersFilterModule, CardInsightsModule, CardTasksIndicatorModul
     CarButtonViewModule,
     CardTasksIndicatorModule,
     CarButtonViewModule,
-    AsideNavModule,
     ProjectProgressBarModule,
-    NavigatorUsersFilterModule
-  ],
+    NavigatorUsersFilterModule,
+    CommunityComponent,
+    MainHeadingModule,
+],
   providers: [],
   bootstrap: [AppComponent]
 })
