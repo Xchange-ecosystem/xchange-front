@@ -17,10 +17,11 @@
           <label for="signup" class="slide signup">Signup</label>
           <input type="radio" name="slide" id="signup" />
         </span>
+
         <div class="slider-tab"></div>
       </div>
       <div class="form-inner">
-        <form action="#" class="form-inner">
+        <!-- <form action="#" class="form-inner">
           <div class="form-inner-login">
             <label for="email" class="form-inner-login_lab">Email address</label>
             <input class="form-inner-login_inp" id="email" formControlName="email" type="text"
@@ -28,8 +29,10 @@
           </div>
           <div class="form-inner-password">
             <label class="form-inner-password_lab" for="password">Password</label>
-            <input class="form-inner-password_inp" formControlName="password" type="password" placeholder="***"
-              required />
+            <span class="form-inner-password_span">
+              <input class="form-inner-password_inp" formControlName="password" type="password" placeholder="***" required />
+              <img class="form-inner-password_eye" src="/assets/icons/u_eye.svg" alt="password_eye">
+            </span>            
           </div>
           <div class="form-inner-forgot">
             <input type="button" value="Forgot password?" class="form-inner-forgt-inp" />
@@ -38,40 +41,51 @@
             <div class="btn-layer"></div>
             <input type="submit" value="Log in" />
           </div>
-        </form>
-        <!-- <form action="#" class="signup">
-        <div class="field">
-          <input formControlName="name" type="text" placeholder="First Name" required />
+        </form> -->
+        <form action="#" class="form-inner_signup">
+          <div class="form-inner-login">
+            <label for="first-name" class="form-inner-login_lab">First Name</label>
+            <input class="form-inner-login_inp" id="name" formControlName="name" type="text"
+              placeholder="John" required />
+          </div>
+        <!-- <p class="error-message">Required</p> -->
+        <div class="form-inner-login">
+          <label for="email" class="form-inner-login_lab">Last Name</label>
+          <input class="form-inner-login_inp" id="lastname" formControlName="lastname" type="text"
+            placeholder="Doe" required />
         </div>
-        <p class="error-message">Required</p>
-        <div class="field">
-          <input formControlName="lastname" type="text" placeholder="Last Name" required />
+        <!-- <p class="error-message">Required</p> -->
+        <div class="form-inner-login">
+          <label for="email" class="form-inner-login_lab">Email address</label>
+          <input class="form-inner-login_inp" id="sign-email" formControlName="sign-email" type="text"
+            placeholder="your@name.com" required />
         </div>
-        <p class="error-message">Required</p>
-        <div class="field">
-          <input formControlName="email" type="email" placeholder="Email Address" required />
+        <!-- <p class="error-message">Required</p> -->
+        <div class="form-inner-login">
+          <label for="password" class="form-inner-login_lab">Password</label>
+          <input class="form-inner-login_inp" id="sign-password" formControlName="sign-password" type="text"
+            placeholder="****" required />
         </div>
-        <p class="error-message">Required</p>
-        <div class="field passwordContainer">
-          <input class="passwordInput" formControlName="password" placeholder="Password" required />
+        <div class="form-inner-login">
+          <label for="rep-password" class="form-inner-login_lab">Repeat password</label>
+          <input class="form-inner-login_inp" id="repe-password" formControlName="repe-password" type="text"
+            placeholder="****" required />
         </div>
-        <ul class="passwordRequirements">
+        <!-- <ul class="passwordRequirements">
           <li>Password must contain the following:</li>
           <li>A letter</li>
           <li>A capital (uppercase) letter</li>
           <li>A number</li>
           <li>A special character (,.*+-/%$#&)</li>
-        </ul>
-        <div class="field passwordContainer">
-          <input class="passwordInput" formControlName="confirm" placeholder="Confirm password" required />
-        </div>
-        <p class="error-message">Password not match</p>
-        <p class="error-message">Required</p>
-        <div class="field btn">
+        </ul> -->
+        <!-- <p class="error-message">Password not match</p>
+        <p class="error-message">Required</p> -->
+
+        <div class="form-inner-button">
           <div class="btn-layer"></div>
-          <input type="submit" value="Signup" />
+          <input type="submit" value="Sign Up" />
         </div>
-      </form> -->
+      </form>
       </div>
     </div>
   </div>
