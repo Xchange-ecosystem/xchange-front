@@ -1,1 +1,15 @@
-<p>aside-links works!</p>
+<a href="" class="container" xcAsideLink>
+  <div *ngIf="iconName !== 'default'" class="container_iconLabel">
+    <span [ngSwitch]="iconName" class="container_icon">
+      <xc-icon-wifi *ngSwitchCase="'wifi'" />
+      <xc-icon-rocket *ngSwitchCase="'rocket'" />
+      <xc-icon-users-alt *ngSwitchCase="'community'" />
+      <xc-icon-chart-bar *ngSwitchCase="'dashboard'" />
+      <xc-icon-setting *ngSwitchCase="'admin'" />
+    </span>
+    <label>{{label}}</label>
+  </div>
+  <div class="container_arrowSelection">
+    <xc-icon-angle-right />
+  </div>
+</a>

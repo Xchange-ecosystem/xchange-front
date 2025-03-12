@@ -1,0 +1,51 @@
+/* .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    color: #666;
+} */
+
+.navigation-label {
+    font-size: 14px;
+}
+
+.container {
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.container_icon{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.container:hover {
+    cursor: pointer;
+    box-shadow: var(--xc-boxShadow-500);
+}
+
+.container_iconLabel {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.container_icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    stroke: black;
+    fill: black;
+}
+
+.container_arrowSelection {
+    width: 24px;
+    stroke: black;
+}
