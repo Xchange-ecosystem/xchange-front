@@ -1,4 +1,4 @@
-.profile{
+.profile {
   display: flex;
   background: var(--xc-gradient-light-grey-on-white);
   flex-wrap: wrap;
@@ -6,12 +6,26 @@
   column-gap: 32px;
 }
 
+.profile_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .profile__image-wrapper-test {
   width: 110px;
   height: 110px;
 }
 
-.tag-wrapper{
+.tag-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,16 +33,21 @@
   gap: 6px;
 }
 
-.profile__collabs{
-  width: 20%;
+.profile_icons_wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.profile_collabs {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.profile__collabs-info{
+.profile__collabs-info {
   display: flex;
   justify-content: space-between;
-  
+  gap: 4px;
 }
 
 .profile__collabs-icon-wrapper {
@@ -40,12 +59,23 @@
   width: 30px;
   height: 30px;
   padding: 9px;
-  transform: translate(50%, -50%);
+
 }
 
 .profile__collabs-icon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  color: black;
+  fill: black;
+}
+
+.profile__collab-icon-svg {
+  fill: currentColor;
+  stroke: black;
+}
+
+.profile__collab-icon-svg-link{
+  fill: black;
+  stroke: black;
+  background: black ;
 }
