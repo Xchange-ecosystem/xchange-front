@@ -1,19 +1,34 @@
-.profile__image-wrapper {
+.profile{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  align-self: center;
-  border-radius: 110px;
-  background: url("https://xsgames.co/randomusers/assets/avatars/male/36.jpg")
-    no-repeat center center; /* Cambia la ruta a la imagen que desees usar */
-  background-size: cover;
+  background: var(--xc-gradient-light-grey-on-white);
+  flex-wrap: wrap;
+  row-gap: 27px;
+  column-gap: 32px;
+}
+
+.profile__image-wrapper-test {
   width: 110px;
   height: 110px;
 }
 
-.profile__image {
-  display: none;
+.tag-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 6px;
+}
+
+.profile__collabs{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__collabs-info{
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .profile__collabs-icon-wrapper {
