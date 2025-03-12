@@ -1,0 +1,32 @@
+<aside class="aside-nav">
+    <header class="aside-nav__header">
+        <img src="/assets/img/X-Vector.webp" alt="Xchange-logo" class="aside-nav__logo">
+        <h2 class="aside-nav__title">camp</h2>
+    </header>
+    <div class="aside-nav__tabs">
+        <button class="aside-nav__active-tab">Ecosystem</button>
+        <button class="aside-nav__nonact-tab">Project</button>  
+    </div>
+
+    <nav class="aside-nav__menu">
+        <a *ngFor="let item of navItems" [href]="item.link" class="aside-nav__item">
+            <span class="aside-nav__icon">
+                <ng-container [ngSwitch]="item.icon">
+                    <xc-icon-rocket *ngSwitchCase="'xc-icon-rocket'"></xc-icon-rocket>
+                    <i *ngSwitchDefault class="icon icon-{{item.icon}}"></i>
+                </ng-container>
+            </span>
+            <span class="aside-nav__label">{{ item.label }}</span>
+        </a>
+    </nav>
+
+    <nav class="aside-nav__bottom-menu">
+        <a *ngFor="let item of bottomNavItems" [href]="item.link" class="aside-nav__item">
+            <span class="aside-nav__icon">
+                <!-- Using a placeholder for icons -->
+                <i class="icon icon-{{item.icon}}"></i>
+            </span>
+            <span class="aside-nav__label">{{ item.label }}</span>
+        </a>
+    </nav>
+</aside>
