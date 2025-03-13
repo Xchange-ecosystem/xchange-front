@@ -1,38 +1,54 @@
 <aside class="aside-nav">
-    <header class="aside-nav__header">
-        <img src="/assets/img/X-Vector.webp" alt="Xchange-logo" class="aside-nav__logo">
-        <h2 class="aside-nav__title">camp</h2>
-    </header>
-    <div class="aside-nav__tabs">
-        <button class="aside-nav__active-tab">Ecosystem</button>
-        <button class="aside-nav__nonact-tab">Project</button>
+    <div class="temp">
+        <header class="aside-nav__header">
+            <img src="/assets/img/X-Vector.webp" alt="Xchange-logo" class="aside-nav__logo">
+            <h2 class="aside-nav__title">camp</h2>
+        </header>
+        <div class="aside-nav__tabs">
+            <button class="aside-nav__active-tab">Ecosystem</button>
+            <button class="aside-nav__nonact-tab">Project</button>
+        </div>
+        <nav class="aside-nav__menu">
+            <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/projects'" [label]="'Projects'" iconName="rocket">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/community'" [label]="'Community'" iconName="community">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/admin'" [label]="'Admin'" iconName="admin">
+            </xc-aside-links>
+        </nav>
     </div>
-
-    <nav class="aside-nav__menu">
-        <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi">
-        </xc-aside-links>
-        <xc-aside-links [route]="'/projects'" [label]="'Projects'" iconName="rocket">
-        </xc-aside-links>
-        <xc-aside-links [route]="'/community'" [label]="'Community'" iconName="community">
-        </xc-aside-links>
-        <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard">
-        </xc-aside-links>
-        <xc-aside-links [route]="'/admin'" [label]="'Admin'" iconName="admin">
-        </xc-aside-links>
-    </nav>
-
-    <nav class="aside-nav__bottom-menu" *ngFor="let user of users" >
-        <a href="/profile" class="user_profile">
-            <xc-rounded-image [marginSize]=0 [image]="user.imageUrl" class="buttom-image"/>
-            <p>My profile</p>
-        </a>
-        <a href="/support" class="">
-            <xc-icon-question-circle/>
-            <p>Support</p>
-        </a>
-        <a href="/logout">
-            <img src="/assets/icons/fi_log-out.svg" alt="logout_icon">
-            <p>Logout</p>
-        </a>
+    <nav class="aside-nav__bottom-menu" *ngFor="let user of users">
+        <button href="/profile" class="user_profile">
+            <span class="img_wrapper">
+                <!-- <xc-rounded-image [marginSize]=0 [image]="user.imageUrl" class="buttom-image" /> -->
+                <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="user_image" class="user_img">
+                <p>My profile</p>
+            </span>
+            <span class="arrow_wrapper">
+                <xc-icon-angle-right class="arrow_icon"/>
+            </span>
+        </button>
+        <button href="/support" class="support_wrapper">
+            <span class="support_span">
+                <xc-icon-question-circle class="support_icon" />
+                <p>Support</p>
+            </span>
+            <span class="arrow_wrapper">
+                <xc-icon-angle-right class="arrow_icon"/>
+            </span>
+        </button>
+        <button href="/logout" class="logout_wrapper">
+            <span class="logout_span">
+                <img src="/assets/icons/fi_log-out.svg" alt="logout_icon" class="logout_icon">
+                <p>Logout</p>
+            </span>
+            <span class="arrow_wrapper">
+                <xc-icon-angle-right class="arrow_icon"/>
+            </span>
+        </button>
     </nav>
 </aside>

@@ -2,12 +2,20 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    justify-content: space-between;
     gap: 19px;
     width: 270px;
     height: 100%;
     background-color: var(--xc-white);
     padding: 16px;
     border-radius: 8px;
+}
+
+.temp{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
 }
 
 .aside-nav__header {
@@ -88,34 +96,80 @@
     font-size: 14px;
 }
 
-.aside-nav__label {
-    font-size: 14px;
-}
-
 .aside-nav__bottom-menu {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Ajuste de 8px a 12px */
+    justify-content: space-around;
+    height: 20%;
+    align-items: start;
     width: 100%;
-    align-items: flex-start; /* Asegura alineación correcta */
-}
-
-.aside-nav__bottom-menu a {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* Espaciado uniforme entre icono y texto */
-    width: 100%;
-    text-decoration: none;
 }
 
 .user_profile {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 8px;
+    border-radius: 120px;
     width: 100%;
 }
 
-.buttom-image {
-    flex-shrink: 0; /* Evita que la imagen se deforme */
+.user_img {
+  width: 24px;
+  height: 24px;
+    border-radius: 12px;
 }
 
+.img_wrapper {
+    
+    display: flex;
+    gap: 8px;
+}
+
+.arrow_wrapper{
+    width: 24px;
+    height: 24px;
+    stroke: black;
+}
+
+.arrow_icon{
+    width: 24px;
+    height: 24px;
+    stroke: black;
+}
+
+
+
+.support_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+
+.support_span{
+    display: flex;
+    gap: 8px;
+}
+
+.support_icon{
+    width: 24px;
+    height: 24px;
+    stroke: black;
+}
+
+.logout_wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logout_span{
+    display: flex;
+    gap: 8px;
+}
+.logout_icon{
+    width: 24px;
+    height: 24px;
+    stroke: black;
+}

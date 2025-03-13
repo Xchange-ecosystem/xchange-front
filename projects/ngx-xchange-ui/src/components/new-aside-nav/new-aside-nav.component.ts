@@ -3,10 +3,12 @@ import { AsideLinksComponent } from 'projects/ngx-xchange-ui/src/components/asid
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { NgFor } from '@angular/common';
 import { XcIconQuestionCircleComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
+
 @Component({
   selector: 'xc-new-aside-nav',
   standalone: true,
-  imports: [AsideLinksComponent, RoundedImageModule,NgFor, XcIconQuestionCircleComponent],
+  imports: [AsideLinksComponent, RoundedImageModule,NgFor, XcIconQuestionCircleComponent,XcIconAngleRightComponent],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css'
 })
