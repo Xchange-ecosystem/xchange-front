@@ -21,9 +21,9 @@ export class AsideLinkDirective {
     this.renderer.setStyle(element, 'alignSelf', 'stretch');
   }
 
-  @HostListener('mouseover') onMouseOver() {
-    this.renderer.setStyle(this.el.nativeElement, 'background', 'var(--xc-gradient-light-grey-on-white)');
-  }
+  // @HostListener('mouseover') onMouseOver() {
+  //   this.renderer.setStyle(this.el.nativeElement, 'background', 'var(--xc-gradient-light-grey-on-white)');
+  // }
 
   @HostListener('mouseout') onMouseOut() {
     this.renderer.removeStyle(this.el.nativeElement, 'background');

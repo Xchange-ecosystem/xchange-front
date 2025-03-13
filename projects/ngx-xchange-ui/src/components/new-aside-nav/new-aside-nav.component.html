@@ -5,29 +5,34 @@
     </header>
     <div class="aside-nav__tabs">
         <button class="aside-nav__active-tab">Ecosystem</button>
-        <button class="aside-nav__nonact-tab">Project</button>  
+        <button class="aside-nav__nonact-tab">Project</button>
     </div>
 
     <nav class="aside-nav__menu">
-        <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi" >
+        <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi">
         </xc-aside-links>
-        <xc-aside-links [route]="'/projects'" [label]="'Projects'" iconName="rocket" >
+        <xc-aside-links [route]="'/projects'" [label]="'Projects'" iconName="rocket">
         </xc-aside-links>
-        <xc-aside-links [route]="'/community'" [label]="'Community'" iconName="community" >
+        <xc-aside-links [route]="'/community'" [label]="'Community'" iconName="community">
         </xc-aside-links>
-        <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard" >
+        <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard">
         </xc-aside-links>
-        <xc-aside-links [route]="'/admin'" [label]="'Admin'" iconName="admin" >
+        <xc-aside-links [route]="'/admin'" [label]="'Admin'" iconName="admin">
         </xc-aside-links>
     </nav>
 
-    <nav class="aside-nav__bottom-menu">
-        <a *ngFor="let item of bottomNavItems" [href]="item.link" class="aside-nav__item">
-            <span class="aside-nav__icon">
-                <!-- Using a placeholder for icons -->
-                <i class="icon icon-{{item.icon}}"></i>
-            </span>
-            <span class="aside-nav__label">{{ item.label }}</span>
+    <nav class="aside-nav__bottom-menu" *ngFor="let user of users" >
+        <a href="/profile" class="user_profile">
+            <xc-rounded-image [marginSize]=0 [image]="user.imageUrl" class="buttom-image"/>
+            <p>My profile</p>
+        </a>
+        <a href="/support" class="">
+            <xc-icon-question-circle/>
+            <p>Support</p>
+        </a>
+        <a href="/logout">
+            <img src="/assets/icons/fi_log-out.svg" alt="logout_icon">
+            <p>Logout</p>
         </a>
     </nav>
 </aside>

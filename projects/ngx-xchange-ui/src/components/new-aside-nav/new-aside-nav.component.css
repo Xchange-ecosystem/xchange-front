@@ -4,7 +4,7 @@
     align-items: start;
     gap: 19px;
     width: 270px;
-    height: auto;
+    height: 100%;
     background-color: var(--xc-white);
     padding: 16px;
     border-radius: 8px;
@@ -72,8 +72,6 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* padding: 16px 0; */
-    /* overflow-y: auto; */
     width: 100%;
 }
 
@@ -90,7 +88,34 @@
     font-size: 14px;
 }
 
-.aside-nav__bottom-menu {
-    padding: 16px 0;
-    border-top: 1px solid #e0e0e0;
+.aside-nav__label {
+    font-size: 14px;
 }
+
+.aside-nav__bottom-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Ajuste de 8px a 12px */
+    width: 100%;
+    align-items: flex-start; /* Asegura alineación correcta */
+}
+
+.aside-nav__bottom-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaciado uniforme entre icono y texto */
+    width: 100%;
+    text-decoration: none;
+}
+
+.user_profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.buttom-image {
+    flex-shrink: 0; /* Evita que la imagen se deforme */
+}
+
