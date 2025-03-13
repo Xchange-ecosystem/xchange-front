@@ -6,6 +6,7 @@ import { RoundedImageModule } from 'projects/ngx-xchange-ui/src/components/round
 import { MainHeadingModule } from '../../directives/main-heading/main-heading.module';
 import { NgFor, NgIf } from '@angular/common';
 import { UserProfileModalComponent } from '../user-profile-modal/user-profile-modal.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'xc-community-cards',
   standalone: true,
@@ -18,7 +19,7 @@ import { UserProfileModalComponent } from '../user-profile-modal/user-profile-mo
     NgFor,
     NgIf,
     UserProfileModalComponent
-  ],
+],
   templateUrl: './community-cards.component.html',
   styleUrl: './community-cards.component.css',
 })
