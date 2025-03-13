@@ -1,11 +1,11 @@
 <a href="" class="container" xcAsideLink>
   <div *ngIf="iconName !== 'default'" class="container_iconLabel">
     <span [ngSwitch]="iconName" class="container_icon">
-      <xc-icon-wifi *ngSwitchCase="'wifi'" />
+      <xc-icon-wifi *ngSwitchCase="'wifi'" class="wifi-rotate"/>
       <xc-icon-rocket *ngSwitchCase="'rocket'" />
       <xc-icon-users-alt *ngSwitchCase="'community'" />
-      <xc-icon-chart-bar *ngSwitchCase="'dashboard'" />
-      <xc-icon-setting *ngSwitchCase="'admin'" />
+      <xc-icon-chart *ngSwitchCase="'dashboard'" />
+      <xc-icon-setting *ngSwitchCase="'admin'" class="setting-stroke"/>
     </span>
     <label>{{label}}</label>
   </div>
