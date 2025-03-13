@@ -20,8 +20,8 @@ import {
 })
 export class SortByComponent {
   isDropdownOpen = false;
-  selectedOption = 'Newest';
-  sortOptions = ['Newest', 'Oldest', 'Alphabetical'];
+  selectedOption = '';
+  sortOptions = ['Alphabet A-Z', 'Alphabet Z-A', 'Collaborations'];
 
   toggleDropdown(event: Event): void {
     event.stopPropagation();
