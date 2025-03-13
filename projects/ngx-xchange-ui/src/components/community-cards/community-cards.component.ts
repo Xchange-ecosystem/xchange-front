@@ -5,6 +5,7 @@ import {ProfileTagsDirective} from 'projects/ngx-xchange-ui/src/directives/profi
 import { RoundedImageModule } from 'projects/ngx-xchange-ui/src/components/rounded-image/rounded-image.module';
 import { MainHeadingModule } from '../../directives/main-heading/main-heading.module';
 import { NgFor, NgIf } from '@angular/common';
+import { UserProfileModalComponent } from '../user-profile-modal/user-profile-modal.component';
 @Component({
   selector: 'xc-community-cards',
   standalone: true,
@@ -16,7 +17,7 @@ import { NgFor, NgIf } from '@angular/common';
     MainHeadingModule,
     NgFor,
     NgIf,
-    
+    UserProfileModalComponent
   ],
   templateUrl: './community-cards.component.html',
   styleUrl: './community-cards.component.css',
