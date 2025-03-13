@@ -1,0 +1,37 @@
+<section class="sort-container">
+  <div class="sort-wrapper">
+    <p class="sort-text">Sort by</p>
+    <div class="dropdown">
+      <button class="sort-button" (click)="toggleDropdown($event)">
+        <span class="sort-button__selected">{{ selectedOption }}</span>
+        <xc-icon-angle-down
+          [ngClass]="{ 'arrow-down--open': isDropdownOpen }"
+          class="arrow-down"
+        />
+      </button>
+      <div
+        class="dropdown__menu"
+        [ngClass]="{ 'dropdown__menu--open': isDropdownOpen }"
+      >
+        <button
+          *ngFor="let option of sortOptions"
+          class="dropdown__item"
+          [ngClass]="{ 'dropdown__item--active': selectedOption === option }"
+          (click)="selectOption(option)"
+        >
+          {{ option }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="refresh-wrapper">
+    <button class="refresh-button">
+      <xc-icon-refresh class="refresh-icon" />
+    </button>
+  </div>
+  <div class="search-wrapper">
+    <button class="search-button">
+      <xc-icon-search class="search-icon" />
+    </button>
+  </div>
+</section>

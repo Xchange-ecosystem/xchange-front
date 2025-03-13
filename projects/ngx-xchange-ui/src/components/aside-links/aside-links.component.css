@@ -1,11 +1,4 @@
-/* .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 12px;
-    height: 12px;
-    color: #666;
-} */
+
 
 .navigation-label {
     font-size: 14px;
@@ -13,7 +6,7 @@
 
 .container {
     align-items: center;
-    background-color: white;
+
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -48,4 +41,21 @@
 .container_arrowSelection {
     width: 24px;
     stroke: black;
+}
+
+.notification {
+  display: none;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  right: 24px; /* Adjust based on your layout */
+  top: 0;
+}
+
+/* Active state - will be shown when applied */
+.notification--active {
+    background: #B8FBFF;
+  display: block;
 }
