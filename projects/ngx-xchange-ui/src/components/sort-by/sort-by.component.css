@@ -1,7 +1,12 @@
 .sort-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
+
+  background: var(--xc-white);
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .sort-wrapper {
@@ -9,11 +14,12 @@
   align-items: center;
   gap: 8px;
   position: relative;
+  padding: 11px 8px;
 }
 
 .sort-text {
   font-size: 14px;
-  color: var(--xc-grey500, #6b7280);
+  color: var(--xc-grey500);
   margin: 0;
 }
 
@@ -30,12 +36,13 @@
 }
 
 .sort-button__selected {
-  color: var(--xc-grey900, #111827);
+fill: black;
 }
 
 .arrow-down {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
+  stroke:black ;
   transition: transform 0.2s ease;
 }
 
@@ -49,8 +56,8 @@
 
 .dropdown__menu {
   position: absolute;
-  top: calc(100% + 4px);
-  right: 0;
+  top: calc(100% + 20px);
+  right: 10px;
   width: 160px;
   background-color: white;
   border-radius: 6px;
@@ -101,5 +108,12 @@
 .search-icon {
   width: 16px;
   height: 16px;
-  color: var(--xc-grey500, #6b7280);
+  stroke: black;
+  /* stroke-width: 0.9px; */
+}
+
+
+.right-options{
+display: flex;
+gap: 8px;
 }
