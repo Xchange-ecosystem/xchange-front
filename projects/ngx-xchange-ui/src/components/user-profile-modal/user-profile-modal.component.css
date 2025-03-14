@@ -2,14 +2,15 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 100%;
+  width: 1216px;
+  height: 811px;
   overflow: hidden;
 }
 
 .top-image-cover{
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 240px;
   overflow: hidden;
 }
 
@@ -26,34 +27,72 @@
   position: relative;
   z-index: 10;
   background: var();
-  padding: 20px;
   border-radius: 20px 20px 0 0;
   margin-top: -60px;
 }
+
+.user-data-name{
+  font-family: Manrope;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+}
+
 
 .profile-wrapper{
   display: flex;
   flex-direction: column;
 }
 
+.user-profile-image{
+  width: 200px;
+  height: 200px;
+}
+
 .top-content{
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: space-between;
+  padding-left: 44px;
+  padding-right: 44px;
 }
 
 .user-data-card{
   display: flex;
   flex-direction: column;
   background: white;
-  padding-top: 100px;
-  padding-left: 40px;
+  border-radius: 8px;
+  padding: 32px;
+  gap: 24PX;
+}
+
+.user-data-achievements{
+  display: flex;
+  gap: 24px;
+}
+
+.number-flex{
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.achievements-1
+.achievements-2{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.achievements-number{
+font-size: 32px;
+font-weight: 600;
 }
 
 .user-image-wrapper{
 display: flex;
-align-items: end;
-justify-content: end;
+/* align-items: end;
+justify-content: end; */
 }
 
 .user-image-container{
@@ -62,15 +101,37 @@ justify-content: end;
 
 .user-information{
   display: flex;
-  flex-direction: column;
   align-items: start;
   gap: 4px;
+  width: 100%;
+  padding-left: 44px;
+  padding-right: 44px;
+  margin-top: 32px;
+}
+
+.about-me{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 4px;
+  background: white;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.about-me-h5{
+  font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
 }
 
 .more-information{
   display: flex;
   flex-direction: column;
   align-items: start;
+
 }
 
 .more-information-data{
