@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 1216px;
-  height: 811px;
+
   overflow: hidden;
+  border-radius: 16px;
 }
 
 .top-image-cover {
@@ -28,7 +28,7 @@
   z-index: 10;
   background: var();
   border-radius: 20px 20px 0 0;
-  margin-top: -60px;
+  margin-top: -100px;
 }
 
 .user-data-name {
@@ -36,11 +36,6 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-}
-
-.profile-wrapper {
-  display: flex;
-  flex-direction: column;
 }
 
 .user-profile-image {
@@ -53,6 +48,19 @@
   justify-content: space-between;
   padding-left: 44px;
   padding-right: 44px;
+  flex-wrap: wrap-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .top-content {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 38px;
+  }
 }
 
 .user-data-card {
@@ -78,6 +86,12 @@
   top: 140px;
 }
 
+@media screen and (max-width: 768px) {
+  .achievements-1::after {
+    display: none;
+  }
+}
+
 .number-flex {
   display: flex;
   justify-content: start;
@@ -96,14 +110,9 @@
   font-weight: 600;
 }
 
-.user-image-wrapper {
-  display: flex;
-  /* align-items: end;
-justify-content: end; */
-}
-
 .user-image-container {
-  border-radius: 24px;
+  width: 200px;
+  height: 200px;
 }
 
 .user-information {
@@ -114,12 +123,30 @@ justify-content: end; */
   padding-left: 44px;
   padding-right: 44px;
   margin-top: 32px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 900px) {
+  .user-information {
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-top: 14px;
+  }
 }
 
 .about-me {
   text-align: start;
-padding: 24px;
-gap: 16px
+  padding: 24px;
+  gap: 16px;
+  min-height: 400px;
+}
+
+@media screen and (max-width: 900px) {
+  .about-me {
+    width: 100%;
+    min-height: auto;
+  }
 }
 
 .about-me-h5 {
@@ -131,20 +158,32 @@ gap: 16px
 
 .more-information {
   align-items: start;
-  justify-content: space-between
+  min-height: 400px;
+  gap: 16px;
 }
 
 .about-me,
 .more-information {
-  flex: 1; /* Ambas ocupan el 50% del espacio */
+  flex: 1;
   display: flex;
   flex-direction: column;
   background: white;
   border-radius: 8px;
 }
 
-.more-information{
-  padding: 24px
+@media screen and (max-width: 798px) {
+  .more.information {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+.about-me-text {
+  overflow-y: scroll;
+}
+
+.more-information {
+  padding: 24px;
 }
 
 .more-information-h5 {
@@ -157,40 +196,78 @@ gap: 16px
 .more-information-data {
   display: flex;
   flex-direction: column;
-
-  gap: 8px;
+  gap: 16px;
 }
 
 .interest-talents-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 6px;
+}
+
+.talents-p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
 }
 
 .interest-talents-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 6px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.tabs-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.member-since-wrapper {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
 }
 
 .member-date {
   font-weight: 200;
 }
 
+.linkedin-wrapper,
 .email-wrapper {
   display: flex;
   flex-direction: column;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
 }
-
+.linkedin-data,
 .email-data {
   display: flex;
+  gap: 4px;
+}
+.linkedin-icon,
+.email-icon {
+  stroke: black;
+  width: 20px;
+  height: 20px;
 }
 
-.linkedin-wrapper {
+.user-email {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.close-button {
+  background: var(--xc-white);
   display: flex;
   flex-direction: column;
-}
-
-.linkedin-data {
-  display: flex;
+  justify-content: center;
+  align-items: center;
 }

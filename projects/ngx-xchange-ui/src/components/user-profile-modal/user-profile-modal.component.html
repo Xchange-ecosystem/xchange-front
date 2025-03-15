@@ -1,33 +1,37 @@
-<section class="modal-wrapper">
+<section class="modal-wrapper" *ngFor="let user of users">
   <article class="top-image-cover">
-    <img src="assets/img/user-modal-background.webp" alt="backgroun-modal" class="user-background-modal">
+    <img
+      src="assets/img/user-modal-background.webp"
+      alt="backgroun-modal"
+      class="user-background-modal"
+    />
   </article>
   <article class="profile-content">
     <div class="top-content">
       <section class="user-data-wrapper">
         <div class="user-data-card">
           <span class="user-data-name">
-            <h4>Fabian Feitu</h4>
+            <h4>{{ user.name }} ({{ user.company }})</h4>
           </span>
           <span class="user-data-achievements">
             <div class="achievements-1">
               <div class="number-flex">
-                <span class="achievements-number">11</span> 
+                <span class="achievements-number">{{ user.completedObj }}</span>
                 <p>completed objectives</p>
               </div>
               <div class="number-flex">
-                <span class="achievements-number">50</span> 
+                <span class="achievements-number">{{ user.activeObj }}</span>
                 <p>active objectives</p>
               </div>
             </div>
             <div class="achievements-2">
               <div class="number-flex">
-                <span class="achievements-number">18</span> 
+                <span class="achievements-number">{{ user.nextSteps }}</span>
                 <p>next steps</p>
               </div>
               <div class="number-flex">
-                <span class="achievements-number">10</span>
-                <p> involved projects</p>
+                <span class="achievements-number">{{ user.invProyects }}</span>
+                <p>involved projects</p>
               </div>
             </div>
           </span>
@@ -35,7 +39,8 @@
       </section>
       <section class="user-image-wrapper">
         <div class="user-image-container">
-          <img src="/assets/img/user-image-profile.png" alt="user-profile-image" class="user-profile-image">
+          <!-- <img src="/assets/img/user-image-profile.png" alt="user-profile-image" class="user-profile-image"> -->
+          <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
         </div>
       </section>
     </div>
@@ -43,32 +48,44 @@
       <section class="about-me">
         <h5 class="about-me-h5">About me</h5>
         <p name="about-me-text">
-          I founded COBIOM as a network of professionals who believe that collaboration and cocreation our our best tools to transform businesses into agents for a better future. As Director and head of strategy and product development, me and my great team develop the COBIOM ecosystem as a consultancy, coworking and learning platform that provides end-to-end services from intent to implementation in innovation and business transformation.
+          {{ user.description }}
         </p>
       </section>
       <section class="more-information">
         <h5 class="more-information-h5">More information</h5>
         <div class="more-information-data">
           <span class="interest-talents-wrapper">
-            <p>Interest talents</p>
-            <div class="interest-talents-tabs"></div>
+            <p class="talents-p">Interest talents</p>
+            <div class="tabs-wrapper">
+              <p *ngFor="let tag of user.tags" xcProfileTags="'gray'">{{ tag }}</p>
+            </div>
           </span>
           <span class="member-since-wrapper">
             <p>Member since</p>
-            <p class="member-date">7 Aug.2024</p>
+            <p class="member-date">{{user.memberDate}}</p>
           </span>
           <span class="email-wrapper">
             <p>Email</p>
             <div class="email-data">
-              <img src="" alt="" class="email-icon">
-              <p>testmail</p>
+              <!-- <xc-icon-envelope class="email-icon"/> -->
+              <img
+                src="assets/icons/u_envelope.svg"
+                alt="email-icon"
+                class="email-icon"
+              />
+              <p class="user-email">{{user.email}}</p>
             </div>
           </span>
           <span class="linkedin-wrapper">
             <p>Linkedin</p>
             <div class="linkedin-data">
-              <img src="" alt="" class="linkedin-icon">
-              <p>linkedin.com/lorem</p>
+              <!-- <xc-icon-linkedin class="linkedin-icon"/> -->
+              <img
+                src="assets/icons/u_linkedin.svg"
+                alt="linkedin-icon"
+                class="linkedin-icon"
+              />
+              <p>{{user.linkedin}}</p>
             </div>
           </span>
         </div>
