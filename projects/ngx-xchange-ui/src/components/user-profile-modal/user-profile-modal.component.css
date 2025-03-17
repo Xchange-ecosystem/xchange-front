@@ -172,7 +172,7 @@
 }
 
 @media screen and (max-width: 798px) {
-  .more.information {
+  .more-information {
     width: 100%;
     min-height: auto;
   }
