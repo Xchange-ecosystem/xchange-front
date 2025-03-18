@@ -8,18 +8,21 @@
     </div>
     <div class="form-container">
       <div class="slide_controls">
-        <span class="slide_controls-left" (click)="toggleSlide('login')">
+        <button class="slide_controls-left" (click)="toggleSlide('login')"
+          [class.active]="selectedOption === 'login'">
           <label for="login" class="slide_controls-login">Login</label>
-          <input type="radio" name="slide" id="login" class="slide_controls-login-inp" checked [(ngModel)]="selectedOption" value="login" />
-        </span>
-
-        <span class="slide_controls-right" (click)="toggleSlide('signup')">
+          <input type="radio" name="slide" id="login" class="slide_controls-login-inp" />
+      </button>
+      
+        <button class="slide_controls-right" (click)="toggleSlide('signup')"
+          [class.active]="selectedOption === 'signup'">
           <label for="signup" class="slide signup">Signup</label>
-          <input type="radio" name="slide" id="signup" [(ngModel)]="selectedOption" value="signup"/>
-        </span>
-
-        <div class="slider-tab" [ngStyle]="{'transform': selectedOption === 'signup' ? 'translateX(100%)' : 'translateX(0)'}"></div>
+          <input type="radio" name="slide" id="signup"/>
+      </button>
+      
+        <div class="slider-tab" [class.signup]="selectedOption === 'signup'"></div>
       </div>
+      
       <div class="form-inner">
         <form action="#" class="form-inner">
           <div class="form-inner-login">

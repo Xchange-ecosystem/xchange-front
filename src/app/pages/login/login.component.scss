@@ -42,6 +42,8 @@
   align-self: stretch;
   justify-content: space-between;
   margin-top: 24px;
+  flex: 1 0 0;
+  position: relative;
   border-radius: 8px;
 
   &-left {
@@ -68,6 +70,18 @@
     border-right: 1.5px solid var(--Base-Grey-100, #E8EDE9);
     border-bottom: 1.5px solid var(--Base-Grey-100, #E8EDE9);
   }
+}
+
+.slider-tab {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-tab.signup {
+  transform: translateX(100%);
 }
 
 .form-inner {
@@ -137,6 +151,12 @@
       border-style: solid;
       width: 100%;
     }
+    
+    .form-inner-password_inp:focus {
+      outline: none;
+      caret-color: linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%);
+      caret: 2px;
+    }
 
     &_eye {
       position: absolute;
@@ -189,7 +209,6 @@ input[type="radio"] {
 }
 
 //Sign Up styles
-
 .form-inner_signup {
   display: flex;
   flex-direction: column;
