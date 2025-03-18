@@ -37,17 +37,15 @@
 
 .slide_controls {
   display: flex;
-  height: 42px;
+  padding: 8px 10px;
+  justify-content: center;
   align-items: center;
-  align-self: stretch;
-  justify-content: space-between;
-  margin-top: 24px;
+  gap: 8px;
   flex: 1 0 0;
-  position: relative;
   border-radius: 8px;
+  position: relative;
 
   &-left {
-    background: var(--xc-gradient-light-grey-on-white);
     display: flex;
     padding: 8px 10px 8px 11px;
     justify-content: center;
@@ -55,21 +53,36 @@
     gap: 8px;
     flex: 1 0 0;
     border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s;
   }
 
   &-right {
     display: flex;
-    padding: 7px 10px 7.5px 11px;
+    padding: 8px 10px 8px 11px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     flex: 1 0 0;
-    border-radius: 0px 8px 8px 0px;
-    border-radius: 0px 8px 8px 0px;
-    border-top: 1.5px solid var(--Base-Grey-100, #E8EDE9);
-    border-right: 1.5px solid var(--Base-Grey-100, #E8EDE9);
-    border-bottom: 1.5px solid var(--Base-Grey-100, #E8EDE9);
+    border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s;
   }
+}
+
+.slide_controls-left,
+.slide_controls-right {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, color 0.3s;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.slide_controls-left.active,
+.slide_controls-right.active {
+  background: var(--xc-gradient-light-grey-on-white);
+  color: black;
 }
 
 .slider-tab {

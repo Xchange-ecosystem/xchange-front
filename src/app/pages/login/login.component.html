@@ -10,13 +10,13 @@
       <div class="slide_controls">
         <button class="slide_controls-left" (click)="toggleSlide('login')"
           [class.active]="selectedOption === 'login'">
-          <label for="login" class="slide_controls-login">Login</label>
+          <p for="login" class="slide_controls-login">Login</p>
           <input type="radio" name="slide" id="login" class="slide_controls-login-inp" />
       </button>
       
         <button class="slide_controls-right" (click)="toggleSlide('signup')"
           [class.active]="selectedOption === 'signup'">
-          <label for="signup" class="slide signup">Signup</label>
+          <p for="signup" class="slide signup">Signup</p>
           <input type="radio" name="slide" id="signup"/>
       </button>
       
