@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { BehaviorSubject, ShareReplayConfig } from 'rxjs';
 
 type SelectOptions = {
@@ -27,9 +27,9 @@ export class NavigatorObjectiveStatusFilterComponent {
 
   resetSelectOptions(){
     this.selectOptions = {
-      suggestions: false,
-      open: false,
-      complete: false,
+      suggestions: true,
+      open: true,
+      complete: true,
       notOpen: false,
     }
     this.selectOptionsChange.emit(this.selectOptions)
