@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Button400Component } from './button-400/button-400.component';
-import { XcIconAngleLeftComponent, XcIconCloseSComponent, XcIconMoreThreeDots, XcIconAIComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleLeftComponent, XcIconCloseSComponent, XcIconMoreThreeDots, XcIconAIComponent, XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
 
 
 
@@ -12,7 +12,8 @@ import { XcIconAngleLeftComponent, XcIconCloseSComponent, XcIconMoreThreeDots, X
     XcIconMoreThreeDots,
     XcIconAngleLeftComponent,
     XcIconCloseSComponent,
-    XcIconAIComponent
+    XcIconAIComponent,
+    XcIconCheckComponent
 ],
   exports: [
     Button400Component
