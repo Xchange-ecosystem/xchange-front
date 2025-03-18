@@ -8,17 +8,17 @@
     </div>
     <div class="form-container">
       <div class="slide_controls">
-        <span class="slide_controls-left">
+        <span class="slide_controls-left" (click)="toggleSlide('login')">
           <label for="login" class="slide_controls-login">Login</label>
-          <input type="radio" name="slide" id="login" class="slide_controls-login-inp" checked />
+          <input type="radio" name="slide" id="login" class="slide_controls-login-inp" checked [(ngModel)]="selectedOption" value="login" />
         </span>
 
-        <span class="slide_controls-right">
+        <span class="slide_controls-right" (click)="toggleSlide('signup')">
           <label for="signup" class="slide signup">Signup</label>
-          <input type="radio" name="slide" id="signup" />
+          <input type="radio" name="slide" id="signup" [(ngModel)]="selectedOption" value="signup"/>
         </span>
 
-        <div class="slider-tab"></div>
+        <div class="slider-tab" [ngStyle]="{'transform': selectedOption === 'signup' ? 'translateX(100%)' : 'translateX(0)'}"></div>
       </div>
       <div class="form-inner">
         <form action="#" class="form-inner">
