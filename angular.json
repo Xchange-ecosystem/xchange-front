@@ -95,8 +95,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "projects/ngx-xchange-ui/src/directives/card-measures/card-measures.directive.css"
+              "src/styles.scss"
+              
             ],
             "scripts": []
           }
