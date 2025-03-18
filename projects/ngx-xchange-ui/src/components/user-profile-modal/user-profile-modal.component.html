@@ -1,5 +1,5 @@
 <!-- xcProfileHeader-->
-<section  *ngFor="let user of users" > 
+<section xcProfileHeader *ngFor="let user of users" > 
   <article class="top-image-cover">
     <img
       src="assets/img/user-modal-background.webp"
@@ -59,6 +59,7 @@
             <p class="talents-p">Interest talents</p>
             <div class="tabs-wrapper">
               <p *ngFor="let tag of user.tags" xcProfileTags="'gray'">{{ tag }}</p>
+              
             </div>
           </span>
           <span class="member-since-wrapper">

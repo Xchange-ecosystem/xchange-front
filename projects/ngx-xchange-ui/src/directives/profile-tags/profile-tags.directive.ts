@@ -1,98 +1,58 @@
 import {
   Directive,
   ElementRef,
-  Renderer2,
   Input,
-  OnInit,
   OnChanges,
+  Renderer2,
   SimpleChanges,
 } from '@angular/core';
-
 @Directive({
   selector: '[xcProfileTags]',
   standalone: true,
 })
-export class ProfileTagsDirective implements OnInit, OnChanges {
-  @Input() tagType: 'yellow' | 'gray'|'green' | 'purple' | 'accepted'  = 'gray'; // Valores permitidos
+export class ProfileTagsDirective implements OnChanges {
+  @Input() xcProfileTags = '';
+
+  // Map of color names to their CSS values
+  private colorMap: Record<string, string> = {
+    gray: 'var(--xc-grey100)',
+    green: 'var(--xc-Completed)',
+    purple: 'var(--xc-Suggestion)',
+    yellow: 'var(--xc-Progress)',
+  };
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  ngOnInit(): void {
-    this.setStyles();
-  }
-
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['tagType']) {
-      this.setStyles();
+    if (changes['xcProfileTags']) {
+      this.applyColor();
     }
   }
 
-  private setStyles(): void {
-    switch (this.tagType) {
-      case 'gray':
-        this.renderer.setStyle(this.el.nativeElement,'background-color','var(--xc-grey100)');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-top', '6px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-bottom', '7px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-left', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-right', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
-        this.renderer.setStyle(this.el.nativeElement, 'font-size', 'var(--xc-Copy-200-Bold-font-size)');
-        this.renderer.setStyle(this.el.nativeElement, 'color','var(--xc-grey500)');
-        this.renderer.setStyle(this.el.nativeElement, 'font-weight', 'var(--xc-Copy-200-Bold-font-weight)');
-        this.renderer.setStyle(this.el.nativeElement, 'line-height', 'var(--xc-Copy-200-Medium-line-Height)');
-        this.renderer.setStyle(this.el.nativeElement, 'text-align', 'center');
-      break;
-      case 'green':
-        this.renderer.setStyle(this.el.nativeElement,'background-color','var(--xc-Completed)');
-        this.renderer.setStyle(this.el.nativeElement, 'opacity', '15%');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-top', '6px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-bottom', '7px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-left', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-right', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
-        this.renderer.setStyle(this.el.nativeElement, 'font-size', 'var(--xc-Copy-200-Bold-font-size)');
-        this.renderer.setStyle(this.el.nativeElement, 'color','var(--xc-Completed)');
-        this.renderer.setStyle(this.el.nativeElement, 'font-weight', 'var(--xc-Copy-200-Bold-font-weight)');
-        this.renderer.setStyle(this.el.nativeElement, 'line-height', 'var(--xc-Copy-200-Medium-line-Height)');
-      break;
-      case 'yellow':
-        this.renderer.setStyle(this.el.nativeElement,'background-color','var(--xc-Progress)');
-        this.renderer.setStyle(this.el.nativeElement, 'display', 'relative');
-        this.renderer.setStyle(this.el.nativeElement, 'opacity', '50%');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-top', '6px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-bottom', '7px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-left', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-right', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
-        this.renderer.setStyle(this.el.nativeElement, 'font-size', 'var(--xc-Copy-200-Bold-font-size)');
-        this.renderer.setStyle(this.el.nativeElement, 'color','var(--xc-Yellow-Tag)');
-        this.renderer.setStyle(this.el.nativeElement, 'font-weight', 'var(--xc-Copy-200-Bold-font-weight)');
-        this.renderer.setStyle(this.el.nativeElement, 'line-height', 'var(--xc-Copy-200-Medium-line-Height)');
-      break;
-      case 'purple':
-        this.renderer.setStyle(this.el.nativeElement,'background-color','var(--xc-Suggestion)');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-top', '6px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-bottom', '7px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-left', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-right', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
-        this.renderer.setStyle(this.el.nativeElement, 'font-size', 'var(--xc-Copy-200-Bold-font-size)');
-        this.renderer.setStyle(this.el.nativeElement, 'color','var(--xc-white)');
-        this.renderer.setStyle(this.el.nativeElement, 'font-weight', 'var(--xc-Copy-200-Bold-font-weight)');
-        this.renderer.setStyle(this.el.nativeElement, 'line-height', 'var(--xc-Copy-200-Medium-line-Height)');
-      break;
-      case 'accepted':
-        this.renderer.setStyle(this.el.nativeElement,'background-color','var(--xc-Accepted)');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-top', '6px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-bottom', '7px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-left', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'padding-right', '10px');
-        this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
-        this.renderer.setStyle(this.el.nativeElement, 'font-size','var(--xc-Tags-Font-14)');
-        this.renderer.setStyle(this.el.nativeElement, 'color','var(--xc-white)');
-        this.renderer.setStyle(this.el.nativeElement, 'font-weight', 'var(--xc-Copy-200-Bold-font-weight)');
-        this.renderer.setStyle(this.el.nativeElement, 'line-height', 'var(--xc-Copy-200-Medium-line-Height)');
-      break;
-    }
+  private applyColor(): void {
+    const color = this.xcProfileTags.toLowerCase();
+    const backgroundColor = this.colorMap[color] || this.colorMap['default'];
+
+    // Apply the background color
+    this.renderer.setStyle(
+      this.el.nativeElement,
+      'background-color',
+      backgroundColor
+    );
+
+    // Apply text color (dark for light backgrounds, light for dark backgrounds)
+    const isDarkBackground = ['purple', 'green'].includes(color);
+    const textColor = isDarkBackground ? 'white' : 'var(--xc-grey500)';
+    this.renderer.setStyle(this.el.nativeElement, 'color', textColor);
+
+    // Add some padding for better appearance
+    this.renderer.setStyle(
+      this.el.nativeElement,
+      'padding',
+      '6px 10px 7px 10px'
+    );
+    this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
+    this.renderer.setStyle(this.el.nativeElement, 'font-size', '12px');
+    this.renderer.setStyle(this.el.nativeElement, 'font-weight', '700');
   }
 }

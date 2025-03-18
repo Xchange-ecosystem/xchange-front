@@ -8,7 +8,8 @@
        <div class="name_tags-wrapper">
         <h1 xcMainHeading="Headline400">{{user.name}}</h1>
         <div class="tag-wrapper">
-          <p *ngFor="let tag of user.tags" xcProfileTags="gray">{{tag}}</p>
+          <!-- <p *ngFor="let tag of user.tags" xcProfileTags="gray">{{tag}}</p> -->
+          <div xcProfileTags="gray" class="example-item" *ngFor="let tag of user.tags">{{tag}}</div>
         </div>
        </div>
         <p xcMainHeading="Copy400Regular" >{{user.description}}</p>
