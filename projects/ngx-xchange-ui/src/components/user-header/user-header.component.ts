@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
 
 @Component({
   selector: 'xc-user-header',
   standalone: true,
-  imports: [RoundedImageModule,NgFor],
+  imports: [RoundedImageModule,NgFor ,ProfileHeaderDirective],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css'
 })

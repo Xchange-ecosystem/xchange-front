@@ -1,46 +1,48 @@
-<article class="top-image-cover">
-  <img
-    src="assets/img/user-modal-background.webp"
-    alt="backgroun-modal"
-    class="user-background-modal"
-  />
-</article>
-<article class="profile-content" *ngFor="let user of users">
-  <div class="top-content">
-    <section class="user-data-wrapper">
-      <div class="user-data-card">
-        <span class="user-data-name">
-          <h4>{{ user.name }} ({{ user.company }})</h4>
-        </span>
-        <span class="user-data-achievements">
-          <div class="achievements-1">
-            <div class="number-flex">
-              <span class="achievements-number">{{ user.completedObj }}</span>
-              <p>completed objectives</p>
+<section xcProfileHeader>
+  <article class="top-image-cover">
+    <img
+      src="assets/img/user-modal-background.webp"
+      alt="backgroun-modal"
+      class="user-background-modal"
+    />
+  </article>
+  <article class="profile-content" *ngFor="let user of users">
+    <div class="top-content">
+      <section class="user-data-wrapper">
+        <div class="user-data-card">
+          <span class="user-data-name">
+            <h4>{{ user.name }} ({{ user.company }})</h4>
+          </span>
+          <span class="user-data-achievements">
+            <div class="achievements-1">
+              <div class="number-flex">
+                <span class="achievements-number">{{ user.completedObj }}</span>
+                <p>completed objectives</p>
+              </div>
+              <div class="number-flex">
+                <span class="achievements-number">{{ user.activeObj }}</span>
+                <p>active objectives</p>
+              </div>
             </div>
-            <div class="number-flex">
-              <span class="achievements-number">{{ user.activeObj }}</span>
-              <p>active objectives</p>
+            <div class="achievements-2">
+              <div class="number-flex">
+                <span class="achievements-number">{{ user.nextSteps }}</span>
+                <p>next steps</p>
+              </div>
+              <div class="number-flex">
+                <span class="achievements-number">{{ user.invProyects }}</span>
+                <p>involved projects</p>
+              </div>
             </div>
-          </div>
-          <div class="achievements-2">
-            <div class="number-flex">
-              <span class="achievements-number">{{ user.nextSteps }}</span>
-              <p>next steps</p>
-            </div>
-            <div class="number-flex">
-              <span class="achievements-number">{{ user.invProyects }}</span>
-              <p>involved projects</p>
-            </div>
-          </div>
-        </span>
-      </div>
-    </section>
-    <section class="user-image-wrapper">
-      <div class="user-image-container">
-        <!-- <img src="/assets/img/user-image-profile.png" alt="user-profile-image" class="user-profile-image"> -->
-        <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
-      </div>
-    </section>
-  </div>
-</article>
+          </span>
+        </div>
+      </section>
+      <section class="user-image-wrapper">
+        <div class="user-image-container">
+          <!-- <img src="/assets/img/user-image-profile.png" alt="user-profile-image" class="user-profile-image"> -->
+          <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
+        </div>
+      </section>
+    </div>
+  </article>
+</section>
