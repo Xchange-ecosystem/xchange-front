@@ -1,3 +1,5 @@
+@import  "../../dist/ngx-xchange-ui/src/assets/css/base.css";
+ 
 :root{
     --xc-black500: #b8cd1a;
     --xc-black400: #343434;
@@ -11,7 +13,7 @@
     --xc-brand-medium-green: #A4F8C0;
     --xc-brand-medium-blue: #47E3E3;
     --xc-brand-gradient-green: #78F7AD;
-    --xc-brand-light-gree: #A4F8C0;
+    --xc-brand-light-green: #A4F8C0;
     --xc-brand-light-blue: #B8FBFF;
     --xc-gradient-light-green: linear-gradient(289deg, rgba(219, 224, 220, 0.70) 26.17%, rgba(232, 237, 233, 0.60) 78.35%);
     --xc-gradient-light-grey-on-white: linear-gradient(289deg, rgba(219, 224, 220, 0.40) 26.17%, rgba(232, 237, 233, 0.30) 78.35%);
