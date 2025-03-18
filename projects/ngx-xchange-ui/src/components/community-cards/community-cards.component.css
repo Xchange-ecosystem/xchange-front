@@ -99,6 +99,38 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.test {
+  width: 75%;
+  border-radius: 16px;
+  background: white;
+  
+  transform: scale(0.8); /* Inicia más pequeño */
+  opacity: 0; /* Inicia transparente */
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animación para el modal */
+@keyframes slideIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-content {

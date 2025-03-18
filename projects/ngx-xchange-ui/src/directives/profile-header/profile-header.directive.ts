@@ -17,5 +17,6 @@ export class ProfileHeaderDirective {
     this.renderer.setStyle(element, 'position', 'relative');
     this.renderer.setStyle(element, 'overflow', 'hidden');
     this.renderer.setStyle(element, 'border-radius', '16px');
+
   }
 }

@@ -48,14 +48,5 @@
 </section>
 
 <section class="modal-overlay" *ngIf="selectedUser" (click)="closeModal()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <button class="close-btn" (click)="closeModal()">✖</button>
-    <h2>{{ selectedUser.name }}</h2>
-    <img [src]="selectedUser.imageUrl" alt="Profile Image">
-    <p>{{ selectedUser.description }}</p>
-    <ul>
-      <li *ngFor="let tag of selectedUser.tags">{{ tag }}</li>
-    </ul>
-  </div>
-  <xc-user-profile-modal />
+  <xc-user-profile-modal [user]="selectedUser" class="test"/>
 </section>
