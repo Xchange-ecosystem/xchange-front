@@ -58,7 +58,7 @@
           <span class="interest-talents-wrapper">
             <p class="talents-p">Interest talents</p>
             <div class="tabs-wrapper">
-              <p *ngFor="let tag of user.tags" xcProfileTags="'gray'">{{ tag }}</p>
+              <div xcProfileTags="gray" class="example-item" *ngFor="let tag of user.tags">{{tag}}</div>
               
             </div>
           </span>
