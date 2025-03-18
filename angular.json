@@ -31,8 +31,7 @@
             ],
             "styles": [
               "src/assets/css/styles.scss",
-              "src/styles/styles.css",
-              "projects/ngx-xchange-ui/src/directives/card-measures/card-measures.directive.css"
+              "src/styles/styles.css"
             ],
             "scripts": []
           },

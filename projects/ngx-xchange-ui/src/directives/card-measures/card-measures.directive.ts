@@ -1,15 +1,13 @@
 import { Directive, ElementRef, HostBinding, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
-import { APP_CSS_STYLES } from './styles';
+
 
 @Directive({
   selector: '[xcCardMeasures]',
   standalone: true
 })
 export class CardMeasuresDirective{
-  @HostBinding('class')private cssClass = '';
-  @Input() set xcCardMeasures(klass: string | number) {
-    this.cssClass = APP_CSS_STYLES[klass] || APP_CSS_STYLES['userCard'];
-  }
+
+
   constructor(private el: ElementRef, private renderer: Renderer2) {
     this.setStyles();
   }
