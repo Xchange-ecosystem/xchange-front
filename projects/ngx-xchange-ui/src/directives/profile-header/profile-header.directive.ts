@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, ElementRef, Renderer2, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 
 @Directive({
   selector: '[xcProfileHeader]',
@@ -6,13 +6,17 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
 })
 export class ProfileHeaderDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {
-    this.setStyles();
+    this.applyStyles()
   }
-  private setStyles() {
-    this.renderer.setStyle(this.el.nativeElement, 'display', 'flex');
-    this.renderer.setStyle(this.el.nativeElement, 'flex-direction', 'column');
-    this.renderer.setStyle(this.el.nativeElement, 'position', 'relative');
-    this.renderer.setStyle(this.el.nativeElement, 'overflow', 'hidden');
-    this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
+
+  private applyStyles() {
+    const element = this.el.nativeElement;
+
+    this.renderer.setStyle(element, 'display', 'flex');
+    this.renderer.setStyle(element, 'flex-direction', 'column');
+    this.renderer.setStyle(element, 'position', 'relative');
+    this.renderer.setStyle(element, 'overflow', 'hidden');
+    this.renderer.setStyle(element, 'border-radius', '16px');
+    this.renderer.setStyle(element, 'background', 'yellow');
   }
 }

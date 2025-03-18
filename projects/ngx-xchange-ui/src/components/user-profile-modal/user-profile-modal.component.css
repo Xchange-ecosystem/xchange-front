@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 16px;
+  background: red;
 }
 
 .top-image-cover {
