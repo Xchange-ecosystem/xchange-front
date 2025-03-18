@@ -7,9 +7,7 @@ import { UserProfileModalComponent } from 'projects/ngx-xchange-ui/src/component
 @Component({
   selector: 'app-community',
   standalone: true,
-  imports: [CommunityCardsComponent,
-    NewAsideNavComponent,SortByComponent, UserProfileModalComponent
-  ],
+  imports: [CommunityCardsComponent,NewAsideNavComponent,SortByComponent, UserProfileModalComponent],
   templateUrl: './community.component.html',
   styleUrl: './community.component.scss'
 })

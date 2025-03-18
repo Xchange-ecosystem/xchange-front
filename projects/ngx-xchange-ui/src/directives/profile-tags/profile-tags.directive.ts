@@ -18,17 +18,16 @@ export class ProfileTagsDirective implements OnInit, OnChanges {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    this.setStyles(); // Aplica estilos al inicio
+    this.setStyles();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['tagType']) {
-      this.setStyles(); // Aplica estilos cuando cambia `tagType`
+      this.setStyles();
     }
   }
 
   private setStyles(): void {
-    // Estilos dinámicos según `tagType`
     switch (this.tagType) {
       case 'gray':
         this.renderer.setStyle(this.el.nativeElement,'background-color','var(--xc-grey100)');
