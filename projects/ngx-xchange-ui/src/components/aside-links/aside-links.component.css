@@ -1,16 +1,5 @@
-
-
 .navigation-label {
     font-size: 14px;
-}
-
-.container {
-    align-items: center;
-
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 16px;
 }
 
 .container_icon{
