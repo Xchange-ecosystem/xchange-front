@@ -1,3 +1,6 @@
+# 0.1.10 19/03/2025
+* (refactor) Clear rating bar component
+
 # 0.1.9 19/03/2025
 * (feature) Add input type attribute to xc-button-400 
 
