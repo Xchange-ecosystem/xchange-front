@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { AsideLinksComponent } from 'projects/ngx-xchange-ui/src/components/aside-links/aside-links.component';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { XcIconQuestionCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-new-aside-nav',
   standalone: true,
-  imports: [AsideLinksComponent, RoundedImageModule,NgFor, XcIconQuestionCircleComponent,XcIconAngleRightComponent],
+  imports: [AsideLinksComponent, RoundedImageModule,NgFor, XcIconQuestionCircleComponent,XcIconAngleRightComponent, NgClass, NgIf],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css'
 })
 export class NewAsideNavComponent {
+  activeTab: string = 'ecosystem';
   public users = [
     {
       name: 'John Doe',
@@ -24,4 +25,7 @@ export class NewAsideNavComponent {
       linkedin:"https://www.linkedin.com/in/john-doe"
     },
   ];
+  setActiveTab(tab: string): void {
+    this.activeTab = tab;
+  }
 }

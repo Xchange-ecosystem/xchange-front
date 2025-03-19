@@ -5,10 +5,10 @@
             <h2 class="aside-nav__title">camp</h2>
         </header>
         <div class="aside-nav__tabs">
-            <button class="aside-nav__tab aside-nav__tab--active">Ecosystem</button>
-            <button class="aside-nav__tab aside-nav__tab--inactive">Project</button>
-        </div>
-        <nav class="aside-nav__menu">
+            <button class="aside-nav__tab" [ngClass]="{'aside-nav__tab--active': activeTab === 'ecosystem'}" (click)="setActiveTab('ecosystem')">Ecosystem</button>
+            <button class="aside-nav__tab" [ngClass]="{'aside-nav__tab--active': activeTab === 'project'}" (click)="setActiveTab('project')">Project</button>
+          </div>
+        <nav class="aside-nav__menu" *ngIf="activeTab === 'ecosystem'">
             <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi">
             </xc-aside-links>
             <xc-aside-links [route]="'/projects'" [label]="'Projects'" iconName="rocket">
