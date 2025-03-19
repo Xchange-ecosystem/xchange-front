@@ -1,5 +1,8 @@
+# 0.1.9 19/03/2025
+* (feature) Add input type attribute to xc-button-400 
+
 # 0.1.8 18/03/2025
-* (fix navigator statius filter)
+* (fix) navigator statius filter
 * (change) color name on root file
 * (add) type on button 400 
 
