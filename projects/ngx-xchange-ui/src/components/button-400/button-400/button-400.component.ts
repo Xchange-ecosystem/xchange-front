@@ -8,6 +8,7 @@ import { ButtonType } from 'projects/ngx-xchange-ui/src/types';
 })
 export class Button400Component implements OnChanges {
   @Input() type: string;
+  @Input() inputType: string;
   @Input() description: string;
   @Output() onClick = new EventEmitter<Event>;
   @Input() full: boolean = false;
@@ -15,6 +16,7 @@ export class Button400Component implements OnChanges {
 
   constructor() {
     this.type = '';
+    this.inputType = 'submit';
     this.description = '';
   }
   ngOnChanges(changes: SimpleChanges): void {
