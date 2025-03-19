@@ -4,10 +4,11 @@ import { NewAsideNavComponent } from 'projects/ngx-xchange-ui/src/components/new
 import { SortByComponent } from 'projects/ngx-xchange-ui/src/components/sort-by/sort-by.component';
 import { UserHeaderComponent } from 'projects/ngx-xchange-ui/src/components/user-header/user-header.component';
 import { ChatTextComponent } from 'projects/ngx-xchange-ui/src/components/chat-text/chat-text.component'
+import { ChatOptionsButtonComponent } from 'projects/ngx-xchange-ui/src/components/chat-options-button/chat-options-button.component';
 @Component({
   selector: 'app-community',
   standalone: true,
-  imports: [ChatTextComponent,CommunityCardsComponent,NewAsideNavComponent,SortByComponent,UserHeaderComponent],
+  imports: [CommunityCardsComponent,NewAsideNavComponent,SortByComponent,UserHeaderComponent,ChatOptionsButtonComponent],
   templateUrl: './community.component.html',
   styleUrl: './community.component.scss'
 })

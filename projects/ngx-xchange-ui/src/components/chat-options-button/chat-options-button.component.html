@@ -1,0 +1,9 @@
+<button class="wrapper">
+    <div *ngIf="iconName !== 'default'" class="icon-wrapper">
+        <span [ngSwitch]="iconName" class="icon-span" >
+            <xc-icon-rocket *ngSwitchCase="'rocket'" class="icon-meassures"/>
+            <xc-icon-megaphone *ngSwitchCase="'megaphone'"  class="icon-meassures"/>
+        </span>
+        <p class="option-label">{{label}}</p>
+    </div>
+</button>

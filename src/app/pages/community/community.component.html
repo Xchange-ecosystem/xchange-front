@@ -22,8 +22,28 @@
       <div class="wrapper_content_item">
         <h5 class="sub-title">Organizer</h5>
         <div class="wrapper_content_item-organizer">
-          
-           aqui ira chat
+          <!-- <xc-chat-text/> -->
+          <section class="message-wrapper">
+            <div class="avatar-wrapper">
+              <img src="assets/icons/Avatar.svg" alt="" />
+            </div>
+            <div class="bot-message-wrapper">
+              <p class="message">
+                Hello, I am Scotty. I am here to help you with the realization
+                of your ideas. What would you like to do?
+              </p>
+            </div>
+          </section>
+          <section class="options-input">
+            <div class="icons-container">
+              <xc-chat-options-button [label]="'Go to projects'" iconName="rocket"/>
+              <xc-chat-options-button [label]="'Make an announcement'" iconName="megaphone"/>
+              <xc-chat-options-button [label]="'Start new project'" iconName="rocket"/>
+            </div>
+            <div>
+              <input type="text" class="user-message" />
+            </div>
+          </section>
         </div>
       </div>
       <div class="wrapper_content_item">

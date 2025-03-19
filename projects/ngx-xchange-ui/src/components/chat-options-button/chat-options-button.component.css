@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+  gap: 10px;
+}
+
+.icon-span {
+  width: 40px;
+  height: 40px;
+  border-radius: 32px;
+  background: var(--xc-gradient-medium-green);
+}
+
+.icon-meassures {
+  width: 21px;
+  height: 21px;
+  fill: white;
+  stroke: white;
+}
