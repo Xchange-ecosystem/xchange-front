@@ -6,7 +6,7 @@
         </header>
         <div class="aside-nav__tabs">
             <button class="aside-nav__tab" [ngClass]="{'aside-nav__tab--active': activeTab === 'ecosystem'}" (click)="setActiveTab('ecosystem')">Ecosystem</button>
-            <button class="aside-nav__tab" [ngClass]="{'aside-nav__tab--active': activeTab === 'project'}" (click)="setActiveTab('project')">Project</button>
+            <button class="aside-nav__tab-right" [ngClass]="{'aside-nav__tab--active': activeTab === 'project'}" (click)="setActiveTab('project')">Project</button>
           </div>
         <nav class="aside-nav__menu" *ngIf="activeTab === 'ecosystem'">
             <xc-aside-links [route]="'/feed'" [label]="'Feed'" iconName="wifi">
@@ -18,6 +18,20 @@
             <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard">
             </xc-aside-links>
             <xc-aside-links [route]="'/admin'" [label]="'Admin'" iconName="admin">
+            </xc-aside-links>
+        </nav>
+        <nav class="aside-nav__menu" *ngIf="activeTab === 'project'">
+            <xc-aside-links [route]="'/project-feed'" [label]="'Project Feed'" iconName="project-feed">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'" iconName="dashboard">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/navigator'" [label]="'Navigator'" iconName="navigator">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/goals'" [label]="'Goals'" iconName="goals">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/rewards'" [label]="'Rewards'" iconName="rewards">
+            </xc-aside-links>
+            <xc-aside-links [route]="'/settings'" [label]="'Settings'" iconName="settings">
             </xc-aside-links>
         </nav>
     </div>

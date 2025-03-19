@@ -6,11 +6,18 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    stroke: black;
+    fill: black;
 }
 
 .container:hover {
     cursor: pointer;
     box-shadow: var(--xc-boxShadow-500);
+    background: red;
+    border: 1px var(--xc-boxShadow-500);
 }
 
 .container_iconLabel {
@@ -19,12 +26,11 @@
     gap: 8px;
 }
 
-.container_icon {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    stroke: black;
-    fill: black;
+.container_icon:hover {
+    cursor: pointer;
+    box-shadow: var(--xc-boxShadow-500);
+    background: red;
+    border: 1px var(--xc-boxShadow-500);
 }
 
 .container_arrowSelection {
@@ -39,11 +45,11 @@
   height: 8px;
   background-color: red;
   border-radius: 50%;
-  right: 24px; /* Adjust based on your layout */
+  right: 24px; 
   top: 0;
 }
 
-/* Active state - will be shown when applied */
+
 .notification--active {
     background: #B8FBFF;
   display: block;

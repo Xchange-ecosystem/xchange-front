@@ -11,7 +11,6 @@
     border-radius: 8px;
 }
 
-
 .aside-nav__top {
     display: flex;
     flex-direction: column;
@@ -61,6 +60,16 @@
     color: black;
     background: var(--xc-gradient-light-grey-on-white);
     border-radius: 8px 0px 0px 8px;
+}
+
+.aside-nav__tab-right{
+    color: black;
+    border-radius: 0px 8px 8px 0px;
+    flex: 1 0 0;
+    padding: 8px 10px 8px 11px;
+    font-size: 14px;
+    font-family: Manrope;
+    font-weight: 500;
 }
 
 .aside-nav__tab--inactive {
