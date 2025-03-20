@@ -36,19 +36,35 @@
           </section>
           <section class="options-input">
             <div class="icons-container">
-              <xc-chat-options-button [label]="'Go to projects'" iconName="rocket"/>
               <xc-chat-options-button [label]="'Make an announcement'" iconName="megaphone"/>
               <xc-chat-options-button [label]="'Start new project'" iconName="rocket"/>
+              <xc-chat-options-button [label]="'Go to projects'" iconName="rocket">
+              </xc-chat-options-button>
+              <xc-chat-options-button [label]="'Go to projects'" iconName="rocket">
+              </xc-chat-options-button>
+              <xc-chat-options-button [label]="'Go to projects'" iconName="rocket">
+              </xc-chat-options-button>
             </div>
-            <div>
-              <input type="text" class="user-message" />
+            <div class="input-wrapper">
+              <textarea type="text" class="user-message"  placeholder="Type your message or talk to me by using the speech button"></textarea>
+              <div class="chat-options">
+                <xc-button-500 type="round_inactive"/>
+                <xc-button-500 type="round_inactive"/>
+                <xc-button-500 type="round_inactive"/>
+              </div>
             </div>
           </section>
         </div>
       </div>
       <div class="wrapper_content_item">
         <h5 class="sub-title">My feed</h5>
-        <div class="wrapper_content_item-feed">Columna 2</div>
+        <div class="wrapper_content_item-feed">
+          <nav class="feed-nav">
+            <xc-button-400 type="filled_inactive"/>
+            <xc-button-400 type="ai_button"/>
+            <xc-feed-buttons class="test"/>
+          </nav>
+        </div>
       </div>
     </div>
   </section>

@@ -8,12 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 12px;
   gap: 10px;
 }
 
 .icon-span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 32px;

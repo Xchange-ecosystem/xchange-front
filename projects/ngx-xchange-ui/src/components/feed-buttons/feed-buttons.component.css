@@ -1,0 +1,9 @@
+.feed-button {
+  font-size: 14px;
+  color: black;
+  border:1.5px solid var(--xc-grey100);
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  gap: 16px;
+}
