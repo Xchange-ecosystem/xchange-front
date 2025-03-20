@@ -10,9 +10,8 @@ export class RatingBarComponent {
   @Input() rating: number;
   @Input() maxRate: number;
   @Input() readOnly: boolean;
-  @Input() percentageView: boolean;
-  @Output() ratingChange = new EventEmitter<number>;
-
+  @Output() ratingChange = new EventEmitter<ratingValuesFormats>;
+  
   public stepValue: number;
 
   constructor(){
@@ -20,7 +19,19 @@ export class RatingBarComponent {
     this.maxRate = 5;
     this.readOnly = false;
     this.stepValue = 100/this.maxRate;
-    this.percentageView = true;
   }
-  
+
+  onChange(){
+    this.ratingChange.emit(
+      {
+        step: this.rating,
+        percentage: +(this.stepValue * (+ this.rating))
+      }
+    )
+  }
+}
+
+export interface ratingValuesFormats {
+  step: number,
+  percentage: number
 }

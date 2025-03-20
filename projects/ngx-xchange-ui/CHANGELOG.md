@@ -1,8 +1,14 @@
-# 1.0.9 20/03/2025
+# 1.0.11 20/03/2025
 (add) style to modal sublayer
 
+# 0.1.10 19/03/2025
+* (refactor) Clear rating bar component
+
+# 0.1.9 19/03/2025
+* (feature) Add input type attribute to xc-button-400 
+
 # 0.1.8 18/03/2025
-* (fix navigator statius filter)
+* (fix) navigator statius filter
 * (change) color name on root file
 * (add) type on button 400 
 
