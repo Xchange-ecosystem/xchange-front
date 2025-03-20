@@ -11,6 +11,7 @@ import { NewButton500Component } from 'projects/ngx-xchange-ui/src/components/ne
 import { NewButton400Component } from 'projects/ngx-xchange-ui/src/components/new-button-400/new-button-400.component';
 import { AiFilterComponent } from 'projects/ngx-xchange-ui/src/components/ai-filter/ai-filter.component';
 import { XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
+import { FeedObjectiveComponent } from 'projects/ngx-xchange-ui/src/components/feed-objective/feed-objective.component';
 @Component({
   selector: 'app-community',
   standalone: true,
@@ -26,7 +27,8 @@ import { XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
     NewButton500Component,
     NewButton400Component,
     AiFilterComponent,
-    XcIconRedoComponent
+    XcIconRedoComponent,
+    FeedObjectiveComponent
   ],
   templateUrl: './community.component.html',
   styleUrl: './community.component.scss',

@@ -3,9 +3,64 @@
     flex-direction: column;
     gap: 16px;
     padding: 16px 16px 16px 24px;
+    border-radius: 8px;
+    background: white;
+
 }
 
 .feed-header{
     display: flex;
     justify-content: space-between;
+}
+
+.feed-tags{
+    display: flex;
+    gap: 6px;
+}
+
+.feed-description{
+text-align: start;
+font-size: 16px;
+font-weight: 400;
+}
+
+.feed.details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feed-tasks{
+    display: flex;
+    gap: 16px;
+}
+
+.task-item{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: var(--xc-grey500);
+}
+
+.button-icon
+.task-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.feed-actions{
+    display: flex;
+    gap: 16pxs;
+    color: black;
+    font-weight: 700;
+}
+
+.action-button{
+    display: flex;
+    gap: 4px;
+}
+
+
+
+.hidden{
+    display: none;
 }

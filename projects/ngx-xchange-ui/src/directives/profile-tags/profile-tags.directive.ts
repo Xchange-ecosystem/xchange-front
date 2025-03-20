@@ -19,6 +19,7 @@ export class ProfileTagsDirective implements OnChanges {
     green: 'var(--xc-Completed)',
     purple: 'var(--xc-Suggestion)',
     yellow: 'var(--xc-Progress)',
+    blue:"var(--xc-data-viz-blue200)"
   };
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}

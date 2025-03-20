@@ -1,7 +1,8 @@
 <section *ngFor="let data of mockData" class="feed-objective">
     <div class="feed-header">
       <h6 class="feed-title">{{ data.title }}</h6>
-      <p [ngClass]="{'feed-assignment': data.type === 'assignment', 'other-class': data.type !== 'assignment'}" xcProfileTags="blue">New Assignment</p>    </div>
+      <p [ngClass]="{'feed-assignment': data.type === 'assignment', 'hidden': data.type !== 'assignment'}" xcProfileTags="blue">New Assignment</p>    
+    </div>
     <div class="feed-tags">
       <p xcProfileTags="gray" class="feed-tag" *ngFor="let tag of data.tags">{{ tag }}</p>
     </div>
@@ -23,7 +24,7 @@
               <p class="task-info">{{ data.deadlineDate }}</p>
             </div>
       </div>
-      <div class="feed-actions">
+      <div [ngClass]="{'feed-actions':data.type === 'assignment', 'hidden': data.type !== 'assignment'}">
           <button class="action-button">
               <span class="button-icon"></span>
               <p class="button-text"></p>

@@ -19,7 +19,7 @@
 
 .wrapper_content {
   display: grid;
-  grid-template-columns: 609px 1fr;
+  grid-template-columns: 600px 1fr;
   gap: 20px;
   padding: 20px;
   width: 100%;
@@ -27,28 +27,34 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    max-height: 740px;
     gap: 17px;
     &-organizer {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       background-color: white;
-      min-height: 674px;
+      height: 100%;
       width: 100%;
       margin-bottom: 35px;
-      border-radius: 16px;
+      border-radius: 8px;
       padding: 24px;
+      overflow-y: auto;
     }
     &-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       background-color: var(--xc-grey100);
       width: 100%;
       margin-bottom: 0px;
-      height: 100%;
-      max-width: 875px;
       border-radius: 8px;
+      max-height:700px ;
     }
   }
 }
+
+
 
 .sub-title {
   font-size: 24px;
@@ -84,7 +90,6 @@
   padding: 8px;
   resize: none;
   overflow-y: auto;
-
   display: block;
   font-size: 14px;
   line-height: 1.5;
@@ -130,10 +135,27 @@
   height: 38px;
 }
 
-.redo-icon{
+.redo-icon {
   width: 19px;
   height: 19px;
   stroke: black;
+}
+
+.feed-cards {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 16px;
+}
+
+.objective-injector{
+  display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: scroll;
 }
 // .user-modal{
 //   width: 100%;
