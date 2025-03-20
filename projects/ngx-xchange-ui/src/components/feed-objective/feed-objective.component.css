@@ -1,0 +1,11 @@
+.feed-objective{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 16px 24px;
+}
+
+.feed-header{
+    display: flex;
+    justify-content: space-between;
+}

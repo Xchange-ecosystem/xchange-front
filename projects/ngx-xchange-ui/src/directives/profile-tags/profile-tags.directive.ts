@@ -13,7 +13,7 @@ import {
 export class ProfileTagsDirective implements OnChanges {
   @Input() xcProfileTags = '';
 
-  // Map of color names to their CSS values
+
   private colorMap: Record<string, string> = {
     gray: 'var(--xc-grey100)',
     green: 'var(--xc-Completed)',

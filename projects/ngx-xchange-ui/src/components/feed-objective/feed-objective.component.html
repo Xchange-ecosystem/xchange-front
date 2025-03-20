@@ -1,0 +1,37 @@
+<section *ngFor="let data of mockData" class="feed-objective">
+    <div class="feed-header">
+      <h6 class="feed-title">{{ data.title }}</h6>
+      <p [ngClass]="{'feed-assignment': data.type === 'assignment', 'other-class': data.type !== 'assignment'}" xcProfileTags="blue">New Assignment</p>    </div>
+    <div class="feed-tags">
+      <p xcProfileTags="gray" class="feed-tag" *ngFor="let tag of data.tags">{{ tag }}</p>
+    </div>
+    <div class="feed-description">
+      <p>{{ data.description }}</p>
+    </div>
+    <div class="feed-details">
+      <div class="feed-tasks">
+          <div class="task-item">
+              <span class="task-icon"></span>
+              <p class="task-info">{{ data.completedTasks }}/{{ data.totalTasks }}</p>
+            </div>
+            <div class="task-item">
+              <span class="task-icon"></span>
+              <p class="task-info">{{ data.proofs }} proofs</p>
+            </div>
+            <div class="task-item">
+              <span class="task-icon"></span>
+              <p class="task-info">{{ data.deadlineDate }}</p>
+            </div>
+      </div>
+      <div class="feed-actions">
+          <button class="action-button">
+              <span class="button-icon"></span>
+              <p class="button-text"></p>
+          </button>
+          <button class="action-button">
+              <span class="button-icon"></span>
+              <p class="button-text"></p>
+          </button>
+      </div>
+    </div>
+  </section>
