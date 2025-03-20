@@ -7,12 +7,15 @@ import { NotFoundComponent } from './core/share/components/not-found/not-found.c
 const routes: Routes = [
   { path: '', loadChildren: () => import('./public/public.module')
   .then(m => m.PublicModule) },
-  {path: 'feed', component:FeedComponent},
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: NotFoundComponent },
+  {
+    path:'feed',
+    loadComponent: () => import('src/app/pages/feed/feed.component').then(m => m.FeedComponent),
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, {useHash: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
