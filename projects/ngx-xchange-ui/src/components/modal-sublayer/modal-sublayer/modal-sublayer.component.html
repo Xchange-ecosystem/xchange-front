@@ -9,7 +9,10 @@
         <div class="buttonsContainer">
             <div class="h-[40px]">
                 <xc-button-400 type="cancel" description="Cancel" (onClick)="closeSubLayerUserDecisionCancel()">
-                    <div class="w-4 h-4 fill-Blocked stroke-Blocked">
+                    <div 
+                    class="w-4 h-4 fill-Blocked stroke-Blocked"
+                    [ngClass]="{cancelBlack: 'fill-black stroke-black'}"
+                    >
                         <xc-icon-times />
                     </div>
                 </xc-button-400>
