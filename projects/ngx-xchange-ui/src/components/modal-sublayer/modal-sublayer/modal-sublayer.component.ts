@@ -11,7 +11,7 @@ type SubLayerInformation = {
   selector: 'xc-modal-subLayer',
   standalone: false,
   templateUrl: './modal-sublayer.component.html',
-  styleUrl: './modal-sublayer.component.css'
+  styleUrl: './modal-sublayer.component.css',
 })
 export class ModalSubLayerComponent implements OnInit {
   @Input() subLayerObserver:Observable<SubLayerType> = new Observable<SubLayerType>();
@@ -21,7 +21,9 @@ export class ModalSubLayerComponent implements OnInit {
   @Output() isVisibleChange = new EventEmitter<boolean>();
   @Input() userDecision: Observable <boolean> = new Observable<boolean>();
   @Output() userDecisionChange = new EventEmitter<boolean>();
+  @Input() cancelBlackObserver: Observable<boolean> = new Observable<boolean>();
   public subLayer: SubLayerType = 'hint'
+  public cancelBlack: boolean = false;
   public subLayerInformation: SubLayerInformation = {
     title: 'Copy',
     description: 'Do you want to copy this Objective as Identify ecosystem participants - (1)?',
@@ -41,6 +43,7 @@ export class ModalSubLayerComponent implements OnInit {
         this.isVisibleChange.emit(false)
       }, 3500);
     }
+    this.cancelBlackObserver.subscribe(res => this.cancelBlack = res)
   }
 
   public containerStyles = {
@@ -62,8 +65,10 @@ export class ModalSubLayerComponent implements OnInit {
   }
   getButtonStyle(){
     let style = 'filled'
+    const keywords = ['delete', 'active', 'suspend']
     const formatString = this.subLayerInformation?.buttonDescription?.toLowerCase()
-    if(formatString?.includes('delete')){
+    const containsKeyword = keywords.some(keyword => formatString?.includes(keyword))
+    if(containsKeyword){
       style ='cancel_filled'
     }
     return style
