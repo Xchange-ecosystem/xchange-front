@@ -114,6 +114,7 @@
 
 .ai-filters {
   display: flex;
+  align-items: center;
   background: white;
   gap: 8px;
   padding: 0px 24px 0px 24px;
@@ -127,6 +128,12 @@
   border-radius: 32px;
   width: 38px;
   height: 38px;
+}
+
+.redo-icon{
+  width: 19px;
+  height: 19px;
+  stroke: black;
 }
 // .user-modal{
 //   width: 100%;
