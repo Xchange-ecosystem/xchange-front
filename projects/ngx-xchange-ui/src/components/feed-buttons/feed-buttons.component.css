@@ -1,9 +1,19 @@
 .feed-button {
+  display: flex;
   font-size: 14px;
   color: black;
-  border:1.5px solid var(--xc-grey100);
-  padding: 16px;
+  border: 1.5px solid var(--xc-grey100);
+  padding: 8px 16px 8px 16px;
   border-radius: 8px;
   font-weight: 700;
-  gap: 16px;
+  gap: 8px;
+  align-items: center;
+}
+
+.notification-div {
+  width: 10px;
+  height: 10px;
+  background-color: var(--xc-data-viz-blue100);
+  border-radius: 50%;
+  gap: 2pxs;
 }

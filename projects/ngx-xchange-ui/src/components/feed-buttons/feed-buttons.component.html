@@ -1,3 +1,4 @@
-<button class="feed-button" *ngFor="let option of options"> 
-    <p>{{option}}</p>
+<button class="feed-button" *ngFor="let option of options">
+  <div *ngIf="option.notification" class="notification-div"></div>
+  <p>{{ option.name }}</p>
 </button>

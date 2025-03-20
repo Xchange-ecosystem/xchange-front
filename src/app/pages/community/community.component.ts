@@ -7,6 +7,8 @@ import { ChatTextComponent } from 'projects/ngx-xchange-ui/src/components/chat-t
 import { ChatOptionsButtonComponent } from 'projects/ngx-xchange-ui/src/components/chat-options-button/chat-options-button.component';
 import { Button400Module, Button500Module } from '@indziaki/ngx-xchange-ui';
 import { FeedButtonsComponent } from 'projects/ngx-xchange-ui/src/components/feed-buttons/feed-buttons.component';
+import { NewButton500Component } from 'projects/ngx-xchange-ui/src/components/new-button-500/new-button-500.component';
+import { NewButton400Component } from 'projects/ngx-xchange-ui/src/components/new-button-400/new-button-400.component';
 @Component({
   selector: 'app-community',
   standalone: true,
@@ -19,6 +21,8 @@ import { FeedButtonsComponent } from 'projects/ngx-xchange-ui/src/components/fee
     Button500Module,
     Button400Module,
     FeedButtonsComponent,
+    NewButton500Component,
+    NewButton400Component
   ],
   templateUrl: './community.component.html',
   styleUrl: './community.component.scss',
