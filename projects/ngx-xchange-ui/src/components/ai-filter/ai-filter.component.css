@@ -1,0 +1,46 @@
+.ai-filter {
+  position: relative;
+  display: flex;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  z-index: 10;
+}
+
+.dropdown-menu div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu div:hover {
+  background: #f0f0f0;
+}
+
+.icon-wrapper{
+  width: 44px;
+  height: 30px;
+}
+
+.arrow-icon{
+  width: 24px;
+  height: 24px;
+  stroke: black;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotated{
+  transform: rotate(90deg);
+}
