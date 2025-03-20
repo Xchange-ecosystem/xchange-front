@@ -1,3 +1,6 @@
+# 1.0.11 20/03/2025
+(add) style to modal sublayer
+
 # 0.1.10 19/03/2025
 * (refactor) Clear rating bar component
 
