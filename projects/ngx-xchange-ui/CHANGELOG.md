@@ -1,3 +1,6 @@
+# 1.0.9 20/03/2025
+(add) style to modal sublayer
+
 # 0.1.8 18/03/2025
 * (fix navigator statius filter)
 * (change) color name on root file
