@@ -1,5 +1,5 @@
-import { NgIf, NgSwitch } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { NgIf, NgSwitch, NgSwitchCase, CommonModule } from '@angular/common';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import {
   XcIconMegaphoneComponent,
   XcIconRocketComponent,
@@ -8,11 +8,17 @@ import {
 @Component({
   selector: 'xc-chat-options-button',
   standalone: true,
-  imports: [XcIconRocketComponent, XcIconMegaphoneComponent,NgIf, NgSwitch],
+  imports: [CommonModule, XcIconRocketComponent, XcIconMegaphoneComponent, NgIf, NgSwitch, NgSwitchCase],
   templateUrl: './chat-options-button.component.html',
-  styleUrl: './chat-options-button.component.css',
+  styleUrls: ['./chat-options-button.component.css'],
 })
-export class ChatOptionsButtonComponent {
+export class ChatOptionsButtonComponent implements OnChanges {
   @Input() iconName: string = '';
   @Input() label: string = 'default';
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['iconName']) {
+      console.log('iconName:', this.iconName);
+    }
+  }
 }

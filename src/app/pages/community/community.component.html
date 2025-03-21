@@ -25,7 +25,7 @@
           <!-- <xc-chat-text/> -->
           <section class="message-wrapper">
             <div class="avatar-wrapper">
-              <img src="assets/icons/Avatar.svg" alt="" />
+              <img src="assets/icons/Avatar.svg" alt="" class="bot-icon" />
             </div>
             <div class="bot-message-wrapper">
               <p class="message">
@@ -38,7 +38,7 @@
             <div class="icons-container">
               <xc-chat-options-button
                 [label]="'Make an announcement'"
-                iconName="megaphone"
+                [iconName]="'megaphone'"
               />
               <xc-chat-options-button
                 [label]="'Start new project'"
@@ -94,7 +94,7 @@
             </nav>
           </section>
           <section class="feed-cards">
-            <xc-feed-objective class="objective-injector"/>
+            <xc-feed-objective class="objective-injector" />
           </section>
         </div>
       </div>
