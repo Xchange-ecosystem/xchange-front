@@ -1,3 +1,6 @@
+# 1.0.12 21/03/2025
+(fix) label for with index on input with checkmark
+
 # 1.0.11 20/03/2025
 (add) style to modal sublayer
 
