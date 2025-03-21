@@ -10,6 +10,9 @@
 }
 
 .span-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -17,6 +20,6 @@
 .icon-stroke{
     stroke: black;
     fill: black;
-    width:19px ;
-    height: 19px;
+    width:21px ;
+    height: 21px;
 }

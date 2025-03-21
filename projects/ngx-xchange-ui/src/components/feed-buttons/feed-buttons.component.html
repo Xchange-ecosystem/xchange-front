@@ -1,4 +1,9 @@
-<button class="feed-button" *ngFor="let option of options">
-  <div *ngIf="option.notification" class="notification-div"></div>
-  <p>{{ option.name }}</p>
-</button>
+<div *ngFor="let option of options">
+  <button 
+    class="feed-button" 
+    [class.active]="activeOption === option.name" 
+    (click)="toggleActive(option.name)">
+    {{ option.name }}
+    <div *ngIf="option.notification" class="notification-div"></div>
+  </button>
+</div>

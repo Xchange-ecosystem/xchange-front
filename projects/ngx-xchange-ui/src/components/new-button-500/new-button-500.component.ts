@@ -1,4 +1,4 @@
-import { NgSwitch } from '@angular/common';
+import { NgSwitch, NgSwitchCase } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import {
   XcIconClipboardComponent,
@@ -16,6 +16,7 @@ import {
     XcIconClipboardComponent,
     NgSwitch,
     XcIconRedoComponent,
+    NgSwitchCase
   ],
   templateUrl: './new-button-500.component.html',
   styleUrl: './new-button-500.component.css',
