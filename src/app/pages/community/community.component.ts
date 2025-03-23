@@ -33,4 +33,9 @@ import { FeedObjectiveComponent } from 'projects/ngx-xchange-ui/src/components/f
   templateUrl: './community.component.html',
   styleUrl: './community.component.scss',
 })
-export class CommunityComponent {}
+export class CommunityComponent {
+  isSidebarHidden = true;
+  toggleSidebar() {
+    this.isSidebarHidden = !this.isSidebarHidden;
+  }
+}
