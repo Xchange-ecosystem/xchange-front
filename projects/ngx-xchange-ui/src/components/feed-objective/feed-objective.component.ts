@@ -14,7 +14,7 @@ export class FeedObjectiveComponent {
 mockData = [
   {
     title:"Front task 1",
-    tags:["tag1", "tag2"],
+    tags:["Phase", "Category", "Type"],
     totalTasks: 10,
     completedTasks: 5,
     proofs:2,
@@ -24,7 +24,7 @@ mockData = [
   },
   {
     title:"Objective task 1",
-    tags:["tag1", "tag2"],
+    tags:["Dimension", "Category"],
     totalTasks: 10,
     completedTasks: 5,
     proofs:2,
@@ -39,7 +39,7 @@ mockData = [
   },
   {
     title:"Front task 2",
-    tags:["tag1", "tag2", "tag3"],
+    tags:["Phase", "Category", "Type"],
     totalTasks: 3,
     completedTasks: 1,
     proofs:4,
