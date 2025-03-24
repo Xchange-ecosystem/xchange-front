@@ -1,46 +1,30 @@
 
+.wrapper__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-// .user-modal{
-//   width: 100%;
-// }
+.wrapper__sort-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
-// .wrapper__sidebar {
-//   flex-shrink: 0;
-// }
+.sort-component {
+  margin-right: 32px;
+}
 
-// .wrapper__content {
-//   display: flex;
-//   flex-direction: column;
-//   flex: 1;
-//   gap: 16px;
-//   overflow: hidden;
-// }
+.eco-members {
+  font-family: Manrope;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  align-self: flex-start;
+}
 
-// .wrapper__sort-container {
-//   display: flex;
-//   justify-content: flex-end;
-//   width: 100%;
-// }
-
-// .sort-component {
-//   margin-right: 32px;
-// }
-
-// .eco-members {
-//   font-family: Manrope;
-//   font-size: 32px;
-//   font-weight: 600;
-//   margin: 0;
-//   align-self: flex-start;
-// }
-
-// .cards {
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   overflow-y: auto;
-//   flex: 1;
-//   margin-top: 8px;
-// }
-
-// temporal chat, to be removed
+.cards {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 780px;
+}
