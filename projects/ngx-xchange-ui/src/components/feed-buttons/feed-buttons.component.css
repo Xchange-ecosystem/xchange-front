@@ -1,5 +1,6 @@
 .feed-button {
   display: flex;
+  flex-direction: row-reverse;
   font-size: 14px;
   color: black;
   border: 1.5px solid var(--xc-grey100);
