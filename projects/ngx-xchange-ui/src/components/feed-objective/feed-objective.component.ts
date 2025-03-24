@@ -1,6 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { combineLatest } from 'rxjs';
 import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags.directive';
 
 @Component({

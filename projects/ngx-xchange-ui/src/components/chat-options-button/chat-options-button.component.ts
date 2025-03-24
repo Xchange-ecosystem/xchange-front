@@ -4,11 +4,12 @@ import {
   XcIconMegaphoneComponent,
   XcIconRocketComponent,
 } from '@indziaki/ngx-xchange-icons';
+import { ChatOptionDirective } from '../../directives/chat-option/chat-option.directive';
 
 @Component({
   selector: 'xc-chat-options-button',
   standalone: true,
-  imports: [CommonModule, XcIconRocketComponent, XcIconMegaphoneComponent, NgIf, NgSwitch, NgSwitchCase],
+  imports: [CommonModule, XcIconRocketComponent, XcIconMegaphoneComponent, NgIf, NgSwitch, NgSwitchCase,ChatOptionDirective],
   templateUrl: './chat-options-button.component.html',
   styleUrls: ['./chat-options-button.component.css'],
 })
