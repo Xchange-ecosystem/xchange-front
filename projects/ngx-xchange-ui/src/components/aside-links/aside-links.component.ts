@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 import { AsideLinkDirective } from '../../directives/aside-link/aside-link.directive';
 import { XcIconChartComponent, XcIconCompassComponent, XcIconCrosshairComponent, XcIconRocketComponent, XcIconSlidersVComponent, XcIconStarComponent } from '@indziaki/ngx-xchange-icons';
 import { XcIconWifiComponent } from '@indziaki/ngx-xchange-icons';
@@ -28,7 +28,8 @@ import { NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
     XcIconCompassComponent,
     XcIconCrosshairComponent,
     XcIconStarComponent,
-    XcIconSlidersVComponent
+    XcIconSlidersVComponent,
+    RouterLink
   ],
   templateUrl: './aside-links.component.html',
   styleUrls: ['./aside-links.component.css']

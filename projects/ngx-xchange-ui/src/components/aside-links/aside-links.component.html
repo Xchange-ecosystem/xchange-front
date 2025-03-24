@@ -1,4 +1,4 @@
-<a href="{{route}}" xcAsideLink>
+<a [routerLink]="route" xcAsideLink>
   <div *ngIf="iconName !== 'default'" class="container_iconLabel">
     <span [ngSwitch]="iconName" class="container_icon">
       <xc-icon-wifi *ngSwitchCase="'wifi'" class="wifi-rotate"/>
