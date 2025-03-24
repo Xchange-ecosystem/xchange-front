@@ -7,23 +7,23 @@
   padding-right: 32px;
   padding-left: 24px;
   background: var(--xc-grey50);
-
+  @media (max-width: 798px) {
+    height: auto;
+  }
   &__sidebar {
     padding-bottom: 32px;
   }
-
   &__header {
     width: 100%;
     display: flex;
     flex-direction: column;
-
+    background: var(--xc-grey50);
     &-content {
       display: flex;
       gap: 20px;
       padding: 20px;
       width: 100%;
       height: 100%;
-
       @media (max-width: 798px) {
         flex-wrap: wrap;
       }
@@ -224,7 +224,6 @@
   display: flex;
   gap: 8px;
   align-items: start;
-  justify-content: center;
 }
 
 .message {
