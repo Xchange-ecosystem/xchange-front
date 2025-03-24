@@ -1,11 +1,12 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags.directive';
+import { XcIconCalenderComponent, XcIconFileCheckAltComponent, XcIconPaperclipComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-feed-objective',
   standalone: true,
-  imports: [NgFor,ProfileTagsDirective,NgIf,NgClass],
+  imports: [NgFor,ProfileTagsDirective,NgIf,NgClass,XcIconPaperclipComponent,XcIconCalenderComponent,XcIconFileCheckAltComponent],
   templateUrl: './feed-objective.component.html',
   styleUrl: './feed-objective.component.css'
 })

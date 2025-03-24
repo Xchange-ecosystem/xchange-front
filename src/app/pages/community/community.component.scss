@@ -21,8 +21,7 @@
     &-content {
       display: flex;
       gap: 20px;
-      padding: 20px;
-
+      padding: 12px;
       @media (max-width: 798px) {
         flex-wrap: wrap;
       }
@@ -131,6 +130,7 @@
   align-items: center;
   gap: 16px;
   background: white;
+  border-radius: 8px;
   @media (max-width: 1360px) {
     width: 100%;
     padding: 8px;
@@ -176,6 +176,9 @@
 
 .wrapper_content_item {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   @media (max-width: 798px) {
     padding-right: 24px;
   }
@@ -195,6 +198,7 @@
   flex-direction: column;
   overflow-y: scroll;
   max-height: 460px;
+  padding: 4px 8px;
 }
 
 .objective-injector {
