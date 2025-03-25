@@ -49,9 +49,15 @@
                 placeholder="Type your message or talk to me by using the speech button"
               ></textarea>
               <div class="chat-options">
-                <xc-new-button-500 iconName="send"></xc-new-button-500>
-                <xc-new-button-500 iconName="microphone"></xc-new-button-500>
-                <xc-new-button-500 iconName="clipboard"></xc-new-button-500>
+                <button xcButton500>
+                  <xc-icon-send class="button-500"/>
+                </button>
+                <button xcButton500>
+                  <xc-icon-microphone class="button-500"/>
+                </button>
+                <button xcButton500>
+                  <xc-icon-clipboard class="button-500"/>
+                </button>
               </div>
             </div>
           </section>
@@ -65,12 +71,27 @@
           <section class="header_content_right-organizer-content-nav">
             <div class="header_content_right-organizer-content-nav-filter">
               <button xcButton400>
-                <xc-icon-home class="test"/>
+                <xc-icon-home class="button-400"/>
               </button>
               <button xcButton400>
-                <xc-icon-ai class="test"/>
+                <xc-icon-ai class="button-400"/>
               </button>
-              <!-- <xc-feed-buttons class="feed-injector"/> -->
+              <button xcFeedButton>
+                <span xcNotificationBubble="true"></span>
+                Objectives
+              </button>
+              <button xcFeedButton>
+                <span xcNotificationBubble="true"></span>
+                Assignments
+              </button>
+              <button xcFeedButton>
+                <span xcNotificationBubble="true"></span>
+                Announcements
+              </button>
+              <button xcFeedButton>
+                <span xcNotificationBubble="false"></span>
+                Next Steps
+              </button>
             </div>
           </section>
           <section class="header_content_right-organizer-content-nav-drop">
