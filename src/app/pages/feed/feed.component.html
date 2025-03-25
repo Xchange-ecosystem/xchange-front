@@ -1,10 +1,10 @@
 <section class="header">
   <xc-user-header ProfileHeaderDirective />
   <div class="header_content">
-    <section class="header_content_left">
+    <section class="header_content_left" xcCardStyles [padding]="12">
       <div class="header_content_left-organizer">
         <h5 class="sub-title">Organizer</h5>
-        <div class="header_content_left-organizer-content">
+        <div class="header_content_left-organizer-content" >
           <section class="message">
             <div class="message__avatar">
               <img src="assets/icons/Avatar.svg" alt="" class="bot-icon" />
@@ -58,10 +58,10 @@
         </div>
       </div>
     </section>
-    <section class="header_content_right">
+    <section class="header_content_right" xcCardStyles [padding]="12">
       <div class="header_content_right-organizer">
         <h5 class="sub-title">My feed</h5>
-        <div class="header_content_right-organizer-content">
+        <div class="header_content_right-organizer-content" >
           <section class="header_content_right-organizer-content-nav">
             <div class="header_content_right-organizer-content-nav-filter">
               <xc-new-button-400 iconName="home" />

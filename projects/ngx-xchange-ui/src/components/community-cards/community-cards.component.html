@@ -1,13 +1,12 @@
 <section class="profile">
-  <article 
-  xcCardMeasures 
-  *ngFor="let user of users" 
-  class="profile__card" 
-  (click)="openModal(user)"
-  tabindex="0"
-  role="button"
-  style="cursor: pointer;"
->
+  <article
+    xcCardMeasures
+    *ngFor="let user of users"
+    class="profile__card"
+    (click)="openModal(user)"
+    tabindex="0"
+    role="button"
+  >
     <div class="profile_header">
       <div class="profile__image-wrapper-class">
         <xc-rounded-image [marginSize]="0" [image]="user.imageUrl" />
@@ -47,6 +46,11 @@
   </article>
 </section>
 
-<dialog class="modal-overlay" *ngIf="selectedUser"  >
-  <xc-user-profile-modal [user]="selectedUser" class="modal" appClickOutside (onClickOutside)="this.selectedUser=null"/>
+<dialog class="modal-overlay" *ngIf="selectedUser">
+  <xc-user-profile-modal
+    [user]="selectedUser"
+    class="modal"
+    appClickOutside
+    (onClickOutside)="this.selectedUser = null"
+  />
 </dialog>

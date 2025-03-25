@@ -20,12 +20,10 @@
       background: white;
       height: 100%;
       max-width: 40%;
-      border-radius: 8px;
       &-organizer {
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: 12px;
         gap: 12px;
         &-content {
           display: flex;
@@ -41,25 +39,18 @@
       background: white;
       height: 100%;
       width: 60%;
-      border-radius: 8px;
-
       &-organizer {
         display: flex;
         flex-direction: column;
         height: 100%;
-
-        padding: 8px;
         gap: 8px;
         &-content {
           display: flex;
           flex-direction: column;
           height: 100%;
-
           &-nav {
             display: flex;
-
             gap: 16px;
-
             &-filter {
               gap: 16px;
               display: flex;
