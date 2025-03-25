@@ -2,18 +2,30 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[xcNotificationBubble]',
-  standalone: true
+  standalone: true,
 })
 export class NotificationBubbleDirective {
-  @Input() notification: boolean = false;
-  constructor(private el: ElementRef, private renderer: Renderer2) {
-    this.setStyle();
+  @Input() set xcNotificationBubble(value: boolean) {
+    if (value) {
+      this.applyStyles();
+    } else {
+      this.removeStyles();
+    }
   }
-  private setStyle() {
-  this.renderer.setStyle(this.el.nativeElement, 'background', 'var(--xc-gradient-light-blue)');
-  this.renderer.setStyle(this.el.nativeElement, 'border-radius', '64px');
-  this.renderer.setStyle(this.el.nativeElement, 'min-width', '16px');
-  this.renderer.setStyle(this.el.nativeElement, 'min-height', '16px');
-}
 
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
+
+  private applyStyles() {
+    this.renderer.setStyle(this.el.nativeElement, 'background', 'var(--xc-gradient-light-blue)');
+    this.renderer.setStyle(this.el.nativeElement, 'border-radius', '64px');
+    this.renderer.setStyle(this.el.nativeElement, 'min-width', '16px');
+    this.renderer.setStyle(this.el.nativeElement, 'min-height', '16px');
+  }
+
+  private removeStyles() {
+    this.renderer.removeStyle(this.el.nativeElement, 'background');
+    this.renderer.removeStyle(this.el.nativeElement, 'border-radius');
+    this.renderer.removeStyle(this.el.nativeElement, 'min-width');
+    this.renderer.removeStyle(this.el.nativeElement, 'min-height');
+  }
 }

@@ -26,11 +26,9 @@ import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directi
   imports: [
     UserHeaderComponent,
     ChatOptionsButtonComponent,
-
     FeedObjectiveComponent,
     AiFilterComponent,
     XcIconRedoComponent,
-    FeedButtonsComponent,
     CardStylesDirective,
     XcIconHomeComponent,
     XcIconAIComponent,
