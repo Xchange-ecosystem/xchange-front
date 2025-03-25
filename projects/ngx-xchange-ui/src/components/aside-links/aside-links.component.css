@@ -16,7 +16,6 @@
 .container:hover {
     cursor: pointer;
     box-shadow: var(--xc-boxShadow-500);
-    background: red;
     border: 1px var(--xc-boxShadow-500);
 }
 
