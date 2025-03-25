@@ -3,11 +3,12 @@ import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { NgFor } from '@angular/common';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
+import { ClickOutsideDirective } from '../../directives/click-outside/click-outside.directive';
 
 @Component({
   selector: 'xc-user-profile-modal',
   standalone: true,
-  imports: [ProfileTagsDirective,RoundedImageModule,NgFor, ProfileHeaderDirective],
+  imports: [ProfileTagsDirective,RoundedImageModule,NgFor, ProfileHeaderDirective,ClickOutsideDirective],
   templateUrl: './user-profile-modal.component.html',
   styleUrl: './user-profile-modal.component.css'
 })

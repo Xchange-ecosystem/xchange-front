@@ -47,6 +47,6 @@
   </article>
 </section>
 
-<section class="modal-overlay" *ngIf="selectedUser" (click)="closeModal()">
-  <xc-user-profile-modal [user]="selectedUser" class="modal"/>
-</section>
+<dialog class="modal-overlay" *ngIf="selectedUser"  >
+  <xc-user-profile-modal [user]="selectedUser" class="modal" appClickOutside (onClickOutside)="this.selectedUser=null"/>
+</dialog>

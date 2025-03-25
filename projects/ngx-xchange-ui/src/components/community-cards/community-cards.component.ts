@@ -5,8 +5,8 @@ import { ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/directives/pro
 import { RoundedImageModule } from 'projects/ngx-xchange-ui/src/components/rounded-image/rounded-image.module';
 import { MainHeadingModule } from '../../directives/main-heading/main-heading.module';
 import { NgFor, NgIf } from '@angular/common';
-import { Router } from '@angular/router';
 import { UserProfileModalComponent } from '../user-profile-modal/user-profile-modal.component';
+import { ClickOutsideDirective } from '../../directives/click-outside/click-outside.directive';
 @Component({
   selector: 'xc-community-cards',
   standalone: true,
@@ -18,7 +18,8 @@ import { UserProfileModalComponent } from '../user-profile-modal/user-profile-mo
     MainHeadingModule,
     NgFor,
     NgIf,
-    UserProfileModalComponent
+    UserProfileModalComponent,
+    ClickOutsideDirective,
   ],
   templateUrl: './community-cards.component.html',
   styleUrl: './community-cards.component.css',
