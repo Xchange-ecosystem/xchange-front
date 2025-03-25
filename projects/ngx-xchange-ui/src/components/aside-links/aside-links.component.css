@@ -43,3 +43,6 @@
     display: block;
 }
 
+.onActive{
+    background: var(--xc-gradient-light-grey-on-white);
+}

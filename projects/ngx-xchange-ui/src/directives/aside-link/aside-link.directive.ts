@@ -37,13 +37,4 @@ export class AsideLinkDirective {
     this.renderer.removeStyle(element, 'border');
   }
 
-  @HostListener('click') onClick() {
-    const element = this.el.nativeElement;
-    this.isSelected = !this.isSelected;
-    if (this.isSelected) {
-      this.renderer.setStyle(element, 'background', 'var(--xc-gradient-light-grey-on-white)');
-    } else {
-      this.renderer.removeStyle(element, 'backgroundColor');
-    }
-  }
 }
