@@ -28,7 +28,6 @@
 .container_icon:hover {
     cursor: pointer;
     box-shadow: var(--xc-boxShadow-500);
-    background: red;
     border: 1px var(--xc-boxShadow-500);
 }
 
@@ -42,7 +41,6 @@
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: red;
   border-radius: 50%;
   right: 24px; 
   top: 0;
