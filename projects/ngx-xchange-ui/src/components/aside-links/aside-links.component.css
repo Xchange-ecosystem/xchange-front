@@ -23,6 +23,10 @@
     align-items: center;
     display: flex;
     gap: 8px;
+    cursor: pointer;
+}
+.container_label{
+    cursor: pointer;
 }
 
 .container_icon:hover {
@@ -50,9 +54,5 @@
 .notification--active {
     background: #B8FBFF;
   display: block;
-}
-
-.wifi-rotate{
-    transform: rotate(45deg);
 }
 

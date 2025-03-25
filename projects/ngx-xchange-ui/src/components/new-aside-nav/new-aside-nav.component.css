@@ -103,6 +103,9 @@
     font-size: 14px;
 }
 
+.aside-nav__wifi{
+    transform: rotate(45deg);
+}
 
 .aside-nav__bottom-menu {
     display: flex;

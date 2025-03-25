@@ -17,9 +17,10 @@ export class AsideLinkDirective {
     this.renderer.setStyle(element, 'padding', '16px');
     this.renderer.setStyle(element, 'textDecoration', 'none');
     this.renderer.setStyle(element, 'color', 'black');
-    this.renderer.setStyle(element, 'borderRadius', '10px'); // Actualizado a 10px
+    this.renderer.setStyle(element, 'borderRadius', '10px');
     this.renderer.setStyle(element, 'gap', '8px');
     this.renderer.setStyle(element, 'alignSelf', 'stretch');
+    
   }
 
   @HostListener('mouseout') onMouseOut() {

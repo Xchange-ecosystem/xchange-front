@@ -2,9 +2,18 @@ import { Component } from '@angular/core';
 import { AsideLinksComponent } from 'projects/ngx-xchange-ui/src/components/aside-links/aside-links.component';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { XcIconQuestionCircleComponent } from '@indziaki/ngx-xchange-icons';
+import {
+  XcIconChartComponent,
+  XcIconCompassComponent,
+  XcIconCrosshairComponent,
+  XcIconQuestionCircleComponent,
+  XcIconRocketComponent,
+  XcIconSettingComponent,
+  XcIconStarComponent,
+  XcIconUsersAltComponent,
+  XcIconWifiComponent,
+} from '@indziaki/ngx-xchange-icons';
 import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'xc-new-aside-nav',
@@ -17,6 +26,14 @@ import { RouterLink } from '@angular/router';
     XcIconAngleRightComponent,
     NgClass,
     NgIf,
+    XcIconCompassComponent,
+    XcIconCrosshairComponent,
+    XcIconStarComponent,
+    XcIconSettingComponent,
+    XcIconChartComponent,
+    XcIconRocketComponent,
+    XcIconWifiComponent,
+    XcIconUsersAltComponent,
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',

@@ -1,20 +1,11 @@
 <a [routerLink]="route" xcAsideLink>
   <div *ngIf="iconName !== 'default'" class="container_iconLabel">
     <span [ngSwitch]="iconName" class="container_icon">
-      <xc-icon-wifi *ngSwitchCase="'wifi'" class="wifi-rotate"/>
-      <xc-icon-rocket *ngSwitchCase="'rocket'" />
-      <xc-icon-users-alt *ngSwitchCase="'community'" />
-      <xc-icon-chart *ngSwitchCase="'dashboard'" />
-      <xc-icon-setting *ngSwitchCase="'admin'" class="setting-stroke"/>
-      <xc-icon-wifi *ngSwitchCase="'project-feed'" class="wifi-rotate"/>
-      <xc-icon-compass *ngSwitchCase="'navigator'"/>
-      <xc-icon-crosshair *ngSwitchCase="'goals'"/>
-      <xc-icon-star *ngSwitchCase="'rewards'"/>
-      <xc-icon-sliders-v *ngSwitchCase="'settings'"/>
+      <ng-content select="[icon]"></ng-content>
     </span>
-    <label>{{label}}</label>
+    <label class="container_label">{{ label }}</label>
   </div>
-  <div class="container_arrowSelection"> 
+  <div class="container_arrowSelection">
     <span class="notification--active"></span>
     <xc-icon-angle-right />
   </div>
