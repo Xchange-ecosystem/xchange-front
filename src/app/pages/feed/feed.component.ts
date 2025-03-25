@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAlignCenterVComponent, XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
 import { AiFilterComponent } from 'projects/ngx-xchange-ui/src/components/ai-filter/ai-filter.component';
 import { ChatOptionsButtonComponent } from 'projects/ngx-xchange-ui/src/components/chat-options-button/chat-options-button.component';
 import { FeedButtonsComponent } from 'projects/ngx-xchange-ui/src/components/feed-buttons/feed-buttons.component';
@@ -19,7 +19,8 @@ import { UserHeaderComponent } from 'projects/ngx-xchange-ui/src/components/user
     FeedObjectiveComponent,
     AiFilterComponent,
     XcIconRedoComponent,
-    FeedButtonsComponent
+    FeedButtonsComponent,
+    XcIconAlignCenterVComponent
   ],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss',

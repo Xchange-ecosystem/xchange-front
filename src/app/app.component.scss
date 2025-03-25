@@ -1,13 +1,9 @@
 .main-content {
   background: var(--xc-grey50);
-  display: flex;
-  padding: 12px;
-  gap: 24px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 85%; /* Define las columnas: 20% para aside y 80% para router-outlet */
+  padding: 24px;
+  width: 100vw;
   height: 100vh;
-  &__router {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
-  }
+
 }
