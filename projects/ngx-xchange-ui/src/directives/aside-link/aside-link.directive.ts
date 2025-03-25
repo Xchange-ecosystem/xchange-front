@@ -5,6 +5,7 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
   standalone: true
 })
 export class AsideLinkDirective {
+  private isSelected: boolean = false;
   constructor(private el: ElementRef, private renderer: Renderer2) {
     this.setDefaultStyles();
   }
@@ -23,7 +24,26 @@ export class AsideLinkDirective {
     
   }
 
+  @HostListener('mouseover') onMouseOver() {
+    const element = this.el.nativeElement;
+    this.renderer.setStyle(element, 'cursor', 'pointer');
+    this.renderer.setStyle(element, 'boxShadow', 'var(--xc-boxShadow-500)');
+    this.renderer.setStyle(element, 'border', '1px solid var(--xc-boxShadow-500)');
+  }
+
   @HostListener('mouseout') onMouseOut() {
-    this.renderer.removeStyle(this.el.nativeElement, 'background');
+    const element = this.el.nativeElement;
+    this.renderer.removeStyle(element, 'boxShadow');
+    this.renderer.removeStyle(element, 'border');
+  }
+
+  @HostListener('click') onClick() {
+    const element = this.el.nativeElement;
+    this.isSelected = !this.isSelected;
+    if (this.isSelected) {
+      this.renderer.setStyle(element, 'background', 'var(--xc-gradient-light-grey-on-white)');
+    } else {
+      this.renderer.removeStyle(element, 'backgroundColor');
+    }
   }
 }
