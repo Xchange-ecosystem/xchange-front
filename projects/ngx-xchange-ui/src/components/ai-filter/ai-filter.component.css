@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  width: 100%; /* Adjust width to match dropdown-menu */
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -27,8 +27,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.dropdown:hover .dropdown-menu,
-.date-filter:hover .dropdown-menu { 
+.dropdown-menu { 
   opacity: 1;
   visibility: visible;
 }
