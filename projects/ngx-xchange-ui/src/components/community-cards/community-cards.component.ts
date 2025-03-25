@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { XcIconEnvelopeAltComponent } from 'projects/ngx-xchange-icons/src/lib/envelope-alt.component';
-import { CardMeasuresDirective } from 'projects/ngx-xchange-ui/src/directives/card-measures/card-measures.directive';
+import { CardMeasuresDirective } from 'projects/ngx-xchange-ui/src/directives/community-card-measures/card-measures.directive';
 import { ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/directives/profile-tags/profile-tags.directive';
 import { RoundedImageModule } from 'projects/ngx-xchange-ui/src/components/rounded-image/rounded-image.module';
 import { MainHeadingModule } from '../../directives/main-heading/main-heading.module';
