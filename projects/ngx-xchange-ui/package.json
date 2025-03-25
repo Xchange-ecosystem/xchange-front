@@ -1,15 +1,15 @@
 {
   "name": "@indziaki/ngx-xchange-ui",
-  "version": "0.1.8",
+  "version": "0.1.13",
   "peerDependencies": {
     "@angular/common": "^17.3.8",
     "@angular/core": "^17.3.8"
   },
-  "dependencies": { 
+  "dependencies": {
     "tslib": "^2.3.0"
   },
   "sideEffects": false,
   "publishConfig": {
     "@indziaki:registry": "https://npm.pkg.github.com"
   }
-} 
+}

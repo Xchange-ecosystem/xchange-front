@@ -107,3 +107,6 @@ export * from './components/user-assessment-card/user-assessment-card.module';
 export * from './components/user-assessment-card/user-assessment-card/user-assessment-card.component'
 export * from './components/rating-bar/rating-bar.module'
 export * from './components/rating-bar/rating-bar/rating-bar.component'
+export * from './components/check-rounded-button/check-rounded-button/check-rounded-button.component'
+export * from './components/check-rounded-button/check-rounded-button.module'
+export * from './directives/click-outside/click-outside.directive'

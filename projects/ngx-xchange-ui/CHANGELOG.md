@@ -1,7 +1,22 @@
+# 0.0.13 25/03/2025
+(add) directive click outside
+
+# 0.0.12 21/03/2025
+(fix) label for with index on input with checkmark
+
+# 0.0.11 20/03/2025
+(add) style to modal sublayer
+
+# 0.1.10 19/03/2025
+* (refactor) Clear rating bar component
+
+# 0.1.9 19/03/2025
+* (feature) Add input type attribute to xc-button-400
+
 # 0.1.8 18/03/2025
-* (fix navigator statius filter)
+* (fix) navigator statius filter
 * (change) color name on root file
-* (add) type on button 400 
+* (add) type on button 400
 
 # 0.1.7 05/03/2025
 * (add) - Navigator objective card component
@@ -25,9 +40,9 @@
 
 # 0.1.6 17/08/2025
 * (change) - boder radius on objective card
-* (change ) - tailwind configuration 
+* (change ) - tailwind configuration
 
-# 0.1.5 14/02/2025 
+# 0.1.5 14/02/2025
 * (add) - add complete objective user card component
 * (change) - rounded image component
 * (change) - tags directive font style
@@ -55,7 +70,7 @@
 (fix) select new tags on list method to select with no click
 
 # 0.0.43 11/11/2024
-(change) chip selector add new tags behavior 
+(change) chip selector add new tags behavior
 
 # 0.0.42 07/11/2024
 (change) chip selector behavior
@@ -73,7 +88,7 @@
 (change) aside navbar directive for color selection
 
 # 0.0.37 24/09/2024
-(change) metric component padding 
+(change) metric component padding
 
 # 0.0.36 24/09/2024
 (change) metrics component colors reaction
@@ -81,7 +96,7 @@
 # 0.0.35 06/09/2024
 (change) metrics component behavior
 
-# 0.0.34 28/08/2024 
+# 0.0.34 28/08/2024
 (change) metrics input and output behavior
 
 # 0.0.32 28/08/2024
@@ -112,7 +127,7 @@
 * (fix) background color white on chips dorp section
 
 # 0.0.24 - 27/02/2024
-* (fix) aside left menu height value 
+* (fix) aside left menu height value
 
 # 0.0.23 - 27/02/2024
 * (add) card welcome metrics
@@ -159,7 +174,7 @@
 * (Change) Style chips
 
 # 0.0.10 - 01/12/2023
-* (Remove) z-index from aside nav and header 
+* (Remove) z-index from aside nav and header
 
 # 0.0.9 - 30/11/2023
 * (Change) Change style for button view
@@ -168,7 +183,7 @@
 # 0.0.8 - 28/11/2023
 * (Add) Details component
 * (Add) Modal component
-* (Add) Input directive  
+* (Add) Input directive
 * (Add) TextArea directive
 
 # 0.0.7 - 23/11/2023
@@ -177,20 +192,20 @@
 * (remove) Image tag from card task component
 
 # 0.0.6 - 07/11/2023
-* (Fix) Fix aside nav styles 
+* (Fix) Fix aside nav styles
 
 # 0.0.5 - 06/11/2023
-* (change) Navbar aside left styles 
+* (change) Navbar aside left styles
 
 # 0.0.4 - 04/11/2023
-* (Feature) Add default image to Rounded Image component 
+* (Feature) Add default image to Rounded Image component
 
 # 0.0.3 - 01/11/2023
-* (Change) Navbar aside left styles and behavior 
+* (Change) Navbar aside left styles and behavior
 
 # 0.0.2 - 26/10/2023
 * (Change) Navbar z-index
-* (add) Tailwind z-index configuration on config.js 
+* (add) Tailwind z-index configuration on config.js
 
 # 0.0.1 - 19/10/2023
 * (add) Library UI
