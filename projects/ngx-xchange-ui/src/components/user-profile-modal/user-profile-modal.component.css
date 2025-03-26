@@ -245,6 +245,7 @@
 .linkedin-icon,
 .email-icon {
   stroke: black;
+  fill: black;
   width: 20px;
   height: 20px;
 }

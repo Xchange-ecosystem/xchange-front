@@ -39,7 +39,6 @@
       </section>
       <section class="user-image-wrapper">
         <div class="user-image-container">
-          <!-- <img src="/assets/img/user-image-profile.png" alt="user-profile-image" class="user-profile-image"> -->
           <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
         </div>
       </section>
@@ -58,7 +57,6 @@
             <p class="talents-p">Interest talents</p>
             <div class="tabs-wrapper">
               <div xcProfileTags="gray" class="example-item" *ngFor="let tag of user.tags">{{tag}}</div>
-              
             </div>
           </span>
           <span class="member-since-wrapper">
@@ -68,24 +66,14 @@
           <span class="email-wrapper">
             <p>Email</p>
             <div class="email-data">
-              <!-- <xc-icon-envelope class="email-icon"/> -->
-              <img
-                src="assets/icons/u_envelope.svg"
-                alt="email-icon"
-                class="email-icon"
-              />
+              <xc-icon-envelope class="email-icon"/>
               <p class="user-email">{{user.email}}</p>
             </div>
           </span>
           <span class="linkedin-wrapper">
             <p>Linkedin</p>
             <div class="linkedin-data">
-              <!-- <xc-icon-linkedin class="linkedin-icon"/> -->
-              <img
-                src="assets/icons/u_linkedin.svg"
-                alt="linkedin-icon"
-                class="linkedin-icon"
-              />
+              <xc-icon-linkedin class="linkedin-icon"/>
               <p>{{user.linkedin}}</p>
             </div>
           </span>

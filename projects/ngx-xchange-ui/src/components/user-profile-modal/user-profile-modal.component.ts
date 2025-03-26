@@ -5,6 +5,7 @@ import { NgFor } from '@angular/common';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
 import { ClickOutsideDirective } from '../../directives/click-outside/click-outside.directive';
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
+import { XcIconEnvelopeComponent, XcIconLinkedinComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-user-profile-modal',
@@ -16,6 +17,8 @@ import { CardStylesDirective } from '../../directives/card-styles/card-styles.di
     ProfileHeaderDirective,
     ClickOutsideDirective,
     CardStylesDirective,
+    XcIconLinkedinComponent,
+    XcIconEnvelopeComponent
   ],
   templateUrl: './user-profile-modal.component.html',
   styleUrl: './user-profile-modal.component.css',
