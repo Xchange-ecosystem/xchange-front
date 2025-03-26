@@ -76,6 +76,7 @@
   height: 20px;
   flex-shrink: 0;
   fill: black;
+  stroke: black;
 }
 
 .profile__collab-icon-svg {
@@ -148,4 +149,9 @@
   background: none;
   font-size: 18px;
   cursor: pointer;
+}
+
+.terster{
+  fill: black;
+  stroke: black;
 }
