@@ -9,6 +9,7 @@ import {
   XcIconQuestionCircleComponent,
   XcIconRocketComponent,
   XcIconSettingComponent,
+  XcIconSignAltComponent,
   XcIconStarComponent,
   XcIconUsersAltComponent,
   XcIconWifiComponent,
@@ -34,6 +35,7 @@ import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
     XcIconRocketComponent,
     XcIconWifiComponent,
     XcIconUsersAltComponent,
+    XcIconSignAltComponent
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',
