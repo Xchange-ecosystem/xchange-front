@@ -1,10 +1,10 @@
-<section class="header">
-  <xc-user-header ProfileHeaderDirective />
-  <div class="header_content">
-    <section class="header_content_left" xcCardStyles [padding]="12">
-      <div class="header_content_left-organizer">
+<section class="container">
+  <xc-user-header  />
+  <div class="container_content">
+    <section class="container_content_left" xcCardStyles [padding]="12">
+      <div class="container_content_left-organizer">
         <h5 class="sub-title">Organizer</h5>
-        <div class="header_content_left-organizer-content" >
+        <div class="container_content_left-organizer-content" >
           <section class="message">
             <div class="message__avatar">
               <img src="assets/icons/Avatar.svg" alt="" class="bot-icon" />
@@ -64,12 +64,12 @@
         </div>
       </div>
     </section>
-    <section class="header_content_right" xcCardStyles [padding]="12">
-      <div class="header_content_right-organizer">
+    <section class="container_content_right" xcCardStyles [padding]="12">
+      <div class="container_content_right-organizer">
         <h5 class="sub-title">My feed</h5>
-        <div class="header_content_right-organizer-content" >
-          <section class="header_content_right-organizer-content-nav">
-            <div class="header_content_right-organizer-content-nav-filter">
+        <div class="container_content_right-organizer-content" >
+          <section class="container_content_right-organizer-content-nav">
+            <div class="container_content_right-organizer-content-nav-filter">
               <button xcButton400>
                 <xc-icon-home class="button-400"/>
               </button>
@@ -94,7 +94,7 @@
               </button>
             </div>
           </section>
-          <section class="header_content_right-organizer-content-nav-drop">
+          <section class="container_content_right-organizer-content-nav-drop">
             <nav class="ai-filters">
               <xc-ai-filter label="Objective state" case="state"></xc-ai-filter>
               <xc-ai-filter label="Role" case="role"></xc-ai-filter>
