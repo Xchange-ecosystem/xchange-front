@@ -106,7 +106,7 @@
 .aside-nav__wifi{
     transform: rotate(45deg);
     cursor: pointer;
-    box-shadow: var(--xc-boxShadow-500);
+
     border: 1px solid var(--xc-boxShadow-500);
 }
 
