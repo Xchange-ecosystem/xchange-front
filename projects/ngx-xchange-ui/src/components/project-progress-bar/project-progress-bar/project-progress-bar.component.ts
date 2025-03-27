@@ -51,8 +51,8 @@ export class ProjectProgressBarComponent {
     // "bg-Second_accent rounded-lg h-full" :
     // "bg-Suggestion  rounded-l-lg h-full"
   }
-  getTotalClass(objectivesOpen: number, objectivesComplete: number){
-    return objectivesOpen === 0 && objectivesComplete === 0 ? 
+  getTotalClass(objectivesOpen: number, objectivesComplete: number) {
+    return objectivesOpen === 0 && objectivesComplete && this.suggested === 0 ? 
     "bg-[var(--xc-grey200)] rounded-lg h-full flex items-center justify-center":
     "bg-[var(--xc-grey200)] rounded-e-lg h-full flex items-center justify-center"
   }
