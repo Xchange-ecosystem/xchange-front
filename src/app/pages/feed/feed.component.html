@@ -73,7 +73,7 @@
               <button xcButton400>
                 <xc-icon-home class="button-400"/>
               </button>
-              <button xcButton400>
+              <button xcButton400 class="ai-button" (click)="toggleAiFilters()">
                 <xc-icon-ai class="button-400"/>
               </button>
               <button xcFeedButton>
@@ -94,16 +94,20 @@
               </button> -->
             </div>
           </section>
-          <section class="container_content_right-organizer-content-nav-drop">
-            <nav class="ai-filters">
-              <xc-ai-filter label="Objective state" case="state"></xc-ai-filter>
-              <xc-ai-filter label="Role" case="role"></xc-ai-filter>
-              <xc-ai-filter label="Date" case="date"></xc-ai-filter>
-              <button class="redo-button">
-                <xc-icon-redo class="redo-icon"></xc-icon-redo>
-              </button>
-            </nav>
-          </section>
+          <section
+          class="container_content_right-organizer-content-nav-drop"
+          *ngIf="isAiFiltersVisible"
+          [@slideInOut]
+        >
+          <nav class="ai-filters">
+            <xc-ai-filter label="Objective state" case="state"></xc-ai-filter>
+            <xc-ai-filter label="Role" case="role"></xc-ai-filter>
+            <xc-ai-filter label="Date" case="date"></xc-ai-filter>
+            <button class="redo-button">
+              <xc-icon-redo class="redo-icon"></xc-icon-redo>
+            </button>
+          </nav>
+        </section>
           <section class="feed-cards">
             <xc-feed-objective class="objective-injector" />
           </section>

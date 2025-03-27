@@ -182,12 +182,14 @@
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
-  max-height: 500px;
+  max-height: 620px;
   padding: 4px 8px;
 }
 
 .objective-injector {
   display: flex;
+  flex: 1 1 auto;
+  overflow-y: auto;
   flex-direction: column;
   gap: 16px;
 }

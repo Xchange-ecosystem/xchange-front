@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, HostListener, } from '@angular/core';
 import {
   XcIconAIComponent,
   XcIconClipboardComponent,
@@ -36,13 +37,23 @@ import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directi
     XcIconSendComponent,
     XcIconMicrophoneComponent,
     XcIconClipboardComponent,
+    NgIf
   ],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss',
 })
 export class FeedComponent {
-  isSidebarHidden = true;
-  toggleSidebar() {
-    this.isSidebarHidden = !this.isSidebarHidden;
+  isAiFiltersVisible = false;
+
+  toggleAiFilters() {
+    this.isAiFiltersVisible = !this.isAiFiltersVisible;
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.ai-button') && !target.closest('.ai-filters')) {
+      this.isAiFiltersVisible = false;
+    }
   }
 }
