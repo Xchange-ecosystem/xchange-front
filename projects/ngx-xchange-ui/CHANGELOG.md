@@ -1,5 +1,6 @@
-# 0.0.14 27/03/2025
+# 0.0.15 27/03/2025
 (add) directive button styles
+(fix) - Project progressbar rounded when has suggested
 
 # 0.0.13 25/03/2025
 (add) directive click outside
