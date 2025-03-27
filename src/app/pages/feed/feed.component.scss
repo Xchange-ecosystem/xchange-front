@@ -35,7 +35,6 @@
     &_right {
       display: flex;
       flex-direction: column;
-      background: white;
       height: 100%;
       &-organizer {
         display: flex;
@@ -46,15 +45,29 @@
           display: flex;
           flex-direction: column;
           height: 100%;
+          width: 100%;
           &-nav {
             display: flex;
-            gap: 16px;
+            flex-direction: column;
+            gap: 8px;
+            background: white;
+            padding: 12px;
+            border-radius: 8px 8px 0px 0px;
             &-filter {
               gap: 16px;
               display: flex;
+              width: 100%;
+              background: white;
               @media screen and (max-width: 768px) {
                 overflow-x: scroll;
               }
+            }
+            &-drop {
+              display: flex;
+              flex-direction: column;
+              background: white;
+              width: 100%;
+              overflow-y: auto;
             }
           }
         }
@@ -181,9 +194,9 @@
 .feed-cards {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  max-height: 620px;
-  padding: 4px 8px;
+  max-height: 610px;
+  padding: 16px;
+  background: var(--xc-grey200);
 }
 
 .objective-injector {
@@ -193,7 +206,7 @@
   flex-direction: column;
   gap: 16px;
 }
-.button-500{
+.button-500 {
   width: 24px;
   height: 24px;
 }
