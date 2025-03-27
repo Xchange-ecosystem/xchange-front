@@ -15,6 +15,7 @@ import {
   XcIconWifiComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
+import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-out.component';
 
 @Component({
   selector: 'xc-new-aside-nav',
@@ -35,7 +36,7 @@ import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
     XcIconRocketComponent,
     XcIconWifiComponent,
     XcIconUsersAltComponent,
-    XcIconSignAltComponent
+    XcLogOutIconComponent
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',
