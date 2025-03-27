@@ -1,0 +1,7 @@
+<button class="wrapper">
+  <span [ngSwitch]="iconName" class="span-icons">
+    <xc-icon-send *ngSwitchCase="'send'" class="icon-stroke"></xc-icon-send>
+    <xc-icon-microphone *ngSwitchCase="'microphone'" class="icon-stroke"></xc-icon-microphone>
+    <xc-icon-clipboard *ngSwitchCase="'clipboard'" class="icon-stroke"></xc-icon-clipboard>
+  </span>
+</button>

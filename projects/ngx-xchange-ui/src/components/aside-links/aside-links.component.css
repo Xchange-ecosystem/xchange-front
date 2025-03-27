@@ -1,0 +1,48 @@
+.navigation-label {
+    font-size: 14px;
+}
+
+.container_icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 24px;
+    height: 24px;
+    stroke: black;
+    fill: black;
+}
+
+.container_iconLabel {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.container_label {
+    cursor: pointer;
+}
+
+.container_arrowSelection {
+    width: 24px;
+    stroke: black;
+}
+
+.notification {
+    display: none;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 24px; 
+    top: 0;
+}
+
+.notification--active {
+    background: #B8FBFF;
+    display: block;
+}
+
+.onActive{
+    background: var(--xc-gradient-light-grey-on-white);
+}
