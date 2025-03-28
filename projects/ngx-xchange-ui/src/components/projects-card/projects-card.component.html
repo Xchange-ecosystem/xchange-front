@@ -1,17 +1,17 @@
 <section *ngFor="let project of projects" xcCardStyles [padding]="16" [gap]="16">	
-    <div>
-        <img src={{project.image}} alt="project-background">
+    <div class="image-wrapper">
+        <img src={{project.image}} alt="project-background" class="project-image">
     </div>
-    <div>
+    <div class="project-title">
         <h6>{{project.title}}</h6>
-        <span *ngFor="let tags of project.tags">
-            <div xcProfileTags="gray">{{tags}}</div>
+        <span  class="project-tags">
+            <div xcProfileTags="gray" *ngFor="let tags of project.tags">{{tags}}</div>
         </span>
     </div>
-    <div>
-        <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested"/>
+    <div class="project-progress">
+        <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested" />
     </div>
-    <div>
+    <div class="project-description">
         <p>
             {{project.description}}
         </p>

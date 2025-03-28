@@ -22,5 +22,7 @@ export class CardStylesDirective implements OnInit {
     this.renderer.setStyle(element, 'padding', `${this.padding}px`);
     this.renderer.setStyle(element, 'gap', `${this.gap}px`);
     this.renderer.setStyle(element, 'align-items', 'start');
+    this.renderer.setStyle(element, 'max-width', '550px');
+    this.renderer.setStyle(element, 'background', 'white');
   }
 }
