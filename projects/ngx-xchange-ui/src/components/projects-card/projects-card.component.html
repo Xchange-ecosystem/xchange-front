@@ -1,0 +1,19 @@
+<section *ngFor="let project of projects">
+    <div>
+        <img src={{project.image}} alt="project-background">
+    </div>
+    <div>
+        <h6>{{project.title}}</h6>
+        <span *ngFor="let tags of project.tags">
+            <div xcProfileTags="gray">{{tags}}</div>
+        </span>
+    </div>
+    <div>
+        <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested"/>
+    </div>
+    <div>
+        <p>
+            {{project.description}}
+        </p>
+    </div>
+</section>
