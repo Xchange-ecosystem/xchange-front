@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags.directive';
 import { ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
 import { NgFor } from '@angular/common';
+import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
 
 @Component({
   selector: 'xc-projects-card',
   standalone: true,
-  imports: [ProfileTagsDirective, ProjectProgressBarModule, NgFor],
+  imports: [ProfileTagsDirective, ProjectProgressBarModule, NgFor, CardStylesDirective],
   templateUrl: './projects-card.component.html',
   styleUrl: './projects-card.component.css'
 })
