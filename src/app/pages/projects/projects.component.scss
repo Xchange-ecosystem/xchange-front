@@ -24,5 +24,14 @@
         }
       }
     }
+    &-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      &-injector {
+        display: flex;
+        gap: 24px;
+      }
+    }
   }
 }
