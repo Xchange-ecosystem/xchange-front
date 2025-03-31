@@ -7,6 +7,7 @@ import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 export class CardStylesDirective implements OnInit {
   @Input() padding: number = 0;
   @Input() gap: number = 0;
+  
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }
 
@@ -22,7 +23,7 @@ export class CardStylesDirective implements OnInit {
     this.renderer.setStyle(element, 'padding', `${this.padding}px`);
     this.renderer.setStyle(element, 'gap', `${this.gap}px`);
     this.renderer.setStyle(element, 'align-items', 'start');
-    this.renderer.setStyle(element, 'max-width', '480px');
+    this.renderer.setStyle(element, 'max-width', '550px');
     this.renderer.setStyle(element, 'background', 'white');
   }
 }
