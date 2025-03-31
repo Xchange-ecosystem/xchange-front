@@ -20,11 +20,21 @@
     </section>
   </div>
 
-  <div class="modal" [class.show]="isModalOpen" >
+  <section class="modal" [class.show]="isModalOpen">
     <div class="modal-content">
-      <h2>Create a New Project</h2>
-      <p>Follow the steps to create your project.</p>
-      <button (click)="closeModal()">Close</button>
+      <img src="assets/img/new-project-header.webp" alt="new-project-header-image">
+      <h5 xcHeadline400>Start a new project</h5>
+      <div>
+        <ul >
+          <li>Describe your project, select an AI template</li>
+          <li>Get guidance through milestones and objectives</li>
+          <li>Assign collaborator to help you progress and reward them with credits</li>
+        </ul>
+        <ul></ul>
+      </div>
     </div>
-  </div>
+  </section>
+
 </main>
+<!-- 
+(click)="closeModal()" -->
