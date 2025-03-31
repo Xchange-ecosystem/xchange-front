@@ -9,7 +9,7 @@ import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/hea
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SortByComponent, Headline600Directive, ProjectsCardComponent,CardStylesDirective,XcIconPlusCircleComponent],
+  imports: [SortByComponent, Headline600Directive, ProjectsCardComponent,XcIconPlusCircleComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
