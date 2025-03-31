@@ -11,18 +11,19 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
   selector: 'app-projects',
   standalone: true,
   imports: [
-    SortByComponent, 
-    Headline600Directive, 
-    ProjectsCardComponent, 
-    XcIconPlusCircleComponent, 
-    Headline400Directive, 
-    FeedButtonDirective, 
+    SortByComponent,
+    Headline600Directive,
+    ProjectsCardComponent,
+    XcIconPlusCircleComponent,
+    Headline400Directive,
+    FeedButtonDirective,
     ClickOutsideDirective],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
   isModalOpen = false;
+  iStep = 1;
 
   openModal(): void {
     this.isModalOpen = true;
@@ -30,5 +31,13 @@ export class ProjectsComponent {
 
   closeModal(): void {
     this.isModalOpen = false;
+  }
+
+  changeStep(): void {
+    if (this.iStep < 2) {
+      this.iStep++;
+    } else {
+      console.log('Pasos terminados');
+    }
   }
 }

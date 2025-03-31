@@ -20,7 +20,10 @@
     </section>
   </div>
 
-  <section class="modal" [class.show]="isModalOpen" >
+  <section class="modal" [class.show]="isModalOpen">
+    <div class="modal-stepper">
+      
+    </div>
     <div class="modal-content" appClickOutside>
       <img src="assets/img/new-project-header.webp" alt="new-project-header-image">
       <div class="modal-content-description">
@@ -40,7 +43,7 @@
         </div>
         <div class="modal-content-description-buttons">
           <button class="button-500-cancel" (click)="closeModal()">Cancel</button>
-          <button class="button-500-next">Next</button>
+          <button class="button-500-next" (click)="changeStep()">Next</button>
         </div>
       </div>
     </div>
