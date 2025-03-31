@@ -7,7 +7,7 @@ import { MainHeadingModule } from '../../directives/main-heading/main-heading.mo
 import { NgFor, NgIf } from '@angular/common';
 import { UserProfileModalComponent } from '../user-profile-modal/user-profile-modal.component';
 import { ClickOutsideDirective } from '../../directives/click-outside/click-outside.directive';
-import { XcIconEnvelopeComponent, XcIconLinkedinComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconLinkedinComponent } from '@indziaki/ngx-xchange-icons';
 @Component({
   selector: 'xc-community-cards',
   standalone: true,
@@ -22,7 +22,6 @@ import { XcIconEnvelopeComponent, XcIconLinkedinComponent } from '@indziaki/ngx-
     UserProfileModalComponent,
     ClickOutsideDirective,
     XcIconLinkedinComponent,
-    XcIconEnvelopeComponent
   ],
   templateUrl: './community-cards.component.html',
   styleUrl: './community-cards.component.css',

@@ -10,7 +10,7 @@
       <h5 xcHeadline600>All Projects</h5>
       <div class="container_content-cards-wrapper">
         <xc-projects-card class="container_content-cards-wrapper-injector" />
-        <button class="new-project-card">
+        <button class="new-project-card" (click)="openModal()">
           <span class="new-project-card-icon">
             <xc-icon-plus-circle />
           </span>
@@ -18,5 +18,13 @@
         </button>
       </div>
     </section>
+  </div>
+
+  <div class="modal" [class.show]="isModalOpen" >
+    <div class="modal-content">
+      <h2>Create a New Project</h2>
+      <p>Follow the steps to create your project.</p>
+      <button (click)="closeModal()">Close</button>
+    </div>
   </div>
 </main>
