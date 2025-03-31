@@ -2,6 +2,7 @@ import { NgClass, NgFor } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import {
   XcIconAngleDownComponent,
+  XcIconRedoComponent,
   XcIconRefreshComponent,
   XcIconSearchComponent,
 } from '@indziaki/ngx-xchange-icons';
@@ -13,7 +14,9 @@ import {
     XcIconAngleDownComponent,
     XcIconRefreshComponent,
     XcIconSearchComponent,
-    NgFor, NgClass
+    NgFor, 
+    NgClass,
+    XcIconRedoComponent
   ],
   templateUrl: './sort-by.component.html',
   styleUrl: './sort-by.component.css',
