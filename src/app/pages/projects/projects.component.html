@@ -1,15 +1,21 @@
 <main class="container">
   <div class="container_content">
     <div class="container_content-nav">
-     <span class="container_content-nav-span"> 
-      <button class="container_content-nav-span-button">Assignments</button>
-      <button class="container_content-nav-span-button">Collaborations</button>
-      <xc-sort-by /></span>
+      <span class="container_content-nav-span">
+        <button class="container_content-nav-span-button">Assignments</button>
+        <button class="container_content-nav-span-button">Collaborations</button>
+        <xc-sort-by /></span>
     </div>
     <section class="container_content-cards">
       <h5 xcHeadline600>All Projects</h5>
       <div class="container_content-cards-wrapper">
-        <xc-projects-card class="container_content-cards-wrapper-injector"/>
+        <xc-projects-card class="container_content-cards-wrapper-injector" />
+        <div class="new-project-card">
+          <span class="new-project-card-icon">
+            <xc-icon-plus-circle />
+          </span>
+          <p>Create a new project</p>
+        </div>
       </div>
     </section>
   </div>

@@ -32,13 +32,35 @@
       display: flex;
       flex-direction: column;
       gap: 21px;
-      overflow-y: scroll;
+      
       &-wrapper {
-        &-injector{
+        max-height: 850px;
+        overflow-y: scroll;
+        &-injector {
           display: flex;
           gap: 24px;
+          flex-wrap: wrap;
+          
         }
       }
     }
+  }
+}
+
+.new-project-card {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 480px;
+  max-height: 440px;
+  background: white;
+  padding: 16px;
+  gap: 16px;
+  &-icon{
+    width: 80px;
+    height: 80px;
+    stroke: black;
   }
 }
