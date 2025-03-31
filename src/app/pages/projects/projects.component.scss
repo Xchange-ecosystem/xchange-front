@@ -3,46 +3,42 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-
   &_content {
     display: flex;
     flex-direction: column;
     gap: 30px;
-
     &-nav {
       display: flex;
       align-items: center;
       justify-content: end;
       gap: 8px;
-
       &-span {
         display: flex;
         gap: 16px;
         background: white;
         border-radius: 8px;
         padding: 8px;
-
         &-button {
           color: black;
         }
       }
     }
-
     &-cards {
       display: flex;
       flex-direction: column;
       gap: 21px;
+
       &-wrapper {
         max-height: 900px;
         overflow-y: scroll;
         display: flex;
         flex-direction: column;
         gap: 16px;
+
         &-injector {
           display: flex;
           gap: 24px;
           flex-wrap: wrap;
-          
         }
       }
     }
@@ -59,7 +55,7 @@
   background: white;
   padding: 16px;
   gap: 16px;
-  &-icon{
+  &-icon {
     width: 80px;
     height: 80px;
     stroke: black;
@@ -77,13 +73,36 @@
   justify-content: center;
   align-items: center;
   z-index: 10;
-&-content{
-  background: white;
-  padding: 32px;
-  border-radius: 16px;
-}
+  &-content {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    gap: 40px;
+    &-description {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      padding: 0px 64px 0px 64px;
+      gap: 24px;
+      &-container {
+        display: flex;
+        gap: 80px;
+        &-list {
+          color: black;
+          list-style: disc;
+          margin-left: 20px;
+          text-wrap: wrap;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+    }
+  }
 }
 
 .modal.show {
-  display: flex; 
+  display: flex;
 }
