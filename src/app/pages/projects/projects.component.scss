@@ -99,10 +99,33 @@
           line-height: normal;
         }
       }
+      &-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+        gap: 16px;
+      }
     }
   }
 }
 
 .modal.show {
   display: flex;
+}
+
+.button-500-cancel{
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px 32px;
+}
+
+.button-500-next{
+  background: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 8px 32px;
 }

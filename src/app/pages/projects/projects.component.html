@@ -20,8 +20,8 @@
     </section>
   </div>
 
-  <section class="modal" [class.show]="isModalOpen">
-    <div class="modal-content">
+  <section class="modal" [class.show]="isModalOpen" >
+    <div class="modal-content" appClickOutside>
       <img src="assets/img/new-project-header.webp" alt="new-project-header-image">
       <div class="modal-content-description">
         <h5 xcHeadline400>Start a new project</h5>
@@ -38,10 +38,12 @@
             <li>Valuate yout project with real-life operational performance metrics</li>
           </ul>
         </div>
+        <div class="modal-content-description-buttons">
+          <button class="button-500-cancel" (click)="closeModal()">Cancel</button>
+          <button class="button-500-next">Next</button>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
-<!-- 
-(click)="closeModal()" -->
