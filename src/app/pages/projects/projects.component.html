@@ -3,8 +3,11 @@
     <div class="container_content-nav">
       <span class="container_content-nav-span">
         <button class="container_content-nav-span-button">Assignments</button>
-        <button class="container_content-nav-span-button">Collaborations</button>
-        <xc-sort-by /></span>
+        <button class="container_content-nav-span-button">
+          Collaborations
+        </button>
+        <xc-sort-by
+      /></span>
     </div>
     <section class="container_content-cards">
       <h5 xcHeadline600>All Projects</h5>
@@ -21,22 +24,20 @@
   </div>
 
   <section class="modal" [class.show]="isModalOpen">
-    <div class="modal-stepper">
-      <div [ngClass]="{ 'stepper-horizontal': orientation === 'horizontal', 'stepper-vertical': orientation === 'vertical' }">
-        <div>
-        </div>
-      </div>
+    <div class="modal-stepper" orientation="vertical" >
+        <span *ngFor="let step of stepsArray" class="stepper-icon-container">
+          <xc-icon-check class="icon"/>
+        </span>
     </div>
     <div class="modal-content">
       <ng-container></ng-container>
-  
+
       <div class="navigation">
         <button class="button-500-cancel" (click)="closeModal()">Cancel</button>
         <button class="button-500-next" (click)="changeStep()">Next</button>
       </div>
     </div>
   </section>
-
 </main>
 
 <!--Esto es el Step 1-->
