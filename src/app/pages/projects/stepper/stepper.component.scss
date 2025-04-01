@@ -4,8 +4,6 @@
     height: 100%;
     justify-content: space-between;
 }
-
-
 .stepper-container {
   display: flex;
   width: 100%;
@@ -47,18 +45,15 @@
     justify-content: end;
   }
 }
-
 .active-step {
   background: var(--xc-brand-light-green);
   stroke: var(--xc-categories-completed);
 }
-
 .inactive-step {
   background: var(--xc-grey100);
   padding: 5px 10px;
   border-radius: 5px;
 }
-
 .icon-container {
   border-radius: 32px;
   display: flex;
@@ -67,7 +62,6 @@
   width: 32px;
   height: 32px;
 }
-
 .button-500-cancel {
   background: white;
   color: black;
@@ -75,7 +69,6 @@
   border-radius: 8px;
   padding: 8px 32px;
 }
-
 .button-500-next {
   background: black;
   color: white;
@@ -83,7 +76,6 @@
   border-radius: 8px;
   padding: 8px 32px;
 }
-
 .stepper-content {
   display: flex;
   flex-direction: column;
@@ -140,6 +132,19 @@
       &:focus {
         outline: none;
       }
+    }
+  }
+  &-templates{
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    max-height: 380px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    &-injector{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
     }
   }
 }

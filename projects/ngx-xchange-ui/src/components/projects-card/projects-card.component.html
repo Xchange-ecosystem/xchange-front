@@ -8,7 +8,7 @@
             <div xcProfileTags="gray" *ngFor="let tags of project.tags">{{tags}}</div>
         </span>
     </div>
-    <div class="project-progress">
+    <div class="project-progress" *ngIf="metrics">
         <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested" />
     </div>
     <div class="project-description">
