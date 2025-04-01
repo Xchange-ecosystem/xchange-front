@@ -5,8 +5,10 @@
     justify-content: space-between;
 }
 .stepper-container {
+  position: relative;
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
   &.stepper-horizontal {
     display: flex;
     justify-content: center;
@@ -179,7 +181,11 @@
   }
 }
 .back-button {
+  position: absolute;
   display: flex;
+  left: 16px;
+  top: 0;
+  z-index: 1;
   justify-content: center;
   align-items: center;
   border-radius: 16px;

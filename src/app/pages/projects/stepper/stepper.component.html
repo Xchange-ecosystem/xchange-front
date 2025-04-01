@@ -1,5 +1,8 @@
 <section class="stepper">
-  <header class="stepper-container" [ngClass]="{'stepper-horizontal': orientation === 'horizontal','stepper-vertical': orientation === 'vertical'}">
+  <header class="stepper-container"  [ngClass]="{
+    'stepper-horizontal': orientation === 'horizontal',
+    'stepper-vertical': orientation === 'vertical',
+  }">
     <button *ngIf="actualStep > 1"class="back-button"(click)="previousStep()">
       <xc-icon-arrow-left class="back-button-icon"/>
       <p>Back</p>
