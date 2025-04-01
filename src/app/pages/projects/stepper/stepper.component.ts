@@ -1,6 +1,8 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
+import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
+import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 
 @Component({
   selector: 'app-stepper',
@@ -9,7 +11,9 @@ import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
     XcIconCheckComponent,
     NgFor,
     NgClass,
-    NgIf
+    NgIf,
+    Headline400Directive,
+    ClickOutsideDirective
   ],
   templateUrl: './stepper.component.html',
   styleUrl: './stepper.component.scss'

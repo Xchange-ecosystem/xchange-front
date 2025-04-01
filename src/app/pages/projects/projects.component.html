@@ -24,51 +24,8 @@
   </div>
 
   <section class="modal" [class.show]="isModalOpen">
-    <div class="modal-content">
+    <div class="modal-content" appClickOutside>
       <app-stepper [totalSteps]="3" [orientation]="'horizontal'" />
     </div>
   </section>
 </main>
-
-<!--Esto es el Step 1-->
-<!-- 
-<div class="modal-content" appClickOutside>
-  <img src="assets/img/new-project-header.webp" alt="new-project-header-image">
-  <div class="modal-content-description">
-    <h5 xcHeadline400>Start a new project</h5>
-    <div class="modal-content-description-container">
-      <ul class="modal-content-description-container-list">
-        <li>Describe your project, select an AI template</li>
-        <li>Get guidance through milestones and objectives</li>
-        <li>Assign collaborator to help you progress and reward them with credits</li>
-      </ul>
-      <ul class="modal-content-description-container-list">
-        <li>Set goals to structure your project phases</li>
-        <li>Track progress in yout dashboard</li>
-        <li>Invite mentors and investors</li>
-        <li>Valuate yout project with real-life operational performance metrics</li>
-      </ul>
-    </div>
-  </div>
-</div> 
-
-
-      <span
-        *ngFor="let step of stepsArray; let i = index"
-        [ngClass]="{
-          'active-step': i + 1 === actualStep,
-          'inactive-step': i + 1 !== actualStep
-        }"
-      >
-        <xc-icon-check
-          *ngIf="i + 1 === actualStep"
-          class="icon"
-        ></xc-icon-check>
-        Paso {{ i + 1 }}
-      </span>
-
-
-
-
-
--->

@@ -1,36 +1,82 @@
 <section>
-    <div [ngClass]="{
+  <div
+    [ngClass]="{
       'stepper-horizontal': orientation === 'horizontal',
       'stepper-vertical': orientation === 'vertical'
-    }">
-        <span
-        class="icon-container"
-        *ngFor="let step of stepsArray"
-        [ngClass]="{
-          'active-step': step === actualStep,
-          'inactive-step': step !== actualStep
-        }"
-      >
-          <xc-icon-check *ngIf="step === actualStep"/>
-        </span>
-      </div>
-      <ng-container></ng-container>
-      
-      <div class="navigation">
-        <button class="button-500-cancel" >Cancel</button>
-        <button class="button-500-next" (click)="changeStep()" *ngIf="actualStep < stepsArray.length">Next</button>
-        <button
-        *ngIf="actualStep > 1"
-        class="button-500-next"
-        (click)="previousStep()"
-      >
-        Back
-      </button>
-      <button
-      *ngIf="actualStep === stepsArray.length"
-      class="button-500-next"
+    }"
+  >
+    <span
+      class="icon-container"
+      *ngFor="let step of stepsArray"
+      [ngClass]="{
+        'active-step': step === actualStep,
+        'inactive-step': step !== actualStep
+      }"
     >
+      <xc-icon-check *ngIf="step === actualStep" />
+    </span>
+  </div>
+  <ng-container *ngIf="actualStep === 1">
+    <div class="stepper-content" appClickOutside>
+      <img
+        src="assets/img/new-project-header.webp"
+        alt="new-project-header-image"
+      />
+      <div class="stepper-content-description">
+        <h5 xcHeadline400>Start a new project</h5>
+        <div class="stepper-content-description-container">
+          <ul class="stepper-content-description-container-list">
+            <li>Describe your project, select an AI template</li>
+            <li>Get guidance through milestones and objectives</li>
+            <li>
+              Assign collaborator to help you progress and reward them with
+              credits
+            </li>
+          </ul>
+          <ul class="stepper-content-description-container-list">
+            <li>Set goals to structure your project phases</li>
+            <li>Track progress in yout dashboard</li>
+            <li>Invite mentors and investors</li>
+            <li>
+              Valuate yout project with real-life operational performance
+              metrics
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="actualStep === 2">
+    <div>
+      <h5>Step 2 Content</h5>
+      <p>Set goals to structure your project phases.</p>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="actualStep === 3">
+    <div>
+      <h5>Step 3 Content</h5>
+      <p>Invite mentors and investors to your project.</p>
+    </div>
+  </ng-container>
+
+  <div class="navigation">
+    <button class="button-500-cancel">Cancel</button>
+    <button
+      class="button-500-next"
+      (click)="changeStep()"
+      *ngIf="actualStep < stepsArray.length"
+    >
+      Next
+    </button>
+    <button
+      *ngIf="actualStep > 1"
+      class="button-500-next"
+      (click)="previousStep()"
+    >
+      Back
+    </button>
+    <button *ngIf="actualStep === stepsArray.length" class="button-500-next">
       Create Project
     </button>
-      </div>
+  </div>
 </section>
