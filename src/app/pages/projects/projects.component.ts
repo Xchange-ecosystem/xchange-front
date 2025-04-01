@@ -23,7 +23,6 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 export class ProjectsComponent {
   isModalOpen = false;
 
-  
   openModal(): void {
     this.isModalOpen = true;
   }

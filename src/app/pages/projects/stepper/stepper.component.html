@@ -1,23 +1,17 @@
-<section>
-  <div
-    [ngClass]="{
-      'stepper-horizontal': orientation === 'horizontal',
-      'stepper-vertical': orientation === 'vertical'
-    }"
-  >
-    <span
-      class="icon-container"
-      *ngFor="let step of stepsArray"
-      [ngClass]="{
-        'active-step': step === actualStep,
-        'inactive-step': step !== actualStep
-      }"
-    >
+<section class="stepper">
+  <header class="stepper-container" [ngClass]="{'stepper-horizontal': orientation === 'horizontal','stepper-vertical': orientation === 'vertical'}">
+    <button *ngIf="actualStep > 1"class="back-button"(click)="previousStep()">
+      <xc-icon-arrow-left class="back-button-icon"/>
+      <p>Back</p>
+    </button>
+    <span class="icon-container" *ngFor="let step of stepsArray" [ngClass]="{'active-step': step === actualStep,'inactive-step': step !== actualStep}">
       <xc-icon-check *ngIf="step === actualStep" />
     </span>
-  </div>
+    <!-- <div class="steps-line"></div> -->
+  </header>
+
   <ng-container *ngIf="actualStep === 1">
-    <div class="stepper-content" appClickOutside>
+    <article class="stepper-content" appClickOutside>
       <img
         src="assets/img/new-project-header.webp"
         alt="new-project-header-image"
@@ -44,23 +38,47 @@
           </ul>
         </div>
       </div>
-    </div>
+    </article>
   </ng-container>
   <ng-container *ngIf="actualStep === 2">
-    <div>
-      <h5>Step 2 Content</h5>
-      <p>Set goals to structure your project phases.</p>
-    </div>
+    <article class="stepper-content">
+      <h5 xcHeadline400>Start a new project</h5>
+      <div class="second-container">
+        <div class="second-container-title">
+          <strong>Title</strong>
+          <input type="text" placeholder="Name your project" class="second-container-title-input"/>
+        </div>
+        <div class="second-container">
+          <strong>Description</strong>
+          <textarea
+            placeholder="Describe your project goals and process"
+            rows="7"
+            cols="40"
+            class="second-container-title-input"
+          ></textarea>
+        </div>
+        <div class="upload-container">
+          <strong>Banner Image</strong>
+          <button class="upload-container-button">
+            <xc-icon-file-upload class="upload-container-button-icon"/>
+            <span class="upload-container-button-span">
+              <p>Upload an image</p>
+              <input type="file" class="upload-container-button-span-input"/>
+            </span>
+          </button>
+        </div>
+      </div>
+    </article>
   </ng-container>
   <ng-container *ngIf="actualStep === 3">
-    <div>
+    <article>
       <h5>Step 3 Content</h5>
       <p>Invite mentors and investors to your project.</p>
-    </div>
+    </article>
   </ng-container>
 
-  <div class="navigation">
-    <button class="button-500-cancel">Cancel</button>
+  <footer class="stepper-container-footer">
+    <button class="button-500-cancel" (click)="finish()">Cancel</button>
     <button
       class="button-500-next"
       (click)="changeStep()"
@@ -68,15 +86,8 @@
     >
       Next
     </button>
-    <button
-      *ngIf="actualStep > 1"
-      class="button-500-next"
-      (click)="previousStep()"
-    >
-      Back
-    </button>
     <button *ngIf="actualStep === stepsArray.length" class="button-500-next">
       Create Project
     </button>
-  </div>
+  </footer>
 </section>

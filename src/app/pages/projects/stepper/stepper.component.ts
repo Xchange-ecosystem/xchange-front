@@ -1,8 +1,9 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
-import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent } from '@indziaki/ngx-xchange-icons';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { XcIconFootballAmericanComponent } from "../../../../../projects/ngx-xchange-icons/src/lib/football-american.component";
 
 @Component({
   selector: 'app-stepper',
@@ -13,14 +14,18 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
     NgClass,
     NgIf,
     Headline400Directive,
-    ClickOutsideDirective
-  ],
+    ClickOutsideDirective,
+    XcIconArrowLeftComponent,
+    XcIconFileUploadComponent,
+    XcIconFootballAmericanComponent
+],
   templateUrl: './stepper.component.html',
   styleUrl: './stepper.component.scss'
 })
 export class StepperComponent {
   @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';
   @Input() totalSteps: number = 0;
+  @Output() finishStepper:EventEmitter<void>=new EventEmitter<void> () 
   actualStep: number = 1;
   stepsArray: number[] = [];
 
@@ -33,8 +38,14 @@ export class StepperComponent {
       this.actualStep++;
       console.log('Paso actual:', this.actualStep);
     } else {
+      
       console.log('Has alcanzado el último paso');
     }
+  }
+
+  finish(): void {
+    console.log('Finalizando el stepper');
+    this.finishStepper.emit();
   }
 
   previousStep(): void {
