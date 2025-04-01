@@ -12,7 +12,8 @@ import { CardStylesDirective } from '../../directives/card-styles/card-styles.di
   styleUrl: './projects-card.component.css'
 })
 export class ProjectsCardComponent {
-  @Input() metrics:boolean = true;
+  @Input() metrics: boolean = true;
+  @Input() objectives: boolean = true;
   public projects = [
     {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzIuKHHeS7DE9kplbdGaHTZlQL92-_x8j4Bw&s",
