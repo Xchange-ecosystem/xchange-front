@@ -1,9 +1,8 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent, XcIconSearchComponent } from '@indziaki/ngx-xchange-icons';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
-import { XcIconFootballAmericanComponent } from "../../../../../projects/ngx-xchange-icons/src/lib/football-american.component";
 
 @Component({
   selector: 'app-stepper',
@@ -17,7 +16,7 @@ import { XcIconFootballAmericanComponent } from "../../../../../projects/ngx-xch
     ClickOutsideDirective,
     XcIconArrowLeftComponent,
     XcIconFileUploadComponent,
-    XcIconFootballAmericanComponent
+    XcIconSearchComponent
 ],
   templateUrl: './stepper.component.html',
   styleUrl: './stepper.component.scss'
