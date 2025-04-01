@@ -3,7 +3,6 @@ import { Component, HostListener } from '@angular/core';
 import {
   XcIconAngleDownComponent,
   XcIconRedoComponent,
-  XcIconRefreshComponent,
   XcIconSearchComponent,
 } from '@indziaki/ngx-xchange-icons';
 
@@ -12,7 +11,6 @@ import {
   standalone: true,
   imports: [
     XcIconAngleDownComponent,
-    XcIconRefreshComponent,
     XcIconSearchComponent,
     NgFor, 
     NgClass,

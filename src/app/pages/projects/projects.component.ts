@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { NgClass, NgFor, NgTemplateOutlet } from '@angular/common';
+import { Component, Input } from '@angular/core';
 import { XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { ProjectsCardComponent } from 'projects/ngx-xchange-ui/src/components/projects-card/projects-card.component';
 import { SortByComponent } from 'projects/ngx-xchange-ui/src/components/sort-by/sort-by.component';
@@ -17,13 +18,19 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
     XcIconPlusCircleComponent,
     Headline400Directive,
     FeedButtonDirective,
-    ClickOutsideDirective],
+    ClickOutsideDirective,
+    NgClass,
+    NgFor,
+    NgTemplateOutlet
+  ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';
+  @Input() steps: number = 3;
   isModalOpen = false;
-  iStep = 1;
+  
 
   openModal(): void {
     this.isModalOpen = true;
@@ -34,10 +41,21 @@ export class ProjectsComponent {
   }
 
   changeStep(): void {
-    if (this.iStep < 2) {
-      this.iStep++;
+    if (this.steps < 3) {
+      this.steps++;
+      console.log('pasos', this.steps);
     } else {
       console.log('Pasos terminados');
     }
   }
+
+  previousStep(): void {
+    if (this.steps > 1) {
+      this.steps--;
+      console.log('Paso anterior:', this.steps);
+    } else {
+      console.log('Ya estás en el primer paso');
+    }
+  }
+
 }

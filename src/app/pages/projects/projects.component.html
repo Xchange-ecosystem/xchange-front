@@ -22,31 +22,41 @@
 
   <section class="modal" [class.show]="isModalOpen">
     <div class="modal-stepper">
-      
+      <div [ngClass]="{ 'stepper-horizontal': orientation === 'horizontal', 'stepper-vertical': orientation === 'vertical' }">
+        <div>
+        </div>
+      </div>
     </div>
-    <div class="modal-content" appClickOutside>
-      <img src="assets/img/new-project-header.webp" alt="new-project-header-image">
-      <div class="modal-content-description">
-        <h5 xcHeadline400>Start a new project</h5>
-        <div class="modal-content-description-container">
-          <ul class="modal-content-description-container-list">
-            <li>Describe your project, select an AI template</li>
-            <li>Get guidance through milestones and objectives</li>
-            <li>Assign collaborator to help you progress and reward them with credits</li>
-          </ul>
-          <ul class="modal-content-description-container-list">
-            <li>Set goals to structure your project phases</li>
-            <li>Track progress in yout dashboard</li>
-            <li>Invite mentors and investors</li>
-            <li>Valuate yout project with real-life operational performance metrics</li>
-          </ul>
-        </div>
-        <div class="modal-content-description-buttons">
-          <button class="button-500-cancel" (click)="closeModal()">Cancel</button>
-          <button class="button-500-next" (click)="changeStep()">Next</button>
-        </div>
+    <div class="modal-content">
+      <ng-container></ng-container>
+  
+      <div class="navigation">
+        <button class="button-500-cancel" (click)="closeModal()">Cancel</button>
+        <button class="button-500-next" (click)="changeStep()">Next</button>
       </div>
     </div>
   </section>
 
 </main>
+
+<!--Esto es el Step 1-->
+<!-- 
+<div class="modal-content" appClickOutside>
+  <img src="assets/img/new-project-header.webp" alt="new-project-header-image">
+  <div class="modal-content-description">
+    <h5 xcHeadline400>Start a new project</h5>
+    <div class="modal-content-description-container">
+      <ul class="modal-content-description-container-list">
+        <li>Describe your project, select an AI template</li>
+        <li>Get guidance through milestones and objectives</li>
+        <li>Assign collaborator to help you progress and reward them with credits</li>
+      </ul>
+      <ul class="modal-content-description-container-list">
+        <li>Set goals to structure your project phases</li>
+        <li>Track progress in yout dashboard</li>
+        <li>Invite mentors and investors</li>
+        <li>Valuate yout project with real-life operational performance metrics</li>
+      </ul>
+    </div>
+  </div>
+</div> -->

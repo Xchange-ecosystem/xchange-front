@@ -108,9 +108,11 @@ fill: black;
   width: 16px;
   height: 16px;
   stroke: black;
-  /* stroke-width: 0.9px; */
 }
 
+.refresh-button{
+  background: var(--xc-gradient-light-blue);
+}
 
 .right-options{
 display: flex;
