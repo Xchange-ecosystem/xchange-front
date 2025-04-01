@@ -153,3 +153,17 @@
 .icon{
   fill:var(--xc-Suggestion);
 }
+
+.active-step {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.inactive-step {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

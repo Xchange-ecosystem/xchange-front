@@ -1,0 +1,14 @@
+<section>
+    <div [class]="orientation">
+        <span *ngFor="let step of stepsArray" [class.active]="step === actualStep">
+          Paso {{ step }}
+          <xc-icon-check/>
+        </span>
+      </div>
+      <ng-container></ng-container>
+      
+      <div class="navigation">
+        <button class="button-500-cancel" >Cancel</button>
+        <button class="button-500-next" (click)="changeStep()">Next</button>
+      </div>
+</section>

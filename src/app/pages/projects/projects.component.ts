@@ -7,6 +7,7 @@ import { FeedButtonDirective } from 'projects/ngx-xchange-ui/src/directives/feed
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/headline-600/headline-600.directive';
 import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { StepperComponent } from './stepper/stepper.component';
 
 @Component({
   selector: 'app-projects',
@@ -22,47 +23,19 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
     NgClass,
     NgFor,
     NgTemplateOutlet,
-    XcIconCheckComponent
+    StepperComponent
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';
-  @Input() steps: number = 1;
-  stepsArray: number[] = [];
   isModalOpen = false;
-  
 
+  
   openModal(): void {
     this.isModalOpen = true;
   }
-
   closeModal(): void {
     this.isModalOpen = false;
-  }
-
-  changeStep(): void {
-    if (this.steps < 3) {
-      this.steps++;
-      this.updateStepsArray();
-      console.log('pasos', this.steps);
-    } else {
-      console.log('Pasos terminados');
-    }
-  }
-
-  previousStep(): void {
-    if (this.steps > 1) {
-      this.steps--;
-      this.updateStepsArray();
-      console.log('Paso anterior:', this.steps);
-    } else {
-      console.log('Ya estás en el primer paso');
-    }
-  }
-
-  updateStepsArray(): void {
-    this.stepsArray = Array.from({ length: this.steps }, (_, index) => index + 1);
   }
 }

@@ -24,18 +24,8 @@
   </div>
 
   <section class="modal" [class.show]="isModalOpen">
-    <div class="modal-stepper" orientation="vertical" >
-        <span *ngFor="let step of stepsArray" class="stepper-icon-container">
-          <xc-icon-check class="icon"/>
-        </span>
-    </div>
     <div class="modal-content">
-      <ng-container></ng-container>
-
-      <div class="navigation">
-        <button class="button-500-cancel" (click)="closeModal()">Cancel</button>
-        <button class="button-500-next" (click)="changeStep()">Next</button>
-      </div>
+      <app-stepper [totalSteps]="7" [orientation]="'horizontal'" />
     </div>
   </section>
 </main>
@@ -60,4 +50,25 @@
       </ul>
     </div>
   </div>
-</div> -->
+</div> 
+
+
+      <span
+        *ngFor="let step of stepsArray; let i = index"
+        [ngClass]="{
+          'active-step': i + 1 === actualStep,
+          'inactive-step': i + 1 !== actualStep
+        }"
+      >
+        <xc-icon-check
+          *ngIf="i + 1 === actualStep"
+          class="icon"
+        ></xc-icon-check>
+        Paso {{ i + 1 }}
+      </span>
+
+
+
+
+
+-->
