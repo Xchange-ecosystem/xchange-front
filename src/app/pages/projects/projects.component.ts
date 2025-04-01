@@ -20,9 +20,6 @@ import { StepperComponent } from './stepper/stepper.component';
     Headline400Directive,
     FeedButtonDirective,
     ClickOutsideDirective,
-    NgClass,
-    NgFor,
-    NgTemplateOutlet,
     StepperComponent
   ],
   templateUrl: './projects.component.html',

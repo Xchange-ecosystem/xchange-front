@@ -11,3 +11,40 @@
     width: 100%;
   }
   
+
+  .active-step {
+    background: var(--xc-brand-light-green);
+    stroke: var(--xc-categories-completed);
+  }
+  
+  .inactive-step {
+    background: var(--xc-grey100);
+  
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .icon-container{
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .button-500-cancel{
+    background: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 32px;
+  }
+  
+  .button-500-next{
+    background: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px 32px;
+  }

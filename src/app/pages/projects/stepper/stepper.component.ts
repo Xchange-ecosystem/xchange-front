@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
 
@@ -7,7 +7,9 @@ import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
   standalone: true,
   imports: [
     XcIconCheckComponent,
-    NgFor
+    NgFor,
+    NgClass,
+    NgIf
   ],
   templateUrl: './stepper.component.html',
   styleUrl: './stepper.component.scss'
@@ -15,7 +17,7 @@ import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
 export class StepperComponent {
   @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';
   @Input() totalSteps: number = 0;
-  actualStep: number = 0;
+  actualStep: number = 1;
   stepsArray: number[] = [];
 
   ngOnChanges(): void {

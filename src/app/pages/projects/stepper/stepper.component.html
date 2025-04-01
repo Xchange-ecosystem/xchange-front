@@ -1,14 +1,36 @@
 <section>
-    <div [class]="orientation">
-        <span *ngFor="let step of stepsArray" [class.active]="step === actualStep">
-          Paso {{ step }}
-          <xc-icon-check/>
+    <div [ngClass]="{
+      'stepper-horizontal': orientation === 'horizontal',
+      'stepper-vertical': orientation === 'vertical'
+    }">
+        <span
+        class="icon-container"
+        *ngFor="let step of stepsArray"
+        [ngClass]="{
+          'active-step': step === actualStep,
+          'inactive-step': step !== actualStep
+        }"
+      >
+          <xc-icon-check *ngIf="step === actualStep"/>
         </span>
       </div>
       <ng-container></ng-container>
       
       <div class="navigation">
         <button class="button-500-cancel" >Cancel</button>
-        <button class="button-500-next" (click)="changeStep()">Next</button>
+        <button class="button-500-next" (click)="changeStep()" *ngIf="actualStep < stepsArray.length">Next</button>
+        <button
+        *ngIf="actualStep > 1"
+        class="button-500-next"
+        (click)="previousStep()"
+      >
+        Back
+      </button>
+      <button
+      *ngIf="actualStep === stepsArray.length"
+      class="button-500-next"
+    >
+      Create Project
+    </button>
       </div>
 </section>
