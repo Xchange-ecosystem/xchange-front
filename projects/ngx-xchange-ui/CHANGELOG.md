@@ -1,3 +1,6 @@
+# 0.0.15 02/04/2025
+(fix) - Add  profile-tags user-profile card-styles profile-header to public api
+
 # 0.0.14 27/03/2025
 (fix) - Project progressbar rounded when has suggested
 

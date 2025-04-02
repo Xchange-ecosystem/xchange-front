@@ -1,0 +1,17 @@
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+}
+
+.icon-span {
+  width: 40px;
+  height: 40px;
+  border-radius: 32px;
+  padding: 10px;
+  background: var(--xc-gradient-medium-green);
+  fill: white;
+  stroke: white;
+}

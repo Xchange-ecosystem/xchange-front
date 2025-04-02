@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { NewAsideNavComponent } from 'projects/ngx-xchange-ui/src/components/new-aside-nav/new-aside-nav.component';
 
 @Component({
   selector: 'app-root',
@@ -6,26 +7,5 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  abierto=true
-
-  public collaborator: {
-    userId: number,
-    name: string;
-    lastName: string;
-    profilePhotoUrl: string | null;
-  }[] = [
-
-{    userId: 1,
-    name: 'Manu',
-    lastName: 'Cabrera',
-    profilePhotoUrl: null
-  },
-{   userId: 2,
-    name: 'Jesus',
-    lastName: 'Sierra',
-    profilePhotoUrl: null
-  }
-  ];
-
-  userArray: number[] = []//this.collaborator.map(c => c.userId)
+//this.collaborator.map(c => c.userId)
 }

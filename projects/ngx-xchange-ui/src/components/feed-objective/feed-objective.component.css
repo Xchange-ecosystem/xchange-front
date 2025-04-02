@@ -1,0 +1,111 @@
+.feed-objective {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 16px 32px;
+  border-radius: 8px;
+  background: white;
+}
+
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.feed-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.feed-description {
+  text-align: start;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.feed.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed-tasks {
+  display: flex;
+  gap: 16px;
+}
+
+.feed-objective {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 8px 16px 24px;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+  padding-left: 10px;
+}
+
+.feed-objective--yellow::before,
+.feed-objective--blue::before,
+.feed-objective--purple::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  border-radius: 8px 0 0 8px;
+}
+
+.feed-objective--yellow::before {
+  background-color: var(--xc-Progress);
+}
+
+.feed-objective--blue::before {
+  background-color: var(--xc-categories-collaboration);
+}
+
+.feed-objective--purple::before {
+  background-color: var(--xc-categories-suggestion);
+}
+
+.task-item {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--xc-grey500);;
+}
+
+
+.task-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon{
+  width: 18px;
+  height: 18px;
+  stroke: var(--xc-grey500);
+}
+
+
+.feed-actions {
+  display: flex;
+  gap: 16pxs;
+  color: black;
+  font-weight: 700;
+}
+
+.action-button {
+  display: flex;
+  gap: 4px;
+}
+
+.hidden {
+  display: none;
+}

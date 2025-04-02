@@ -1,0 +1,24 @@
+.feed-button {
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 14px;
+  color: black;
+  border: 1.5px solid var(--xc-grey100);
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 700;
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.feed-button.active {
+  background-color: var(--xc-grey100);
+}
+
+.notification-div {
+  width: 10px;
+  height: 10px;
+  background-color: var(--xc-data-viz-blue100);
+  border-radius: 50%;
+  gap: 2px;
+}

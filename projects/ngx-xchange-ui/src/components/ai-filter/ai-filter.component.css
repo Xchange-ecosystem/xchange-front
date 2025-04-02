@@ -1,0 +1,58 @@
+.ai-filter {
+  position: relative;
+  display: flex;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 116%;
+  left: 0;
+  background: white;
+  text-align: start;
+  padding: 11px;
+  gap: 4px;
+  box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.14);
+  border-radius: 8px;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu { 
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu div {
+  padding: 2px;
+  text-wrap: nowrap;
+}
+
+.dropdown-menu div:hover {
+  color: var(--xc-grey500);
+}
+
+.icon-wrapper{
+  width: 44px;
+  height: 30px;
+}
+
+.arrow-icon{
+  width: 24px;
+  height: 24px;
+  stroke: black;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotated{
+  transform: rotate(90deg);
+}

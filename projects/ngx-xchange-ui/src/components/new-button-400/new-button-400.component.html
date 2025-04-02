@@ -1,0 +1,10 @@
+<button
+  class="wrapper"
+  [ngClass]="{ selected: isSelected }"
+  (click)="toggleSelected()"
+>
+  <span [ngSwitch]="iconName" class="span-icons">
+    <xc-icon-home *ngSwitchCase="'home'" class="icon-stroke"></xc-icon-home>
+    <xc-icon-ai *ngSwitchCase="'ai'" class="icon-stroke"></xc-icon-ai>
+  </span>
+</button>
