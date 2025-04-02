@@ -23,7 +23,17 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  isProjectOpen = false;
   isModalOpen = false;
+
+
+  openProject(): void {
+    this.isProjectOpen = true;
+  }
+
+  closeProject(): void {
+    this.isProjectOpen = false;
+  }
 
   openModal(): void {
     this.isModalOpen = true;
