@@ -5,6 +5,7 @@ import { SortByComponent } from 'projects/ngx-xchange-ui/src/components/sort-by/
 import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/headline-600/headline-600.directive';
 import { StepperComponent } from './stepper/stepper.component';
 import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @Component({
   selector: 'app-projects',
@@ -15,7 +16,8 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
     ProjectsCardComponent,
     XcIconPlusCircleComponent,
     StepperComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    ProjectModalComponent
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
