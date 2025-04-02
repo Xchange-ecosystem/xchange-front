@@ -3,7 +3,10 @@
     'stepper-horizontal': orientation === 'horizontal',
     'stepper-vertical': orientation === 'vertical',
   }">
-    <button *ngIf="actualStep > 1"class="back-button"(click)="previousStep()">
+    <button 
+      class="back-button"
+      [style.visibility]="actualStep > 1? '':'hidden'"
+      (click)="previousStep()">
       <xc-icon-arrow-left class="back-button-icon"/>
       <p>Back</p>
     </button>
@@ -62,13 +65,13 @@
         </div>
         <div class="upload-container">
           <strong>Banner Image</strong>
-          <button class="upload-container-button">
+          <label class="upload-container-button">
             <xc-icon-file-upload class="upload-container-button-icon"/>
             <span class="upload-container-button-span">
               <p>Upload an image</p>
-              <input type="file" class="upload-container-button-span-input"/>
             </span>
-          </button>
+            <input type="file" class="upload-container-button-span-input"/>
+          </label>
         </div>
       </div>
     </article>

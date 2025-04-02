@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent, XcIconSearchComponent } from '@indziaki/ngx-xchange-icons';
 import { ProjectsCardComponent } from 'projects/ngx-xchange-ui/src/components/projects-card/projects-card.component';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
@@ -23,15 +23,15 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
   templateUrl: './stepper.component.html',
   styleUrl: './stepper.component.scss'
 })
-export class StepperComponent {
+export class StepperComponent implements OnInit {
   @Input() orientation: 'horizontal' | 'vertical' = 'horizontal';
   @Input() totalSteps: number = 0;
   @Output() finishStepper:EventEmitter<void>=new EventEmitter<void> () 
   showMetrics: boolean = true;
   actualStep: number = 1;
   stepsArray: number[] = [];
-
-  ngOnChanges(): void {
+  
+  ngOnInit(): void {
     this.updateStepsArray();
   }
 
