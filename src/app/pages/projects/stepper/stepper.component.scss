@@ -109,18 +109,47 @@
     &-input {
       display: flex;
       justify-content: space-between;
-      border: 1px solid var(--xc-grey500);
-      border-radius: 8px;
+      border: 1px solid var(--xc-grey500) ;
+      border-radius: 2px;
       width: 100%;
-      padding: 11px;
       resize: none;
+      align-items: center;
+      &-mod{
+        display: flex;
+        width: 100%;
+        padding: 6px;
+        caret-color: var(--xc-brand-medium-blue);
+        &:focus {
+          outline: none;
+        }
+      }
+      &-name{
+        display: flex;
+        border: 1px solid var(--xc-grey500);
+        width: 100%;
+        padding: 6px;
+        caret-color: var(--xc-brand-medium-blue);
+        border-radius: 6px;
+        &:focus {
+          outline: none;
+        }
+      }
+      &-description{
+        display: flex;
+        border: 1px solid var(--xc-grey500);
+        width: 100%;
+        padding: 6px;
+        border-radius: 6px;
+        padding: 8px;
+        caret-color: var(--xc-brand-medium-blue);
+        &:focus {
+          outline: none;
+        }
+      }
       &-icon{
         display: flex;
         width: 24px;
         height: 24px;
-      }
-      &:focus {
-        outline: none;
       }
     }
   }

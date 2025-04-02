@@ -66,7 +66,7 @@
           <input
             type="text"
             placeholder="Name your project"
-            class="second-container-title-input"
+            class="second-container-title-input-name"
           />
         </div>
         <div class="second-container">
@@ -75,7 +75,7 @@
             placeholder="Describe your project goals and process"
             rows="7"
             cols="40"
-            class="second-container-title-input"
+            class="second-container-title-input-description"
           ></textarea>
         </div>
         <div class="upload-container">
@@ -94,10 +94,10 @@
   <ng-container *ngIf="actualStep === 3">
     <article class="stepper-content">
       <h5 xcHeadline400>Start a new project</h5>
-      <div class="second-container-title-input">
-        <input type="text" placeholder="What are you looking for" />
+      <label class="second-container-title-input">
+        <input type="text" placeholder="What are you looking for" class="second-container-title-input-mod"/>
         <xc-icon-search class="second-container-title-input-icon" />
-      </div>
+      </label>
       <div class="second-container-templates">
         <xc-projects-card
           class="second-container-templates-injector"
