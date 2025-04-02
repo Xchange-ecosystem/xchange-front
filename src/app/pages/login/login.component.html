@@ -2,85 +2,154 @@
   <div>
     <div class="title">
       <div class="title-logo">
-        <img src="/assets/img/X-Vector.webp" alt="Xchange-logo">
+        <img src="/assets/img/X-Vector.webp" alt="Xchange-logo" />
       </div>
       <h1 class="title-h1">camp</h1>
     </div>
     <div class="form-container">
       <div class="slide_controls">
-        <button class="slide_controls-left" (click)="toggleSlide('login')"
-          [class.active]="selectedOption === 'login'">
-          <p for="login" class="slide_controls-login">Login</p>
-          <input type="radio" name="slide" id="login" class="slide_controls-login-inp" />
-      </button>
-      
-        <button class="slide_controls-right" (click)="toggleSlide('signup')"
-          [class.active]="selectedOption === 'signup'">
-          <p for="signup" class="slide signup">Signup</p>
-          <input type="radio" name="slide" id="signup"/>
-      </button>
-      
-        <div class="slider-tab" [class.signup]="selectedOption === 'signup'"></div>
+        <button
+          class="slide_controls-left"
+          (click)="toggleSlide('login')"
+          [class.inactive]="selectedOption !== 'login'"
+          [class.active]="selectedOption === 'login'"
+        >
+          <p class="slide_controls-login">Login</p>
+        </button>
+
+        <button
+          class="slide_controls-right"
+          (click)="toggleSlide('signup')"
+          [class.inactive]="selectedOption !== 'signup'"
+          [class.active]="selectedOption === 'signup'"
+        >
+          <p class="slide signup">Signup</p>
+        </button>
+
+        <div
+          class="slider-tab"
+          [class.signup]="selectedOption === 'signup'"
+        ></div>
       </div>
-      
       <div class="form-inner">
-        <form action="#" class="form-inner">
+        <form *ngIf="selectedOption === 'login'" action="#" class="form-inner">
           <div class="form-inner-login">
-            <label for="email" class="form-inner-login_lab">Email address</label>
-            <input class="form-inner-login_inp" id="email" formControlName="email" type="text"
-              placeholder="name@domain.com" required />
+            <label for="email" class="form-inner-login_lab"
+              >Email address</label
+            >
+            <input
+              class="form-inner-login_inp"
+              id="email"
+              formControlName="email"
+              type="text"
+              placeholder="name@domain.com"
+              required
+            />
           </div>
           <div class="form-inner-password">
-            <label class="form-inner-password_lab" for="password">Password</label>
+            <label class="form-inner-password_lab" for="password"
+              >Password</label
+            >
             <span class="form-inner-password_span">
-              <input class="form-inner-password_inp" formControlName="password" type="password" placeholder="***" required />
-              <img class="form-inner-password_eye" src="/assets/icons/u_eye.svg" alt="password_eye">
-            </span>            
+              <input
+                class="form-inner-password_inp"
+                formControlName="password"
+                type="password"
+                placeholder="***"
+                required
+              />
+              <img
+                class="form-inner-password_eye"
+                src="/assets/icons/u_eye.svg"
+                alt="password_eye"
+              />
+            </span>
           </div>
           <div class="form-inner-forgot">
-            <input type="button" value="Forgot password?" class="form-inner-forgt-inp" />
+            <input
+              type="button"
+              value="Forgot password?"
+              class="form-inner-forgt-inp"
+            />
           </div>
           <div class="form-inner-button">
             <div class="btn-layer"></div>
             <input type="submit" value="Log in" />
           </div>
         </form>
-        <!-- Signup -->
-        <!-- <form action="#" class="form-inner_signup">
+        <form
+          *ngIf="selectedOption === 'signup'"
+          action="#"
+          class="form-inner_signup"
+        >
           <div class="form-inner-login">
-            <label for="first-name" class="form-inner-login_lab">First Name</label>
-            <input class="form-inner-login_inp" id="name" formControlName="name" type="text" placeholder="John"
-              required />
+            <label for="first-name" class="form-inner-login_lab"
+              >First Name</label
+            >
+            <input
+              class="form-inner-login_inp"
+              id="name"
+              formControlName="name"
+              type="text"
+              placeholder="John"
+              required
+            />
           </div>
-         
           <div class="form-inner-login">
             <label for="email" class="form-inner-login_lab">Last Name</label>
-            <input class="form-inner-login_inp" id="lastname" formControlName="lastname" type="text" placeholder="Doe"
-              required />
+            <input
+              class="form-inner-login_inp"
+              id="lastname"
+              formControlName="lastname"
+              type="text"
+              placeholder="Doe"
+              required
+            />
           </div>
-          
+
           <div class="form-inner-login">
-            <label for="email" class="form-inner-login_lab">Email address</label>
-            <input class="form-inner-login_inp" id="sign-email" formControlName="sign-email" type="text"
-              placeholder="your@name.com" required />
+            <label for="email" class="form-inner-login_lab"
+              >Email address</label
+            >
+            <input
+              class="form-inner-login_inp"
+              id="sign-email"
+              formControlName="sign-email"
+              type="text"
+              placeholder="your@name.com"
+              required
+            />
           </div>
-          
+
           <div class="form-inner-login">
             <label for="password" class="form-inner-login_lab">Password</label>
-            <input class="form-inner-login_inp" id="sign-password" formControlName="sign-password" type="text"
-              placeholder="****" required />
+            <input
+              class="form-inner-login_inp"
+              id="sign-password"
+              formControlName="sign-password"
+              type="text"
+              placeholder="****"
+              required
+            />
           </div>
           <div class="form-inner-login">
-            <label for="rep-password" class="form-inner-login_lab">Repeat password</label>
-            <input class="form-inner-login_inp" id="repe-password" formControlName="repe-password" type="text"
-              placeholder="****" required />
+            <label for="rep-password" class="form-inner-login_lab"
+              >Repeat password</label
+            >
+            <input
+              class="form-inner-login_inp"
+              id="repe-password"
+              formControlName="repe-password"
+              type="text"
+              placeholder="****"
+              required
+            />
           </div>
           <div class="form-inner-button">
             <div class="btn-layer"></div>
             <input type="submit" value="Sign Up" />
           </div>
-        </form> -->
-      <!--  -->
+        </form>
       </div>
     </div>
   </div>
