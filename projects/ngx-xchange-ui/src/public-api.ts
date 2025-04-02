@@ -110,3 +110,8 @@ export * from './components/rating-bar/rating-bar/rating-bar.component'
 export * from './components/check-rounded-button/check-rounded-button/check-rounded-button.component'
 export * from './components/check-rounded-button/check-rounded-button.module'
 export * from './directives/click-outside/click-outside.directive'
+export * from './directives/community-card-measures/card-measures.directive';
+export * from './directives/profile-tags/profile-tags.directive'
+export * from './components/user-profile-modal/user-profile-modal.component';
+export * from './directives/card-styles/card-styles.directive'
+export * from './directives/profile-header/profile-header.directive'
