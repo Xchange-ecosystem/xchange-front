@@ -20,4 +20,7 @@
 
 <dialog class="modal-overlay" *ngIf="selectedProject" >
     <app-project-modal [project]="selectedProject" class="modal" (close)="onCloseModal()"/>
+    <button class="close-modal-button" (click)="onCloseModal()">
+        <xc-icon-close-s class="close-modal-icon"></xc-icon-close-s>
+      </button>
 </dialog>

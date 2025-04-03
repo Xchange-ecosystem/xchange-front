@@ -4,11 +4,12 @@ import { ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
 import { NgFor, NgIf } from '@angular/common';
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
 import { ProjectModalComponent } from 'src/app/pages/projects/project-modal/project-modal.component';
+import { XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-projects-card',
   standalone: true,
-  imports: [ProfileTagsDirective, ProjectProgressBarModule, NgFor, CardStylesDirective,NgIf,ProjectModalComponent],
+  imports: [ProfileTagsDirective, ProjectProgressBarModule, NgFor, CardStylesDirective,NgIf,ProjectModalComponent,XcIconCloseSComponent],
   templateUrl: './projects-card.component.html',
   styleUrl: './projects-card.component.css'
 })
