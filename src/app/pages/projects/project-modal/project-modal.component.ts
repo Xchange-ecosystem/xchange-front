@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { XcIconArrowRightComponent, XcIconCheckComponent, XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
 import { Headline300Directive } from 'projects/ngx-xchange-ui/src/directives/headline-300/headline-300.directive';
@@ -26,10 +26,11 @@ import {
 })
 export class ProjectModalComponent {
   @Input() project: any;
-  @Input() invitation: boolean = true;
-  @Output() projectClick = new EventEmitter<any>();
+  @Input() invitation: boolean = false;
+  @Output() close:EventEmitter<void>=new EventEmitter<void> () 
 
-  onProjectClick(project: any): void {
-    this.projectClick.emit(project);
+  onCloseModal(): void {
+    console.log('Evento close emitido desde el hijo');
+    this.close.emit();
   }
 }

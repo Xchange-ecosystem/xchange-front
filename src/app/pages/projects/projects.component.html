@@ -12,7 +12,10 @@
     <section class="container_content-cards">
       <h5 xcHeadline600>All Projects</h5>
       <div class="container_content-cards-wrapper">
-        <xc-projects-card class="container_content-cards-wrapper-injector" />
+        <xc-projects-card
+        class="container_content-cards-wrapper-injector"
+        (projectSelected)="openProject($event)"
+      ></xc-projects-card>
         <button class="new-project-card" (click)="openModal()">
           <span class="new-project-card-icon">
             <xc-icon-plus-circle (projectClick)="openProject($event)" />
@@ -23,15 +26,24 @@
     </section>
   </div>
 
-  <section class="modal" [class.show]="isModalOpen">
+  <section *ngIf="isModalOpen" class="modal">
     <div class="modal-content" appClickOutside>
-      <app-stepper [totalSteps]="9" [orientation]="'horizontal'" (finishStepper)="closeModal()" class="modal-content-injector"/>
+      <app-stepper
+        [totalSteps]="9"
+        [orientation]="'horizontal'"
+        (finishStepper)="closeModal()"
+        class="modal-content-injector"
+      ></app-stepper>
     </div>
   </section>
 
-  <section class="modal" [class.show]="isProjectOpen">
-    <div class="modal-content" appClickOutside>
-      <app-project-modal />
+  <section *ngIf="isProjectOpen" class="modal" >
+    <div class="modal-content">
+      <app-project-modal
+        [project]="selectedProject"
+        [invitation]="false"
+        (close)="onCloseModal()"
+      ></app-project-modal>
     </div>
   </section>
 </main>

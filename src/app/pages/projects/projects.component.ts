@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { ChangeDetectorRef, Component} from '@angular/core';
 import { XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { ProjectsCardComponent } from 'projects/ngx-xchange-ui/src/components/projects-card/projects-card.component';
 import { SortByComponent } from 'projects/ngx-xchange-ui/src/components/sort-by/sort-by.component';
@@ -6,6 +6,7 @@ import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/hea
 import { StepperComponent } from './stepper/stepper.component';
 import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +18,9 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
     XcIconPlusCircleComponent,
     StepperComponent,
     ClickOutsideDirective,
-    ProjectModalComponent
+    ProjectModalComponent,
+    NgIf,
+    NgClass
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
@@ -29,12 +32,12 @@ export class ProjectsComponent {
 
   openProject(project:any): void {
     this.selectedProject = project;
-    this.isProjectOpen = true;
   }
 
-  closeProject(): void {
-    this.isProjectOpen = false;
+  onCloseModal(): void {
+    console.log('Cerrando modal desde el padre. selectedProject antes:', this.selectedProject);
     this.selectedProject = null;
+    this.isProjectOpen = true;
   }
 
   openModal(): void {

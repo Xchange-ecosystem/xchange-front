@@ -81,7 +81,8 @@ export class ProjectsCardComponent {
     this.selectedProject = project;
   }
 
-  closeModal() {
+  onCloseModal() {
+    console.log('Cerrando modal desde el padre');
     this.selectedProject = null;
   }
 }

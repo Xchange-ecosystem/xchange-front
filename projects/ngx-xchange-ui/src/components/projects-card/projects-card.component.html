@@ -19,5 +19,5 @@
 </button>
 
 <dialog class="modal-overlay" *ngIf="selectedProject" >
-    <app-project-modal [project]="selectedProject" class="modal"/>
+    <app-project-modal [project]="selectedProject" class="modal" (close)="onCloseModal()"/>
 </dialog>

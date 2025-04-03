@@ -10,7 +10,7 @@
       </div>
       <div class="project-container-article-about-description">
         <p xcHeadline300>About the project</p>
-        <p>{{ project.description }}</p>
+        <!-- <p>{{ project.description }}</p> -->
       </div>
     </div>
     <div class="project-container-article-metrics">
@@ -32,17 +32,23 @@
       <div class="project-container-article-metrics-numbers">
         <p xcHeadline300>Project Metrics</p>
         <div class="project-container-article-metrics-numbers-container">
-          <span class="project-container-article-metrics-numbers-container-item">
+          <span
+            class="project-container-article-metrics-numbers-container-item"
+          >
             <p xcHeadline500>16</p>
             <p>Proofs uploaded</p>
           </span>
           <div class="separator"></div>
-          <span class="project-container-article-metrics-numbers-container-item">
-          <p xcHeadline500>10</p>
-          <p>Collaborations</p>
+          <span
+            class="project-container-article-metrics-numbers-container-item"
+          >
+            <p xcHeadline500>10</p>
+            <p>Collaborations</p>
           </span>
           <div class="separator"></div>
-          <span class="project-container-article-metrics-numbers-container-item">
+          <span
+            class="project-container-article-metrics-numbers-container-item"
+          >
             <p xcHeadline500>100,000 €</p>
             <p>Value added through collaborations</p>
           </span>
@@ -50,29 +56,33 @@
       </div>
     </div>
   </article>
-  <footer 
-  class="project-container-footer" 
-  [class.project-container-footer-invitation]="invitation">
-  <ng-container *ngIf="invitation; else noInvitation">
-    <div class="project-container-footer-content">
-      <div class="project-container-footer-text">
-        <p xcHeadline300>New Invitation</p>
-        <p>You have been invited to this project. Do you want to accept?</p>
+  <footer
+    class="project-container-footer"
+    [class.project-container-footer-invitation]="invitation"
+  >
+    <ng-container *ngIf="invitation; else noInvitation">
+      <div class="project-container-footer-content">
+        <div class="project-container-footer-text">
+          <p xcHeadline300>New Invitation</p>
+          <p>You have been invited to this project. Do you want to accept?</p>
+        </div>
+        <div class="project-container-footer-buttons">
+          <button class="project-container-footer-button reject-button">
+            <xc-icon-close-s class="project-container-footer-button-icon" />
+            Reject
+          </button>
+          <button class="project-container-footer-button">
+            <xc-icon-check class="project-container-footer-button-icon" />
+            Accept
+          </button>
+        </div>
       </div>
-      <div class="project-container-footer-buttons">
-        <button class="project-container-footer-button reject-button">
-          <xc-icon-close-s class="project-container-footer-button-icon"/>
-          Reject
-        </button>
-        <button class="project-container-footer-button">
-          <xc-icon-check class="project-container-footer-button-icon"/>
-          Accept
-        </button>
-      </div>
-    </div>
-  </ng-container>
-  <ng-template #noInvitation>
-    <button class="project-container-footer-button">Ask for access</button>
-  </ng-template>
-</footer>
+    </ng-container>
+    <ng-template #noInvitation>
+      <button class="project-container-footer-button">Ask for access</button>
+    </ng-template>
+  </footer>
 </section>
+<button class="close-modal-button" (click)="onCloseModal()">
+  <xc-icon-close-s class="close-modal-icon"></xc-icon-close-s>
+</button>
