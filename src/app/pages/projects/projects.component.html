@@ -39,11 +39,7 @@
 
   <section *ngIf="isProjectOpen" class="modal" >
     <div class="modal-content">
-      <app-project-modal
-        [project]="selectedProject"
-        [invitation]="false"
-        (close)="onCloseModal()"
-      ></app-project-modal>
+      <app-project-modal></app-project-modal>
     </div>
   </section>
 </main>
