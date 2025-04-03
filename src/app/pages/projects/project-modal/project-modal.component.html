@@ -1,6 +1,6 @@
 <section class="project-container">
   <header class="project-container-header">
-    <div>Aqui ira el nuevo header</div>
+    <xc-user-header [showImage]="false" [firstText]="'NextGen LLL'" [secondText]="'Xchange Studio Project'" [showUserData]="false"/>
   </header>
   <article class="project-container-article">
     <div class="project-container-article-about">
@@ -10,7 +10,7 @@
       </div>
       <div class="project-container-article-about-description">
         <p xcHeadline300>About the project</p>
-        <!-- <p>{{ project.description }}</p> -->
+        <p>{{ project.description }}</p>
       </div>
     </div>
     <div class="project-container-article-metrics">

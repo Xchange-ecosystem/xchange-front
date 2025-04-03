@@ -11,9 +11,9 @@
       <section class="user-data-wrapper">
         <div class="user-data-card" xcCardStyles [padding]="32">
           <span class="user-data-name">
-            <h4>{{ user.name }} ({{ user.company }})</h4>
+            <h4>{{ firstText }} - {{ secondText }}</h4>
           </span>
-          <span class="user-data-achievements">
+          <span class="user-data-achievements" *ngIf="showUserData">
             <div class="achievements-1">
               <div class="number-flex">
                 <span class="achievements-number">{{ user.completedObj }}</span>
@@ -35,10 +35,23 @@
               </div>
             </div>
           </span>
+          <span class="project-data" *ngIf="!showUserData">
+            <div class="project-data-info">
+              <p>Created:</p>
+              <strong>15.12.205</strong>
+              <strong>by jane Doe</strong>
+            </div>
+            <div class="project-data-assigned">
+              <p>Assigned To</p>
+              <div class="project-data-assigned-image">
+                <xc-rounded-image image="https://randomuser.me/api/portraits/men/33.jpg" [marginSize]="0" />
+              </div>
+            </div>
+          </span>
         </div>
       </section>
       <section class="user-image-wrapper">
-        <div class="user-image-container">
+        <div class="user-image-container" *ngIf="showImage">
           <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
         </div>
       </section>
