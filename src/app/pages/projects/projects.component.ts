@@ -35,7 +35,6 @@ export class ProjectsComponent {
   }
 
   onCloseModal(): void {
-    console.log('Cerrando modal desde el padre. selectedProject antes:', this.selectedProject);
     this.selectedProject = null;
     this.isProjectOpen = true;
   }

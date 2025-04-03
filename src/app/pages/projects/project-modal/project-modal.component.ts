@@ -30,7 +30,6 @@ export class ProjectModalComponent {
   @Output() close:EventEmitter<void>=new EventEmitter<void> () 
 
   onCloseModal(): void {
-    console.log('Evento close emitido desde el hijo');
     this.close.emit();
   }
 }

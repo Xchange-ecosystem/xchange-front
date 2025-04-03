@@ -77,12 +77,10 @@ export class ProjectsCardComponent {
   selectedProject: any = null;
 
   openModal(project: any) {
-    console.log('Opening modal for project:', project);
     this.selectedProject = project;
   }
 
   onCloseModal() {
-    console.log('Cerrando modal desde el padre');
     this.selectedProject = null;
   }
 }

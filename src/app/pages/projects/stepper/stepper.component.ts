@@ -38,24 +38,17 @@ export class StepperComponent implements OnInit {
   changeStep(): void {
     if (this.actualStep < this.totalSteps) {
       this.actualStep++;
-      console.log('Paso actual:', this.actualStep);
-    } else {
-      
-      console.log('Has alcanzado el último paso');
     }
   }
 
   finish(): void {
-    console.log('Finalizando el stepper');
     this.finishStepper.emit();
   }
 
   previousStep(): void {
     if (this.actualStep > 1) {
       this.actualStep--;
-      console.log('Paso anterior:', this.actualStep);
     } else {
-      console.log('Ya estás en el primer paso');
     }
   }
 
