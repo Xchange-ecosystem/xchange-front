@@ -4,13 +4,16 @@
     gap: 22px;
     width: 100%;
     height: 720px;
-    padding: 42px;
+    &-header{
+      padding: 42px 42px 0px 42px;
+    }
     &-article {
       display: grid;
       grid-template-columns: 4fr 3fr;
       width: 100%;
       height: 100%;
       gap: 20px;
+      padding: 42px 42px 0px 42px;
       &-about{
         display: flex;
         flex-direction: column;
@@ -86,16 +89,55 @@
     &-footer {
       display: flex;
       justify-content: flex-end;
+      gap: 16px;
+      padding: 16px;
+      &-invitation {
+        background-color: var(--xc-brand-light-blue);
+        color: white;
+      }
+      &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      &-text {
+        font-size: 16px;
+        color: black;
+      }
+      &-buttons {
+        display: flex;
+        gap: 16px;
+      }
       &-button{
         background: black;
         color: white;
         border: 1px solid black;
         border-radius: 8px;
-        padding: 8px 32px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        &-icon{
+          display: flex;
+          stroke: white;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .reject-button {
+        border: solid 1px black;
+        background:transparent ;
+        color: black;
+        border-radius: 8px 10px;
+        &-icon{
+          display: flex;
+          stroke: black;
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
-
   .separator{
     width: 100%;
     height: 1px;
