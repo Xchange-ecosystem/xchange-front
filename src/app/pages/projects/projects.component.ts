@@ -25,14 +25,16 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 export class ProjectsComponent {
   isProjectOpen = false;
   isModalOpen = false;
+  selectedProject: any = null;
 
-
-  openProject(): void {
+  openProject(project:any): void {
+    this.selectedProject = project;
     this.isProjectOpen = true;
   }
 
   closeProject(): void {
     this.isProjectOpen = false;
+    this.selectedProject = null;
   }
 
   openModal(): void {

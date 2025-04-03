@@ -1,4 +1,4 @@
-<button *ngFor="let project of projects" xcCardStyles [padding]="16" [gap]="16">	
+<button *ngFor="let project of projects" xcCardStyles [padding]="16" [gap]="16" (click)="openModal(project)">	
     <div class="image-wrapper">
         <img src={{project.image}} alt="project-background" class="project-image">
     </div>
@@ -17,3 +17,7 @@
         </p>
     </div>
 </button>
+
+<dialog class="modal-overlay" *ngIf="selectedProject" >
+    <app-project-modal [project]="selectedProject" class="modal"/>
+</dialog>

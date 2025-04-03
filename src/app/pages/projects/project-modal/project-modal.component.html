@@ -1,10 +1,33 @@
-<section class="project-container" *ngFor='let project of projects'>
-    <header class="project-container-header">
-        <xc-user-header/>
-    </header>
-    <article>
-        <p>test</p>
-        <p>test</p>
-        <p>test</p>
-    </article>
+<section class="project-container" >
+  <header class="project-container-header">
+    <div>Aqui ira el nuevo header</div>
+  </header>
+  <article class="project-container-article">
+    <div class="project-container-article-about">
+      <div class="project-container-article-about-objectives">
+        <p>Overall project progress</p>
+       <xc-project-progress-bar [completed]="5" [open]="4" [suggested]="4"/>
+      </div>
+      <div class="project-container-article-about-description">
+        <p>{{project.description}}</p>
+      </div>
+    </div>
+    <div class="project-container-article-metrics">
+      <div class="project-container-metrics-tags">
+        <span class="project-container-metrics-tags-wrapper">
+            Aqui van las tags
+        </span>
+        <button class="project-container-metrics-tags-button">
+          <xc-icon-arrow-right class="project-container-metrics-tags-button-icon"/>
+          <p class="project-container-metrics-tags-button-text">See all tags</p>
+        </button>
+      </div>
+      <div class="project-container-metrics-numbers">
+        <p>Project Metrics</p>
+      </div>
+    </div>
+  </article>
+  <footer class="project-container-footer">
+    <button class="project-container-footer-button">Ask for access</button>
+  </footer>
 </section>

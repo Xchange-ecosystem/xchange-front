@@ -1,19 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags.directive';
 import { ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
 import { NgFor, NgIf } from '@angular/common';
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
+import { ProjectModalComponent } from 'src/app/pages/projects/project-modal/project-modal.component';
 
 @Component({
   selector: 'xc-projects-card',
   standalone: true,
-  imports: [ProfileTagsDirective, ProjectProgressBarModule, NgFor, CardStylesDirective,NgIf],
+  imports: [ProfileTagsDirective, ProjectProgressBarModule, NgFor, CardStylesDirective,NgIf,ProjectModalComponent],
   templateUrl: './projects-card.component.html',
   styleUrl: './projects-card.component.css'
 })
 export class ProjectsCardComponent {
   @Input() metrics: boolean = true;
   @Input() objectives: boolean = true;
+  @Output() projectClick = new EventEmitter<any>();
+
   public projects = [
     {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzIuKHHeS7DE9kplbdGaHTZlQL92-_x8j4Bw&s",
@@ -74,8 +77,10 @@ export class ProjectsCardComponent {
   selectedProject: any = null;
 
   openModal(project: any) {
+    console.log('Opening modal for project:', project);
     this.selectedProject = project;
   }
+
   closeModal() {
     this.selectedProject = null;
   }

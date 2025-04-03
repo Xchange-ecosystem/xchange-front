@@ -15,7 +15,7 @@
         <xc-projects-card class="container_content-cards-wrapper-injector" />
         <button class="new-project-card" (click)="openModal()">
           <span class="new-project-card-icon">
-            <xc-icon-plus-circle />
+            <xc-icon-plus-circle (projectClick)="openProject($event)" />
           </span>
           <p>Create a new project</p>
         </button>
@@ -26,6 +26,12 @@
   <section class="modal" [class.show]="isModalOpen">
     <div class="modal-content" appClickOutside>
       <app-stepper [totalSteps]="9" [orientation]="'horizontal'" (finishStepper)="closeModal()" class="modal-content-injector"/>
+    </div>
+  </section>
+
+  <section class="modal" [class.show]="isProjectOpen">
+    <div class="modal-content" appClickOutside>
+      <app-project-modal />
     </div>
   </section>
 </main>
