@@ -9,7 +9,7 @@
         </span>
     </div>
     <div class="project-progress" *ngIf="metrics && objectives">
-        <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested" />
+        <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested" [objectivesInProject]="50" class="project-progress-bar"/>
     </div>
     <div class="project-description">
         <p>
