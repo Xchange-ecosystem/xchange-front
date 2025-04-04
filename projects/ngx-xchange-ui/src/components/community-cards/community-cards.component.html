@@ -1,0 +1,56 @@
+<section class="profile">
+  <article
+    xcCardMeasures
+    *ngFor="let user of users"
+    class="profile__card"
+    (click)="openModal(user)"
+    tabindex="0"
+    role="button"
+  >
+    <div class="profile_header">
+      <div class="profile__image-wrapper-class">
+        <xc-rounded-image [marginSize]="0" [image]="user.imageUrl" />
+      </div>
+      <div class="name_tags-wrapper">
+        <h1 xcMainHeading="Headline400">{{ user.name }}</h1>
+        <div class="tag-wrapper">
+          <div
+            xcProfileTags="gray"
+            class="example-item"
+            *ngFor="let tag of user.tags"
+          >
+            {{ tag }}
+          </div>
+        </div>
+      </div>
+      <p xcMainHeading="Copy400Regular">{{ user.description }}</p>
+    </div>
+    <div class="profile_collabs">
+      <span class="profile__collabs-info">
+        <p class="profile__collabs-count">{{ user.collaborations }}</p>
+        <p class="profile__collabs-text">Collaborations</p>
+      </span>
+      <div class="profile_icons_wrapper">
+        <div *ngIf="user.email" class="profile__collabs-icon-wrapper">
+          <span class="profile__collabs-icon">
+            <xc-icon-envelope-alt class="profile__collab-icon-svg" />
+          </span>
+        </div>
+        <div *ngIf="user.linkedin" class="profile__collabs-icon-wrapper">
+          <div class="profile__collabs-icon">
+            <xc-icon-linkedin />
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<dialog class="modal-overlay" *ngIf="selectedUser">
+  <xc-user-profile-modal
+    [user]="selectedUser"
+    class="modal"
+    appClickOutside
+    (onClickOutside)="this.selectedUser = null"
+  />
+</dialog>

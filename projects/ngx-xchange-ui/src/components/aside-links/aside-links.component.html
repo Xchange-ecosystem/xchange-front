@@ -1,0 +1,12 @@
+<a [routerLinkActive]="'onActive'" [routerLink]="route" xcAsideLink>
+  <div *ngIf="iconName !== 'default'" class="container_iconLabel">
+    <span [ngSwitch]="iconName" class="container_icon">
+      <ng-content select="[icon]"></ng-content>
+    </span>
+    <label class="container_label">{{ label }}</label>
+  </div>
+  <div class="container_arrowSelection">
+    <span class="notification--active"></span>
+    <xc-icon-angle-right />
+  </div>
+</a>

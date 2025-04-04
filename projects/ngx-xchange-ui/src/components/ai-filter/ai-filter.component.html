@@ -1,0 +1,13 @@
+<button class="ai-filter" (click)="toggleDropdown()">
+  <div class="dropdown">
+    <p>{{ selectedOption || label }}</p>
+    <div *ngIf="isOpen" class="dropdown-menu">
+      <div *ngFor="let option of options" (click)="selectOption(option, $event)">
+        {{ option }}
+      </div>
+    </div>
+    <span class="icon-wrapper">
+      <xc-icon-angle-down class="arrow-icon" [class.rotated]="isOpen"></xc-icon-angle-down>
+    </span>
+  </div>
+</button>

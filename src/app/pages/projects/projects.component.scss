@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: calc(100% - 20px);
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 8px;
+      &-span {
+        display: flex;
+        gap: 16px;
+        background: white;
+        border-radius: 8px;
+        padding: 16px;
+        &-button {
+          color: black;
+          background: var(--xc-gradient-light-grey-on-white);
+          padding: 8px 16px;
+          transition: background 0.3s, color 0.3s;
+
+          &.unselected {
+            color: gray;
+            background: var(--xc-light-grey);
+          }
+        }
+      }
+    }
+    &-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 21px;
+      flex: 1;
+      &-wrapper {
+        height: calc(100vh - 200px);
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        &-injector {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          gap: 24px;
+          width: 100%;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.new-project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 480px;
+  min-height: 410px;
+  background: white;
+  padding: 16px;
+  gap: 16px;
+  &-icon {
+    width: 80px;
+    height: 80px;
+    stroke: black;
+  }
+}
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    border-radius: 16px;
+    gap: 40px;
+    width: 1100px;
+    height: 730px;
+    background: white;
+    &-injector {
+      height: 100%;
+    }
+  }
+}

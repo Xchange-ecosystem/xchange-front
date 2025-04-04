@@ -1,0 +1,100 @@
+.image-wrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: start;
+}
+
+.project-tags {
+  display: flex;
+  gap: 6px;
+}
+
+.project-progress {
+  display: flex;
+  width: 100%;
+}
+
+.project-progress-bar{
+  display: flex;
+  width: 100%;
+}
+
+.project-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal {
+  width: 75%;
+  border-radius: 16px;
+  background: white;
+  transform: scale(0.8);
+  opacity: 0;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.close-modal-button {
+  background: white;
+  border-radius: 16px;
+  padding: 4px;
+  align-self: flex-start;
+  margin-top: 80px;
+  margin-left: 20px;
+}
+.close-modal-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
