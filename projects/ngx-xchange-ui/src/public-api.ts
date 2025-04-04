@@ -115,3 +115,4 @@ export * from './directives/profile-tags/profile-tags.directive'
 export * from './components/user-profile-modal/user-profile-modal.component';
 export * from './directives/card-styles/card-styles.directive'
 export * from './directives/profile-header/profile-header.directive'
+export * from './directives/buttons-wrappers/buttons-wrappers.directive'
