@@ -2,12 +2,29 @@
   <div class="container_content">
     <div class="container_content-nav">
       <span class="container_content-nav-span">
-        <button class="container_content-nav-span-button">Assignments</button>
-        <button class="container_content-nav-span-button">
+        <button
+          class="container_content-nav-span-button"
+          [ngClass]="{ 'unselected': selectedButton !== 'all' }"
+          (click)="selectButton('all')"
+        >
+          All Projects
+        </button>
+        <button
+          class="container_content-nav-span-button"
+          [ngClass]="{ 'unselected': selectedButton !== 'my' }"
+          (click)="selectButton('my')"
+        >
+          My Projects
+        </button>
+        <button
+          class="container_content-nav-span-button"
+          [ngClass]="{ 'unselected': selectedButton !== 'collaborations' }"
+          (click)="selectButton('collaborations')"
+        >
           Collaborations
         </button>
-        <xc-sort-by
-      /></span>
+        <xc-sort-by></xc-sort-by>
+      </span>
     </div>
     <section class="container_content-cards">
       <h5 xcHeadline600>All Projects</h5>

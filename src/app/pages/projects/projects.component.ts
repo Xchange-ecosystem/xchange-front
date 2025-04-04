@@ -20,6 +20,7 @@ import { NgClass, NgIf } from '@angular/common';
     ClickOutsideDirective,
     ProjectModalComponent,
     NgIf,
+    NgClass
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
@@ -28,7 +29,8 @@ export class ProjectsComponent {
   isProjectOpen = false;
   isModalOpen = false;
   selectedProject: any = null;
-
+  selectedButton: string = 'all';
+  
   openProject(project:any): void {
     this.selectedProject = project;
   }
@@ -38,5 +40,9 @@ export class ProjectsComponent {
   }
   closeModal(): void {
     this.isModalOpen = false;
+  }
+
+  selectButton(button: string): void {
+    this.selectedButton = button;
   }
 }
