@@ -1,0 +1,144 @@
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+    height: 795px;
+    &-article {
+      display: grid;
+      grid-template-columns: 4fr 3fr;
+      width: 100%;
+      height: 100%;
+      gap: 20px;
+      padding: 42px 42px 0px 42px;
+      &-about{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        justify-content: space-between;
+        &-objectives{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            height: 30%;
+            box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
+            padding: 24px;
+            height: 25%;
+        }
+        &-description{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            height: 75%;
+            box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
+            padding: 24px;
+        }
+      }
+      &-metrics{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        &-tags{
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
+          padding: 24px;
+          height: 25%;
+          &-container{
+            display: flex;
+            gap: 8px;
+          }
+          &-button{
+            display: flex;
+            align-items: center;
+            &-icon{
+              stroke: black;
+              width: 20px;
+              height: 20px;
+              display: flex;
+            }
+          }
+        }
+        &-numbers{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          box-shadow: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
+          padding: 24px;
+          height: 75%;
+          gap: 16px;
+          &-container{
+            display: flex;
+            flex-direction: column;
+            &-item{
+              display: flex;
+              gap: 8px;
+              align-items: end;
+            }
+          }
+        }
+      }
+    }
+    &-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+      padding: 16px;
+      &-invitation {
+        background-color: var(--xc-brand-light-blue);
+        color: white;
+      }
+      &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      &-text {
+        font-size: 16px;
+        color: black;
+      }
+      &-buttons {
+        display: flex;
+        gap: 16px;
+      }
+      &-button{
+        background: black;
+        color: white;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 8px 10px;
+        display: flex;
+        align-items: center;
+        &-icon{
+          display: flex;
+          stroke: white;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .reject-button {
+        border: solid 1px black;
+        background:transparent ;
+        color: black;
+        border-radius: 8px 10px;
+        &-icon{
+          display: flex;
+          stroke: black;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+}
+
+.separator{
+    width: 100%;
+    height: 1px;
+    background-color: #E0E0E0;
+    margin: 20px 0;
+}

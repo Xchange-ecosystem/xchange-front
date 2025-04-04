@@ -94,3 +94,25 @@
   width: 200px;
   height: 200px;
 }
+
+
+.project-data{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  width: 100%;
+}
+
+.project-data-info{
+display: flex;
+gap: 4px;
+}
+.project-data-assigned{
+display: flex;
+gap: 8px;
+  width: 100%;
+}
+.project-data-assigned-image{
+  width: 30px;
+  height: 30px;
+}
