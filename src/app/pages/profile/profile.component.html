@@ -1,0 +1,66 @@
+<section class="profile">
+    <header class="profile_header">
+    <xc-user-header/>
+    </header>
+    <article class="profile_content">
+        <div class="profile_content-about">
+            <p>About Me</p>
+            <p>Lorem </p>
+        </div>
+        <div class="profile_content-settings">
+            <p>Further settings</p>
+            <div class="profile_content-settings-options">
+                <span class="profile_content-settings-options-item">
+                    <p>Public visibility</p>
+                    <div></div>
+                </span>
+                <span class="profile_content-settings-options-item">
+                    <p>Plataform language</p>
+                    <dialog>
+                        <p>Language</p>
+                        <select>
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                        </select>
+                        <button type="button" (click)="closeDialog()">Close</button>
+                    </dialog>
+                </span>
+                <span class="profile_content-settings-options-item">
+                    Interests and talents 
+                    <div xcProfileTags="gray">Generate</div>
+                    <div xcProfileTags="gray">Organizational</div>
+                    <div xcProfileTags="gray">Improve</div>
+                    <div xcProfileTags="gray">Analyze</div>
+                    <div xcProfileTags="gray">Develop</div>
+                    <div>
+                        <xc-icon-arrow-right/>
+                        <p>See all tags</p>
+                    </div>
+                </span>
+                <span class="profile_content-settings-options-item">
+                    <p>Blockchain key</p>
+                    <div>
+                        <xc-icon-copy/>
+                        <p>0x1234567890abcdef1234567890abcdef12345678</p>
+                    </div>
+                </span>
+                <span class="profile_content-settings-options-item">
+                    <p>Member since</p>
+                </span>
+                <span class="profile_content-settings-options-item">
+                    <p>Email</p>
+                    <p>fabian&#64;xchange.eco</p>
+                </span>
+                <span class="profile_content-settings-options-item">
+                    <p>Linkedin</p>
+                    <p>https://www.linkedin.com/in/fabian-bermeo</p>
+                </span>
+            </div>
+        </div>
+    </article>
+    <footer class="profile_footer">
+        <xc-icon-save/>
+        <button type="button" class="profile_footer-save" (click)="saveChanges()">Save changes</button>
+    </footer>
+</section>
