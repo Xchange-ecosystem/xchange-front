@@ -78,6 +78,17 @@
         </div>
       </section>
       <section class="user-image-wrapper">
+        <div class="profile-filters">
+          <button>
+            Apperance
+          </button>
+          <button>
+            Wallet
+          </button>
+          <button>
+            Premium upgrade
+          </button>
+        </div>
         <div class="user-image-container" *ngIf="showImage">
           <div class="image-wrapper">
             <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
