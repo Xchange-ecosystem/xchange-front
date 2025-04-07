@@ -5,7 +5,7 @@ import { ProfileHeaderDirective } from '../../directives/profile-header/profile-
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
 import { FormsModule, NgModel } from '@angular/forms';
 import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
-import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-user-header',
@@ -19,7 +19,8 @@ import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent } from
     Headline400Directive,
     XcIconEditComponent,
     XcIconCheckComponent,
-    XcIconCloseSComponent
+    XcIconCloseSComponent,
+    XcIconImageComponent
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',
@@ -29,6 +30,7 @@ export class UserHeaderComponent {
   @Input() showUserData: boolean = true;
   @Input() firstText: string = '';
   @Input() secondText: string = '';
+  userBackgroundImage: string = 'assets/img/user-modal-background.webp';
   isEditing: boolean = false;
   editableText: string = '';
 
@@ -46,6 +48,13 @@ export class UserHeaderComponent {
 
   cancelChanges(): void {
     this.isEditing = false;
+  }
+
+  changeImage(): void {
+    const newImageUrl = prompt('Ingrese la URL de la nueva imagen:');
+    if (newImageUrl) {
+      this.userBackgroundImage = newImageUrl;
+    }
   }
   public users = [
     {

@@ -1,10 +1,13 @@
 <section xcProfileHeader>
   <article class="top-image-cover">
     <img
-      src="assets/img/user-modal-background.webp"
-      alt="backgroun-modal"
-      class="user-background-modal"
-    />
+    [src]="userBackgroundImage"
+    alt="backgroun-modal"
+    class="user-background-modal"
+  />
+    <button class="change-image-button" (click)="changeImage()">
+      <xc-icon-image class="change-image-button-icon"/>
+    </button>
   </article>
   <article class="profile-content" *ngFor="let user of users">
     <div class="top-content">
@@ -76,7 +79,12 @@
       </section>
       <section class="user-image-wrapper">
         <div class="user-image-container" *ngIf="showImage">
-          <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
+          <div class="image-wrapper">
+            <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
+            <button class="change-profile-image" (click)="changeImage()">
+              <xc-icon-image class="change-profile-image-icon" />
+            </button>
+          </div>
         </div>
       </section>
     </div>

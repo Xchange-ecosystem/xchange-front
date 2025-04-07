@@ -16,10 +16,10 @@
 
 .profile-content {
   position: relative;
-  z-index: 10;
+
   background: var();
   border-radius: 20px 20px 0 0;
-  margin-top: -160px;
+  margin-top: -120px;
 }
 
 .user-data-name {
@@ -53,8 +53,6 @@
   gap: 24px;
 }
 
-
-
 .number-flex {
   display: flex;
   justify-content: start;
@@ -78,64 +76,120 @@
   height: 200px;
 }
 
-
-.project-data{
+.project-data {
   display: flex;
   flex-direction: column;
-  gap:16px;
+  gap: 16px;
   width: 100%;
 }
 
-.project-data-info{
-display: flex;
-gap: 4px;
+.project-data-info {
+  display: flex;
+  gap: 4px;
 }
-.project-data-assigned{
-display: flex;
-gap: 8px;
+.project-data-assigned {
+  display: flex;
+  gap: 8px;
   width: 100%;
 }
-.project-data-assigned-image{
+.project-data-assigned-image {
   width: 30px;
   height: 30px;
 }
 
-.edit-icon{
+.edit-icon {
   display: flex;
   width: 24px;
   height: 24px;
-  stroke:black;
+  stroke: black;
 }
 
 .input-edit {
-border: 1px solid var(--xc-grey500);
-padding:1px 6px;
-border-radius: 8px;
+  border: 1px solid var(--xc-grey500);
+  padding: 1px 6px;
+  border-radius: 8px;
   outline: none;
 }
 
-.check-icon{
+.check-icon {
   display: flex;
   width: 24px;
   height: 24px;
-  stroke:var(--xc-categories-completed);
+  stroke: var(--xc-categories-completed);
 }
-.close-icon{
+.close-icon {
   display: flex;
   width: 24px;
   height: 24px;
-  stroke:red;
+  stroke: red;
 }
 
-.edit-buttons-icons{
+.edit-buttons-icons {
   display: flex;
 }
 
-.edit-container{
+.edit-container {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
+
+.change-image-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 32px;
+  padding: 9px;
+  background: black;
+}
+.change-image-button-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.change-image-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 32px;
+  padding: 9px;
+  background: black;
+  z-index: 10;
+}
+
+.change-image-button-icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
+.change-profile-image{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 32px;
+  padding: 9px;
+  background: black;
+  z-index: 10;
+}
+
+.change-profile-image-icon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
 
 @media screen and (max-width: 768px) {
   .achievements-1::after {
