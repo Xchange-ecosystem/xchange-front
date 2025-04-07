@@ -3,6 +3,9 @@ import { Component, Input } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
+import { FormsModule, NgModel } from '@angular/forms';
+import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
+import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-user-header',
@@ -12,16 +15,38 @@ import { CardStylesDirective } from '../../directives/card-styles/card-styles.di
     NgFor,
     ProfileHeaderDirective,
     CardStylesDirective,
-    NgIf
+    NgIf,
+    Headline400Directive,
+    XcIconEditComponent,
+    XcIconCheckComponent,
+    XcIconCloseSComponent
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',
 })
 export class UserHeaderComponent {
   @Input() showImage: boolean = true;
+  @Input() showUserData: boolean = true;
   @Input() firstText: string = '';
   @Input() secondText: string = '';
-  @Input() showUserData: boolean = true;
+  isEditing: boolean = false;
+  editableText: string = '';
+
+  enableEditing(): void {
+    this.isEditing = true;
+    this.editableText = `${this.firstText} - ${this.secondText}`;
+  }
+
+  saveChanges(): void {
+    const [newFirstText, newSecondText] = this.editableText.split(' - ');
+    this.firstText = newFirstText || this.firstText;
+    this.secondText = newSecondText || this.secondText;
+    this.isEditing = false;
+  }
+
+  cancelChanges(): void {
+    this.isEditing = false;
+  }
   public users = [
     {
       name: 'John Doe',

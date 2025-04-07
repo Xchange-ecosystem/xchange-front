@@ -23,10 +23,9 @@
 }
 
 .user-data-name {
-  font-family: Manrope;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .user-profile-image {
@@ -42,18 +41,6 @@
   flex-wrap: wrap-reverse;
 }
 
-@media screen and (max-width: 768px) {
-  .top-content {
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    gap: 38px;
-  }
-}
-
 .user-data-card {
   display: flex;
   flex-direction: column;
@@ -66,11 +53,7 @@
   gap: 24px;
 }
 
-@media screen and (max-width: 768px) {
-  .achievements-1::after {
-    display: none;
-  }
-}
+
 
 .number-flex {
   display: flex;
@@ -115,4 +98,59 @@ gap: 8px;
 .project-data-assigned-image{
   width: 30px;
   height: 30px;
+}
+
+.edit-icon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke:black;
+}
+
+.input-edit {
+border: 1px solid var(--xc-grey500);
+padding:1px 6px;
+border-radius: 8px;
+  outline: none;
+}
+
+.check-icon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke:var(--xc-categories-completed);
+}
+.close-icon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke:red;
+}
+
+.edit-buttons-icons{
+  display: flex;
+}
+
+.edit-container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .achievements-1::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-content {
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 38px;
+  }
 }

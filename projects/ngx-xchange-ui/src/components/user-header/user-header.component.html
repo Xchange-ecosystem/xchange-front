@@ -11,7 +11,28 @@
       <section class="user-data-wrapper">
         <div class="user-data-card" xcCardStyles [padding]="32">
           <span class="user-data-name">
-            <h4>{{ firstText }} - {{ secondText }}</h4>
+            <h4 xcHeadline400 *ngIf="!isEditing">
+              {{ firstText }} - {{ secondText }}
+            </h4>
+            <div *ngIf="isEditing" class="edit-container">
+              <input
+                xcHeadline400
+                type="text"
+                [value]="firstText + ' - ' + secondText"
+                class="input-edit"
+              />
+              <div class="edit-buttons-icons">
+                <button (click)="saveChanges()">
+                  <xc-icon-check class="check-icon" />
+                </button>
+                <button (click)="cancelChanges()">
+                  <xc-icon-close-s class="close-icon" />
+                </button>
+              </div>
+            </div>
+            <button *ngIf="!isEditing" (click)="enableEditing()">
+              <xc-icon-edit class="edit-icon" />
+            </button>
           </span>
           <span class="user-data-achievements" *ngIf="showUserData">
             <div class="achievements-1">
@@ -44,7 +65,10 @@
             <div class="project-data-assigned">
               <p>Assigned To</p>
               <div class="project-data-assigned-image">
-                <xc-rounded-image image="https://randomuser.me/api/portraits/men/33.jpg" [marginSize]="0" />
+                <xc-rounded-image
+                  image="https://randomuser.me/api/portraits/men/33.jpg"
+                  [marginSize]="0"
+                />
               </div>
             </div>
           </span>
