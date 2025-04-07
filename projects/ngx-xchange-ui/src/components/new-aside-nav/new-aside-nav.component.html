@@ -85,7 +85,7 @@
     </nav>
   </div>
   <nav class="aside-nav__bottom-menu" *ngFor="let user of users">
-    <button href="/profile" class="aside-nav__user">
+    <button [routerLink]="'/profile'" class="aside-nav__user">
       <span class="aside-nav__user-info">
         <img
           src="https://randomuser.me/api/portraits/women/28.jpg"
@@ -98,7 +98,7 @@
         <xc-icon-angle-right class="aside-nav__arrow-icon" />
       </span>
     </button>
-    <button href="/support" class="aside-nav__support">
+    <button [routerLink]="'/support'" class="aside-nav__support">
       <span class="aside-nav__support-info">
         <xc-icon-question-circle class="aside-nav__support-icon" />
         <p class="aside-nav__text">Support</p>
@@ -107,9 +107,8 @@
         <xc-icon-angle-right class="aside-nav__arrow-icon" />
       </span>
     </button>
-    <button href="/logout" class="aside-nav__logout">
+    <button [routerLink]="'/logout'" class="aside-nav__logout">
       <span class="aside-nav__logout-info">
-        
         <xc-log-out-icon class="aside-nav__logout-icon"/>
         <p class="aside-nav__text">Logout</p>
       </span>
@@ -117,5 +116,5 @@
         <xc-icon-angle-right class="aside-nav__arrow-icon" />
       </span>
     </button>
-  </nav>
+</nav>
 </aside>
