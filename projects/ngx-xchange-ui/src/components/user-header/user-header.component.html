@@ -5,7 +5,7 @@
     alt="backgroun-modal"
     class="user-background-modal"
   />
-    <button class="change-image-button" (click)="openImageModal()">
+    <button class="change-image-button" (click)="openHeaderModal()">
       <xc-icon-image class="icon-common change-icon"/>
     </button>
   </article>
@@ -102,7 +102,32 @@
   </article>
 </section>
 
-<div class="modal-container" *ngIf="isModalOpen">
+<div class="modal-container" *ngIf="isHeaderModalOpen">
+  <div class="modal-content">
+    <h3 xcHeadline400>Edit your header image</h3>
+    <div class="dropzone">
+      <input type="file" class="input-dissabled"/>
+      <div class="dropzone-content">
+        <div>
+          <xc-icon-image-plus class="icon-common dropzone-icon"/>
+        </div>
+        <p>Drag and drop your image </p>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <button (click)="closeModal()" xcButtonsWrappers class="button-default">
+        <xc-icon-close-s class="icon-common cancel-icon" (click)="closeHeaderModal()" />
+        Cancel
+      </button>
+      <button xcButtonsWrappers class="button-filled">
+        <xc-icon-save class="icon-common save-icon"/>
+        <p>Save</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-container" *ngIf="isProfileModalOpen">
   <div class="modal-content">
     <h3 xcHeadline400>Edit your profile image</h3>
     <div class="dropzone">
@@ -115,13 +140,13 @@
       </div>
     </div>
     <div class="modal-buttons">
-      <button xcButtonsWrappers class="button-filled">
-        <xc-icon-save class="icon-common save-icon"/>
-        <p>Guardar</p>
-      </button>
       <button (click)="closeModal()" xcButtonsWrappers class="button-default">
         <xc-icon-close-s class="icon-common cancel-icon" />
-        Cancelar
+        Cancel
+      </button>
+      <button xcButtonsWrappers class="button-filled">
+        <xc-icon-save class="icon-common save-icon"/>
+        <p>Save</p>
       </button>
     </div>
   </div>

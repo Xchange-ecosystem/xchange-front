@@ -36,7 +36,8 @@ export class UserHeaderComponent {
   @Input() showUserData: boolean = true;
   @Input() firstText: string = '';
   @Input() secondText: string = '';
-  isModalOpen: boolean = false;
+  isProfileModalOpen: boolean = false;
+  isHeaderModalOpen: boolean = false;
   newImageUrl: string = '';
   isEditing: boolean = false;
   editableText: string = '';
@@ -53,17 +54,26 @@ export class UserHeaderComponent {
     this.isEditing = false;
   }
 
-  cancelChanges(): void {
-    this.isEditing = false;
+  openHeaderModal(): void {
+    this.isHeaderModalOpen = true;
+    this.newImageUrl = ''; 
+  }
+
+  closeHeaderModal(): void {
+    this.isHeaderModalOpen = false; 
   }
 
   openImageModal(): void {
-    this.isModalOpen = true;
+    this.isProfileModalOpen = true;
     this.newImageUrl = ''; 
   }
 
   closeModal(): void {
-    this.isModalOpen = false; 
+    this.isProfileModalOpen = false; 
+  }
+
+  cancelChanges(): void {
+    this.isEditing = false;
   }
 
   public users = [

@@ -158,12 +158,13 @@
 .modal-content {
   background-color: white;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   gap: 16px;
   border-radius: 8px;
   padding: 32px;
   width: 630px;
-  height: 250px;
+  height: 300px;
 }
 .modal-buttons{
   display: flex;
@@ -172,15 +173,13 @@
 }
 .dropzone {
   border-radius: 4px;
-  padding: 20px;
+  padding: 24px;
   text-align: center;
   background: var(--xc-gradient-light-grey-on-white);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  height: 50%;
 }
 .dropzone-content{
   display: flex;
@@ -204,6 +203,7 @@
 .close-icon {
   stroke: red;
 }
+.save-icon,
 .change-icon {
   stroke: white;
 }
@@ -211,7 +211,6 @@
   stroke: var(--xc-grey500);
 }
 .cancel-icon,
-.save-icon,
 .edit-icon {
   stroke: var(--xc-black500);
 }
