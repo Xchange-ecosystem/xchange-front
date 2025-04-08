@@ -21,7 +21,7 @@ import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIco
     XcIconCheckComponent,
     XcIconCloseSComponent,
     XcIconImageComponent,
-    XcIconImagePlusComponent
+    XcIconImagePlusComponent,
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',

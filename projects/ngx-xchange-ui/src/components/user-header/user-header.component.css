@@ -226,8 +226,43 @@
 
 .modal-content {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   border-radius: 8px;
   padding: 32px;
+  width: 630px;
+  height: 250px;
+}
+.dropzone {
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  background: var(--xc-gradient-light-grey-on-white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 50%;
+}
+.dropzone-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dropzone-icon{
+  display: flex;
+  width: 24px;
+  height: 24px;
+  stroke: var(--xc-grey500);
+}
+
+.input-dissabled{
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
