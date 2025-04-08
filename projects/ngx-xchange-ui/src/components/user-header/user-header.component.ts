@@ -2,8 +2,6 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
-import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
-import { FormsModule, NgModel } from '@angular/forms';
 import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
 import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
 import { ButtonsWrappersDirective } from '../../public-api';
@@ -16,7 +14,6 @@ import { Headline500Directive } from '../../directives/headline-500/headline-500
     RoundedImageModule,
     NgFor,
     ProfileHeaderDirective,
-    CardStylesDirective,
     NgIf,
     Headline400Directive,
     Headline500Directive,
