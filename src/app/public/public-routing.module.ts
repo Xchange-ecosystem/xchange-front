@@ -24,6 +24,10 @@ const routes: Routes = [
         path:'community',
         loadComponent: () => import('src/app/pages/community/community.component').then(m => m.CommunityComponent),
       },
+      {
+        path:'projects',
+        loadComponent: () => import('src/app/pages/projects/projects.component').then(m => m.ProjectsComponent),
+      },
     ],
   },
 ];

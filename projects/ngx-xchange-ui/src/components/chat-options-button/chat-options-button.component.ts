@@ -19,7 +19,6 @@ export class ChatOptionsButtonComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['iconName']) {
-      console.log('iconName:', this.iconName);
     }
   }
 }
