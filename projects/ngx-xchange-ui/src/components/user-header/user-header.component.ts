@@ -42,7 +42,7 @@ export class UserHeaderComponent {
   newImageUrl: string = '';
   isEditing: boolean = false;
   editableText: string = '';
-  selectedButton:string = '';
+  selectedButton:string = 'appearance';
 
   enableEditing(): void {
     this.isEditing = true;
