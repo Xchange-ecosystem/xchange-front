@@ -1,11 +1,11 @@
 <section xcProfileHeader>
   <article class="top-image-cover">
     <img
-    [src]="userBackgroundImage"
+    src="assets/img/user-modal-background.webp"
     alt="backgroun-modal"
     class="user-background-modal"
   />
-    <button class="change-image-button" (click)="changeImage()">
+    <button class="change-image-button" (click)="openImageModal()">
       <xc-icon-image class="change-image-button-icon"/>
     </button>
   </article>
@@ -79,20 +79,20 @@
       </section>
       <section class="user-image-wrapper">
         <div class="profile-filters">
-          <button>
+          <button class="profile-filters-button" >
             Apperance
           </button>
-          <button>
+          <button class="profile-filters-button" >
             Wallet
           </button>
-          <button>
+          <button class="profile-filters-button" >
             Premium upgrade
           </button>
         </div>
         <div class="user-image-container" *ngIf="showImage">
           <div class="image-wrapper">
             <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
-            <button class="change-profile-image" (click)="changeImage()">
+            <button class="change-profile-image" (click)="openImageModal()">
               <xc-icon-image class="change-profile-image-icon" />
             </button>
           </div>
@@ -101,3 +101,17 @@
     </div>
   </article>
 </section>
+
+<div class="modal-overlay" *ngIf="isModalOpen">
+  <div class="modal">
+    <h3>Cambiar Imagen</h3>
+    <input
+      type="file"
+      placeholder="Ingrese la URL de la nueva imagen"
+    />
+    <div class="modal-buttons">
+      <button>Guardar</button>
+      <button (click)="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>

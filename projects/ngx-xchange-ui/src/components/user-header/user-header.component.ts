@@ -30,7 +30,8 @@ export class UserHeaderComponent {
   @Input() showUserData: boolean = true;
   @Input() firstText: string = '';
   @Input() secondText: string = '';
-  userBackgroundImage: string = 'assets/img/user-modal-background.webp';
+  isModalOpen: boolean = false;
+  newImageUrl: string = '';
   isEditing: boolean = false;
   editableText: string = '';
 
@@ -50,12 +51,15 @@ export class UserHeaderComponent {
     this.isEditing = false;
   }
 
-  changeImage(): void {
-    const newImageUrl = prompt('Ingrese la URL de la nueva imagen:');
-    if (newImageUrl) {
-      this.userBackgroundImage = newImageUrl;
-    }
+  openImageModal(): void {
+    this.isModalOpen = true;
+    this.newImageUrl = ''; 
   }
+
+  closeModal(): void {
+    this.isModalOpen = false; 
+  }
+
   public users = [
     {
       name: 'John Doe',
