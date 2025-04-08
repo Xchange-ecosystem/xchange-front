@@ -5,6 +5,7 @@ import {
   XcIconArrowRightComponent,
   XcIconCloseSComponent,
   XcIconCopyComponent,
+  XcIconPlusCircleComponent,
   XcIconSaveComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
@@ -34,6 +35,7 @@ import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xch
     ButtonsWrappersDirective,
     XcIconCloseSComponent,
     XcIconAIComponent,
+    XcIconPlusCircleComponent
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
