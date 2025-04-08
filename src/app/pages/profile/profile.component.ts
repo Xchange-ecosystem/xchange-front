@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import {
   XcIconAIComponent,
@@ -30,15 +30,72 @@ import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xch
     CopyStylesDirective,
     Headline400Directive,
     NgIf,
+    NgFor,
     ButtonsWrappersDirective,
     XcIconCloseSComponent,
-    XcIconAIComponent
+    XcIconAIComponent,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
   isTagsOpen = false;
+
+  tags = [
+    'Innovation',
+    'Leadership',
+    'Teamwork',
+    'Problem Solving',
+    'Creativity',
+    'Communication',
+    'Critical Thinking',
+    'Adaptability',
+    'Time Management',
+    'Collaboration',
+    'Strategic Thinking',
+    'Decision Making',
+    'Emotional Intelligence',
+    'Conflict Resolution',
+    'Project Management',
+    'Analytical Skills',
+    'Customer Service',
+    'Negotiation',
+    'Networking',
+    'Public Speaking',
+    'Technical Writing',
+    'Research',
+    'Data Analysis',
+    'Programming',
+    'UX Design',
+    'Marketing',
+    'Sales',
+    'SEO Optimization',
+    'Social Media Management',
+    'Content Creation',
+    'Branding',
+    'Finance',
+    'Accounting',
+    'Budgeting',
+    'Risk Management',
+    'Supply Chain Management',
+    'Product Development',
+    'Quality Assurance',
+    'Operations Management',
+    'Human Resources',
+    'Recruitment',
+    'Training',
+    'Coaching',
+    'Mentoring',
+    'Event Planning',
+    'Graphic Design',
+    'Video Editing',
+    'Photography',
+    'Copywriting',
+    'E-commerce',
+    'Cloud Computing',
+    'Cybersecurity',
+  ];
+
   saveChanges() {
     alert('Changes saved');
   }
@@ -52,4 +109,5 @@ export class ProfileComponent {
   closeTags() {
     this.isTagsOpen = false;
   }
+
 }

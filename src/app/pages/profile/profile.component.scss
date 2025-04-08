@@ -151,11 +151,20 @@
       display: flex;
       gap: 16px;
       align-items: center;
+      &-injector{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: 100%;
+      }
       &-item {
         display: flex;
         border-radius: 16px;
+        gap: 8px;
+        align-items: center;
         padding: 8px;
         background: var(--xc-gradient-light-blue);
+
       }
     }
   }
@@ -164,6 +173,12 @@
     width: 20px;
     height: 20px;
     stroke: white;
+    &-red{
+      display: flex;
+      width: 20px;
+      height: 20px;
+      stroke: red;
+    }
   }
 }
 
@@ -174,6 +189,10 @@
   stroke: var(--xc-black500);
 }
 .push-close {
-  margin-top: 190px;
+  margin-top: 140px;
   margin-left: 1rem;
+}
+.tag{
+  display: flex;
+  align-items: center;
 }

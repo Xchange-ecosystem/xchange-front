@@ -25,6 +25,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '400',
         lineHeight: '14px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
       },
     },
     'copy-200': {
@@ -33,6 +34,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '400',
         lineHeight: '16px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
       },
     },
     'copy-200-bold': {
@@ -41,6 +43,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '700',
         lineHeight: '16px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
       },
     },
     'copy-300': {
@@ -49,6 +52,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '500',
         lineHeight: '18px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
       },
     },
     'copy-400': {
@@ -57,6 +61,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '600',
         lineHeight: '20px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
       },
     },
     'copy-500': {
@@ -65,6 +70,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '700',
         lineHeight: '22px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
       },
     },
   };

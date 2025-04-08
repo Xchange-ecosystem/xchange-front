@@ -101,13 +101,22 @@
     <article class="tags_modal-content-wrapper">
       <p xcHeadline200>Review your skill tags</p>
       <span class="tags_modal-content-wrapper-item">
-        <xc-icon-ai class="ia-icon"/>
-        <p>
+        <xc-icon-ai class="ia-icon" />
+        <p xcCopyStyles class="copy-200-bold">
           Our AI matches your skills with projects, templates and other members.
           Thats why its important to build a strong profile
         </p>
       </span>
     </article>
+    <div
+      
+      class="tags_modal-content-wrapper-injector"
+    >
+      <div xcProfileTags="gray" *ngFor="let tag of tags" class="tag">
+        {{ tag }}
+        <xc-icon-close-s  class="tags_modal-icon-red " />
+      </div>
+    </div>
   </div>
   <button
     xcButtonsWrappers
