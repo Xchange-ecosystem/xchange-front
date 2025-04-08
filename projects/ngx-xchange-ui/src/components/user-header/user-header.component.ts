@@ -5,7 +5,9 @@ import { ProfileHeaderDirective } from '../../directives/profile-header/profile-
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
 import { FormsModule, NgModel } from '@angular/forms';
 import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
-import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
+import { ButtonsWrappersDirective } from '../../public-api';
+import { Headline500Directive } from '../../directives/headline-500/headline-500.directive';
 
 @Component({
   selector: 'xc-user-header',
@@ -17,11 +19,14 @@ import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIco
     CardStylesDirective,
     NgIf,
     Headline400Directive,
+    Headline500Directive,
     XcIconEditComponent,
     XcIconCheckComponent,
     XcIconCloseSComponent,
     XcIconImageComponent,
     XcIconImagePlusComponent,
+    XcIconSaveComponent,
+    ButtonsWrappersDirective
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',

@@ -6,7 +6,7 @@
     class="user-background-modal"
   />
     <button class="change-image-button" (click)="openImageModal()">
-      <xc-icon-image class="change-image-button-icon"/>
+      <xc-icon-image class="icon-common change-icon"/>
     </button>
   </article>
   <article class="profile-content" *ngFor="let user of users">
@@ -26,35 +26,35 @@
               />
               <div class="edit-buttons-icons">
                 <button (click)="saveChanges()">
-                  <xc-icon-check class="check-icon" />
+                  <xc-icon-check class="icon-common check-icon" />
                 </button>
                 <button (click)="cancelChanges()">
-                  <xc-icon-close-s class="close-icon" />
+                  <xc-icon-close-s class="icon-common close-icon" />
                 </button>
               </div>
             </div>
             <button *ngIf="!isEditing" (click)="enableEditing()">
-              <xc-icon-edit class="edit-icon" />
+              <xc-icon-edit class="icon-common edit-icon" />
             </button>
           </span>
           <span class="user-data-achievements" *ngIf="showUserData">
             <div class="achievements-1">
               <div class="number-flex">
-                <span class="achievements-number">{{ user.completedObj }}</span>
+                <span xcHeadline500>{{ user.completedObj }}</span>
                 <p>completed objectives</p>
               </div>
               <div class="number-flex">
-                <span class="achievements-number">{{ user.activeObj }}</span>
+                <span xcHeadline500>{{ user.activeObj }}</span>
                 <p>active objectives</p>
               </div>
             </div>
             <div class="achievements-2">
               <div class="number-flex">
-                <span class="achievements-number">{{ user.nextSteps }}</span>
+                <span xcHeadline500>{{ user.nextSteps }}</span>
                 <p>next steps</p>
               </div>
               <div class="number-flex">
-                <span class="achievements-number">{{ user.invProyects }}</span>
+                <span xcHeadline500>{{ user.invProyects }}</span>
                 <p>involved projects</p>
               </div>
             </div>
@@ -93,7 +93,7 @@
           <div class="image-wrapper">
             <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
             <button class="change-profile-image" (click)="openImageModal()">
-              <xc-icon-image class="change-profile-image-icon" />
+              <xc-icon-image class="icon-common change-icon" />
             </button>
           </div>
         </div>
@@ -109,14 +109,20 @@
       <input type="file" class="input-dissabled"/>
       <div class="dropzone-content">
         <div>
-          <xc-icon-image-plus class="dropzone-icon"/>
+          <xc-icon-image-plus class="icon-common dropzone-icon"/>
         </div>
         <p>Drag and drop your image </p>
       </div>
     </div>
     <div class="modal-buttons">
-      <button>Guardar</button>
-      <button (click)="closeModal()">Cancelar</button>
+      <button xcButtonsWrappers class="button-filled">
+        <xc-icon-save class="icon-common save-icon"/>
+        <p>Guardar</p>
+      </button>
+      <button (click)="closeModal()" xcButtonsWrappers class="button-default">
+        <xc-icon-close-s class="icon-common cancel-icon" />
+        Cancelar
+      </button>
     </div>
   </div>
 </div>
