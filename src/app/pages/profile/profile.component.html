@@ -53,6 +53,7 @@
               <div xcProfileTags="gray">Develop</div>
             </div>
             <button
+              (click)="openTags()"
               class="profile_content-settings-options-item-interests-tags-see"
             >
               <xc-icon-arrow-right
@@ -65,7 +66,9 @@
         <span class="profile_content-settings-options-item-blockchain">
           <p xcCopy300>Blockchain key</p>
           <div class="profile_content-settings-options-item-blockchain-info">
-            <xc-icon-copy class="profile_content-settings-options-item-blockchain-info-icon"/>
+            <xc-icon-copy
+              class="profile_content-settings-options-item-blockchain-info-icon"
+            />
             <p>0x1234567890abcdef1234567890abcdef12345678</p>
           </div>
         </span>
@@ -86,8 +89,31 @@
   </article>
   <footer class="profile_footer">
     <button type="button" class="profile_footer-save" (click)="saveChanges()">
-        <xc-icon-save class="profile_footer-save-icon"/>
+      <xc-icon-save class="profile_footer-save-icon" />
       Save changes
     </button>
   </footer>
+</section>
+
+<section *ngIf="isTagsOpen" class="tags_modal">
+  <div class="tags_modal-content">
+    <p xcHeadline400>All tags related to Fabian</p>
+    <article class="tags_modal-content-wrapper">
+      <p xcHeadline200>Review your skill tags</p>
+      <span class="tags_modal-content-wrapper-item">
+        <xc-icon-ai class="ia-icon"/>
+        <p>
+          Our AI matches your skills with projects, templates and other members.
+          Thats why its important to build a strong profile
+        </p>
+      </span>
+    </article>
+  </div>
+  <button
+    xcButtonsWrappers
+    class="button-round-close push-close"
+    (click)="closeTags()"
+  >
+    <xc-icon-close-s class="tags_modal-icon" />
+  </button>
 </section>
