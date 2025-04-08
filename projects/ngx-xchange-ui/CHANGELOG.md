@@ -1,18 +1,21 @@
+# 0.1.16 07/04/2025
+* (fix community user card style)
+
 # 0.0.15 02/04/2025
-(fix) - Add  profile-tags user-profile card-styles profile-header to public api
-(add) directive button styles
+* (fix) - Add  profile-tags user-profile card-styles profile-header to public api
+* (add) directive button styles
 
 # 0.0.14 27/03/2025
-(fix) - Project progressbar rounded when has suggested
+* (fix) - Project progressbar rounded when has suggested
 
 # 0.0.13 25/03/2025
-(add) directive click outside
+* (add) directive click outside
 
 # 0.0.12 21/03/2025
-(fix) label for with index on input with checkmark
+* (fix) label for with index on input with checkmark
 
 # 0.0.11 20/03/2025
-(add) style to modal sublayer
+* (add) style to modal sublayer
 
 # 0.1.10 19/03/2025
 * (refactor) Clear rating bar component
