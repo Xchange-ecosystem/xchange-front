@@ -102,13 +102,18 @@
   </article>
 </section>
 
-<div class="modal-overlay" *ngIf="isModalOpen">
-  <div class="modal">
+<div class="modal-container" *ngIf="isModalOpen">
+  <div class="modal-content">
     <h3>Cambiar Imagen</h3>
-    <input
-      type="file"
-      placeholder="Ingrese la URL de la nueva imagen"
-    />
+    <div class="dropzone">
+      <input type="file" />
+      <div class="dropzone-content">
+        <div class="icon">
+          <xc-icon-image-plus/>
+        </div>
+        <p>Drag and drop your image </p>
+      </div>
+    </div>
     <div class="modal-buttons">
       <button>Guardar</button>
       <button (click)="closeModal()">Cancelar</button>

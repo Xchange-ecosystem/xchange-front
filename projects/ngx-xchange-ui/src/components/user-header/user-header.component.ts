@@ -5,7 +5,7 @@ import { ProfileHeaderDirective } from '../../directives/profile-header/profile-
 import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
 import { FormsModule, NgModel } from '@angular/forms';
 import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
-import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-user-header',
@@ -20,7 +20,8 @@ import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIco
     XcIconEditComponent,
     XcIconCheckComponent,
     XcIconCloseSComponent,
-    XcIconImageComponent
+    XcIconImageComponent,
+    XcIconImagePlusComponent
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',
