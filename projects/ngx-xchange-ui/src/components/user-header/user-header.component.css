@@ -39,6 +39,8 @@
   flex-direction: column;
   background: white;
   gap: 24px;
+  padding: 32px;
+  border-radius: 8px;
 }
 .user-data-achievements {
   display: flex;
