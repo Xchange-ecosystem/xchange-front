@@ -34,6 +34,7 @@ export class UserHeaderComponent {
   @Input() showUserData: boolean = true;
   @Input() firstText: string = '';
   @Input() secondText: string = '';
+  @Input() isEditable: boolean = false;
   isProfileModalOpen: boolean = false;
   isHeaderModalOpen: boolean = false;
   newImageUrl: string = '';

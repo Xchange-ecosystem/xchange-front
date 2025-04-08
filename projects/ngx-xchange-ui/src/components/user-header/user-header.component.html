@@ -5,8 +5,8 @@
     alt="backgroun-modal"
     class="user-background-modal"
   />
-    <button class="change-image-button" (click)="openHeaderModal()">
-      <xc-icon-image class="icon-common change-icon"/>
+    <button class="change-image-button" (click)="openHeaderModal()" *ngIf="isEditable"> 
+      <xc-icon-image class="icon-common change-icon" />
     </button>
   </article>
   <article class="profile-content" *ngFor="let user of users">
@@ -17,7 +17,7 @@
             <h4 xcHeadline400 *ngIf="!isEditing">
               {{ firstText }} - {{ secondText }}
             </h4>
-            <div *ngIf="isEditing" class="edit-container">
+            <div *ngIf="isEditable && isEditing" class="edit-container">
               <input
                 xcHeadline400
                 type="text"
@@ -78,7 +78,7 @@
         </div>
       </section>
       <section class="user-image-wrapper">
-        <div class="profile-filters">
+        <div class="profile-filters" *ngIf="isEditable">
           <button
             class="profile-filters-button"
             [ngClass]="{ 'selected': selectedButton === 'appearance', 'unselected': selectedButton !== 'appearance' }"
@@ -104,7 +104,7 @@
         <div class="user-image-container" *ngIf="showImage">
           <div class="image-wrapper">
             <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
-            <button class="change-profile-image" (click)="openImageModal()">
+            <button class="change-profile-image" (click)="openImageModal()" *ngIf="isEditable">
               <xc-icon-image class="icon-common change-icon" />
             </button>
           </div>
