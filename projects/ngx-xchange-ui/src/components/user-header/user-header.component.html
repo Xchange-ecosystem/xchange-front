@@ -79,13 +79,25 @@
       </section>
       <section class="user-image-wrapper">
         <div class="profile-filters">
-          <button class="profile-filters-button" >
-            Apperance
+          <button
+            class="profile-filters-button"
+            [ngClass]="{ 'selected': selectedButton === 'appearance', 'unselected': selectedButton !== 'appearance' }"
+            (click)="selectFilter('appearance')"
+          >
+            Appearance
           </button>
-          <button class="profile-filters-button" >
+          <button
+            class="profile-filters-button"
+            [ngClass]="{ 'selected': selectedButton === 'wallet', 'unselected': selectedButton !== 'wallet' }"
+            (click)="selectFilter('wallet')"
+          >
             Wallet
           </button>
-          <button class="profile-filters-button" >
+          <button
+            class="profile-filters-button"
+            [ngClass]="{ 'selected': selectedButton === 'premium', 'unselected': selectedButton !== 'premium' }"
+            (click)="selectFilter('premium')"
+          >
             Premium upgrade
           </button>
         </div>
@@ -101,7 +113,7 @@
     </div>
   </article>
 </section>
-
+<!-- Modales para cambiar las imagenes de header y perfil -->
 <div class="modal-container" *ngIf="isHeaderModalOpen">
   <div class="modal-content">
     <h3 xcHeadline400>Edit your header image</h3>

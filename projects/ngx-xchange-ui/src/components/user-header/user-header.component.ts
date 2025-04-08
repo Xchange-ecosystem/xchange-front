@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
@@ -26,7 +26,8 @@ import { Headline500Directive } from '../../directives/headline-500/headline-500
     XcIconImageComponent,
     XcIconImagePlusComponent,
     XcIconSaveComponent,
-    ButtonsWrappersDirective
+    ButtonsWrappersDirective,
+    NgClass
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',
@@ -41,6 +42,7 @@ export class UserHeaderComponent {
   newImageUrl: string = '';
   isEditing: boolean = false;
   editableText: string = '';
+  selectedButton:string = '';
 
   enableEditing(): void {
     this.isEditing = true;
@@ -74,6 +76,10 @@ export class UserHeaderComponent {
 
   cancelChanges(): void {
     this.isEditing = false;
+  }
+
+  selectFilter(filter: string): void {
+    this.selectedButton = filter; 
   }
 
   public users = [

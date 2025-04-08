@@ -188,6 +188,16 @@
   justify-content: center;
   gap: 8px;
 }
+.profile-filters-button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.profile-filters-button.selected {
+  background-color: var(--xc-grey100);
+}
+.profile-filters-button.unselected {
+  background: white;
+  color: black;
+}
 
 .input-dissabled{
   display: none;
