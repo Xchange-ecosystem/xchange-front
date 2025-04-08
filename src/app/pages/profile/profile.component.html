@@ -4,9 +4,11 @@
       [firstText]="'Fabian Feutlinske'"
       [secondText]="'(Xchange)'"
       [isEditable]="true"
+      [selectedButton]="activeSection"
+      (sectionChange)="onSectionChange($event)"
     />
   </header>
-  <article class="profile_content">
+  <article class="profile_content" *ngIf="activeSection === 'appearance'">
     <div class="profile_content-about">
       <p xcHeadline300>About Me</p>
       <p>
@@ -87,12 +89,20 @@
       </div>
     </div>
   </article>
-  <footer class="profile_footer">
+  <footer class="profile_footer" *ngIf="activeSection === 'appearance'">
     <button type="button" class="profile_footer-save" (click)="saveChanges()">
       <xc-icon-save class="profile_footer-save-icon" />
       Save changes
     </button>
   </footer>
+
+  <div *ngIf="activeSection === 'wallet'">
+    <p xcHeadline300>Wallet Section</p>
+  </div>
+
+  <div *ngIf="activeSection === 'premium'">
+    <p xcHeadline300>Wallet Section</p>
+  </div>
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">

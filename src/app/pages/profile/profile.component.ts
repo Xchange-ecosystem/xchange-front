@@ -41,6 +41,7 @@ import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xch
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
+  activeSection: string = 'appearance';
   isTagsOpen = false;
 
   tags = [
@@ -112,4 +113,7 @@ export class ProfileComponent {
     this.isTagsOpen = false;
   }
 
+  onSectionChange(section: string): void {
+    this.activeSection = section;
+  }
 }

@@ -82,21 +82,21 @@
           <button
             class="profile-filters-button"
             [ngClass]="{ 'selected': selectedButton === 'appearance', 'unselected': selectedButton !== 'appearance' }"
-            (click)="selectFilter('appearance')"
+            (click)="changeSection('appearance')"
           >
             Appearance
           </button>
           <button
             class="profile-filters-button"
             [ngClass]="{ 'selected': selectedButton === 'wallet', 'unselected': selectedButton !== 'wallet' }"
-            (click)="selectFilter('wallet')"
+            (click)="changeSection('wallet')"
           >
             Wallet
           </button>
           <button
             class="profile-filters-button"
             [ngClass]="{ 'selected': selectedButton === 'premium', 'unselected': selectedButton !== 'premium' }"
-            (click)="selectFilter('premium')"
+            (click)="changeSection('premium')"
           >
             Premium upgrade
           </button>

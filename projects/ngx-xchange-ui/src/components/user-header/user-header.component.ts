@@ -1,5 +1,5 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
 import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
@@ -35,12 +35,13 @@ export class UserHeaderComponent {
   @Input() firstText: string = '';
   @Input() secondText: string = '';
   @Input() isEditable: boolean = false;
+  @Input() selectedButton: string = 'appearance';
+  @Output() sectionChange = new EventEmitter<string>();
   isProfileModalOpen: boolean = false;
   isHeaderModalOpen: boolean = false;
   newImageUrl: string = '';
   isEditing: boolean = false;
   editableText: string = '';
-  selectedButton:string = 'appearance';
 
   enableEditing(): void {
     this.isEditing = true;
@@ -78,6 +79,11 @@ export class UserHeaderComponent {
 
   selectFilter(filter: string): void {
     this.selectedButton = filter; 
+  }
+
+  changeSection(section: string): void {
+    this.selectedButton = section;
+    this.sectionChange.emit(section); 
   }
 
   public users = [
