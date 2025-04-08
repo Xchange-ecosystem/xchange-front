@@ -49,7 +49,7 @@
 .arrow-icon{
   width: 24px;
   height: 24px;
-  stroke: black;
+  stroke: var(--xc-black500);
   transition: transform 0.3s ease;
 }
 

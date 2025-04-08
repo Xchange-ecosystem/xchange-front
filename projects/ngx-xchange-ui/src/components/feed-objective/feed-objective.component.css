@@ -97,7 +97,7 @@
 .feed-actions {
   display: flex;
   gap: 16pxs;
-  color: black;
+  color: var(--xc-black500);
   font-weight: 700;
 }
 
