@@ -156,6 +156,24 @@
         flex-wrap: wrap;
         gap: 16px;
         width: 100%;
+        &-input{
+          border: 1px solid var(--xc-gray300);
+          padding: 6px;
+          border-radius: 6px;
+        }
+      }
+      &-new{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        &-input{
+          border: solid 1px;
+          border-color:var(--xc-grey200);
+          padding: 6px;
+          border-radius: 6px;
+          outline: none;
+        }
       }
       &-item {
         display: flex;

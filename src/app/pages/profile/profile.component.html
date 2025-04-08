@@ -108,14 +108,18 @@
         </p>
       </span>
     </article>
-    <div
-      
-      class="tags_modal-content-wrapper-injector"
-    >
+    <div class="tags_modal-content-wrapper-injector">
       <div xcProfileTags="gray" *ngFor="let tag of tags" class="tag">
         {{ tag }}
         <xc-icon-close-s  class="tags_modal-icon-red " />
       </div>
+    </div>
+    <div class="tags_modal-content-wrapper-new">
+      <p>Add tags</p>
+      <input
+        class="tags_modal-content-wrapper-new-input"
+        type="text"
+      />
     </div>
   </div>
   <button
