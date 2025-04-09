@@ -94,12 +94,22 @@
             Wallet
           </button>
           <button
+          *ngIf="user.premium; else upgradeButton"
+          class="profile-filters-button"
+          [ngClass]="{ 'selected': selectedButton === 'premium-setting', 'unselected': selectedButton !== 'premium' }"
+          (click)="changeSection('premium-setting')"
+        >
+          Premium settings
+        </button>
+        <ng-template #upgradeButton>
+          <button
             class="profile-filters-button"
-            [ngClass]="{ 'selected': selectedButton === 'premium', 'unselected': selectedButton !== 'premium' }"
-            (click)="changeSection('premium')"
+            [ngClass]="{ 'selected': selectedButton === 'premium-upgrade', 'unselected': selectedButton !== 'premium' }"
+            (click)="changeSection('premium-upgrade')"
           >
             Premium upgrade
           </button>
+        </ng-template>
         </div>
         <div class="user-image-container" *ngIf="showImage">
           <div class="image-wrapper">

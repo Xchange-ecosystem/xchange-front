@@ -84,6 +84,7 @@ export class UserHeaderComponent {
   changeSection(section: string): void {
     this.selectedButton = section;
     this.sectionChange.emit(section); 
+    console.log('Selected section:', section);
   }
 
   public users = [
@@ -103,6 +104,7 @@ export class UserHeaderComponent {
       memberDate: '7 Aug 2024',
       email: 'tester@gmail.com',
       linkedin: 'https://www.linkedin.com/in/john-doe',
+      premium:false,
     },
   ];
 }
