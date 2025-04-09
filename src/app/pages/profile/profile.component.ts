@@ -8,6 +8,7 @@ import {
   XcIconCopyComponent,
   XcIconPlusCircleComponent,
   XcIconSaveComponent,
+  XcIconSearchComponent,
   XcIconStarComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
@@ -41,13 +42,14 @@ import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xch
     XcIconPlusCircleComponent,
     HeadlineStylesDirective,
     XcIconCheckCircleComponent,
-    XcIconStarComponent
+    XcIconStarComponent,
+    XcIconSearchComponent
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
-  activeSection: string = 'premium-upgrade';
+  activeSection: string = 'premium-settings';
   isTagsOpen = false;
 
   tags = [

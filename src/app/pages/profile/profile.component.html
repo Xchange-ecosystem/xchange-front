@@ -227,6 +227,24 @@
     </section>
   </article>
 
+  <article *ngIf="activeSection === 'premium-settings'" class="premium_settings">
+    <section class="premium_settings-wrapper">
+      <article class="premium_settings-wrapper-search">
+        <p xcHeadlineStyles class="headline-300">Select an Investor profile and customize your own</p>
+        <span class="premium_settings-wrapper-search-span">
+          <input type="text" class="premium_settings-wrapper-search-span-input" placeholder="What are you looking for?" />
+          <xc-icon-search class="premium_settings-wrapper-search-span-icon" />
+        </span>
+      </article>
+      <article class="premium_settings-profile">
+        <aside class="premium_settings-profile-cards">
+          
+        </aside>
+        <div class="premium_settings-profile-custom"></div>
+      </article>
+      <article class="premium_settings-custom"></article>
+    </section>
+  </article>
 
 </section>
 
