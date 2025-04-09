@@ -14,6 +14,7 @@ import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy
 import { Headline200Directive } from 'projects/ngx-xchange-ui/src/directives/headline-200/headline-200.directive';
 import { Headline300Directive } from 'projects/ngx-xchange-ui/src/directives/headline-300/headline-300.directive';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
+import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/public-api';
 
 @Component({
@@ -35,7 +36,8 @@ import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xch
     ButtonsWrappersDirective,
     XcIconCloseSComponent,
     XcIconAIComponent,
-    XcIconPlusCircleComponent
+    XcIconPlusCircleComponent,
+    HeadlineStylesDirective
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',

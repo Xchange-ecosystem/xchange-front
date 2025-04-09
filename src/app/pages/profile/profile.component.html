@@ -96,13 +96,75 @@
     </button>
   </footer>
 
-  <div *ngIf="activeSection === 'wallet'">
-    <p xcHeadline300>Wallet Section</p>
-  </div>
+  <article *ngIf="activeSection === 'wallet'" class="wallet">
+    <div class="wallet_assets">
+      <p xcHeadlineStyles class="headline-300">My assets</p>
+      <div class="wallet_assets-graph">
+        <img src="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png" alt="temp-graph-image" class="wallet_assets-graph-image"/>
+      </div>
+    </div>
+    <div class="wallet_contributions">
+      <p xcHeadlineStyles class="headline-300">Contributions and value</p>
+      <table class="wallet_contributions-table">
+        <thead class="wallet_contributions-table-header">
+          <tr class="wallet_contributions-table-header-row">
+            <th>Project</th>
+            <th>Contributed</th>
+            <th>Current</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody class="wallet_contributions-table-body">
+          <tr class="wallet_contributions-table-body-row">
+            <td>Project A</td>
+            <td>$1,000</td>
+            <td>$1,200</td>
+            <td>
+              <div xcProfileTags="green">Active</div>
+            </td>
+          </tr>
+          <tr class="wallet_contributions-table-body-row">
+            <td>Project B</td>
+            <td>$500</td>
+            <td>$600</td>
+            <td>
+              <div xcProfileTags="yellow">Open</div>
+            </td>          
+          </tr>
+          <tr class="wallet_contributions-table-body-row">
+            <td>Project C</td>
+            <td>$750</td>
+            <td>$800</td>
+            <td>
+              <div xcProfileTags="yellow" >Open</div>
+            </td>
+          </tr>
+          <tr class="wallet_contributions-table-body-row">
+            <td>Project D</td>
+            <td>$666</td>
+            <td>$2,500</td>
+            <td>
+              <div xcProfileTags="yellow">Open</div>
+            </td>
+          </tr>
+          <tr class="wallet_contributions-table-body-row">
+            <td>Project E</td>
+            <td>$666</td>
+            <td>$2,500</td>
+            <td>
+              <div xcProfileTags="green">Active</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
 
-  <div *ngIf="activeSection === 'premium'">
-    <p xcHeadline300>Wallet Section</p>
-  </div>
+  <article *ngIf="activeSection === 'premium'">
+
+  </article>
+
+
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">
