@@ -84,7 +84,6 @@ export class UserHeaderComponent {
   changeSection(section: string): void {
     this.selectedButton = section;
     this.sectionChange.emit(section); 
-    console.log('Selected section:', section);
   }
 
   public users = [

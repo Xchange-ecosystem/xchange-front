@@ -96,15 +96,15 @@
           <button
           *ngIf="user.premium; else upgradeButton"
           class="profile-filters-button"
-          [ngClass]="{ 'selected': selectedButton === 'premium-setting', 'unselected': selectedButton !== 'premium' }"
-          (click)="changeSection('premium-setting')"
+          [ngClass]="{ 'selected': selectedButton === 'premium-settings', 'unselected': selectedButton !== 'premium-settings' }"
+          (click)="changeSection('premium-settings')"
         >
           Premium settings
         </button>
         <ng-template #upgradeButton>
           <button
             class="profile-filters-button"
-            [ngClass]="{ 'selected': selectedButton === 'premium-upgrade', 'unselected': selectedButton !== 'premium' }"
+            [ngClass]="{ 'selected': selectedButton === 'premium-upgrade', 'unselected': selectedButton !== 'premium-upgrade' }"
             (click)="changeSection('premium-upgrade')"
           >
             Premium upgrade

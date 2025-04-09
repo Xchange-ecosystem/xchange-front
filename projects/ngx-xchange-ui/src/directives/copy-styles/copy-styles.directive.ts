@@ -61,7 +61,7 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '400',
         lineHeight: '24px',
         color: 'var(--xc-black500)',
-        textAlign: 'center',
+        textAlign: 'start',
       },
     },
     'copy-500': {
@@ -70,6 +70,15 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
         fontWeight: '700',
         lineHeight: '22px',
         color: 'var(--xc-black500)',
+        textAlign: 'center',
+      },
+    },
+    'copy-400-purple': {
+      default: {
+        fontSize: '16px',
+        fontWeight: '400',
+        lineHeight: '24px',
+        color: 'var(--xc-categories-suggestion)',
         textAlign: 'center',
       },
     },
