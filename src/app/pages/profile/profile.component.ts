@@ -8,7 +8,6 @@ import {
   XcIconCopyComponent,
   XcIconPlusCircleComponent,
   XcIconSaveComponent,
-  XcIconSearchComponent,
   XcIconStarComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
@@ -18,7 +17,7 @@ import { Headline200Directive } from 'projects/ngx-xchange-ui/src/directives/hea
 import { Headline300Directive } from 'projects/ngx-xchange-ui/src/directives/headline-300/headline-300.directive';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
-import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule, RatingBarModule } from 'projects/ngx-xchange-ui/src/public-api';
 
 @Component({
   selector: 'app-profile',
@@ -43,7 +42,7 @@ import { ButtonsWrappersDirective, ProfileTagsDirective } from 'projects/ngx-xch
     HeadlineStylesDirective,
     XcIconCheckCircleComponent,
     XcIconStarComponent,
-    XcIconSearchComponent
+    RateModule
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',

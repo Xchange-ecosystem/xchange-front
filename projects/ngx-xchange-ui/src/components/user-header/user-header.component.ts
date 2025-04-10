@@ -103,7 +103,7 @@ export class UserHeaderComponent {
       memberDate: '7 Aug 2024',
       email: 'tester@gmail.com',
       linkedin: 'https://www.linkedin.com/in/john-doe',
-      premium:false,
+      premium:true,
     },
   ];
 }
