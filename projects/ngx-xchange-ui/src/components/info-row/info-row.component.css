@@ -5,14 +5,15 @@
     margin-bottom: 4px;
     gap: 4px;
     width: 100%;
-    .label {
-      font-weight: 500;
-      color: var(--xc-black500);
-      text-wrap: nowrap;
-    }
-    .value {
-      font-weight: bold;
-      flex: 0 0 auto;
-      color: #000;
-    }
+    text-align: end;
+  }
+
+  .value{
+    text-align: end;
+  }
+  .label{
+    display: flex;
+    align-items: end;
+    text-align: end;
+    height: 100%;
   }

@@ -57,9 +57,9 @@ export class HeadlineStylesDirective implements OnInit, OnDestroy {
     },
     'headline-500': {
       default: {
-        fontSize: '36px',
-        fontWeight: '800',
-        lineHeight: '40px',
+        fontSize: '32px',
+        fontWeight: '600',
+        lineHeight: '38px',
         color: 'var(--xc-black500)',
         textAlign: 'left',
       },

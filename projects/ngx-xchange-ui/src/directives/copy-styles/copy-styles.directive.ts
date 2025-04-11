@@ -50,9 +50,8 @@ export class CopyStylesDirective implements OnInit, OnDestroy {
       default: {
         fontSize: '14px',
         fontWeight: '500',
-        lineHeight: '18px',
+        lineHeight: '20px',
         color: 'var(--xc-black500)',
-        textAlign: 'center',
       },
     },
     'copy-400': {
