@@ -18,8 +18,8 @@
 }
 
 .icon-stroke{
-    stroke: black;
-    fill: black;
+    stroke: var(--xc-black500);
+    fill: var(--xc-black500);
     width:21px ;
     height: 21px;
 }

@@ -26,15 +26,15 @@
         &-button-500{
           &_cancel{
             background: white;
-            color: black;
-            border: 1px solid black;
+            color: var(--xc-black500);
+            border: 1px solid var(--xc-black500);
             border-radius: 8px;
             padding: 8px 32px;
           }
           &_next{
-            background: black;
+            background: var(--xc-black500);
             color: white;
-            border: 1px solid black;
+            border: 1px solid var(--xc-black500);
             border-radius: 8px;
             padding: 8px 32px;
           }
@@ -84,7 +84,7 @@
       display: flex;
       gap: 80px;
       &-list {
-        color: black;
+        color: var(--xc-black500);
         list-style: disc;
         margin-left: 20px;
         text-wrap: wrap;
@@ -180,8 +180,8 @@
     gap: 4px;
     align-items: center;
     &-icon {
-      stroke: black;
-      fill: black;
+      stroke: var(--xc-black500);
+      fill: var(--xc-black500);
       width: 24px;
       height: 24px;
     }
@@ -203,7 +203,7 @@
   background: var(--xc-grey200);
   padding: 4px 12px 4px 4px;
   &-icon {
-    stroke: black;
+    stroke: var(--xc-black500);
     width: 20px;
     height: 20px;
   }

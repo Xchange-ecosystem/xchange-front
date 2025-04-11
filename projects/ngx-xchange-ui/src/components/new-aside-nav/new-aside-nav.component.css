@@ -57,13 +57,13 @@
 }
 
 .aside-nav__tab--active {
-    color: black;
+    color: var(--xc-black500);
     background: var(--xc-gradient-light-grey-on-white);
     border-radius: 8px 0px 0px 8px;
 }
 
 .aside-nav__tab-right{
-    color: black;
+    color: var(--xc-black500);
     border-radius: 0px 8px 8px 0px;
     flex: 1 0 0;
     padding: 8px 10px 8px 11px;
@@ -160,12 +160,12 @@
 .aside-nav__arrow-icon {
     width: 24px;
     height: 24px;
-    stroke: black;
+    stroke: var(--xc-black500);
 }
 
 .aside-nav__support-icon,
 .aside-nav__logout-icon {
     width: 24px;
     height: 24px;
-    stroke: black;
+    stroke: var(--xc-black500);
 }

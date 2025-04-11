@@ -206,6 +206,22 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         background: 'var(--xc-gradient-medium-green)',
       },
     },
+    'button-round-close': {
+      default: {
+        alignSelf: 'flex-start',
+        width: '30px',
+        height: '30px',
+        color: 'var(--xc-black500)',
+        borderRadius: '9999px',
+        background: 'white',
+        border: 'none',
+        fill: 'black',
+        stroke: 'black',
+      },
+      hover: {
+        backgroundColor: 'var(--xc-grey200)',
+      },
+    },
   };
 
   ngOnInit() {

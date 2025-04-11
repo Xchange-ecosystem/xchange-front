@@ -1,36 +1,60 @@
 <section xcProfileHeader>
   <article class="top-image-cover">
     <img
-      src="assets/img/user-modal-background.webp"
-      alt="backgroun-modal"
-      class="user-background-modal"
-    />
+    src="assets/img/user-modal-background.webp"
+    alt="backgroun-modal"
+    class="user-background-modal"
+  />
+    <button class="change-image-button" (click)="openHeaderModal()" *ngIf="isEditable"> 
+      <xc-icon-image class="icon-common change-icon" />
+    </button>
   </article>
   <article class="profile-content" *ngFor="let user of users">
     <div class="top-content">
       <section class="user-data-wrapper">
-        <div class="user-data-card" xcCardStyles [padding]="32">
+        <div class="user-data-card" >
           <span class="user-data-name">
-            <h4>{{ firstText }} - {{ secondText }}</h4>
+            <h4 xcHeadline400 *ngIf="!isEditing">
+              {{ firstText }} - {{ secondText }}
+            </h4>
+            <div *ngIf="isEditable && isEditing" class="edit-container">
+              <input
+                xcHeadline400
+                type="text"
+                [value]="firstText + ' - ' + secondText"
+                class="input-edit"
+              />
+              <div class="edit-buttons-icons">
+                <button (click)="saveChanges()">
+                  <xc-icon-check class="icon-common check-icon" />
+                </button>
+                <button (click)="cancelChanges()">
+                  <xc-icon-close-s class="icon-common close-icon" />
+                </button>
+              </div>
+            </div>
+            <button *ngIf="!isEditing" (click)="enableEditing()">
+              <xc-icon-edit class="icon-common edit-icon" />
+            </button>
           </span>
           <span class="user-data-achievements" *ngIf="showUserData">
             <div class="achievements-1">
               <div class="number-flex">
-                <span class="achievements-number">{{ user.completedObj }}</span>
+                <span xcHeadline500>{{ user.completedObj }}</span>
                 <p>completed objectives</p>
               </div>
               <div class="number-flex">
-                <span class="achievements-number">{{ user.activeObj }}</span>
+                <span xcHeadline500>{{ user.activeObj }}</span>
                 <p>active objectives</p>
               </div>
             </div>
             <div class="achievements-2">
               <div class="number-flex">
-                <span class="achievements-number">{{ user.nextSteps }}</span>
+                <span xcHeadline500>{{ user.nextSteps }}</span>
                 <p>next steps</p>
               </div>
               <div class="number-flex">
-                <span class="achievements-number">{{ user.invProyects }}</span>
+                <span xcHeadline500>{{ user.invProyects }}</span>
                 <p>involved projects</p>
               </div>
             </div>
@@ -44,17 +68,108 @@
             <div class="project-data-assigned">
               <p>Assigned To</p>
               <div class="project-data-assigned-image">
-                <xc-rounded-image image="https://randomuser.me/api/portraits/men/33.jpg" [marginSize]="0" />
+                <xc-rounded-image
+                  image="https://randomuser.me/api/portraits/men/33.jpg"
+                  [marginSize]="0"
+                />
               </div>
             </div>
           </span>
         </div>
       </section>
       <section class="user-image-wrapper">
+        <div class="profile-filters" *ngIf="isEditable">
+          <button
+            class="profile-filters-button"
+            [ngClass]="{ 'selected': selectedButton === 'appearance', 'unselected': selectedButton !== 'appearance' }"
+            (click)="changeSection('appearance')"
+          >
+            Appearance
+          </button>
+          <button
+            class="profile-filters-button"
+            [ngClass]="{ 'selected': selectedButton === 'wallet', 'unselected': selectedButton !== 'wallet' }"
+            (click)="changeSection('wallet')"
+          >
+            Wallet
+          </button>
+          <button
+          *ngIf="user.premium; else upgradeButton"
+          class="profile-filters-button"
+          [ngClass]="{ 'selected': selectedButton === 'premium-settings', 'unselected': selectedButton !== 'premium-settings' }"
+          (click)="changeSection('premium-settings')"
+        >
+          Premium settings
+        </button>
+        <ng-template #upgradeButton>
+          <button
+            class="profile-filters-button"
+            [ngClass]="{ 'selected': selectedButton === 'premium-upgrade', 'unselected': selectedButton !== 'premium-upgrade' }"
+            (click)="changeSection('premium-upgrade')"
+          >
+            Premium upgrade
+          </button>
+        </ng-template>
+        </div>
         <div class="user-image-container" *ngIf="showImage">
-          <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
+          <div class="image-wrapper">
+            <xc-rounded-image image="{{ user.imageUrl }}" [marginSize]="3" />
+            <button class="change-profile-image" (click)="openImageModal()" *ngIf="isEditable">
+              <xc-icon-image class="icon-common change-icon" />
+            </button>
+          </div>
         </div>
       </section>
     </div>
   </article>
 </section>
+<!-- Modales para cambiar las imagenes de header y perfil -->
+<div class="modal-container" *ngIf="isHeaderModalOpen">
+  <div class="modal-content">
+    <h3 xcHeadline400>Edit your header image</h3>
+    <div class="dropzone">
+      <input type="file" class="input-dissabled"/>
+      <div class="dropzone-content">
+        <div>
+          <xc-icon-image-plus class="icon-common dropzone-icon"/>
+        </div>
+        <p>Drag and drop your image </p>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <button (click)="closeModal()" xcButtonsWrappers class="button-default">
+        <xc-icon-close-s class="icon-common cancel-icon" (click)="closeHeaderModal()" />
+        Cancel
+      </button>
+      <button xcButtonsWrappers class="button-filled">
+        <xc-icon-save class="icon-common save-icon"/>
+        <p>Save</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-container" *ngIf="isProfileModalOpen">
+  <div class="modal-content">
+    <h3 xcHeadline400>Edit your profile image</h3>
+    <div class="dropzone">
+      <input type="file" class="input-dissabled"/>
+      <div class="dropzone-content">
+        <div>
+          <xc-icon-image-plus class="icon-common dropzone-icon"/>
+        </div>
+        <p>Drag and drop your image </p>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <button (click)="closeModal()" xcButtonsWrappers class="button-default">
+        <xc-icon-close-s class="icon-common cancel-icon" />
+        Cancel
+      </button>
+      <button xcButtonsWrappers class="button-filled">
+        <xc-icon-save class="icon-common save-icon"/>
+        <p>Save</p>
+      </button>
+    </div>
+  </div>
+</div>

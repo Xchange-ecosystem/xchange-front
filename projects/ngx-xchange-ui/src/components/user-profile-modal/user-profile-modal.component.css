@@ -214,7 +214,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: black;
+  color: var(--xc-black500);
 }
 
 .member-since-wrapper {
@@ -244,8 +244,8 @@
 }
 .linkedin-icon,
 .email-icon {
-  stroke: black;
-  fill: black;
+  stroke: var(--xc-black500);
+  fill: var(--xc-black500);
   width: 20px;
   height: 20px;
 }

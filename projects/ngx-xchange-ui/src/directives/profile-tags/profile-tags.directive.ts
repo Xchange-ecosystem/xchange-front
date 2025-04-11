@@ -22,6 +22,15 @@ export class ProfileTagsDirective implements OnChanges {
     blue:"var(--xc-categories-collaboration)"
   };
 
+
+  private textColorMap: Record<string, string> = {
+    yellow: 'var(--xc-categories-yellow-tag)',
+    blue: 'var(--xc-data-viz-blue200)',
+    purple: 'white',
+    green: 'white',
+    default: 'var(--xc-grey500)',
+  };
+
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -33,7 +42,7 @@ export class ProfileTagsDirective implements OnChanges {
   private applyColor(): void {
     const color = this.xcProfileTags.toLowerCase();
     const backgroundColor = this.colorMap[color] || this.colorMap['default'];
-
+    const textColor = this.textColorMap[color] || this.textColorMap['default'];
 
     this.renderer.setStyle(
       this.el.nativeElement,
@@ -41,17 +50,8 @@ export class ProfileTagsDirective implements OnChanges {
       backgroundColor
     );
 
-
-    const isDarkBackground = ['purple', 'green','blue'].includes(color);
-    const textColor = color === 'blue' ? 'var(--xc-data-viz-blue200)' : (isDarkBackground ? 'white' : 'var(--xc-grey500)');
     this.renderer.setStyle(this.el.nativeElement, 'color', textColor);
-
-
-    this.renderer.setStyle(
-      this.el.nativeElement,
-      'padding',
-      '6px 10px 7px 10px'
-    );
+    this.renderer.setStyle(this.el.nativeElement, 'padding', '7px 10px 7px 10px');
     this.renderer.setStyle(this.el.nativeElement, 'border-radius', '16px');
     this.renderer.setStyle(this.el.nativeElement, 'font-size', '12px');
     this.renderer.setStyle(this.el.nativeElement, 'font-weight', '700');

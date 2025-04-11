@@ -77,19 +77,19 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  fill: black;
-  stroke: black;
+  fill: var(--xc-black500);
+  stroke: var(--xc-black500);
 }
 
 .profile__collab-icon-svg {
   fill: currentColor;
-  stroke: black;
+  stroke: var(--xc-black500);
 }
 
 .profile__collab-icon-svg-link{
-  fill: black;
-  stroke: black;
-  background: black ;
+  fill: var(--xc-black500);
+  stroke: var(--xc-black500);
+  background: var(--xc-black500) ;
 }
 
 .modal-overlay {
