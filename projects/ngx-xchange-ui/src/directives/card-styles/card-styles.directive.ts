@@ -29,6 +29,7 @@ export class CardStylesDirective implements OnInit {
     alignItems: 'center',
     background: 'white',
     height: '100%',
+    minHeight: '420px',
     boxShadow: 'var(--xc-boxShadow-400)',
     justifyContent: 'space-between'
   };
