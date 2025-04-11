@@ -9,12 +9,11 @@ import {
   XcIconQuestionCircleComponent,
   XcIconRocketComponent,
   XcIconSettingComponent,
-  XcIconSignAltComponent,
   XcIconStarComponent,
   XcIconUsersAltComponent,
   XcIconWifiComponent,
+  XcIconAngleRightComponent
 } from '@indziaki/ngx-xchange-icons';
-import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
 import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-out.component';
 import { RouterLink } from '@angular/router';
 
@@ -38,13 +37,14 @@ import { RouterLink } from '@angular/router';
     XcIconWifiComponent,
     XcIconUsersAltComponent,
     XcLogOutIconComponent,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',
 })
 export class NewAsideNavComponent {
   activeTab: string = 'ecosystem';
+  selectedMenuIndex: number | null = null; 
   public users = [
     {
       name: 'John Doe',
@@ -59,5 +59,8 @@ export class NewAsideNavComponent {
   ];
   setActiveTab(tab: string): void {
     this.activeTab = tab;
+  }
+  selectMenu(index: number): void {
+    this.selectedMenuIndex = index;
   }
 }

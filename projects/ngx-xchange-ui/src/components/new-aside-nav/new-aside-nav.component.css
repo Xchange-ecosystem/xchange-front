@@ -127,6 +127,7 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    padding: 8px 16px;
 }
 
 
@@ -169,3 +170,7 @@
     height: 24px;
     stroke: var(--xc-black500);
 }
+
+.aside-nav__bottom-menu--active {
+    background: var(--xc-gradient-light-grey-on-white);
+  }
