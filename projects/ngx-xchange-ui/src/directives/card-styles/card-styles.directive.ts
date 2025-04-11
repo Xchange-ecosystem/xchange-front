@@ -25,13 +25,12 @@ export class CardStylesDirective implements OnInit {
     paddingTop: '32px',
     paddingBottom: '24px',
     gap: '16px',
-    width: '500px',
+    width: '100%',
     alignItems: 'center',
     background: 'white',
-    height: '420px',
-    maxHeight: '420px',
+    height: '100%',
     boxShadow: 'var(--xc-boxShadow-400)',
-    position: 'relative'
+    justifyContent: 'space-between'
   };
 
   ngOnInit() {
