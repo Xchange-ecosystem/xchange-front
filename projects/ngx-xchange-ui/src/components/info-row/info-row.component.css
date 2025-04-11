@@ -1,0 +1,18 @@
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  
+    .label {
+      font-weight: 500;
+      flex: 1;
+      color: #555;
+    }
+  
+    .value {
+      font-weight: bold;
+      flex: 0 0 auto;
+      color: #000;
+    }
+  }
