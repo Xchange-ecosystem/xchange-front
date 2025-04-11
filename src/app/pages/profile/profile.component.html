@@ -1,14 +1,15 @@
 <section class="profile">
   <header class="profile_header">
-    <xc-user-header
+    <!-- <xc-user-header
       [firstText]="'Fabian Feutlinske'"
       [secondText]="'(Xchange)'"
       [isEditable]="true"
       [selectedButton]="activeSection"
       (sectionChange)="onSectionChange($event)"
-    />
+    /> -->
+    <app-profile-header/>
   </header>
-  <article class="profile_content" *ngIf="activeSection === 'appearance'">
+  <!-- <article class="profile_content" *ngIf="activeSection === 'appearance'">
     <div class="profile_content-about">
       <p xcHeadline300>About Me</p>
       <p>
@@ -243,8 +244,7 @@
       </article>
       <article class="premium_settings-custom"></article>
     </section>
-  </article>
-
+  </article> -->
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">

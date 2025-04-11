@@ -1,0 +1,46 @@
+.profile_header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    &_background {
+        display: flex;
+        width: 100%;
+        height: 30%;
+        &-image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_content {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        &-card {
+            border-radius: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_nav{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            &-tabs{
+                display: flex;
+                gap: 6px;
+                align-items: end;
+            }
+            &-rounded{
+                display: flex;
+                width: 200px;
+                height: 200px;
+                &-image{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

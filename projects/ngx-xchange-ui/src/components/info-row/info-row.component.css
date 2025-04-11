@@ -1,15 +1,15 @@
 .info-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-  
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 4px;
+    gap: 4px;
+    width: 100%;
     .label {
       font-weight: 500;
-      flex: 1;
-      color: #555;
+      color: var(--xc-black500);
+      text-wrap: nowrap;
     }
-  
     .value {
       font-weight: bold;
       flex: 0 0 auto;

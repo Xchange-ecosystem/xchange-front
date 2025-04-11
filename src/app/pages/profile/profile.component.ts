@@ -18,6 +18,7 @@ import { Headline300Directive } from 'projects/ngx-xchange-ui/src/directives/hea
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule, RatingBarModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { ProfileHeaderComponent } from './profile-header/profile-header.component';
 
 @Component({
   selector: 'app-profile',
@@ -42,7 +43,8 @@ import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule, RatingBarMo
     HeadlineStylesDirective,
     XcIconCheckCircleComponent,
     XcIconStarComponent,
-    RateModule
+    RateModule,
+    ProfileHeaderComponent,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
