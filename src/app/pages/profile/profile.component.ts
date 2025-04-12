@@ -13,7 +13,6 @@ import {
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 import { Headline200Directive } from 'projects/ngx-xchange-ui/src/directives/headline-200/headline-200.directive';
-import { Headline300Directive } from 'projects/ngx-xchange-ui/src/directives/headline-300/headline-300.directive';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule } from 'projects/ngx-xchange-ui/src/public-api';
@@ -27,7 +26,6 @@ import { ProfileHeaderComponent } from './profile-header/profile-header.componen
     ProfileTagsDirective,
     XcIconArrowRightComponent,
     XcIconCopyComponent,
-    Headline300Directive,
     Headline200Directive,
     ToggleComponent,
     CopyStylesDirective,
@@ -48,7 +46,7 @@ import { ProfileHeaderComponent } from './profile-header/profile-header.componen
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
-  activeSection: string = 'appearance';
+  activeSection: string = 'Apperance';
   isTagsOpen = false;
   isLanguageModalOpen: boolean = false;
 
@@ -123,5 +121,6 @@ export class ProfileComponent {
 
   onSectionChange(section: string): void {
     this.activeSection = section;
+    console.log('Active section updated in ProfileComponent:', section);
   }
 }

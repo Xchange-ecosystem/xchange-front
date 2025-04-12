@@ -1,8 +1,8 @@
 <section class="profile">
   <header class="profile_header">
-    <app-profile-header/>
+    <app-profile-header (sectionChanged)="onSectionChange($event)"></app-profile-header>
   </header>
-  <article class="profile_content" *ngIf="activeSection === 'appearance'">
+  <article class="profile_content" *ngIf="activeSection === 'Apperance'">
     <div class="profile_content-about">
       <p xcHeadlineStyles class="headline-300">About Me</p>
       <p xcCopyStyles class="copy-400">
@@ -82,14 +82,14 @@
       </div>
     </div>
   </article>
-  <footer class="profile_footer" *ngIf="activeSection === 'appearance'">
+  <footer class="profile_footer" *ngIf="activeSection === 'Apperance'">
     <button type="button" class="profile_footer-save" (click)="saveChanges()">
       <xc-icon-save class="profile_footer-save-icon" />
       Save changes
     </button>
   </footer>
 
-  <article *ngIf="activeSection === 'wallet'" class="wallet">
+  <article *ngIf="activeSection === 'Wallet'" class="wallet">
     <div class="wallet_assets">
       <p xcHeadlineStyles class="headline-300">My assets</p>
       <div class="wallet_assets-graph">
@@ -141,7 +141,7 @@
     </div>
   </article>
 
-  <article *ngIf="activeSection === 'premium-upgrade'" class="premium-upgrade">
+  <article *ngIf="activeSection === 'Premium-upgrade'" class="premium-upgrade">
     <section class="premium-upgrade-video">
       <h5 xcHeadlineStyles class="headline-300">Upgrade to investor Premium</h5>
       <iframe
@@ -220,7 +220,7 @@
     </section>
   </article>
 
-  <article *ngIf="activeSection === 'premium-settings'" class="premium_settings">
+  <article *ngIf="activeSection === 'Premiun-settings'" class="premium_settings">
     <section class="premium_settings-wrapper">
       <article class="premium_settings-wrapper-search">
         <p xcHeadlineStyles class="headline-300">Select an Investor profile and customize your own</p>

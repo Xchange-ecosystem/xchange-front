@@ -13,6 +13,7 @@
             <xc-section-tab
             class="profile_header_content_nav-tabs"
             [sections]="sections"
+            (sectionSelected)="onSectionSelected($event)"
             >
           </xc-section-tab>
             <span class="profile_header_content_nav-rounded">
