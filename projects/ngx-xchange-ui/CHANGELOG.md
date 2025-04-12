@@ -1,3 +1,9 @@
+# 0.1.18 11/04/2025
+* (change) community user card directive
+
+# 0.1.17 11/04/2025
+* (change community user card directive)
+
 # 0.1.16 07/04/2025
 * (fix community user card style)
 
