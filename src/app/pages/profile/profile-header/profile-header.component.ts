@@ -13,8 +13,9 @@ import { HeaderBackgroundComponent } from 'projects/ngx-xchange-ui/src/component
 })
 export class ProfileHeaderComponent {
   sections = [
-    { name: 'Overview', hasNotifications: false },
-    { name: 'Details', hasNotifications: true },
-    { name: 'Settings', hasNotifications: false }
+    { name: 'Apperance', hasNotifications: false },
+    { name: 'Wallet', hasNotifications: true },
+    { name: 'Premium upgrade', hasNotifications: false },
+    { name: 'Premium settings', hasNotifications: false }
   ];
 }

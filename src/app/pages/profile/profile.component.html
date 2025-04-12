@@ -1,18 +1,11 @@
 <section class="profile">
   <header class="profile_header">
-    <!-- <xc-user-header
-      [firstText]="'Fabian Feutlinske'"
-      [secondText]="'(Xchange)'"
-      [isEditable]="true"
-      [selectedButton]="activeSection"
-      (sectionChange)="onSectionChange($event)"
-    /> -->
     <app-profile-header/>
   </header>
-  <!-- <article class="profile_content" *ngIf="activeSection === 'appearance'">
+  <article class="profile_content" *ngIf="activeSection === 'appearance'">
     <div class="profile_content-about">
-      <p xcHeadline300>About Me</p>
-      <p>
+      <p xcHeadlineStyles class="headline-300">About Me</p>
+      <p xcCopyStyles class="copy-400">
         I founded COBIOM as a network of professionals who believe that
         collaboration and cocreation our our best tools to transform businesses
         into agents for a better future. As Director and head of strategy and
@@ -23,28 +16,27 @@
       </p>
     </div>
     <div class="profile_content-settings">
-      <p xcHeadline300>Further settings</p>
+      <p xcHeadlineStyles class="headline-300">Further settings</p>
       <div class="profile_content-settings-options">
         <span class="profile_content-settings-options-item">
-          <p xcCopy300>Public visibility</p>
+          <p xcCopyStyles class="copy-300-bold">Public visibility</p>
           <div>
             <xc-toggle color="green" />
           </div>
         </span>
         <span class="profile_content-settings-options-item-language">
-          <p xcCopy300>Plataform language</p>
+          <p xcCopyStyles class="copy-300-bold">Plataform language</p>
           <div class="profile_content-settings-options-item-language-dialog">
             <select
-              class="profile_content-settings-options-item-language-dialog-select"
-            >
+              xcCopyStyles class="copy-400 profile_content-settings-options-item-language-dialog-select">
               <option value="en">English</option>
               <option value="es">Spanish</option>
               <option value="fr">French</option>
             </select>
-          </div>
+         </div>
         </span>
         <span class="profile_content-settings-options-item-interests">
-          <p xcCopy300>Interests and talents</p>
+          <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
           <div class="profile_content-settings-options-item-interests-tags">
             <div
               class="profile_content-settings-options-item-interests-tags-container"
@@ -62,30 +54,30 @@
               <xc-icon-arrow-right
                 class="profile_content-settings-options-item-interests-tags-see-icon"
               />
-              <p xcCopy300>See all tags</p>
+              <p xcCopyStyles class="copy-300-bold">See all tags</p>
             </button>
           </div>
         </span>
         <span class="profile_content-settings-options-item-blockchain">
-          <p xcCopy300>Blockchain key</p>
+          <p xcCopyStyles class="copy-300-bold">Blockchain key</p>
           <div class="profile_content-settings-options-item-blockchain-info">
             <xc-icon-copy
               class="profile_content-settings-options-item-blockchain-info-icon"
             />
-            <p>0x1234567890abcdef1234567890abcdef12345678</p>
+            <p xcCopyStyles class="copy-400">0x1234567890abcdef1234567890abcdef12345678</p>
           </div>
         </span>
         <span class="profile_content-settings-options-item-member">
-          <p xcCopy300>Member since</p>
-          <p>7 Aug.2024</p>
+          <p xcCopyStyles class="copy-300-bold">Member since</p>
+          <p xcCopyStyles class="copy-400">7 Aug.2024</p>
         </span>
         <span class="profile_content-settings-options-item-email">
-          <p xcCopy300>Email</p>
-          <p>fabian&#64;xchange.eco</p>
+          <p xcCopyStyles class="copy-300-bold">Email</p>
+          <p xcCopyStyles class="copy-400">fabian&#64;xchange.eco</p>
         </span>
         <span class="profile_content-settings-options-item-linkedin">
-          <p xcCopy300>Linkedin</p>
-          <p>https://www.linkedin.com/in/fabian-bermeo</p>
+          <p xcCopyStyles class="copy-300-bold">Linkedin</p>
+          <p xcCopyStyles class="copy-400">https://www.linkedin.com/in/fabian-bermeo</p>
         </span>
       </div>
     </div>
@@ -244,7 +236,7 @@
       </article>
       <article class="premium_settings-custom"></article>
     </section>
-  </article> -->
+  </article>
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">

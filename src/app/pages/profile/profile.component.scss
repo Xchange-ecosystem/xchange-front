@@ -37,7 +37,7 @@
         &-item {
           display: flex;
           gap: 6px;
-          align-items: flex-start;
+          align-items: center;
           &-language {
             display: flex;
             flex-direction: column;
@@ -46,13 +46,17 @@
             &-dialog {
               display: flex;
               width: 100%;
+              border: 1px solid ;
+                border-color: var(--xc-grey100);
+                border-radius: 8px;
+                padding: 8px;
+                gap: 8px;
+                align-items: center;
               &-select {
                 display: flex;
                 width: 100%;
-                border: 1px solid gray;
-                border-radius: 8px;
-                padding: 8px;
                 background: transparent;
+                outline: none;
               }
             }
           }
@@ -106,7 +110,7 @@
   &_footer {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     align-items: center;
     &-save {
       display: flex;

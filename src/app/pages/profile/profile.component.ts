@@ -11,20 +11,18 @@ import {
   XcIconStarComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
-import { UserHeaderComponent } from 'projects/ngx-xchange-ui/src/components/user-header/user-header.component';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 import { Headline200Directive } from 'projects/ngx-xchange-ui/src/directives/headline-200/headline-200.directive';
 import { Headline300Directive } from 'projects/ngx-xchange-ui/src/directives/headline-300/headline-300.directive';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
-import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule, RatingBarModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProfileHeaderComponent } from './profile-header/profile-header.component';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
   imports: [
-    UserHeaderComponent,
     XcIconSaveComponent,
     ProfileTagsDirective,
     XcIconArrowRightComponent,
@@ -50,8 +48,9 @@ import { ProfileHeaderComponent } from './profile-header/profile-header.componen
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
-  activeSection: string = 'premium-settings';
+  activeSection: string = 'appearance';
   isTagsOpen = false;
+  isLanguageModalOpen: boolean = false;
 
   tags = [
     'Innovation',

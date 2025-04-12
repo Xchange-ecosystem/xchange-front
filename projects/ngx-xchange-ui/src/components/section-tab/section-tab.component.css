@@ -12,6 +12,8 @@
     transition: background-color 0.2s ease-in-out;
     display: flex;
     align-items: center;
+    width: 100%;
+    text-wrap: nowrap;
     gap: 4px;
     cursor: pointer;
     color: var(--xc-grey300);
