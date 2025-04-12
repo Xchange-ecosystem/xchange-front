@@ -5,20 +5,37 @@
   gap: 32px;
   width: 100%;
   height:100%;
-  &_content {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    &-about {
+}
+
+.apperance{
+  display: grid;
+  grid-template-columns: 40% 59%;
+  grid-template-rows: 1fr auto; 
+  column-gap: 32px;
+  row-gap: 6px;
+  padding: 0 160px;
+  height: 100%;
+  align-items: center; 
+  justify-content: center;
+  &_about{
+    background:white;
+    height: 100%;
+    padding: 8px;
+    border-radius: 8px;
+      &-title {
       display: flex;
       flex-direction: column;
       gap: 16px;
       background: white;
       padding: 24px;
-      flex: 1;
-      max-width: 630px;
       border-radius: 8px;
     }
+  }
+  &_further{
+    background:white;
+    height: 100%;
+    padding: 8px;
+    border-radius: 8px;
     &-settings {
       display: flex;
       flex-direction: column;
@@ -26,7 +43,6 @@
       background: white;
       padding: 24px;
       flex: 1;
-      max-width: 630px;
       border-radius: 8px;
       width: 100%;
       &-options {
@@ -107,11 +123,12 @@
       }
     }
   }
-  &_footer {
-    width: 100%;
+  &_footer{
+    grid-column: 1 / -1;
     display: flex;
-    justify-content: end;
-    align-items: center;
+    justify-content: end; 
+    align-items: center; 
+    padding: 16px 0;
     &-save {
       display: flex;
       align-items: center;
@@ -126,95 +143,10 @@
         height: 20px;
         stroke: white;
       }
-    }
+  }
   }
 }
-.tags_modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  &-content {
-    align-items: start;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    gap: 16px;
-    width: 70%;
-    height: 70%;
-    border-radius: 16px;
-    padding: 32px;
-    &-wrapper {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      &-injector {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        width: 100%;
-        &-input {
-          border: 1px solid var(--xc-gray300);
-          padding: 6px;
-          border-radius: 6px;
-        }
-      }
-      &-new {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        width: 100%;
-        &-span {
-          display: flex;
-          width: 100%;
-          border: solid 1px;
-          background-color: var(--xc-gray200);
-          border-radius: 8px;
-          padding: 4px;
-          justify-content: space-between;
-          align-items: center;
-          &-input {
-            outline: none;
-            padding: 4px;
-            width: 100%;
-          }
-          &-icon {
-            display: flex;
-            width: 24px;
-            height: 24px;
-            stroke: var(--xc-black500);
-          }
-        }
-      }
-      &-item {
-        display: flex;
-        border-radius: 16px;
-        gap: 8px;
-        align-items: center;
-        padding: 8px;
-        background: var(--xc-gradient-light-blue);
-      }
-    }
-  }
-  &-icon {
-    display: flex;
-    width: 20px;
-    height: 20px;
-    stroke: black;
-    &-red {
-      display: flex;
-      width: 20px;
-      height: 20px;
-      stroke: red;
-    }
-  }
-}
+
 .ia-icon {
   display: flex;
   width: 20px;
@@ -232,18 +164,18 @@
 }
 
 .wallet {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% 59%;
+  grid-template-rows: 1fr auto; 
+  column-gap: 32px;
+  row-gap: 6px;
+  padding: 0 160px;
+  height: 100%;
+  align-items: start; 
   justify-content: center;
-  gap: 32px;
-  width: 100%;
   &_assets {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    width: 500px;
-    background: white;
-    padding: 24px;
+    background:white;
+    padding: 8px;
     border-radius: 8px;
     &-graph {
       display: flex;
@@ -257,13 +189,8 @@
     }
   }
   &_contributions {
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    gap: 16px;
-    width: 766px;
-    height: 300px;
-    background: white;
+    background:white;
+    padding: 8px;
     border-radius: 8px;
     &-table {
       width: 100%;
@@ -440,6 +367,93 @@
           margin-right: 11px;
         }
       }
+    }
+  }
+}
+
+.tags_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  &-content {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    gap: 16px;
+    width: 70%;
+    height: 70%;
+    border-radius: 16px;
+    padding: 32px;
+    &-wrapper {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      &-injector {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        width: 100%;
+        &-input {
+          border: 1px solid var(--xc-gray300);
+          padding: 6px;
+          border-radius: 6px;
+        }
+      }
+      &-new {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        &-span {
+          display: flex;
+          width: 100%;
+          border: solid 1px;
+          background-color: var(--xc-gray200);
+          border-radius: 8px;
+          padding: 4px;
+          justify-content: space-between;
+          align-items: center;
+          &-input {
+            outline: none;
+            padding: 4px;
+            width: 100%;
+          }
+          &-icon {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            stroke: var(--xc-black500);
+          }
+        }
+      }
+      &-item {
+        display: flex;
+        border-radius: 16px;
+        gap: 8px;
+        align-items: center;
+        padding: 8px;
+        background: var(--xc-gradient-light-blue);
+      }
+    }
+  }
+  &-icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    stroke: black;
+    &-red {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      stroke: red;
     }
   }
 }

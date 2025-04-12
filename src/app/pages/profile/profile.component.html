@@ -1,96 +1,102 @@
 <section class="profile">
-  <header class="profile_header">
-    <app-profile-header (sectionChanged)="onSectionChange($event)"></app-profile-header>
+  <header>
+    <app-profile-header
+      (sectionChanged)="onSectionChange($event)"
+    ></app-profile-header>
   </header>
-  <article class="profile_content" *ngIf="activeSection === 'Apperance'">
-    <div class="profile_content-about">
-      <p xcHeadlineStyles class="headline-300">About Me</p>
-      <p xcCopyStyles class="copy-400">
-        I founded COBIOM as a network of professionals who believe that
-        collaboration and cocreation our our best tools to transform businesses
-        into agents for a better future. As Director and head of strategy and
-        product development, me and my great team develop the COBIOM ecosystem
-        as a consultancy, coworking and learning platform that provides
-        end-to-end services from intent to implementation in innovation and
-        business transformation.
-      </p>
-    </div>
-    <div class="profile_content-settings">
-      <p xcHeadlineStyles class="headline-300">Further settings</p>
-      <div class="profile_content-settings-options">
-        <span class="profile_content-settings-options-item">
-          <p xcCopyStyles class="copy-300-bold">Public visibility</p>
-          <div>
-            <xc-toggle color="green" />
-          </div>
-        </span>
-        <span class="profile_content-settings-options-item-language">
-          <p xcCopyStyles class="copy-300-bold">Plataform language</p>
-          <div class="profile_content-settings-options-item-language-dialog">
-            <select
-              xcCopyStyles class="copy-400 profile_content-settings-options-item-language-dialog-select">
-              <option value="en">English</option>
-              <option value="es">Spanish</option>
-              <option value="fr">French</option>
-            </select>
-         </div>
-        </span>
-        <span class="profile_content-settings-options-item-interests">
-          <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
-          <div class="profile_content-settings-options-item-interests-tags">
-            <div
-              class="profile_content-settings-options-item-interests-tags-container"
-            >
-              <div xcProfileTags="gray">Generate</div>
-              <div xcProfileTags="gray">Organizational</div>
-              <div xcProfileTags="gray">Improve</div>
-              <div xcProfileTags="gray">Analyze</div>
-              <div xcProfileTags="gray">Develop</div>
-            </div>
-            <button
-              (click)="openTags()"
-              class="profile_content-settings-options-item-interests-tags-see"
-            >
-              <xc-icon-arrow-right
-                class="profile_content-settings-options-item-interests-tags-see-icon"
-              />
-              <p xcCopyStyles class="copy-300-bold">See all tags</p>
-            </button>
-          </div>
-        </span>
-        <span class="profile_content-settings-options-item-blockchain">
-          <p xcCopyStyles class="copy-300-bold">Blockchain key</p>
-          <div class="profile_content-settings-options-item-blockchain-info">
-            <xc-icon-copy
-              class="profile_content-settings-options-item-blockchain-info-icon"
-            />
-            <p xcCopyStyles class="copy-400">0x1234567890abcdef1234567890abcdef12345678</p>
-          </div>
-        </span>
-        <span class="profile_content-settings-options-item-member">
-          <p xcCopyStyles class="copy-300-bold">Member since</p>
-          <p xcCopyStyles class="copy-400">7 Aug.2024</p>
-        </span>
-        <span class="profile_content-settings-options-item-email">
-          <p xcCopyStyles class="copy-300-bold">Email</p>
-          <p xcCopyStyles class="copy-400">fabian&#64;xchange.eco</p>
-        </span>
-        <span class="profile_content-settings-options-item-linkedin">
-          <p xcCopyStyles class="copy-300-bold">Linkedin</p>
-          <p xcCopyStyles class="copy-400">https://www.linkedin.com/in/fabian-bermeo</p>
-        </span>
+  <!-- class="profile_header" -->
+  <article *ngIf="activeSection === 'Apperance'" class="apperance">
+    <section class="apperance_about">
+      <div class="apperance_about-title">
+        <p xcHeadlineStyles class="headline-300">About Me</p>
+        <p xcCopyStyles class="copy-400">
+          I founded COBIOM as a network of professionals who believe that
+          collaboration and cocreation our our best tools to transform
+          businesses into agents for a better future. As Director and head of
+          strategy and product development, me and my great team develop the
+          COBIOM ecosystem as a consultancy, coworking and learning platform
+          that provides end-to-end services from intent to implementation in
+          innovation and business transformation.
+        </p>
       </div>
-    </div>
+    </section>
+    <section class="apperance_further">
+      <div class="apperance_further-settings">
+        <p xcHeadlineStyles class="headline-300">Further settings</p>
+        <div class="apperance_further-settings-options">
+          <span class="apperance_further-settings-options-item">
+            <p xcCopyStyles class="copy-300-bold">Public visibility</p>
+            <div>
+              <xc-toggle color="green" />
+            </div>
+          </span>
+          <span class="apperance_further-settings-options-item-interests">
+            <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
+            <div class="apperance_further-settings-options-item-interests-tags">
+              <div
+                class="apperance_further-settings-options-item-interests-tags-container"
+              >
+                <div xcProfileTags="gray">Generate</div>
+                <div xcProfileTags="gray">Organizational</div>
+                <div xcProfileTags="gray">Improve</div>
+                <div xcProfileTags="gray">Analyze</div>
+                <div xcProfileTags="gray">Develop</div>
+              </div>
+              <button
+                (click)="openTags()"
+                class="apperance_further-settings-options-item-interests-tags-see"
+              >
+                <xc-icon-arrow-right
+                  class="apperance_further-settings-options-item-interests-tags-see-icon"
+                />
+                <p xcCopyStyles class="copy-300-bold">See all tags</p>
+              </button>
+            </div>
+          </span>
+          <span class="apperance_further-settings-options-item-blockchain">
+            <p xcCopyStyles class="copy-300-bold">Blockchain key</p>
+            <div
+              class="apperance_further-settings-options-item-blockchain-info"
+            >
+              <xc-icon-copy
+                class="apperance_further-settings-options-item-blockchain-info-icon"
+              />
+              <p xcCopyStyles class="copy-400">
+                0x1234567890abcdef1234567890abcdef12345678
+              </p>
+            </div>
+          </span>
+          <span class="apperance_further-settings-options-item-member">
+            <p xcCopyStyles class="copy-300-bold">Member since</p>
+            <p xcCopyStyles class="copy-400">7 Aug.2024</p>
+          </span>
+          <span class="apperance_further-settings-options-item-email">
+            <p xcCopyStyles class="copy-300-bold">Email</p>
+            <p xcCopyStyles class="copy-400">fabian&#64;xchange.eco</p>
+          </span>
+          <span class="apperance_further-settings-options-item-linkedin">
+            <p xcCopyStyles class="copy-300-bold">Linkedin</p>
+            <p xcCopyStyles class="copy-400">
+              https://www.linkedin.com/in/fabian-bermeo
+            </p>
+          </span>
+        </div>
+      </div>
+    </section>
+    <footer class="apperance_footer">
+      <button
+        type="button"
+        class="apperance_footer-save"
+        (click)="saveChanges()"
+      >
+        <xc-icon-save class="apperance_footer-save-icon" />
+        Save changes
+      </button>
+    </footer>
   </article>
-  <footer class="profile_footer" *ngIf="activeSection === 'Apperance'">
-    <button type="button" class="profile_footer-save" (click)="saveChanges()">
-      <xc-icon-save class="profile_footer-save-icon" />
-      Save changes
-    </button>
-  </footer>
 
   <article *ngIf="activeSection === 'Wallet'" class="wallet">
-    <div class="wallet_assets">
+    <section class="wallet_assets">
       <p xcHeadlineStyles class="headline-300">My assets</p>
       <div class="wallet_assets-graph">
         <img
@@ -99,8 +105,8 @@
           class="wallet_assets-graph-image"
         />
       </div>
-    </div>
-    <div class="wallet_contributions">
+    </section>
+    <section class="wallet_contributions">
       <p xcHeadlineStyles class="headline-300">Contributions and value</p>
       <table class="wallet_contributions-table">
         <thead class="wallet_contributions-table-header">
@@ -138,20 +144,20 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </section>
   </article>
 
   <article *ngIf="activeSection === 'Premium-upgrade'" class="premium-upgrade">
     <section class="premium-upgrade-video">
       <h5 xcHeadlineStyles class="headline-300">Upgrade to investor Premium</h5>
       <iframe
-      class="premium-upgrade-video-content"
-      width="100%"
-      height="360"
-      src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1"
-      frameborder="0"
-      allowfullscreen
-    ></iframe>
+        class="premium-upgrade-video-content"
+        width="100%"
+        height="360"
+        src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
     </section>
     <section class="premium-upgrade-options">
       <div class="premium-upgrade-options-basic">
@@ -159,27 +165,41 @@
         <div class="premium-upgrade-options-basic-container">
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon"/>
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Projects and collaboratios in the community</p>
+            <p xcCopyStyles class="copy-400">
+              Projects and collaboratios in the community
+            </p>
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon"/>
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">Collaboration reward credits</p>
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon"/>
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Start projects with AI templates</p>
+            <p xcCopyStyles class="copy-400">
+              Start projects with AI templates
+            </p>
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon"/>
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Project navigation and collaborator assignments</p>
+            <p xcCopyStyles class="copy-400">
+              Project navigation and collaborator assignments
+            </p>
           </span>
         </div>
       </div>
@@ -187,51 +207,78 @@
         <h6 xcHeadlineStyles class="headline-300">Investor Premium</h6>
         <div class="premium-upgrade-options-investor-container">
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon"/>
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Advantage number one lorem ipsum</p>
+            <p xcCopyStyles class="copy-400">
+              Advantage number one lorem ipsum
+            </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon"/>
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Advantage number one lorem ipsum</p>
+            <p xcCopyStyles class="copy-400">
+              Advantage number one lorem ipsum
+            </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon"/>
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Advantage number one lorem ipsum</p>
+            <p xcCopyStyles class="copy-400">
+              Advantage number one lorem ipsum
+            </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon"/>
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
-            <p xcCopyStyles class="copy-400">Advantage number one lorem ipsum</p>
+            <p xcCopyStyles class="copy-400">
+              Advantage number one lorem ipsum
+            </p>
           </span>
         </div>
         <small xcCopyStyles class="copy-400-purple">FREE IN BETA</small>
         <button xcButtonsWrappers class="button-filled">
-          <xc-icon-star class="premium-upgrade-options-investor-icon"/>
+          <xc-icon-star class="premium-upgrade-options-investor-icon" />
           <p>Upgrade to Premium</p>
         </button>
       </div>
     </section>
   </article>
 
-  <article *ngIf="activeSection === 'Premiun-settings'" class="premium_settings">
+  <article
+    *ngIf="activeSection === 'Premiun-settings'"
+    class="premium_settings"
+  >
     <section class="premium_settings-wrapper">
       <article class="premium_settings-wrapper-search">
-        <p xcHeadlineStyles class="headline-300">Select an Investor profile and customize your own</p>
+        <p xcHeadlineStyles class="headline-300">
+          Select an Investor profile and customize your own
+        </p>
         <span class="premium_settings-wrapper-search-span">
-          <xc-rate/>
+          <xc-rate />
         </span>
       </article>
       <article class="premium_settings-profile">
-        <aside class="premium_settings-profile-cards">
-          
-        </aside>
+        <aside class="premium_settings-profile-cards"></aside>
         <div class="premium_settings-profile-custom"></div>
       </article>
       <article class="premium_settings-custom"></article>
@@ -274,3 +321,11 @@
     <xc-icon-close-s class="tags_modal-icon" />
   </button>
 </section>
+
+<!-- <div class="wallet_assets">
+  
+
+
+<div class="wallet_contributions">
+  
+</div> -->
