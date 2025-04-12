@@ -118,20 +118,20 @@
           </tr>
         </thead>
         <tbody xcCopyStyles class="wallet_contributions-table-body">
-          <tr xcCopyStyles class="copy-400 wallet_contributions-table-body-row">
-            <td>Coop Master</td>
-            <td>250 xCoins</td>
-            <td>252 xCoins</td>
-            <td class="wallet_contributions-table-body-row-status">
-              <div xcProfileTags="green">Confirmed</div>
-            </td>
-          </tr>
           <tr class="wallet_contributions-table-body-row">
             <td>OneLife - Xchange Studio project</td>
             <td>500 xCoins</td>
             <td>500 xCoins</td>
             <td class="wallet_contributions-table-body-row-status">
               <div xcProfileTags="yellow">Open</div>
+            </td>
+          </tr>
+          <tr xcCopyStyles class="copy-400 wallet_contributions-table-body-row">
+            <td>Coop Master</td>
+            <td>250 xCoins</td>
+            <td>252 xCoins</td>
+            <td class="wallet_contributions-table-body-row-status">
+              <div xcProfileTags="green">Confirmed</div>
             </td>
           </tr>
           <tr class="wallet_contributions-table-body-row">
@@ -152,8 +152,7 @@
       <h5 xcHeadlineStyles class="headline-300">Upgrade to investor Premium</h5>
       <iframe
         class="premium-upgrade-video-content"
-        width="100%"
-        height="360"
+        height="350"
         src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1"
         frameborder="0"
         allowfullscreen
@@ -255,16 +254,18 @@
             </p>
           </span>
         </div>
-        <small xcCopyStyles class="copy-400-purple">FREE IN BETA</small>
-        <button xcButtonsWrappers class="button-filled">
-          <xc-icon-star class="premium-upgrade-options-investor-icon" />
-          <p>Upgrade to Premium</p>
-        </button>
+        <div class="premium-upgrade-options-investor-footer">
+          <small xcCopyStyles class="copy-400-purple">FREE IN BETA</small>
+          <button xcButtonsWrappers class="button-filled-noHeight button">
+            <xc-icon-star class="button-icon" />
+            <p>Upgrade to Premium</p>
+          </button>
+        </div>
       </div>
     </section>
   </article>
 
-  <article *ngIf="activeSection === 'Premiuns settings'" class="premium_settings">
+  <article *ngIf="activeSection === 'Premium settings'" class="premium_settings">
     <section class="premium_settings-wrapper">
       <article class="premium_settings-wrapper-search">
         <p xcHeadlineStyles class="headline-300">

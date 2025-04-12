@@ -100,6 +100,19 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         backgroundColor: 'var(--xc-black400)',
       },
     },
+    'button-filled-noHeight': {
+      default: {
+        backgroundColor: 'var(--xc-black500)',
+        color: 'white',
+        borderRadius: '0.5rem',
+        fill: 'white',
+        padding: '10px 1rem',
+        gap: '0.25rem',
+      },
+      hover: {
+        backgroundColor: 'var(--xc-black400)',
+      },
+    },
     'button-filled-inactive': {
       default: {
         backgroundColor: 'var(--xc-black500)',
