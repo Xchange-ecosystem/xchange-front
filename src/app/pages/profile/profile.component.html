@@ -4,7 +4,7 @@
       (sectionChanged)="onSectionChange($event)"
     ></app-profile-header>
   </header>
-  <!-- class="profile_header" -->
+
   <article *ngIf="activeSection === 'Apperance'" class="apperance">
     <section class="apperance_about">
       <div class="apperance_about-title">
@@ -147,7 +147,7 @@
     </section>
   </article>
 
-  <article *ngIf="activeSection === 'Premium-upgrade'" class="premium-upgrade">
+  <article *ngIf="activeSection === 'Premium upgrade'" class="premium-upgrade">
     <section class="premium-upgrade-video">
       <h5 xcHeadlineStyles class="headline-300">Upgrade to investor Premium</h5>
       <iframe
@@ -161,7 +161,7 @@
     </section>
     <section class="premium-upgrade-options">
       <div class="premium-upgrade-options-basic">
-        <h6 xcHeadlineStyles class="headline-300">Xcamp Basic</h6>
+        <h6 xcHeadlineStyles class="headline-300 premium-upgrade-options-basic-title">Xcamp Basic</h6>
         <div class="premium-upgrade-options-basic-container">
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
@@ -264,10 +264,7 @@
     </section>
   </article>
 
-  <article
-    *ngIf="activeSection === 'Premiun-settings'"
-    class="premium_settings"
-  >
+  <article *ngIf="activeSection === 'Premiuns settings'" class="premium_settings">
     <section class="premium_settings-wrapper">
       <article class="premium_settings-wrapper-search">
         <p xcHeadlineStyles class="headline-300">
@@ -322,10 +319,3 @@
   </button>
 </section>
 
-<!-- <div class="wallet_assets">
-  
-
-
-<div class="wallet_contributions">
-  
-</div> -->

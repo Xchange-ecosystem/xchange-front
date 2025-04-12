@@ -43,7 +43,6 @@ export class HeadlineStylesDirective implements OnInit, OnDestroy {
         fontWeight: '600',
         lineHeight: '24px',
         color: 'var(--xc-black500)',
-        textAlign: 'left',
       },
     },
     'headline-400': {

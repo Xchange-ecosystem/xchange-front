@@ -147,22 +147,6 @@
   }
 }
 
-.ia-icon {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  stroke: var(--xc-black500);
-}
-.push-close {
-  margin-top: 140px;
-  margin-left: 1rem;
-}
-.tag {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
 .wallet {
   display: grid;
   grid-template-columns: 40% 59%;
@@ -175,7 +159,7 @@
   justify-content: center;
   &_assets {
     background:white;
-    padding: 8px;
+    padding: 24px;
     border-radius: 8px;
     &-graph {
       display: flex;
@@ -190,7 +174,7 @@
   }
   &_contributions {
     background:white;
-    padding: 8px;
+    padding: 24px;
     border-radius: 8px;
     &-table {
       width: 100%;
@@ -218,18 +202,19 @@
 }
 
 .premium-upgrade {
-  display: flex;
-  justify-content: start;
-  gap: 32px;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr auto; 
+  column-gap: 32px;
+  row-gap: 6px;
+  padding: 0 120px;
+  height: 100%;
+  align-items: start; 
+  justify-content: center;
   &-video {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: white;
-    padding: 24px;
-    flex: 1;
-    max-width: 630px;
+    background:white;
+    padding: 32px;
+    height: 85%;
     border-radius: 8px;
     &-content {
       width: 100%;
@@ -238,27 +223,28 @@
   }
   &-options {
     display: flex;
+    background:white;
+    padding: 32px;
     gap: 16px;
-    background: white;
-    padding: 24px;
-    flex: 1;
-    max-width: 640px;
+    height: 85%;
     border-radius: 8px;
-    width: 100%;
+    justify-content: center;
     &-basic {
       display: flex;
       flex-direction: column;
       gap: 16px;
       width: 50%;
-      border: solid 1px;
-      border-color: var(--xc-gray300);
       border-radius: 8px;
-      padding: 20px;
+      background: var(--xc-gradient-light-grey-on-white);
+      padding: 24px;
+      &-title{
+        text-align: center;
+      }
       &-container {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        align-items: center;
+        align-items: start;
         height: 100%;
         &-item {
           display: flex;
@@ -287,7 +273,7 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      width: 50%;
+      width: 50%; 
       border: solid 1px;
       border-color: var(--xc-categories-suggestion);
       border-radius: 8px;
@@ -456,4 +442,19 @@
       stroke: red;
     }
   }
+}
+.ia-icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  stroke: var(--xc-black500);
+}
+.push-close {
+  margin-top: 140px;
+  margin-left: 1rem;
+}
+.tag {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
