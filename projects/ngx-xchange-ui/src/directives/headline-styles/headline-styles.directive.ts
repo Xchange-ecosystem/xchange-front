@@ -47,9 +47,9 @@ export class HeadlineStylesDirective implements OnInit, OnDestroy {
     },
     'headline-400': {
       default: {
-        fontSize: '32px',
-        fontWeight: '700',
-        lineHeight: '36px',
+        fontSize: '24px',
+        fontWeight: '600',
+        lineHeight: '30px',
         color: 'var(--xc-black500)',
         textAlign: 'left',
       },
@@ -58,7 +58,7 @@ export class HeadlineStylesDirective implements OnInit, OnDestroy {
       default: {
         fontSize: '32px',
         fontWeight: '600',
-        lineHeight: '34px',
+        lineHeight: '38px',
         color: 'var(--xc-black500)',
         textAlign: 'left',
       },

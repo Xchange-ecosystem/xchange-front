@@ -1,21 +1,81 @@
 <section class="container">
-  <xc-user-header  [showImage]="true" [firstText]="'John Doe'" [secondText]="'Tech Corp'"/>
-  <div class="container_content">
+  <article class="container_organizer">
+    <h5 xcHeadlineStyles class="headline-400">Organizer</h5>
+    <div class="container_organizer_chat">
+      <section class="container_organizer_chat-message">
+        <app-chat-message [message]="'Hello, I am Scotty. I am here to help you with the realization of your ideas. What would you like to do?'" [image]="'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/2048px-ChatGPT-Logo.svg.png'"/>
+      </section>
+      <section class="container_organizer_chat-options">
+        <div class="container_organizer_chat-options-div">
+          <div class="container_organizer_chat-options-div-icons">
+            <xc-chat-options-button
+              [label]="'Make an announcement'"
+              [iconName]="'megaphone'"
+            />
+            <xc-chat-options-button
+              [label]="'Start new project'"
+              iconName="rocket"
+            />
+            <xc-chat-options-button
+              [label]="'Go to projects'"
+              iconName="rocket"
+            >
+            </xc-chat-options-button>
+            <xc-chat-options-button
+              [label]="'Go to projects'"
+              iconName="rocket"
+            >
+            </xc-chat-options-button>
+            <xc-chat-options-button
+              [label]="'Go to projects'"
+              iconName="rocket"
+            >
+            </xc-chat-options-button>
+          </div>
+
+
+        </div>
+
+        <div class="container_organizer_chat-options-input">
+          <textarea
+            type="text"
+            class="container_organizer_chat-options-input-text"
+            placeholder="Type your message or talk to me by using the speech button">
+          </textarea>
+          <div class="container_organizer_chat-options-input-buttons">
+            <button xcButtonsWrappers class="button-chat">
+              <xc-icon-send class="icon"/>
+            </button>
+            <button xcButtonsWrappers class="button-chat">
+              <xc-icon-microphone class="icon"/>
+            </button>
+            <button xcButtonsWrappers class="button-chat">
+              <xc-icon-clipboard class="icon"/>
+            </button>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </article>
+  <article class="container_feed">
+    <h5 xcHeadlineStyles class="headline-400">My Feed</h5>
+    <div class="container_feed_side">
+
+    </div>
+  </article>
+</section>
+
+
+  <!-- <div class="container_content">
+
+
     <section class="container_content_left"  >
       <div class="container_content_left-organizer">
         <h5 class="sub-title">Organizer</h5>
         <div class="container_content_left-organizer-content" >
-          <section class="message">
-            <div class="message__avatar">
-              <img src="assets/icons/Avatar.svg" alt="" class="bot-icon" />
-            </div>
-            <div class="message__text">
-              <p>
-                Hello, I am Scotty. I am here to help you with the realization
-                of your ideas. What would you like to do?
-              </p>
-            </div>
-          </section>
+
           <section class="options">
             <div class="icons-container">
               <xc-chat-options-button
@@ -64,6 +124,8 @@
         </div>
       </div>
     </section>
+
+
     <section class="container_content_right">
       <div class="container_content_right-organizer">
         <h5 class="sub-title">My feed</h5>
@@ -88,10 +150,6 @@
                 <span [xcNotificationBubble]="true"></span>
                 Announcements
               </button>
-              <!-- <button xcFeedButton>
-                <span [xcNotificationBubble]="false"></span>
-                Next Steps
-              </button> -->
             </div>
           </section>
           <section class="container_content_right-organizer-content-nav-drop"
@@ -112,5 +170,5 @@
         </div>
       </div>
     </section>
-  </div>
-</section>
+  </div> -->
+

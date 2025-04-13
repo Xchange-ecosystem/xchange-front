@@ -235,6 +235,17 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         backgroundColor: 'var(--xc-grey200)',
       },
     },
+    'button-chat': {
+      default: {
+        display: 'flex',
+        padding: '9px',
+        justifyContent: 'center',
+        background: 'var(--xc-gradient-light-grey-on-white)',
+        borderRadius: '8px',
+        width: '60px',
+        height: '100%',
+      },
+    },
   };
 
   ngOnInit() {

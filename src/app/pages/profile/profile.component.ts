@@ -46,7 +46,7 @@ import { ProfileHeaderComponent } from './profile-header/profile-header.componen
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
-  activeSection: string = 'Premium upgrade';
+  activeSection: string = 'Apperance';
   isTagsOpen = false;
   isLanguageModalOpen: boolean = false;
 

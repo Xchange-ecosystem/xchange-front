@@ -1,0 +1,16 @@
+.chat {
+  display: flex;
+  gap: 8px;
+  &_image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    &-icon{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+  }
+}

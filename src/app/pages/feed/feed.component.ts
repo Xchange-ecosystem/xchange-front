@@ -16,7 +16,10 @@ import { Button400Directive } from 'projects/ngx-xchange-ui/src/directives/butto
 import { Button500Directive } from 'projects/ngx-xchange-ui/src/directives/button-500/button-500.directive';
 import { CardStylesDirective } from 'projects/ngx-xchange-ui/src/directives/card-styles/card-styles.directive';
 import { FeedButtonDirective } from 'projects/ngx-xchange-ui/src/directives/feed-button/feed-button.directive';
+import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directives/notification-bubble/notification-bubble.directive';
+import { ChatMessageComponent } from './chat-message/chat-message.component';
+import { ButtonsWrappersDirective } from 'projects/ngx-xchange-ui/src/public-api';
 
 @Component({
   selector: 'app-feed',
@@ -37,7 +40,10 @@ import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directi
     XcIconSendComponent,
     XcIconMicrophoneComponent,
     XcIconClipboardComponent,
-    NgIf
+    NgIf,
+    ButtonsWrappersDirective,
+    HeadlineStylesDirective,
+    ChatMessageComponent
   ],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss',

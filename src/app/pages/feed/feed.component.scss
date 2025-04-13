@@ -1,216 +1,86 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 27px;
-  min-width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 32px;
+  row-gap: 6px;
+  padding: 0 32px;
   height: 100%;
-  &_content {
-    display: grid;
-    grid-template-columns: 40% 57%;
-    row-gap: 0px;
-    column-gap: 56px;
-    width: 100%;
-    &_left {
+  align-items: start; 
+  justify-content: center;
+  &_organizer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 90%;
+    &_chat{
+      background: white;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-height: 95%;
-      padding: 0;
-      &-organizer {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        gap: 12px;
-        &-content {
-          background: white;
-          padding: 24px;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: space-between;
-        }
-      }
-    }
-    &_right {
-      display: flex;
-      flex-direction: column;
+      padding: 8px;
+      border-radius: 8px;
       height: 100%;
-      &-organizer {
+      padding: 24px;
+      &-message{
+        display: flex;
+      }
+      &-options{
         display: flex;
         flex-direction: column;
-        height: 100%;
-        gap: 8px;
-        &-content {
+        &-div{
           display: flex;
-          flex-direction: column;
-          height: 100%;
+          overflow-x: scroll;
           width: 100%;
-          &-nav {
+          -ms-overflow-style: none; 
+          &::-webkit-scrollbar {
+            display: none; 
+          }
+          &-icons{
             display: flex;
-            flex-direction: column;
-            gap: 8px;
-            background: white;
-            padding: 12px;
-            border-radius: 8px 8px 0px 0px;
-            &-filter {
-              gap: 16px;
+            gap: 12px;
+          }
+        }
+        &-input{
+          display: flex;
+          gap: 8px;
+          &-text{
+            border: 1px solid;
+            border-color: var(--xc-grey100);
+            border-radius: 8px;
+            resize: none;
+            overflow: none;
+            width: 100%;
+            color: var(--xc-black500);
+            outline: none;
+            padding: 8px 16px;
+            caret-color: var(--xc-brand-medium-blue);
+          }
+          &-buttons{
+            display: flex;
+            gap: 4px;
+            .icon{
+              width: 24px;
+              stroke: var(--xc-black500);
+              fill: var(--xc-black500);
+              height: 24px;
               display: flex;
-              width: 100%;
-              background: white;
-              @media screen and (max-width: 768px) {
-                overflow-x: scroll;
-              }
-            }
-            &-drop {
-              display: flex;
-              flex-direction: column;
-              background: white;
-              width: 100%;
-              overflow-y: auto;
+              align-items: center;
+              justify-content: center;
             }
           }
         }
       }
     }
   }
-}
-
-.border-button {
-  border: solid 1px var(--xc-grey300);
-  border-radius: 8px;
-  display: flex;
-  padding: 4px 8px;
-  &-icon {
-    width: 24px;
-    height: 24px;
-    stroke: var(--xc-black500);
-  }
-}
-
-.feed-injector {
-  display: flex;
-  gap: 16px;
-}
-
-.sub-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--xc-black400);
-}
-
-.message {
-  display: flex;
-  align-items: start;
-  gap: 8px;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.ai-filters {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  @media screen and (max-width: 768px) {
-    overflow-x: scroll;
-  }
-}
-
-.bot-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.options-input {
-  display: flex;
-  gap: 12px;
-}
-
-.icons-container {
-  width: 100%;
-  display: flex;
-  gap: 18px;
-  white-space: nowrap;
-  overflow-x: scroll;
-}
-
-.input-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.user-message {
-  width: 100%;
-  border: solid 0.5px var(--xc-grey300);
-  border-radius: 12px;
-  padding: 8px;
-  resize: none;
-
-  display: block;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.user-message:focus {
-  outline: none;
-}
-
-.chat-options {
-  display: flex;
-  gap: 4px;
-}
-
-.redo-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--xc-brand-light-blue);
-  border-radius: 32px;
-  width: 38px;
-  height: 38px;
-}
-
-.redo-icon {
-  width: 19px;
-  height: 19px;
-  stroke: var(--xc-black500);
-}
-
-.wrapper_content_item {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.wrapper_content_item-feed {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.feed-cards {
-  display: flex;
-  flex-direction: column;
-  max-height: 540px;
-  padding: 16px;
-  background: var(--xc-grey100);
-}
-
-.objective-injector {
-  display: flex;
-  flex: 1 1 auto;
-  overflow-y: auto;
-  flex-direction: column;
-  gap: 16px;
-}
-.button-500 {
-  width: 24px;
-  height: 24px;
-}
-.button-400 {
-  width: 20px;
-  height: 20px;
+  &_feed{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &_side{
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+      height: 100%;
+    }
+  } 
 }
