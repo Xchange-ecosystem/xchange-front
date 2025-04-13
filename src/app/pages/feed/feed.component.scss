@@ -20,9 +20,10 @@
       padding: 8px;
       border-radius: 8px;
       height: 100%;
-      padding: 24px;
+      
       &-message{
         display: flex;
+        padding: 24px;
       }
       &-options{
         display: flex;
@@ -31,18 +32,21 @@
           display: flex;
           overflow-x: scroll;
           width: 100%;
+          padding: 2px 0px;
           -ms-overflow-style: none; 
           &::-webkit-scrollbar {
             display: none; 
           }
           &-icons{
             display: flex;
+            justify-content: space-evenly;
             gap: 12px;
           }
         }
         &-input{
           display: flex;
           gap: 8px;
+          padding: 24px;
           &-text{
             border: 1px solid;
             border-color: var(--xc-grey100);
