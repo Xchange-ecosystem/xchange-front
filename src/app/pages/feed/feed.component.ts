@@ -17,6 +17,7 @@ import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/
 import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directives/notification-bubble/notification-bubble.directive';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
 import { ButtonsWrappersDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { FeedHeaderComponent } from './feed-header/feed-header.component';
 
 @Component({
   selector: 'app-feed',
@@ -37,7 +38,8 @@ import { ButtonsWrappersDirective } from 'projects/ngx-xchange-ui/src/public-api
     ButtonsWrappersDirective,
     HeadlineStylesDirective,
     ChatMessageComponent,
-    XcIconHomeAltComponent
+    XcIconHomeAltComponent,
+    FeedHeaderComponent
   ],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss',
