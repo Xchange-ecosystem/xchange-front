@@ -20,7 +20,6 @@
       padding: 8px;
       border-radius: 8px;
       height: 100%;
-      
       &-message{
         display: flex;
         padding: 24px;
@@ -46,7 +45,7 @@
         &-input{
           display: flex;
           gap: 8px;
-          padding: 24px;
+          padding: 12px;
           &-text{
             border: 1px solid;
             border-color: var(--xc-grey100);
@@ -80,11 +79,55 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: 100%;
+    overflow-y: hidden;
     &_side{
       background: white;
-      padding: 8px;
       border-radius: 8px;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      &-nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &-buttons{
+          display: flex;
+          width: 100%;
+          padding: 24px;
+          gap: 14px;
+          &-icon{
+            display: flex;
+            width: 24px;
+            height: 24px;
+            stroke: var(--xc-black500);
+          }
+        }
+        &-filters{
+          display: flex;
+          width: 100%;
+          padding:0px 24px;
+          &-icon{
+            display: flex;
+            width: 24px;
+            height: 24px;
+            stroke: var(--xc-black500);
+          }
+        }
+      }
+      &-projects{
+        display: flex;
+        flex-direction: column;
+        background: var(--xc-grey100);
+        overflow-y: scroll;
+        padding: 16px;
+        gap: 16px;
+        height: 860px;
+        -ms-overflow-style: none; 
+        scrollbar-width: none;
+      }
     }
   } 
 }

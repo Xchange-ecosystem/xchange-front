@@ -246,6 +246,44 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         height: '100%',
       },
     },
+    'button-feed': {
+      default: {
+        display: 'flex',
+        padding: '16px',
+        justifyContent: 'center',
+        borderWidth: '1px',
+        borderColor: 'var(--xc-grey100)',
+        borderRadius: '8px',
+        gap: '8px',
+        height: '40px',
+      },
+    },
+    'button-feed-selected': {
+      default: {
+        display: 'flex',
+        padding: '16px',
+        justifyContent: 'center',
+        borderWidth: '1px',
+        borderColor: 'var(--xc-grey100)',
+        borderRadius: '8px',
+        backgroundColor: 'var(--xc-grey100)',
+        gap: '8px',
+        height: '40px',
+      },
+    },
+    'button-refresh': {
+      default: {
+        padding: '9px',
+        borderRadius: '9999px',
+        background: 'var(--xc-gradient-light-blue)',
+        width: '30px',
+        height: '30px',
+        alignSelf: 'center',
+      },
+      hover: {
+        background: 'var(--xc-gradient-medium-green)',
+      },
+    },
   };
 
   ngOnInit() {

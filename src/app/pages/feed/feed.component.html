@@ -52,116 +52,57 @@
             </button>
           </div>
         </div>
-
       </section>
-
     </div>
   </article>
   <article class="container_feed">
     <h5 xcHeadlineStyles class="headline-400">My Feed</h5>
     <div class="container_feed_side">
-
+      <section class="container_feed_side-nav">
+        <div class="container_feed_side-nav-buttons">
+          <button xcButtonsWrappers class="button-feed">
+            <xc-icon-home-alt class="container_feed_side-nav-buttons-icon"/>
+          </button>
+          <button xcButtonsWrappers class="button-feed" (click)="toggleAiFilters()">
+            <xc-icon-ai class="container_feed_side-nav-buttons-icon"/>
+          </button>
+          <button xcButtonsWrappers class="button-feed">
+            <span [xcNotificationBubble]="true"></span>
+            Objectives
+          </button>
+          <button xcButtonsWrappers class="button-feed">
+            <span [xcNotificationBubble]="false"></span>
+            Assignments
+          </button>
+          <button xcButtonsWrappers class="button-feed">
+            <span [xcNotificationBubble]="true"></span>
+            Announcements
+          </button>
+        </div>
+        <nav class="container_feed_side-nav-filters">
+          <xc-ai-filter label="Objective state" case="state"></xc-ai-filter>
+          <xc-ai-filter label="Role" case="role"></xc-ai-filter>
+          <xc-ai-filter label="Date" case="date"></xc-ai-filter>
+          <button xcButtonsWrappers class="button-refresh">
+            <xc-icon-redo class="container_feed_side-nav-filters-icon"></xc-icon-redo>
+          </button>
+        </nav>
+      </section>
+      <section class="container_feed_side-projects">
+        <xc-feed-objective class="container_feed_side-projects" />
+      </section>
     </div>
   </article>
 </section>
 
 
   <!-- <div class="container_content">
-
-
-    <section class="container_content_left"  >
-      <div class="container_content_left-organizer">
-        <h5 class="sub-title">Organizer</h5>
-        <div class="container_content_left-organizer-content" >
-
-          <section class="options">
-            <div class="icons-container">
-              <xc-chat-options-button
-                [label]="'Make an announcement'"
-                [iconName]="'megaphone'"
-              />
-              <xc-chat-options-button
-                [label]="'Start new project'"
-                iconName="rocket"
-              />
-              <xc-chat-options-button
-                [label]="'Go to projects'"
-                iconName="rocket"
-              >
-              </xc-chat-options-button>
-              <xc-chat-options-button
-                [label]="'Go to projects'"
-                iconName="rocket"
-              >
-              </xc-chat-options-button>
-              <xc-chat-options-button
-                [label]="'Go to projects'"
-                iconName="rocket"
-              >
-              </xc-chat-options-button>
-            </div>
-            <div class="options-input">
-              <textarea
-                type="text"
-                class="user-message"
-                placeholder="Type your message or talk to me by using the speech button"
-              ></textarea>
-              <div class="chat-options">
-                <button xcButton500>
-                  <xc-icon-send class="button-500"/>
-                </button>
-                <button xcButton500>
-                  <xc-icon-microphone class="button-500"/>
-                </button>
-                <button xcButton500>
-                  <xc-icon-clipboard class="button-500"/>
-                </button>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-
     <section class="container_content_right">
       <div class="container_content_right-organizer">
         <h5 class="sub-title">My feed</h5>
         <div class="container_content_right-organizer-content" >
-          <section class="container_content_right-organizer-content-nav">
-            <div class="container_content_right-organizer-content-nav-filter">
-              <button xcButton400>
-                <xc-icon-home class="button-400"/>
-              </button>
-              <button xcButton400 class="ai-button" (click)="toggleAiFilters()">
-                <xc-icon-ai class="button-400"/>
-              </button>
-              <button xcFeedButton>
-                <span [xcNotificationBubble]="true"></span>
-                Objectives
-              </button>
-              <button xcFeedButton>
-                <span [xcNotificationBubble]="false"></span>
-                Assignments
-              </button>
-              <button xcFeedButton>
-                <span [xcNotificationBubble]="true"></span>
-                Announcements
-              </button>
-            </div>
-          </section>
-          <section class="container_content_right-organizer-content-nav-drop"
-          *ngIf="isAiFiltersVisible"
-        >
-          <nav class="ai-filters">
-            <xc-ai-filter label="Objective state" case="state"></xc-ai-filter>
-            <xc-ai-filter label="Role" case="role"></xc-ai-filter>
-            <xc-ai-filter label="Date" case="date"></xc-ai-filter>
-            <button class="redo-button">
-              <xc-icon-redo class="redo-icon"></xc-icon-redo>
-            </button>
-          </nav>
-          </section>
+
+
           <section class="feed-cards">
             <xc-feed-objective class="objective-injector" />
           </section>

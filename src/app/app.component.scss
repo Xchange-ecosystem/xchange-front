@@ -2,7 +2,7 @@
   background: var(--xc-grey50);
   display: grid;
   grid-template-columns: 284px 1fr ; 
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   gap: 24px;
   &__container{
