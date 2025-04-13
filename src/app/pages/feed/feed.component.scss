@@ -1,170 +1,170 @@
 .page-layout {
-  display: grid;
-  grid-template-rows: auto 1fr; // Header arriba, contenido abajo
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-
-  &__header {
-    background: white;
-    padding: 16px 32px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // opcional
-    z-index: 10;
-  }
-}
-
-.container {
-  display: grid;
-  flex: 1;
-  grid-template-columns: 40% 60%;
-  height: 100%;
-  column-gap: 16px;
-  max-width: 100%;
-
-  &_organizer {
-    overflow: hidden;
+  width: 100%;
+  gap: 26px;
+  &_header {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    &_chat {
-      background: white;
+    width: 100%;
+    &-component{
+      display: flex;
+      width: 100%;
+    }
+  }
+  .container {
+    display: grid;
+    flex: 1;
+    grid-template-columns: 40% 60%;
+    height: 48%;
+    column-gap: 16px;
+    max-width: 100%;
+    &_organizer {
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      padding: 8px;
-      border-radius: 8px;
-      height: 90%;
-
-      &-message {
-        display: flex;
-        padding: 24px;
-      }
-
-      &-options {
+      gap: 16px;
+  
+      &_chat {
+        background: white;
         display: flex;
         flex-direction: column;
-
-        &-div {
+        justify-content: space-between;
+        padding: 8px;
+        border-radius: 8px;
+        height: 90%;
+  
+        &-message {
           display: flex;
-          overflow-x: scroll;
-          width: 100%;
-          padding: 2px 0px;
-          -ms-overflow-style: none;
-
-          &::-webkit-scrollbar {
-            display: none;
-          }
-
-          &-icons {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 12px;
-          }
+          padding: 24px;
         }
-
-        &-input {
+  
+        &-options {
           display: flex;
-          gap: 8px;
-          padding: 12px;
-
-          &-text {
-            border: 1px solid var(--xc-grey100);
-            border-radius: 8px;
-            resize: none;
-            width: 100%;
-            color: var(--xc-black500);
-            outline: none;
-            padding: 8px 16px;
-            caret-color: var(--xc-brand-medium-blue);
-          }
-
-          &-buttons {
+          flex-direction: column;
+  
+          &-div {
             display: flex;
-            gap: 4px;
-
-            .icon {
-              width: 24px;
-              height: 24px;
-              stroke: var(--xc-black500);
-              fill: var(--xc-black500);
+            overflow-x: scroll;
+            width: 100%;
+            padding: 2px 0px;
+            -ms-overflow-style: none;
+  
+            &::-webkit-scrollbar {
+              display: none;
+            }
+  
+            &-icons {
               display: flex;
-              align-items: center;
-              justify-content: center;
+              justify-content: space-evenly;
+              gap: 12px;
+            }
+          }
+  
+          &-input {
+            display: flex;
+            gap: 8px;
+            padding: 12px;
+  
+            &-text {
+              border: 1px solid var(--xc-grey100);
+              border-radius: 8px;
+              resize: none;
+              width: 100%;
+              color: var(--xc-black500);
+              outline: none;
+              padding: 8px 16px;
+              caret-color: var(--xc-brand-medium-blue);
+            }
+  
+            &-buttons {
+              display: flex;
+              gap: 4px;
+  
+              .icon {
+                width: 24px;
+                height: 24px;
+                stroke: var(--xc-black500);
+                fill: var(--xc-black500);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
             }
           }
         }
       }
     }
-  }
-
-  &_feed {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    &_side {
-      background: white;
-      border-radius: 8px;
-      min-height: 0;
-      display: flex;
-      flex: 1;
-      flex-direction: column;
+  
+    &_feed {
       overflow: hidden;
-
-      &-nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        &-buttons {
-          display: flex;
-          width: 100%;
-          padding: 24px;
-          gap: 14px;
-
-          &-icon {
-            display: flex;
-            width: 24px;
-            height: 24px;
-            stroke: var(--xc-black500);
-          }
-        }
-
-        &-filters {
-          display: flex;
-          width: 100%;
-          padding: 0px 24px;
-
-          &-icon {
-            display: flex;
-            width: 24px;
-            height: 24px;
-            stroke: var(--xc-black500);
-          }
-        }
-      }
-
-      &-projects {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      &_side {
+        background: white;
+        border-radius: 8px;
+        min-height: 0;
         display: flex;
         flex: 1;
-        min-height: 0;
         flex-direction: column;
-        background: var(--xc-grey100);
-        overflow-y: auto;
-        padding: 16px;
-        gap: 16px;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-
-        &-cards {
+        overflow: hidden;
+  
+        &-nav {
           display: flex;
+          align-items: center;
+          justify-content: center;
           flex-direction: column;
+  
+          &-buttons {
+            display: flex;
+            width: 100%;
+            padding: 24px;
+            gap: 14px;
+  
+            &-icon {
+              display: flex;
+              width: 24px;
+              height: 24px;
+              stroke: var(--xc-black500);
+            }
+          }
+  
+          &-filters {
+            display: flex;
+            width: 100%;
+            padding: 0px 24px;
+  
+            &-icon {
+              display: flex;
+              width: 24px;
+              height: 24px;
+              stroke: var(--xc-black500);
+            }
+          }
+        }
+  
+        &-projects {
+          display: flex;
+          flex: 1;
+          min-height: 0;
+          flex-direction: column;
+          background: var(--xc-grey100);
+          overflow-y: auto;
+          padding: 16px;
           gap: 16px;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+  
+          &-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
         }
       }
     }
   }
+  
 }

@@ -1,8 +1,17 @@
 <section class="feed_header">
-    <article class="feed_header_background">
-        <xc-header-background 
-          class="profile_header_background-image" 
-          [imageUrl]="'https://media.istockphoto.com/id/476098860/vector/wonderful-morning-in-the-blue-mountains.jpg?s=612x612&w=0&k=20&c=0nuLvsWKXPReu01RvbXTKIwlUYxOQvoXD_qVBrsapxc='">
-        </xc-header-background>
-    </article>
+  <article class="feed_header_background">
+    <xc-header-background [imageUrl]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEslIq4_aQ2pF3U3k9rGcETFUPLvwjUdDwhA&s'" class="feed_header_background-image"/>
+  </article>
+  <article class="feed_header_content">
+    <div class="feed_header_content-card">
+        <app-header-cards></app-header-cards>
+    </div>
+    <div class="feed_header_content-rounded">
+      <xc-rounded-image 
+      class="feed_header_content-rounded-image" 
+      [image]="'https://randomuser.me/api/portraits/women/26.jpg'" 
+      [marginSize]="4">
+      </xc-rounded-image>
+    </div>
+  </article>
 </section>

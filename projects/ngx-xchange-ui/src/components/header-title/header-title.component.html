@@ -1,6 +1,6 @@
 <div class="header">
     <h1 class="header-title">{{ title }}</h1>
-    <button class="edit-button" (click)="onEditClick()">
+    <button *ngIf="isEditable" class="edit-button" (click)="onEditClick()">
         <xc-icon-edit/>
     </button>
   </div>
