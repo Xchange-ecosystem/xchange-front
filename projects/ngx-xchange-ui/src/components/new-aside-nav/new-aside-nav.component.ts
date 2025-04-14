@@ -57,10 +57,8 @@ export class NewAsideNavComponent {
       linkedin: 'https://www.linkedin.com/in/john-doe',
     },
   ];
-  setActiveTab(tab: string): void {
+  setNavigation(tab: string, menuIndex: number | null = null): void {
     this.activeTab = tab;
-  }
-  selectMenu(index: number): void {
-    this.selectedMenuIndex = index;
+    this.selectedMenuIndex = menuIndex;
   }
 }

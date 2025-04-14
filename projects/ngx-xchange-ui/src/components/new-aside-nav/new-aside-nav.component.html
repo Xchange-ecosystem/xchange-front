@@ -12,14 +12,14 @@
       <button
         class="aside-nav__tab"
         [ngClass]="{ 'aside-nav__tab--active': activeTab === 'ecosystem' }"
-        (click)="setActiveTab('ecosystem')"
+        (click)="setNavigation('ecosystem')"
       >
         Ecosystem
       </button>
       <button
         class="aside-nav__tab-right"
         [ngClass]="{ 'aside-nav__tab--active': activeTab === 'project' }"
-        (click)="setActiveTab('project')"
+        (click)="setNavigation('project')"
       >
         Project
       </button>
@@ -90,7 +90,7 @@
       [routerLink]="'/profile'"
       class="aside-nav__user"
       [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenuIndex === i }"
-      (click)="selectMenu(i)"
+      (click)="setNavigation(activeTab, i)"
     >
       <span class="aside-nav__user-info">
         <xc-rounded-image
@@ -108,7 +108,7 @@
       [routerLink]="'/support'"
       class="aside-nav__support"
       [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenuIndex === -1 }"
-      (click)="selectMenu(-1)"
+      (click)="setNavigation(activeTab, -1)"
     >
       <span class="aside-nav__support-info">
         <xc-icon-question-circle class="aside-nav__support-icon" />
@@ -122,7 +122,7 @@
       [routerLink]="'/logout'"
       class="aside-nav__logout"
       [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenuIndex === -2 }"
-      (click)="selectMenu(-2)"
+      (click)="setNavigation(activeTab, -2)"
     >
       <span class="aside-nav__logout-info">
         <xc-log-out-icon class="aside-nav__logout-icon" />
