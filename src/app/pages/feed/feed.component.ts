@@ -27,14 +27,11 @@ import { FeedHeaderComponent } from './feed-header/feed-header.component';
     FeedObjectiveComponent,
     AiFilterComponent,
     XcIconRedoComponent,
-    XcIconHomeComponent,
     XcIconAIComponent,
     NotificationBubbleDirective,
-    FeedButtonDirective,
     XcIconSendComponent,
     XcIconMicrophoneComponent,
     XcIconClipboardComponent,
-    NgIf,
     ButtonsWrappersDirective,
     HeadlineStylesDirective,
     ChatMessageComponent,
@@ -46,6 +43,7 @@ import { FeedHeaderComponent } from './feed-header/feed-header.component';
 })
 export class FeedComponent {
   isAiFiltersVisible = false;
+  openedDropdown: string | null = null;
 
   toggleAiFilters() {
     this.isAiFiltersVisible = !this.isAiFiltersVisible;
@@ -57,5 +55,9 @@ export class FeedComponent {
     if (!target.closest('.ai-button') && !target.closest('.ai-filters')) {
       this.isAiFiltersVisible = false;
     }
+  }
+
+  handleDropdownOpen(caseName: string): void {
+    this.openedDropdown = this.openedDropdown === caseName ? null : caseName;
   }
 }

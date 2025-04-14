@@ -96,9 +96,24 @@
             </button>
           </div>
           <nav class="container_feed_side-nav-filters">
-            <xc-ai-filter label="Objective state" case="state"></xc-ai-filter>
-            <xc-ai-filter label="Role" case="role"></xc-ai-filter>
-            <xc-ai-filter label="Date" case="date"></xc-ai-filter>
+            <xc-ai-filter
+              label="Objective state"
+              case="state"
+              [isOpen]="openedDropdown === 'state'"
+              (openDropdown)="handleDropdownOpen('state')">
+            </xc-ai-filter>
+            <xc-ai-filter
+              label="Role"
+              case="role"
+              [isOpen]="openedDropdown === 'role'"
+              (openDropdown)="handleDropdownOpen('role')"
+            ></xc-ai-filter>
+            <xc-ai-filter
+              label="Date"
+              case="date"
+              [isOpen]="openedDropdown === 'date'"
+              (openDropdown)="handleDropdownOpen('date')"
+            ></xc-ai-filter>
             <button xcButtonsWrappers class="button-refresh">
               <xc-icon-redo
                 class="container_feed_side-nav-filters-icon"

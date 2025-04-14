@@ -1,6 +1,7 @@
 .ai-filter {
   position: relative;
   display: flex;
+  outline: none;
 }
 
 .dropdown {
