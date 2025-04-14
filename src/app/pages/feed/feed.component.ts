@@ -7,6 +7,7 @@ import {
   XcIconMicrophoneComponent,
   XcIconRedoComponent,
   XcIconSendComponent,
+  XcIconTimesComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { AiFilterComponent } from 'projects/ngx-xchange-ui/src/components/ai-filter/ai-filter.component';
 import { ChatOptionsButtonComponent } from 'projects/ngx-xchange-ui/src/components/chat-options-button/chat-options-button.component';
@@ -35,13 +36,16 @@ import { FeedHeaderComponent } from './feed-header/feed-header.component';
     ChatMessageComponent,
     XcIconHomeAltComponent,
     FeedHeaderComponent,
-    NgClass
+    XcIconTimesComponent,
+    NgClass,
+    NgIf
   ],
   templateUrl: './feed.component.html',
   styleUrl: './feed.component.scss',
 })
 export class FeedComponent {
   isAiFiltersVisible = false;
+  isAnnouncementOpen = false;
   openedDropdown: string | null = null;
   disabled = false;
   toggleAiFilters() {

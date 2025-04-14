@@ -30,9 +30,9 @@ export class HeadlineStylesDirective implements OnInit, OnDestroy {
     },
     'headline-200': {
       default: {
-        fontSize: '24px',
-        fontWeight: '500',
-        lineHeight: '28px',
+        fontSize: '16px',
+        fontWeight: '700',
+        lineHeight: '20px',
         color: 'var(--xc-black500)',
         textAlign: 'left',
       },

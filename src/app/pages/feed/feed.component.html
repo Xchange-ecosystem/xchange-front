@@ -124,3 +124,28 @@
     </article>
   </section>
 </section>
+
+<article *ngIf="isAnnouncementOpen" class="modal">
+  <div class="modal_content">
+    <div class="modal_content-header">
+      <img src="assets/img/image-10.webp" alt="announcement-image" class="modal_content-header-image">
+    </div>
+    <div class="modal_content-title">
+      <p xcHeadlineStyles class="headline-400">Send a message to everyone</p>
+    </div>
+    <div class="modal_content-text">
+      <p xcHeadlineStyles class="headline-200">Your message</p>
+      <textarea placeholder="Please write your message" class="modal_content-text-area" rows="4" cols="100"></textarea>
+    </div>
+    <div class="modal_content-footer">
+      <button xcButtonsWrappers class="button-default" (click)="isAnnouncementOpen = false">
+        <xc-icon-times class="modal_content-footer-icon"/>
+        Cancel
+      </button>
+      <button xcButtonsWrappers class="button-filled">
+        <xc-icon-send class="modal_content-footer-icon-send"/>
+        Send message
+      </button>
+    </div>
+  </div>
+</article>
