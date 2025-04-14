@@ -2,11 +2,13 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags.directive';
 import { XcIconCalenderComponent, XcIconFileCheckAltComponent, XcIconPaperclipComponent } from '@indziaki/ngx-xchange-icons';
+import { HeadlineStylesDirective } from '../../directives/headline-styles/headline-styles.directive';
+import { CopyStylesDirective } from '../../directives/copy-styles/copy-styles.directive';
 
 @Component({
   selector: 'xc-feed-objective',
   standalone: true,
-  imports: [NgFor,ProfileTagsDirective,NgIf,NgClass,XcIconPaperclipComponent,XcIconCalenderComponent,XcIconFileCheckAltComponent],
+  imports: [NgFor,ProfileTagsDirective,NgIf,NgClass,XcIconPaperclipComponent,XcIconCalenderComponent,XcIconFileCheckAltComponent,HeadlineStylesDirective,CopyStylesDirective],
   templateUrl: './feed-objective.component.html',
   styleUrl: './feed-objective.component.css'
 })

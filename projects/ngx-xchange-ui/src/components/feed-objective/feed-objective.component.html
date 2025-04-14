@@ -8,7 +8,7 @@
   }"
 >
 <div class="feed-header">
-  <h6 class="feed-title">{{ data.title }}</h6>
+  <h6 xcHeadlineStyles class="headline-200">{{ data.title }}</h6>
   <p *ngIf="data.type === 'assignment'" xcProfileTags="blue">
     New Assignment
   </p>
@@ -21,22 +21,22 @@
       {{ tag }}
     </p>
   </div>
-  <div class="feed-description">
-    <p>{{ data.description }}</p>
+  <div>
+    <p xcCopyStyles class="copy-400">{{ data.description }}</p>
   </div>
   <div class="feed-details">
     <div class="feed-tasks">
       <div class="task-item" *ngIf="data.type !== 'nextSteps'">
         <span class="task-icon"><xc-icon-file-check-alt class="icon"/></span>
-        <p class="task-info">{{ data.completedTasks }}/{{ data.totalTasks }}</p>
+        <p xcCopyStyles class="copy-200-gray">{{ data.completedTasks }}/{{ data.totalTasks }}</p>
       </div>
       <div class="task-item" *ngIf="data.type !== 'nextSteps'">
         <span class="task-icon"><xc-icon-paperclip class="icon"/></span>
-        <p class="task-info">{{ data.proofs }} proofs</p>
+        <p xcCopyStyles class="copy-200-gray">{{ data.proofs }} proofs</p>
       </div>
       <div class="task-item" *ngIf="data.type !== 'nextSteps'">
         <span class="task-icon"><xc-icon-calender class="icon"/></span>
-        <p class="task-info">{{ data.deadlineDate }}</p>
+        <p xcCopyStyles class="copy-200-gray">{{ data.deadlineDate }}</p>
       </div>
     </div>
     <div
