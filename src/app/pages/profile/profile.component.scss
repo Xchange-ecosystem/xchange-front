@@ -151,16 +151,15 @@
 
 .wallet {
   display: grid;
-  grid-template-columns: 40% 59%;
-  grid-template-rows: 1fr auto; 
+  grid-template-columns: 2fr 3fr;
   column-gap: 32px;
   row-gap: 6px;
-  padding: 0 160px;
+  width: calc(100% - 320px);
+  margin: auto;
   height: 100%;
   align-items: start; 
   justify-content: center;
-  width: 100%;
-
+  box-sizing: border-box;
   &_assets {
     background:white;
     padding: 24px;
@@ -207,14 +206,15 @@
 
 .premium-upgrade {
   display: grid;
-  grid-template-columns: 50% 45%;
-  grid-template-rows: 1fr auto; 
+  grid-template-columns: 3fr 3fr;
   column-gap: 32px;
   row-gap: 6px;
-  padding: 0 130px;
+  width: calc(100% - 320px);
+  margin: auto;
   height: 100%;
   align-items: start; 
   justify-content: center;
+  box-sizing: border-box;
   &-video {
     background:white;
     padding: 32px;
