@@ -9,15 +9,16 @@
 
 .apperance{
   display: grid;
-  grid-template-columns: 40% 59%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr auto; 
   column-gap: 32px;
   row-gap: 6px;
-  padding: 0 160px;
+  margin: auto;
   height: 100%;
   align-items: center; 
   justify-content: center;
-  width: 100%;
+  width: calc(100% - 320px);
+  box-sizing: border-box;
   &_about{
     background:white;
     height: 95%;

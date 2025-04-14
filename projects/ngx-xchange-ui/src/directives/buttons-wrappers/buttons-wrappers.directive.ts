@@ -289,7 +289,7 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         width: '30px',
         height: '30px',
         alignSelf: 'center',
-        opacity: '0.2',
+        opacity: '0.3',
       },
     },
   };

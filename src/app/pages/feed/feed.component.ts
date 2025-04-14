@@ -47,7 +47,7 @@ export class FeedComponent {
   isAiFiltersVisible = false;
   isAnnouncementOpen = false;
   openedDropdown: string | null = null;
-  disabled = false;
+  disabled = true;
   toggleAiFilters() {
     this.isAiFiltersVisible = !this.isAiFiltersVisible;
   }

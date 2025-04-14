@@ -15,16 +15,18 @@
   .container {
     display: grid;
     flex: 1;
-    grid-template-columns: 40% 59%;
+    grid-template-columns: 2fr 3fr;
     height: 48%;
     column-gap: 16px;
     max-width: 100%;
+    box-sizing: border-box;
     &_organizer {
       overflow: hidden;
       display: flex;
       flex-direction: column;
       gap: 16px;
       margin-bottom: 12px;
+      margin-left: 24px;
       &_chat {
         background: white;
         display: flex;
