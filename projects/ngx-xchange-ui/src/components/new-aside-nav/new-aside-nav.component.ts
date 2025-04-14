@@ -17,6 +17,8 @@ import {
 import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-out.component';
 import { RouterLink } from '@angular/router';
 
+type BottomMenuType = 'profile' | 'support' | 'logout' | '';
+
 @Component({
   selector: 'xc-new-aside-nav',
   standalone: true,
@@ -44,7 +46,8 @@ import { RouterLink } from '@angular/router';
 })
 export class NewAsideNavComponent {
   activeTab: string = 'ecosystem';
-  selectedMenuIndex: number | null = null; 
+  selectedMenu: BottomMenuType = '';
+
   public users = [
     {
       name: 'John Doe',
@@ -57,8 +60,14 @@ export class NewAsideNavComponent {
       linkedin: 'https://www.linkedin.com/in/john-doe',
     },
   ];
-  setNavigation(tab: string, menuIndex: number | null = null): void {
+
+  setActiveTab(tab: string): void {
+    this.selectedMenu = '';
     this.activeTab = tab;
-    this.selectedMenuIndex = menuIndex;
+  }
+
+  selectMenu(menu: BottomMenuType): void {
+    this.selectedMenu = menu;
+    this.activeTab = 'ecosystem';
   }
 }
