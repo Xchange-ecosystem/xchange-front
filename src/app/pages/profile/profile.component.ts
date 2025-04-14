@@ -121,6 +121,5 @@ export class ProfileComponent {
 
   onSectionChange(section: string): void {
     this.activeSection = section;
-    console.log('Active section updated in ProfileComponent:', section);
   }
 }

@@ -17,6 +17,5 @@ export class SectionTabComponent {
   selectSection(section: string): void {
     this.activeSection = section;
     this.sectionSelected.emit(section);
-    console.log("desde section-tab", section);
   }
 }

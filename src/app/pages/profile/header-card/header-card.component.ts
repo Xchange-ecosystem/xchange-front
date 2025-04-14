@@ -11,6 +11,5 @@ import { InfoRowComponent } from 'projects/ngx-xchange-ui/src/components/info-ro
 })
 export class HeaderCardComponent {
   onEditHeader(): void {
-    console.log('El botón de editar fue clicado');
   }
 }

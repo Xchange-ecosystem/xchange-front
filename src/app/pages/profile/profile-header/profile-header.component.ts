@@ -23,6 +23,5 @@ export class ProfileHeaderComponent {
 
   onSectionSelected(section: string): void {
     this.sectionChanged.emit(section);
-    console.log('Section retransmitted from ProfileHeader:', section);
   }
 }
