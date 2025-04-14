@@ -280,8 +280,16 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         height: '30px',
         alignSelf: 'center',
       },
-      hover: {
-        background: 'var(--xc-gradient-medium-green)',
+    },
+    'button-refresh-inactive': {
+      default: {
+        padding: '9px',
+        borderRadius: '9999px',
+        background: 'var(--xc-gradient-light-blue)',
+        width: '30px',
+        height: '30px',
+        alignSelf: 'center',
+        opacity: '0.2',
       },
     },
   };

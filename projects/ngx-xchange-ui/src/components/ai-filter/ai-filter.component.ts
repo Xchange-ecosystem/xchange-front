@@ -36,8 +36,9 @@ export class AiFilterComponent implements OnInit {
     this.openDropdown.emit();
   }
   selectOption(option: string, event: Event): void {
-    event.stopPropagation(); 
+    event.stopPropagation();
     this.selectedOption = option;
+    console.log('Selected option:', option);
     this.optionSelected.emit(option);
     this.isOpen = false;
   }
