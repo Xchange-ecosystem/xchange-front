@@ -14,7 +14,7 @@
 .aside-nav__top {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
     align-items: start;
     width: 100%;
 }
