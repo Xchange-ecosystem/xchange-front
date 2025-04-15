@@ -95,10 +95,9 @@ fill: var(--xc-black500);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   background: white;
-  border: 1px solid var(--xc-grey200, #e5e7eb);
   border-radius: 16px;
   cursor: pointer;
 }
@@ -114,11 +113,12 @@ fill: var(--xc-black500);
   background: var(--xc-grey100);
 }
 
-.refresh-button{
-  background: var(--xc-gradient-light-blue);
+.refresh-icon {
+  transform: scaleX(-1) ;
 }
 
 .right-options{
-display: flex;
-gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }

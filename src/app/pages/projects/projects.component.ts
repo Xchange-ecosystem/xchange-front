@@ -8,6 +8,7 @@ import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
+import { SectionTabComponent } from 'projects/ngx-xchange-ui/src/components/section-tab/section-tab.component';
 export interface ProjectInterface {
   image: string;
   title: string;
@@ -29,10 +30,10 @@ export interface ProjectInterface {
     ClickOutsideDirective,
     ProjectModalComponent,
     NgIf,
-    NgClass,
     NgFor,
     XcIconPlusCircleComponent,
-    HeadlineStylesDirective
+    HeadlineStylesDirective,
+    SectionTabComponent
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
@@ -59,6 +60,14 @@ export class ProjectsComponent {
     this.selectedButton = button;
   }
 
+  onSectionSelected(section: string): void {
+    // Aplicar el filtro para los proyectos que bajen de API
+  }
+  sections = [
+    { name: 'All projects', hasNotifications: false },
+    { name: 'My projects', hasNotifications: false },
+    { name: 'Collaborations', hasNotifications: false },
+  ];
   public projects:ProjectInterface[] = [
     {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzIuKHHeS7DE9kplbdGaHTZlQL92-_x8j4Bw&s",

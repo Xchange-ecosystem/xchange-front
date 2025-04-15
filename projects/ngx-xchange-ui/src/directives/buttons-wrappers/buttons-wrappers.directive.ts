@@ -276,6 +276,8 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
     'button-refresh': {
       default: {
+        alignItems: 'center',
+        display: 'flex',
         padding: '9px',
         borderRadius: '9999px',
         background: 'var(--xc-gradient-light-blue)',
@@ -286,6 +288,8 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
     'button-refresh-inactive': {
       default: {
+        alignItems: 'center',
+        display: 'flex',
         padding: '9px',
         borderRadius: '9999px',
         background: 'var(--xc-gradient-light-blue)',

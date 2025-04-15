@@ -26,7 +26,7 @@
   </div>
 <div class="right-options">
   <div class="refresh-wrapper">
-    <button class="refresh-button">
+    <button xcButtonsWrappers [class]="isFilterActive ? 'button-refresh' : 'button-refresh-inactive'">
       <xc-icon-redo class="refresh-icon" />
     </button>
   </div>

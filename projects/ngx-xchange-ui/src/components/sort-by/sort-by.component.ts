@@ -3,8 +3,10 @@ import { Component, HostListener } from '@angular/core';
 import {
   XcIconAngleDownComponent,
   XcIconRedoComponent,
+  XcIconRefreshComponent,
   XcIconSearchComponent,
 } from '@indziaki/ngx-xchange-icons';
+import { ButtonsWrappersDirective } from '../../public-api';
 
 @Component({
   selector: 'xc-sort-by',
@@ -14,7 +16,9 @@ import {
     XcIconSearchComponent,
     NgFor, 
     NgClass,
-    XcIconRedoComponent
+    XcIconRedoComponent,
+    ButtonsWrappersDirective,
+    XcIconRefreshComponent
   ],
   templateUrl: './sort-by.component.html',
   styleUrl: './sort-by.component.css',
@@ -23,6 +27,7 @@ export class SortByComponent {
   isDropdownOpen = false;
   selectedOption = '';
   sortOptions = ['Alphabet A-Z', 'Alphabet Z-A', 'Collaborations'];
+  isFilterActive = false;
 
   toggleDropdown(event: Event): void {
     event.stopPropagation();
