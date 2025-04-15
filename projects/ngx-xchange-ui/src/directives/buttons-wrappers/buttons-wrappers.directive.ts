@@ -5,7 +5,6 @@ import {
   Renderer2,
   OnInit,
   OnDestroy,
-  ChangeDetectorRef,
 } from '@angular/core';
 
 interface ButtonStyle {
@@ -18,7 +17,6 @@ interface ButtonStyle {
   standalone: true,
 })
 export class ButtonsWrappersDirective implements OnInit, OnDestroy {
-  private cdr = inject(ChangeDetectorRef);
   private el = inject(ElementRef);
   private render = inject(Renderer2);
   private listeners: (() => void)[] = [];
