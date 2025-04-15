@@ -29,15 +29,19 @@
     <section class="container_content-cards">
       <h5 xcHeadline600>All Projects</h5>
       <div class="container_content-cards-wrapper">
-        <xc-projects-card
-        class="container_content-cards-wrapper-injector"
-        (projectSelected)="openProject($event)"
-      ></xc-projects-card>
+          <xc-projects-card
+            *ngFor="let project of projects"
+            [project]="project"
+            (projectSelected)="openProject($event)"
+            class="container_content-cards-wrapper-injector"
+          ></xc-projects-card>
         <button class="new-project-card" (click)="openModal()">
-          <span class="new-project-card-icon">
-            <xc-icon-plus-circle (projectClick)="openProject($event)" />
-          </span>
-          <p>Create a new project</p>
+          <div class="new-project-card-content" >
+            <span class="new-project-card-content-icon">
+              <xc-icon-plus-circle  />
+            </span>
+            <p xcHeadlineStyles class="headline-300">Create a new project</p>
+          </div>  
         </button>
       </div>
     </section>

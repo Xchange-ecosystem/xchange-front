@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent, XcIconSearchComponent } from '@indziaki/ngx-xchange-icons';
-import { ProjectsCardComponent } from 'projects/ngx-xchange-ui/src/components/projects-card/projects-card.component';
+import { ProjectsCardComponent } from 'src/app/pages/projects/projects-card/projects-card.component';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
 import { ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 

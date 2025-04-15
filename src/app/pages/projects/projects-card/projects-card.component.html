@@ -1,0 +1,34 @@
+<button class="wrapper"  (click)="selectProject()">
+    <div class="image-wrapper">
+      <img [src]="project.image" alt="project-background" class="project-image">
+    </div>
+    <div class="project-title">
+      <h6>{{ project.title }}</h6>
+      <span class="project-tags">
+        <div xcProfileTags="gray" *ngFor="let tag of project.tags">{{ tag }}</div>
+      </span>
+    </div>
+    <div class="project-progress" *ngIf="project.objectivesInProject">
+      <xc-project-progress-bar 
+        [completed]="project.completed" 
+        [open]="project.open" 
+        [suggested]="project.suggested" 
+        [objectivesInProject]="50" 
+        class="project-progress-bar">
+      </xc-project-progress-bar>
+    </div>
+    <div class="project-description">
+      <p>{{ project.description }}</p>
+    </div>
+  </button>
+
+
+
+<dialog class="modal-overlay" *ngIf="selectedProject" >
+    <app-project-modal [project]="selectedProject" class="modal" (close)="onCloseModal()"/>
+    <button class="close-modal-button" (click)="onCloseModal()">
+        <xc-icon-close-s class="close-modal-icon"></xc-icon-close-s>
+      </button>
+</dialog>
+
+<!-- (click)="openModal()" (projectClick)="openProject($event)" -->
