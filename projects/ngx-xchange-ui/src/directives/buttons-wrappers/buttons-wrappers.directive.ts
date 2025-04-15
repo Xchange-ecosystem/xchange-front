@@ -20,6 +20,7 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
   private el = inject(ElementRef);
   private render = inject(Renderer2);
   private listeners: (() => void)[] = [];
+  private observer: MutationObserver  
 
   private readonly commonStyles: Partial<CSSStyleDeclaration> = {
     fontWeight: '700',
@@ -93,6 +94,19 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         borderRadius: '0.5rem',
         fill: 'white',
         height: '100%',
+        padding: '10px 1rem',
+        gap: '0.25rem',
+      },
+      hover: {
+        backgroundColor: 'var(--xc-black400)',
+      },
+    },
+    'button-filled-noHeight': {
+      default: {
+        backgroundColor: 'var(--xc-black500)',
+        color: 'white',
+        borderRadius: '0.5rem',
+        fill: 'white',
         padding: '10px 1rem',
         gap: '0.25rem',
       },
@@ -222,43 +236,114 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         backgroundColor: 'var(--xc-grey200)',
       },
     },
+    'button-chat': {
+      default: {
+        display: 'flex',
+        padding: '9px',
+        justifyContent: 'center',
+        background: 'var(--xc-gradient-light-grey-on-white)',
+        borderRadius: '8px',
+        width: '60px',
+        height: '100%',
+      },
+    },
+    'button-feed': {
+      default: {
+        alignItems: 'center',
+        display: 'flex',
+        padding: '16px',
+        justifyContent: 'center',
+        borderWidth: '1px',
+        borderColor: 'var(--xc-grey100)',
+        borderRadius: '8px',
+        gap: '8px',
+        height: '40px',
+      },
+    },
+    'button-feed-selected': {
+      default: {
+        alignItems: 'center',
+        display: 'flex',
+        padding: '16px',
+        justifyContent: 'center',
+        borderWidth: '1px',
+        borderColor: 'var(--xc-grey100)',
+        borderRadius: '8px',
+        gap: '8px',
+        height: '40px',
+        background: 'var(--xc-grey100)',
+      },
+    },
+    'button-refresh': {
+      default: {
+        padding: '9px',
+        borderRadius: '9999px',
+        background: 'var(--xc-gradient-light-blue)',
+        width: '30px',
+        height: '30px',
+        alignSelf: 'center',
+      },
+    },
+    'button-refresh-inactive': {
+      default: {
+        padding: '9px',
+        borderRadius: '9999px',
+        background: 'var(--xc-gradient-light-blue)',
+        width: '30px',
+        height: '30px',
+        alignSelf: 'center',
+        opacity: '0.3',
+      },
+    },
   };
 
+  constructor() {
+    this.observer = new MutationObserver(() => {
+      this.setStyles();
+    });
+  }
   ngOnInit() {
     this.setStyles();
+
+    this.observer.observe(this.el.nativeElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
   }
 
   ngOnDestroy() {
     this.listeners.forEach((removeListener) => removeListener());
+    this.observer?.disconnect();
   }
 
   private setStyles() {
     const element = this.el.nativeElement;
+    element.removeAttribute('style');
+
+    Object.keys(this.commonStyles).forEach((prop) => {
+      this.render.removeStyle(element, prop);
+    });
+  
     const matchedClass = (Array.from(element.classList) as string[]).find(
       (cls) => this.buttonStyles.hasOwnProperty(cls)
     );
-
+  
     if (!element || !matchedClass) return;
+  
     const styles = this.buttonStyles[matchedClass];
-
-    // Apply common styles
-    Object.entries(this.commonStyles).forEach(([prop, value]) => {
-      this.render.setStyle(element, prop, value);
-    });
-
-    // Apply default styles
+  
+  
     Object.entries(styles.default).forEach(([prop, value]) => {
       this.render.setStyle(element, prop, value);
     });
-
-    // Apply hover styles if they exist
+  
     if (styles.hover) {
       const mouseenter = () => {
         Object.entries(styles.hover!).forEach(([prop, value]) => {
           this.render.setStyle(element, prop, value);
         });
       };
-
+  
       const mouseleave = () => {
         Object.entries(styles.hover!).forEach(([prop]) => {
           this.render.setStyle(
@@ -268,10 +353,10 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
           );
         });
       };
-
+  
       element.addEventListener('mouseenter', mouseenter);
       element.addEventListener('mouseleave', mouseleave);
-
+  
       this.listeners.push(
         () => element.removeEventListener('mouseenter', mouseenter),
         () => element.removeEventListener('mouseleave', mouseleave)

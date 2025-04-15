@@ -13,6 +13,8 @@ export class ChatOptionDirective {
   private setStyles() {
     this.renderer.setStyle(this.el.nativeElement, 'display', 'flex');
     this.renderer.setStyle(this.el.nativeElement, 'width', '100%');
+    this.renderer.setStyle(this.el.nativeElement, 'text-wrap', 'nowrap');
+    this.renderer.setStyle(this.el.nativeElement, 'border-radius', '8px');
     this.renderer.setStyle(this.el.nativeElement, 'boxShadow', 'var(--xc-boxShadow-400)');
   }
 }

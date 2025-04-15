@@ -9,14 +9,15 @@ import {
   XcIconQuestionCircleComponent,
   XcIconRocketComponent,
   XcIconSettingComponent,
-  XcIconSignAltComponent,
   XcIconStarComponent,
   XcIconUsersAltComponent,
   XcIconWifiComponent,
+  XcIconAngleRightComponent
 } from '@indziaki/ngx-xchange-icons';
-import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
 import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-out.component';
 import { RouterLink } from '@angular/router';
+
+type BottomMenuType = 'profile' | 'support' | 'logout' | '';
 
 @Component({
   selector: 'xc-new-aside-nav',
@@ -38,13 +39,15 @@ import { RouterLink } from '@angular/router';
     XcIconWifiComponent,
     XcIconUsersAltComponent,
     XcLogOutIconComponent,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',
 })
 export class NewAsideNavComponent {
   activeTab: string = 'ecosystem';
+  selectedMenu: BottomMenuType = '';
+
   public users = [
     {
       name: 'John Doe',
@@ -57,7 +60,14 @@ export class NewAsideNavComponent {
       linkedin: 'https://www.linkedin.com/in/john-doe',
     },
   ];
+
   setActiveTab(tab: string): void {
+    this.selectedMenu = '';
     this.activeTab = tab;
+  }
+
+  selectMenu(menu: BottomMenuType): void {
+    this.selectedMenu = menu;
+    this.activeTab = 'ecosystem';
   }
 }

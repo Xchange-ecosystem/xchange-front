@@ -1,0 +1,35 @@
+.section-tabs {
+    display: flex;
+    gap: 10px;
+    background: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-wrap: nowrap;
+    gap: 4px;
+    cursor: pointer;
+    color: var(--xc-grey300);
+  }
+  
+  
+  .tab.active {
+    background: var(--xc-gradient-light-grey-on-white);
+    color: var(--xc-black500);
+  }
+  
+  .notification-dot {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background-color: var(--xc-brand-light-blue);
+    border-radius: 50%;
+  }

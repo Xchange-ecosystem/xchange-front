@@ -1,0 +1,28 @@
+<section class="profile_header">
+    <article class="profile_header_background">
+        <xc-header-background 
+          class="profile_header_background-image" 
+          [imageUrl]="'https://media.istockphoto.com/id/476098860/vector/wonderful-morning-in-the-blue-mountains.jpg?s=612x612&w=0&k=20&c=0nuLvsWKXPReu01RvbXTKIwlUYxOQvoXD_qVBrsapxc='">
+        </xc-header-background>
+    </article>
+    <article class="profile_header_content">
+        <div class="profile_header_content-card">
+            <app-header-card></app-header-card>
+        </div>
+        <div class="profile_header_content_nav">
+            <xc-section-tab
+            class="profile_header_content_nav-tabs"
+            [sections]="sections"
+            (sectionSelected)="onSectionSelected($event)"
+            >
+          </xc-section-tab>
+            <span class="profile_header_content_nav-rounded">
+                <xc-rounded-image 
+                class="profile_header_content_nav-rounded-image" 
+                [image]="'https://randomuser.me/api/portraits/women/26.jpg'" 
+                [marginSize]="4">
+                </xc-rounded-image>
+            </span>
+        </div>
+    </article>
+</section>

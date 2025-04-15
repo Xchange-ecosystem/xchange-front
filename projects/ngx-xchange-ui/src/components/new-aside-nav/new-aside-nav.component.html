@@ -84,13 +84,19 @@
           </xc-aside-links>
     </nav>
   </div>
-  <nav class="aside-nav__bottom-menu" *ngFor="let user of users">
-    <button [routerLink]="'/profile'" class="aside-nav__user">
+  <nav class="aside-nav__bottom-menu">
+    <button
+      *ngFor="let user of users"
+      [routerLink]="'/profile'"
+      class="aside-nav__user"
+      [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenu === 'profile' }"
+      (click)="selectMenu('profile')"
+    >
       <span class="aside-nav__user-info">
-        <img
-          src="https://randomuser.me/api/portraits/women/28.jpg"
-          alt="user_image"
+        <xc-rounded-image
+          [image]="user.imageUrl"
           class="aside-nav__user-img"
+          [marginSize]="0"
         />
         <p class="aside-nav__text">My profile</p>
       </span>
@@ -98,7 +104,13 @@
         <xc-icon-angle-right class="aside-nav__arrow-icon" />
       </span>
     </button>
-    <button [routerLink]="'/support'" class="aside-nav__support">
+  
+    <button
+      [routerLink]="'/support'"
+      class="aside-nav__support"
+      [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenu === 'support' }"
+      (click)="selectMenu('support')"
+    >
       <span class="aside-nav__support-info">
         <xc-icon-question-circle class="aside-nav__support-icon" />
         <p class="aside-nav__text">Support</p>
@@ -107,14 +119,21 @@
         <xc-icon-angle-right class="aside-nav__arrow-icon" />
       </span>
     </button>
-    <button [routerLink]="'/logout'" class="aside-nav__logout">
+  
+    <button
+      [routerLink]="'/logout'"
+      class="aside-nav__logout"
+      [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenu === 'logout' }"
+      (click)="selectMenu('logout')"
+    >
       <span class="aside-nav__logout-info">
-        <xc-log-out-icon class="aside-nav__logout-icon"/>
+        <xc-log-out-icon class="aside-nav__logout-icon" />
         <p class="aside-nav__text">Logout</p>
       </span>
       <span class="aside-nav__arrow">
         <xc-icon-angle-right class="aside-nav__arrow-icon" />
       </span>
     </button>
-</nav>
+  </nav>
+  
 </aside>

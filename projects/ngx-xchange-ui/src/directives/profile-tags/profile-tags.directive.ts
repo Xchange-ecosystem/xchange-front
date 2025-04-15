@@ -19,13 +19,13 @@ export class ProfileTagsDirective implements OnChanges {
     green: 'var(--xc-Completed)',
     purple: 'var(--xc-Suggestion)',
     yellow: 'var(--xc-Progress)',
-    blue:"var(--xc-categories-collaboration)"
+    blue:"#47E3E366"
   };
 
 
   private textColorMap: Record<string, string> = {
     yellow: 'var(--xc-categories-yellow-tag)',
-    blue: 'var(--xc-data-viz-blue200)',
+    blue: '#27ABAB',
     purple: 'white',
     green: 'white',
     default: 'var(--xc-grey500)',
