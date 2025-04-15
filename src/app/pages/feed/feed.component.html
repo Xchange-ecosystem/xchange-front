@@ -68,15 +68,19 @@
       <div class="container_feed_side">
         <section class="container_feed_side-nav">
           <div class="container_feed_side-nav-buttons">
-            <button xcButtonsWrappers class="button-feed">
-              <xc-icon-home-alt class="container_feed_side-nav-buttons-icon" />
-            </button>
-            <button
-              xcButtonsWrappers
-              class="button-feed"
-              (click)="toggleAiFilters()"
-            >
-              <xc-icon-ai class="container_feed_side-nav-buttons-icon" />
+            <app-objective-filters
+              [label]="'home'"
+              [showNotification]="false"
+              [selectedLabel]="activeLabel"
+              (sectionClicked)="handleSectionClick($event)"
+            ></app-objective-filters>
+            <button (click)="toggleAiFilters()">
+              <app-objective-filters
+              [label]="'ia'"
+              [showNotification]="false"
+              [selectedLabel]="activeLabel"
+              (sectionClicked)="handleSectionClick($event)"
+            ></app-objective-filters>
             </button>
 
             <app-objective-filters

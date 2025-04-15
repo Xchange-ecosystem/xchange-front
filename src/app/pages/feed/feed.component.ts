@@ -48,7 +48,7 @@ export class FeedComponent {
   isAnnouncementOpen = false;
   openedDropdown: string | null = null;
   disabled = true;
-  activeLabel = 'Announcement';
+  activeLabel = ''
 
   toggleAiFilters() {
     this.isAiFiltersVisible = !this.isAiFiltersVisible;
@@ -68,6 +68,5 @@ export class FeedComponent {
 
   handleSectionClick(label: string): void {
     this.activeLabel = label;
-    console.log('Tab seleccionado:', label);
   }
 }

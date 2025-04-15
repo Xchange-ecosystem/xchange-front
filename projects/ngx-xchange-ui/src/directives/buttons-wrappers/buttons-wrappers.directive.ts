@@ -5,6 +5,7 @@ import {
   Renderer2,
   OnInit,
   OnDestroy,
+  ChangeDetectorRef,
 } from '@angular/core';
 
 interface ButtonStyle {
@@ -17,9 +18,11 @@ interface ButtonStyle {
   standalone: true,
 })
 export class ButtonsWrappersDirective implements OnInit, OnDestroy {
+  private cdr = inject(ChangeDetectorRef);
   private el = inject(ElementRef);
   private render = inject(Renderer2);
   private listeners: (() => void)[] = [];
+  private observer: MutationObserver  
 
   private readonly commonStyles: Partial<CSSStyleDeclaration> = {
     fontWeight: '700',
@@ -248,6 +251,7 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
     'button-feed': {
       default: {
+        alignItems: 'center',
         display: 'flex',
         padding: '16px',
         justifyContent: 'center',
@@ -260,15 +264,16 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
     'button-feed-selected': {
       default: {
+        alignItems: 'center',
         display: 'flex',
         padding: '16px',
         justifyContent: 'center',
         borderWidth: '1px',
         borderColor: 'var(--xc-grey100)',
         borderRadius: '8px',
-        backgroundColor: 'var(--xc-grey100)',
         gap: '8px',
         height: '40px',
+        background: 'var(--xc-grey100)',
       },
     },
     'button-refresh': {
@@ -294,41 +299,53 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
   };
 
+  constructor() {
+    this.observer = new MutationObserver(() => {
+      this.setStyles();
+    });
+  }
   ngOnInit() {
     this.setStyles();
+
+    this.observer.observe(this.el.nativeElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
   }
 
   ngOnDestroy() {
     this.listeners.forEach((removeListener) => removeListener());
+    this.observer?.disconnect();
   }
 
   private setStyles() {
     const element = this.el.nativeElement;
+    element.removeAttribute('style');
+
+    Object.keys(this.commonStyles).forEach((prop) => {
+      this.render.removeStyle(element, prop);
+    });
+  
     const matchedClass = (Array.from(element.classList) as string[]).find(
       (cls) => this.buttonStyles.hasOwnProperty(cls)
     );
-
+  
     if (!element || !matchedClass) return;
+  
     const styles = this.buttonStyles[matchedClass];
-
-    // Apply common styles
-    Object.entries(this.commonStyles).forEach(([prop, value]) => {
-      this.render.setStyle(element, prop, value);
-    });
-
-    // Apply default styles
+  
+  
     Object.entries(styles.default).forEach(([prop, value]) => {
       this.render.setStyle(element, prop, value);
     });
-
-    // Apply hover styles if they exist
+  
     if (styles.hover) {
       const mouseenter = () => {
         Object.entries(styles.hover!).forEach(([prop, value]) => {
           this.render.setStyle(element, prop, value);
         });
       };
-
+  
       const mouseleave = () => {
         Object.entries(styles.hover!).forEach(([prop]) => {
           this.render.setStyle(
@@ -338,10 +355,10 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
           );
         });
       };
-
+  
       element.addEventListener('mouseenter', mouseenter);
       element.addEventListener('mouseleave', mouseleave);
-
+  
       this.listeners.push(
         () => element.removeEventListener('mouseenter', mouseenter),
         () => element.removeEventListener('mouseleave', mouseleave)

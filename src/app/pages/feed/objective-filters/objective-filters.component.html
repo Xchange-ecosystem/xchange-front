@@ -1,8 +1,21 @@
 <button
   xcButtonsWrappers
-  [class]="selectedLabel === label ? 'button-feed-active' : 'button-feed'"
+  [class]="selectedLabel === label ? 'button-feed-selected' : 'button-feed'"
   (click)="handleClick()"
 >
   <span *ngIf="showNotification" [xcNotificationBubble]="true"></span>
-  {{ label }}
+
+  <ng-container [ngSwitch]="label">
+    <ng-container *ngSwitchCase="'home'">
+      <xc-icon-home-alt></xc-icon-home-alt>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="'ia'">
+      <xc-icon-ai class="icon-ia"></xc-icon-ai>
+    </ng-container>
+
+    <ng-container *ngSwitchDefault>
+      {{ label }}
+    </ng-container>
+  </ng-container>
 </button>
