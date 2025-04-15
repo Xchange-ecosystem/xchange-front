@@ -1,5 +1,5 @@
 import { NgClass, NgIf } from '@angular/common';
-import { Component, HostListener, } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output, } from '@angular/core';
 import {
   XcIconAIComponent,
   XcIconClipboardComponent,
@@ -17,6 +17,7 @@ import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directi
 import { ChatMessageComponent } from './chat-message/chat-message.component';
 import { ButtonsWrappersDirective } from 'projects/ngx-xchange-ui/src/public-api';
 import { FeedHeaderComponent } from './feed-header/feed-header.component';
+import { ObjectiveFiltersComponent } from './objective-filters/objective-filters.component';
 
 @Component({
   selector: 'app-feed',
@@ -27,7 +28,6 @@ import { FeedHeaderComponent } from './feed-header/feed-header.component';
     AiFilterComponent,
     XcIconRedoComponent,
     XcIconAIComponent,
-    NotificationBubbleDirective,
     XcIconSendComponent,
     XcIconMicrophoneComponent,
     XcIconClipboardComponent,
@@ -37,7 +37,7 @@ import { FeedHeaderComponent } from './feed-header/feed-header.component';
     XcIconHomeAltComponent,
     FeedHeaderComponent,
     XcIconTimesComponent,
-    NgClass,
+    ObjectiveFiltersComponent,
     NgIf
   ],
   templateUrl: './feed.component.html',
@@ -48,6 +48,8 @@ export class FeedComponent {
   isAnnouncementOpen = false;
   openedDropdown: string | null = null;
   disabled = true;
+  activeLabel = 'Announcement';
+
   toggleAiFilters() {
     this.isAiFiltersVisible = !this.isAiFiltersVisible;
   }
@@ -64,4 +66,8 @@ export class FeedComponent {
     this.openedDropdown = this.openedDropdown === caseName ? null : caseName;
   }
 
+  handleSectionClick(label: string): void {
+    this.activeLabel = label;
+    console.log('Tab seleccionado:', label);
+  }
 }

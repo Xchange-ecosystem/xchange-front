@@ -78,18 +78,26 @@
             >
               <xc-icon-ai class="container_feed_side-nav-buttons-icon" />
             </button>
-            <button xcButtonsWrappers class="button-feed">
-              <span [xcNotificationBubble]="true"></span>
-              Objectives
-            </button>
-            <button xcButtonsWrappers class="button-feed">
-              <span [xcNotificationBubble]="false"></span>
-              Assignments
-            </button>
-            <button xcButtonsWrappers class="button-feed">
-              <span [xcNotificationBubble]="true"></span>
-              Announcements
-            </button>
+
+            <app-objective-filters
+              [label]="'Objectives'"
+              [showNotification]="true"
+              [selectedLabel]="activeLabel"
+              (sectionClicked)="handleSectionClick($event)"
+            ></app-objective-filters>
+          
+            <app-objective-filters
+              [label]="'Assignments'"
+              [showNotification]="false"
+              [selectedLabel]="activeLabel"
+              (sectionClicked)="handleSectionClick($event)"
+            ></app-objective-filters>
+            <app-objective-filters
+              [label]="'Announcements'"
+              [showNotification]="true"
+              [selectedLabel]="activeLabel"
+              (sectionClicked)="handleSectionClick($event)"
+            ></app-objective-filters>
           </div>
           <nav class="container_feed_side-nav-filters">
             <xc-ai-filter

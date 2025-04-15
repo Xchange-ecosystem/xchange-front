@@ -1,0 +1,8 @@
+<button
+  xcButtonsWrappers
+  [class]="selectedLabel === label ? 'button-feed-active' : 'button-feed'"
+  (click)="handleClick()"
+>
+  <span *ngIf="showNotification" [xcNotificationBubble]="true"></span>
+  {{ label }}
+</button>
