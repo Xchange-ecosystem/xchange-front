@@ -1,3 +1,6 @@
+# 0.1.19 16/04/2025
+* (add) directives to the export file and change the library version
+
 # 0.1.18 11/04/2025
 * (change) community user card directive
 

@@ -113,6 +113,10 @@ export * from './directives/click-outside/click-outside.directive'
 export * from './directives/community-card-measures/card-measures.directive';
 export * from './directives/profile-tags/profile-tags.directive'
 export * from './components/user-profile-modal/user-profile-modal.component';
-export * from './directives/card-styles/card-styles.directive'
-export * from './directives/profile-header/profile-header.directive'
-export * from './directives/buttons-wrappers/buttons-wrappers.directive'
+export * from './directives/card-styles/card-styles.directive';
+export * from './directives/profile-header/profile-header.directive';
+export * from './directives/buttons-wrappers/buttons-wrappers.directive';
+export * from './directives/headline-styles/headline-styles.directive';
+export * from './directives/chat-option/chat-option.directive'
+export * from './components/chat-options-button/chat-options-button.component';
+export * from './components/ai-filter/ai-filter.component';
