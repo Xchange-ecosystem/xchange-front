@@ -6,11 +6,9 @@ import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/hea
 import { StepperComponent } from './stepper/stepper.component';
 import { ButtonsWrappersDirective, ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { SectionTabComponent } from 'projects/ngx-xchange-ui/src/components/section-tab/section-tab.component';
-import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
-import { ProjectHeaderComponent } from './project-header/project-header.component';
 export interface ProjectInterface {
   image: string;
   title: string;
@@ -29,7 +27,6 @@ export interface ProjectInterface {
   standalone: true,
   imports: [
     ButtonsWrappersDirective,
-    ProjectHeaderComponent,
     HeadlineStylesDirective,
     SortByComponent,
     Headline600Directive,

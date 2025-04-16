@@ -56,8 +56,33 @@
         </div>
       </div>
     </div>
+    <footer
+    class="project-container-footer"
+    [class.project-container-footer-invitation]="invitation">
+      <ng-container *ngIf="invitation; else noInvitation">
+        <div class="project-container-footer-content">
+          <div class="project-container-footer-text">
+            <p xcHeadlineStyles class="headline-300">New Invitation</p>
+            <p xcCopyStyles class="copy-300">You have been invited to this project. Do you want to accept?</p>
+          </div>
+          <div class="project-container-footer-buttons">
+            <button class="project-container-footer-button reject-button">
+              <xc-icon-close-s class="project-container-footer-button-icon"></xc-icon-close-s>
+              Reject
+            </button>
+            <button class="project-container-footer-button">
+              <xc-icon-check class="project-container-footer-button-icon"></xc-icon-check>
+              Accept
+            </button>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #noInvitation>
+        <button class="project-container-footer-button">Ask for access</button>
+      </ng-template>
+    </footer>
   </article>
-  <footer
+  <!-- <footer
     class="project-container-footer"
     [class.project-container-footer-invitation]="invitation"
   >
@@ -82,5 +107,5 @@
     <ng-template #noInvitation>
       <button class="project-container-footer-button">Ask for access</button>
     </ng-template>
-  </footer>
+  </footer> -->
 </section>
