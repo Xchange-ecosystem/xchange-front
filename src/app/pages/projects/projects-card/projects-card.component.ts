@@ -14,6 +14,9 @@ export interface ProjectInterface {
   open: number;
   suggested: number;
   description: string;
+  proofs: number;
+  collaborations: number;
+  value: number;
 }
 @Component({
   selector: 'xc-projects-card',
@@ -22,7 +25,6 @@ export interface ProjectInterface {
     ProfileTagsDirective, 
     ProjectProgressBarModule, 
     NgFor, 
-    CardStylesDirective,
     NgIf,
     ProjectModalComponent,
     XcIconCloseSComponent

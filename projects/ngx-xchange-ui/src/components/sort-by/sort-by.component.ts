@@ -18,7 +18,6 @@ import { ButtonsWrappersDirective } from '../../public-api';
     NgClass,
     XcIconRedoComponent,
     ButtonsWrappersDirective,
-    XcIconRefreshComponent
   ],
   templateUrl: './sort-by.component.html',
   styleUrl: './sort-by.component.css',

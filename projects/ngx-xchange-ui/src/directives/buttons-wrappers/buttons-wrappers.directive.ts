@@ -299,6 +299,20 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         opacity: '0.3',
       },
     },
+    'button-close-modal': {
+      default: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        borderRadius: '9999px',
+        background: 'white',
+        width: '56px',
+        height: '56px',
+        alignSelf: 'start',
+        marginTop: '140px',
+        marginLeft: '16px',
+      },
+    },
   };
 
   constructor() {

@@ -98,15 +98,22 @@
   background: rgba(0, 0, 0, 0.5);
   &-content {
     display: flex;
-    flex-direction: column;
-    padding: 28px;
     border-radius: 16px;
     gap: 40px;
-    width: 1100px;
-    height: 730px;
+    width: 70%;
+    height: auto;
     background: white;
-    &-injector {
-      height: 100%;
+    &-injector{
+      display: flex;
+      width: 100%;
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      stroke: var(--xc-black500);
     }
   }
 }
