@@ -184,13 +184,10 @@
   display: grid;
   grid-template-columns: 2fr 3fr;
   column-gap: 32px;
-  row-gap: 6px;
-  width: calc(100% - 320px);
-  margin: auto;
-  height: 100%;
-  align-items: start; 
-  justify-content: center;
   box-sizing: border-box;
+  width: calc(100% - 165px);
+  margin-left: auto;
+  margin-right: auto;
   &_assets {
     background:white;
     padding: 24px;
@@ -207,9 +204,12 @@
     }
   }
   &_contributions {
+    display: flex;
+    flex-direction: column;
     background:white;
     padding: 24px;
     border-radius: 8px;
+    margin-bottom: auto;
     &-table {
       width: 100%;
       border-collapse: collapse;
@@ -240,7 +240,7 @@
   grid-template-columns: 3fr 3fr;
   column-gap: 32px;
   row-gap: 6px;
-  width: calc(100% - 320px);
+  width: calc(100% - 165px);
   margin: auto;
   height: 100%;
   align-items: start; 
@@ -251,7 +251,7 @@
     padding: 32px;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 70%;
     border-radius: 8px;
     gap: 24px;
     &-content {
@@ -268,7 +268,7 @@
     background:white;
     padding: 32px;
     gap: 16px;
-    height: 80%;
+    height: 70%;
     border-radius: 8px;
     justify-content: center;
     &-basic {
@@ -349,6 +349,8 @@
         height: 100%;
         .button{
           text-wrap: nowrap;
+          display: flex;
+          align-items: center;
           &-icon {
             display: flex;
             width: 20px;

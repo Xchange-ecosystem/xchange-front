@@ -23,5 +23,6 @@ export class ProfileHeaderComponent {
 
   onSectionSelected(section: string): void {
     this.sectionChanged.emit(section);
+    console.log('Selected section:', section);
   }
 }
