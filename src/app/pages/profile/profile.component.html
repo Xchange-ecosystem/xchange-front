@@ -160,7 +160,12 @@
     </section>
     <section class="premium-upgrade-options">
       <div class="premium-upgrade-options-basic">
-        <h6 xcHeadlineStyles class="headline-300 premium-upgrade-options-basic-title">Xcamp Basic</h6>
+        <h6
+          xcHeadlineStyles
+          class="headline-300 premium-upgrade-options-basic-title"
+        >
+          Xcamp Basic
+        </h6>
         <div class="premium-upgrade-options-basic-container">
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
@@ -265,7 +270,10 @@
     </section>
   </article>
 
-  <article *ngIf="activeSection === 'Premium settings'" class="premium_settings">
+  <article
+    *ngIf="activeSection === 'Premium settings'"
+    class="premium_settings"
+  >
     <section class="premium_settings-wrapper">
       <article class="premium_settings-wrapper-search">
         <p xcHeadlineStyles class="headline-300">
@@ -285,38 +293,38 @@
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">
-  <div class="tags_modal-content">
-    <p xcHeadline400>All tags related to Fabian</p>
-    <article class="tags_modal-content-wrapper">
-      <p xcHeadline200>Review your skill tags</p>
-      <span class="tags_modal-content-wrapper-item">
-        <xc-icon-ai class="ia-icon" />
-        <p xcCopyStyles class="copy-200-bold">
-          Our AI matches your skills with projects, templates and other members.
-          Thats why its important to build a strong profile
-        </p>
-      </span>
-    </article>
-    <div class="tags_modal-content-wrapper-injector">
-      <div xcProfileTags="gray" *ngFor="let tag of tags" class="tag">
-        {{ tag }}
-        <xc-icon-close-s class="tags_modal-icon-red" />
+  <div class="tags_modal_wrapper">
+    <div class="tags_modal_wrapper-content">
+      <p xcHeadlineStyles class="headline-400">All tags related to Fabian</p>
+      <article class="tags_modal_wrapper-content-article">
+        <p xcHeadlineStyles class="headline-200">Review your skill tags</p>
+        <span class="tags_modal_wrapper-content-article-item">
+          <xc-icon-ai class="ia-icon" />
+          <p xcCopyStyles class="copy-200-bold">
+            Our AI matches your skills with projects, templates and other members.
+            Thats why its important to build a strong profile
+          </p>
+        </span>
+      </article>
+      <div class="tags_modal_wrapper-content-injector">
+        <div xcProfileTags="gray" *ngFor="let tag of tags" class="tag">
+          {{ tag }}
+          <button><xc-icon-close-s class="tags_modal_wrapper-icon-red" /></button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="tags_modal_wrapper-content-new">
+        <p xcHeadlineStyles class="headline-200">Add tags</p>
+        <span class="tags_modal_wrapper-content-new-span">
+          <input type="text" class="tags_modal_wrapper-content-new-span-input" />
+          <button>
+            <xc-icon-plus-circle class="tags_modal_wrapper-content-new-span-icon" />
+          </button>
+        </span>
       </div>
     </div>
-    <div class="tags_modal-content-wrapper-new">
-      <p>Add tags</p>
-      <span class="tags_modal-content-wrapper-new-span">
-        <input type="text" class="tags_modal-content-wrapper-new-span-input" />
-        <xc-icon-plus-circle class="tags_modal-content-wrapper-new-span-icon" />
-      </span>
-    </div>
+    <button xcButtonsWrappers class="button-round-close" (click)="closeTags()">
+      <xc-icon-close-s class="tags_modal_wrapper-icon" />
+    </button>
   </div>
-  <button
-    xcButtonsWrappers
-    class="button-round-close push-close"
-    (click)="closeTags()"
-  >
-    <xc-icon-close-s class="tags_modal-icon" />
-  </button>
 </section>
-
