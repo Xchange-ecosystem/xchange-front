@@ -1,5 +1,5 @@
 import { NgFor, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   XcIconAIComponent,
   XcIconArrowRightComponent,
@@ -15,7 +15,7 @@ import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProfileHeaderComponent } from './profile-header/profile-header.component';
-import { NgModel } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 import { LanguageDropdownComponent } from './language-dropdown/language-dropdown.component';
 
 @Component({
@@ -39,15 +39,37 @@ import { LanguageDropdownComponent } from './language-dropdown/language-dropdown
     XcIconStarComponent,
     RateModule,
     ProfileHeaderComponent,
-    LanguageDropdownComponent
+    LanguageDropdownComponent,
+    FormsModule
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
 export class ProfileComponent {
+  @Input() email: string = 'fabian@xchange.eco';
+  @Input() linkedin: string = 'https://www.linkedin.com/in/fabian-bermeo';
+  @Input()description: string = `I founded COBIOM as a network of professionals who believe that
+  collaboration and cocreation are our best tools to transform
+  businesses into agents for a better future. As Director and head of
+  strategy and product development, my great team and I develop the
+  COBIOM ecosystem as a consultancy, coworking and learning platform
+  that provides end-to-end services from intent to implementation in
+  innovation and business transformation.`;
+  
+  tempDescription = '';
+  tempEmail = '';
+  tempLinkedin = '';
+
   activeSection: string = 'Apperance';
   isTagsOpen = false;
   selectedLang: string | null = null;
+
+  editingDescription = false;
+  editingEmail       = false;
+  editingLinkedin    = false;
+
+
+  editing = false;
 
   tags = [
     'Innovation',
@@ -110,9 +132,7 @@ export class ProfileComponent {
     { value: 'fr', label: 'Français' },
     { value: 'de', label: 'Deutsch' },
   ];
-  saveChanges() {
-    alert('Changes saved');
-  }
+
   closeDialog() {
     alert('Dialog closed');
   }
@@ -131,5 +151,45 @@ export class ProfileComponent {
   onLanguageChange(newLang: string) {
     this.selectedLang = newLang;
     console.log('Idioma seleccionado:', newLang);
+  }
+
+  editDescription() {
+    this.tempDescription = this.description;
+    this.editingDescription = true;
+  }
+  saveDescription() {
+    this.description = this.tempDescription.trim();
+    this.editingDescription = false;
+  }
+  cancelDescription() {
+    this.editingDescription = false;
+  }
+
+  editEmail() {
+    this.tempEmail = this.email;
+    this.editingEmail = true;
+  }
+  saveEmail() {
+    this.email = this.tempEmail.trim();
+    this.editingEmail = false;
+  }
+  cancelEmail() {
+    this.editingEmail = false;
+  }
+
+  editLinkedin() {
+    this.tempLinkedin = this.linkedin;
+    this.editingLinkedin = true;
+  }
+  saveLinkedin() {
+    this.linkedin = this.tempLinkedin.trim();
+    this.editingLinkedin = false;
+  }
+  cancelLinkedin() {
+    this.editingLinkedin = false;
+  }
+
+  saveChanges() {
+    console.log('Cambios guardados');
   }
 }

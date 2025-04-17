@@ -9,15 +9,14 @@
     <section class="apperance_about">
       <div class="apperance_about-title">
         <p xcHeadlineStyles class="headline-300">About Me</p>
-        <p xcCopyStyles class="copy-400">
-          I founded COBIOM as a network of professionals who believe that
-          collaboration and cocreation our our best tools to transform
-          businesses into agents for a better future. As Director and head of
-          strategy and product development, me and my great team develop the
-          COBIOM ecosystem as a consultancy, coworking and learning platform
-          that provides end-to-end services from intent to implementation in
-          innovation and business transformation.
-        </p>
+
+        <!-- Modo visual -->
+        <ng-container *ngIf="!editingDescription; else editDescTpl">
+          <p (click)="editDescription()">{{ description }}</p>
+        </ng-container>
+        <ng-template #editDescTpl>
+          <textarea [(ngModel)]="tempDescription" cols="60" rows="20" autofocus class="edit-textarea"></textarea>
+        </ng-template>
       </div>
     </section>
     <section class="apperance_further">
@@ -32,15 +31,13 @@
           </span>
           <span class="apperance_further-settings-options-item-language">
             <p xcCopyStyles class="copy-300-bold">Platform language</p>
-            
-              <app-language-dropdown
+
+            <app-language-dropdown
               class="apperance_further-settings-options-item-language-component"
               [options]="languageOptions"
               (change)="onLanguageChange($event)"
             ></app-language-dropdown>
-           
           </span>
-          
           <span class="apperance_further-settings-options-item-interests">
             <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
             <div class="apperance_further-settings-options-item-interests-tags">
@@ -83,13 +80,21 @@
           </span>
           <span class="apperance_further-settings-options-item-email">
             <p xcCopyStyles class="copy-300-bold">Email</p>
-            <p xcCopyStyles class="copy-400">fabian&#64;xchange.eco</p>
+            <ng-container *ngIf="!editingEmail; else editEmailTpl">
+              <p (click)="editEmail()">{{ email }}</p>
+            </ng-container>
+            <ng-template #editEmailTpl>
+              <input [(ngModel)]="tempEmail" type="email" autofocus class="edit-input"/>
+            </ng-template>
           </span>
           <span class="apperance_further-settings-options-item-linkedin">
             <p xcCopyStyles class="copy-300-bold">Linkedin</p>
-            <p xcCopyStyles class="copy-400">
-              https://www.linkedin.com/in/fabian-bermeo
-            </p>
+            <ng-container *ngIf="!editingLinkedin; else editLinkTemp" >
+              <p (click)="editLinkedin()">{{ linkedin }}</p>
+            </ng-container>
+            <ng-template #editLinkTemp>
+              <input [(ngModel)]="tempLinkedin" type="url" autofocus  class="edit-input"/>
+            </ng-template>
           </span>
         </div>
       </div>
@@ -312,24 +317,31 @@
         <span class="tags_modal_wrapper-content-article-item">
           <xc-icon-ai class="ia-icon" />
           <p xcCopyStyles class="copy-200-bold">
-            Our AI matches your skills with projects, templates and other members.
-            Thats why its important to build a strong profile
+            Our AI matches your skills with projects, templates and other
+            members. Thats why its important to build a strong profile
           </p>
         </span>
       </article>
       <div class="tags_modal_wrapper-content-injector">
         <div xcProfileTags="gray" *ngFor="let tag of tags" class="tag">
           {{ tag }}
-          <button><xc-icon-close-s class="tags_modal_wrapper-icon-red" /></button>
+          <button>
+            <xc-icon-close-s class="tags_modal_wrapper-icon-red" />
+          </button>
         </div>
       </div>
       <div class="divider"></div>
       <div class="tags_modal_wrapper-content-new">
         <p xcHeadlineStyles class="headline-200">Add tags</p>
         <span class="tags_modal_wrapper-content-new-span">
-          <input type="text" class="tags_modal_wrapper-content-new-span-input" />
+          <input
+            type="text"
+            class="tags_modal_wrapper-content-new-span-input"
+          />
           <button>
-            <xc-icon-plus-circle class="tags_modal_wrapper-content-new-span-icon" />
+            <xc-icon-plus-circle
+              class="tags_modal_wrapper-content-new-span-icon"
+            />
           </button>
         </span>
       </div>
