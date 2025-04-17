@@ -1,6 +1,40 @@
 <div class="header">
-    <h1 class="header-title">{{ title }}</h1>
-    <button *ngIf="isEditable" class="edit-button" (click)="onEditClick()">
-        <xc-icon-edit/>
-    </button>
-</div>
+    <!-- Modo vista -->
+    <ng-container *ngIf="!editing; else editMode">
+      <h1 xcHeadlineStyles class="headline-400">{{ title }}</h1>
+      <button
+        *ngIf="isEditable"
+        class="edit-button"
+        (click)="onEditClick()"
+        aria-label="Editar título"
+      >
+        <xc-icon-edit />
+      </button>
+    </ng-container>
+  
+    <!-- Modo edición -->
+    <ng-template #editMode>
+      <input
+        type="text"
+        class="header-input"
+        [(ngModel)]="tempTitle"
+      />
+      <div class="button-group" *ngIf="editing">
+        <button
+          class="edit-button cancel"
+          (click)="onCancelClick()"
+          aria-label="Cancelar edición"
+        >
+          <xc-icon-times />
+        </button>
+        <button
+          class="edit-button confirm"
+          (click)="onSaveClick()"
+          aria-label="Guardar título"
+        >
+          <xc-icon-check />
+        </button>
+      </div>
+    </ng-template>
+  </div>
+  
