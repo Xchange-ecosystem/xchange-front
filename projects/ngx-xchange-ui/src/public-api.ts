@@ -120,3 +120,14 @@ export * from './directives/headline-styles/headline-styles.directive';
 export * from './directives/chat-option/chat-option.directive'
 export * from './components/chat-options-button/chat-options-button.component';
 export * from './components/ai-filter/ai-filter.component';
+export * from './directives/notification-bubble/notification-bubble.directive';
+export * from './components/info-row/info-row.component'
+export * from './components/header-title/header-title.component';
+export * from './components/header-background/header-background.component';
+export * from './components/feed-objective/feed-objective.component';
+export * from './directives/copy-styles/copy-styles.directive';
+export * from './directives/headline-styles/headline-styles.directive';
+export * from './components/new-aside-nav/new-aside-nav.component';
+export * from './components/aside-links/aside-links.component'
+export * from './directives/aside-link/aside-link.directive';
+export * from './components/aside-nav/aside-nav/aside-nav.component'
