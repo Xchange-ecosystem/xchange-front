@@ -30,6 +30,17 @@
               <xc-toggle color="green" />
             </div>
           </span>
+          <span class="apperance_further-settings-options-item-language">
+            <p xcCopyStyles class="copy-300-bold">Platform language</p>
+            
+              <app-language-dropdown
+              class="apperance_further-settings-options-item-language-component"
+              [options]="languageOptions"
+              (change)="onLanguageChange($event)"
+            ></app-language-dropdown>
+           
+          </span>
+          
           <span class="apperance_further-settings-options-item-interests">
             <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
             <div class="apperance_further-settings-options-item-interests-tags">

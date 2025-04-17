@@ -1,0 +1,20 @@
+<div class="custom-select" (clickOutside)="closeDropdown()">
+    <!-- Trigger -->
+    <div class="custom-select-trigger" (click)="toggleDropdown()">
+      {{ selectedLabel || 'Selecciona un idioma' }}
+      <span class="arrow-down"></span>
+    </div>
+  
+    <!-- Lista de opciones -->
+    <ul *ngIf="isOpen" class="custom-options">
+      <li
+        *ngFor="let opt of options"
+        (click)="selectOption(opt)"
+        [class.selected]="opt.value === selectedValue"
+        class="custom-option"
+      >
+        {{ opt.label }}
+      </li>
+    </ul>
+  </div>
+  

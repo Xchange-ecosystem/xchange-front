@@ -61,21 +61,9 @@
             flex-direction: column;
             gap: 6px;
             width: 100%;
-            &-dialog {
+            &-component {
               display: flex;
               width: 100%;
-              border: 1px solid ;
-                border-color: var(--xc-grey100);
-                border-radius: 8px;
-                padding: 8px;
-                gap: 8px;
-                align-items: center;
-              &-select {
-                display: flex;
-                width: 100%;
-                background: transparent;
-                outline: none;
-              }
             }
           }
           &-interests {
