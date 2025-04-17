@@ -309,8 +309,6 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         width: '56px',
         height: '56px',
         alignSelf: 'start',
-        marginTop: '140px',
-        marginLeft: '16px',
       },
     },
   };

@@ -6,6 +6,8 @@
     height: 100%;
     margin-top: auto;
     margin-bottom: auto;
+    background:white ;
+    border-radius: 16px;
     &-article {
       display: grid;
       grid-template-columns: 4fr 3fr;   
