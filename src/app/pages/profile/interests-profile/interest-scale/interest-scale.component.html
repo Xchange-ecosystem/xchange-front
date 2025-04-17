@@ -1,0 +1,8 @@
+<div class="scale">
+  <div
+    *ngFor="let lvl of levels"
+    class="dot"
+    [class.selected]="lvl <= selectedLevel"
+    (click)="onSelect(lvl)"
+  ></div>
+</div>

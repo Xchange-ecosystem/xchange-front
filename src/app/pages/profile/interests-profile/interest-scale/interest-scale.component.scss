@@ -1,0 +1,17 @@
+.scale {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--xc-grey200);
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &.selected {
+    background: var(--xc-primary500);
+  }
+}

@@ -1,8 +1,6 @@
 <section class="profile">
   <header>
-    <app-profile-header
-      (sectionChanged)="onSectionChange($event)"
-    ></app-profile-header>
+    <app-profile-header (sectionChanged)="onSectionChange($event)"></app-profile-header>
   </header>
 
   <article *ngIf="activeSection === 'Apperance'" class="apperance">
@@ -10,7 +8,6 @@
       <div class="apperance_about-title">
         <p xcHeadlineStyles class="headline-300">About Me</p>
 
-        <!-- Modo visual -->
         <ng-container *ngIf="!editingDescription; else editDescTpl">
           <p (click)="editDescription()">{{ description }}</p>
         </ng-container>
@@ -32,43 +29,29 @@
           <span class="apperance_further-settings-options-item-language">
             <p xcCopyStyles class="copy-300-bold">Platform language</p>
 
-            <app-language-dropdown
-              class="apperance_further-settings-options-item-language-component"
-              [options]="languageOptions"
-              (change)="onLanguageChange($event)"
-            ></app-language-dropdown>
+            <app-language-dropdown class="apperance_further-settings-options-item-language-component"
+              [options]="languageOptions" (change)="onLanguageChange($event)"></app-language-dropdown>
           </span>
           <span class="apperance_further-settings-options-item-interests">
             <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
             <div class="apperance_further-settings-options-item-interests-tags">
-              <div
-                class="apperance_further-settings-options-item-interests-tags-container"
-              >
+              <div class="apperance_further-settings-options-item-interests-tags-container">
                 <div xcProfileTags="gray">Generate</div>
                 <div xcProfileTags="gray">Organizational</div>
                 <div xcProfileTags="gray">Improve</div>
                 <div xcProfileTags="gray">Analyze</div>
                 <div xcProfileTags="gray">Develop</div>
               </div>
-              <button
-                (click)="openTags()"
-                class="apperance_further-settings-options-item-interests-tags-see"
-              >
-                <xc-icon-arrow-right
-                  class="apperance_further-settings-options-item-interests-tags-see-icon"
-                />
+              <button (click)="openTags()" class="apperance_further-settings-options-item-interests-tags-see">
+                <xc-icon-arrow-right class="apperance_further-settings-options-item-interests-tags-see-icon" />
                 <p xcCopyStyles class="copy-300-bold">See all tags</p>
               </button>
             </div>
           </span>
           <span class="apperance_further-settings-options-item-blockchain">
             <p xcCopyStyles class="copy-300-bold">Blockchain key</p>
-            <div
-              class="apperance_further-settings-options-item-blockchain-info"
-            >
-              <xc-icon-copy
-                class="apperance_further-settings-options-item-blockchain-info-icon"
-              />
+            <div class="apperance_further-settings-options-item-blockchain-info">
+              <xc-icon-copy class="apperance_further-settings-options-item-blockchain-info-icon" />
               <p xcCopyStyles class="copy-400">
                 0x1234567890abcdef1234567890abcdef12345678
               </p>
@@ -84,27 +67,23 @@
               <p (click)="editEmail()">{{ email }}</p>
             </ng-container>
             <ng-template #editEmailTpl>
-              <input [(ngModel)]="tempEmail" type="email" autofocus class="edit-input"/>
+              <input [(ngModel)]="tempEmail" type="email" autofocus class="edit-input" />
             </ng-template>
           </span>
           <span class="apperance_further-settings-options-item-linkedin">
             <p xcCopyStyles class="copy-300-bold">Linkedin</p>
-            <ng-container *ngIf="!editingLinkedin; else editLinkTemp" >
+            <ng-container *ngIf="!editingLinkedin; else editLinkTemp">
               <p (click)="editLinkedin()">{{ linkedin }}</p>
             </ng-container>
             <ng-template #editLinkTemp>
-              <input [(ngModel)]="tempLinkedin" type="url" autofocus  class="edit-input"/>
+              <input [(ngModel)]="tempLinkedin" type="url" autofocus class="edit-input" />
             </ng-template>
           </span>
         </div>
       </div>
     </section>
     <footer class="apperance_footer">
-      <button
-        type="button"
-        class="apperance_footer-save"
-        (click)="saveChanges()"
-      >
+      <button type="button" class="apperance_footer-save" (click)="saveChanges()">
         <xc-icon-save class="apperance_footer-save-icon" />
         Save changes
       </button>
@@ -115,11 +94,8 @@
     <section class="wallet_assets">
       <p xcHeadlineStyles class="headline-300">My assets</p>
       <div class="wallet_assets-graph">
-        <img
-          src="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png"
-          alt="temp-graph-image"
-          class="wallet_assets-graph-image"
-        />
+        <img src="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png" alt="temp-graph-image"
+          class="wallet_assets-graph-image" />
       </div>
     </section>
     <section class="wallet_contributions">
@@ -166,28 +142,18 @@
   <article *ngIf="activeSection === 'Premium upgrade'" class="premium-upgrade">
     <section class="premium-upgrade-video">
       <h5 xcHeadlineStyles class="headline-300">Upgrade to investor Premium</h5>
-      <iframe
-        class="premium-upgrade-video-content"
-        height="350"
-        src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+      <iframe class="premium-upgrade-video-content" height="350"
+        src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1" frameborder="0" allowfullscreen></iframe>
     </section>
     <section class="premium-upgrade-options">
       <div class="premium-upgrade-options-basic">
-        <h6
-          xcHeadlineStyles
-          class="headline-300 premium-upgrade-options-basic-title"
-        >
+        <h6 xcHeadlineStyles class="headline-300 premium-upgrade-options-basic-title">
           Xcamp Basic
         </h6>
         <div class="premium-upgrade-options-basic-container">
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle
-                class="premium-upgrade-options-basic-container-item-wrapper-icon"
-              />
+              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Projects and collaboratios in the community
@@ -195,17 +161,13 @@
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle
-                class="premium-upgrade-options-basic-container-item-wrapper-icon"
-              />
+              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">Collaboration reward credits</p>
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle
-                class="premium-upgrade-options-basic-container-item-wrapper-icon"
-              />
+              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Start projects with AI templates
@@ -213,9 +175,7 @@
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle
-                class="premium-upgrade-options-basic-container-item-wrapper-icon"
-              />
+              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Project navigation and collaborator assignments
@@ -227,48 +187,32 @@
         <h6 xcHeadlineStyles class="headline-300">Investor Premium</h6>
         <div class="premium-upgrade-options-investor-container">
           <span class="premium-upgrade-options-investor-container-item">
-            <div
-              class="premium-upgrade-options-investor-container-item-wrapper"
-            >
-              <xc-icon-check-circle
-                class="premium-upgrade-options-investor-container-item-wrapper-icon"
-              />
+            <div class="premium-upgrade-options-investor-container-item-wrapper">
+              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
             </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div
-              class="premium-upgrade-options-investor-container-item-wrapper"
-            >
-              <xc-icon-check-circle
-                class="premium-upgrade-options-investor-container-item-wrapper-icon"
-              />
+            <div class="premium-upgrade-options-investor-container-item-wrapper">
+              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
             </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div
-              class="premium-upgrade-options-investor-container-item-wrapper"
-            >
-              <xc-icon-check-circle
-                class="premium-upgrade-options-investor-container-item-wrapper-icon"
-              />
+            <div class="premium-upgrade-options-investor-container-item-wrapper">
+              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
             </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div
-              class="premium-upgrade-options-investor-container-item-wrapper"
-            >
-              <xc-icon-check-circle
-                class="premium-upgrade-options-investor-container-item-wrapper-icon"
-              />
+            <div class="premium-upgrade-options-investor-container-item-wrapper">
+              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
@@ -286,26 +230,25 @@
     </section>
   </article>
 
-  <article
-    *ngIf="activeSection === 'Premium settings'"
-    class="premium_settings"
-  >
+  <article *ngIf="activeSection === 'Premium settings'" class="premium_settings">
     <section class="premium_settings-wrapper">
-      <article class="premium_settings-wrapper-search">
-        <p xcHeadlineStyles class="headline-300">
-          Select an Investor profile and customize your own
-        </p>
-        <span class="premium_settings-wrapper-search-span">
-          <xc-rate />
-        </span>
-      </article>
-      <article class="premium_settings-profile">
-        <aside class="premium_settings-profile-cards"></aside>
-        <div class="premium_settings-profile-custom"></div>
-      </article>
-      <article class="premium_settings-custom"></article>
+      <div class="premium_settings-wrapper-custom">
+        <button (click)="addSelector()">+ Añadir otro interés</button>
+
+        <div class="interest-wrapper" *ngFor="let sel of selectedInterests; let i = index">
+          <app-interests-profile 
+          [options]="getFilteredOptions(i)"
+          [selectedInterest]="sel.interest" 
+            [selectedLevel]="sel.level"
+            (selection)="onInterestSelected($event, i)"
+          ></app-interests-profile>
+        </div>
+      </div>
+      <div class="premium_settings-wrapper-load"></div>
     </section>
   </article>
+
+
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">
@@ -334,14 +277,9 @@
       <div class="tags_modal_wrapper-content-new">
         <p xcHeadlineStyles class="headline-200">Add tags</p>
         <span class="tags_modal_wrapper-content-new-span">
-          <input
-            type="text"
-            class="tags_modal_wrapper-content-new-span-input"
-          />
+          <input type="text" class="tags_modal_wrapper-content-new-span-input" />
           <button>
-            <xc-icon-plus-circle
-              class="tags_modal_wrapper-content-new-span-icon"
-            />
+            <xc-icon-plus-circle class="tags_modal_wrapper-content-new-span-icon" />
           </button>
         </span>
       </div>

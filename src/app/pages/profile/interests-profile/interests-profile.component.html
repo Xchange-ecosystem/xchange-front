@@ -1,1 +1,13 @@
-<p>interests-profile works!</p>
+<div class="interest-item">
+    <app-interest-select
+      [options]="options"
+      [selectedValue]="selectedInterest"
+      (selectionChange)="onInterestChange($event)"
+    ></app-interest-select>
+  
+    <app-interest-scale
+      [selectedLevel]="selectedLevel"
+      (levelChange)="onLevelChange($event)"
+    ></app-interest-scale>
+  </div>
+  

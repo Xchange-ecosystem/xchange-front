@@ -15,8 +15,9 @@ import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProfileHeaderComponent } from './profile-header/profile-header.component';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { LanguageDropdownComponent } from './language-dropdown/language-dropdown.component';
+import { InterestsProfileComponent } from './interests-profile/interests-profile.component';
 
 @Component({
   selector: 'app-profile',
@@ -40,7 +41,8 @@ import { LanguageDropdownComponent } from './language-dropdown/language-dropdown
     RateModule,
     ProfileHeaderComponent,
     LanguageDropdownComponent,
-    FormsModule
+    FormsModule,
+    InterestsProfileComponent
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
@@ -60,15 +62,13 @@ export class ProfileComponent {
   tempEmail = '';
   tempLinkedin = '';
 
-  activeSection: string = 'Apperance';
+  activeSection: string = 'Premium settings';
   isTagsOpen = false;
   selectedLang: string | null = null;
 
   editingDescription = false;
   editingEmail       = false;
   editingLinkedin    = false;
-
-
   editing = false;
 
   tags = [
@@ -133,6 +133,23 @@ export class ProfileComponent {
     { value: 'de', label: 'Deutsch' },
   ];
 
+  interestOptions = [
+    { value: 'design',    label: 'Design' },
+    { value: 'marketing', label: 'Marketing' },
+    { value: 'dev',       label: 'Development' },
+    { value: 'ux',        label: 'UX/UI' },
+    { value: 'data',      label: 'Data Science' },
+  ];
+  selectedInterests: { interest: string | null; level: number }[] = [];
+
+  ngOnInit() {
+    this.selectedInterests = Array.from({ length: 5 }, () => ({
+      interest: null,
+      level: 0
+    }));
+  }
+
+
   closeDialog() {
     alert('Dialog closed');
   }
@@ -191,5 +208,25 @@ export class ProfileComponent {
 
   saveChanges() {
     console.log('Cambios guardados');
+  }
+
+
+  getFilteredOptions(idx: number) {
+    // recoge todos los valores ya seleccionados, excepto el de este índice
+    const taken = this.selectedInterests
+      .filter((_, i) => i !== idx)
+      .map(sel => sel.interest)
+      .filter((v): v is string => v !== null);
+
+    return this.interestOptions.filter(opt => !taken.includes(opt.value));
+  }
+
+  onInterestSelected(event: { interest: string; level: number }, idx: number) {
+    this.selectedInterests[idx] = event;
+    console.log(`Selector ${idx}:`, event);
+  }
+
+  addSelector() {
+    this.selectedInterests.push({ interest: null, level: 0 });
   }
 }
