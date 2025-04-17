@@ -5,6 +5,8 @@ import { NgFor, NgIf } from '@angular/common';
 import { CardStylesDirective } from '../../../../../projects/ngx-xchange-ui/src/directives/card-styles/card-styles.directive';
 import { ProjectModalComponent } from 'src/app/pages/projects/project-modal/project-modal.component';
 import { XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
+import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
+import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 export interface ProjectInterface {
   image: string;
   title: string;
@@ -27,7 +29,9 @@ export interface ProjectInterface {
     NgFor, 
     NgIf,
     ProjectModalComponent,
-    XcIconCloseSComponent
+    XcIconCloseSComponent,
+    HeadlineStylesDirective,
+    CopyStylesDirective
   ],
   templateUrl: './projects-card.component.html',
   styleUrl: './projects-card.component.css'

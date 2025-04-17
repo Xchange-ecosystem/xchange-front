@@ -3,7 +3,7 @@
       <img [src]="project.image" alt="project-background" class="project-image">
     </div>
     <div class="project-title">
-      <h6>{{ project.title }}</h6>
+      <h6 xcHeadlineStyles class="headline-300">{{ project.title }}</h6>
       <span class="project-tags">
         <div xcProfileTags="gray" *ngFor="let tag of project.tags">{{ tag }}</div>
       </span>
@@ -18,7 +18,7 @@
       </xc-project-progress-bar>
     </div>
     <div class="project-description">
-      <p>{{ project.description }}</p>
+      <p xcCopyStyles class="copy-400">{{ project.description }}</p>
     </div>
   </button>
 
