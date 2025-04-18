@@ -428,7 +428,7 @@
     grid-template-columns: 3fr 3fr;
     row-gap: 6px;
     width: calc(100% - 165px);
-    height: calc(100% - 16px);
+    height: calc(100% - 430px);
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -440,7 +440,43 @@
       height: 100%;
       padding: 24px;
       gap: 16px;
+      &-titles{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+      }
+      .save{
+        display: flex;
+        width: fit-content;
+      }
+      .save-icon{
+        display: flex;
+        width: 20px;
+        height: 20px;
+        stroke: white;
+      }
+      &-container{
+        display: flex;
+        width: 20px;
+        height: 20px;
+      }
     }
+    .injector{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-height: 100%;
+      overflow-y: scroll;
+      padding: 24px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &-title{
+        margin-left: 32px;
+      }
+    }	
   }
 }
 

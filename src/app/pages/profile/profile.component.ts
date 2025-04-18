@@ -18,6 +18,7 @@ import { ProfileHeaderComponent } from './profile-header/profile-header.componen
 import { FormsModule } from '@angular/forms';
 import { LanguageDropdownComponent } from './language-dropdown/language-dropdown.component';
 import { InterestsProfileComponent } from './interests-profile/interests-profile.component';
+import { InterestCardComponent } from './interest-card/interest-card.component';
 
 @Component({
   selector: 'app-profile',
@@ -42,7 +43,9 @@ import { InterestsProfileComponent } from './interests-profile/interests-profile
     ProfileHeaderComponent,
     LanguageDropdownComponent,
     FormsModule,
-    InterestsProfileComponent
+    InterestsProfileComponent,
+    InterestCardComponent,
+    ButtonsWrappersDirective,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',

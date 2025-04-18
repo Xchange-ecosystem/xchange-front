@@ -20,7 +20,7 @@ export class InterestSelectComponent {
 
  get selectedLabel() {
    const found = this.options.find(o => o.value === this.selectedValue);
-   return found ? found.label : 'Selecciona…';
+   return found ? found.label : 'Select Interest';
  }
 
  toggleDropdown() {

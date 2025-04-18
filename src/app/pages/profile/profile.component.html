@@ -233,18 +233,30 @@
   <article *ngIf="activeSection === 'Premium settings'" class="premium_settings">
     <section class="premium_settings-wrapper">
       <div class="premium_settings-wrapper-custom">
-        <button (click)="addSelector()">+ Añadir otro interés</button>
-
+        <h6 xcHeadlineStyles class="headline-300">Customise your premium profile</h6>
+        <span class="premium_settings-wrapper-custom-titles">
+          <p xcCopyStyles class="copy-300">Interests</p>
+          <p xcCopyStyles class="copy-300">Interests scale</p>
+        </span>
         <div class="interest-wrapper" *ngFor="let sel of selectedInterests; let i = index">
-          <app-interests-profile 
-          [options]="getFilteredOptions(i)"
-          [selectedInterest]="sel.interest" 
-            [selectedLevel]="sel.level"
-            (selection)="onInterestSelected($event, i)"
-          ></app-interests-profile>
+          <app-interests-profile [options]="getFilteredOptions(i)" [selectedInterest]="sel.interest"
+            [selectedLevel]="sel.level" (selection)="onInterestSelected($event, i)"></app-interests-profile>
         </div>
+        <button (click)="addSelector()" class="premium_settings-wrapper-custom-button">
+          <p xcCopyStyles class="copy-400-bold">
+            + Añadir otro interés
+          </p>
+        </button>
+        <button xcButtonsWrappers (click)="saveChanges()" class="button-filled-noHeight save">
+          <xc-icon-save class="save-icon" />
+          <p>Guardar cambios</p>
+        </button>
       </div>
-      <div class="premium_settings-wrapper-load"></div>
+      <div class="injector">
+        <h6 xcHeadlineStyles class="headline-300 injector-title">... or load from predefined profiles to get started</h6>
+        <app-interest-card class="injector">
+        </app-interest-card>
+      </div>
     </section>
   </article>
 
