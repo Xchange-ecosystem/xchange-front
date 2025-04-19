@@ -418,21 +418,26 @@
 .premium_settings {
   display: flex;
   flex-direction: column;
-  column-gap: 32px;
   height: 100%;
   align-items: center;
   justify-content: start;
-  box-sizing: border-box;
+  overflow-y: scroll ;
+  gap: 24px;
+  -ms-overflow-style: none;      
+      &::-webkit-scrollbar {
+        display: none;
+      }
   &-wrapper {
     display: grid;
     grid-template-columns: 3fr 3fr;
     row-gap: 6px;
     width: calc(100% - 165px);
-    height: calc(100% - 430px);
+    // height: calc(100% - 430px);
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     background: var(--xc-white);
+    border-radius: 16px;
     &-custom {
       display: flex;
       flex-direction: column;
@@ -477,6 +482,148 @@
         margin-left: 32px;
       }
     }	
+  }
+  &-invoice{
+    display: grid;
+    padding: 24px;
+    grid-template-columns: 3fr 3fr;
+    row-gap: 6px;
+    width: calc(100% - 165px);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: var(--xc-white);
+    border-radius: 16px;
+    &-premium{
+      display: flex;
+      gap: 16px;
+      &-basic {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 50%;
+        border-radius: 8px;
+        background: var(--xc-gradient-light-grey-on-white);
+        padding: 24px;
+  
+        &-title {
+          text-align: center;
+        }
+  
+        &-container {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: start;
+          height: 100%;
+  
+          &-item {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            gap: 8px;
+  
+            &-wrapper {
+              display: flex;
+              width: 20px;
+              height: 20px;
+              justify-content: start;
+              align-items: center;
+  
+              &-icon {
+                display: flex;
+                width: 20px;
+                height: 20px;
+                stroke: var(--xc-black500);
+              }
+            }
+          }
+        }
+      }
+      &-investor {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 50%;
+        border: solid 1px;
+        border-color: var(--xc-categories-suggestion);
+        border-radius: 8px;
+        padding: 24px;
+  
+        &-container {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          align-items: center;
+  
+          &-item {
+            display: flex;
+            width: 100%;
+            gap: 8px;
+  
+            &-wrapper {
+              display: flex;
+              justify-content: start;
+              align-items: start;
+  
+              &-icon {
+                display: flex;
+                width: 20px;
+                height: 20px;
+                stroke: var(--xc-black500);
+              }
+            }
+          }
+        }
+  
+        &-footer {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-self: center;
+          gap: 16px;
+          height: 100%;
+  
+          .button {
+            text-wrap: nowrap;
+            display: flex;
+            align-items: center;
+  
+            &-icon {
+              display: flex;
+              width: 20px;
+              height: 20px;
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+    &-table{
+      width: 100%;
+      border-collapse: collapse;
+      .billing-history-header{
+        display: flex;
+        justify-content: space-between;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 6px;
+      }
+  
+      td {
+        text-align: start;
+      }
+  
+      &-body {
+        &-row {
+          &-status {
+            display: flex;
+          }
+        }
+      }
+    }
   }
 }
 
