@@ -52,7 +52,6 @@ export class ProjectsComponent {
   openProject(project: ProjectInterface): void {
     this.selectedProject = project;
     this.isProjectOpen = true;
-    console.log('Proyecto seleccionado:', project);
   }
 
   closeProjectModal(): void {

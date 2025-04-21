@@ -237,7 +237,6 @@ export class ProfileComponent {
 
   onLanguageChange(newLang: string) {
     this.selectedLang = newLang;
-    console.log('Idioma seleccionado:', newLang);
   }
 
   editDescription() {
@@ -274,7 +273,6 @@ export class ProfileComponent {
     this.editingLinkedin = false;
   }
   saveChanges() {
-    console.log('Cambios guardados');
   }
 
 
@@ -289,7 +287,6 @@ export class ProfileComponent {
 
   onInterestSelected(event: { interest: string; level: number }, idx: number) {
     this.selectedInterests[idx] = event;
-    console.log(`Selector ${idx}:`, event);
   }
 
   addSelector() {

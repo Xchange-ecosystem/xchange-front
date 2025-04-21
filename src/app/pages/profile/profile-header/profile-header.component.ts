@@ -28,7 +28,7 @@ export class ProfileHeaderComponent {
     { name: 'Premium settings', hasNotifications: false }
   ];
 
-  @Input() isPremium = false;
+  @Input() isPremium = true;
   
   get sections() {
     return this.allSections.filter(s => {
@@ -44,6 +44,5 @@ export class ProfileHeaderComponent {
 
   onSectionSelected(section: string): void {
     this.sectionChanged.emit(section);
-    console.log('Selected section:', section);
   }
 }
