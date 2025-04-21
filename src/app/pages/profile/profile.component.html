@@ -264,7 +264,6 @@
       </div>
     
       <div class="premium_settings-invoice-container">
-        <!-- Column 1: Pricing cards -->
         <article class="premium_settings-invoice-premium">
           <div class="premium_settings-invoice-premium-basic">
             <h6 xcHeadlineStyles class="headline-300 premium_settings-invoice-premium-basic-title">
@@ -353,8 +352,7 @@
           </div>
         </article>
     
-        
-        <article>
+        <article class="premium_settings-invoice-billing">
           <table class="invoice-table">
             <thead class="invoice-table__header">
               <tr class="invoice-table__header-row">
@@ -371,22 +369,29 @@
                 class="invoice-table__row"
                 *ngFor="let invoice of invoiceData"
               >
-                <td class="invoice-table__cell invoice-table__cell--name">
+                <td class="invoice-table__cell">
                   <div class="invoice-table__name-wrapper">
-                    <xc-rounded-image
-                      [image]="image"
-                      class="invoice-table__image"
-                    />
+                    <xc-rounded-image [image]="image" class="invoice-table__image"/>
                     {{ invoice.invoiceName }}
                   </div>
                 </td>
                 <td class="invoice-table__cell">{{ invoice.date }}</td>
                 <td class="invoice-table__cell">{{ invoice.amount }}</td>
                 <td class="invoice-table__cell-button">
-                  <button>{{ invoice.status }}</button>
+                  <button class="invoice-table__cell-button-text">{{ invoice.status }}</button>
                 </td>
               </tr>
             </tbody>
+            <tfoot class="invoice-table__footer">
+              <tr>
+                <td colspan="4" class="invoice-table__footer-cell">
+                  <button class="invoice-table__footer-button">
+                    <xc-icon-arrow-right class="invoice-table__footer-button-icon"/>
+                    <p xcCopyStyles class="copy-400-bold">See full history </p>
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
           </table>
         </article>
       </div>

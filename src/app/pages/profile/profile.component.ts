@@ -48,7 +48,7 @@ import { ProfileSortComponent } from './profile-sort/profile-sort.component';
     InterestCardComponent,
     ButtonsWrappersDirective,
     RoundedImageModule,
-    ProfileSortComponent
+    ProfileSortComponent,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
@@ -136,56 +136,54 @@ export class ProfileComponent {
   invoiceData = [
     {
       invoiceName: "John Doe",
-      date: "2025‑04‑10",
-      amount: "$1,250.00",
+      date: "15 July 24",
+      amount: "99 Euro",
       status: "Invoice"
     },
     {
       invoiceName: "Jane Smith",
-      date: "2025‑04‑08",
-      amount: "$980.50",
+      date: "15 July 24",
+      amount: "99 Euro",
       status: "Invoice"
     },
     {
       invoiceName: "Michael Johnson",
-      date: "2025‑03‑28",
-      amount: "$720.00",
-      status: "Quote"
+      date: "15 July 24",
+      amount: "99 Euro",
+      status: "Invoice"
     },
     {
       invoiceName: "Emily Davis",
-      date: "2025‑03‑15",
-      amount: "$1,050.75",
+      date: "15 July 24",
+      amount: "99 Euro",
       status: "Invoice"
     },
     {
       invoiceName: "Daniel Martinez",
-      date: "2025‑03‑02",
-      amount: "$1,320.00",
-      status: "Overdue"
+      date: "15 July 24",
+      amount: "99 Euro",
+      status: "Invoice"
     },
     {
       invoiceName: "Laura Hernandez",
-      date: "2025‑02‑25",
-      amount: "$870.20",
+      date: "15 July 24",
+      amount: "99 Euro",
       status: "Invoice"
     },
     {
       invoiceName: "Carlos López",
-      date: "2025‑02‑14",
-      amount: "$2,300.00",
-      status: "Paid"
+      date: "15 July 24",
+      amount: "99 Euro",
+      status: "Invoice"
     },
     {
       invoiceName: "Natalie Wilson",
-      date: "2025‑01‑30",
-      amount: "$450.00",
-      status: "Cancelled"
+      date: "15 July 24",
+      amount: "99 Euro",
+      status: "Invoice"
     }
   ];
   
-  
-
   languageOptions = [
     { value: 'en', label: 'English' },
     { value: 'es', label: 'Español' },
@@ -241,7 +239,6 @@ export class ProfileComponent {
   cancelDescription() {
     this.editingDescription = false;
   }
-
   editEmail() {
     this.tempEmail = this.email;
     this.editingEmail = true;
@@ -253,7 +250,6 @@ export class ProfileComponent {
   cancelEmail() {
     this.editingEmail = false;
   }
-
   editLinkedin() {
     this.tempLinkedin = this.linkedin;
     this.editingLinkedin = true;
@@ -265,14 +261,12 @@ export class ProfileComponent {
   cancelLinkedin() {
     this.editingLinkedin = false;
   }
-
   saveChanges() {
     console.log('Cambios guardados');
   }
 
 
   getFilteredOptions(idx: number) {
-    // recoge todos los valores ya seleccionados, excepto el de este índice
     const taken = this.selectedInterests
       .filter((_, i) => i !== idx)
       .map(sel => sel.interest)
