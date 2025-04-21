@@ -74,7 +74,7 @@ export class ProfileComponent {
   activeSection: string = 'Premium settings';
   isTagsOpen = false;
   isCancelOpen=false;
-  isCancelToast=true;
+  isCancelToast=false;
   selectedLang: string | null = null;
 
   editingDescription = false;
