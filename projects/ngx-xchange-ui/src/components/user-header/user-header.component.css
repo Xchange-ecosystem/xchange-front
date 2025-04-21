@@ -4,7 +4,6 @@
   height: 180px;
   overflow: hidden;
 }
-
 .user-background-modal {
   width: 100%;
   height: 100%;
@@ -13,33 +12,226 @@
   top: 0;
   left: 0;
 }
-
 .profile-content {
   position: relative;
-  z-index: 10;
   background: var();
   border-radius: 20px 20px 0 0;
-  margin-top: -160px;
+  margin-top: -120px;
 }
-
 .user-data-name {
-  font-family: Manrope;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
-
 .user-profile-image {
   width: 200px;
   height: 200px;
 }
-
 .top-content {
   display: flex;
   justify-content: space-between;
   padding-left: 18px;
   padding-right: 18px;
   flex-wrap: wrap-reverse;
+}
+.user-data-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 8px;
+}
+.user-data-achievements {
+  display: flex;
+  gap: 24px;
+}
+.number-flex {
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+  gap: 8px;
+}
+.achievements-1 .achievements-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.user-image-container {
+  width: 200px;
+  height: 200px;
+}
+.project-data {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.project-data-info {
+  display: flex;
+  gap: 4px;
+}
+.project-data-assigned {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+.project-data-assigned-image {
+  width: 30px;
+  height: 30px;
+}
+.input-edit {
+  border: 1px solid var(--xc-grey500);
+  padding: 1px 6px;
+  border-radius: 8px;
+  outline: none;
+}
+.edit-buttons-icons {
+  display: flex;
+}
+.edit-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.change-image-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 32px;
+  padding: 9px;
+  background: var(--xc-black500);
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+.change-image-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 32px;
+  padding: 9px;
+  background: var(--xc-black500);
+  z-index: 10;
+}
+.change-profile-image{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 32px;
+  padding: 9px;
+  background: var(--xc-black500);
+  z-index: 10;
+}
+.profile-filters{
+  background: white;
+  display: flex;
+  gap: 8px;
+  height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+.profile-filters-button{
+  background-color: var(--xc-grey100);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+.user-image-wrapper{
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.modal-content {
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 32px;
+  width: 630px;
+  height: 300px;
+}
+.modal-buttons{
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+.dropzone {
+  border-radius: 4px;
+  padding: 24px;
+  text-align: center;
+  background: var(--xc-gradient-light-grey-on-white);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropzone-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.profile-filters-button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.profile-filters-button.selected {
+  background-color: var(--xc-grey100);
+}
+.profile-filters-button.unselected {
+  background: white;
+  color: black;
+}
+
+.input-dissabled{
+  display: none;
+}
+.icon-common {   /* Estilos para todos los iconos, solo varia color*/
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+.check-icon {
+  stroke: var(--xc-categories-completed);
+}
+.close-icon {
+  stroke: red;
+}
+.save-icon,
+.change-icon {
+  stroke: white;
+}
+.dropzone-icon{
+  stroke: var(--xc-grey500);
+}
+.cancel-icon,
+.edit-icon {
+  stroke: var(--xc-black500);
+}
+
+
+@media screen and (max-width: 768px) {
+  .achievements-1::after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -52,67 +244,4 @@
     padding-right: 20px;
     gap: 38px;
   }
-}
-
-.user-data-card {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  gap: 24px;
-}
-
-.user-data-achievements {
-  display: flex;
-  gap: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .achievements-1::after {
-    display: none;
-  }
-}
-
-.number-flex {
-  display: flex;
-  justify-content: start;
-  align-items: baseline;
-  gap: 8px;
-}
-
-.achievements-1 .achievements-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.achievements-number {
-  font-size: 32px;
-  font-weight: 600;
-}
-
-.user-image-container {
-  width: 200px;
-  height: 200px;
-}
-
-
-.project-data{
-  display: flex;
-  flex-direction: column;
-  gap:16px;
-  width: 100%;
-}
-
-.project-data-info{
-display: flex;
-gap: 4px;
-}
-.project-data-assigned{
-display: flex;
-gap: 8px;
-  width: 100%;
-}
-.project-data-assigned-image{
-  width: 30px;
-  height: 30px;
 }

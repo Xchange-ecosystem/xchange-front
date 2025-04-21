@@ -13,5 +13,6 @@ export class Headline400Directive {
     this.renderer.setStyle(this.el.nativeElement, 'font-size', '24px');
     this.renderer.setStyle(this.el.nativeElement, 'font-weight', '600');
     this.renderer.setStyle(this.el.nativeElement, 'color', 'var(--xc-black400)');
+    this.renderer.setStyle(this.el.nativeElement, 'line-height', '30px');
   }
 }

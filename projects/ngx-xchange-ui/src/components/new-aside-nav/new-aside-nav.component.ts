@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AsideLinksComponent } from 'projects/ngx-xchange-ui/src/components/aside-links/aside-links.component';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
+import { AsideLinksComponent } from '../aside-links/aside-links.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import {
   XcIconChartComponent,
@@ -9,13 +9,15 @@ import {
   XcIconQuestionCircleComponent,
   XcIconRocketComponent,
   XcIconSettingComponent,
-  XcIconSignAltComponent,
   XcIconStarComponent,
   XcIconUsersAltComponent,
   XcIconWifiComponent,
+  XcIconAngleRightComponent,
+  XcLogOutIconComponent
 } from '@indziaki/ngx-xchange-icons';
-import { XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
-import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-out.component';
+import { RouterLink } from '@angular/router';
+
+type BottomMenuType = 'profile' | 'support' | 'logout' | '';
 
 @Component({
   selector: 'xc-new-aside-nav',
@@ -36,13 +38,16 @@ import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-ou
     XcIconRocketComponent,
     XcIconWifiComponent,
     XcIconUsersAltComponent,
-    XcLogOutIconComponent
+    XcLogOutIconComponent,
+    RouterLink,
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',
 })
 export class NewAsideNavComponent {
   activeTab: string = 'ecosystem';
+  selectedMenu: BottomMenuType = '';
+
   public users = [
     {
       name: 'John Doe',
@@ -55,7 +60,14 @@ export class NewAsideNavComponent {
       linkedin: 'https://www.linkedin.com/in/john-doe',
     },
   ];
+
   setActiveTab(tab: string): void {
+    this.selectedMenu = '';
     this.activeTab = tab;
+  }
+
+  selectMenu(menu: BottomMenuType): void {
+    this.selectedMenu = menu;
+    this.activeTab = 'ecosystem';
   }
 }

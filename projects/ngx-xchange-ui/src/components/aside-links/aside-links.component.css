@@ -8,8 +8,8 @@
     gap: 4px;
     width: 24px;
     height: 24px;
-    stroke: black;
-    fill: black;
+    stroke: var(--xc-black500);
+    fill: var(--xc-black500);
 }
 
 .container_iconLabel {

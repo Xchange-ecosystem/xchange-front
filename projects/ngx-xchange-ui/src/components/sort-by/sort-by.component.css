@@ -35,13 +35,13 @@ padding: 0px 0px 0px 8px;
 }
 
 .sort-button__selected {
-fill: black;
+fill: var(--xc-black500);
 }
 
 .arrow-down {
   width: 24px;
   height: 24px;
-  stroke:black ;
+  stroke:var(--xc-black500) ;
   transition: transform 0.2s ease;
 }
 
@@ -107,7 +107,7 @@ fill: black;
 .search-icon {
   width: 16px;
   height: 16px;
-  stroke: black;
+  stroke: var(--xc-black500);
 }
 
 .search-button{

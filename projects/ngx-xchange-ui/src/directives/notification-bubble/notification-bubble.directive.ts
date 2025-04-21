@@ -16,7 +16,7 @@ export class NotificationBubbleDirective {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   private applyStyles() {
-    this.renderer.setStyle(this.el.nativeElement, 'background', 'var(--xc-gradient-light-blue)');
+    this.renderer.setStyle(this.el.nativeElement, 'background', 'var(--xc-brand-light-blue)');
     this.renderer.setStyle(this.el.nativeElement, 'border-radius', '64px');
     this.renderer.setStyle(this.el.nativeElement, 'min-width', '16px');
     this.renderer.setStyle(this.el.nativeElement, 'min-height', '16px');

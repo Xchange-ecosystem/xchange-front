@@ -7,12 +7,12 @@ import { Component, Input } from '@angular/core';
 })
 export class RoundedImageComponent{
   @Input() color?: string;
-  @Input() image:  string | null = null;
+  @Input() image:  string | null | undefined = null;
   @Input() marginSize: number = 10;
   marginSizeStr: string = ''
   constructor() {
     this.color = 'white'
   }
 
-  
+
 }

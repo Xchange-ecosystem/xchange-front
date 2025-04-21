@@ -4,8 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { PublicComponent } from './public.component';
 import { HomeComponent } from './home/containers/home.component';
 import { LoginComponent } from './login/containers/login.componet';
-import { FeedComponent } from '../pages/feed/feed.component';
-import { CommunityComponent } from '../pages/community/community.component';
 
 const routes: Routes = [
   {
@@ -27,6 +25,10 @@ const routes: Routes = [
       {
         path:'projects',
         loadComponent: () => import('src/app/pages/projects/projects.component').then(m => m.ProjectsComponent),
+      },
+      {
+        path:'profile',
+        loadComponent: () => import('src/app/pages/profile/profile.component').then(m => m.ProfileComponent),
       },
     ],
   },

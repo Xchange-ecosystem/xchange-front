@@ -15,10 +15,10 @@ export class AiFilterComponent implements OnInit {
   @Input() options: string[] = [];
   @Input() notification: boolean = false;
   @Input() selectedOption: string | null = null;
-
+  @Input() isOpen = false;
   @Output() optionSelected = new EventEmitter<string>();
+  @Output() openDropdown = new EventEmitter<void>();
 
-  isOpen = false;
 
   predefinedOptions: { [key: string]: string[] } = {
     state: ['Active', 'Inactive', 'Pending'],
@@ -33,11 +33,10 @@ export class AiFilterComponent implements OnInit {
   }
 
   toggleDropdown(): void {
-    this.isOpen = !this.isOpen;
+    this.openDropdown.emit();
   }
-
   selectOption(option: string, event: Event): void {
-    event.stopPropagation(); 
+    event.stopPropagation();
     this.selectedOption = option;
     this.optionSelected.emit(option);
     this.isOpen = false;

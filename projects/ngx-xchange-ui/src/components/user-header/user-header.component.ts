@@ -1,8 +1,11 @@
-import { NgFor, NgIf } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
-import { CardStylesDirective } from '../../directives/card-styles/card-styles.directive';
+import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
+import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
+import { ButtonsWrappersDirective } from '../../public-api';
+import { Headline500Directive } from '../../directives/headline-500/headline-500.directive';
 
 @Component({
   selector: 'xc-user-header',
@@ -11,17 +14,78 @@ import { CardStylesDirective } from '../../directives/card-styles/card-styles.di
     RoundedImageModule,
     NgFor,
     ProfileHeaderDirective,
-    CardStylesDirective,
-    NgIf
+    NgIf,
+    Headline400Directive,
+    Headline500Directive,
+    XcIconEditComponent,
+    XcIconCheckComponent,
+    XcIconCloseSComponent,
+    XcIconImageComponent,
+    XcIconImagePlusComponent,
+    XcIconSaveComponent,
+    ButtonsWrappersDirective,
+    NgClass
   ],
   templateUrl: './user-header.component.html',
   styleUrl: './user-header.component.css',
 })
 export class UserHeaderComponent {
   @Input() showImage: boolean = true;
+  @Input() showUserData: boolean = true;
   @Input() firstText: string = '';
   @Input() secondText: string = '';
-  @Input() showUserData: boolean = true;
+  @Input() isEditable: boolean = false;
+  @Input() selectedButton: string = 'appearance';
+  @Output() sectionChange = new EventEmitter<string>();
+  isProfileModalOpen: boolean = false;
+  isHeaderModalOpen: boolean = false;
+  newImageUrl: string = '';
+  isEditing: boolean = false;
+  editableText: string = '';
+
+  enableEditing(): void {
+    this.isEditing = true;
+    this.editableText = `${this.firstText} - ${this.secondText}`;
+  }
+
+  saveChanges(): void {
+    const [newFirstText, newSecondText] = this.editableText.split(' - ');
+    this.firstText = newFirstText || this.firstText;
+    this.secondText = newSecondText || this.secondText;
+    this.isEditing = false;
+  }
+
+  openHeaderModal(): void {
+    this.isHeaderModalOpen = true;
+    this.newImageUrl = ''; 
+  }
+
+  closeHeaderModal(): void {
+    this.isHeaderModalOpen = false; 
+  }
+
+  openImageModal(): void {
+    this.isProfileModalOpen = true;
+    this.newImageUrl = ''; 
+  }
+
+  closeModal(): void {
+    this.isProfileModalOpen = false; 
+  }
+
+  cancelChanges(): void {
+    this.isEditing = false;
+  }
+
+  selectFilter(filter: string): void {
+    this.selectedButton = filter; 
+  }
+
+  changeSection(section: string): void {
+    this.selectedButton = section;
+    this.sectionChange.emit(section); 
+  }
+
   public users = [
     {
       name: 'John Doe',
@@ -39,6 +103,7 @@ export class UserHeaderComponent {
       memberDate: '7 Aug 2024',
       email: 'tester@gmail.com',
       linkedin: 'https://www.linkedin.com/in/john-doe',
+      premium:true,
     },
   ];
 }

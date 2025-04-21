@@ -1,0 +1,36 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 24px;
+    width: 420px;
+    height: 200px;
+    border-radius: 8px;
+    gap: 24px;
+    .info-rows {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 12px;
+    }
+    .info-rows-span {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+      width: 100%;
+      &-data {
+        display: flex;
+        text-align: start;
+        width: 100%;
+      }
+    }
+    .divider {
+      height: 1px;
+      width: 100%;
+      background-color: var(--xc-grey100);
+      margin: 0 10px;
+    }
+  }
+  

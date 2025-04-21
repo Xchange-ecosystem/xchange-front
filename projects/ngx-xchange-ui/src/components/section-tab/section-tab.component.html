@@ -1,0 +1,10 @@
+<div class="section-tabs">
+    <div 
+      *ngFor="let section of sections" 
+      (click)="selectSection(section.name)" 
+      [class.active]="activeSection === section.name"
+      class="tab">
+      {{ section.name }}
+      <span *ngIf="section.hasNotifications" class="notification-dot"></span>
+    </div>
+  </div>
