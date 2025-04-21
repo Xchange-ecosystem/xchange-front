@@ -301,10 +301,7 @@
     </section>
   </article>
 
-  <article
-    *ngIf="activeSection === 'Premium settings'"
-    class="premium_settings"
-  >
+  <article *ngIf="activeSection === 'Premium settings'" class="premium_settings">
     <section class="premium_settings-wrapper">
       <div class="premium_settings-wrapper-custom">
         <div class="premium_settings-wrapper-custom-container">
@@ -482,9 +479,9 @@
             </div>
             <div class="premium_settings-invoice-premium-investor-footer">
               <small xcCopyStyles class="copy-400-purple">FREE IN BETA</small>
-              <button xcButtonsWrappers class="button-default button">
+              <button xcButtonsWrappers class="button-default-noHeight button">
                 <xc-icon-star class="button-icon" />
-                <p>Cancel Premium</p>
+                <button (click)="openCancel()">Cancel Premium</button>
               </button>
             </div>
           </div>
@@ -583,6 +580,35 @@
       </div>
     </div>
     <button xcButtonsWrappers class="button-round-close" (click)="closeTags()">
+      <xc-icon-close-s class="tags_modal_wrapper-icon" />
+    </button>
+  </div>
+</section>
+
+<section *ngIf="isCancelOpen" class="cancel_modal">
+  <div class="cancel_modal-wrapper">
+    <div class="cancel_modal-wrapper-content">
+      <div class="cancel_modal-wrapper-content-header">
+        <img src="assets/img/Component-1.webp" alt="cancel-premium-header" class="cancel_modal-wrapper-content-header-img">
+      </div>
+      <div class="cancel_modal-wrapper-content-data">
+        <span class="cancel_modal-wrapper-content-data-text">
+          <h6 xcHeadlineStyles class="headline-400 title">Wait a minute! Yout don't want to be a Premium member anymore?</h6>
+          <p xcCopyStyles class="copy-400">You can cancel your Premium membership any time. However, be aware what you are leaving behind:</p>
+          <ul class="cancel_modal-wrapper-content-data-text-list">
+            <li>• Your <strong>premium profile with your interests will be deleted</strong>. These interests are essential to deliver the right project and founders to you. You will not have that service anymore.</li>
+            <li>• By cancelling your premium membership you will <strong>loose access to the Ecosystem Dashboard</strong> and your portfolio, its performance and value development.</li>
+            <li>• You will also <strong>loose access to your Portfolio Builder</strong> with the ability to track and contact projects.</li>
+          </ul>
+          <p xcCopyStyles class="copy-400 footer">So, are you sure you want to cancel your Premium membership?</p>
+        </span>
+        <div class="cancel_modal-wrapper-content-data-buttons">
+          <button xcButtonsWrappers class="button-default-noHeight">Cancel Premium</button>
+          <button xcButtonsWrappers class="button-filled-noHeight">Go back to your profile</button>
+        </div>
+      </div>
+    </div>
+    <button xcButtonsWrappers class="button-round-close" (click)="closeCancel()">
       <xc-icon-close-s class="tags_modal_wrapper-icon" />
     </button>
   </div>

@@ -44,6 +44,18 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         opacity: '0.6',
       },
     },
+    'button-default-noHeight': {
+      default: {
+        borderRadius: '0.5rem',
+        gap: '0.25rem',
+        padding: '10px 1rem',
+        borderWidth: '2px',
+        borderColor: 'var(--xc-black500)',
+      },
+      hover: {
+        opacity: '0.6',
+      },
+    },
     'button-outline-inactive': {
       default: {
         opacity: '0.2',

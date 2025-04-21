@@ -71,6 +71,7 @@ export class ProfileComponent {
 
   activeSection: string = 'Premium settings';
   isTagsOpen = false;
+  isCancelOpen=false;
   selectedLang: string | null = null;
 
   editingDescription = false;
@@ -217,6 +218,14 @@ export class ProfileComponent {
   }
   closeTags() {
     this.isTagsOpen = false;
+  }
+
+  openCancel(){
+    this.isCancelOpen = true
+  }
+
+  closeCancel(){
+    this.isCancelOpen= false
   }
 
   onSectionChange(section: string): void {
