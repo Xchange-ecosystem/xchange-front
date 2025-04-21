@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AsideLinksComponent } from 'projects/ngx-xchange-ui/src/components/aside-links/aside-links.component';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
+import { AsideLinksComponent } from '../aside-links/aside-links.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import {
   XcIconChartComponent,
@@ -12,9 +12,9 @@ import {
   XcIconStarComponent,
   XcIconUsersAltComponent,
   XcIconWifiComponent,
-  XcIconAngleRightComponent
+  XcIconAngleRightComponent,
+  XcLogOutIconComponent
 } from '@indziaki/ngx-xchange-icons';
-import { XcLogOutIconComponent } from 'projects/ngx-xchange-icons/src/lib/log-out.component';
 import { RouterLink } from '@angular/router';
 
 type BottomMenuType = 'profile' | 'support' | 'logout' | '';

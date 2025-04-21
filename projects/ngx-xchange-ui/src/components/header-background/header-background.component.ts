@@ -9,6 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header-background.component.css'
 })
 export class HeaderBackgroundComponent {
-  @Input() imageUrl: string = '';
-
+  @Input() imageUrl: string | null | undefined = '';
 }
