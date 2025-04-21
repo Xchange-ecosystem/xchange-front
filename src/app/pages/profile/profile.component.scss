@@ -421,12 +421,12 @@
   height: 100%;
   align-items: center;
   justify-content: start;
-  overflow-y: scroll ;
+  overflow-y: scroll;
   gap: 24px;
-  -ms-overflow-style: none;      
-      &::-webkit-scrollbar {
-        display: none;
-}
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &-wrapper {
     display: grid;
     grid-template-columns: 3fr 3fr;
@@ -445,30 +445,30 @@
       height: 100%;
       padding: 24px;
       gap: 16px;
-      &-titles{
+      &-titles {
         display: flex;
-        align-items:center;
+        align-items: center;
         justify-content: space-between;
       }
-      .save{
+      .save {
         display: flex;
         width: fit-content;
         align-self: flex-end;
         margin-top: 52px;
       }
-      .save-icon{
+      .save-icon {
         display: flex;
         width: 20px;
         height: 20px;
         stroke: white;
       }
-      &-container{
+      &-container {
         display: flex;
         width: 20px;
         height: 20px;
       }
     }
-    .injector{
+    .injector {
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -476,128 +476,112 @@
       overflow-y: scroll;
       padding: 24px;
       scrollbar-width: none;
-      -ms-overflow-style: none;      
+      -ms-overflow-style: none;
       &::-webkit-scrollbar {
         display: none;
       }
-      &-title{
+      &-title {
         margin-left: 32px;
       }
-    }	
+    }
   }
-  &-invoice{
+  &-invoice {
     display: grid;
-    padding: 24px;
-    grid-template-columns: 3fr 3fr;
-    column-gap: 32px;
+    grid-template-rows: auto 1fr;  // 1ª fila auto‐height, 2ª fila rellena resto
     width: calc(100% - 165px);
-    justify-content: center;
-    box-sizing: border-box;
+    padding: 24px;
     background: var(--xc-white);
     border-radius: 16px;
-    &-premium{
+    box-sizing: border-box;
+    row-gap: 32px;
+
+    &-header {
+      grid-column: 1 / -1;        // span en ambas columnas
+      .premium_settings-invoice-header-title {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-align: start;
+      }
+    }
+  
+    &-container {
+      display: grid;
+      grid-template-columns: 3fr 3fr;
+      column-gap: 32px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  
+    // Column 1 (pricing)
+    &-premium {
       display: flex;
       gap: 16px;
-      &-basic {
+  
+      &-basic,
+      &-investor {
         display: flex;
         flex-direction: column;
-        gap: 16px;
-        width: 50%;
         border-radius: 8px;
+        box-sizing: border-box;
         background: var(--xc-gradient-light-grey-on-white);
         padding: 24px;
-  
-        &-title {
+        gap: 16px;
+        min-height: 420px;
+
+        &-title{
           text-align: center;
         }
-  
+
         &-container {
           display: flex;
           flex-direction: column;
           gap: 16px;
-          align-items: start;
-          height: 100%;
-  
-          &-item {
+          &-item{
             display: flex;
-            align-items: start;
-            justify-content: space-between;
+            width: 100%;
             gap: 8px;
-  
-            &-wrapper {
-              display: flex;
-              width: 20px;
-              height: 20px;
-              justify-content: start;
-              align-items: center;
-  
-              &-icon {
+            &-wrapper{
+              &-icon{
                 display: flex;
-                width: 20px;
-                height: 20px;
-                stroke: var(--xc-black500);
+                width: 30px;
+                height: 30px;
+                stroke: black;
+                &-purple{
+                  display: flex;
+                  width: 30px;
+                  height: 30px;
+                  stroke:var(--xc-categories-suggestion) ;
+                }
               }
             }
           }
         }
-      }
-      &-investor {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 50%;
-        border: solid 1px;
-        border-color: var(--xc-categories-suggestion);
-        border-radius: 8px;
-        padding: 24px;
-  
-        &-container {
+        
+        &-footer {
+          margin-top: auto;
           display: flex;
           flex-direction: column;
           gap: 16px;
           align-items: center;
   
-          &-item {
-            display: flex;
-            width: 100%;
-            gap: 8px;
-  
-            &-wrapper {
-              display: flex;
-              justify-content: start;
-              align-items: start;
-  
-              &-icon {
-                display: flex;
-                width: 20px;
-                height: 20px;
-                stroke: var(--xc-black500);
-              }
-            }
-          }
-        }
-  
-        &-footer {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-self: center;
-          gap: 16px;
-          height: 100%;
-  
           .button {
-            text-wrap: nowrap;
             display: flex;
             align-items: center;
-  
-            &-icon {
+            gap: 8px;
+            &-icon{
               display: flex;
               width: 20px;
               height: 20px;
-              stroke: white;
+              stroke: var(--xc-black500);
             }
           }
         }
+      }
+  
+      &-investor {
+        background: white;
+        border: 4px solid var(--xc-categories-suggestion);
       }
     }
   }
@@ -614,10 +598,10 @@
     width: 100%;
     &-row {
       width: 100%;
-      &-cell{
+      &-cell {
         width: 100%;
         display: flex;
-        &-title{
+        &-title {
           display: flex;
           justify-content: space-between;
           width: 100%;
@@ -650,10 +634,10 @@
     height: 100%;
     display: block;
     overflow-y: auto;
-    -ms-overflow-style: none;      
-      &::-webkit-scrollbar {
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
       display: none;
-  }
+    }
   }
 
   &__row {
