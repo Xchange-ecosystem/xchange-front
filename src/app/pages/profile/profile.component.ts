@@ -4,6 +4,7 @@ import {
   XcIconAIComponent,
   XcIconArrowRightComponent,
   XcIconCheckCircleComponent,
+  XcIconCheckComponent,
   XcIconCloseSComponent,
   XcIconCopyComponent,
   XcIconPlusCircleComponent,
@@ -40,6 +41,7 @@ import { ProfileSortComponent } from './profile-sort/profile-sort.component';
     HeadlineStylesDirective,
     XcIconCheckCircleComponent,
     XcIconStarComponent,
+    XcIconCheckComponent,
     RateModule,
     ProfileHeaderComponent,
     LanguageDropdownComponent,
@@ -72,6 +74,7 @@ export class ProfileComponent {
   activeSection: string = 'Premium settings';
   isTagsOpen = false;
   isCancelOpen=false;
+  isCancelToast=true;
   selectedLang: string | null = null;
 
   editingDescription = false;

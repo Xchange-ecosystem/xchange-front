@@ -696,7 +696,6 @@
   }
 }
 
-
 .tags_modal {
   display: flex;
   position: fixed;
@@ -896,4 +895,26 @@
   width: 100%;
   border-bottom: 1px dashed var(--xc-grey200);
   gap: 0px;
+}
+
+.toast_modal{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  padding: 20px;
+  max-width: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--xc-gradient-light-blue);
+  border-radius: 0px 0px 8px 8px;
+  &-check{
+    &-icon{
+      display: flex;
+      width: 32px;
+      height: 32px;
+      stroke: var(--xc-black500);
+      fill: var(--xc-black500);
+    }
+  }
 }

@@ -613,3 +613,13 @@
     </button>
   </div>
 </section>
+
+<section *ngIf="isCancelToast" class="toast_modal">
+  <div class="toast_modal-check">
+    <xc-icon-check class="toast_modal-check-icon"/>
+  </div>
+  <div xcHeadlineStyles class="headline-300">
+    Your Premium membership was cancelled. 
+    Come back any time to start again!
+  </div>
+</section>
