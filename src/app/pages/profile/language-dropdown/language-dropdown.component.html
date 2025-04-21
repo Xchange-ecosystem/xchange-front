@@ -2,7 +2,9 @@
     <!-- Trigger -->
     <div class="custom-select-trigger" (click)="toggleDropdown()">
       {{ selectedLabel || 'Selecciona un idioma' }}
-      <span class="arrow-down"></span>
+      <span class="arrow-down">
+        <xc-icon-angle-down class="arrow-down-icon"/>
+      </span>
     </div>
   
     <!-- Lista de opciones -->

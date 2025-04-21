@@ -3,11 +3,18 @@ import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { SectionTabComponent } from 'projects/ngx-xchange-ui/src/components/section-tab/section-tab.component';
 import { HeaderCardComponent } from '../header-card/header-card.component';
 import { HeaderBackgroundComponent } from 'projects/ngx-xchange-ui/src/components/header-background/header-background.component';
+import { EditImageComponent } from '../edit-image/edit-image.component';
 
 @Component({
   selector: 'app-profile-header',
   standalone: true,
-  imports: [RoundedImageModule,SectionTabComponent,HeaderCardComponent,HeaderBackgroundComponent],
+  imports: [
+    RoundedImageModule,
+    SectionTabComponent,
+    HeaderCardComponent,
+    HeaderBackgroundComponent,
+    EditImageComponent
+  ],
   templateUrl: './profile-header.component.html',
   styleUrl: './profile-header.component.scss'
 })

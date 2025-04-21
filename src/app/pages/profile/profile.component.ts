@@ -71,7 +71,7 @@ export class ProfileComponent {
   tempEmail = '';
   tempLinkedin = '';
 
-  activeSection: string = 'Premium settings';
+  activeSection: string = 'Apperance';
   isTagsOpen = false;
   isCancelOpen=false;
   isCancelToast=false;

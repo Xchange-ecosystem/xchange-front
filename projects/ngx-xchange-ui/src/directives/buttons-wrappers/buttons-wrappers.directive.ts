@@ -154,6 +154,33 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         backgroundColor: 'var(--xc-grey200)',
       },
     },
+    'button-round-filled': {
+      default: {
+        width: '30px',
+        height: '30px',
+        backgroundColor: 'var(--xc-black500)',
+        borderRadius: '9999px',
+        padding: '0.5rem',
+        border: 'none',
+        fill: 'white',
+      },
+      hover: {
+        backgroundColor: 'var(--xc-grey200)',
+      },
+    },
+    'button-round-image': {
+      default: {
+        display:'flex',
+        alignItems:'center',
+        width: '38px',
+        height: '38px',
+        backgroundColor: 'var(--xc-black500)',
+        borderRadius: '50%',
+        padding: '9px',
+        border: 'none',
+        fill: 'var(--xc-white)',
+      },
+    },
     'button-round-cancel': {
       default: {
         width: '30px',

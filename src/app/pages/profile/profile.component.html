@@ -11,7 +11,7 @@
         <p xcHeadlineStyles class="headline-300">About Me</p>
 
         <ng-container *ngIf="!editingDescription; else editDescTpl">
-          <p (click)="editDescription()">{{ description }}</p>
+          <p (click)="editDescription()" xcCopyStyles class="copy-400">{{ description }}</p>
         </ng-container>
         <ng-template #editDescTpl>
           <textarea
@@ -19,7 +19,8 @@
             cols="60"
             rows="20"
             autofocus
-            class="edit-textarea"
+            xcCopyStyles
+            class="copy-400 edit-textarea"
           ></textarea>
         </ng-template>
       </div>

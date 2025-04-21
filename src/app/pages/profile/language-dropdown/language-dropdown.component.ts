@@ -1,10 +1,15 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'app-language-dropdown',
   standalone: true,
-  imports: [NgIf,NgFor],
+  imports: [
+    NgIf,
+    NgFor,
+    XcIconAngleDownComponent
+  ],
   templateUrl: './language-dropdown.component.html',
   styleUrl: './language-dropdown.component.scss'
 })
