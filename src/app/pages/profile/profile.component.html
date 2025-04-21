@@ -1,6 +1,8 @@
 <section class="profile">
   <header>
-    <app-profile-header (sectionChanged)="onSectionChange($event)"></app-profile-header>
+    <app-profile-header
+      (sectionChanged)="onSectionChange($event)"
+    ></app-profile-header>
   </header>
 
   <article *ngIf="activeSection === 'Apperance'" class="apperance">
@@ -12,7 +14,13 @@
           <p (click)="editDescription()">{{ description }}</p>
         </ng-container>
         <ng-template #editDescTpl>
-          <textarea [(ngModel)]="tempDescription" cols="60" rows="20" autofocus class="edit-textarea"></textarea>
+          <textarea
+            [(ngModel)]="tempDescription"
+            cols="60"
+            rows="20"
+            autofocus
+            class="edit-textarea"
+          ></textarea>
         </ng-template>
       </div>
     </section>
@@ -29,29 +37,43 @@
           <span class="apperance_further-settings-options-item-language">
             <p xcCopyStyles class="copy-300-bold">Platform language</p>
 
-            <app-language-dropdown class="apperance_further-settings-options-item-language-component"
-              [options]="languageOptions" (change)="onLanguageChange($event)"></app-language-dropdown>
+            <app-language-dropdown
+              class="apperance_further-settings-options-item-language-component"
+              [options]="languageOptions"
+              (change)="onLanguageChange($event)"
+            ></app-language-dropdown>
           </span>
           <span class="apperance_further-settings-options-item-interests">
             <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
             <div class="apperance_further-settings-options-item-interests-tags">
-              <div class="apperance_further-settings-options-item-interests-tags-container">
+              <div
+                class="apperance_further-settings-options-item-interests-tags-container"
+              >
                 <div xcProfileTags="gray">Generate</div>
                 <div xcProfileTags="gray">Organizational</div>
                 <div xcProfileTags="gray">Improve</div>
                 <div xcProfileTags="gray">Analyze</div>
                 <div xcProfileTags="gray">Develop</div>
               </div>
-              <button (click)="openTags()" class="apperance_further-settings-options-item-interests-tags-see">
-                <xc-icon-arrow-right class="apperance_further-settings-options-item-interests-tags-see-icon" />
+              <button
+                (click)="openTags()"
+                class="apperance_further-settings-options-item-interests-tags-see"
+              >
+                <xc-icon-arrow-right
+                  class="apperance_further-settings-options-item-interests-tags-see-icon"
+                />
                 <p xcCopyStyles class="copy-300-bold">See all tags</p>
               </button>
             </div>
           </span>
           <span class="apperance_further-settings-options-item-blockchain">
             <p xcCopyStyles class="copy-300-bold">Blockchain key</p>
-            <div class="apperance_further-settings-options-item-blockchain-info">
-              <xc-icon-copy class="apperance_further-settings-options-item-blockchain-info-icon" />
+            <div
+              class="apperance_further-settings-options-item-blockchain-info"
+            >
+              <xc-icon-copy
+                class="apperance_further-settings-options-item-blockchain-info-icon"
+              />
               <p xcCopyStyles class="copy-400">
                 0x1234567890abcdef1234567890abcdef12345678
               </p>
@@ -67,7 +89,12 @@
               <p (click)="editEmail()">{{ email }}</p>
             </ng-container>
             <ng-template #editEmailTpl>
-              <input [(ngModel)]="tempEmail" type="email" autofocus class="edit-input" />
+              <input
+                [(ngModel)]="tempEmail"
+                type="email"
+                autofocus
+                class="edit-input"
+              />
             </ng-template>
           </span>
           <span class="apperance_further-settings-options-item-linkedin">
@@ -76,14 +103,23 @@
               <p (click)="editLinkedin()">{{ linkedin }}</p>
             </ng-container>
             <ng-template #editLinkTemp>
-              <input [(ngModel)]="tempLinkedin" type="url" autofocus class="edit-input" />
+              <input
+                [(ngModel)]="tempLinkedin"
+                type="url"
+                autofocus
+                class="edit-input"
+              />
             </ng-template>
           </span>
         </div>
       </div>
     </section>
     <footer class="apperance_footer">
-      <button type="button" class="apperance_footer-save" (click)="saveChanges()">
+      <button
+        type="button"
+        class="apperance_footer-save"
+        (click)="saveChanges()"
+      >
         <xc-icon-save class="apperance_footer-save-icon" />
         Save changes
       </button>
@@ -94,8 +130,11 @@
     <section class="wallet_assets">
       <p xcHeadlineStyles class="headline-300">My assets</p>
       <div class="wallet_assets-graph">
-        <img src="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png" alt="temp-graph-image"
-          class="wallet_assets-graph-image" />
+        <img
+          src="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png"
+          alt="temp-graph-image"
+          class="wallet_assets-graph-image"
+        />
       </div>
     </section>
     <section class="wallet_contributions">
@@ -142,18 +181,28 @@
   <article *ngIf="activeSection === 'Premium upgrade'" class="premium-upgrade">
     <section class="premium-upgrade-video">
       <h5 xcHeadlineStyles class="headline-300">Upgrade to investor Premium</h5>
-      <iframe class="premium-upgrade-video-content" height="350"
-        src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1" frameborder="0" allowfullscreen></iframe>
+      <iframe
+        class="premium-upgrade-video-content"
+        height="350"
+        src="https://www.youtube.com/embed/lLSu0UHNZhU?autoplay=1"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
     </section>
     <section class="premium-upgrade-options">
       <div class="premium-upgrade-options-basic">
-        <h6 xcHeadlineStyles class="headline-300 premium-upgrade-options-basic-title">
+        <h6
+          xcHeadlineStyles
+          class="headline-300 premium-upgrade-options-basic-title"
+        >
           Xcamp Basic
         </h6>
         <div class="premium-upgrade-options-basic-container">
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Projects and collaboratios in the community
@@ -161,13 +210,17 @@
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">Collaboration reward credits</p>
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Start projects with AI templates
@@ -175,7 +228,9 @@
           </span>
           <span class="premium-upgrade-options-basic-container-item">
             <div class="premium-upgrade-options-basic-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-basic-container-item-wrapper-icon" />
+              <xc-icon-check-circle
+                class="premium-upgrade-options-basic-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Project navigation and collaborator assignments
@@ -187,32 +242,48 @@
         <h6 xcHeadlineStyles class="headline-300">Investor Premium</h6>
         <div class="premium-upgrade-options-investor-container">
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
             </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
             </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
             </p>
           </span>
           <span class="premium-upgrade-options-investor-container-item">
-            <div class="premium-upgrade-options-investor-container-item-wrapper">
-              <xc-icon-check-circle class="premium-upgrade-options-investor-container-item-wrapper-icon" />
+            <div
+              class="premium-upgrade-options-investor-container-item-wrapper"
+            >
+              <xc-icon-check-circle
+                class="premium-upgrade-options-investor-container-item-wrapper-icon"
+              />
             </div>
             <p xcCopyStyles class="copy-400">
               Advantage number one lorem ipsum
@@ -230,112 +301,179 @@
     </section>
   </article>
 
-  <article *ngIf="activeSection === 'Premium settings'" class="premium_settings">
+  <article
+    *ngIf="activeSection === 'Premium settings'"
+    class="premium_settings"
+  >
     <section class="premium_settings-wrapper">
       <div class="premium_settings-wrapper-custom">
-        <h6 xcHeadlineStyles class="headline-300">Customise your premium profile</h6>
-        <span class="premium_settings-wrapper-custom-titles">
-          <p xcCopyStyles class="copy-300">Interests</p>
-          <p xcCopyStyles class="copy-300">Interests scale</p>
-        </span>
-        <div class="interest-wrapper" *ngFor="let sel of selectedInterests; let i = index">
-          <app-interests-profile [options]="getFilteredOptions(i)" [selectedInterest]="sel.interest"
-            [selectedLevel]="sel.level" (selection)="onInterestSelected($event, i)"></app-interests-profile>
+        <div class="premium_settings-wrapper-custom-container">
+          <h6 xcHeadlineStyles class="headline-300">
+            Customise your premium profile
+          </h6>
+          <span class="premium_settings-wrapper-custom-container-titles">
+            <p xcCopyStyles class="copy-300">Interests</p>
+            <p xcCopyStyles class="copy-300 scale">Interests scale</p>
+          </span>
+          <div *ngFor="let sel of selectedInterests; let i = index">
+            <app-interests-profile
+              [options]="getFilteredOptions(i)"
+              [selectedInterest]="sel.interest"
+              [selectedLevel]="sel.level"
+              (selection)="onInterestSelected($event, i)"
+            ></app-interests-profile>
+          </div>
+          <button
+            (click)="addSelector()"
+            class="premium_settings-wrapper-custom-container-button"
+          >
+            <p xcCopyStyles class="copy-400-bold">+ Añadir otro interés</p>
+          </button>
         </div>
-        <button (click)="addSelector()" class="premium_settings-wrapper-custom-button">
-          <p xcCopyStyles class="copy-400-bold">
-            + Añadir otro interés
-          </p>
-        </button>
-        <button xcButtonsWrappers (click)="saveChanges()" class="button-filled-noHeight save">
+        <button
+          xcButtonsWrappers
+          (click)="saveChanges()"
+          class="button-filled-noHeight save"
+        >
           <xc-icon-save class="save-icon" />
           <p>Guardar cambios</p>
         </button>
       </div>
       <div class="injector">
-        <h6 xcHeadlineStyles class="headline-300 injector-title">... or load from predefined profiles to get started</h6>
-        <app-interest-card class="injector">
-        </app-interest-card>
+        <h6 xcHeadlineStyles class="headline-300">
+          ... or load from predefined profiles to get started
+        </h6>
+        <app-interest-card class="injector"> </app-interest-card>
       </div>
     </section>
     <section class="premium_settings-invoice">
       <div class="premium_settings-invoice-header">
         <p xcHeadlineStyles class="headline-300">Premium</p>
       </div>
-    
+
       <div class="premium_settings-invoice-container">
         <article class="premium_settings-invoice-premium">
           <div class="premium_settings-invoice-premium-basic">
-            <h6 xcHeadlineStyles class="headline-300 premium_settings-invoice-premium-basic-title">
+            <h6
+              xcHeadlineStyles
+              class="headline-300 premium_settings-invoice-premium-basic-title"
+            >
               Xcamp Basic
             </h6>
             <div class="premium_settings-invoice-premium-basic-container">
-              <span class="premium_settings-invoice-premium-basic-container-item">
-                <div class="premium_settings-invoice-premium-basic-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-basic-container-item-wrapper-icon" />
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Projects and collaborations in the community
                 </p>
               </span>
-              <span class="premium_settings-invoice-premium-basic-container-item">
-                <div class="premium_settings-invoice-premium-basic-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-basic-container-item-wrapper-icon" />
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Collaboration reward credits
                 </p>
               </span>
-              <span class="premium_settings-invoice-premium-basic-container-item">
-                <div class="premium_settings-invoice-premium-basic-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-basic-container-item-wrapper-icon" />
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Start projects with AI templates
                 </p>
               </span>
-              <span class="premium_settings-invoice-premium-basic-container-item">
-                <div class="premium_settings-invoice-premium-basic-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-basic-container-item-wrapper-icon" />
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Project navigation and collaborator assignments
                 </p>
               </span>
-              
             </div>
           </div>
-    
+
           <div class="premium_settings-invoice-premium-investor">
             <h6 xcHeadlineStyles class="headline-300">Investor Premium</h6>
             <div class="premium_settings-invoice-premium-investor-container">
-              <span class="premium_settings-invoice-premium-investor-container-item">
-                <div class="premium_settings-invoice-premium-investor-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple" />
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Advantage number one lorem ipsum
                 </p>
               </span>
-              <span class="premium_settings-invoice-premium-investor-container-item">
-                <div class="premium_settings-invoice-premium-investor-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple" />
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Advantage number one lorem ipsum
                 </p>
               </span>
-              <span class="premium_settings-invoice-premium-investor-container-item">
-                <div class="premium_settings-invoice-premium-investor-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple" />
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Advantage number one lorem ipsum
                 </p>
               </span>
-              <span class="premium_settings-invoice-premium-investor-container-item">
-                <div class="premium_settings-invoice-premium-investor-container-item-wrapper">
-                  <xc-icon-check-circle class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple" />
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
                 </div>
                 <p xcCopyStyles class="copy-400">
                   Advantage number one lorem ipsum
@@ -351,7 +489,7 @@
             </div>
           </div>
         </article>
-    
+
         <article class="premium_settings-invoice-billing">
           <table class="invoice-table">
             <thead class="invoice-table__header">
@@ -371,14 +509,19 @@
               >
                 <td class="invoice-table__cell">
                   <div class="invoice-table__name-wrapper">
-                    <xc-rounded-image [image]="image" class="invoice-table__image"/>
+                    <xc-rounded-image
+                      [image]="image"
+                      class="invoice-table__image"
+                    />
                     {{ invoice.invoiceName }}
                   </div>
                 </td>
                 <td class="invoice-table__cell">{{ invoice.date }}</td>
                 <td class="invoice-table__cell">{{ invoice.amount }}</td>
                 <td class="invoice-table__cell-button">
-                  <button class="invoice-table__cell-button-text">{{ invoice.status }}</button>
+                  <button class="invoice-table__cell-button-text">
+                    {{ invoice.status }}
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -386,8 +529,10 @@
               <tr>
                 <td colspan="4" class="invoice-table__footer-cell">
                   <button class="invoice-table__footer-button">
-                    <xc-icon-arrow-right class="invoice-table__footer-button-icon"/>
-                    <p xcCopyStyles class="copy-400-bold">See full history </p>
+                    <xc-icon-arrow-right
+                      class="invoice-table__footer-button-icon"
+                    />
+                    <p xcCopyStyles class="copy-400-bold">See full history</p>
                   </button>
                 </td>
               </tr>
@@ -396,10 +541,7 @@
         </article>
       </div>
     </section>
-    
   </article>
-
-
 </section>
 
 <section *ngIf="isTagsOpen" class="tags_modal">
@@ -428,9 +570,14 @@
       <div class="tags_modal_wrapper-content-new">
         <p xcHeadlineStyles class="headline-200">Add tags</p>
         <span class="tags_modal_wrapper-content-new-span">
-          <input type="text" class="tags_modal_wrapper-content-new-span-input" />
+          <input
+            type="text"
+            class="tags_modal_wrapper-content-new-span-input"
+          />
           <button>
-            <xc-icon-plus-circle class="tags_modal_wrapper-content-new-span-icon" />
+            <xc-icon-plus-circle
+              class="tags_modal_wrapper-content-new-span-icon"
+            />
           </button>
         </span>
       </div>
