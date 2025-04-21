@@ -343,68 +343,31 @@
         </div>
       </div>
       <div class="premium_settings-invoice-table">
-        <table class="premium_settings-invoice-table-header">
-          <thead>
-            <tr>
-              <th colspan="4">
-                <div class="billing-history-header">
-                  <p>Billing History</p>
-                  <span class="sort-component">Sort by</span>
+        <table class="invoice-table">
+          <thead class="invoice-table__header">
+            <tr class="invoice-table__header-row">
+              <th class="invoice-table__header-row-cell">
+                <div class="invoice-table__header-row-cell-title">
+                  <p class="invoice-table__title-text">Billing History</p>
+                  <app-profile-sort />
                 </div>
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>INV‑1001</td>
-              <td>2025‑04‑10</td>
-              <td>$1,250.00</td>
-              <td>Paid</td>
+          <tbody class="invoice-table__body">
+            <tr class="invoice-table__row" *ngFor="let invoice of invoiceData">
+              <td class="invoice-table__cell invoice-table__cell--name">
+                <div class="invoice-table__name-wrapper">
+                  <xc-rounded-image [image]="image" class="invoice-table__image" />
+                  {{ invoice.invoiceName }}
+                </div>
+              </td>
+              <td class="invoice-table__cell">{{ invoice.date }}</td>
+              <td class="invoice-table__cell">{{ invoice.amount }}</td>
+              <td class="invoice-table__cell-button"><button>{{ invoice.status }}</button></td>
             </tr>
-            <tr>
-              <td>INV‑1002</td>
-              <td>2025‑03‑28</td>
-              <td>$980.50</td>
-              <td>Paid</td>
-            </tr>
-            <tr>
-              <td>INV‑1003</td>
-              <td>2025‑03‑15</td>
-              <td>$450.00</td>
-              <td>Overdue</td>
-            </tr>
-            <tr>
-              <td>INV‑1004</td>
-              <td>2025‑02‑27</td>
-              <td>$2,150.75</td>
-              <td>Paid</td>
-            </tr>
-            <tr>
-              <td>INV‑1005</td>
-              <td>2025‑02‑10</td>
-              <td>$620.00</td>
-              <td>Pending</td>
-            </tr>
-            <tr>
-              <td>INV‑1006</td>
-              <td>2025‑01‑22</td>
-              <td>$1,100.20</td>
-              <td>Paid</td>
-            </tr>
-            <tr>
-              <td>INV‑1007</td>
-              <td>2025‑01‑05</td>
-              <td>$775.00</td>
-              <td>Paid</td>
-            </tr>
-            <tr>
-              <td>INV‑1008</td>
-              <td>2024‑12‑18</td>
-              <td>$1,345.90</td>
-              <td>Paid</td>
-            </tr>
-          </tbody>
-        </table>      
+          </tbody>  
+        </table>
       </div>
     </section>
   </article>

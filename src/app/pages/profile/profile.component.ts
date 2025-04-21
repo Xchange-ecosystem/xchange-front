@@ -13,12 +13,13 @@ import {
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
-import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule } from 'projects/ngx-xchange-ui/src/public-api';
+import { ButtonsWrappersDirective, ProfileTagsDirective, RateModule, RoundedImageModule } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProfileHeaderComponent } from './profile-header/profile-header.component';
 import { FormsModule } from '@angular/forms';
 import { LanguageDropdownComponent } from './language-dropdown/language-dropdown.component';
 import { InterestsProfileComponent } from './interests-profile/interests-profile.component';
 import { InterestCardComponent } from './interest-card/interest-card.component';
+import { ProfileSortComponent } from './profile-sort/profile-sort.component';
 
 @Component({
   selector: 'app-profile',
@@ -46,6 +47,8 @@ import { InterestCardComponent } from './interest-card/interest-card.component';
     InterestsProfileComponent,
     InterestCardComponent,
     ButtonsWrappersDirective,
+    RoundedImageModule,
+    ProfileSortComponent
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
@@ -60,6 +63,7 @@ export class ProfileComponent {
   COBIOM ecosystem as a consultancy, coworking and learning platform
   that provides end-to-end services from intent to implementation in
   innovation and business transformation.`;
+  @Input() image: string = 'https://randomuser.me/api/portraits/women/26.jpg'
   
   tempDescription = '';
   tempEmail = '';
@@ -128,6 +132,59 @@ export class ProfileComponent {
     'Cloud Computing',
     'Cybersecurity',
   ];
+
+  invoiceData = [
+    {
+      invoiceName: "John Doe",
+      date: "2025‑04‑10",
+      amount: "$1,250.00",
+      status: "Invoice"
+    },
+    {
+      invoiceName: "Jane Smith",
+      date: "2025‑04‑08",
+      amount: "$980.50",
+      status: "Invoice"
+    },
+    {
+      invoiceName: "Michael Johnson",
+      date: "2025‑03‑28",
+      amount: "$720.00",
+      status: "Quote"
+    },
+    {
+      invoiceName: "Emily Davis",
+      date: "2025‑03‑15",
+      amount: "$1,050.75",
+      status: "Invoice"
+    },
+    {
+      invoiceName: "Daniel Martinez",
+      date: "2025‑03‑02",
+      amount: "$1,320.00",
+      status: "Overdue"
+    },
+    {
+      invoiceName: "Laura Hernandez",
+      date: "2025‑02‑25",
+      amount: "$870.20",
+      status: "Invoice"
+    },
+    {
+      invoiceName: "Carlos López",
+      date: "2025‑02‑14",
+      amount: "$2,300.00",
+      status: "Paid"
+    },
+    {
+      invoiceName: "Natalie Wilson",
+      date: "2025‑01‑30",
+      amount: "$450.00",
+      status: "Cancelled"
+    }
+  ];
+  
+  
 
   languageOptions = [
     { value: 'en', label: 'English' },
