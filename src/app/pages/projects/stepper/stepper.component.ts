@@ -1,9 +1,9 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent, XcIconSearchComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowLeftComponent, XcIconCheckComponent, XcIconFileUploadComponent, XcIconSearchComponent, XcIconUploadComponent } from '@indziaki/ngx-xchange-icons';
 import { ProjectsCardComponent } from 'src/app/pages/projects/projects-card/projects-card.component';
 import { Headline400Directive } from 'projects/ngx-xchange-ui/src/directives/headline-400/headline-400.directive';
-import { ButtonsWrappersDirective, ClickOutsideDirective, HeadlineStylesDirective, ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { ButtonsWrappersDirective, ClickOutsideDirective, CopyStylesDirective, HeadlineStylesDirective, ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/public-api';
 
 @Component({
   selector: 'app-stepper',
@@ -16,11 +16,12 @@ import { ButtonsWrappersDirective, ClickOutsideDirective, HeadlineStylesDirectiv
     Headline400Directive,
     ClickOutsideDirective,
     XcIconArrowLeftComponent,
-    XcIconFileUploadComponent,
     XcIconSearchComponent,
     ButtonsWrappersDirective,
     ProfileTagsDirective,
-    HeadlineStylesDirective
+    HeadlineStylesDirective,
+    XcIconUploadComponent,
+    CopyStylesDirective
 ],
   templateUrl: './stepper.component.html',
   styleUrl: './stepper.component.scss'

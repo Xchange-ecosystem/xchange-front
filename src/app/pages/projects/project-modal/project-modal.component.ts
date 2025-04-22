@@ -29,7 +29,7 @@ export interface ProjectInterface {
     NgFor,
     XcIconCheckComponent,
     XcIconCloseSComponent,
-    ProjectHeaderComponent
+    ProjectHeaderComponent,
   ],
   templateUrl: './project-modal.component.html',
   styleUrl: './project-modal.component.scss',

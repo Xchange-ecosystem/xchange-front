@@ -26,7 +26,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class SortByComponent {
   isDropdownOpen = false;
-  isFilterActive = false;
+  isFilterActive = true;
   isSearchOpen = false;
   
   selectedOption = '';
