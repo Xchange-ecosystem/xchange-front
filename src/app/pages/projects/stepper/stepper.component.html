@@ -107,16 +107,15 @@
     </article>
   </ng-container>
   <footer class="stepper-container-footer">
-    <button class="stepper-container-footer-button-500_cancel" (click)="finish()">Cancel</button>
-    <button
-    class="stepper-container-footer-button-500_next"
-      (click)="changeStep()"
-      *ngIf="actualStep < stepsArray.length"
-    >
-      Next
-    </button>
-    <button *ngIf="actualStep === stepsArray.length" class="stepper-container-footer-button-500_next">
-      Create Project
-    </button>
+    <span class="gray-divider"></span>
+    <span class="buttons-container">
+      <button xcButtonsWrappers class="button-default-noHeight cancel" (click)="finish()">Cancel</button>
+      <button xcButtonsWrappers class="button-filled-noHeight next" (click)="changeStep()" *ngIf="actualStep < stepsArray.length">
+        Next
+      </button>
+      <button xcButtonsWrappers class="create-project" *ngIf="actualStep === stepsArray.length">
+        Create Project
+      </button>
+    </span>
   </footer>
 </section>

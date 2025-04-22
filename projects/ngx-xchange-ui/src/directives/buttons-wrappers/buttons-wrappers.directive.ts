@@ -122,9 +122,6 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         padding: '10px 1rem',
         gap: '0.25rem',
       },
-      hover: {
-        backgroundColor: 'var(--xc-black400)',
-      },
     },
     'button-filled-inactive': {
       default: {
