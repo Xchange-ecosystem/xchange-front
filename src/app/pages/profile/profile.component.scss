@@ -360,7 +360,7 @@
       flex-direction: column;
       gap: 16px;
       width: 50%;
-      border: solid 1px;
+      border: solid 4px;
       border-color: var(--xc-categories-suggestion);
       border-radius: 8px;
       padding: 24px;
@@ -385,7 +385,7 @@
               display: flex;
               width: 20px;
               height: 20px;
-              stroke: var(--xc-black500);
+              stroke: var(--xc-categories-suggestion);
             }
           }
         }
