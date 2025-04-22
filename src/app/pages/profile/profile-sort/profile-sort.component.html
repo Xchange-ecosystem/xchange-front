@@ -1,0 +1,25 @@
+<div class="filter-dropdown-wrapper">
+  <div class="custom-dropdown" (clickOutside)="closeMenu()">
+    <button class="dropdown-trigger" (click)="toggleMenu()">
+      <span xcCopyStyles class="copy-400 trigger-label">Sort by:</span>
+      <span xcCopyStyles class="copy-400 trigger-value">{{ selectedLabel || '' }}</span>
+      <span class="arrow">
+        <xc-icon-angle-down class="arrow-icon"/>
+      </span>
+    </button>
+
+    <div class="dropdown-menu" *ngIf="isOpen">
+      <ul class="dropdown-options">
+        <li
+          xcCopyStyles
+          *ngFor="let opt of filterOptions"
+          class="copy-400-noAlign dropdown-option"
+          [class.selected]="opt.value === selectedFilter"
+          (click)="selectFilter(opt.value)"
+        >
+          {{ opt.label }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

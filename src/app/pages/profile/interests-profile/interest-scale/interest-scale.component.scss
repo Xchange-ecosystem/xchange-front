@@ -1,0 +1,17 @@
+.scale {
+  display: flex;
+  gap: 16px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--xc-grey200);
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &.selected {
+    background: var(--xc-categories-health);
+  }
+}

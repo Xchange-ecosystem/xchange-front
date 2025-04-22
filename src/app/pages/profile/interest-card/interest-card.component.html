@@ -1,0 +1,20 @@
+<button class="profiles">
+    <div class="profile-card" *ngFor="let profile of profiles">
+      <div class="profile-card-header">
+        <xc-icon-angle-left-b class="profile-card-header-icon"/>
+        <p xcHeadlineStyles class="headline-300">{{ profile.name }} </p>
+      </div>
+      <div class="profile-card-body">
+        <div class="profile-card-labels">
+          <p *ngFor="let label of labels">{{ label }}</p>
+        </div>
+        <div class="profile-card-scales">
+          <app-interest-scale
+            *ngFor="let lvl of profile.metrics"
+            [count]="maxLevel"
+            [selectedLevel]="lvl"
+          ></app-interest-scale>
+        </div>
+      </div>
+    </div>
+</button>

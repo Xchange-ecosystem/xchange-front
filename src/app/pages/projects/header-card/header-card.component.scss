@@ -1,0 +1,30 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .info-rows{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .created-at{
+            display: flex;
+            gap: 8px;
+            .gray{
+                color: var(--xc-grey200);
+            }
+        }
+        .assigned-to{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            .assigned-to-rounded{
+                display: flex;
+                &-image{
+                    width: 30px;
+                    height: 30px;
+                    margin-left: -4px;
+                }
+            }
+        }
+    }
+}

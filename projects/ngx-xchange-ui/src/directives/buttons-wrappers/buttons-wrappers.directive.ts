@@ -44,6 +44,18 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         opacity: '0.6',
       },
     },
+    'button-default-noHeight': {
+      default: {
+        borderRadius: '0.5rem',
+        gap: '0.25rem',
+        padding: '10px 1rem',
+        borderWidth: '2px',
+        borderColor: 'var(--xc-black500)',
+      },
+      hover: {
+        opacity: '0.6',
+      },
+    },
     'button-outline-inactive': {
       default: {
         opacity: '0.2',
@@ -110,9 +122,6 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         padding: '10px 1rem',
         gap: '0.25rem',
       },
-      hover: {
-        backgroundColor: 'var(--xc-black400)',
-      },
     },
     'button-filled-inactive': {
       default: {
@@ -140,6 +149,33 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
       },
       hover: {
         backgroundColor: 'var(--xc-grey200)',
+      },
+    },
+    'button-round-filled': {
+      default: {
+        width: '30px',
+        height: '30px',
+        backgroundColor: 'var(--xc-black500)',
+        borderRadius: '9999px',
+        padding: '0.5rem',
+        border: 'none',
+        fill: 'white',
+      },
+      hover: {
+        backgroundColor: 'var(--xc-grey200)',
+      },
+    },
+    'button-round-image': {
+      default: {
+        display:'flex',
+        alignItems:'center',
+        width: '38px',
+        height: '38px',
+        backgroundColor: 'var(--xc-black500)',
+        borderRadius: '50%',
+        padding: '9px',
+        border: 'none',
+        fill: 'var(--xc-white)',
       },
     },
     'button-round-cancel': {
@@ -232,9 +268,6 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         fill: 'black',
         stroke: 'black',
       },
-      hover: {
-        backgroundColor: 'var(--xc-grey200)',
-      },
     },
     'button-chat': {
       default: {
@@ -276,6 +309,8 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
     'button-refresh': {
       default: {
+        alignItems: 'center',
+        display: 'flex',
         padding: '9px',
         borderRadius: '9999px',
         background: 'var(--xc-gradient-light-blue)',
@@ -286,6 +321,8 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
     },
     'button-refresh-inactive': {
       default: {
+        alignItems: 'center',
+        display: 'flex',
         padding: '9px',
         borderRadius: '9999px',
         background: 'var(--xc-gradient-light-blue)',
@@ -293,6 +330,18 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         height: '30px',
         alignSelf: 'center',
         opacity: '0.3',
+      },
+    },
+    'button-close-modal': {
+      default: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: 'flex',
+        borderRadius: '9999px',
+        background: 'white',
+        width: '56px',
+        height: '56px',
+        alignSelf: 'start',
       },
     },
   };

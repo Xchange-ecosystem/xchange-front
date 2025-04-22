@@ -9,11 +9,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './section-tab.component.css'
 })
 export class SectionTabComponent {
-  activeSection: string = 'Apperance';
-
   @Input() sections: { name: string, hasNotifications: boolean }[] = [];
   @Output() sectionSelected: EventEmitter<string> = new EventEmitter<string>();
-
+  
+  activeSection: string = 'Apperance';
+  
   selectSection(section: string): void {
     this.activeSection = section;
     this.sectionSelected.emit(section);
