@@ -13,11 +13,10 @@
   align-items: center;
   gap: 8px;
   position: relative;
-padding: 0px 0px 0px 8px;
+  padding: 0px 0px 0px 8px;
 }
 
 .sort-text {
-  font-size: 14px;
   color: var(--xc-grey500);
   margin: 0;
 }
@@ -30,8 +29,6 @@ padding: 0px 0px 0px 8px;
   border: none;
   cursor: pointer;
   padding: 4px 8px;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .sort-button__selected {
@@ -95,16 +92,16 @@ fill: var(--xc-black500);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   background: white;
-  border: 1px solid var(--xc-grey200, #e5e7eb);
   border-radius: 16px;
   cursor: pointer;
 }
 
 .refresh-icon,
 .search-icon {
+  display: flex;
   width: 16px;
   height: 16px;
   stroke: var(--xc-black500);
@@ -114,11 +111,27 @@ fill: var(--xc-black500);
   background: var(--xc-grey100);
 }
 
-.refresh-button{
-  background: var(--xc-gradient-light-blue);
+.search-wrapper{
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  caret-color: var(--xc-brand-medium-blue);
+}
+
+.search-input{
+  outline: none;
+  border: 1px solid;
+  border-color: var(--xc-grey100);
+  padding:2px;
+  border-radius: 6px;
+}
+
+.refresh-icon {
+  transform: scaleX(-1) ;
 }
 
 .right-options{
-display: flex;
-gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }

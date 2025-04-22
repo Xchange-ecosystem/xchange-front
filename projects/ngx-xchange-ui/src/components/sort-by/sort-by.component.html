@@ -26,14 +26,22 @@
   </div>
 <div class="right-options">
   <div class="refresh-wrapper">
-    <button class="refresh-button">
+    <button xcButtonsWrappers [class]="isFilterActive ? 'button-refresh' : 'button-refresh-inactive'">
       <xc-icon-redo class="refresh-icon" />
     </button>
   </div>
-  <div class="search-wrapper">
-    <button class="search-button">
+  <div class="search-wrapper" [class.open]="isSearchOpen">
+    <button class="search-button" (click)="toggleSearch()">
       <xc-icon-search class="search-icon" />
     </button>
+  
+    <input
+      *ngIf="isSearchOpen"
+      type="text"
+      [(ngModel)]="searchTerm"
+      class="search-input"
+      placeholder="Search..."
+    />
   </div>
 </div>
 </section>

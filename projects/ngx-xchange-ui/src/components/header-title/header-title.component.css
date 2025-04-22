@@ -1,21 +1,59 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap:8px ;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: space-between;
+  background: var(--xc-white);
+  border-radius: 12px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.header-input {
+  border: 1px solid var(--xc-grey100);
+  border-radius: 8px;
+  width: 400px;
+  height: 36px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--xc-black500);
+  text-align: left;
+  caret-color: var(--xc-brand-medium-blue);
+
+  &::placeholder {
+    color: var(--xc-grey100);
   }
-  
-  .header-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--xc-boxShadow-400);
   }
-  
-  .edit-button {  
-    width: 24px;
-    height: 24px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-button {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.cancel {
+    stroke: var(--xc-categories-blocked);
   }
+  &.confirm {
+    stroke: var(--xc-categories-completed);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,18 @@
+<div class="custom-select" (clickOutside)="closeDropdown()">
+  <div class="custom-select-trigger" (click)="toggleDropdown()">
+    {{ selectedLabel }}
+    <span class="arrow-down">
+      <xc-icon-angle-down class="arrow-down-icon"/>
+    </span>
+  </div>
+  <ul *ngIf="isOpen" class="custom-options">
+    <li
+      *ngFor="let opt of options"
+      class="custom-option"
+      [class.selected]="opt.value === selectedValue"
+      (click)="selectOption(opt)"
+    >
+      {{ opt.label }}
+    </li>
+  </ul>
+</div>

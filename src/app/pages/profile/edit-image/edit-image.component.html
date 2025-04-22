@@ -1,0 +1,43 @@
+<button xcButtonsWrappers class="button-round-image" (click)="onImageOpen()">
+    <xc-icon-image class="icon"/>
+</button>
+
+<section *ngIf="isImageOpen && currentPage === 'profile'" class="profile_modal">
+    <div class="profile_modal-wrapper">
+        <h6 xcHeadlineStyles class="headline-400 title">Edit your profile image</h6>
+        <span class="profile_modal-wrapper-drop">
+            <xc-icon-image-plus class="icon"/>
+            <p xcCopyStyles class="copy-300-bold">Drag an drop your image</p>
+        </span>
+        <span class="profile_modal-wrapper-buttons">
+            <button xcButtonsWrappers class="button-default-noHeight cancel">
+                <xc-icon-times class="cancel-icon"/>
+                <p xcCopyStyles class="copy-400-bold" (click)="onImageClose()">Cancel</p>
+            </button>
+            <button xcButtonsWrappers class="button-filled-noHeight save">
+                <xc-icon-save class="save-icon"/>
+                <p xcCopyStyles class="copy-400-bold-white">Save</p>
+            </button>
+        </span>
+    </div>
+</section>
+
+<section *ngIf="isImageOpen && currentPage === 'header'" class="profile_modal">
+    <div class="profile_modal-wrapper">
+        <h6 xcHeadlineStyles class="headline-400 title">Edit your header image</h6>
+        <span class="profile_modal-wrapper-drop">
+            <xc-icon-image-plus class="icon"/>
+            <p xcCopyStyles class="copy-300-bold">Drag an drop your image</p>
+        </span>
+        <span class="profile_modal-wrapper-buttons">
+            <button xcButtonsWrappers class="button-default-noHeight cancel">
+                <xc-icon-times class="cancel-icon"/>
+                <p xcCopyStyles class="copy-400-bold" (click)="onImageClose()">Cancel</p>
+            </button>
+            <button xcButtonsWrappers class="button-filled-noHeight save">
+                <xc-icon-save class="save-icon"/>
+                <p xcCopyStyles class="copy-400-bold-white">Save</p>
+            </button>
+        </span>
+    </div>
+</section>

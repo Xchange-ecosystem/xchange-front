@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RoundedImageModule } from 'dist/ngx-xchange-ui/public-api';
+import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 
 @Component({
   selector: 'xc-chat-text',

@@ -1,85 +1,85 @@
 <section class="project-container">
   <header class="project-container-header">
-    <xc-user-header [showImage]="false" [firstText]="'NextGen LLL'" [secondText]="'Xchange Studio Project'" [showUserData]="false"/>
+    <app-project-header [image]="project.image"/>
   </header>
   <article class="project-container-article">
     <div class="project-container-article-about">
       <div class="project-container-article-about-objectives">
-        <p xcHeadline300>Overall project progress</p>
-        <xc-project-progress-bar [completed]="5" [open]="4" [suggested]="4" [objectivesInProject]="15"/>
+        <p xcHeadlineStyles class="headline-300">Overall project progress</p>
+        <xc-project-progress-bar [completed]="project.completed" [open]="project.open" [suggested]="project.suggested" [objectivesInProject]="project.objectivesInProject"/>
       </div>
       <div class="project-container-article-about-description">
-        <p xcHeadline300>About the project</p>
-        <p>{{ project.description }}</p>
+        <p xcHeadlineStyles class="headline-300">About the project</p>
+        <p xcCopyStyles class="copy-400">{{ project.description }}</p>
       </div>
     </div>
     <div class="project-container-article-metrics">
       <div class="project-container-article-metrics-tags">
-        <div class="project-container-article-metrics-tags-container">
-          <div xcProfileTags="gray">Generate</div>
-          <div xcProfileTags="gray">Organizational</div>
-          <div xcProfileTags="gray">Improve</div>
-        </div>
-        <button class="project-container-article-metrics-tags-button">
-          <xc-icon-arrow-right
-            class="project-container-article-metrics-tags-button-icon"
-          />
-          <p class="project-container-article-metrics-tags-button-text">
-            See all tags
-          </p>
-        </button>
+        <p xcHeadlineStyles class="headline-300">Tags</p>
+        <span class="project-container-article-metrics-tags-span">
+          <div class="project-container-article-metrics-tags-span-container">
+            <div xcProfileTags="gray" *ngFor="let tag of project.tags" >{{tag}}</div>
+          </div>
+          <button class="project-container-article-metrics-tags-span-button">
+            <xc-icon-arrow-right
+              class="project-container-article-metrics-tags-span-button-icon"
+            />
+            <p xcCopyStyles class="copy-300-bold">
+              See all tags
+            </p>
+          </button>
+        </span>
       </div>
       <div class="project-container-article-metrics-numbers">
-        <p xcHeadline300>Project Metrics</p>
+        <p xcHeadlineStyles class="headline-300" >Project Metrics</p>
         <div class="project-container-article-metrics-numbers-container">
           <span
             class="project-container-article-metrics-numbers-container-item"
           >
-            <p xcHeadline500>16</p>
-            <p>Proofs uploaded</p>
+            <p xcHeadlineStyles class="headline-500">{{project.proofs}}</p>
+            <p xcCopyStyles class="copy-300">Proofs uploaded</p>
           </span>
           <div class="separator"></div>
           <span
             class="project-container-article-metrics-numbers-container-item"
           >
-            <p xcHeadline500>10</p>
-            <p>Collaborations</p>
+            <p xcHeadlineStyles class="headline-500">{{project.collaborations}}</p>
+            <p xcCopyStyles class="copy-300">Collaborations</p>
           </span>
           <div class="separator"></div>
           <span
             class="project-container-article-metrics-numbers-container-item"
           >
-            <p xcHeadline500>100,000 €</p>
-            <p>Value added through collaborations</p>
+            <p xcHeadlineStyles class="headline-500">{{project.value}} €</p>
+            <p xcCopyStyles class="copy-300">Value added through collaborations</p>
           </span>
         </div>
       </div>
     </div>
-  </article>
-  <footer
+    <footer
     class="project-container-footer"
-    [class.project-container-footer-invitation]="invitation"
-  >
-    <ng-container *ngIf="invitation; else noInvitation">
-      <div class="project-container-footer-content">
-        <div class="project-container-footer-text">
-          <p xcHeadline300>New Invitation</p>
-          <p>You have been invited to this project. Do you want to accept?</p>
+    [class.project-container-footer-invitation]="invitation">
+      <ng-container *ngIf="invitation; else noInvitation">
+        <div class="project-container-footer-content">
+          <div class="project-container-footer-text">
+            <p xcHeadlineStyles class="headline-300">New Invitation</p>
+            <p xcCopyStyles class="copy-300">You have been invited to this project. Do you want to accept?</p>
+          </div>
+          <div class="project-container-footer-buttons">
+            <button class="project-container-footer-button reject-button">
+              <xc-icon-close-s class="project-container-footer-button-icon"></xc-icon-close-s>
+              Reject
+            </button>
+            <button class="project-container-footer-button">
+              <xc-icon-check class="project-container-footer-button-icon"></xc-icon-check>
+              Accept
+            </button>
+          </div>
         </div>
-        <div class="project-container-footer-buttons">
-          <button class="project-container-footer-button reject-button">
-            <xc-icon-close-s class="project-container-footer-button-icon" />
-            Reject
-          </button>
-          <button class="project-container-footer-button">
-            <xc-icon-check class="project-container-footer-button-icon" />
-            Accept
-          </button>
-        </div>
-      </div>
-    </ng-container>
-    <ng-template #noInvitation>
-      <button class="project-container-footer-button">Ask for access</button>
-    </ng-template>
-  </footer>
+      </ng-container>
+      <ng-template #noInvitation>
+        <button class="project-container-footer-button">Ask for access</button>
+      </ng-template>
+    </footer>
+  </article>
 </section>

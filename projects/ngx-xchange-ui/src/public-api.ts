@@ -131,3 +131,10 @@ export * from './components/new-aside-nav/new-aside-nav.component';
 export * from './components/aside-links/aside-links.component'
 export * from './directives/aside-link/aside-link.directive';
 export * from './components/aside-nav/aside-nav/aside-nav.component'
+export * from './components/toggle/toggle.component'
+export * from './components/sort-by/sort-by.component'
+export * from './components/header-title/header-title.component'
+export * from './components/feed-objective/feed-objective.component'
+export * from './components/feed-buttons/feed-buttons.component'
+export * from './components/create-project/create-project.component'
+export * from './components/chat-text/chat-text.component'

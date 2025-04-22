@@ -4,6 +4,7 @@
           class="profile_header_background-image" 
           [imageUrl]="'https://media.istockphoto.com/id/476098860/vector/wonderful-morning-in-the-blue-mountains.jpg?s=612x612&w=0&k=20&c=0nuLvsWKXPReu01RvbXTKIwlUYxOQvoXD_qVBrsapxc='">
         </xc-header-background>
+        <app-edit-image currentPage="header" class="edit-header"/>
     </article>
     <article class="profile_header_content">
         <div class="profile_header_content-card">
@@ -22,6 +23,7 @@
                 [image]="'https://randomuser.me/api/portraits/women/26.jpg'" 
                 [marginSize]="4">
                 </xc-rounded-image>
+                <app-edit-image currentPage="profile" class="edit-profile"/>
             </span>
         </div>
     </article>

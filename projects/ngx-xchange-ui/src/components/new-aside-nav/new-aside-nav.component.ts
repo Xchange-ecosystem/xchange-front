@@ -13,7 +13,7 @@ import {
   XcIconUsersAltComponent,
   XcIconWifiComponent,
   XcIconAngleRightComponent,
-  XcLogOutIconComponent
+  XcLogOutIconComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { RouterLink } from '@angular/router';
 
@@ -38,8 +38,8 @@ type BottomMenuType = 'profile' | 'support' | 'logout' | '';
     XcIconRocketComponent,
     XcIconWifiComponent,
     XcIconUsersAltComponent,
-    XcLogOutIconComponent,
     RouterLink,
+    XcLogOutIconComponent
   ],
   templateUrl: './new-aside-nav.component.html',
   styleUrl: './new-aside-nav.component.css',

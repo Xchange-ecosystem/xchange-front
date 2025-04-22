@@ -1,0 +1,8 @@
+.interest-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

@@ -2,42 +2,27 @@
   <div class="container_content">
     <div class="container_content-nav">
       <span class="container_content-nav-span">
-        <button
-          class="container_content-nav-span-button"
-          [ngClass]="{ 'unselected': selectedButton !== 'all' }"
-          (click)="selectButton('all')"
-        >
-          All Projects
-        </button>
-        <button
-          class="container_content-nav-span-button"
-          [ngClass]="{ 'unselected': selectedButton !== 'my' }"
-          (click)="selectButton('my')"
-        >
-          My Projects
-        </button>
-        <button
-          class="container_content-nav-span-button"
-          [ngClass]="{ 'unselected': selectedButton !== 'collaborations' }"
-          (click)="selectButton('collaborations')"
-        >
-          Collaborations
-        </button>
+        <xc-section-tab [sections]="sections" (sectionSelected)="onSectionSelected($event)">
+        </xc-section-tab>
         <xc-sort-by></xc-sort-by>
       </span>
     </div>
     <section class="container_content-cards">
       <h5 xcHeadline600>All Projects</h5>
       <div class="container_content-cards-wrapper">
-        <xc-projects-card
-        class="container_content-cards-wrapper-injector"
-        (projectSelected)="openProject($event)"
-      ></xc-projects-card>
+          <xc-projects-card
+            *ngFor="let project of projects"
+            [project]="project"
+            (projectSelected)="openProject($event)"
+            class="container_content-cards-wrapper-injector"
+          ></xc-projects-card>
         <button class="new-project-card" (click)="openModal()">
-          <span class="new-project-card-icon">
-            <xc-icon-plus-circle (projectClick)="openProject($event)" />
-          </span>
-          <p>Create a new project</p>
+          <div class="new-project-card-content" >
+            <span class="new-project-card-content-icon">
+              <xc-icon-plus-circle  />
+            </span>
+            <p xcHeadlineStyles class="headline-300">Create a new project</p>
+          </div>  
         </button>
       </div>
     </section>
@@ -54,9 +39,15 @@
     </div>
   </section>
 
-  <section *ngIf="isProjectOpen" class="modal" >
+  <section *ngIf="isProjectOpen" class="modal">
     <div class="modal-content">
-      <app-project-modal></app-project-modal>
+      <app-project-modal [project]="selectedProject" [invitation]="false" class="modal-content-injector"></app-project-modal>
+      <div class="modal-content-button">
+        <button xcButtonsWrappers class="button-round-close push-button" (click)="closeProjectModal()">
+          <xc-icon-close-s class="modal-content-icon"></xc-icon-close-s>
+        </button>
+      </div>
     </div>
   </section>
+
 </main>
