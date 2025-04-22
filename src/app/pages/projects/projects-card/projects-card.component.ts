@@ -7,7 +7,7 @@ import { ProjectModalComponent } from 'src/app/pages/projects/project-modal/proj
 import { XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
-export interface ProjectInterface {
+interface ProjectInterface {
   image: string;
   title: string;
   tags: string[];

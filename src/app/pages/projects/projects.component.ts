@@ -9,7 +9,7 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { NgFor, NgIf } from '@angular/common';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { SectionTabComponent } from 'projects/ngx-xchange-ui/src/components/section-tab/section-tab.component';
-export interface ProjectInterface {
+interface ProjectInterface {
   image: string;
   title: string;
   tags: string[];

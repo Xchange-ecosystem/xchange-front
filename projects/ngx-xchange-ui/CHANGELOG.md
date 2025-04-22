@@ -1,3 +1,13 @@
+# 0.1.20 21/04/2025
+* (fix)  projects page 
+* (fix)  refresh icon svg
+* (fix)  close icon on modals
+* (add)  profile header with individual components
+* (add)  project footer to accept invitations
+* (add)  profile page (apperance,wallet,premium upgrade and premium upgrade w/individual components)
+* (add)  edit fields on profile settings
+
+
 # 0.1.19 16/04/2025
 * (add) directives to the export file and change the library version
 * (add) components to export file
