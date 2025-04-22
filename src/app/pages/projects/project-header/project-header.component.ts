@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HeaderBackgroundComponent } from 'projects/ngx-xchange-ui/src/components/header-background/header-background.component';
 import { HeaderCardComponent } from '../header-card/header-card.component';
 
@@ -13,5 +13,5 @@ import { HeaderCardComponent } from '../header-card/header-card.component';
   styleUrl: './project-header.component.scss'
 })
 export class ProjectHeaderComponent {
-
+  @Input() image:string = ''
 }

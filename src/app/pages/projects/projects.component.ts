@@ -45,7 +45,7 @@ interface ProjectInterface {
 })
 export class ProjectsComponent {
   isProjectOpen = false;
-  isModalOpen = true;
+  isModalOpen = false;
   selectedProject: any = null;
   selectedButton: string = 'all';
   

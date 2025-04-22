@@ -268,9 +268,6 @@ export class ButtonsWrappersDirective implements OnInit, OnDestroy {
         fill: 'black',
         stroke: 'black',
       },
-      hover: {
-        backgroundColor: 'var(--xc-grey200)',
-      },
     },
     'button-chat': {
       default: {
