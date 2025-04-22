@@ -1,5 +1,5 @@
 .stepper{
-  display: flex;
+    display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
@@ -65,7 +65,15 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        gap: 32px;
+        gap: 160px;
+
+        background-image: linear-gradient(
+          to right,
+          var(--xc-grey200) 
+        );
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40% 2px;
       }
     }
     .stepper-content {
@@ -218,7 +226,7 @@
   border-radius: 5px;
 }
 .icon-container {
-  border-radius: 32px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
