@@ -1,12 +1,12 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import {
   XcIconAngleDownComponent,
   XcIconRedoComponent,
-  XcIconRefreshComponent,
   XcIconSearchComponent,
 } from '@indziaki/ngx-xchange-icons';
 import { ButtonsWrappersDirective } from '../../public-api';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'xc-sort-by',
@@ -14,20 +14,26 @@ import { ButtonsWrappersDirective } from '../../public-api';
   imports: [
     XcIconAngleDownComponent,
     XcIconSearchComponent,
-    NgFor, 
+    NgFor,
+    NgIf,
     NgClass,
     XcIconRedoComponent,
     ButtonsWrappersDirective,
+    FormsModule
   ],
   templateUrl: './sort-by.component.html',
   styleUrl: './sort-by.component.css',
 })
 export class SortByComponent {
   isDropdownOpen = false;
-  selectedOption = '';
-  sortOptions = ['Alphabet A-Z', 'Alphabet Z-A', 'Collaborations'];
   isFilterActive = false;
-
+  isSearchOpen = false;
+  
+  selectedOption = '';
+  searchTerm = '';
+  
+  sortOptions = ['Alphabet A-Z', 'Alphabet Z-A', 'Collaborations'];
+  
   toggleDropdown(event: Event): void {
     event.stopPropagation();
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -36,6 +42,13 @@ export class SortByComponent {
   selectOption(option: string): void {
     this.selectedOption = option;
     this.isDropdownOpen = false;
+  }
+
+  toggleSearch() {
+    this.isSearchOpen = !this.isSearchOpen;
+    if (!this.isSearchOpen) {
+      this.searchTerm = '';
+    }
   }
 
   @HostListener('document:click', ['$event'])
