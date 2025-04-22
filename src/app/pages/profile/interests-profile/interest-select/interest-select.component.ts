@@ -1,12 +1,14 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'app-interest-select',
   standalone: true,
   imports: [
     NgFor,
-    NgIf
+    NgIf,
+    XcIconAngleDownComponent
   ],
   templateUrl: './interest-select.component.html',
   styleUrl: './interest-select.component.scss'

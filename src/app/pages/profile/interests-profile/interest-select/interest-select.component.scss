@@ -15,11 +15,12 @@
   cursor: pointer;
 
   .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid var(--xc-black500);
+    &-icon{
+      display: flex;
+      width: 24px;
+      height: 24px;
+      stroke: var(--xc-black500);
+    }
   }
 }
 
