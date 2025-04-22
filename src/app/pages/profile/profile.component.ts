@@ -202,6 +202,44 @@ export class ProfileComponent {
     { value: 'ux',        label: 'UX/UI' },
     { value: 'data',      label: 'Data Science' },
   ];
+
+  tableData = [
+    {
+      project: 'OneLife – Xchange Studio project',
+      contributed: '500 xCoins',
+      current: '500 xCoins',
+      status: 'Open',
+      statusTag: 'yellow'
+    },
+    {
+      project: 'Coop Master',
+      contributed: '250 xCoins',
+      current: '252 xCoins',
+      status: 'Confirmed',
+      statusTag: 'green'
+    },
+    {
+      project: 'NextGen LLL – Xchange Studio project',
+      contributed: '750 xCoins',
+      current: '760 xCoins',
+      status: 'Pending',
+      statusTag: 'yellow'
+    },
+    {
+      project: 'NextGen LLL – Xchange Studio project',
+      contributed: '750 xCoins',
+      current: '760 xCoins',
+      status: 'Confirmed',
+      statusTag: 'green'
+    },
+    {
+      project: 'NextGen LLL – Xchange Studio project',
+      contributed: '750 xCoins',
+      current: '760 xCoins',
+      status: 'Pending',
+      statusTag: 'yellow'
+    }
+  ]
   selectedInterests: { interest: string | null; level: number }[] = [];
 
   ngOnInit() {

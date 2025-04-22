@@ -143,35 +143,21 @@
       <table class="wallet_contributions-table">
         <thead class="wallet_contributions-table-header">
           <tr class="wallet_contributions-table-header-row">
-            <th>Project</th>
-            <th>Contributed</th>
-            <th>Current</th>
-            <th>Status</th>
+            <th xcHeadlineStyles class="headline-200-gray">Project</th>
+            <span class="wallet_contributions-table-header-row-last">
+              <th xcHeadlineStyles class="headline-200-gray">Contributed</th>
+              <th xcHeadlineStyles class="headline-200-gray">Current</th>
+              <th xcHeadlineStyles class="headline-200-gray">Status</th>
+            </span>
           </tr>
         </thead>
-        <tbody xcCopyStyles class="wallet_contributions-table-body">
-          <tr class="wallet_contributions-table-body-row">
-            <td>OneLife - Xchange Studio project</td>
-            <td>500 xCoins</td>
-            <td>500 xCoins</td>
-            <td class="wallet_contributions-table-body-row-status">
-              <div xcProfileTags="yellow">Open</div>
-            </td>
-          </tr>
-          <tr xcCopyStyles class="copy-400 wallet_contributions-table-body-row">
-            <td>Coop Master</td>
-            <td>250 xCoins</td>
-            <td>252 xCoins</td>
-            <td class="wallet_contributions-table-body-row-status">
-              <div xcProfileTags="green">Confirmed</div>
-            </td>
-          </tr>
-          <tr class="wallet_contributions-table-body-row">
-            <td>OneLife - Xchange Studio project</td>
-            <td>500 xCoins</td>
-            <td>500 xCoins</td>
-            <td class="wallet_contributions-table-body-row-status">
-              <div xcProfileTags="yellow">Open</div>
+        <tbody class="wallet_contributions-table-body">
+          <tr *ngFor="let row of tableData" class="wallet_contributions-table-body-row">
+            <td class="col-project">{{ row.project }}</td>
+            <td class="col-contributed">{{ row.contributed }}</td>
+            <td class="col-current">{{ row.current }}</td>
+            <td class="col-status">
+              <div xcProfileTags="{{ row.statusTag }}">{{ row.status }}</div>
             </td>
           </tr>
         </tbody>
