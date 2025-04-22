@@ -1,5 +1,8 @@
+# 0.1.21 22/04/2025
+* (add) update lib with headline 400
+
 # 0.1.20 21/04/2025
-* (fix)  projects page 
+* (fix)  projects page
 * (fix)  refresh icon svg
 * (fix)  close icon on modals
 * (add)  profile header with individual components
