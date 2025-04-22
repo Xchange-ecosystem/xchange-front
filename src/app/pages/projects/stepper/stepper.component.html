@@ -93,16 +93,31 @@
   </ng-container>
   <ng-container *ngIf="actualStep === 3">
     <article class="stepper-content">
-      <h5 xcHeadline400>Start a new project</h5>
+      <h5 xcHeadlineStyles class="headline-400">Start a new project</h5>
       <label class="second-container-title-input">
         <input type="text" placeholder="What are you looking for" class="second-container-title-input-mod"/>
         <xc-icon-search class="second-container-title-input-icon" />
       </label>
       <div class="second-container-templates">
-        <xc-projects-card
-          class="second-container-templates-injector"
-          
-        />
+        <button
+          *ngFor="let template of fakeTemplates"
+          class="template"
+          (click)="selectTemplate(template)"
+          [ngClass]="{ 'template-selected': selectedTemplate === template }"
+        >
+          <div class="template_header">
+            <img src={{template.image}} alt="project-image" class="template_header-image">
+          </div>
+          <div class="template_title">
+            <h6 xcHeadlineStyles class="headline-300">{{template.name}}</h6>
+            <div class="template_title-tags">
+              <span *ngFor="let tag of template.tags" xcProfileTags="gray">{{tag}}</span>
+            </div>
+          </div>
+          <p class="template_description">
+            {{template.description}}
+          </p>
+        </button>
       </div>
     </article>
   </ng-container>
@@ -113,9 +128,18 @@
       <button xcButtonsWrappers class="button-filled-noHeight next" (click)="changeStep()" *ngIf="actualStep < stepsArray.length">
         Next
       </button>
-      <button xcButtonsWrappers class="create-project" *ngIf="actualStep === stepsArray.length">
-        Create Project
-      </button>
+      <button
+      xcButtonsWrappers
+      *ngIf="actualStep === stepsArray.length"
+      [ngClass]="{
+        'create-project': canCreate,
+        'create-project-inactive': !canCreate
+      }"
+      [disabled]="!canCreate"
+      (click)="createProject()"
+    >
+      Create Project
+    </button>
     </span>
   </footer>
 </section>
