@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CopyStylesDirective } from '@indziaki/ngx-xchange-ui';
+import { CopyStylesDirective } from '../../directives/copy-styles/copy-styles.directive';
 
 @Component({
   selector: 'xc-section-tab',
