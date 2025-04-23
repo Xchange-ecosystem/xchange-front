@@ -1,3 +1,6 @@
+# 0.1.7 07/04/2025
+* (change) icon plus circle fill none
+
 # 0.1.6 05/03/2025
 * (add) - log out icon
 * (add) - star icon
