@@ -4,7 +4,7 @@
       (click)="selectSection(section.name)" 
       [class.active]="activeSection === section.name"
       class="tab">
-      {{ section.name }}
+      <p>{{ section.name }}</p>
       <span *ngIf="section.hasNotifications" class="notification-dot"></span>
     </div>
   </div>
