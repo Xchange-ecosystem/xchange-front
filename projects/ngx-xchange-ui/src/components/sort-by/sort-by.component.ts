@@ -5,8 +5,8 @@ import {
   XcIconRedoComponent,
   XcIconSearchComponent,
 } from '@indziaki/ngx-xchange-icons';
-import { ButtonsWrappersDirective } from '../../public-api';
 import { FormsModule } from '@angular/forms';
+import { ButtonsWrappersDirective } from '../../directives/buttons-wrappers/buttons-wrappers.directive';
 
 @Component({
   selector: 'xc-sort-by',
@@ -18,8 +18,8 @@ import { FormsModule } from '@angular/forms';
     NgIf,
     NgClass,
     XcIconRedoComponent,
-    ButtonsWrappersDirective,
-    FormsModule
+    FormsModule,
+    ButtonsWrappersDirective
   ],
   templateUrl: './sort-by.component.html',
   styleUrl: './sort-by.component.css',
