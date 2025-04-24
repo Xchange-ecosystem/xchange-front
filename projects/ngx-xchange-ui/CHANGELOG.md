@@ -1,3 +1,6 @@
+# 0.1.22 24/04/2025
+* (fix) Remove textAling center on copy200
+
 # 0.1.21 22/04/2025
 * (add) update lib with headline 400
 
