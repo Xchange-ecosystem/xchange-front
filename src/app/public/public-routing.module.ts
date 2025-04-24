@@ -30,6 +30,10 @@ const routes: Routes = [
         path:'profile',
         loadComponent: () => import('src/app/pages/profile/profile.component').then(m => m.ProfileComponent),
       },
+      {
+        path:'forgot-password',
+        loadComponent: () => import('src/app/pages/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent),
+      },
     ],
   },
 ];
