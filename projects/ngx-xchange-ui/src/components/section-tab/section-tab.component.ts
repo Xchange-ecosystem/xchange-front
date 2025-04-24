@@ -1,10 +1,15 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CopyStylesDirective } from '../../directives/copy-styles/copy-styles.directive';
 
 @Component({
   selector: 'xc-section-tab',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [
+    NgFor, 
+    NgIf,
+    CopyStylesDirective
+  ],
   templateUrl: './section-tab.component.html',
   styleUrl: './section-tab.component.css'
 })
