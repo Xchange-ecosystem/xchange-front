@@ -11,19 +11,26 @@
     <div class="aside-nav__tabs">
       <button
         class="aside-nav__tab"
-        [ngClass]="{ 'aside-nav__tab--active': activeTab === 'ecosystem' }"
+        [ngClass]="{
+          'aside-nav__tab--active': activeTab === 'ecosystem',
+          'aside-nav__tab--inactive': activeTab !== 'ecosystem'
+        }"
         (click)="setActiveTab('ecosystem')"
       >
         Ecosystem
       </button>
       <button
         class="aside-nav__tab-right"
-        [ngClass]="{ 'aside-nav__tab--active': activeTab === 'project' }"
+        [ngClass]="{
+          'aside-nav__tab--active': activeTab === 'project',
+          'aside-nav__tab--inactive': activeTab !== 'project'
+        }"
         (click)="setActiveTab('project')"
       >
         Project
       </button>
     </div>
+    
     <nav class="aside-nav__menu" *ngIf="activeTab === 'ecosystem'">
       <xc-aside-links [route]="'/feed'" [label]="'Feed'" class="nav-item">
         <span icon class="aside-nav__wifi">

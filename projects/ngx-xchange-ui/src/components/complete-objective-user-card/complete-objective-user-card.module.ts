@@ -5,7 +5,6 @@ import { XcIconClockComponent, XcIconClockFiveComponent } from '@indziaki/ngx-xc
 import { RatingBarModule } from '../rating-bar/rating-bar.module';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { TagModule } from '../../directives/tag/tag.module';
-import { NgxXchangeUiModule } from '../../public-api';
 
 
 
