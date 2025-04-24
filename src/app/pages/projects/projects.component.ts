@@ -2,7 +2,6 @@ import { ChangeDetectorRef, Component} from '@angular/core';
 import { XcIconCloseSComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { ProjectsCardComponent } from 'src/app/pages/projects/projects-card/projects-card.component';
 import { SortByComponent } from 'projects/ngx-xchange-ui/src/components/sort-by/sort-by.component';
-import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/headline-600/headline-600.directive';
 import { StepperComponent } from './stepper/stepper.component';
 import { ButtonsWrappersDirective, ClickOutsideDirective } from 'projects/ngx-xchange-ui/src/public-api';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
@@ -29,7 +28,6 @@ interface ProjectInterface {
     ButtonsWrappersDirective,
     HeadlineStylesDirective,
     SortByComponent,
-    Headline600Directive,
     ProjectsCardComponent,
     StepperComponent,
     ClickOutsideDirective,

@@ -14,15 +14,15 @@
       <section class="user-data-wrapper">
         <div class="user-data-card" >
           <span class="user-data-name">
-            <h4 xcHeadline400 *ngIf="!isEditing">
+            <h4 xcHeadlineStyles class="headline-400" *ngIf="!isEditing">
               {{ firstText }} - {{ secondText }}
             </h4>
             <div *ngIf="isEditable && isEditing" class="edit-container">
               <input
-                xcHeadline400
+              xcHeadlineStyles
                 type="text"
                 [value]="firstText + ' - ' + secondText"
-                class="input-edit"
+                class="headline-400 input-edit"
               />
               <div class="edit-buttons-icons">
                 <button (click)="saveChanges()">
@@ -40,21 +40,21 @@
           <span class="user-data-achievements" *ngIf="showUserData">
             <div class="achievements-1">
               <div class="number-flex">
-                <span xcHeadline500>{{ user.completedObj }}</span>
+                <span xcHeadlineStyles class="headline-500">{{ user.completedObj }}</span>
                 <p>completed objectives</p>
               </div>
               <div class="number-flex">
-                <span xcHeadline500>{{ user.activeObj }}</span>
+                <span xcHeadlineStyles class="headline-500">{{ user.activeObj }}</span>
                 <p>active objectives</p>
               </div>
             </div>
             <div class="achievements-2">
               <div class="number-flex">
-                <span xcHeadline500>{{ user.nextSteps }}</span>
+                <span xcHeadlineStyles class="headline-500">{{ user.nextSteps }}</span>
                 <p>next steps</p>
               </div>
               <div class="number-flex">
-                <span xcHeadline500>{{ user.invProyects }}</span>
+                <span xcHeadlineStyles class="headline-500">{{ user.invProyects }}</span>
                 <p>involved projects</p>
               </div>
             </div>
