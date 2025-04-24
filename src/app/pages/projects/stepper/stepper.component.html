@@ -1,5 +1,4 @@
 <section class="stepper">
-  <!-- HEADER: indicadores y botón Back -->
   <header
     class="stepper-container"
     [ngClass]="{
@@ -12,25 +11,26 @@
       [style.visibility]="actualStep > 1 ? '' : 'hidden'"
       (click)="previousStep()"
     >
-      <xc-icon-arrow-left class="back-button-icon" />
+      <xc-icon-arrow-left class="back-button-icon"></xc-icon-arrow-left>
       <p xcCopyStyles class="copy-400-bold">Back</p>
     </button>
 
     <div class="stepper-container-stepper-wrapper">
-      <span
-        class="icon-container"
-        *ngFor="let step of stepsArray"
-        [ngClass]="{
-          'active-step':   step === actualStep,
-          'inactive-step': step !== actualStep
-        }"
-      >
-        <xc-icon-check *ngIf="step === actualStep"></xc-icon-check>
-      </span>
+      <ng-container *ngFor="let step of stepsArray; let last = last">
+        <span
+          class="icon-container"
+          [ngClass]="{
+            'active-step':   step === actualStep,
+            'inactive-step': step !== actualStep
+          }"
+        >
+          <xc-icon-check *ngIf="step === actualStep"></xc-icon-check>
+        </span>
+        <span class="connector" *ngIf="!last"></span>
+      </ng-container>
     </div>
   </header>
 
-  <!-- BODY: aquí van los contenidos de cada paso -->
   <div class="stepper-body">
     <ng-container *ngIf="actualStep === 1">
       <article class="stepper-content" appClickOutside>
@@ -87,9 +87,7 @@
           <div class="upload-container">
             <strong>Banner Image</strong>
             <label class="upload-container-button">
-              <xc-icon-upload
-                class="upload-container-button-icon"
-              />
+              <xc-icon-upload class="upload-container-button-icon"></xc-icon-upload>
               <span class="upload-container-button-span">
                 <p xcCopyStyles class="copy-300-bold">Upload an image</p>
               </span>
@@ -114,18 +112,14 @@
             placeholder="What are you looking for"
             class="second-container-title-input-mod"
           />
-          <xc-icon-search
-            class="second-container-title-input-icon"
-          />
+          <xc-icon-search class="second-container-title-input-icon"></xc-icon-search>
         </label>
         <div class="second-container-templates">
           <button
             *ngFor="let template of fakeTemplates"
             class="template"
             (click)="selectTemplate(template)"
-            [ngClass]="{
-              'template-selected': selectedTemplate === template
-            }"
+            [ngClass]="{ 'template-selected': selectedTemplate === template }"
           >
             <div class="template_header">
               <img
@@ -135,28 +129,21 @@
               />
             </div>
             <div class="template_title">
-              <h6
-                xcHeadlineStyles
-                class="headline-300"
-              >
+              <h6 xcHeadlineStyles class="headline-300">
                 {{ template.name }}
               </h6>
               <div class="template_title-tags">
-                <span
-                  *ngFor="let tag of template.tags"
-                  xcProfileTags="gray"
-                >
+                <span *ngFor="let tag of template.tags" xcProfileTags="gray">
                   {{ tag }}
                 </span>
               </div>
             </div>
-            <p class="template_description">
-              {{ template.description }}
-            </p>
+            <p class="template_description">{{ template.description }}</p>
           </button>
         </div>
       </article>
     </ng-container>
+
     <footer class="stepper-footer">
       <span class="gray-divider"></span>
       <span class="buttons-container">

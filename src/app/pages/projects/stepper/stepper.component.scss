@@ -10,7 +10,6 @@
   height: 730px;
   gap: 24px;
   &-container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,14 +28,13 @@
       display: flex;
       justify-content: center;
       width: 100%;
-      gap: 160px;
-      background-image: linear-gradient(to right, var(--xc-grey200));
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 40% 2px;
-
-      .icon-container {
-        z-index: 1;
+      justify-content: center;
+      .connector {
+        flex-shrink: 0;
+        width: 150px;
+        height: 2px;
+        background: var(--xc-grey300);
+        align-self: center;
       }
     }
 
