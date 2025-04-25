@@ -22,54 +22,56 @@ import { CopyStylesDirective, HeadlineStylesDirective } from '@indziaki/ngx-xcha
 export class NewPasswordComponent {
   form!: FormGroup;
   step = 1;
-  showPassword    = false;
-  showConfirm     = false;
+
+  showPassword = false;
+  showConfirm  = false;
+
   constructor(private fb: FormBuilder) {}
 
-  ngOnInit() {
-    this.form = this.fb.group({
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirm:  ['', [Validators.required]]
-    }, {
-      validators: this.matchPasswords('password', 'confirm')
-    });
-  
-
-    const confirmCtrl = this.form.get('confirm')!;
-    confirmCtrl.disable();
-  
-    this.form.get('password')!.valueChanges.subscribe(() => {
-      if (this.form.get('password')!.valid) {
-        confirmCtrl.enable();
-      } else {
-        confirmCtrl.disable();
-        confirmCtrl.reset();
+  ngOnInit(): void {
+    this.form = this.fb.group(
+      {
+        password: ['', [Validators.required, Validators.minLength(1)]],
+        confirm:  ['', [Validators.required]],
+      },
+      {
+        validators: this.matchPasswords('password', 'confirm'),
       }
-    });
+    );
   }
   
-  private matchPasswords(pwKey: string, confirmKey: string) {
+  get isPasswordValid(): boolean {
+    const pwCtrl = this.form.get('password')!;
+    return pwCtrl.valid && pwCtrl.touched;
+  }
+
+  private matchPasswords(
+    pwKey: string,
+    confirmKey: string
+  ): (group: AbstractControl) => ValidationErrors | null {
     return (group: AbstractControl): ValidationErrors | null => {
-      const pw    = group.get(pwKey)?.value;
-      const cnf   = group.get(confirmKey)?.value;
-      return pw === cnf ? null : { mismatch: true };
+      const pw  = group.get(pwKey)?.value;
+      const cf  = group.get(confirmKey)?.value;
+      return pw === cf ? null : { mismatch: true };
     };
   }
 
-  changeStep() {
-    if (this.form.valid) {
-      this.step++;
-      console.log('paso cambiado a', this.step);
-    } else {
-      this.form.markAllAsTouched();
-    }
-  }
 
-  toggleShowPassword() {
+  toggleShowPassword(): void {
     this.showPassword = !this.showPassword;
   }
 
-  toggleShowConfirm() {
-    this.showConfirm = !this.showConfirm;
+  toggleShowConfirm(): void {
+    if (this.isPasswordValid) {
+      this.showConfirm = !this.showConfirm;
+    }
+  }
+
+  changeStep(): void {
+    if (this.form.valid) {
+      this.step++;
+    } else {
+      this.form.markAllAsTouched();
+    }
   }
 }

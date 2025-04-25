@@ -37,7 +37,6 @@ export class ForgotPasswordComponent {
   changeStep() {
     if (this.form.valid && this.step === 1) {
       this.step++;
-      console.log('paso cambiado a', this.step);
     }
   }
 }
