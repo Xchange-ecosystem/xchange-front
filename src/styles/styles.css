@@ -42,9 +42,79 @@
     --xc-Progress:#FAE651;
     --xc-Suggestion:#AF71F1;
     --xc-Accepted:#12d464;
-    --xc-Copy-200-Bold-font-size: 12px;
-    --xc-Copy-200-Bold-font-weight: 700;
-    --xc-Copy-200-Medium-line-Height: 16px;
     --xc-Yellow-Tag: #AF9E1C;
-    --xc-Tags-Font-14: 14px;
+    --xc-font-size:14px;
+    --xc-font-family:"Manrope";
+    --xc-font-weight:400;
+    --xc-line-height:24px;
+    --xc-spacing:normal;
+    --xc-bold:700;
+}
+
+*,body,html{
+    font-size: var(--xc-font-size);
+    font-weight: var(--xc-font-weight);
+    letter-spacing: var(--xc-spacing);
+    line-height: var(--xc-line-height);
+    color: var(--xc-black500);
+}
+
+b{
+    font-weight: var(--xc-bold);
+}
+
+.medium-400{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.medium-300{
+    font-size:14px;
+    font-weight:500;
+    line-height: 20px;
+}
+
+.medium-200{
+    font-size:12px;
+    font-weight:500;
+    line-height: 16px;
+}
+
+.bold-400{
+    font-size: 16px;
+}
+
+.bold-300{
+    font-size:14px;
+    line-height: 20px;
+}
+
+.bold-200{
+    font-size:12px;
+    line-height: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+}
+
+
+h2{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
 }
