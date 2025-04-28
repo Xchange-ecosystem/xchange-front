@@ -1,5 +1,6 @@
-@import  "../../dist/ngx-xchange-ui/src/assets/css/base.css";
-:root{
+@import "../../dist/ngx-xchange-ui/src/assets/css/base.css";
+
+:root {
     --xc-black500: #111111;
     --xc-black400: #343434;
     --xc-white: #ffffff;
@@ -19,14 +20,14 @@
     --xc-gradient-light-blue: linear-gradient(109deg, #B8FBFF 33.19%, #A4F8C0 85.37%);
     --xc-gradient-medium-green: linear-gradient(109deg, #47E3E3 33.19%, #78F7AD 85.37%);
     --xc-categories-progress: #FAE651;
-    --xc-categories-progress-opacity: rgba(250,230,81,0.4);
+    --xc-categories-progress-opacity: rgba(250, 230, 81, 0.4);
     --xc-categories-yellow-tag: #AF9E1C;
     --xc-categories-yellow-filter: #E3CA11;
     --xc-categories-completed: #1ccd66;
-    --xc-categories-completed-opacity: rgba(28,205,102,0.2);
+    --xc-categories-completed-opacity: rgba(28, 205, 102, 0.2);
     --xc-categories-blocked: #EF4444;
     --xc-categories-suggestion: #AF71F1;
-    --xc-categories-suggestion-opacity: rgba(175,113,241,0.3);
+    --xc-categories-suggestion-opacity: rgba(175, 113, 241, 0.3);
     --xc-categories-collaboration: #71D7D7;
     --xc-categories-project: #3CA7FF;
     --xc-categories-health: #FFA931;
@@ -36,85 +37,222 @@
     --xc-data-viz-blue200: #60A5FA;
     --xc-data-viz-blue100: #BFDBFE;
     --xc-data-viz-blue50: #EFF6FF;
-    --xc-boxShadow-500:  0px 0px 30px 0px rgba(17, 17, 17, 0.14);
+    --xc-boxShadow-500: 0px 0px 30px 0px rgba(17, 17, 17, 0.14);
     --xc-boxShadow-400: 0px 0px 30px 0px rgba(17, 17, 17, 0.05);
-    --xc-Completed:#1CCD66;
-    --xc-Progress:#FAE651;
-    --xc-Suggestion:#AF71F1;
-    --xc-Accepted:#12d464;
+    --xc-Completed: #1CCD66;
+    --xc-Progress: #FAE651;
+    --xc-Suggestion: #AF71F1;
+    --xc-Accepted: #12d464;
     --xc-Yellow-Tag: #AF9E1C;
-    --xc-font-size:14px;
-    --xc-font-family:"Manrope";
-    --xc-font-weight:400;
-    --xc-line-height:24px;
-    --xc-spacing:normal;
-    --xc-bold:700;
+    --xc-font-size: 14px;
+    --xc-font-family: "Manrope";
+    --xc-font-weight: 400;
+    --xc-line-height: 24px;
+    --xc-spacing: normal;
+    --xc-bold: 700;
+    --xc-regular-padding: 16px;
+    --xc-rounded-eight: 8px;
+    --xc-rounded-sixteen: 16px;
 }
 
-*,body,html{
+/* *Texts first render will contain*/
+*,
+body,
+html {
+    color: var(--xc-black500);
     font-size: var(--xc-font-size);
     font-weight: var(--xc-font-weight);
     letter-spacing: var(--xc-spacing);
     line-height: var(--xc-line-height);
-    color: var(--xc-black500);
 }
 
-b{
+/* *bold classes to use*/
+
+b {
     font-weight: var(--xc-bold);
 }
 
-.medium-400{
+.bold {
+    font-weight: 700;
+}
+
+/* *Texts inherit properties only aply changes*/
+
+.medium-400 {
     font-weight: 500;
     font-size: 16px;
 }
 
-.medium-300{
-    font-size:14px;
-    font-weight:500;
+.medium-300 {
+    font-size: 14px;
+    font-weight: 500;
     line-height: 20px;
 }
 
-.medium-200{
-    font-size:12px;
-    font-weight:500;
+.medium-200 {
+    font-size: 12px;
+    font-weight: 500;
     line-height: 16px;
 }
 
-.bold-400{
+.bold-400 {
     font-size: 16px;
 }
 
-.bold-300{
-    font-size:14px;
+.bold-300 {
+    font-size: 14px;
     line-height: 20px;
 }
 
-.bold-200{
-    font-size:12px;
+.bold-200 {
+    font-size: 12px;
     line-height: 20px;
 }
 
 h1 {
     font-size: 32px;
+    font-weight: 600;
     line-height: 38px;
-    font-weight: 600;
 }
 
 
-h2{
+h2 {
     font-size: 24px;
+    font-weight: 600;
     line-height: 30px;
-    font-weight: 600;
 }
 
-h3{
+h3 {
     font-size: 18px;
-    line-height: 24px;
     font-weight: 600;
+    line-height: 24px;
 }
 
-h4{
+h4 {
     font-size: 16px;
-    line-height: 20px;
     font-weight: 700;
+    line-height: 20px;
+}
+
+/* *Regular classes for cards*/
+
+.container-card {
+    background: var(--xc-white);
+    box-shadow: var(--xc-boxShadow-400);
+    padding: var(--xc-regular-padding);
+}
+
+
+/* 
+*Common class for buttons, used BEM for better structure & long term maintenance
+*The regular classes are used for outline button
+* Use as follow  <button class="btn btn--filled"> <xc-icon class="btn__icon"></xc-icon> </button>
+*/
+
+.btn {
+    align-items: center;
+    background: var(--xc-white);
+    border: 1.5px solid var(--xc-black500);
+    border-radius: var(--xc-rounded-eight);
+    display: flex;
+    gap: 4px;
+    padding: var(--xc-regular-padding);
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:disabled {
+    opacity: 0.2;
+}
+
+/* *Different buttons */
+
+.btn--filled {
+    background: var(--xc-black500);
+    color: var(--xc-white);
+}
+
+.btn--ai {
+    background: var(--xc-gradient-light-blue);
+
+}
+.btn--ai:hover {
+    background: var(--xc-gradient-medium-green);
+}
+
+
+.btn--rounded{
+    background:var(--xc-gradient-light-grey-on-white);
+    border-radius: 50%;
+    border: none;
+    height: 38px;
+    width: 38px;
+}
+.btn--rounded:hover{
+    background: var(--xc-grey50);
+}
+
+.btn--rounded_xl{
+    background:var(--xc-gradient-light-grey-on-white);
+    border-radius: 50%;
+    border: none;
+    height: 56px;
+    width: 56px;
+}
+.btn--rounded_xl:hover{
+    background: var(--xc-grey50);
+}
+
+.btn--rounded_sm{
+    background:var(--xc-gradient-light-grey-on-white);
+    border-radius: 50%;
+    border: none;
+    height: 30px;
+    width: 30px;
+}
+.btn--rounded_sm:hover{
+    background: var(--xc-grey50);
+}
+
+
+.btn__icon {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    stroke: var(--xc-black500);
+}
+
+.btn__icon_lg {
+    align-items: center;
+    display: flex;
+    height: 42px;
+    width: 42px;
+    stroke: var(--xc-white);
+}
+
+.btn__icon_filled-sm {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    stroke: var(--xc-black500);
+}
+
+.btn__icon_filled {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    stroke: var(--xc-white);
+}
+.btn__icon_filled-sm {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    width: 16px;
+    stroke: var(--xc-white);
 }
