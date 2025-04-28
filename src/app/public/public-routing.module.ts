@@ -30,6 +30,10 @@ const routes: Routes = [
         path:'profile',
         loadComponent: () => import('src/app/pages/profile/profile.component').then(m => m.ProfileComponent),
       },
+      {
+        path:'dashboard',
+        loadComponent: () => import('src/app/pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
+      },
     ],
   },
 ];

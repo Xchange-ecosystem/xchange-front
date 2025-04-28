@@ -1,0 +1,30 @@
+.dashboard {
+    padding: 32px;
+    background-color: var(--xc-white);
+    min-height: 100vh;
+  
+    &_portfolio {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      gap: 24px;
+      margin-bottom: 48px;
+  
+      &-card {
+        background-color: var(--xc-white);
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-height: 150px;
+        transition: transform 0.3s ease;
+      }
+    }
+  
+    &_performance {
+      background-color: var(--xc-white);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    }
+  }
+  
