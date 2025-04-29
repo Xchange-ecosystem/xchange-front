@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { XcIconAmbulanceComponent } from '@indziaki/ngx-xchange-icons';
-import { CopyStylesDirective, HeadlineStylesDirective } from '@indziaki/ngx-xchange-ui';
+import { XcIconAmbulanceComponent, XcIconPlayComponent, XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
+import { CopyStylesDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
 import { FilterComponent } from './filter/filter.component';
 
 @Component({
@@ -10,7 +10,10 @@ import { FilterComponent } from './filter/filter.component';
     CopyStylesDirective,
     HeadlineStylesDirective,
     XcIconAmbulanceComponent,
-    FilterComponent
+    FilterComponent,
+    XcIconRedoComponent,
+    XcIconPlayComponent,
+    ProfileTagsDirective
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
