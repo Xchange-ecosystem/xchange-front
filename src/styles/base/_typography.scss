@@ -1,0 +1,91 @@
+:root{
+    --xc-font-size: 14px;
+    --xc-font-family: "Manrope";
+    --xc-font-weight: 400;
+    --xc-line-height: 24px;
+    --xc-spacing: normal;
+    --xc-bold: 700;
+}
+
+/* *bold classes to use*/
+
+b {
+    font-weight: var(--xc-bold);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* *Texts inherit properties only aply changes*/
+
+.medium-400 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.medium-300 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.medium-200 {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.bold-400 {
+    font-size: 16px;
+}
+
+.bold-300 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.bold-200 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+}
+/* *Texts copy */
+
+.text_400{
+    font-size: 16px;
+}
+
+.text_300{
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.text_200{
+    font-size: 12px;
+    line-height: 16px;
+}
