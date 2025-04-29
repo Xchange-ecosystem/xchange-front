@@ -133,6 +133,22 @@ h4 {
     font-weight: 700;
     line-height: 20px;
 }
+/* *Texts copy */
+
+.text_400{
+    font-size: 16px;
+}
+
+.text_300{
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.text_200{
+    font-size: 12px;
+    line-height: 16px;
+}
+
 
 /* *Regular classes for cards*/
 
@@ -223,6 +239,24 @@ h4 {
     background: var(--xc-grey200);
 }
 
+.btn--rounded_reset{
+    background:var(--xc-brand-light-blue);
+    border-radius: 50%;
+    border: none;
+    height: 38px;
+    padding: 0px;
+    width: 38px;
+    opacity: 0.5;
+}
+.btn--rounded_reset-active{
+    background:var(--xc-brand-light-blue);
+    border-radius: 50%;
+    border: none;
+    height: 38px;
+    padding: 0px;
+    width: 38px;
+    opacity: 1; 
+}
 /* *classes for icons inside the buttons */
 
 .btn__icon {
