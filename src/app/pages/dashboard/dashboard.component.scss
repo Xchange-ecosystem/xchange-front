@@ -17,6 +17,19 @@
         padding: 24px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        .filter{
+          display: flex;
+          &_container{
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            width: 100%;
+            &-component{
+              display: flex;
+              width: 100%;
+            }
+          }
+        }
       }
     }
   

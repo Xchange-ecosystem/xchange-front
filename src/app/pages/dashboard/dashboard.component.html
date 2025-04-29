@@ -1,18 +1,57 @@
 <section class="dashboard">
-    <h2 xcHeadlineStyles class="headline-500">Portfolio dashboard</h2>
-  
-    <article class="dashboard_portfolio">
-      <div class="dashboard_portfolio-card">
-        <div class="filter">
-          <p xcHeadlineStyles class="headline-300">Value</p>
-          
+  <h2 xcHeadlineStyles class="headline-500">Portfolio dashboard</h2>
+
+  <article class="dashboard_portfolio">
+    <div class="dashboard_portfolio-card">
+      <div class="filter">
+        <p xcHeadlineStyles class="headline-300">Value</p>
+        <div class="filter_container">
+          <app-filter label="Metrics" [options]="options1" (selectedOption)="optionSelected($event)" class="filter_container-component">
+          </app-filter>
+          <app-filter label="Portfolio group" [options]="options2" (selectedOption)="optionSelected($event)"  class="filter_container-component">
+          </app-filter>
+          <app-filter label="Date" [options]="options3" (selectedOption)="optionSelected($event)"  class="filter_container-component">
+          </app-filter>
         </div>
       </div>
-      <div class="dashboard_portfolio-card"></div>
-    </article>
-  
-    <article class="dashboard_performance">
-      <h3 xcHeadlineStyles class="headline-300">Performance per project</h3>
-    </article>
-  </section>
-  
+    </div>
+    <div class="dashboard_portfolio-card"></div>
+  </article>
+
+  <article class="dashboard_performance">
+    <h3 xcHeadlineStyles class="headline-300">Performance per project</h3>
+    <button class="btn">
+      <xc-icon-ambulance class="btn__icon" />
+      <p>Example test</p>
+    </button>
+    <button class="btn">
+      <xc-icon-ambulance class="btn__icon-sm" />
+      <p>Example test</p>
+    </button>
+    <button class="btn btn--filled">
+      <xc-icon-ambulance class="btn__icon_filled" />
+      <p>Example test</p>
+    </button>
+    <button class="btn btn--filled">
+      <xc-icon-ambulance class="btn__icon_filled-sm" />
+      <p>Example test</p>
+    </button>
+    <button class="btn btn--ai">
+      <xc-icon-ambulance class="btn__icon" />
+      <p>Example test</p>
+    </button>
+    <button class="btn btn--ai">
+      <xc-icon-ambulance class="btn__icon-sm" />
+      <p>Example test</p>
+    </button>
+    <button class="btn btn--rounded_sm">
+      <xc-icon-ambulance class="btn__icon-sm" />
+    </button>
+    <button class="btn btn--rounded">
+      <xc-icon-ambulance class="btn__icon" />
+    </button>
+    <button class="btn btn--rounded_xl">
+      <xc-icon-ambulance class="btn__icon-lg" />
+    </button>
+  </article>
+</section>

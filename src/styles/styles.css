@@ -156,6 +156,7 @@ h4 {
     border-radius: var(--xc-rounded-eight);
     display: flex;
     gap: 4px;
+    justify-content: center;
     padding: var(--xc-regular-padding);
     transition: opacity 0.3s;
 }
@@ -172,14 +173,17 @@ h4 {
 
 .btn--filled {
     background: var(--xc-black500);
+}
+.btn--filled > p {
     color: var(--xc-white);
 }
 
 .btn--ai {
+    border: none;
     background: var(--xc-gradient-light-blue);
-
 }
 .btn--ai:hover {
+    opacity: 1;
     background: var(--xc-gradient-medium-green);
 }
 
@@ -189,10 +193,11 @@ h4 {
     border-radius: 50%;
     border: none;
     height: 38px;
+    padding: 0px;
     width: 38px;
 }
 .btn--rounded:hover{
-    background: var(--xc-grey50);
+    background: var(--xc-grey200);
 }
 
 .btn--rounded_xl{
@@ -203,7 +208,7 @@ h4 {
     width: 56px;
 }
 .btn--rounded_xl:hover{
-    background: var(--xc-grey50);
+    background: var(--xc-grey200);
 }
 
 .btn--rounded_sm{
@@ -211,12 +216,14 @@ h4 {
     border-radius: 50%;
     border: none;
     height: 30px;
+    padding: 0px;
     width: 30px;
 }
 .btn--rounded_sm:hover{
-    background: var(--xc-grey50);
+    background: var(--xc-grey200);
 }
 
+/* *classes for icons inside the buttons */
 
 .btn__icon {
     align-items: center;
@@ -226,20 +233,28 @@ h4 {
     stroke: var(--xc-black500);
 }
 
-.btn__icon_lg {
+.btn__icon-lg {
     align-items: center;
     display: flex;
     height: 42px;
     width: 42px;
-    stroke: var(--xc-white);
+    stroke: var(--xc-black500);
+}
+
+.btn__icon-sm {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    width: 16px;
+    stroke: var(--xc-black500);
 }
 
 .btn__icon_filled-sm {
     align-items: center;
     display: flex;
-    height: 20px;
-    width: 20px;
-    stroke: var(--xc-black500);
+    height: 16px;
+    width: 16px;
+    stroke: var(--xc-white);
 }
 
 .btn__icon_filled {
