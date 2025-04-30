@@ -135,50 +135,71 @@
     &-table {
       width: 100%;
       border-collapse: collapse;
-      table-layout: fixed;
-  
-      th, td {
-        padding: 12px 8px;
-        text-align: center;
+      table-layout: auto;
+      th,
+      td {
+        padding:8px;
+        text-align: start;
         vertical-align: middle;
       }
-  
+    
       th:first-child,
       td:first-child {
-        text-align: left;
-        width: 35%;
+        text-align: start;
+        width: min-content; 
+        text-wrap: nowrap;
       }
-  
+    
       th {
         color: var(--xc-grey500);
       }
-  
+    
+      .titles{
+        color: var(--xc-grey500);
+      }
+
+      .table_tags{
+        .tag{
+          margin-right: 8px;
+        }
+      }
+
       .table_project {
         display: flex;
         align-items: center;
         gap: 8px;
+        cursor: pointer;
       }
-  
+    
       .table_icon {
         width: 10px;
         height: 10px;
         stroke: var(--xc-black500);
         fill: var(--xc-black500);
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
+        transition: transform 0.2s ease;
+        border-radius: 4px;
+        margin-top:2px;
+        &.rotated {
+          transform: rotate(0deg);
+        }
+      
+        &.icon-collapsed {
+          fill: var(--xc-grey200);
+          stroke: var(--xc-grey200);
+        }
       }
-  
-      .table_tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        justify-content: center;
+    
+      .table_numeric {
+        text-align: start;
+        padding-left: 12px;
       }
-  
+      
       .table_progress {
         display: flex;
         gap: 4px;
-        justify-content: center;
-  
+        justify-content: start;
+    
         &-pending,
         &-completed {
           width: 30px;
@@ -188,13 +209,28 @@
           align-items: center;
           justify-content: center;
         }
-  
+    
         &-pending {
           background-color: var(--xc-categories-progress);
         }
-  
+    
         &-completed {
           background-color: var(--xc-categories-completed);
+        }
+      }
+      
+      
+      .expandable-row {
+        display: none;
+    
+        &.open {
+          display: table-row;
+        }
+    
+        .expandable-content {
+          padding: 16px;
+          border-top: 1px dashed var(--xc-black200);
+          text-align: left;
         }
       }
     }

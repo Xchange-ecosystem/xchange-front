@@ -6,9 +6,11 @@
       <section class="filter">
         <h3>Value</h3>
         <div class="filter_container">
-          <app-filter label="Metrics" [options]="options1" (selectedOption)="optionSelected($event)" class="filter_container-component">
+          <app-filter label="Metrics" [options]="options1" (selectedOption)="optionSelected($event)"
+            class="filter_container-component">
           </app-filter>
-          <app-filter label="Portfolio group" [options]="options2" (selectedOption)="optionSelected($event)"  class="filter_container-component">
+          <app-filter label="Portfolio group" [options]="options2" (selectedOption)="optionSelected($event)"
+            class="filter_container-component">
           </app-filter>
         </div>
         <button class="btn btn--rounded_reset reset">
@@ -32,54 +34,54 @@
             <span class="smBlue"></span>
             <p>Project 3</p>
           </div>
-        </div>  
+        </div>
       </section>
     </div>
-    
+
     <div class="dashboard_portfolio-card-right">
       <h3>My portfolio</h3>
       <section class="right_aside">
-          <div class="right_aside-graph">
-            <span>
-              <img src="assets/img/temp-pieGraph.png" alt="temporal pie graph">
-            </span>
-            <span class="right_aside-graph-data">
-              <div class="data_dot">
-                <span class="blue"></span>
-                <p>Project 1</p>
-              </div>
-              <div class="data_dot">
-                <span class="medBlue"></span>
-                <p>Project 2</p>
-              </div>
-              <div class="data_dot">
-                <span class="smBlue"></span>
-                <p>Project 3</p>
-              </div>
-            </span>
-          </div>
-          <div class="right_aside-metrics">
-            <span class="right_aside-metrics-data">
-              <h2>83.814€</h2>
-              <p>collaboration value</p>
-            </span>
-            <span class="right_aside-metrics-data">
-              <h2 class="title">156.814€</h2>
-              <p>owner added value</p>
-            </span>
-            <span class="right_aside-metrics-data">
-              <h2 class="title">78%</h2>
-              <p>average quality</p>
-            </span>
-            <span class="right_aside-metrics-data">
-              <h2 class="title">95</h2>
-              <p>collaborations</p>
-            </span>
-            <span class="right_aside-metrics-data">
-              <h2 class="title">116</h2>
-              <p>proofs uploaded</p>
-            </span>
-          </div>
+        <div class="right_aside-graph">
+          <span>
+            <img src="assets/img/temp-pieGraph.png" alt="temporal pie graph">
+          </span>
+          <span class="right_aside-graph-data">
+            <div class="data_dot">
+              <span class="blue"></span>
+              <p>Project 1</p>
+            </div>
+            <div class="data_dot">
+              <span class="medBlue"></span>
+              <p>Project 2</p>
+            </div>
+            <div class="data_dot">
+              <span class="smBlue"></span>
+              <p>Project 3</p>
+            </div>
+          </span>
+        </div>
+        <div class="right_aside-metrics">
+          <span class="right_aside-metrics-data">
+            <h2>83.814€</h2>
+            <p>collaboration value</p>
+          </span>
+          <span class="right_aside-metrics-data">
+            <h2 class="title">156.814€</h2>
+            <p>owner added value</p>
+          </span>
+          <span class="right_aside-metrics-data">
+            <h2 class="title">78%</h2>
+            <p>average quality</p>
+          </span>
+          <span class="right_aside-metrics-data">
+            <h2 class="title">95</h2>
+            <p>collaborations</p>
+          </span>
+          <span class="right_aside-metrics-data">
+            <h2 class="title">116</h2>
+            <p>proofs uploaded</p>
+          </span>
+        </div>
       </section>
     </div>
   </article>
@@ -90,38 +92,78 @@
       <table class="dashboard_performance-table">
         <thead>
           <tr>
-            <th><h4 class="titles">Project</h4></th>
-            <th><h4 class="titles">Labels</h4></th>
-            <th><h4 class="titles">Progress</h4></th>
-            <th><h4 class="titles">Collab</h4></th>
-            <th><h4 class="titles">Proof</h4></th>
-            <th><h4 class="titles">Quality</h4></th>
+            <th>
+              <h4 class="titles">Project</h4>
+            </th>
+            <th>
+              <h4 class="titles">Labels</h4>
+            </th>
+            <th>
+              <h4 class="titles">Progress</h4>
+            </th>
+            <th>
+              <h4 class="titles">Collab</h4>
+            </th>
+            <th>
+              <h4 class="titles">Proof</h4>
+            </th>
+            <th>
+              <h4 class="titles">Quality</h4>
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="table_project">
-              <xc-icon-play class="table_icon"></xc-icon-play>
-              <h3>NextGen LLL (old template)</h3>
-            </td>
-            <td class="table_tags">
-              <span xcProfileTags="gray">Education</span>
-              <span xcProfileTags="gray">Education</span>
-              <span xcProfileTags="gray">Education</span>
-              <span xcProfileTags="gray">Education</span>
-              <span xcProfileTags="gray">Education</span>
-            </td>
-            <td class="table_progress">
-              <span class="table_progress-pending">12</span>
-              <span class="table_progress-completed">1</span>
-            </td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-          </tr>
+          <ng-container *ngFor="let project of projects; let i = index">
+            <!-- Fila principal -->
+            <tr class="table_row">
+              <td class="table_project" (click)="toggleExpand(i)">
+                <xc-icon-play class="table_icon" [ngClass]="{
+                  'rotated': project.expanded,
+                  'icon-collapsed': !project.expanded
+                }"></xc-icon-play>
+                <h3>{{ project.title }}</h3>
+              </td>
+
+              <td class="table_tags">
+                <span *ngFor="let tag of project.tags" xcProfileTags="gray" class="tag">{{ tag }}</span>
+              </td>
+
+              <td class="table_progress">
+                <!-- <span class="table_progress-pending">{{ project.active }}</span>
+                <span class="table_progress-completed">{{ project.completed }}</span> -->
+              </td>
+
+              <td class="bold table_numeric">{{ project.collab }}</td>
+              <td class="bold table_numeric">{{ project.proof }}</td>
+              <td class="bold table_numeric">{{ project.quality }}</td>
+            </tr>
+
+            <!-- Subfilas desplegables -->
+            <tr *ngFor="let sub of project.subprojects" class="expandable-row" [class.open]="project.expanded">
+              <td class="table_project">
+                <p>{{ sub.title }}</p>
+              </td>
+
+              <td class="table_tags">
+                <span *ngFor="let tag of sub.tags" xcProfileTags="gray" class="tag">{{ tag }}</span>
+              </td>
+
+              <td class="table_progress">
+                <span class="table_progress-pending">{{ sub.active }}</span>
+                <span class="table_progress-completed">{{ sub.completed }}</span>
+              </td>
+
+              <td class="table_numeric">{{ sub.collab }}</td>
+              <td class="table_numeric">{{ sub.proof }}</td>
+              <td class="table_numeric">{{ sub.quality }}</td>
+            </tr>
+          </ng-container>
         </tbody>
+
       </table>
-      
+
+
+
     </section>
   </article>
 </section>
