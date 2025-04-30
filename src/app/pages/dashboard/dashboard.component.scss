@@ -7,14 +7,14 @@
   display: flex;
   flex-direction: column;
   padding: 32px;
-  width: 100%;
+  width: calc(100% - 165px);
   height: 100%;
   gap: 21px;
   overflow-y: auto;
 
   &_portfolio {
     display: grid;
-    grid-template-columns: 58% 40%;
+    grid-template-columns: 850px 1fr;
     gap: 24px;
 
     &-card {
@@ -31,6 +31,7 @@
         align-items: center;
         gap: 16px;
         border-bottom: 1px solid var(--xc-grey200);
+        text-align: start;
 
         &_container {
           display: flex;
@@ -126,74 +127,80 @@
     border-radius: 12px;
     padding: 24px;
     box-shadow: var(--xc-boxShadow-400);
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    &-table{
-      display: flex;
-      flex-direction: column;
+  
+    &-table {
       width: 100%;
-      thead{
-        display: flex;
-        width: 100%;
-        tr{
-          display: flex;
-          width: 100%;
-          justify-content: space-between;
-          align-items: end;
-        }
+      border-collapse: collapse;
+      table-layout: fixed;
+  
+      th, td {
+        padding: 12px 8px;
+        text-align: center;
+        vertical-align: middle;
       }
-      .titles{
+  
+      th:first-child,
+      td:first-child {
+        text-align: left;
+        width: 35%;
+      }
+  
+      th {
         color: var(--xc-grey500);
       }
-      tbody{
-        tr{
+  
+      .table_project {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+  
+      .table_icon {
+        width: 10px;
+        height: 10px;
+        stroke: var(--xc-black500);
+        fill: var(--xc-black500);
+        transform: rotate(90deg);
+      }
+  
+      .table_tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+      }
+  
+      .table_progress {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+  
+        &-pending,
+        &-completed {
+          width: 30px;
+          height: 30px;
+          border-radius: var(--xc-rounded-eight);
           display: flex;
-          width: 100%;
-          justify-content: space-between;
-          td{
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            .table_icon{
-              display: flex;
-              width: 10px;
-              height: 10px;
-              stroke: var(--xc-black500);
-              fill: var(--xc-black500);
-              transform: rotate(90deg);
-            }
-            .table_tags{
-              display: flex;
-              align-items: center;
-              gap: 8px;
-              flex-wrap: wrap;
-            }
-            .table_progress{
-              display: flex;
-              gap:4px;
-              align-items: center;
-              &-pending{
-                border-radius: var(--xc-rounded-eight);
-                background-color: var(--xc-categories-progress);
-                width: 30px;
-                height: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center
-              }
-              &-completed{
-                @extend .table_progress-pending;
-                background-color: var(--xc-categories-completed);
-              }
-            }
-          }
+          align-items: center;
+          justify-content: center;
+        }
+  
+        &-pending {
+          background-color: var(--xc-categories-progress);
+        }
+  
+        &-completed {
+          background-color: var(--xc-categories-completed);
         }
       }
     }
   }
+  
+  
 }
 
 /* Estos colores usados para la grafica no existen en el archivo css, solo son los puntos de la grafica*/
