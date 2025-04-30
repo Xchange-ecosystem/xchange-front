@@ -114,7 +114,11 @@
         </thead>
         <tbody>
           <ng-container *ngFor="let project of projects; let i = index">
-            <!-- Fila principal -->
+            <tr *ngIf="i !== 0" class="project-divider">
+              <td colspan="6" class="divider-cell">
+                <div class="divider-line"></div>
+              </td>
+            </tr>
             <tr class="table_row">
               <td class="table_project" (click)="toggleExpand(i)">
                 <xc-icon-play class="table_icon" [ngClass]="{
@@ -138,7 +142,6 @@
               <td class="bold table_numeric">{{ project.quality }}</td>
             </tr>
 
-            <!-- Subfilas desplegables -->
             <tr *ngFor="let sub of project.subprojects" class="expandable-row" [class.open]="project.expanded">
               <td class="table_project">
                 <p>{{ sub.title }}</p>
@@ -159,11 +162,7 @@
             </tr>
           </ng-container>
         </tbody>
-
       </table>
-
-
-
     </section>
   </article>
 </section>

@@ -158,6 +158,21 @@
         color: var(--xc-grey500);
       }
 
+      .project-divider {
+        height: 24px;
+      }
+      
+      .divider-cell {
+        padding: 0;
+      }
+      
+      .divider-line {
+        height: 1.5px;
+        width: 98%;
+        background-color: var(--xc-grey100);
+        margin-left: 10px;
+      }
+
       .table_tags{
         .tag{
           margin-right: 8px;
@@ -218,7 +233,6 @@
           background-color: var(--xc-categories-completed);
         }
       }
-      
       
       .expandable-row {
         display: none;

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { XcIconAmbulanceComponent, XcIconPlayComponent, XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
 import { CopyStylesDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
 import { FilterComponent } from './filter/filter.component';
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +14,8 @@ import { NgClass, NgFor } from '@angular/common';
     XcIconPlayComponent,
     ProfileTagsDirective,
     NgClass,
-    NgFor
+    NgFor,
+    NgIf
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
@@ -93,8 +94,122 @@ export class DashboardComponent {
       quality: 3,
       expanded: false,
       subprojects: []
+    },
+    {
+      title: 'Green Earth Initiative',
+      tags: ['Environment', 'NGO'],
+      active: 9,
+      completed: 18,
+      collab: 3,
+      proof: 4,
+      quality: 5,
+      expanded: false,
+      subprojects: [
+        {
+          title: 'Urban Gardens',
+          tags: ['Sustainability', 'Community'],
+          active: 4,
+          completed: 12,
+          collab: 6,
+          proof: 4,
+          quality: 2
+        }
+      ]
+    },
+    {
+      title: 'AI Optimization Suite',
+      tags: ['AI', 'Big Data', 'SaaS'],
+      active: 25,
+      completed: 40,
+      collab: 19,
+      proof: 15,
+      quality: 4,
+      expanded: false,
+      subprojects: [
+        {
+          title: 'Predictive Models',
+          tags: ['ML', 'Analytics'],
+          active: 10,
+          completed: 20,
+          collab: 8,
+          proof: 9,
+          quality: 3
+        },
+        {
+          title: 'Automation Tools',
+          tags: ['DevOps', 'Productivity'],
+          active: 7,
+          completed: 15,
+          collab: 4,
+          proof: 3,
+          quality: 1
+        }
+      ]
+    },
+    {
+      title: 'Healthcare Platform 2.0',
+      tags: ['HealthTech', 'UX'],
+      active: 17,
+      completed: 30,
+      collab: 12,
+      proof: 10,
+      quality: 3,
+      expanded: false,
+      subprojects: [
+        {
+          title: 'Patient Dashboard',
+          tags: ['UI', 'Medical'],
+          active: 6,
+          completed: 14,
+          collab: 3,
+          proof: 2,
+          quality: 1
+        }
+      ]
+    },
+    {
+      title: 'E-learning Portal',
+      tags: ['Education', 'eLearning'],
+      active: 14,
+      completed: 23,
+      collab: 6,
+      proof: 5,
+      quality: 2,
+      expanded: false,
+      subprojects: []
+    },
+    {
+      title: 'Startup Incubator',
+      tags: ['Business', 'Startup', 'Funding'],
+      active: 20,
+      completed: 11,
+      collab: 10,
+      proof: 7,
+      quality: 1,
+      expanded: false,
+      subprojects: [
+        {
+          title: 'Pitch Coaching',
+          tags: ['Mentorship', 'Public Speaking'],
+          active: 5,
+          completed: 6,
+          collab: 2,
+          proof: 1,
+          quality: 1
+        },
+        {
+          title: 'MVP Development',
+          tags: ['Prototyping', 'Agile'],
+          active: 8,
+          completed: 3,
+          collab: 4,
+          proof: 2,
+          quality: 0
+        }
+      ]
     }
   ];
+  
 
   optionSelected(value:any){
     console.log("seleccion hecha",value)
