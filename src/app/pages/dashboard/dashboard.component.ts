@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { XcIconAmbulanceComponent, XcIconPlayComponent, XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAmbulanceComponent, XcIconAngleDownComponent, XcIconPlayComponent, XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
 import { CopyStylesDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
 import { FilterComponent } from './filter/filter.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
@@ -13,6 +13,7 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
     XcIconRedoComponent,
     XcIconPlayComponent,
     ProfileTagsDirective,
+    XcIconAngleDownComponent,
     NgClass,
     NgFor,
     NgIf
@@ -21,12 +22,8 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+  isFilterOpen = false
   expandedRow: boolean = false;
-
-  toggleExpand(index: number) {
-    this.projects[index].expanded = !this.projects[index].expanded;
-  }
-  
 
   options1 = [
     {label:"test"},
@@ -213,5 +210,13 @@ export class DashboardComponent {
 
   optionSelected(value:any){
     console.log("seleccion hecha",value)
+  }
+  
+  toggleExpand(index: number) {
+    this.projects[index].expanded = !this.projects[index].expanded;
+  }
+  
+  toggleFilter(): void {
+    this.isFilterOpen = !this.isFilterOpen;
   }
 }

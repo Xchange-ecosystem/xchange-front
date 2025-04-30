@@ -2,7 +2,6 @@
   display: flex;
   width: 100%;
 }
-
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -11,7 +10,8 @@
   margin: 0px 160px;
   height: 100%;
   gap: 21px;
-  overflow-y: auto;
+  overflow-y: scroll;
+
   @media (max-width: 1830px) {
     margin: 0 120px;
   }
@@ -29,7 +29,7 @@
   }
 
   @media (max-width: 1024px) {
-    margin: 0 40px;
+    margin: 0 24px;
   }
 
   &_portfolio {
@@ -40,15 +40,15 @@
     @media (max-width: 1830px) {
       grid-template-columns: 700px 1fr;
     }
-  
+
     @media (max-width: 1640px) {
       grid-template-columns: 600px 1fr;
     }
-  
+
     @media (max-width: 1440px) {
       grid-template-columns: 500px 1fr;
     }
-  
+
     @media (max-width: 1240px) {
       grid-template-columns: 100%;
       grid-template-rows: auto auto;
@@ -74,7 +74,9 @@
           display: flex;
           gap: 16px;
           width: 100%;
-
+          @media (max-width: 1800px) {
+            overflow-x: scroll;
+          }
           &-component {
             display: flex;
             flex: 1 1 0%;
@@ -94,7 +96,9 @@
         display: flex;
         gap: 16px;
         align-items: center;
-
+        @media (max-width: 1800px) {
+          flex-direction: column;
+        }
         &_data {
           display: flex;
           flex-direction: column;
@@ -104,7 +108,12 @@
           height: min-content;
           gap: 16px;
           width: 190px;
-
+          @media (max-width: 1800px) {
+            flex-direction: row;
+            width: 100%;
+            gap: 0px;
+            justify-content: space-evenly;
+          }
           &-spec {
             display: flex;
             gap: 8px;
@@ -121,58 +130,69 @@
         padding: var(--xc-regular-padding);
         box-shadow: var(--xc-boxShadow-400);
         gap: 24px;
-        .right_aside{
+
+        .right_aside {
           display: flex;
           flex-direction: column;
           gap: 12px;
-          &-graph{
+
+          &-graph {
             display: flex;
             gap: 16px;
-            &-data{
+
+            @media (max-width: 1800px) {
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+
+            &-data {
               display: flex;
               flex-direction: column;
               gap: 16px;
               padding: var(--xc-regular-padding);
-              .data_dot{
+
+              .data_dot {
                 display: flex;
                 gap: 8px;
                 align-items: center;
+                text-wrap: nowrap;
               }
             }
           }
+
           &-metrics {
             display: flex;
             flex-direction: column;
             align-items: center;
-        
+
             &-table {
               width: 100%;
               border-collapse: separate;
               border-spacing: 0 12px; // 12px entre filas
-        
+
               td {
                 vertical-align: middle;
-        
+
                 h2 {
                   margin: 0;
                 }
-        
+
                 p {
                   margin: 0;
                 }
               }
-        
+
               .align-end {
                 text-align: right;
                 padding-right: 24px;
               }
-        
+
               .align-start {
                 text-align: left;
               }
-        
+
               .title {
-                font-weight: bold;
                 text-align: right;
               }
             }
@@ -191,41 +211,49 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-  
+    height: 100%;
+
+    .overflow_wrapper {
+      @media (max-width: 1800px) {
+        overflow-x: scroll;
+      }
+    }
+
     &-table {
       width: 100%;
       border-collapse: collapse;
       table-layout: auto;
+
       th,
       td {
-        padding:8px;
+        padding: 8px;
         text-align: start;
         vertical-align: middle;
       }
-    
+
       th:first-child,
       td:first-child {
         text-align: start;
-        width: min-content; 
+        width: min-content;
         text-wrap: nowrap;
       }
-    
+
       th {
         color: var(--xc-grey500);
       }
-    
-      .titles{
+
+      .titles {
         color: var(--xc-grey500);
       }
 
       .project-divider {
         height: 24px;
       }
-      
+
       .divider-cell {
         padding: 0;
       }
-      
+
       .divider-line {
         height: 1.5px;
         width: 98%;
@@ -233,8 +261,9 @@
         margin-left: 10px;
       }
 
-      .table_tags{
-        .tag{
+
+      .table_tags {
+        .tag {
           margin-right: 8px;
         }
       }
@@ -245,7 +274,7 @@
         gap: 8px;
         cursor: pointer;
       }
-    
+
       .table_icon {
         width: 10px;
         height: 10px;
@@ -254,27 +283,28 @@
         transform: rotate(-90deg);
         transition: transform 0.2s ease;
         border-radius: 4px;
-        margin-top:2px;
+        margin-top: 2px;
+
         &.rotated {
           transform: rotate(0deg);
         }
-      
+
         &.icon-collapsed {
           fill: var(--xc-grey200);
           stroke: var(--xc-grey200);
         }
       }
-    
+
       .table_numeric {
         text-align: start;
         padding-left: 12px;
       }
-      
+
       .table_progress {
         display: flex;
         gap: 4px;
         justify-content: start;
-    
+
         &-pending,
         &-completed {
           width: 30px;
@@ -284,23 +314,23 @@
           align-items: center;
           justify-content: center;
         }
-    
+
         &-pending {
           background-color: var(--xc-categories-progress);
         }
-    
+
         &-completed {
           background-color: var(--xc-categories-completed);
         }
       }
-      
+
       .expandable-row {
         display: none;
-    
+
         &.open {
           display: table-row;
         }
-    
+
         .expandable-content {
           padding: 16px;
           border-top: 1px dashed var(--xc-black200);
@@ -309,8 +339,8 @@
       }
     }
   }
-  
-  
+
+
 }
 
 /* Estos colores usados para la grafica no existen en el archivo css, solo son los puntos de la grafica*/
@@ -336,4 +366,61 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
+}
+
+.dropdown {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  padding: 8px 11px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    &__label {
+      color: var(--xc-grey500);
+      cursor: pointer;
+      text-wrap: nowrap;
+    }
+  
+    &__icon{
+      display: flex;
+      width: 24px;
+      height: 24px;
+      stroke: var(--xc-black500);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    background: var(--xc-white);
+    border: 1px solid ;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: var(--xc-boxShadow-400);
+    z-index: 30;
+    position: absolute;
+    margin-top: 210px;
+    width: 200px;
+  }
+
+  &__option {
+    padding: 8px 12px;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
 }

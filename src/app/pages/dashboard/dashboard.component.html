@@ -6,12 +6,35 @@
       <section class="filter">
         <h3>Value</h3>
         <div class="filter_container">
-          <app-filter label="Metrics" [options]="options1" (selectedOption)="optionSelected($event)"
-            class="filter_container-component">
-          </app-filter>
-          <app-filter label="Portfolio group" [options]="options2" (selectedOption)="optionSelected($event)"
-            class="filter_container-component">
-          </app-filter>
+
+          <article class="dropdown" >
+            <span class="dropdown__header" (click)="toggleFilter()">
+              <label class="text_400 dropdown__header__label" >
+                Value
+              </label>
+              <xc-icon-angle-down class="dropdown__header__icon"/>
+            </span>
+          
+            <div *ngIf="isFilterOpen" class="dropdown__menu">
+              <button>test</button>
+              <button>test2</button>
+            </div>
+          </article>
+
+          <article class="dropdown" >
+            <span class="dropdown__header" (click)="toggleFilter()">
+              <label class="text_400 dropdown__header__label" >
+                Portfolio group
+              </label>
+              <xc-icon-angle-down class="dropdown__header__icon"/>
+            </span>
+          
+            <div *ngIf="isFilterOpen" class="dropdown__menu">
+              <button>test</button>
+              <button>test2</button>
+            </div>
+          </article>
+          
         </div>
         <button class="btn btn--rounded_reset reset">
           <xc-icon-redo class="btn__icon" />
@@ -91,7 +114,7 @@
 
   <article class="dashboard_performance">
     <h3 xcHeadlineStyles class="headline-300">Performance per project</h3>
-    <section>
+    <section class="overflow_wrapper">
       <table class="dashboard_performance-table">
         <thead>
           <tr>
@@ -115,8 +138,8 @@
             </th>
           </tr>
         </thead>
-        <tbody>
-          <ng-container *ngFor="let project of projects; let i = index">
+        <tbody >
+          <ng-container *ngFor="let project of projects; let i = index" >
             <tr *ngIf="i !== 0" class="project-divider">
               <td colspan="6" class="divider-cell">
                 <div class="divider-line"></div>
@@ -124,27 +147,17 @@
             </tr>
             <tr class="table_row">
               <td class="table_project" (click)="toggleExpand(i)">
-                <xc-icon-play class="table_icon" [ngClass]="{
-                  'rotated': project.expanded,
-                  'icon-collapsed': !project.expanded
-                }"></xc-icon-play>
+                <xc-icon-play class="table_icon" [ngClass]="{'rotated': project.expanded,'icon-collapsed': !project.expanded}"></xc-icon-play>
                 <h3>{{ project.title }}</h3>
               </td>
-
               <td class="table_tags">
                 <span *ngFor="let tag of project.tags" xcProfileTags="gray" class="tag">{{ tag }}</span>
               </td>
-
-              <td class="table_progress">
-                <!-- <span class="table_progress-pending">{{ project.active }}</span>
-                <span class="table_progress-completed">{{ project.completed }}</span> -->
-              </td>
-
+              <td class="table_progress"></td>
               <td class="bold table_numeric">{{ project.collab }}</td>
               <td class="bold table_numeric">{{ project.proof }}</td>
               <td class="bold table_numeric">{{ project.quality }}</td>
             </tr>
-
             <tr *ngFor="let sub of project.subprojects" class="expandable-row" [class.open]="project.expanded">
               <td class="table_project">
                 <p>{{ sub.title }}</p>
