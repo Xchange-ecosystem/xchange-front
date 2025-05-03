@@ -1,11 +1,14 @@
 <main class="ecosystem">
     <section class="ecosystem__navigation">
-      <article class="ecosystem__tabs">
+      <article class="ecosystem__navigation_tabs">
         <button
-        class="ecosystem__tab-button"
         *ngFor="let sec of sections"
+        class="ecosystem__tab-button"
         (click)="changeSection(sec)"
-        [class.active]="section === sec"
+        [ngClass]="{
+          'btn btn--tab_active': section === sec,
+          'btn btn--tab_inactive': section !== sec
+        }"
       >
         <span *ngIf="sec === 'Members'" [ngClass]="{ 'ecosystem__notification': isNotification }"></span>
         {{ sec }}
@@ -14,52 +17,82 @@
     </section>
   
     <section class="ecosystem__appearance" *ngIf="section === 'Apperance'">
+      <h1>Customize the appearance of your ecosystem</h1>
       <article class="ecosystem__appearance-customization">
-        <h5 class="ecosystem__headline">Customize the appearance of your ecosystem</h5>
-  
-        <div class="ecosystem__form-wrapper">
-          <p class="ecosystem__section-title">General Information</p>
-          <form class="ecosystem__form">
-            <label class="ecosystem__form-field">
-              <p class="ecosystem__label">Ecosystem title</p>
-              <input class="ecosystem__input" type="text" placeholder="Fill the title" />
+
+        <div class="form_wrapper card_24 ">
+          <h3>General Information</h3>
+          <form class="form_wrapper-form">
+            <label class="form_wrapper-form-field">
+              <p class="bold">Ecosystem title</p>
+              <input type="text" placeholder="Fill the title" />
             </label>
-            <label class="ecosystem__form-field">
-              <p class="ecosystem__label">Ecosystem slogan</p>
-              <input class="ecosystem__input" type="text" placeholder="Fill in your slogan" />
+            <label class="form_wrapper-form-field">
+              <p class="bold">Ecosystem slogan</p>
+              <input type="text" placeholder="Fill in your slogan" />
             </label>
-            <label class="ecosystem__form-field">
-              <p class="ecosystem__label">Project description</p>
-              <textarea class="ecosystem__textarea" cols="6" rows="30" placeholder="Please describe your ecosystem"></textarea>
+            <label class="form_wrapper-form-field">
+              <p class="bold">Project description</p>
+              <textarea class="ecosystem__textarea" cols="6" rows="12" placeholder="Please describe your ecosystem"></textarea>
             </label>
           </form>
   
           <span class="ecosystem__info-block">
-            <p class="ecosystem__info-label">Version</p>
+            <p class="bold">Version</p>  
             <p class="ecosystem__info-value">0.3.5</p>
           </span>
           <span class="ecosystem__info-block">
-            <p class="ecosystem__info-label">Created</p>
+            <p class="bold">Created</p>
             <p class="ecosystem__info-value">31 Aug 2023</p>
           </span>
         </div>
-      </article>
-  
-      <article class="ecosystem__appearance-extras">
-        <p class="ecosystem__section-title">Further Settings</p>
-        <div class="ecosystem__visibility">
-          <p class="ecosystem__label">Public visibility</p>
+
+        <div class="settings">
+          <div class="extras card_24">
+            <h3>Further Settings</h3>
+            <div class="extras_visibility">
+              <p class="ecosystem__label">Public visibility</p>
+              <xc-toggle/>
+            </div>
+            <div class="extras__tags">
+              <div class="extras__tags-injector">
+                <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
+                <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
+                <button class="extras__tags-button">
+                  <span class="see-all">
+                    <xc-icon-arrow-right class="icon" />
+                    <p class="bold">See all tags</p>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="save">
+            <button class="btn btn--filled">
+              <xc-icon-save class="icon"/>
+              <p>Save changes</p>
+            </button>
+          </div>
         </div>
-        <div class="ecosystem__tags">
-          <span xcProfileTags="gray" class="ecosystem__tag">tag</span>
-          <span xcProfileTags="gray" class="ecosystem__tag">tag</span>
-          <span xcProfileTags="gray" class="ecosystem__tag">tag</span>
-        </div>
+
       </article>
-  
-      <div class="ecosystem__actions">
-        <button class="ecosystem__save-button">Save Changes</button>
-      </div>
-    </section>
-  </main>
-  
+        
+
+
+      </section>
+    </main>
+    

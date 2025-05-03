@@ -1,6 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowRightComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
+import { ProfileTagsDirective, ToggleComponent } from '@indziaki/ngx-xchange-ui';
 
 @Component({
   selector: 'app-ecosystem-admin',
@@ -9,7 +10,10 @@ import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
     ProfileTagsDirective,
     NgIf,
     NgClass,
-    NgFor
+    NgFor,
+    ToggleComponent,
+    XcIconArrowRightComponent,
+    XcIconSaveComponent
   ],
   templateUrl: './ecosystem-admin.component.html',
   styleUrl: './ecosystem-admin.component.scss'

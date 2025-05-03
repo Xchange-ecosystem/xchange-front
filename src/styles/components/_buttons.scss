@@ -42,6 +42,18 @@
     background: var(--xc-gradient-medium-green);
 }
 
+.btn--tab_active{
+    background: var(--xc-gradient-light-grey-on-white);
+    color: var(--xc-black500);
+    padding: 4px 8px;
+    border-radius:var(--xc-rounded-eight);
+}
+
+.btn--tab_inactive{
+    color: var(--xc-grey500);
+    padding: 0px;
+    border: none;
+}
 
 .btn--rounded{
     background:var(--xc-gradient-light-grey-on-white);
