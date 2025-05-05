@@ -1,19 +1,11 @@
 <main class="ecosystem">
   <section class="ecosystem__navigation">
     <article class="ecosystem__navigation_tabs">
-      <button
-        *ngFor="let sec of sections"
-        class="ecosystem__tab-button"
-        (click)="changeSection(sec)"
-        [ngClass]="{
+      <button *ngFor="let sec of sections" class="ecosystem__tab-button" (click)="changeSection(sec)" [ngClass]="{
           'btn btn--tab_active': section === sec,
           'btn btn--tab_inactive': section !== sec
-        }"
-      >
-        <span
-          *ngIf="sec === 'Members'"
-          [ngClass]="{ ecosystem__notification: isNotification }"
-        ></span>
+        }">
+        <span *ngIf="sec === 'Members'" [ngClass]="{ ecosystem__notification: isNotification }"></span>
         {{ sec }}
       </button>
     </article>
@@ -35,12 +27,8 @@
           </label>
           <label class="form_wrapper-form-field">
             <p class="bold">Project description</p>
-            <textarea
-              class="ecosystem__textarea"
-              cols="6"
-              rows="12"
-              placeholder="Please describe your ecosystem"
-            ></textarea>
+            <textarea class="ecosystem__textarea" cols="6" rows="12"
+              placeholder="Please describe your ecosystem"></textarea>
           </label>
         </form>
 
@@ -53,7 +41,6 @@
           <p class="ecosystem__info-value">31 Aug 2023</p>
         </span>
       </div>
-
       <div class="settings">
         <div class="extras card_24">
           <h3>Further Settings</h3>
@@ -64,24 +51,22 @@
           <div class="extras__tags">
             <div class="extras__tags-injector">
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-              <span xcProfileTags="gray" class="ecosystem__tag"
-                >Social Media</span
-              >
+              <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
               <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
               <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-              <span xcProfileTags="gray" class="ecosystem__tag"
-                >Social Media</span
-              >
+              <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
               <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-              <button class="extras__tags-button">
-                <span class="see-all">
-                  <xc-icon-arrow-right class="icon" />
-                  <p class="bold">See all tags</p>
-                </span>
-              </button>
+              <div>
+                <button class="extras__tags-button" (click)="openTagsModal()">
+                  <span class="see-all">
+                    <xc-icon-arrow-right class="icon" />
+                    <p class="bold">See all tags</p>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -94,22 +79,164 @@
       </div>
     </article>
   </section>
+
+  <section class="ecosystem__legal" *ngIf="section === 'Legal'">
+    <h1>Legal representation and conditions inside your ecosystem</h1>
+    <article class="ecosystem__legal-customization">
+      <div class="form_wrapper card_24">
+        <h3>General Information</h3>
+        <form class="form_wrapper-form">
+          <label class="form_wrapper-form-field">
+            <p class="bold">Your organization</p>
+            <input type="text" placeholder="Fill with yout organization" />
+          </label>
+          <label class="form_wrapper-form-field">
+            <p class="bold">Incorporation</p>
+            <input type="text" placeholder="Fill in your incorporation" />
+          </label>
+          <label class="form_wrapper-form-field">
+            <p class="bold">Country</p>
+            <input type="text" placeholder="Fill in your country" />
+          </label>
+          <div class="address">
+            <label class="form_wrapper-form-field-stretch">
+              <p class="bold">Street</p>
+              <input type="text" placeholder="Fill in with your street" />
+            </label>
+            <label class="form_wrapper-form-field">
+              <p class="bold">Zip</p>
+              <input type="text" placeholder="Fill in with your zip" />
+            </label>
+            <label class="form_wrapper-form-field">
+              <p class="bold">Country</p>
+              <input type="text" placeholder="Fill in with your country" />
+            </label>
+          </div>
+          <label class="form_wrapper-form-field">
+            <p class="bold">Legal representative(s)</p>
+            <input type="text" placeholder="Fill in with your legal representatives" />
+          </label>
+          <label class="form_wrapper-form-field">
+            <p class="bold">Registration number</p>
+            <input type="text" />
+          </label>
+        </form>
+
+      </div>
+      <div class="terms card_24">
+        <h3>Terms and conditions</h3>
+        <label class="terms_field">
+          <p class="bold">Project description</p>
+          <textarea cols="6" rows="12" placeholder="Please describe your ecosystem"></textarea>
+        </label>
+        <p class="disclaimer">
+          These conditions apply additionally to the Terms and conditions of Xchange; in case of contractions, the
+          Xchanges Terms and conditions are legally binding.
+        </p>
+      </div>
+    </article>
+    <div class="save_button">
+      <button class="btn btn--filled">
+        <xc-icon-save class="save_icon" />
+        <p>Save changes</p>
+      </button>
+    </div>
+  </section>
+
+  <section class="ecosystem__credits" *ngIf="section === 'Credits'">
+    <h1>Credits in your ecosystem</h1>
+    <article class="ecosystem__credits-customization">
+      <div class="video card_24">
+        <h3>How credits work in the collaboration ecosystem</h3>
+        <span class="video_container">
+          <iframe class="video_container-frame" height="350"
+            src="https://www.youtube.com/watch?v=wI00QO2A2j4&list=LL&ab_channel=Ned" frameborder="0"
+            allowfullscreen></iframe>
+        </span>
+      </div>
+      <div class="balance ">
+        <div class="balance_coin">
+          <h3>Current credit balance</h3>
+          <span class="balance_coin-amount">
+            <h1>10,000</h1>
+            <p>Xcoins</p>
+          </span>
+          <span class="balance_coin-actions">
+            <button class="btn"><b>Buy credits for the ecosystem</b></button>
+            <button class="btn"><b>Send credits to a project</b></button>
+          </span>
+        </div>
+        <div class="balance_history">
+          <nav class="balance_history-header">
+            <h3>Credit history</h3>
+            <div class="wrapper">
+              <label for="filter">Sort by:</label>
+              <select id="filter" name="filter">
+                <option value="">Select filter</option>
+                <option value="date">Date</option>
+                <option value="amount">Amount</option>
+                <option value="status">Status</option>
+              </select>
+            </div>
+          </nav>
+          <table>
+            <tbody>
+              <tr *ngFor="let transaction of Transactions">
+                <td>
+                  <xc-rounded-image image={{transaction.image}}/>
+                  <p>{{transaction.name}}</p>
+                </td>
+                <td>{{transaction.date}}</td>
+                <td>{{transaction.amount}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="bookings">
+            <button class="bookings_btn">
+              <span class="bookings_btn-wrapper">
+                <xc-icon-arrow-right class="icon" />
+                <p class="bold">See all bookings</p>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
 </main>
 
-<section *ngIf="isTagsOpen">
-  <article>
-    <h1>All tags related to Fabian</h1>
-    <div>
-      <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-      <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-    </div>
-  </article>
-  <article></article>
+<section *ngIf="isTagsOpen" class="modal">
+  <div class="modal_content">
+    <article class="modal_content-card">
+      <h1>All tags related to Fabian</h1>
+      <div class="modal-tags">
+        <span *ngFor="let tag of tags" xcProfileTags="gray" class="ecosystem__tag">{{tag}}</span>
+      </div>
+    </article>
+    <button class="btn btn--rounded" (click)="closeTagsModal()">
+      <xc-icon-close-s class="icon" />
+    </button>
+  </div>
+</section>
+
+<section *ngIf="isHistoryOpen" class="history">
+  <div class="modal_content">
+    <article class="modal_content-card">
+      <nav class="balance_history-header">
+        <h3>Credit history</h3>
+        <div class="wrapper">
+          <label for="filter">Sort by:</label>
+          <select id="filter" name="filter">
+            <option value="">Select filter</option>
+            <option value="date">Date</option>
+            <option value="amount">Amount</option>
+            <option value="status">Status</option>
+          </select>
+        </div>
+      </nav>
+      <div class="modal-tags">
+        <span *ngFor="let tag of tags" xcProfileTags="gray" class="ecosystem__tag">{{tag}}</span>
+      </div>
+    </article>
+  </div>
 </section>
