@@ -56,7 +56,7 @@
 }
 
 .btn--rounded{
-    background:var(--xc-gradient-light-grey-on-white);
+    background:var(--xc-white);
     border-radius: 50%;
     border: none;
     height: 38px;
@@ -73,9 +73,9 @@
     border: none;
     height: 56px;
     width: 56px;
-}
-.btn--rounded_xl:hover{
-    background: var(--xc-grey200);
+    &:hover{
+        background: var(--grey-200);
+    }
 }
 
 .btn--rounded_sm{
