@@ -1,6 +1,6 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconCloseSComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowRightComponent, XcIconCloseSComponent, XcIconSaveComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indziaki/ngx-xchange-ui';
 
 @Component({
@@ -15,7 +15,10 @@ import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indz
     ToggleComponent,
     XcIconArrowRightComponent,
     XcIconSaveComponent,
-    XcIconCloseSComponent
+    XcIconCloseSComponent,
+    XcIconUserComponent,
+    XcIconTimesComponent,
+    XcIconShoppingCartComponent
   ],
   templateUrl: './ecosystem-admin.component.html',
   styleUrl: './ecosystem-admin.component.scss'
@@ -26,6 +29,7 @@ export class EcosystemAdminComponent {
   isHistory =false;
   isBuyCredits = false;
   isSendCredits = false;
+  isBuyTenant = false;
   isEditMemeber = false;
   isSendMessage = false; 
   isSetNewPassword= false;
@@ -67,41 +71,91 @@ export class EcosystemAdminComponent {
     {
       name: "Manuel Cabrera",
       date: "14 Aug.24",
-      amount: "-500 Xcoins",
+      amount: -500,
       image: "https://i.pravatar.cc/100?u=manuel",
-      destiny:"Jake Gillenhall"
+      destination: "Jake Gyllenhaal"
     },
     {
       name: "Lucía Torres",
       date: "10 Aug.24",
-      amount: "-250 Xcoins",
+      amount: -250,
       image: "https://i.pravatar.cc/100?u=lucia",
-      destiny:"Ecosystem"
+      destination: "Ecosystem"
     },
     {
       name: "Carlos Rivera",
       date: "05 Aug.24",
-      amount: "+1,200 Xcoins",
+      amount: +1200,
       image: "https://i.pravatar.cc/100?u=carlos",
-      destiny:"Ecosystem"
+      destination: "Ecosystem"
     },
     {
       name: "Ana Gómez",
       date: "28 Jul.24",
-      amount: "-150 Xcoins",
+      amount: -150,
       image: "https://i.pravatar.cc/100?u=ana",
-      destiny:"One Life"
+      destination: "Team Orion"
     },
     {
       name: "Diego Martínez",
       date: "21 Jul.24",
-      amount: "+800 Xcoins",
+      amount: +800,
       image: "https://i.pravatar.cc/100?u=diego",
-      destiny:"One Life"
+      destination: "Team Orion"
+    },
+    {
+      name: "Valeria Salgado",
+      date: "18 Aug.24",
+      amount: +300,
+      image: "https://i.pravatar.cc/100?u=valeria",
+      destination: "Team Alpha"
+    },
+    {
+      name: "Jorge Peña",
+      date: "12 Aug.24",
+      amount: -700,
+      image: "https://i.pravatar.cc/100?u=jorge",
+      destination: "Marketing Hub"
+    },
+    {
+      name: "Mariana Castro",
+      date: "09 Aug.24",
+      amount: +1500,
+      image: "https://i.pravatar.cc/100?u=mariana",
+      destination: "Development Core"
+    },
+    {
+      name: "Emilio Rodríguez",
+      date: "04 Aug.24",
+      amount: -120,
+      image: "https://i.pravatar.cc/100?u=emilio",
+      destination: "UI Task Force"
+    },
+    {
+      name: "Gabriela Ruiz",
+      date: "01 Aug.24",
+      amount: +500,
+      image: "https://i.pravatar.cc/100?u=gabriela",
+      destination: "Ecosystem"
+    },
+    {
+      name: "Matías Soto",
+      date: "29 Jul.24",
+      amount: -90,
+      image: "https://i.pravatar.cc/100?u=matias",
+      destination: "External Wallet"
+    },
+    {
+      name: "Laura Mendoza",
+      date: "26 Jul.24",
+      amount: +1100,
+      image: "https://i.pravatar.cc/100?u=laura",
+      destination: "Investor Rewards"
     }
   ];
+  
 
-  section: string = 'Credits';
+  section: string = 'Templates';
 
   changeSection(section: string): void {
     this.section = section;
@@ -126,7 +180,22 @@ export class EcosystemAdminComponent {
     this.isBuyCredits = true;
   }
 
-  closeBuyCredists () {
+  closeBuyCredits () {
     this.isBuyCredits = false;
+  }
+
+  openSendCredits () {
+    this.isSendCredits = true;
+  }
+
+  closeSendCredits () {
+    this.isSendCredits = false;
+  }
+
+  openBuyTenant () {
+    this.isBuyTenant = true;
+  }
+  closeBuyTenant () {
+    this.isBuyTenant = false;
   }
 }

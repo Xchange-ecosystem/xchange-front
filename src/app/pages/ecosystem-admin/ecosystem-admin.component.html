@@ -1,11 +1,19 @@
 <main class="ecosystem">
   <section class="ecosystem__navigation">
     <article class="ecosystem__navigation_tabs">
-      <button *ngFor="let sec of sections" class="ecosystem__tab-button" (click)="changeSection(sec)" [ngClass]="{
+      <button
+        *ngFor="let sec of sections"
+        class="ecosystem__tab-button"
+        (click)="changeSection(sec)"
+        [ngClass]="{
           'btn btn--tab_active': section === sec,
           'btn btn--tab_inactive': section !== sec
-        }">
-        <span *ngIf="sec === 'Members'" [ngClass]="{ ecosystem__notification: isNotification }"></span>
+        }"
+      >
+        <span
+          *ngIf="sec === 'Members'"
+          [ngClass]="{ ecosystem__notification: isNotification }"
+        ></span>
         {{ sec }}
       </button>
     </article>
@@ -27,8 +35,12 @@
           </label>
           <label class="form_wrapper-form-field">
             <p class="bold">Project description</p>
-            <textarea class="ecosystem__textarea" cols="6" rows="12"
-              placeholder="Please describe your ecosystem"></textarea>
+            <textarea
+              class="ecosystem__textarea"
+              cols="6"
+              rows="12"
+              placeholder="Please describe your ecosystem"
+            ></textarea>
           </label>
         </form>
 
@@ -51,11 +63,15 @@
           <div class="extras__tags">
             <div class="extras__tags-injector">
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-              <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
+              <span xcProfileTags="gray" class="ecosystem__tag"
+                >Social Media</span
+              >
               <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
               <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
-              <span xcProfileTags="gray" class="ecosystem__tag">Social Media</span>
+              <span xcProfileTags="gray" class="ecosystem__tag"
+                >Social Media</span
+              >
               <span xcProfileTags="gray" class="ecosystem__tag">AI</span>
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
               <span xcProfileTags="gray" class="ecosystem__tag">Education</span>
@@ -114,24 +130,31 @@
           </div>
           <label class="form_wrapper-form-field">
             <p class="bold">Legal representative(s)</p>
-            <input type="text" placeholder="Fill in with your legal representatives" />
+            <input
+              type="text"
+              placeholder="Fill in with your legal representatives"
+            />
           </label>
           <label class="form_wrapper-form-field">
             <p class="bold">Registration number</p>
             <input type="text" />
           </label>
         </form>
-
       </div>
       <div class="terms card_24">
         <h3>Terms and conditions</h3>
         <label class="terms_field">
           <p class="bold">Project description</p>
-          <textarea cols="6" rows="12" placeholder="Please describe your ecosystem"></textarea>
+          <textarea
+            cols="6"
+            rows="12"
+            placeholder="Please describe your ecosystem"
+          ></textarea>
         </label>
         <p class="disclaimer">
-          These conditions apply additionally to the Terms and conditions of Xchange; in case of contractions, the
-          Xchanges Terms and conditions are legally binding.
+          These conditions apply additionally to the Terms and conditions of
+          Xchange; in case of contractions, the Xchanges Terms and conditions
+          are legally binding.
         </p>
       </div>
     </article>
@@ -148,13 +171,18 @@
     <article class="ecosystem__credits-customization">
       <div class="video card_24">
         <h3>How credits work in the collaboration ecosystem</h3>
-        <span class="video_container">
-          <iframe class="video_container-frame" height="350"
-            src="https://www.youtube.com/watch?v=wI00QO2A2j4&list=LL&ab_channel=Ned" frameborder="0"
-            allowfullscreen></iframe>
-        </span>
+        <div class="video_container">
+          <video
+            class="video_container-frame"
+            src="https://www.youtube.com/embed/wI00QO2A2j4"
+            frameborder="0"
+            allowfullscreen
+            width="100%"
+            height="100%"
+          ></video>
+        </div>
       </div>
-      <div class="balance ">
+      <div class="balance">
         <div class="balance_coin">
           <h3>Current credit balance</h3>
           <span class="balance_coin-amount">
@@ -162,8 +190,12 @@
             <p>Xcoins</p>
           </span>
           <span class="balance_coin-actions">
-            <button class="btn"><b>Buy credits for the ecosystem</b></button>
-            <button class="btn"><b>Send credits to a project</b></button>
+            <button class="btn" (click)="openBuyCredits()">
+              <b>Buy credits for the ecosystem</b>
+            </button>
+            <button class="btn" (click)="openSendCredits()">
+              <b>Send credits to a project</b>
+            </button>
           </span>
         </div>
         <div class="balance_history">
@@ -179,18 +211,39 @@
               </select>
             </div>
           </nav>
-          <table>
-            <tbody>
-              <tr *ngFor="let transaction of Transactions">
-                <td>
-                  <xc-rounded-image image={{transaction.image}}/>
-                  <p>{{transaction.name}}</p>
+          <div class="transaction">
+            <table class="transaction_table">
+              <tbody>
+                <tr
+                  *ngFor="let transaction of Transactions"
+                  class="transaction_table-row"
+                >
+                  <td class="transaction_table__info">
+                    <div class="transaction_table__avatar">
+                      <xc-rounded-image
+                        [image]="transaction.image"
+                        [marginSize]="2"
+                        color="var(--xc-grey300)"
+                      />
+                    </div>
+                    <p class="transaction_table__name">{{ transaction.name }}</p>
+                  </td>
+                  <td class="transaction_table__date">{{ transaction.date }}</td>
+                  <td
+                  class="transaction_table__amount"
+                  [ngClass]="{
+                    'transaction_table__amount--positive': transaction.amount > 0,
+                    'transaction_table__amount--negative': transaction.amount < 0
+                  }"
+                >
+                  {{ transaction.amount > 0 ? '+' + transaction.amount : transaction.amount }} Xcoins
                 </td>
-                <td>{{transaction.date}}</td>
-                <td>{{transaction.amount}}</td>
-              </tr>
-            </tbody>
-          </table>
+                
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <div class="bookings">
             <button class="bookings_btn" (click)="openHistoryModal()">
               <span class="bookings_btn-wrapper">
@@ -205,12 +258,17 @@
   </section>
 </main>
 
-<section *ngIf="isTags" class="modal">
-  <div class="modal_content">
-    <article class="modal_content-card">
+<section *ngIf="isTags" class="tags">
+  <div class="tags_content">
+    <article class="tags_content-card">
       <h1>All tags related to Fabian</h1>
-      <div class="modal-tags">
-        <span *ngFor="let tag of tags" xcProfileTags="gray" class="ecosystem__tag">{{tag}}</span>
+      <div class="container">
+        <span
+          *ngFor="let tag of tags"
+          xcProfileTags="gray"
+          class="ecosystem__tag"
+          >{{ tag }}</span
+        >
       </div>
     </article>
     <button class="btn btn--rounded" (click)="closeTagsModal()">
@@ -227,7 +285,7 @@
         <div class="wrapper">
           <label for="filter">Sort by:</label>
           <select id="filter" name="filter">
-            <option value="">Select filter</option>
+            <option value="">Select</option>
             <option value="date">Date</option>
             <option value="amount">Amount</option>
             <option value="status">Status</option>
@@ -235,19 +293,37 @@
         </div>
       </nav>
       <div class="history_content-card-table">
-        <table>
+        <table class="transaction-table">
           <tbody>
-            <tr *ngFor="let transaction of Transactions">
+            <tr *ngFor="let transaction of Transactions" class="transaction-table__row">
               <td class="profile">
-                <xc-rounded-image image={{transaction.image}} class="rounded-image"/>
-                <p>{{transaction.name}}</p>
+                <xc-rounded-image [image]="transaction.image" [marginSize]="2"
+                color="var(--xc-grey300)"  />
+                <p>{{ transaction.name }}</p>
               </td>
-              <td>{{transaction.date}}</td>
-              <td>{{transaction.destiny}}</td>
-              <td>{{transaction.amount}}</td>
+              
+              <td>{{ transaction.date }}</td>
+              
+              <td class="destiny">
+                <span class="destiny__icon">
+                  <xc-icon-user class="icon" />
+                </span>
+                <p>{{ transaction.destination }}</p>
+              </td>
+              
+              <td
+                class="amount"
+                [ngClass]="{
+                  'amount--positive': transaction.amount > 0,
+                  'amount--negative': transaction.amount < 0
+                }"
+              >
+                {{ transaction.amount > 0 ? '+' + transaction.amount : transaction.amount }} Xcoins
+              </td>
             </tr>
           </tbody>
         </table>
+        
       </div>
     </article>
     <button class="btn btn--rounded" (click)="closeHistoryModal()">
@@ -259,21 +335,141 @@
 <section *ngIf="isBuyCredits" class="buy_credits">
   <div class="buy_credits_content">
     <article class="buy_credits_content-card">
-      
+      <header class="send_credits-content-card-header">
+        <img src="assets/img/Buy-Credits.png" alt="buy_credits-content-card-header-image">
+      </header>
+      <h3>Buy credits for the ecossytem</h3>
+      <p>Buy credits for your ecosystem and send them to selected projects. The projects can use these credits to  pay the platform fee for collaborations.</p>
+      <div class="custom-select">
+        <b>Buy credits</b>
+        <select class="dropdown">
+          <option disabled selected>Select the amount</option>
+        </select>
+      </div>
+      <div class="card-data">
+        <label class="card-data_field--wide">
+          <b>Your card number</b>
+          <input type="number" placeholder="0000 0000 0000 0000" />
+        </label>
+        <label class="card-data_field">
+          <b>Valid until</b>
+          <input type="text" placeholder="MM/YY" />
+        </label>
+        <label class="card-data_field">
+          <b>CVV</b>
+          <input type="password" />
+        </label>
+      </div>
+      <div class="balance">
+        <span class="balance_current">
+          <b>Current Balance</b>
+          <p>66,677 xCoins</p>
+        </span>
+        <span class="balance_new">
+          <b>New Balance</b>
+          <p>66,677 xCoins</p>
+        </span>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="closeBuyCredits()">
+          <xc-icon-times class="btn__icon"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-shopping-cart class="btn__icon_filled"/>
+          <p>Buy credits</p>
+        </button>
+      </div>
     </article>
-    <button class="btn btn--rounded" (click)="closeHistoryModal()">
-      <xc-icon-close-s class="icon" />
-    </button>
   </div>
 </section>
 
 <section *ngIf="isSendCredits" class="send_credits">
-  <div class="buy_credits_content">
-    <article class="buy_credits_content-card">
-      
+  <div class="send_credits-content">
+    <article class="send_credits-content-card">
+      <header class="send_credits-content-card-header">
+        <img src="assets/img/Send-credits.png" alt="send_credits-content-card-header-image">
+      </header>
+      <div class="custom-select">
+        <b>Select a recipient</b>
+        <select class="dropdown">
+          <option disabled selected>Select a project</option>
+        </select>
+      </div>
+      <div class="assign_credits">
+        <b>Assign credits</b>
+        <input type="number" placeholder="0">
+      </div>
+      <div>
+        <b>Balance in the project</b>
+        <p>0 xCoins</p>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="closeSendCredits()">
+          <xc-icon-times class="btn__icon"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-shopping-cart class="btn__icon_filled"/>
+          <p>Buy credits</p>
+        </button>
+      </div>
     </article>
-    <button class="btn btn--rounded" (click)="closeHistoryModal()">
-      <xc-icon-close-s class="icon" />
-    </button>
+  </div>
+</section>
+
+<section *ngIf="isBuyTenant" class="buy_tenant">
+  <div class="buy_tenant_content">
+    <article class="buy_tenant_content-card">
+      <header class="send_tenant-content-card-header">
+        <img src="assets/img/Buy-tenant.png" alt="buy_tenant-content-card-header-image">
+      </header>
+      <h3>Buy credits for tenant</h3>
+      <p>You do not have the credits required to send this Objective to a collaborator.</p>
+      <div class="custom-select">
+        <b>Buy credits</b>
+        <select class="dropdown">
+          <option disabled selected>Select the amount</option>
+        </select>
+      </div>
+      <label class="card-data_field">
+        <b>Add yout email adress</b>
+        <input type="email" placeholder="name@domain.com" />
+      </label>
+      <div class="card-data">
+        <label class="card-data_field--wide">
+          <b>Your card number</b>
+          <input type="number" placeholder="0000 0000 0000 0000" />
+        </label>
+        <label class="card-data_field">
+          <b>Valid until</b>
+          <input type="text" placeholder="MM/YY" />
+        </label>
+        <label class="card-data_field">
+          <b>CVV</b>
+          <input type="password" />
+        </label>
+      </div>
+      <div class="balance">
+        <span class="balance_current">
+          <b>Current Balance</b>
+          <p>66,677 xCoins</p>
+        </span>
+        <span class="balance_new">
+          <b>New Balance</b>
+          <p>66,677 xCoins</p>
+        </span>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="closeBuyTenant()">
+          <xc-icon-times class="btn__icon"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-shopping-cart class="btn__icon_filled"/>
+          <p>Buy credits</p>
+        </button>
+      </div>
+    </article>
   </div>
 </section>

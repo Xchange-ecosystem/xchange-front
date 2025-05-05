@@ -1,3 +1,4 @@
+@import '../../../styles/components/scrollbar';
 :host {
   display: flex;
   width: 100%;
@@ -363,8 +364,24 @@
 
       .video {
         display: flex;
-        object-fit: contain;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
         background: var(--xc-white);
+        border-radius: var(--xc-rounded-eight);
+        min-height: 430px;
+        &_container {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          &-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: var(--xc-grey200);
+          }
+        }
       }
 
       .balance {
@@ -418,10 +435,66 @@
               padding: 8px 10px;
             }
           }
+          .transaction {
+            max-height: calc(54px * 7);
+            overflow-y: hidden;
+            &_table {
+              width: 100%;
+              border-collapse: collapse;
+              &-row {
+                td {
+                  padding: 12px 16px;
+                  vertical-align: middle;
+                }
+              }
+
+              &__info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              }
+
+              &__avatar {
+                width: 30px;
+                height: 30px;
+                flex-shrink: 0;
+
+                xc-rounded-image {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                }
+              }
+
+              &__name {
+                margin: 0;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              &__date,
+              &__amount {
+                white-space: nowrap;
+              }
+
+              &__amount {
+                &--positive {
+                  color: var(--xc-categories-completed);
+                }
+
+                &--negative {
+                  color: var(--xc-categories-blocked);
+                }
+              }
+            }
+          }
 
           .bookings {
             display: flex;
-            justify-content: flex-ends;
+            justify-content: flex-end;
 
             &_btn {
               display: flex;
@@ -446,7 +519,7 @@
   }
 }
 
-.modal {
+.tags {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -476,9 +549,9 @@
       padding: 32px;
       background: var(--xc-white);
       flex-wrap: wrap;
-      max-width: 700px;
+      max-width: 633px;
 
-      .modal-tags {
+      .container {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
@@ -488,17 +561,16 @@
 }
 
 .history {
-  @extend .modal;
-
+  @extend .tags;
   &_content {
-    @extend .modal_content;
+    @extend .tags_content;
 
     margin-top: 106px;
     margin-bottom: 106px;
 
     &-card {
-      @extend .modal_content-card;
-      max-width: 820px;
+      @extend .tags_content-card;
+      max-width: 860px;
 
       .filters {
         display: flex;
@@ -506,13 +578,244 @@
       }
 
       &-table {
+        max-height: 600px;
+        overflow-y: auto;
+        @include custom-scrollbar;
         .profile {
-          .rounded-image {
-            display: flex;
-            width: 20px;
-            height: 20px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          xc-rounded-image {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            object-fit: cover;
+            display: block;
           }
         }
+
+        .destiny {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          white-space: nowrap;
+
+          &__icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--xc-grey200);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              width: 20px;
+              height: 20px;
+              color: var(--xc-black400);
+            }
+          }
+        }
+
+        .amount {
+          white-space: nowrap;
+          font-weight: 600;
+
+          &--positive {
+            color: var(--xc-categories-completed);
+          }
+
+          &--negative {
+            color: var(--xc-categories-blocked);
+          }
+        }
+
+        td {
+          padding: 12px 16px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+.buy_credits{
+  @extend .tags;
+  &_content{
+    @extend .tags_content;
+    &-card{
+      @extend .tags_content-card;
+      .custom-select{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .dropdown{
+          border: 1px solid;
+          border-color: var(--xc-grey100);
+          border-radius: var(--xc-rounded-eight);
+          padding: 8px 11px;
+        }
+      }
+      .card-data{
+        display: flex;
+        gap: 12px;
+        &_field {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+      
+          input {
+            padding: 8px 11px;
+            border: 1px solid;
+            border-color:  var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+          }
+        }
+        &_field--wide {
+          display: flex;
+          flex-direction: column;
+          flex: 2;
+          input {
+            padding: 8px 11px;
+            border: 1px solid;
+            border-color:  var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+          }
+          
+        }
+      }
+      .balance{
+        display: flex;
+        gap: 16px;
+        &_current{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          flex: 1;
+        }
+        &_new{
+          @extend .balance_current;
+        }
+      }
+      .action_buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.send_credits{
+  @extend .tags;
+  &-content{
+    @extend .tags_content;
+    &-card{
+      @extend .tags_content-card;
+      &-header{
+        border-radius:8px 8px 0px 0px;
+      }
+      .custom-select{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .dropdown{
+          border: 1px solid;
+          border-color: var(--xc-grey100);
+          border-radius: var(--xc-rounded-eight);
+          padding: 8px 11px;
+        }
+      }
+      .assign_credits{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        input{
+          border: 1px solid;
+          border-color: var(--xc-grey100);
+          border-radius: var(--xc-rounded-eight);
+          padding: 8px 11px;
+          outline: none;
+          caret-color: var(--xc-brand-medium-blue);
+
+        }
+      }
+      .action_buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.buy_tenant{
+  @extend .tags;
+  &_content{
+    @extend .tags_content;
+    &-card{
+      @extend .tags_content-card;
+      .custom-select{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .dropdown{
+          border: 1px solid;
+          border-color: var(--xc-grey100);
+          border-radius: var(--xc-rounded-eight);
+          padding: 8px 11px;
+        }
+      }
+      .card-data{
+        display: flex;
+        gap: 12px;
+        &_field {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+      
+          input {
+            padding: 8px 11px;
+            border: 1px solid;
+            border-color:  var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+          }
+        }
+        &_field--wide {
+          display: flex;
+          flex-direction: column;
+          flex: 2;
+          input {
+            padding: 8px 11px;
+            border: 1px solid;
+            border-color:  var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+          }
+          
+        }
+      }
+      .balance{
+        display: flex;
+        gap: 16px;
+        &_current{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          flex: 1;
+        }
+        &_new{
+          @extend .balance_current;
+        }
+      }
+      .action_buttons{
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
       }
     }
   }
