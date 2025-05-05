@@ -1,3 +1,6 @@
+# 0.1.25 05/05/2025
+* (fix) Remove id from objective user card
+
 # 0.1.24 28/04/2025
 * (fix) project progress bar min with and colors order
 
