@@ -20,7 +20,7 @@ import { ProfileTagsDirective, ToggleComponent } from '@indziaki/ngx-xchange-ui'
 })
 export class EcosystemAdminComponent {
   isNotification = false;
-
+  isTagsOpen = false;
   sections = ['Apperance', 'Legal', 'Credits', 'Templates', 'Members'];
 
   section: string = 'Apperance';
