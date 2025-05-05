@@ -192,7 +192,7 @@
             </tbody>
           </table>
           <div class="bookings">
-            <button class="bookings_btn">
+            <button class="bookings_btn" (click)="openHistoryModal()">
               <span class="bookings_btn-wrapper">
                 <xc-icon-arrow-right class="icon" />
                 <p class="bold">See all bookings</p>
@@ -205,7 +205,7 @@
   </section>
 </main>
 
-<section *ngIf="isTagsOpen" class="modal">
+<section *ngIf="isTags" class="modal">
   <div class="modal_content">
     <article class="modal_content-card">
       <h1>All tags related to Fabian</h1>
@@ -219,10 +219,10 @@
   </div>
 </section>
 
-<section *ngIf="isHistoryOpen" class="history">
-  <div class="modal_content">
-    <article class="modal_content-card">
-      <nav class="balance_history-header">
+<section *ngIf="isHistory" class="history">
+  <div class="history_content">
+    <article class="history_content-card">
+      <nav class="filters">
         <h3>Credit history</h3>
         <div class="wrapper">
           <label for="filter">Sort by:</label>
@@ -234,9 +234,46 @@
           </select>
         </div>
       </nav>
-      <div class="modal-tags">
-        <span *ngFor="let tag of tags" xcProfileTags="gray" class="ecosystem__tag">{{tag}}</span>
+      <div class="history_content-card-table">
+        <table>
+          <tbody>
+            <tr *ngFor="let transaction of Transactions">
+              <td class="profile">
+                <xc-rounded-image image={{transaction.image}} class="rounded-image"/>
+                <p>{{transaction.name}}</p>
+              </td>
+              <td>{{transaction.date}}</td>
+              <td>{{transaction.destiny}}</td>
+              <td>{{transaction.amount}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </article>
+    <button class="btn btn--rounded" (click)="closeHistoryModal()">
+      <xc-icon-close-s class="icon" />
+    </button>
+  </div>
+</section>
+
+<section *ngIf="isBuyCredits" class="buy_credits">
+  <div class="buy_credits_content">
+    <article class="buy_credits_content-card">
+      
+    </article>
+    <button class="btn btn--rounded" (click)="closeHistoryModal()">
+      <xc-icon-close-s class="icon" />
+    </button>
+  </div>
+</section>
+
+<section *ngIf="isSendCredits" class="send_credits">
+  <div class="buy_credits_content">
+    <article class="buy_credits_content-card">
+      
+    </article>
+    <button class="btn btn--rounded" (click)="closeHistoryModal()">
+      <xc-icon-close-s class="icon" />
+    </button>
   </div>
 </section>
