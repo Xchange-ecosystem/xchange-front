@@ -302,7 +302,69 @@
     </article>
   </section>
   
-
+  <article class="ecosystem__members-wrapper">
+    <div class="members-grid">
+      <div class="members-grid__top">
+        <div class="members-grid__box">
+          <b>Search for members</b>
+          <label class="search_input">
+            <input type="search" placeholder="Who are you looking for">
+            <xc-icon-search class="icon"/>
+          </label>
+        </div>
+        <div class="members-grid__box">
+          <b>New user requests</b>
+          <p class="no-requests">There are no active requests at the moment</p>
+        </div>
+      </div>
+      <div class="members-grid__bottom">
+        <div class="members-grid__box">
+          <h3>Active members</h3>
+          <section class="members-table">
+            <table class="members-table__table">
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>First name</th>
+                  <th>Last name</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let member of members">
+                  <td>
+                    <b>{{ member.email }}</b>
+                  </td>
+                  <td>{{ member.firstName }}</td>
+                  <td>{{ member.lastName }}</td>
+                  <td class="members-table__actions">
+                    <button type="button" class="action-btn" (click)="openEditModal()">
+                      <xc-icon-edit class="action-icon"/> 
+                      <b>Edit</b>
+                    </button>
+                    <button type="button" class="action-btn" (click)="openEmailModal()">
+                      <xc-icon-envelope class="action-icon"/> 
+                      <b>Send email</b>
+                    </button>
+                    <button type="button" class="action-btn" (click)="openPasswordModal()">
+                      <xc-icon-padlock class="action-icon"/> 
+                      <b>Set new password</b>
+                    </button>
+                    <button type="button" class="action-btn" (click)="openSuspendModal()">
+                      <xc-icon-ban class="action-icon"/> 
+                      <b>Suspend</b>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          
+        </div>
+      </div>
+    </div>
+  </article>
+  
 </main>
 
 <section *ngIf="isTags" class="tags">

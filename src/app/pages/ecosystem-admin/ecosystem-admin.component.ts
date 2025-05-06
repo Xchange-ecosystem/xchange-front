@@ -1,6 +1,6 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconCloseSComponent, XcIconSaveComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowRightComponent, XcIconBanComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconEnvelopeComponent, XcIconPadlockComponent, XcIconSaveComponent, XcIconSearchComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indziaki/ngx-xchange-ui';
 
 @Component({
@@ -18,7 +18,12 @@ import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indz
     XcIconCloseSComponent,
     XcIconUserComponent,
     XcIconTimesComponent,
-    XcIconShoppingCartComponent
+    XcIconShoppingCartComponent,
+    XcIconSearchComponent,
+    XcIconEditComponent,
+    XcIconEnvelopeComponent,
+    XcIconPadlockComponent,
+    XcIconBanComponent
   ],
   templateUrl: './ecosystem-admin.component.html',
   styleUrl: './ecosystem-admin.component.scss'
@@ -255,8 +260,20 @@ export class EcosystemAdminComponent {
       ]
     },
   ];
+  members = [
+    { email: 'jose.jimenez@gmail.com', firstName: 'Jose', lastName: 'Jimenez' },
+    { email: 'maria.lopez@example.com', firstName: 'Maria', lastName: 'Lopez' },
+    { email: 'carlos.garcia@example.com', firstName: 'Carlos', lastName: 'Garcia' },
+    { email: 'ana.martinez@example.com', firstName: 'Ana', lastName: 'Martinez' },
+    { email: 'luis.hernandez@example.com', firstName: 'Luis', lastName: 'Hernandez' },
+    { email: 'laura.perez@example.com', firstName: 'Laura', lastName: 'Perez' },
+    { email: 'fernando.ruiz@example.com', firstName: 'Fernando', lastName: 'Ruiz' },
+    { email: 'sofia.navarro@example.com', firstName: 'Sofia', lastName: 'Navarro' },
+    { email: 'pedro.mendoza@example.com', firstName: 'Pedro', lastName: 'Mendoza' },
+    { email: 'valeria.torres@example.com', firstName: 'Valeria', lastName: 'Torres' },
+  ];
 
-  section: string = 'Templates';
+  section: string = 'Members';
 
   changeSection(section: string): void {
     this.section = section;
@@ -299,4 +316,32 @@ export class EcosystemAdminComponent {
   closeBuyTenant () {
     this.isBuyTenant = false;
   }
+
+  openEditModal () {
+    this.isEditMemeber = true
+  }
+  closeEditModal () {
+    this.isEditMemeber = false
+  }
+
+  openEmailModal () {
+    this.isSendMessage = true
+  }
+  closeEmailModal () {
+    this.isSendMessage = false
+  }
+
+  openPasswordModal () {
+    this.isSetNewPassword = true
+  }
+  closePasswordModal () {
+    this.isSetNewPassword = false
+  }
+
+  openSuspendModal () {
+    this.isSuspendMember = true
+  }
+  closeSuspendModal () {
+    this.isSuspendMember = false
+  } 
 }
