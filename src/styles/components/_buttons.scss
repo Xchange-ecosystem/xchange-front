@@ -108,51 +108,93 @@
     width: 38px;
     opacity: 1; 
 }
+
+.btn--accept{
+    background: var(--xc-categories-completed);
+    border-color: var(--xc-categories-completed);
+}
+
+.btn--reject{
+    border: 1.5px solid;
+    border-color: var(--xc-categories-blocked);
+    background: none;
+    color: var(--xc-categories-blocked);
+}
+
+.btn--ban{
+    background: var(--xc-categories-blocked);
+    color: var(--xc-white);
+    border: none;
+}
 /* *classes for icons inside the buttons */
 
 .btn__icon {
     align-items: center;
     display: flex;
     height: 20px;
-    width: 20px;
     stroke: var(--xc-black500);
+    width: 20px;
 }
 
 .btn__icon-lg {
     align-items: center;
     display: flex;
     height: 42px;
-    width: 42px;
     stroke: var(--xc-black500);
+    width: 42px;
 }
 
 .btn__icon-sm {
     align-items: center;
     display: flex;
     height: 16px;
-    width: 16px;
     stroke: var(--xc-black500);
+    width: 16px;
 }
 
 .btn__icon_filled-sm {
     align-items: center;
     display: flex;
     height: 16px;
-    width: 16px;
     stroke: var(--xc-white);
+    width: 16px;
 }
 
 .btn__icon_filled {
     align-items: center;
     display: flex;
     height: 20px;
-    width: 20px;
     stroke: var(--xc-white);
+    width: 20px;
 }
 .btn__icon_filled-sm {
     align-items: center;
     display: flex;
     height: 16px;
-    width: 16px;
     stroke: var(--xc-white);
+    width: 16px;
+}
+
+.btn__icon_accept {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    stroke: var(--xc-white);
+    width: 16px;
+}
+
+.btn__icon_reject {
+    align-items: center;
+    display: flex;
+    height: 16px;
+    stroke: var(--xc-categories-blocked);
+    width: 16px;
+}
+
+.btn__icon_ban{
+    align-items: center;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    stroke:var(--xc-white) ;
 }

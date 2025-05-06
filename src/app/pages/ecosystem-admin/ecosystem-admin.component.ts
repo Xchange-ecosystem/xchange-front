@@ -1,6 +1,6 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconBanComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconEnvelopeComponent, XcIconPadlockComponent, XcIconSaveComponent, XcIconSearchComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowRightComponent, XcIconBanComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconEnvelopeComponent, XcIconPadlockComponent, XcIconSaveComponent, XcIconSearchComponent, XcIconSendComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent, XcIconUserPlusComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indziaki/ngx-xchange-ui';
 
 @Component({
@@ -23,7 +23,9 @@ import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indz
     XcIconEditComponent,
     XcIconEnvelopeComponent,
     XcIconPadlockComponent,
-    XcIconBanComponent
+    XcIconBanComponent,
+    XcIconUserPlusComponent,
+    XcIconSendComponent,
   ],
   templateUrl: './ecosystem-admin.component.html',
   styleUrl: './ecosystem-admin.component.scss'
