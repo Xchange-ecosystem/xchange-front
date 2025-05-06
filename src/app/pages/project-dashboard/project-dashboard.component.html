@@ -1,1 +1,28 @@
-<p>project-dashboard works!</p>
+<main>
+    <header>
+        <img src="https://i.pinimg.com/736x/4c/73/77/4c7377d1fa604c7fe7998f9495444f74.jpg" alt="project-dashboard-header">
+        <nav>
+            <button
+            *ngFor="let sec of sections"
+            class="ecosystem__tab-button"
+            (click)="changeSection(sec)"
+            [ngClass]="{
+              'btn btn--tab_active': section === sec,
+              'btn btn--tab_inactive': section !== sec
+            }"
+          >
+            <span
+              *ngIf="sec === 'Members'"
+            ></span>
+            {{ sec }}
+          </button>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <div></div>
+            <div></div>
+        </article>
+        <article></article>
+    </section>
+</main>

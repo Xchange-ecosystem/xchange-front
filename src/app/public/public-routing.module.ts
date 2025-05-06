@@ -38,6 +38,10 @@ const routes: Routes = [
         path:'ecosystem-admin',
         loadComponent: () => import('src/app/pages/ecosystem-admin/ecosystem-admin.component').then(m => m.EcosystemAdminComponent),
       },
+      {
+        path:'project-dashboard',
+        loadComponent: () => import('src/app/pages/project-dashboard/project-dashboard.component').then(m => m.ProjectDashboardComponent),
+      },
     ],
   },
 ];
