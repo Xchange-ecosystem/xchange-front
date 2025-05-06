@@ -215,7 +215,7 @@
             <table class="transaction_table">
               <tbody>
                 <tr
-                  *ngFor="let transaction of Transactions"
+                  *ngFor="let transaction of transactions"
                   class="transaction_table-row"
                 >
                   <td class="transaction_table__info">
@@ -256,6 +256,53 @@
       </div>
     </article>
   </section>
+
+  <section class="ecosystem__templates" *ngIf="section === 'Templates'">
+    <h1>Manage your templates</h1>
+  
+    <article class="ecosystem__templates-wrapper">
+      <div class="ecosystem__templates-wrapper-header">
+        <b>Help us understand the focus of your ecosystem</b>
+        <p>By selecting one or more focus points, we can provide you with the most suitable templates.</p>
+      </div>
+  
+      <section class="ecosystem__templates-wrapper-focus">
+        <div
+          class="ecosystem__templates-wrapper-focus-column"
+          *ngFor="let category of templateCategories"
+        >
+          <h3>{{ category.title }}</h3>
+      
+          <div class="ecosystem__templates-wrapper-select-all">
+            <button class="button-select">select all</button>
+          </div>
+      
+          <div class="ecosystem__templates-wrapper-list">
+            <ul>
+              <li *ngFor="let option of category.options">
+                <label class="ecosystem__templates-wrapper-checkbox">
+                  <input type="checkbox"/>
+                  <span>{{ option.label }}</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="action_buttons">
+        <button class="btn">
+          <xc-icon-times class="btn__icon"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </div>
+    </article>
+  </section>
+  
+
 </main>
 
 <section *ngIf="isTags" class="tags">
@@ -295,7 +342,7 @@
       <div class="history_content-card-table">
         <table class="transaction-table">
           <tbody>
-            <tr *ngFor="let transaction of Transactions" class="transaction-table__row">
+            <tr *ngFor="let transaction of transactions" class="transaction-table__row">
               <td class="profile">
                 <xc-rounded-image [image]="transaction.image" [marginSize]="2"
                 color="var(--xc-grey300)"  />
