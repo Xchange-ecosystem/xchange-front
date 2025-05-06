@@ -290,11 +290,11 @@
         </div>
       </section>
       <div class="action_buttons">
-        <button class="btn">
-          <xc-icon-times class="btn__icon"/>
+        <button class="btn" [disabled]="!isSelectionValid">
+          <xc-icon-times class="btn__icon" />
           <p>Cancel</p>
         </button>
-        <button class="btn btn--filled">
+        <button class="btn btn--filled" [disabled]="!isSelectionValid">
           <xc-icon-save class="btn__icon_filled" />
           <p>Save changes</p>
         </button>

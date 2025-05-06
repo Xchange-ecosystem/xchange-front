@@ -525,28 +525,28 @@
     margin-left: 165px;
     margin-right: 165px;
     height: 100%;
-  
+
     @media (max-width: 1830px) {
       margin: 0 120px;
     }
-  
+
     @media (max-width: 1640px) {
       margin: 0 100px;
       overflow-y: scroll;
     }
-  
+
     @media (max-width: 1440px) {
       margin: 0 80px;
     }
-  
+
     @media (max-width: 1280px) {
       margin: 0 60px;
     }
-  
+
     @media (max-width: 1024px) {
       margin: 0 24px;
     }
-  
+
     &-wrapper {
       background: var(--xc-white);
       border-radius: var(--xc-rounded-eight);
@@ -556,12 +556,12 @@
       gap: 16px;
       padding: 24px;
       height: 85%;
-  
+
       &-focus {
         display: flex;
         gap: 40px;
         overflow-x: auto;
-  
+
         &-column {
           display: flex;
           flex-direction: column;
@@ -573,7 +573,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-  
+
             .button-select {
               text-decoration: underline;
               color: var(--xc-black500);
@@ -583,12 +583,12 @@
               padding: 0;
             }
           }
-  
+
           .ecosystem__templates-wrapper-list {
             max-height: calc(100% - 16px);
             overflow-y: auto;
             padding-right: 4px;
-  
+
             ul {
               list-style: none;
               padding: 0;
@@ -597,33 +597,33 @@
               flex-direction: column;
               gap: 14px;
             }
-  
+
             &::-webkit-scrollbar {
               width: 4px;
             }
-  
+
             &::-webkit-scrollbar-thumb {
               background-color: var(--xc-grey300);
               border-radius: 20px;
             }
-  
+
             &::-webkit-scrollbar-track {
               background: var(--xc-grey100);
               border-radius: 20px;
             }
           }
-  
+
           .ecosystem__templates-wrapper-checkbox {
             display: flex;
             align-items: center;
             gap: 8px;
-  
+
             input[type="checkbox"] {
               accent-color: var(--xc-categories-completed);
               width: 16px;
               height: 16px;
             }
-  
+
             span {
               font-size: 14px;
             }
@@ -631,14 +631,18 @@
         }
       }
     }
-  
+
     .action_buttons {
       display: flex;
       justify-content: flex-end;
       gap: 16px;
+      .btn:disabled,
+      .btn--filled:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
   }
-  
 }
 
 .tags {
