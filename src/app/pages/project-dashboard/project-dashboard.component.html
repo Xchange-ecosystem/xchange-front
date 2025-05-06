@@ -1,28 +1,256 @@
-<main>
-    <header>
-        <img src="https://i.pinimg.com/736x/4c/73/77/4c7377d1fa604c7fe7998f9495444f74.jpg" alt="project-dashboard-header">
-        <nav>
-            <button
-            *ngFor="let sec of sections"
-            class="ecosystem__tab-button"
-            (click)="changeSection(sec)"
-            [ngClass]="{
-              'btn btn--tab_active': section === sec,
-              'btn btn--tab_inactive': section !== sec
-            }"
-          >
-            <span
-              *ngIf="sec === 'Members'"
-            ></span>
-            {{ sec }}
-          </button>
-        </nav>
-    </header>
-    <section>
-        <article>
-            <div></div>
-            <div></div>
-        </article>
-        <article></article>
-    </section>
+<main class="dashboard">
+  <header class="dashboard_header">
+    <img
+      src="https://i.pinimg.com/736x/4c/73/77/4c7377d1fa604c7fe7998f9495444f74.jpg"
+      class="dashboard_header-image"
+      alt="project-dashboard-header"
+    />
+    <nav class="dashboard_nav">
+      <div class="dashboard_nav-wrapper">
+        <button
+          *ngFor="let sec of sections"
+          (click)="changeSection(sec)"
+          [ngClass]="{
+            'btn btn--tab_active': section === sec,
+            'btn btn--tab_inactive': section !== sec
+          }"
+        >
+          <span *ngIf="sec === 'Members'"></span>
+          {{ sec }}
+        </button>
+      </div>
+    </nav>
+  </header>
+  <span class="title_align"
+    ><h2>Dashboard for Next Gen LLL Xchange Studio Project</h2></span
+  >
+  <section class="dashboard_content" *ngIf="section === 'Operations'">
+    <article class="dashboard_content-progress">
+      <div class="dashboard_content-progress-graphs">
+        <h3>Overall project progress</h3>
+        <div class="dashboard_content-progress-graphs-bar">
+          <xc-project-progress-bar
+            [completed]="2"
+            [open]="25"
+            [objectivesInProject]="44"
+          />
+        </div>
+        <div class="dashboard_content-progress-graphs-pie">
+          <span class="temp-graph">
+            <img
+              src="assets/img/temp-pieGraph.png"
+              alt="temporal-piegraph"
+              class="pie-image"
+            />
+            <p>Business</p>
+          </span>
+          <span class="temp-graph">
+            <img
+              src="assets/img/temp-pieGraph.png"
+              alt="temporal-piegraph"
+              class="pie-image"
+            />
+            <p>Product & Technology</p>
+          </span>
+          <span class="temp-graph">
+            <img
+              src="assets/img/temp-pieGraph.png"
+              alt="temporal-piegraph"
+              class="pie-image"
+            />
+            <p>Market</p>
+          </span>
+          <span class="temp-graph">
+            <img
+              src="assets/img/temp-pieGraph.png"
+              alt="temporal-piegraph"
+              class="pie-image"
+            />
+            <p>Operations</p>
+          </span>
+        </div>
+      </div>
+      <div class="dashboard_content-progress-data">
+        <h3>Project metrics</h3>
+        <div class="numbers-wrapper">
+          <span class="data">
+            <h1>1.281.500€</h1>
+            <small>project value</small>
+          </span>
+          <span class="data">
+            <h1>83.814€</h1>
+            <small>value added through collaborations</small>
+          </span>
+          <span class="data">
+            <h1>156.814€</h1>
+            <small>value added through owners</small>
+          </span>
+          <span class="data">
+            <h1>78%</h1>
+            <small>quality</small>
+          </span>
+          <span class="data">
+            <h1>95</h1>
+            <small>collaboration</small>
+          </span>
+          <span class="data">
+            <h1>116</h1>
+            <small>proof uploaded</small>
+          </span>
+        </div>
+      </div>
+    </article>
+    <article class="dashboard_content-progress-indicators">
+      <section class="overflow_wrapper">
+        <table class="dashboard_performance-table">
+          <thead>
+            <tr>
+              <th><h4 class="titles">Set goals</h4></th>
+              <th><h4 class="titles">Progress</h4></th>
+              <th class="table_collaborations">
+                <h4 class="titles">Collaborations</h4>
+              </th>
+              <th><h4 class="titles">Proof</h4></th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let indicator of Indicators; let i = index">
+              <tr *ngIf="i !== 0" class="project-divider">
+                <td colspan="4" class="divider-cell">
+                  <div class="divider-line"></div>
+                </td>
+              </tr>
+              <tr class="table_row">
+                <td
+                  class="table_project"
+                  (click)="indicator.expanded = !indicator.expanded"
+                >
+                  <xc-icon-play
+                    class="table_icon"
+                    [ngClass]="{
+                      rotated: indicator.expanded,
+                      'icon-collapsed': !indicator.expanded
+                    }"
+                  >
+                  </xc-icon-play>
+                  <h3>{{ indicator.title }}</h3>
+                </td>
+
+                <td class="table_progress">
+                  <!-- barra fantasma invisible solo para mantener ancho -->
+                  <xc-project-progress-bar
+                    class="ghost-bar"
+                    [completed]="0"
+                    [open]="0"
+                    [objectivesInProject]="100"
+                  >
+                  </xc-project-progress-bar>
+                </td>
+
+                <td class="table_numeric table_collaborations">
+                  <b>18</b>
+                </td>
+                <td class="table_numeric">
+                  <b>6</b>
+                </td>
+              </tr>
+              <tr
+                *ngFor="let sub of indicator.subindicator"
+                class="expandable-row"
+                [class.open]="indicator.expanded"
+              >
+                <td class="table_project">
+                  <p>{{ sub.title }}</p>
+                </td>
+
+                <td class="table_progress">
+                  <xc-project-progress-bar
+                    [completed]="sub.completed"
+                    [open]="sub.open"
+                    [objectivesInProject]="sub.total"
+                  >
+                  </xc-project-progress-bar>
+                </td>
+                <td class="table_numeric">{{ sub.proof }}</td>
+                <td class="table_numeric table_collaborations">
+                  {{ sub.collaborations }}
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </section>
+    </article>
+  </section>
+  <section class="dashboard_value" *ngIf="section === 'Value'">
+    <article class="dashboard_value-metrics">
+      <span class="number_data">
+        <h1>4,235,340 €</h1>
+        <small>project value</small>
+      </span>
+      <span class="number_data">
+        <h1>1,256,500 XCoins</h1>
+        <small>collaboration value</small>
+      </span>
+      <span class="number_data">
+        <h1>1.8%</h1>
+        <small>Growth factor</small>
+      </span>
+    </article>
+    <article class="dashboard_value-graphs">
+      <h3>Project value</h3>
+      <div class="dashboard_value-graphs-wrapper">
+        <div>
+          <img
+            src="assets/img/temp-pieGraph.png"
+            alt="temporal-piegraph"
+            class="pie-image"
+          />
+        </div>
+        <div class="dot_graph">
+          <img
+            src="assets/img/temp-graph.png"
+            alt="temporal-dot-graph"
+            class="dot_graph-image"
+          />
+          <div class="graphs_data">
+            <div class="graphs_data-spec">
+              <span class="blue"></span>
+              <p>Project valuation</p>
+            </div>
+            <div class="graphs_data-spec">
+              <span class="medBlue"></span>
+              <p>Collaboration fund</p>
+            </div>
+            <div class="graphs_data-spec">
+              <span class="smBlue"></span>
+              <p>Owners fund</p>
+            </div>
+            <div class="graphs_data-spec">
+              <span class="smBlue"></span>
+              <p>Employee fund</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rewards_btn">
+        <p>Find more on value creation and distribution in the Rewards tool.</p>
+        <button class="btn">
+          <xc-icon-star class="btn__icon" />
+          <b>Go to rewards</b>
+        </button>
+      </div>
+    </article>
+  </section>
+  <section class="dashboard_pitch" *ngIf="section === 'Pitch'">
+    <div class="dashboard_pitch_wrapper">
+      <span>
+        <img src="assets/img/Pitch-image.png" alt="pitch-image" />
+      </span>
+      <h3>We are announcing the end of pitchdecks!</h3>
+      <p class="text_300">
+        Automatic Pitch cards created by AI are coming soon!
+      </p>
+    </div>
+  </section>
 </main>

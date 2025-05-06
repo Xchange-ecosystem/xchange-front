@@ -1,5 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
+import { XcIconPlayComponent, XcIconStarComponent } from '@indziaki/ngx-xchange-icons';
+import { ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
 
 @Component({
   selector: 'app-project-dashboard',
@@ -7,19 +9,101 @@ import { Component } from '@angular/core';
   imports: [
     NgFor,
     NgClass,
-    NgIf
+    NgIf,
+    ProjectProgressBarModule,
+    XcIconPlayComponent,
+    XcIconStarComponent
   ],
   templateUrl: './project-dashboard.component.html',
   styleUrl: './project-dashboard.component.scss'
 })
 export class ProjectDashboardComponent {
-
+  section: string = 'Operations';
+  
   sections = [
     'Operations', 
     'Value', 
     'Pitch',
   ];
-  section: string = 'Operations';
+
+  Indicators = [
+    {
+      title:"Bussines",
+      subindicator:[
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        },
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        },
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        },
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        }
+      ],
+      expanded:false,
+    },
+    {
+      title:"Market",
+      subindicator:[
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        },
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        },
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        },
+        {
+          title:"Basic Stategy",
+          open:25,
+          completed:4,
+          total:44,
+          collaborations:12,
+          proof:4,
+        }
+      ],
+      expanded:false,
+    },
+  ]
 
   changeSection(section: string): void {
     this.section = section;
