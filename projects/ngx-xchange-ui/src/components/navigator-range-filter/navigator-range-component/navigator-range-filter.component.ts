@@ -32,7 +32,7 @@ export class NavigatorRangeFilterComponent {
 
   constructor(){
     this.dateForm = this.forms.group({
-      starDate: ['', Validators.required],
+      startDate: ['', Validators.required],
       endDate: ['', Validators.required]
     });
     this.valueForm = this.forms.group({
