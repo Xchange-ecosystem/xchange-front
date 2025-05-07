@@ -17,3 +17,8 @@ html {
     letter-spacing: var(--xc-spacing);
     line-height: var(--xc-line-height);
 }
+textarea,
+input{
+    caret-color: var(--xc-brand-medium-blue);
+}
+
