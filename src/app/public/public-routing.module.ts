@@ -50,6 +50,10 @@ const routes: Routes = [
         path:'project-dashboard',
         loadComponent: () => import('src/app/pages/project-dashboard/project-dashboard.component').then(m => m.ProjectDashboardComponent),
       },
+      {
+        path:'project-settings',
+        loadComponent: () => import('src/app/pages/project-settings/project-settings.component').then(m => m.ProjectSettingsComponent),
+      },
     ],
   },
 ];

@@ -1,0 +1,188 @@
+<main class="settings">
+    <header class="settings_header">
+      <img
+        src="https://i.pinimg.com/736x/4c/73/77/4c7377d1fa604c7fe7998f9495444f74.jpg"
+        class="settings_header-image"
+        alt="project-dashboard-header"
+      />
+      <nav class="settings_nav">
+        <div class="settings_nav-wrapper">
+          <button
+            *ngFor="let sec of sections"
+            (click)="changeSection(sec)"
+            [ngClass]="{
+              'btn btn--tab_active': section === sec,
+              'btn btn--tab_inactive': section !== sec
+            }"
+          >
+            <span *ngIf="sec === 'Members'"></span>
+            {{ sec }}
+          </button>
+        </div>
+      </nav>
+    </header>
+    
+    <section class="settings_appearance" *ngIf="section === 'Appearance'">
+        <h2>Customize the appearance of your project</h2>
+        <article class="settings_appearance-wrapper">
+            <div class="general">
+                <h3>General Information</h3>
+                <form class="general_form">
+                    <label class="general_form-field">
+                        <b>Project title</b>
+                        <input type="text" placeholder="">
+                    </label>
+                    <label class="general_form-field">
+                        <b>Project description</b>
+                        <textarea rows="4" cols="5"></textarea>
+                    </label>
+                </form>
+                <div>
+                    <b>Template</b>
+                    <p>Xchange Studios template</p>
+                </div>
+                <div>
+                    <b>Created</b>
+                    <p>13. Nov 2024 by Fabian Feutlinske</p>
+                </div>
+                <div></div>
+            </div>
+            <div class="settings">
+                <h3>Further settings</h3>
+                <div class="settings_field">
+                    <b>Public visibility</b>
+                    <xc-toggle color="green" [checked]="true"/>
+                </div>
+                <div class="settings_field-tags">
+                    <b>Tags</b>
+                    <span class="tag_container">
+                        <!-- ! Despues de 3 tags se deben de ocultar y mostrar el boton acorde a figma -->
+                        <div xcProfileTags="gray">Generate</div>
+                        <div xcProfileTags="gray">Organizational</div>
+                        <div xcProfileTags="gray">Improve</div>
+                        <button class="all-tags" (click)="openTagsModal()">
+                            <b>
+                                <xc-icon-arrow-right class="arrow_icon"/> 
+                                See all tags
+                            </b>
+                        </button>
+                    </span>
+                </div>
+                <div class="settings_field-dropbox">
+                    <div class="upload">
+                        <label class="upload__dropzone" for="projectImage">
+                          <input
+                            type="file"
+                            id="projectImage"
+                            class="upload__input"
+                          />
+                            <xc-icon-image-plus class="upload__icon"/>
+                          <b class="upload__text">Drag and drop your image</b>
+                        </label>
+                      </div>
+                      
+                </div>
+                <div class="settings_field-link">
+                    <b>Sharing Link</b>
+                    <span class="share-link">
+                        <xc-icon-copy class="share-link-icon"/>
+                        <b>https://beta.xchange.eco/business_card/project/5d8ca324-cd0b-4ede-b154-b1cf77f59672</b>
+                    </span>
+                </div>
+                <div></div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn" (click)="openSuspendModal()">
+                    <xc-icon-trash class="btn__icon"/>
+                    <p>Archive project</p>
+                </button>
+                <button class="btn btn--filled">
+                    <xc-icon-save class="btn__icon_filled "/>
+                    <p>Save changes</p>
+                </button>
+            </div>
+        </article>
+    </section>
+
+    <section class="settings_value" *ngIf="section === 'Legal'">
+      <article class="settings_value-metrics">
+        
+      </article>
+      <article class="settings_value-graphs">
+
+      </article>
+    </section>
+  
+    <section class="settings_pitch" *ngIf="section === 'Credits'">
+
+    </section>
+
+  </main>
+  
+  <section *ngIf="isSuspend" class="suspend_project">
+    <div class="suspend_project_content">
+        <article class="suspend_project_content-card">
+          <header class="suspend_project_content-card-header">
+            <img src="assets/img/Suspend-project.png" alt="suspend-project-header">
+          </header>
+          <div class="content">
+            <h3>Archive Project</h3>
+            <p>Do you really want to archive NextGen LL  Xchange Studio Project? Lorem ipsum dolor sit amet text.</p>
+          </div>
+          <div class="action_buttons">
+            <button class="btn" (click)="closeSuspendModal()">
+                <xc-icon-times class="btn__icon"/>
+                <p class="bold">Cancel</p>
+            </button>
+            <button class="btn btn--ban">
+                <xc-icon-trash class="btn__icon_ban"/>
+                <p class="bold">Archive project</p>
+            </button>
+          </div>
+        </article>
+      </div>
+  </section>
+
+  <section *ngIf="isTagsOpen" class="tags_modal">
+    <div class="tags_modal_wrapper">
+      <div class="tags_modal_wrapper-content">
+        <h4>All tags related to Fabian</h4>
+        <article class="tags_modal_wrapper-content-article">
+          <b>Review your skill tags</b>
+          <span class="tags_modal_wrapper-content-article-item">
+            <xc-icon-ai class="ia-icon" />
+            <b>
+              Our AI matches your skills with projects, templates and other
+              members. Thats why its important to build a strong profile
+            </b>
+          </span>
+        </article>
+        <div class="tags_modal_wrapper-content-injector">
+          <div xcProfileTags="gray" *ngFor="let tag of ModalTags" class="tag">
+            {{ tag }}
+            <button>
+              <xc-icon-close-s class="tags_modal_wrapper-icon-red" />
+            </button>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="tags_modal_wrapper-content-new">
+          <b>Add tags</b>
+          <span class="tags_modal_wrapper-content-new-span">
+            <input
+              type="text"
+              class="tags_modal_wrapper-content-new-span-input"
+            />
+            <button>
+              <xc-icon-plus-circle
+                class="tags_modal_wrapper-content-new-span-icon"
+              />
+            </button>
+          </span>
+        </div>
+      </div>
+      <button class="btn--rounded close" (click)="closeTagsModal()">
+        <xc-icon-close-s class="btn__icon " />
+      </button>
+    </div>
+  </section>
