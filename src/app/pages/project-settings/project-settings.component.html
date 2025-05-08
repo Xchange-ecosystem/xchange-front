@@ -104,11 +104,52 @@
         </article>
     </section>
 
-    <section class="settings_value" *ngIf="section === 'Legal'">
-      <article class="settings_value-metrics">
-        
+    <section class="settings_legal" *ngIf="section === 'Legal'">
+      <article class="settings_legal-information">
+        <div class="settings_legal-information-organization">
+            <label class="field">
+                <b>Your oganization</b>
+                <input type="text">
+            </label>
+        </div>
+        <div class="settings_legal-information-incorporation">
+            <label>
+                <b>Incorporation</b>
+                <input type="text">
+            </label>
+            <label>
+                <b>Country</b>
+                <select class="dropdown" [disabled]="false">
+                  <option disabled selected>Select a country</option>
+                  <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+                </select>
+              </label>
+        </div>
+        <div class="settings_legal-information-address">
+            <label>
+                <b>Street</b>
+                <input type="text">
+            </label>
+            <label>
+                <b>ZIP</b>
+                <input type="text">
+            </label>
+            <label>
+                <b>City</b>
+                <input type="text">
+            </label>
+        </div>
+        <div class="settings_legal-information-representatives">
+            <label>
+                <b>Legal representative(s)</b>
+                <input type="text">
+            </label>
+        </div>
+        <div class="settings_legal-information-registration">
+
+        </div>
       </article>
-      <article class="settings_value-graphs">
+      <article class="settings_legal-valuation">
 
       </article>
     </section>

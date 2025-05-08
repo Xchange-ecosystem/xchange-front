@@ -31,7 +31,7 @@ import { ProfileTagsDirective, ProjectProgressBarModule, ToggleComponent } from 
 export class ProjectSettingsComponent {
   isSuspend = false;
   isTagsOpen = false;
-  section: string = 'Appearance';
+  section: string = 'Legal';
   
   sections = [
     'Appearance', 
@@ -101,6 +101,14 @@ export class ProjectSettingsComponent {
     'E-commerce',
     'Cloud Computing',
     'Cybersecurity',
+  ];
+
+  countries = [
+    'Mexico',
+    'United States',
+    'Canada',
+    'Argentina',
+    'Colombia'
   ];
 
   changeSection(section: string): void {
