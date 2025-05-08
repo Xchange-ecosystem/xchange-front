@@ -105,56 +105,209 @@
     </section>
 
     <section class="settings_legal" *ngIf="section === 'Legal'">
-      <article class="settings_legal-information">
-        <div class="settings_legal-information-organization">
-            <label class="field">
-                <b>Your oganization</b>
-                <input type="text">
-            </label>
-        </div>
-        <div class="settings_legal-information-incorporation">
-            <label>
-                <b>Incorporation</b>
-                <input type="text">
-            </label>
-            <label>
-                <b>Country</b>
-                <select class="dropdown" [disabled]="false">
-                  <option disabled selected>Select a country</option>
-                  <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-                </select>
+      <span class="settings_legal-header">
+        <h2>Legal representation and conditions inside your project</h2>
+      </span>
+      <div class="settings_legal-wrapper">
+        <article class="settings_legal-wrapper-information">
+          <div class="settings_legal-wrapper-information-header">
+            <img src="assets/img/Legal-settings.png" alt="legal-settings-image">
+          </div>
+          <div class="settings_legal-wrapper-information-organization">
+              <label class="field">
+                  <b>Your oganization</b>
+                  <input type="text">
               </label>
-        </div>
-        <div class="settings_legal-information-address">
-            <label>
-                <b>Street</b>
-                <input type="text">
-            </label>
-            <label>
-                <b>ZIP</b>
-                <input type="text">
-            </label>
-            <label>
-                <b>City</b>
-                <input type="text">
-            </label>
-        </div>
-        <div class="settings_legal-information-representatives">
-            <label>
-                <b>Legal representative(s)</b>
-                <input type="text">
-            </label>
-        </div>
-        <div class="settings_legal-information-registration">
-
-        </div>
-      </article>
-      <article class="settings_legal-valuation">
-
-      </article>
+          </div>
+          <div class="settings_legal-wrapper-information-incorporation">
+              <label class="field">
+                  <b>Incorporation</b>
+                  <input type="text">
+              </label>
+              <label class="field">
+                  <b>Country</b>
+                  <select class="dropdown" [disabled]="false">
+                    <option disabled selected>Select a country</option>
+                    <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+                  </select>
+                </label>
+          </div>
+          <div class="settings_legal-wrapper-information-address">
+              <label class="field">
+                  <b>Street</b>
+                  <input type="text">
+              </label>
+              <label class="field">
+                  <b>ZIP</b>
+                  <input type="text">
+              </label>
+              <label class="field">
+                  <b>City</b>
+                  <input type="text">
+              </label>
+          </div>
+          <div class="settings_legal-wrapper-information-representatives">
+              <label class="field">
+                  <b>Legal representative(s)</b>
+                  <input type="text">
+              </label>
+          </div>
+          <div class="settings_legal-wrapper-information-registration">
+            <label class="field">
+              <b>Registration number</b>
+              <input type="text">
+          </label>
+          <button class="btn">
+            <xc-icon-file-upload class="btn__icon"/>
+            <p>Attach Company Proof</p>
+          </button>
+          </div>
+          <div class="settings_legal-wrapper-information-evidence">
+            <div xcProfileTags="gray" class="tag">
+              <xc-icon-paperclip class="btn__icon"/>
+              <p>loremfile.pdf</p>
+              <button class="delete">
+                <xc-icon-times class="delete_icon"/>
+              </button>
+            </div>
+            <div xcProfileTags="gray" class="tag">
+              <xc-icon-paperclip class="btn__icon"/>
+              <p>loremfile.pdf</p>
+              <button class="delete">
+                <xc-icon-times class="delete_icon"/>
+              </button>
+            </div>
+            <div xcProfileTags="gray" class="tag">
+              <xc-icon-paperclip class="btn__icon"/>
+              <p>loremfile.pdf</p>
+              <button class="delete">
+                <xc-icon-times class="delete_icon"/>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="settings_legal-wrapper-valuation">
+          <div class="settings_legal-wrapper-valuation-wrapper">
+            <header class="settings_legal-wrapper-valuation-wrapper-header">
+              <img src="assets/img/Valuation_image.png" alt="">
+            </header>
+            <div class="settings_legal-wrapper-valuation-wrapper-coin">
+              <label class="field">
+                <b>Initial valuation in Euro (€)*</b>
+                <input type="number" placeholder="0">
+              </label>
+              <label class="field">
+                <b>Current valuation in Euro (€)</b>
+                <input type="number" placeholder="0">
+              </label>
+            </div>
+            <div class="settings_legal-wrapper-valuation-wrapper-description">
+              To leverage the power of collaboration it is required that your project has a monetary value. Good news is: Everything has a real value, be it the The amount of work you already put into it, potential value that is created for people, or the initial share value at the time of incorporation. Note that the initial valuation* can’t be changed later!  <a class="bold">Learn more. </a>
+            </div>
+            <b>Collaboration Funds</b>
+            <div class="settings_legal-wrapper-valuation-wrapper-funds">
+              You share a defined percentage of the value that is created in your project with your collaborators. Before you start collaborating, you need to set up a fund. Note that on the platform, Xcoin credits are used instead of fiat currency. <a class="bold">Learn more</a>
+            </div>
+            <div class="settings_legal-wrapper-valuation-wrapper-action">
+              <button class="btn">
+                <p class="bold">Set up a fund</p>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn--filled save-btn">
+            <xc-icon-save class="btn__icon_filled "/>
+            <p>Save changes</p>
+          </button>
+        </article>
+      </div>
     </section>
   
-    <section class="settings_pitch" *ngIf="section === 'Credits'">
+    <section class="settings_credits" *ngIf="section === 'Credits'">
+      <div>
+        <h2>Credits for collaboration</h2>
+      </div>
+      <article class="settings_credits-wrapper">
+        <div class="settings_credits-wrapper-video">
+          <b>How credits work in the collaboration ecosystem</b>
+          <div class="video_container">
+            <iframe
+              class="video_container-iframe"
+              src="https://www.youtube.com/embed/wI00QO2A2j4"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="settings_credits-wrapper-balance">
+          <div class="current_amount">
+            <h2>Current credit balance</h2>
+            <div class="current_amount-balance">
+              <span class="current_amount-coin">
+                <h1>10,000</h1>
+                <small>Xcoins</small>
+              </span>
+              <button class="btn">
+                <b>Buy more credits</b>
+              </button>
+            </div>
+          </div>
+          
+          <section class="transactions">
+            <header class="transactions-header">
+              <h3>Credit transactions</h3>
+              <div class="transactions-filter">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                  <option value="latest">latest</option>
+                  <option value="oldest">oldest</option>
+                  <option value="positive">amount: positive first</option>
+                  <option value="negative">amount: negative first</option>
+                </select>
+              </div>
+            </header>
+          
+            <ul class="transactions-list">
+              <li class="transactions-list-item">
+                <span class="transactions-list-item__label">Manuel Cabrera</span>
+                <span class="transactions-list-item__date">14 Aug.24</span>
+                <span class="transactions-list-item__destination">Jake Gyllenhaal</span>
+                <span class="transactions-list-item__amount negative">-500 Xcoins</span>
+              </li>
+              <li class="transactions-list-item">
+                <span class="transactions-list-item__label">Lucía Torres</span>
+                <span class="transactions-list-item__date">10 Aug.24</span>
+                <span class="transactions-list-item__destination">Ecosystem</span>
+                <span class="transactions-list-item__amount negative">-250 Xcoins</span>
+              </li>
+              <li class="transactions-list-item">
+                <span class="transactions-list-item__label">Carlos Rivera</span>
+                <span class="transactions-list-item__date">05 Aug.24</span>
+                <span class="transactions-list-item__destination">Ecosystem</span>
+                <span class="transactions-list-item__amount positive">+1200 Xcoins</span>
+              </li>
+              <li class="transactions-list-item">
+                <span class="transactions-list-item__label">Ana Gómez</span>
+                <span class="transactions-list-item__date">28 Jul.24</span>
+                <span class="transactions-list-item__destination">Team Orion</span>
+                <span class="transactions-list-item__amount negative">-150 Xcoins</span>
+              </li>
+              <!-- Agrega los demás si necesitas, sigue el mismo patrón -->
+            </ul>
+          
+            <footer class="transactions-footer">
+              <a href="#" class="transactions-footer-link">
+                <span class="arrow">→</span> See all bookings
+              </a>
+            </footer>
+          </section>
+          
+          
+          
+        </div>
+      </article>
+    </section>
+
+    <section class="settings_members" *ngIf="section === 'Members'">
 
     </section>
 
