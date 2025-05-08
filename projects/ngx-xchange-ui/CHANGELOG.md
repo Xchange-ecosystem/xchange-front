@@ -1,3 +1,6 @@
+# 0.1.26 05/07/2025
+* (fix) typo on filters
+
 # 0.1.25 05/05/2025
 * (fix) Remove id from objective user card
 
