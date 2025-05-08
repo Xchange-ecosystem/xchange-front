@@ -1,8 +1,8 @@
 <div>
-  <div class="flex flex-row-reverse gap-2.5" style="justify-content: start;" *ngIf="!isToRate">
+  <div class="flex flex-row-reverse gap-2.5" style="justify-content: flex-start;" *ngIf="!isToRate">
     <xc-icon-custom-star *ngFor="let i of index" [class.chose2]="rate >= i"/>
   </div>
-  <div class="flex flex-row-reverse gap-2.5" style="justify-content: start;" *ngIf="isToRate">
+  <div class="flex flex-row-reverse gap-2.5" style="justify-content: flex-start;" *ngIf="isToRate">
     <xc-icon-custom-star *ngFor="let i of index" [class.isToRate]="true" [class.chose]="rate === i" (click)="chose(i)"/>
   </div>
 </div>

@@ -9,10 +9,10 @@ export class ClickOutsideDirective {
   @Output() onClickOutside = new EventEmitter<void>();
 
   constructor() {}
-  @HostListener('document:focusin', ['$event'])
+  @HostListener('document:click', ['$event'])
   clickOutside(event: Event) {
-    event.preventDefault()
-    if (!this.elf.nativeElement.contains(event.target)) {
+    const path = event.composedPath()
+    if (!path.includes(this.elf.nativeElement)) {
       this.onClickOutside.emit()
     }
   }

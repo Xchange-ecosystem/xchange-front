@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 32px;
   width: 100%;
   height: 100%;
@@ -100,7 +100,7 @@
             flex-direction: column;
             gap: 6px;
             width: 100%;
-            align-items: start;
+            align-items: flex-start;
 
             &-tags {
               display: flex;
@@ -184,7 +184,7 @@
   &_footer {
     grid-column: 1 / -1;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     padding: 8px 0px 32px 0px;
 
@@ -216,8 +216,8 @@
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   box-sizing: border-box;
   &_assets {
     background: white;
@@ -256,14 +256,14 @@
           width: 100%;
           display: flex;
           justify-content: space-between;
-          
+
           &-last {
             display: flex;
             gap: 72px;
           }
         }
       }
-      
+
       &-body {
         display: flex;
         flex-direction: column;
@@ -281,20 +281,20 @@
           align-items: center;
           box-sizing: border-box;
           padding: 12px 0;
-          
+
           .col-contributed,
           .col-current {
             min-width: 120px;
             text-align: right;
           }
-          
+
           .col-project {
             text-align: left;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
           }
-          
+
           .col-status {
             justify-self: end;
           }
@@ -313,8 +313,8 @@
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   box-sizing: border-box;
 
   &-video {
@@ -455,7 +455,7 @@
   flex-direction: column;
   height: 100%;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   overflow-y: scroll;
   gap: 24px;
   -ms-overflow-style: none;
@@ -504,7 +504,7 @@
         display: flex;
         width: fit-content;
         align-self: flex-end;
-        
+
       }
       .save-icon {
         display: flex;
@@ -544,11 +544,11 @@
       height: 100%;
       box-sizing: border-box;
     }
-  
+
     &-premium {
       display: flex;
       gap: 16px;
-  
+
       &-basic,
       &-investor {
         display: flex;
@@ -587,14 +587,14 @@
             }
           }
         }
-        
+
         &-footer {
           margin-top: auto;
           display: flex;
           flex-direction: column;
           gap: 16px;
           align-items: center;
-  
+
           .button {
             display: flex;
             align-items: center;
@@ -608,7 +608,7 @@
           }
         }
       }
-  
+
       &-investor {
         background: white;
         text-align: center;
@@ -755,7 +755,7 @@
     height: auto;
 
     &-content {
-      align-items: start;
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
       background: white;
@@ -863,9 +863,9 @@
     width: 100%;
     margin: auto;
     height: auto;
-    
+
     &-content{
-      align-items: start;
+      align-items: flex-start;
       display: flex;
       flex-direction: column;
       background: var(--xc-white);
