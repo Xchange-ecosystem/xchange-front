@@ -27,7 +27,8 @@ import { RouterOutlet } from '@angular/router';
     CommunityComponent,
     MainHeadingModule,
     NewAsideNavComponent,
-    RouterOutlet
+    RouterOutlet,
+    ProjectProgressBarModule
 ],
   providers: [],
   bootstrap: [AppComponent]

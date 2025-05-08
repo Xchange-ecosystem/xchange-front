@@ -1,5 +1,8 @@
-# 0.1.25 05/05/2025
+# 0.1.26 08/05/2025
+* (fix) typo on filters
 * (fix) Remove id from objective user card
+* (change) start and end statement
+* (change) remove id from objective user card
 
 # 0.1.24 28/04/2025
 * (fix) project progress bar min with and colors order
