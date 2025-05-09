@@ -35,7 +35,7 @@ export class ProjectSettingsComponent {
   isSuspend = false;
   isTagsOpen = false;
   isBuyCredits = false;
-  isHistory = false;
+  isHistoryOpen = true;
   section: string = 'Credits';
   
   sections = [
@@ -220,10 +220,10 @@ export class ProjectSettingsComponent {
   }
 
   openHistoryModal () {
-    this.isHistory = true;
+    this.isHistoryOpen = true;
   }
 
   closeHistoryModal () {
-    this.isHistory = false;
+    this.isHistoryOpen = false;
   }
 }
