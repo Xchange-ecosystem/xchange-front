@@ -617,11 +617,6 @@
                 
               }
             
-              label {
-                font-size: 14px;
-                color: #333;
-              }
-            
               select {
                 border: none;
                 background: transparent;
@@ -650,11 +645,6 @@
               align-items: center;
               font-size: 16px;
         
-              &__label {
-                color: #333;
-              }
-        
-        
               &__amount {
                 text-align: end;
                 &.positive {
@@ -674,21 +664,19 @@
             width: 100%;
         
             &-link {
-              color: black;
-              font-weight: 600;
               display: flex;
               align-items: center;
               gap: 4px;
-              text-decoration: none;
-        
-              .arrow {
-                font-size: 18px;
+              
+              .icon{
+                display: flex;
+                width: 20px;
+                height: 20px;
+                stroke: var(--xc-black500);
               }
             }
           }
         }
-        
-        
         
       }
     }
@@ -874,6 +862,119 @@
     }
   }
 }
+
+.history {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      min-width: 740px;
+      min-height: 810px;
+      overflow-y: auto;
+      .transactions {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          .transactions-filter {
+            display: flex;
+            align-items: center;
+          
+            &__box {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              
+            }
+          
+            select {
+              border: none;
+              background: transparent;
+              font-size: 14px;
+              cursor: pointer;
+              outline: none;
+              padding: 0;
+              margin: 0;
+              appearance: none;
+            }
+          }
+          
+        }
+      
+        &-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: grid;
+          gap: 24px;
+          width: 100%;
+          
+      
+          &-item {
+            display: grid;
+            grid-template-columns:240px 140px auto;
+            align-items: center;
+            font-size: 16px;
+      
+            &__amount {
+              text-align: end;
+              &.positive {
+                color: var(--xc-categories-completed);
+              }
+      
+              &.negative {
+                color: var(--xc-categories-blocked);
+              }
+            }
+          }
+        }
+      
+        &-footer {
+          display: flex;
+          justify-content: flex-end;
+          width: 100%;
+      
+          &-link {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            
+            .icon{
+              display: flex;
+              width: 20px;
+              height: 20px;
+              stroke: var(--xc-black500);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 .blue,
 .medBlue,
