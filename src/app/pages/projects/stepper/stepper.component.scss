@@ -133,7 +133,7 @@
             border-radius: 6px;
             border: 1px solid;
             border-color: var(--xc-grey200);
-
+            resize: none;
             &:focus {
               outline: none;
             }

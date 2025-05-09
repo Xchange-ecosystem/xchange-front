@@ -1,0 +1,15 @@
+/* *Regular classes for cards*/
+
+.container-card {
+    background: var(--xc-white);
+    box-shadow: var(--xc-boxShadow-400);
+    padding: var(--xc-regular-padding);
+}
+
+.card_24{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+    align-items:start ;
+}
