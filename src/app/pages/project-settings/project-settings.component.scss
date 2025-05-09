@@ -596,6 +596,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         
             h3 {
               font-size: 20px;
@@ -605,18 +606,34 @@
             .transactions-filter {
               display: flex;
               align-items: center;
-              gap: 8px;
-        
-              select {
+            
+              &__box {
+                display: flex;
+                align-items: center;
+                gap: 8px;
                 padding: 6px 12px;
                 border: 1px solid #ccc;
                 border-radius: 8px;
+                
+              }
+            
+              label {
                 font-size: 14px;
-                background: #fff;
-                appearance: none;
+                color: #333;
+              }
+            
+              select {
+                border: none;
+                background: transparent;
+                font-size: 14px;
                 cursor: pointer;
+                outline: none;
+                padding: 0;
+                margin: 0;
+                appearance: none;
               }
             }
+            
           }
         
           &-list {
@@ -625,10 +642,11 @@
             padding: 0;
             display: grid;
             gap: 16px;
+            width: 100%;
         
             &-item {
               display: grid;
-              grid-template-columns: 1fr auto auto auto;
+              grid-template-columns: 160px auto auto ;
               align-items: center;
               font-size: 16px;
         
@@ -636,22 +654,15 @@
                 color: #333;
               }
         
-              &__date,
-              &__destination {
-                color: #555;
-                font-size: 14px;
-              }
         
               &__amount {
-                font-weight: 500;
-                font-size: 16px;
-        
+                text-align: end;
                 &.positive {
-                  color: green;
+                  color: var(--xc-categories-completed);
                 }
         
                 &.negative {
-                  color: red;
+                  color: var(--xc-categories-blocked);
                 }
               }
             }
@@ -660,6 +671,7 @@
           &-footer {
             display: flex;
             justify-content: flex-end;
+            width: 100%;
         
             &-link {
               color: black;
