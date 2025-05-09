@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { XcIconAIComponent, XcIconArrowRightComponent, XcIconCloseSComponent, XcIconCopyComponent, XcIconFileUploadComponent, XcIconImagePlusComponent, XcIconPaperclipComponent, XcIconPlayComponent, XcIconPlusCircleComponent, XcIconSaveComponent, XcIconStarComponent, XcIconTimesComponent, XcIconTrashComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconArrowRightComponent, XcIconCloseSComponent, XcIconCopyComponent, XcIconFileUploadComponent, XcIconImagePlusComponent, XcIconPaperclipComponent, XcIconPlayComponent, XcIconPlusCircleComponent, XcIconSaveComponent, XcIconShoppingCartComponent, XcIconStarComponent, XcIconTimesComponent, XcIconTrashComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective, ProjectProgressBarModule, ToggleComponent } from '@indziaki/ngx-xchange-ui';
 import { NgModel } from '@angular/forms';
 
@@ -27,6 +27,7 @@ import { NgModel } from '@angular/forms';
         XcIconAIComponent,
         XcIconFileUploadComponent,
         XcIconPaperclipComponent,
+        XcIconShoppingCartComponent
   ],
   templateUrl: './project-settings.component.html',
   styleUrl: './project-settings.component.scss'
@@ -35,8 +36,8 @@ export class ProjectSettingsComponent {
   isSuspend = false;
   isTagsOpen = false;
   isBuyCredits = false;
-  isHistoryOpen = true;
-  section: string = 'Credits';
+  isHistoryOpen = false;
+  section: string = 'Members';
   
   sections = [
     'Appearance', 
@@ -214,7 +215,6 @@ export class ProjectSettingsComponent {
   openBuyCredits () {
     this.isBuyCredits = true;
   }
-
   closeBuyCredits () {
     this.isBuyCredits = false;
   }
