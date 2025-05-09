@@ -1,386 +1,263 @@
 <main class="settings">
-    <header class="settings_header">
-      <img
-        src="https://i.pinimg.com/736x/4c/73/77/4c7377d1fa604c7fe7998f9495444f74.jpg"
-        class="settings_header-image"
-        alt="project-dashboard-header"
-      />
-      <nav class="settings_nav">
-        <div class="settings_nav-wrapper">
-          <button
-            *ngFor="let sec of sections"
-            (click)="changeSection(sec)"
-            [ngClass]="{
-              'btn btn--tab_active': section === sec,
-              'btn btn--tab_inactive': section !== sec
-            }"
-          >
-            <span *ngIf="sec === 'Members'"></span>
-            {{ sec }}
-          </button>
-        </div>
-      </nav>
-    </header>
-    
-    <section class="settings_appearance" *ngIf="section === 'Appearance'">
-        <h2>Customize the appearance of your project</h2>
-        <article class="settings_appearance-wrapper">
-            <div class="general">
-                <h3>General Information</h3>
-                <form class="general_form">
-                    <label class="general_form-field">
-                        <b>Project title</b>
-                        <input type="text" placeholder="">
-                    </label>
-                    <label class="general_form-field">
-                        <b>Project description</b>
-                        <textarea rows="4" cols="5"></textarea>
-                    </label>
-                </form>
-                <div>
-                    <b>Template</b>
-                    <p>Xchange Studios template</p>
-                </div>
-                <div>
-                    <b>Created</b>
-                    <p>13. Nov 2024 by Fabian Feutlinske</p>
-                </div>
-                <div></div>
-            </div>
-            <div class="settings">
-                <h3>Further settings</h3>
-                <div class="settings_field">
-                    <b>Public visibility</b>
-                    <xc-toggle color="green" [checked]="true"/>
-                </div>
-                <div class="settings_field-tags">
-                    <b>Tags</b>
-                    <span class="tag_container">
-                        <!-- ! Despues de 3 tags se deben de ocultar y mostrar el boton acorde a figma -->
-                        <div xcProfileTags="gray">Generate</div>
-                        <div xcProfileTags="gray">Organizational</div>
-                        <div xcProfileTags="gray">Improve</div>
-                        <button class="all-tags" (click)="openTagsModal()">
-                            <b>
-                                <xc-icon-arrow-right class="arrow_icon"/> 
-                                See all tags
-                            </b>
-                        </button>
-                    </span>
-                </div>
-                <div class="settings_field-dropbox">
-                    <div class="upload">
-                        <label class="upload__dropzone" for="projectImage">
-                          <input
-                            type="file"
-                            id="projectImage"
-                            class="upload__input"
-                          />
-                            <xc-icon-image-plus class="upload__icon"/>
-                          <b class="upload__text">Drag and drop your image</b>
-                        </label>
-                      </div>
-                      
-                </div>
-                <div class="settings_field-link">
-                    <b>Sharing Link</b>
-                    <span class="share-link">
-                        <xc-icon-copy class="share-link-icon"/>
-                        <b>https://beta.xchange.eco/business_card/project/5d8ca324-cd0b-4ede-b154-b1cf77f59672</b>
-                    </span>
-                </div>
-                <div></div>
-            </div>
-            <div class="action-buttons">
-                <button class="btn" (click)="openSuspendModal()">
-                    <xc-icon-trash class="btn__icon"/>
-                    <p>Archive project</p>
-                </button>
-                <button class="btn btn--filled">
-                    <xc-icon-save class="btn__icon_filled "/>
-                    <p>Save changes</p>
-                </button>
-            </div>
-        </article>
-    </section>
+  <header class="settings_header">
+    <img
+      src="https://i.pinimg.com/736x/4c/73/77/4c7377d1fa604c7fe7998f9495444f74.jpg"
+      class="settings_header-image"
+      alt="project-dashboard-header"
+    />
+    <nav class="settings_nav">
+      <div class="settings_nav-wrapper">
+        <button
+          *ngFor="let sec of sections"
+          (click)="changeSection(sec)"
+          [ngClass]="{
+            'btn btn--tab_active': section === sec,
+            'btn btn--tab_inactive': section !== sec
+          }"
+        >
+          <span *ngIf="sec === 'Members'"></span>
+          {{ sec }}
+        </button>
+      </div>
+    </nav>
+  </header>
 
-    <section class="settings_legal" *ngIf="section === 'Legal'">
-      <span class="settings_legal-header">
-        <h2>Legal representation and conditions inside your project</h2>
-      </span>
-      <div class="settings_legal-wrapper">
-        <article class="settings_legal-wrapper-information">
-          <div class="settings_legal-wrapper-information-header">
-            <img src="assets/img/Legal-settings.png" alt="legal-settings-image">
-          </div>
-          <div class="settings_legal-wrapper-information-organization">
-              <label class="field">
-                  <b>Your oganization</b>
-                  <input type="text">
-              </label>
-          </div>
-          <div class="settings_legal-wrapper-information-incorporation">
-              <label class="field">
-                  <b>Incorporation</b>
-                  <input type="text">
-              </label>
-              <label class="field">
-                  <b>Country</b>
-                  <select class="dropdown" [disabled]="false">
-                    <option disabled selected>Select a country</option>
-                    <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-                  </select>
-                </label>
-          </div>
-          <div class="settings_legal-wrapper-information-address">
-              <label class="field">
-                  <b>Street</b>
-                  <input type="text">
-              </label>
-              <label class="field">
-                  <b>ZIP</b>
-                  <input type="text">
-              </label>
-              <label class="field">
-                  <b>City</b>
-                  <input type="text">
-              </label>
-          </div>
-          <div class="settings_legal-wrapper-information-representatives">
-              <label class="field">
-                  <b>Legal representative(s)</b>
-                  <input type="text">
-              </label>
-          </div>
-          <div class="settings_legal-wrapper-information-registration">
-            <label class="field">
-              <b>Registration number</b>
-              <input type="text">
+  <section class="settings_appearance" *ngIf="section === 'Appearance'">
+    <h2>Customize the appearance of your project</h2>
+    <article class="settings_appearance-wrapper">
+      <div class="general">
+        <h3>General Information</h3>
+        <form class="general_form">
+          <label class="general_form-field">
+            <b>Project title</b>
+            <input type="text" placeholder="" />
           </label>
-          <button class="btn">
-            <xc-icon-file-upload class="btn__icon"/>
-            <p>Attach Company Proof</p>
-          </button>
-          </div>
-          <div class="settings_legal-wrapper-information-evidence">
-            <div xcProfileTags="gray" class="tag">
-              <xc-icon-paperclip class="btn__icon"/>
-              <p>loremfile.pdf</p>
-              <button class="delete">
-                <xc-icon-times class="delete_icon"/>
-              </button>
-            </div>
-            <div xcProfileTags="gray" class="tag">
-              <xc-icon-paperclip class="btn__icon"/>
-              <p>loremfile.pdf</p>
-              <button class="delete">
-                <xc-icon-times class="delete_icon"/>
-              </button>
-            </div>
-            <div xcProfileTags="gray" class="tag">
-              <xc-icon-paperclip class="btn__icon"/>
-              <p>loremfile.pdf</p>
-              <button class="delete">
-                <xc-icon-times class="delete_icon"/>
-              </button>
-            </div>
-          </div>
-        </article>
-        <article class="settings_legal-wrapper-valuation">
-          <div class="settings_legal-wrapper-valuation-wrapper">
-            <header class="settings_legal-wrapper-valuation-wrapper-header">
-              <img src="assets/img/Valuation_image.png" alt="">
-            </header>
-            <div class="settings_legal-wrapper-valuation-wrapper-coin">
-              <label class="field">
-                <b>Initial valuation in Euro (€)*</b>
-                <input type="number" placeholder="0">
-              </label>
-              <label class="field">
-                <b>Current valuation in Euro (€)</b>
-                <input type="number" placeholder="0">
-              </label>
-            </div>
-            <div class="settings_legal-wrapper-valuation-wrapper-description">
-              To leverage the power of collaboration it is required that your project has a monetary value. Good news is: Everything has a real value, be it the The amount of work you already put into it, potential value that is created for people, or the initial share value at the time of incorporation. Note that the initial valuation* can’t be changed later!  <a class="bold">Learn more. </a>
-            </div>
-            <b>Collaboration Funds</b>
-            <div class="settings_legal-wrapper-valuation-wrapper-funds">
-              You share a defined percentage of the value that is created in your project with your collaborators. Before you start collaborating, you need to set up a fund. Note that on the platform, Xcoin credits are used instead of fiat currency. <a class="bold">Learn more</a>
-            </div>
-            <div class="settings_legal-wrapper-valuation-wrapper-action">
-              <button class="btn">
-                <p class="bold">Set up a fund</p>
-              </button>
-            </div>
-          </div>
-          <button class="btn btn--filled save-btn">
-            <xc-icon-save class="btn__icon_filled "/>
-            <p>Save changes</p>
-          </button>
-        </article>
+          <label class="general_form-field">
+            <b>Project description</b>
+            <textarea rows="4" cols="5"></textarea>
+          </label>
+        </form>
+        <div>
+          <b>Template</b>
+          <p>Xchange Studios template</p>
+        </div>
+        <div>
+          <b>Created</b>
+          <p>13. Nov 2024 by Fabian Feutlinske</p>
+        </div>
+        <div></div>
       </div>
-    </section>
-  
-    <section class="settings_credits" *ngIf="section === 'Credits'">
-      <div>
-        <h2>Credits for collaboration</h2>
-      </div>
-      <article class="settings_credits-wrapper">
-        <div class="settings_credits-wrapper-video">
-          <b>How credits work in the collaboration ecosystem</b>
-          <div class="video_container">
-            <iframe
-              class="video_container-iframe"
-              src="https://www.youtube.com/embed/wI00QO2A2j4"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+      <div class="settings">
+        <h3>Further settings</h3>
+        <div class="settings_field">
+          <b>Public visibility</b>
+          <xc-toggle color="green" [checked]="true" />
+        </div>
+        <div class="settings_field-tags">
+          <b>Tags</b>
+          <span class="tag_container">
+            <!-- ! Despues de 3 tags se deben de ocultar y mostrar el boton acorde a figma -->
+            <div xcProfileTags="gray">Generate</div>
+            <div xcProfileTags="gray">Organizational</div>
+            <div xcProfileTags="gray">Improve</div>
+            <button class="all-tags" (click)="openTagsModal()">
+              <b>
+                <xc-icon-arrow-right class="arrow_icon" />
+                See all tags
+              </b>
+            </button>
+          </span>
+        </div>
+        <div class="settings_field-dropbox">
+          <div class="upload">
+            <label class="upload__dropzone" for="projectImage">
+              <input type="file" id="projectImage" class="upload__input" />
+              <xc-icon-image-plus class="upload__icon" />
+              <b class="upload__text">Drag and drop your image</b>
+            </label>
           </div>
         </div>
-        <div class="settings_credits-wrapper-balance">
-          <div class="current_amount">
-            <h2>Current credit balance</h2>
-            <div class="current_amount-balance">
-              <span class="current_amount-coin">
-                <h1>10,000</h1>
-                <small>Xcoins</small>
-              </span>
-              <button class="btn">
-                <b>Buy more credits</b>
-              </button>
-            </div>
-          </div>
-          
-          <section class="transactions">
-            <header class="transactions-header">
-              <h3>Credit transactions</h3>
-              <div class="transactions-filter">
-                <div class="transactions-filter__box">
-                  <label for="sort">Sort by:</label>
-                  <select id="sort">
-                    <option value="latest">latest</option>
-                    <option value="oldest">oldest</option>
-                  </select>
-                </div>
-              </div>
-            </header>
-          
-            <ul class="transactions-list">
-              <li class="transactions-list-item">
-                <span class="transactions-list-item__label">Manuel Cabrera</span>
-                <span class="transactions-list-item__date">14 Aug.24</span>
-                <span class="transactions-list-item__amount negative">-500 Xcoins</span>
-              </li>
-              <li class="transactions-list-item">
-                <span class="transactions-list-item__label">Lucía Torres</span>
-                <span class="transactions-list-item__date">10 Aug.24</span>
-                <span class="transactions-list-item__amount negative">-250 Xcoins</span>
-              </li>
-              <li class="transactions-list-item">
-                <span class="transactions-list-item__label">Carlos Rivera</span>
-                <span class="transactions-list-item__date">05 Aug.24</span>
-                <span class="transactions-list-item__amount positive">+1200 Xcoins</span>
-              </li>
-              <li class="transactions-list-item">
-                <span class="transactions-list-item__label">Ana Gómez</span>
-                <span class="transactions-list-item__date">28 Jul.24</span>
-                <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-              </li>
-              <!-- Agrega los demás si necesitas, sigue el mismo patrón -->
-            </ul>
-          
-            <footer class="transactions-footer">
-              <button href="#" class="transactions-footer-link" (click)="openHistoryModal()">
-                <xc-icon-arrow-right class="icon"/>
-                <b>See all bookings</b>
-              </button>
-            </footer>
-          </section>
-          
-          
-          
+        <div class="settings_field-link">
+          <b>Sharing Link</b>
+          <span class="share-link">
+            <xc-icon-copy class="share-link-icon" />
+            <b
+              >https://beta.xchange.eco/business_card/project/5d8ca324-cd0b-4ede-b154-b1cf77f59672</b
+            >
+          </span>
         </div>
-      </article>
-    </section>
-
-    <section class="settings_members" *ngIf="section === 'Members'">
-
-    </section>
-
-  </main>
-  
-  <section *ngIf="isSuspend" class="suspend_project">
-    <div class="suspend_project_content">
-        <article class="suspend_project_content-card">
-          <header class="suspend_project_content-card-header">
-            <img src="assets/img/Suspend-project.png" alt="suspend-project-header">
-          </header>
-          <div class="content">
-            <h3>Archive Project</h3>
-            <p>Do you really want to archive NextGen LL  Xchange Studio Project? Lorem ipsum dolor sit amet text.</p>
-          </div>
-          <div class="action_buttons">
-            <button class="btn" (click)="closeSuspendModal()">
-                <xc-icon-times class="btn__icon"/>
-                <p class="bold">Cancel</p>
-            </button>
-            <button class="btn btn--ban">
-                <xc-icon-trash class="btn__icon_ban"/>
-                <p class="bold">Archive project</p>
-            </button>
-          </div>
-        </article>
+        <div></div>
       </div>
+      <div class="action-buttons">
+        <button class="btn" (click)="openSuspendModal()">
+          <xc-icon-trash class="btn__icon" />
+          <p>Archive project</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </div>
+    </article>
   </section>
 
-  <section *ngIf="isTagsOpen" class="tags_modal">
-    <div class="tags_modal_wrapper">
-      <div class="tags_modal_wrapper-content">
-        <h4>All tags related to Fabian</h4>
-        <article class="tags_modal_wrapper-content-article">
-          <b>Review your skill tags</b>
-          <span class="tags_modal_wrapper-content-article-item">
-            <xc-icon-ai class="ia-icon" />
-            <b>
-              Our AI matches your skills with projects, templates and other
-              members. Thats why its important to build a strong profile
-            </b>
-          </span>
-        </article>
-        <div class="tags_modal_wrapper-content-injector">
-          <div xcProfileTags="gray" *ngFor="let tag of ModalTags" class="tag">
-            {{ tag }}
-            <button>
-              <xc-icon-close-s class="tags_modal_wrapper-icon-red" />
+  <section class="settings_legal" *ngIf="section === 'Legal'">
+    <span class="settings_legal-header">
+      <h2>Legal representation and conditions inside your project</h2>
+    </span>
+    <div class="settings_legal-wrapper">
+      <article class="settings_legal-wrapper-information">
+        <div class="settings_legal-wrapper-information-header">
+          <img src="assets/img/Legal-settings.png" alt="legal-settings-image" />
+        </div>
+        <div class="settings_legal-wrapper-information-organization">
+          <label class="field">
+            <b>Your oganization</b>
+            <input type="text" />
+          </label>
+        </div>
+        <div class="settings_legal-wrapper-information-incorporation">
+          <label class="field">
+            <b>Incorporation</b>
+            <input type="text" />
+          </label>
+          <label class="field">
+            <b>Country</b>
+            <select class="dropdown" [disabled]="false">
+              <option disabled selected>Select a country</option>
+              <option *ngFor="let country of countries" [value]="country">
+                {{ country }}
+              </option>
+            </select>
+          </label>
+        </div>
+        <div class="settings_legal-wrapper-information-address">
+          <label class="field">
+            <b>Street</b>
+            <input type="text" />
+          </label>
+          <label class="field">
+            <b>ZIP</b>
+            <input type="text" />
+          </label>
+          <label class="field">
+            <b>City</b>
+            <input type="text" />
+          </label>
+        </div>
+        <div class="settings_legal-wrapper-information-representatives">
+          <label class="field">
+            <b>Legal representative(s)</b>
+            <input type="text" />
+          </label>
+        </div>
+        <div class="settings_legal-wrapper-information-registration">
+          <label class="field">
+            <b>Registration number</b>
+            <input type="text" />
+          </label>
+          <button class="btn">
+            <xc-icon-file-upload class="btn__icon" />
+            <p>Attach Company Proof</p>
+          </button>
+        </div>
+        <div class="settings_legal-wrapper-information-evidence">
+          <div xcProfileTags="gray" class="tag">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="delete">
+              <xc-icon-times class="delete_icon" />
+            </button>
+          </div>
+          <div xcProfileTags="gray" class="tag">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="delete">
+              <xc-icon-times class="delete_icon" />
+            </button>
+          </div>
+          <div xcProfileTags="gray" class="tag">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="delete">
+              <xc-icon-times class="delete_icon" />
             </button>
           </div>
         </div>
-        <div class="divider"></div>
-        <div class="tags_modal_wrapper-content-new">
-          <b>Add tags</b>
-          <span class="tags_modal_wrapper-content-new-span">
-            <input
-              type="text"
-              class="tags_modal_wrapper-content-new-span-input"
-            />
-            <button>
-              <xc-icon-plus-circle
-                class="tags_modal_wrapper-content-new-span-icon"
-              />
+      </article>
+      <article class="settings_legal-wrapper-valuation">
+        <div class="settings_legal-wrapper-valuation-wrapper">
+          <header class="settings_legal-wrapper-valuation-wrapper-header">
+            <img src="assets/img/Valuation_image.png" alt="" />
+          </header>
+          <div class="settings_legal-wrapper-valuation-wrapper-coin">
+            <label class="field">
+              <b>Initial valuation in Euro (€)*</b>
+              <input type="number" placeholder="0" />
+            </label>
+            <label class="field">
+              <b>Current valuation in Euro (€)</b>
+              <input type="number" placeholder="0" />
+            </label>
+          </div>
+          <div class="settings_legal-wrapper-valuation-wrapper-description">
+            To leverage the power of collaboration it is required that your
+            project has a monetary value. Good news is: Everything has a real
+            value, be it the The amount of work you already put into it,
+            potential value that is created for people, or the initial share
+            value at the time of incorporation. Note that the initial valuation*
+            can’t be changed later! <a class="bold">Learn more. </a>
+          </div>
+          <b>Collaboration Funds</b>
+          <div class="settings_legal-wrapper-valuation-wrapper-funds">
+            You share a defined percentage of the value that is created in your
+            project with your collaborators. Before you start collaborating, you
+            need to set up a fund. Note that on the platform, Xcoin credits are
+            used instead of fiat currency. <a class="bold">Learn more</a>
+          </div>
+          <div class="settings_legal-wrapper-valuation-wrapper-action">
+            <button class="btn">
+              <p class="bold">Set up a fund</p>
             </button>
-          </span>
+          </div>
         </div>
-      </div>
-      <button class="btn--rounded close" (click)="closeTagsModal()">
-        <xc-icon-close-s class="btn__icon " />
-      </button>
+        <button class="btn btn--filled save-btn">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </article>
     </div>
   </section>
 
-  <section *ngIf="isHistoryOpen" class="history">
-    <div class="history_content">
-      <article class="history_content-card">
+  <section class="settings_credits" *ngIf="section === 'Credits'">
+    <div>
+      <h2>Credits for collaboration</h2>
+    </div>
+    <article class="settings_credits-wrapper">
+      <div class="settings_credits-wrapper-video">
+        <b>How credits work in the collaboration ecosystem</b>
+        <div class="video_container">
+          <iframe
+            class="video_container-iframe"
+            src="https://www.youtube.com/embed/wI00QO2A2j4"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="settings_credits-wrapper-balance">
+        <div class="current_amount">
+          <h2>Current credit balance</h2>
+          <div class="current_amount-balance">
+            <span class="current_amount-coin">
+              <h1>10,000</h1>
+              <small>Xcoins</small>
+            </span>
+            <button class="btn" (click)="openBuyCredits()">
+              <b>Buy more credits</b>
+            </button>
+          </div>
+        </div>
 
         <section class="transactions">
           <header class="transactions-header">
@@ -395,86 +272,316 @@
               </div>
             </div>
           </header>
-        
+
           <ul class="transactions-list">
             <li class="transactions-list-item">
               <span class="transactions-list-item__label">Manuel Cabrera</span>
               <span class="transactions-list-item__date">14 Aug.24</span>
-              <span class="transactions-list-item__amount negative">-500 Xcoins</span>
+              <span class="transactions-list-item__amount negative"
+                >-500 Xcoins</span
+              >
             </li>
             <li class="transactions-list-item">
               <span class="transactions-list-item__label">Lucía Torres</span>
               <span class="transactions-list-item__date">10 Aug.24</span>
-              <span class="transactions-list-item__amount negative">-250 Xcoins</span>
+              <span class="transactions-list-item__amount negative"
+                >-250 Xcoins</span
+              >
             </li>
             <li class="transactions-list-item">
               <span class="transactions-list-item__label">Carlos Rivera</span>
               <span class="transactions-list-item__date">05 Aug.24</span>
-              <span class="transactions-list-item__amount positive">+1200 Xcoins</span>
+              <span class="transactions-list-item__amount positive"
+                >+1200 Xcoins</span
+              >
             </li>
             <li class="transactions-list-item">
               <span class="transactions-list-item__label">Ana Gómez</span>
               <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
+              <span class="transactions-list-item__amount negative"
+                >-150 Xcoins</span
+              >
             </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li> 
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li>
-            <li class="transactions-list-item">
-              <span class="transactions-list-item__label">Ana Gómez</span>
-              <span class="transactions-list-item__date">28 Jul.24</span>
-              <span class="transactions-list-item__amount negative">-150 Xcoins</span>
-            </li> 
+            <!-- Agrega los demás si necesitas, sigue el mismo patrón -->
           </ul>
-        
+
           <footer class="transactions-footer">
-            <button href="#" class="transactions-footer-link" (click)="openHistoryModal()">
-              <xc-icon-arrow-right class="icon"/>
-              <b>View and download invoices</b>
+            <button
+              href="#"
+              class="transactions-footer-link"
+              (click)="openHistoryModal()"
+            >
+              <xc-icon-arrow-right class="icon" />
+              <b>See all bookings</b>
             </button>
           </footer>
         </section>
-
-      </article>
-      <button class="btn btn--rounded" (click)="closeHistoryModal()">
-        <xc-icon-close-s class="btn__icon" />
-      </button>
-    </div>
+      </div>
+    </article>
   </section>
+
+  <section class="settings_members" *ngIf="section === 'Members'"></section>
+</main>
+
+<section *ngIf="isSuspend" class="suspend_project">
+  <div class="suspend_project_content">
+    <article class="suspend_project_content-card">
+      <header class="suspend_project_content-card-header">
+        <img
+          src="assets/img/Suspend-project.png"
+          alt="suspend-project-header"
+        />
+      </header>
+      <div class="content">
+        <h3>Archive Project</h3>
+        <p>
+          Do you really want to archive NextGen LL Xchange Studio Project? Lorem
+          ipsum dolor sit amet text.
+        </p>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="closeSuspendModal()">
+          <xc-icon-times class="btn__icon" />
+          <p class="bold">Cancel</p>
+        </button>
+        <button class="btn btn--ban">
+          <xc-icon-trash class="btn__icon_ban" />
+          <p class="bold">Archive project</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section *ngIf="isTagsOpen" class="tags_modal">
+  <div class="tags_modal_wrapper">
+    <div class="tags_modal_wrapper-content">
+      <h4>All tags related to Fabian</h4>
+      <article class="tags_modal_wrapper-content-article">
+        <b>Review your skill tags</b>
+        <span class="tags_modal_wrapper-content-article-item">
+          <xc-icon-ai class="ia-icon" />
+          <b>
+            Our AI matches your skills with projects, templates and other
+            members. Thats why its important to build a strong profile
+          </b>
+        </span>
+      </article>
+      <div class="tags_modal_wrapper-content-injector">
+        <div xcProfileTags="gray" *ngFor="let tag of ModalTags" class="tag">
+          {{ tag }}
+          <button>
+            <xc-icon-close-s class="tags_modal_wrapper-icon-red" />
+          </button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="tags_modal_wrapper-content-new">
+        <b>Add tags</b>
+        <span class="tags_modal_wrapper-content-new-span">
+          <input
+            type="text"
+            class="tags_modal_wrapper-content-new-span-input"
+          />
+          <button>
+            <xc-icon-plus-circle
+              class="tags_modal_wrapper-content-new-span-icon"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <button class="btn--rounded close" (click)="closeTagsModal()">
+      <xc-icon-close-s class="btn__icon" />
+    </button>
+  </div>
+</section>
+
+<section *ngIf="isHistoryOpen" class="history">
+  <div class="history_content">
+    <article class="history_content-card">
+      <section class="transactions">
+        <header class="transactions-header">
+          <h3>Credit transactions</h3>
+          <div class="transactions-filter">
+            <div class="transactions-filter__box">
+              <label for="sort">Sort by:</label>
+              <select id="sort">
+                <option value="latest">latest</option>
+                <option value="oldest">oldest</option>
+              </select>
+            </div>
+          </div>
+        </header>
+
+        <ul class="transactions-list">
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Manuel Cabrera</span>
+            <span class="transactions-list-item__date">14 Aug.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-500 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Lucía Torres</span>
+            <span class="transactions-list-item__date">10 Aug.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-250 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Carlos Rivera</span>
+            <span class="transactions-list-item__date">05 Aug.24</span>
+            <span class="transactions-list-item__amount positive"
+              >+1200 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+          <li class="transactions-list-item">
+            <span class="transactions-list-item__label">Ana Gómez</span>
+            <span class="transactions-list-item__date">28 Jul.24</span>
+            <span class="transactions-list-item__amount negative"
+              >-150 Xcoins</span
+            >
+          </li>
+        </ul>
+
+        <footer class="transactions-footer">
+          <button
+            href="#"
+            class="transactions-footer-link"
+            (click)="openHistoryModal()"
+          >
+            <xc-icon-arrow-right class="icon" />
+            <b>View and download invoices</b>
+          </button>
+        </footer>
+      </section>
+    </article>
+    <button class="btn btn--rounded" (click)="closeHistoryModal()">
+      <xc-icon-close-s class="btn__icon" />
+    </button>
+  </div>
+</section>
+
+<section *ngIf="isBuyCredits" class="buy_credits">
+  <div class="buy_credits_content">
+    <article class="buy_credits_content-card">
+      <header class="buy_credits_content-card-header">
+        <img
+          src="assets/img/Send-credits.png"
+          alt=""
+          class="buy_credits_content-card-header-img"
+        />
+      </header>
+      <h2>Buy credits for yout project</h2>
+      <p class="text_400">
+        To assign a collaborator to your an Objective, you need to pay 3% of the
+        collaboration value in credits. Here you can buy credits for these
+        collaborations.
+      </p>
+      <label class="field">
+        <b>Buy credits</b>
+        <select class="field_select">
+          <option>Select an option</option>
+        </select>
+      </label>
+      <div class="card_data">
+        <label class="field">
+          <b>Your card number</b>
+          <input type="text" placeholder="0000 0000 0000 0000"/>
+        </label>
+        <label class="field">
+          <b>Valid until</b>
+          <input type="text" placeholder="MM/YY"/>
+        </label>
+        <label class="field">
+          <b>CVV</b>
+          <input type="text" placeholder="000"/>
+        </label>
+      </div>
+      <div class="balance">
+        <span class="balance_data ">
+          <b class="text_400">Current Balance</b>
+          <p>69,677 xCoins</p>
+        </span>
+        <span class="balance_data ">
+          <b class="text_400">New Balance</b>
+          <p>69,677 xCoins</p>
+        </span>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="closeBuyCredits()">
+          <xc-icon-times class="btn__icon" />
+          <p class="bold">Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-shopping-cart class="btn__icon_filled" />
+          <p>Buy credits</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
