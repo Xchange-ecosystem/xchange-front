@@ -1,7 +1,7 @@
-:host{
-    display: flex;
-    width: 100%;
-    height: 100%;
+:host {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .members {
@@ -13,7 +13,7 @@
   margin-left: 165px;
   margin-right: 165px;
   width: 100%;
-  
+
   &_section {
     display: flex;
     width: 100%;
@@ -27,7 +27,7 @@
 
       &_header {
         b {
-            color: var(--xc-grey500);
+          color: var(--xc-grey500);
         }
       }
 
@@ -41,7 +41,7 @@
       &_cell {
         padding: 12px;
         &-header {
-        text-align: start;
+          text-align: start;
         }
 
         &-actions {
@@ -63,12 +63,46 @@
           }
         }
         .icon {
-            display: flex;
-            width: 16px;
-            height: 16px;
-            stroke: var(--xc-black500);
+          display: flex;
+          width: 16px;
+          height: 16px;
+          stroke: var(--xc-black500);
         }
       }
     }
+  }
+}
+
+.suspend_modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &-content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+    gap: 24px;
+  }
+}
+
+.message_modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &-content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+    gap: 24px;
   }
 }
