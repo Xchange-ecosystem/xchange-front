@@ -29,7 +29,7 @@ export class ProjectSettingsComponent implements OnInit {
     ProjectDashboardNavigatorService
   );
 
-  public tabState:TabState = "Credits"
+  public tabState:TabState = "Members"
 
 
   sections = ['Appearance', 'Legal', 'Credits', 'Members'];

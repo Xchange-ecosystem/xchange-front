@@ -14,7 +14,7 @@ import { ProjectDashboardNavigatorService, TabState } from '../../services/servi
 })
 export class OptionTabsComponent {
   private ProjectDashboardNavigatorService = inject(ProjectDashboardNavigatorService) 
-  section: TabState = 'Credits';
+  section: TabState = 'Members';
 
   sections:TabState[] = ['Appearance', 'Legal', 'Credits', 'Members'];
 
