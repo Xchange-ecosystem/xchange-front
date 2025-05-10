@@ -1,0 +1,59 @@
+<section class="buy_credits">
+  <div class="buy_credits_content">
+    <article class="buy_credits_content-card">
+      <header class="buy_credits_content-card-header">
+        <img
+          src="assets/img/Send-credits.png"
+          alt=""
+          class="buy_credits_content-card-header-img"
+        />
+      </header>
+      <h2>Buy credits for yout project</h2>
+      <p class="text_400">
+        To assign a collaborator to your an Objective, you need to pay 3% of the
+        collaboration value in credits. Here you can buy credits for these
+        collaborations.
+      </p>
+      <label class="field">
+        <b>Buy credits</b>
+        <select class="field_select">
+          <option>Select an option</option>
+        </select>
+      </label>
+      <div class="card_data">
+        <label class="field">
+          <b>Your card number</b>
+          <input type="text" placeholder="0000 0000 0000 0000" />
+        </label>
+        <label class="field">
+          <b>Valid until</b>
+          <input type="text" placeholder="MM/YY" />
+        </label>
+        <label class="field">
+          <b>CVV</b>
+          <input type="text" placeholder="000" />
+        </label>
+      </div>
+      <div class="balance">
+        <span class="balance_data">
+          <b class="text_400">Current Balance</b>
+          <p>69,677 xCoins</p>
+        </span>
+        <span class="balance_data">
+          <b class="text_400">New Balance</b>
+          <p>69,677 xCoins</p>
+        </span>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="closeBuyCredits()">
+          <xc-icon-times class="btn__icon" />
+          <p class="bold">Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-shopping-cart class="btn__icon_filled" />
+          <p>Buy credits</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+  <section class="credits">
+    <div>
+      <h2>Credits for collaboration</h2>
+    </div>
+    <article class="credits-wrapper">
+      <div class="credits-wrapper-video">
+        <b>How credits work in the collaboration ecosystem</b>
+        <div class="video_container">
+          <iframe
+            class="video_container-iframe"
+            src="https://www.youtube.com/embed/wI00QO2A2j4"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="credits-wrapper-balance">
+        <div class="current_amount">
+          <h2>Current credit balance</h2>
+          <div class="current_amount-balance">
+            <span class="current_amount-coin">
+              <h1>10,000</h1>
+              <small>Xcoins</small>
+            </span>
+            <button class="btn" (click)="openBuyCredits()">
+              <b>Buy more credits</b>
+            </button>
+          </div>
+        </div>
+
+        <section class="transactions">
+          <header class="transactions-header">
+            <h3>Credit transactions</h3>
+            <div class="transactions-filter">
+              <div class="transactions-filter__box">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                  <option value="latest">latest</option>
+                  <option value="oldest">oldest</option>
+                </select>
+              </div>
+            </div>
+          </header>
+
+          <ul class="transactions-list">
+            <li class="transactions-list-item">
+              <span class="transactions-list-item__label">Manuel Cabrera</span>
+              <span class="transactions-list-item__date">14 Aug.24</span>
+              <span class="transactions-list-item__amount negative"
+                >-500 Xcoins</span
+              >
+            </li>
+            <li class="transactions-list-item">
+              <span class="transactions-list-item__label">Lucía Torres</span>
+              <span class="transactions-list-item__date">10 Aug.24</span>
+              <span class="transactions-list-item__amount negative"
+                >-250 Xcoins</span
+              >
+            </li>
+            <li class="transactions-list-item">
+              <span class="transactions-list-item__label">Carlos Rivera</span>
+              <span class="transactions-list-item__date">05 Aug.24</span>
+              <span class="transactions-list-item__amount positive"
+                >+1200 Xcoins</span
+              >
+            </li>
+            <li class="transactions-list-item">
+              <span class="transactions-list-item__label">Ana Gómez</span>
+              <span class="transactions-list-item__date">28 Jul.24</span>
+              <span class="transactions-list-item__amount negative"
+                >-150 Xcoins</span
+              >
+            </li>
+            <!-- Agrega los demás si necesitas, sigue el mismo patrón -->
+          </ul>
+
+          <footer class="transactions-footer">
+            <button
+              href="#"
+              class="transactions-footer-link"
+              (click)="openHistoryModal()"
+            >
+              <xc-icon-arrow-right class="icon" />
+              <b>See all bookings</b>
+            </button>
+          </footer>
+        </section>
+      </div>
+    </article>
+  </section>
+
+<section *ngIf="isHistoryOpen" class="history_modal">
+  <app-history-modal class="history_modal_content" (close)="handleHistoryModalClose()"/>
+</section>
+
+<section *ngIf="isBuyCredits" class="buy_credits_modal">
+  <app-credits-modal class="buy_credits_modal_content" (close)="handleBuyCreditsModalClose()"/>
+</section>

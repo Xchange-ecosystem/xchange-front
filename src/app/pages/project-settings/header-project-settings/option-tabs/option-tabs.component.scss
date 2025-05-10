@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: -30px;
+  margin-right: 30px;
+
+  &-wrapper {
+    background: var(--xc-white);
+    box-shadow: var(--xc-boxShadow-400);
+    display: flex;
+    gap: 16px;
+    padding: 6px 14px;
+    border-radius: var(--xc-rounded-eight);
+  }
+}
