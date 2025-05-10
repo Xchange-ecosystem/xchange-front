@@ -1,0 +1,86 @@
+<section class="appearance">
+  <h2>Customize the appearance of your project</h2>
+  <article class="appearance-wrapper">
+    <div class="general">
+      <h3>General Information</h3>
+      <form class="general_form">
+        <label class="general_form-field">
+          <b>Project title</b>
+          <input type="text" placeholder="" />
+        </label>
+        <label class="general_form-field">
+          <b>Project description</b>
+          <textarea rows="4" cols="5"></textarea>
+        </label>
+      </form>
+      <div>
+        <b>Template</b>
+        <p>Xchange Studios template</p>
+      </div>
+      <div>
+        <b>Created</b>
+        <p>13. Nov 2024 by Fabian Feutlinske</p>
+      </div>
+      <div></div>
+    </div>
+    <div class="settings">
+      <h3>Further settings</h3>
+      <div class="settings_field">
+        <b>Public visibility</b>
+        <xc-toggle color="green" [checked]="true" />
+      </div>
+      <div class="settings_field-tags">
+        <b>Tags</b>
+        <span class="tag_container">
+          <!-- ! Despues de 3 tags se deben de ocultar y mostrar el boton acorde a figma -->
+          <div xcProfileTags="gray">Generate</div>
+          <div xcProfileTags="gray">Organizational</div>
+          <div xcProfileTags="gray">Improve</div>
+          <button class="all-tags" (click)="openTagsModal()">
+            <b>
+              <xc-icon-arrow-right class="arrow_icon" />
+              See all tags
+            </b>
+          </button>
+        </span>
+      </div>
+      <div class="settings_field-dropbox">
+        <div class="upload">
+          <label class="upload__dropzone" for="projectImage">
+            <input type="file" id="projectImage" class="upload__input" />
+            <xc-icon-image-plus class="upload__icon" />
+            <b class="upload__text">Drag and drop your image</b>
+          </label>
+        </div>
+      </div>
+      <div class="settings_field-link">
+        <b>Sharing Link</b>
+        <span class="share-link">
+          <xc-icon-copy class="share-link-icon" />
+          <b
+            >https://beta.xchange.eco/business_card/project/5d8ca324-cd0b-4ede-b154-b1cf77f59672</b
+          >
+        </span>
+      </div>
+      <div></div>
+    </div>
+    <div class="action-buttons">
+      <button class="btn" (click)="openSuspendModal()">
+        <xc-icon-trash class="btn__icon" />
+        <p>Archive project</p>
+      </button>
+      <button class="btn btn--filled">
+        <xc-icon-save class="btn__icon_filled" />
+        <p>Save changes</p>
+      </button>
+    </div>
+  </article>
+</section>
+
+<section *ngIf="isSuspend" class="suspend_project">
+  <app-suspend-modal class="suspend_project_content" (close)="handleSuspendModalClose()"/>
+</section>
+
+<section *ngIf="isTagsOpen" class="tags_modal">
+  <app-tags-modal class="tags_modal_content" (close)="handleTagsModalClose()"/>
+</section>

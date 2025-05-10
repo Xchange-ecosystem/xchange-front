@@ -1,0 +1,40 @@
+
+    <div class="content">
+      <h4>All tags related to Fabian</h4>
+      <article class="content-article">
+        <b>Review your skill tags</b>
+        <span class="content-article-item">
+          <xc-icon-ai class="ia-icon" />
+          <b>
+            Our AI matches your skills with projects, templates and other
+            members. Thats why its important to build a strong profile
+          </b>
+        </span>
+      </article>
+      <div class="content-injector">
+        <div xcProfileTags="gray" *ngFor="let tag of ModalTags" class="tag">
+          {{ tag }}
+          <button>
+            <xc-icon-close-s class="icon-red" />
+          </button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="content-new">
+        <b>Add tags</b>
+        <span class="content-new-span">
+          <input
+            type="text"
+            class="content-new-span-input"
+          />
+          <button>
+            <xc-icon-plus-circle
+              class="content-new-span-icon"
+            />
+          </button>
+        </span>
+      </div>
+    </div>
+    <button class="btn--rounded close" (click)="closeTagsModal()">
+      <xc-icon-close-s class="btn__icon" />
+    </button>

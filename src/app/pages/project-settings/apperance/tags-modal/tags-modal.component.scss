@@ -1,0 +1,98 @@
+.content {
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      margin: auto;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 1100px;
+      min-width: 1000px;
+      &-article {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-top: 32px;
+        margin-bottom: 24px;
+        &-item {
+          display: flex;
+          border-radius: 16px;
+          gap: 8px;
+          align-items: center;
+          padding: 8px;
+          background: var(--xc-gradient-light-blue);
+
+          .ia-icon {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            stroke: var(--xc-black500);
+          }
+        }
+      }
+
+      &-injector {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .tag {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+          button{
+            .icon-red {
+              display: flex;
+              width: 16px;
+              height: 16px;
+              stroke: var(--xc-categories-blocked);
+            }
+          }
+        }
+
+      }
+      .divider {
+        border-top: 1px dashed var(--xc-grey100);
+        margin: 16px 0;
+        width: 100%;
+      }
+      &-new {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        margin-bottom: 120px;
+
+        &-span {
+          display: flex;
+          width: 100%;
+          border: solid 1px;
+          border-color: var(--xc-grey200);
+          background-color: var(--xc-gray200);
+          border-radius: 8px;
+          padding: 11px;
+          justify-content: space-between;
+          align-items: center;
+
+          &-input {
+            outline: none;
+            width: 100%;
+            height: 100%;
+            caret-color: var(--xc-brand-medium-blue);
+          }
+
+          &-icon {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            stroke: var(--xc-black500);
+          }
+        }
+      }
+}
+.close{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,127 @@
+  <section class="legal" >
+    <span class="legal-header">
+      <h2>Legal representation and conditions inside your project</h2>
+    </span>
+    <div class="legal-wrapper">
+      <article class="legal-wrapper-information">
+        <div class="legal-wrapper-information-header">
+          <img src="assets/img/Legal-settings.png" alt="legal-settings-image" />
+        </div>
+        <div class="legal-wrapper-information-organization">
+          <label class="field">
+            <b>Your oganization</b>
+            <input type="text" />
+          </label>
+        </div>
+        <div class="legal-wrapper-information-incorporation">
+          <label class="field">
+            <b>Incorporation</b>
+            <input type="text" />
+          </label>
+          <label class="field">
+            <b>Country</b>
+            <select class="dropdown" [disabled]="false">
+              <option disabled selected>Select a country</option>
+              <option *ngFor="let country of countries" [value]="country">
+                {{ country }}
+              </option>
+            </select>
+          </label>
+        </div>
+        <div class="legal-wrapper-information-address">
+          <label class="field">
+            <b>Street</b>
+            <input type="text" />
+          </label>
+          <label class="field">
+            <b>ZIP</b>
+            <input type="text" />
+          </label>
+          <label class="field">
+            <b>City</b>
+            <input type="text" />
+          </label>
+        </div>
+        <div class="legal-wrapper-information-representatives">
+          <label class="field">
+            <b>Legal representative(s)</b>
+            <input type="text" />
+          </label>
+        </div>
+        <div class="legal-wrapper-information-registration">
+          <label class="field">
+            <b>Registration number</b>
+            <input type="text" />
+          </label>
+          <button class="btn">
+            <xc-icon-file-upload class="btn__icon" />
+            <p>Attach Company Proof</p>
+          </button>
+        </div>
+        <div class="legal-wrapper-information-evidence">
+          <div xcProfileTags="gray" class="tag">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="delete">
+              <xc-icon-times class="delete_icon" />
+            </button>
+          </div>
+          <div xcProfileTags="gray" class="tag">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="delete">
+              <xc-icon-times class="delete_icon" />
+            </button>
+          </div>
+          <div xcProfileTags="gray" class="tag">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="delete">
+              <xc-icon-times class="delete_icon" />
+            </button>
+          </div>
+        </div>
+      </article>
+      <article class="legal-wrapper-valuation">
+        <div class="legal-wrapper-valuation-wrapper">
+          <header class="legal-wrapper-valuation-wrapper-header">
+            <img src="assets/img/Valuation_image.png" alt="" />
+          </header>
+          <div class="legal-wrapper-valuation-wrapper-coin">
+            <label class="field">
+              <b>Initial valuation in Euro (€)*</b>
+              <input type="number" placeholder="0" />
+            </label>
+            <label class="field">
+              <b>Current valuation in Euro (€)</b>
+              <input type="number" placeholder="0" />
+            </label>
+          </div>
+          <div class="legal-wrapper-valuation-wrapper-description">
+            To leverage the power of collaboration it is required that your
+            project has a monetary value. Good news is: Everything has a real
+            value, be it the The amount of work you already put into it,
+            potential value that is created for people, or the initial share
+            value at the time of incorporation. Note that the initial valuation*
+            can’t be changed later! <a class="bold">Learn more. </a>
+          </div>
+          <b>Collaboration Funds</b>
+          <div class="legal-wrapper-valuation-wrapper-funds">
+            You share a defined percentage of the value that is created in your
+            project with your collaborators. Before you start collaborating, you
+            need to set up a fund. Note that on the platform, Xcoin credits are
+            used instead of fiat currency. <a class="bold">Learn more</a>
+          </div>
+          <div class="legal-wrapper-valuation-wrapper-action">
+            <button class="btn">
+              <p class="bold">Set up a fund</p>
+            </button>
+          </div>
+        </div>
+        <button class="btn btn--filled save-btn">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </article>
+    </div>
+  </section>
