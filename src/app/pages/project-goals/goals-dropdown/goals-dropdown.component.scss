@@ -1,0 +1,136 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background-color: var(--xc-white);
+    border-radius: var(--xc-rounded-eight);
+    box-shadow: var(--xc-boxShadow-400);
+
+    &-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    &-icon {
+      font-size: 16px;
+      transition: transform 0.2s ease;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &-progress {
+      display: flex;
+      width: 100%;
+      xc-project-progress-bar {
+        display: flex;
+        width: 100%;
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+
+      &-text {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
+        max-height: 100px;
+        overflow: hidden;
+        position: relative;
+
+        p {
+          flex: 1;
+          margin: 0;
+        }
+
+        button {
+          flex-shrink: 0;
+          align-self: flex-start;
+          padding: 4px 10px;
+          background-color: var(--xc-blue200);
+          color: var(--xc-white);
+          border: none;
+          border-radius: 8px;
+          font-size: 12px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--xc-blue300);
+          }
+        }
+      }
+    }
+
+    &-info {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+
+      & > span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    &-dates {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      p {
+        color: var(--xc-grey500);
+      }
+      .icon {
+        display: flex;
+        stroke: var(--xc-grey500);
+        height: 16px;
+        width: 16px;
+      }
+      &-range {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    &-owner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      p {
+        color: var(--xc-grey500);
+      }
+      &-image {
+        display: flex;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+  &_content {
+    background: var(--xc-grey100);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 24px;
+    .objective {
+
+    }
+  }
+}

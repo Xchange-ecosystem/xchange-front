@@ -46,6 +46,10 @@ const routes: Routes = [
         path:'project-settings',
         loadComponent: () => import('src/app/pages/project-settings/project-settings.component').then(m => m.ProjectSettingsComponent),
       },
+      {
+        path:'project-goals',
+        loadComponent: () => import('src/app/pages/project-goals/project-goals.component').then(m => m.ProjectGoalsComponent),
+      },
     ],
   },
 ];
