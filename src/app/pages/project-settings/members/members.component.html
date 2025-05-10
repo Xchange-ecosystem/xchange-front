@@ -41,21 +41,20 @@
           </td>
           <td class="user-table_cell user-table_cell-actions">
             <button
-              (click)="openModal('profile', user)"
               class="user-table_button"
             >
               <xc-icon-eye class="icon" />
               <p class="bold">View Profile</p>
             </button>
             <button
-              (click)="openModal('email', user)"
+              (click)="openMessageModal()"
               class="user-table_button"
             >
               <xc-icon-envelope class="icon" />
               <p class="bold">Send Email</p>
             </button>
             <button
-              (click)="openModal('suspend', user)"
+              (click)="openSuspendModal()"
               class="user-table_button"
             >
               <xc-icon-ban class="icon" />
@@ -66,4 +65,12 @@
       </tbody>
     </table>
   </article>
+</section>
+
+<section *ngIf="isSuspend" class="suspend_modal">
+  <app-suspend-modal class="suspend_modal-content" (close)="handleSuspendModalClose()"/>
+</section>
+
+<section *ngIf="isMesssage" class="message_modal">
+  <app-message-modal class="message_modal-content" (close)="handleMessageModalClose()"/>
 </section>
