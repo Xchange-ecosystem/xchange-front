@@ -1,16 +1,24 @@
 <div class="custom-select">
-  <div class="custom-select__header" (click)="toggleDropdown()">
-    {{ title }}
-    <span class="custom-select__arrow" [class.open]="isOpen">▾</span>
-  </div>
+  <button class="custom-select_header" (click)="toggleDropdown()">
+    Add Objective to Goal
+    <span class="custom-select_arrow" [class.open]="isOpen">
+      <xc-icon-angle-up class="icon"/>
+    </span>
+  </button>
 
-  <div class="custom-select__dropdown" *ngIf="isOpen">
-    <strong>Dimension: {{ dimension }}</strong>
-    <div class="custom-select__category">
-      <strong>Category: {{ category }}</strong>
-      <ul class="custom-select__options">
-        <li *ngFor="let opt of options">{{ opt }}</li>
-      </ul>
+  <div class="custom-select_dropdown" *ngIf="isOpen">
+    <strong>Dimension: Bussines</strong>
+    <div class="custom-select_dropdown-category">
+      <strong>Category: Roadmap and structure</strong>
+      <span class="options">
+        <button>Project definition</button>
+        <button>Vision,Mission,Strategy</button>
+      </span>
+      <strong>Category: Roadmap and structure</strong>
+      <span class="options">
+        <button>Project definition</button>
+        <button>Vision,Mission,Strategy</button>
+      </span>
     </div>
   </div>
 </div>

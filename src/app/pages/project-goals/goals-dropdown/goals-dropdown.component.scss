@@ -217,14 +217,17 @@
         color: var(--xc-grey500);
         padding: 8px 11px;
         width: 50%;
+
         option {
           width: 50%;
         }
       }
-          &-component {
-      display: flex;
-      width: 50%;
-    }
+
+      &-component {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+      }
     }
   }
 }
