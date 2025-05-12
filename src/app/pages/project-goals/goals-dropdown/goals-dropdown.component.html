@@ -8,7 +8,7 @@
     <div class="dropdown_card-progress">
       <xc-project-progress-bar
         [completed]="3"
-        [objectivesInProject]="4"
+        [objectivesInProject]="24"
         [open]="5"
       />
     </div>
@@ -50,11 +50,37 @@
       </span>
     </div>
   </article>
-  <article class="dropdown_content">
-    <div class="objective">
+  <article class="dropdown_content" *ngIf="dropdownOpen">
+    <div class="objective_complete">
       <h2>Objective Title</h2>
-      <div class="objective_content">
-        <span class="objective_content_tags">
+      <div class="objective_complete_content">
+        <span class="objective_complete_content_tags">
+          <p xcProfileTags="gray">Dimension</p>
+          <p xcProfileTags="gray">Category</p>
+          <p xcProfileTags="gray">Phase</p>
+        </span>
+        <button class="action">
+          <b>x Dissmiss</b>
+        </button>
+      </div>
+    </div>
+    <div class="objective_open">
+      <h2>Objective Title</h2>
+      <div class="objective_open_content">
+        <span class="objective_open_content_tags">
+          <p xcProfileTags="gray">Dimension</p>
+          <p xcProfileTags="gray">Category</p>
+          <p xcProfileTags="gray">Phase</p>
+        </span>
+        <button class="action">
+          <b>x Dissmiss</b>
+        </button>
+      </div>
+    </div>
+    <div class="objective_general">
+      <h2>Objective Title</h2>
+      <div class="objective_general_content">
+        <span class="objective_general_content_tags">
           <p xcProfileTags="gray">Dimension</p>
           <p xcProfileTags="gray">Category</p>
           <p xcProfileTags="gray">Phase</p>
