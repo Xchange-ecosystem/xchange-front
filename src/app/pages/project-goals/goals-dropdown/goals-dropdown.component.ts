@@ -7,6 +7,7 @@ import {
   RoundedImageModule,
 } from '@indziaki/ngx-xchange-ui';
 import { ObjectivesDropdownComponent } from './objectives-dropdown/objectives-dropdown.component';
+import { DescriptionModalComponent } from '../description-modal/description-modal.component';
 
 @Component({
   selector: 'app-goals-dropdown',
@@ -17,19 +18,24 @@ import { ObjectivesDropdownComponent } from './objectives-dropdown/objectives-dr
     RoundedImageModule,
     XcIconCalenderComponent,
     ProfileTagsDirective,
-    ObjectivesDropdownComponent
+    ObjectivesDropdownComponent,
+    DescriptionModalComponent
   ],
   templateUrl: './goals-dropdown.component.html',
   styleUrl: './goals-dropdown.component.scss',
 })
 export class GoalsDropdownComponent {
   dropdownOpen = false;
+  isDescription = false;
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
 
-  handleOpenDescriptionModal() {
-    console.log('Abrir modal de descripción');
+  openDescription () {
+    this.isDescription = true;
+  }
+  handleDescritionModalClose () {
+    this.isDescription = false;
   }
 }

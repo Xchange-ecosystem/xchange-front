@@ -13,10 +13,6 @@ import { XcIconAngleUpComponent } from '@indziaki/ngx-xchange-icons';
   styleUrl: './objectives-dropdown.component.scss'
 })
 export class ObjectivesDropdownComponent {
-  @Input() title: string = 'Add Objective to Goal';
-  @Input() dimension: string = 'Business';
-  @Input() category: string = 'Roadmap and structure';
-  @Input() options: string[] = ['Project definition', 'Vision, Mission, Strategy'];
 
   isOpen: boolean = false;
 
