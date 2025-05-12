@@ -187,5 +187,23 @@
         }
       }
     }
+    &-select{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      &-content{
+        border-radius: var(--xc-rounded-eight);
+          color: var(--xc-grey500);
+
+        padding: 8px 11px;
+        width: 50%;
+        option {
+          width: 50%;
+        }
+      }
+    }
   }
 }
