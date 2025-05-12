@@ -21,6 +21,7 @@
       width: 16px;
       height: 16px;
       stroke: var(--xc-black500);
+      transform: rotate(180deg);
     }
     &.open {
       transform: rotate(180deg);
