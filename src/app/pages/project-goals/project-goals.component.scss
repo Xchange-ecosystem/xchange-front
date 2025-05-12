@@ -28,6 +28,7 @@
     flex-direction: column;
     margin-left: 165px;
     margin-right: 165px;
+    gap: 24px;
     &_add {
       display: flex;
       justify-content: space-between;
@@ -39,6 +40,7 @@
         flex-direction: column;
         height: 100%;
         width: 100%;
+        gap: 24px;
     }
   }
 }

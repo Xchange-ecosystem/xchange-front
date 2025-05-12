@@ -1,1 +1,36 @@
-<p>new-goal-modal works!</p>
+<section class="new_goal">
+    <div class="new_goal_content">
+        <article class="new_goal_content-card">
+            <h2>Build a new Goal</h2>
+            <form class="form">
+                <label class="form_field">
+                    <b>Title</b>
+                    <input type="text" placeholder="Name your goal">
+                </label>
+                <label class="form_field">
+                    <b>Decription</b>
+                    <textarea cols="5" rows="5" placeholder="Describe your goal" class="form_field-textarea"></textarea>
+                </label>
+                <div class="form_field-dates">
+                    <label class="form_field-dates-start">
+                        <b>Start date</b>
+                        <input type="text">
+                    </label>
+                    <label class="form_field-dates-end">
+                        <b>End date</b>
+                        <input type="text">
+                    </label>
+                </div>
+            </form>
+            <div class="divider"></div>
+            <div class="actions_buttons">
+                <button class="btn" (click)="closeNewGoalModal()">
+                    <p>Cancel</p>
+                </button>
+                <button class="btn btn--filled">
+                    <p>Build goal</p>
+                </button>
+            </div>
+        </article>
+    </div>
+</section>

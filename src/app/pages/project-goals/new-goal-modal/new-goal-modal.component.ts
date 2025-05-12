@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-goal-modal',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './new-goal-modal.component.scss'
 })
 export class NewGoalModalComponent {
+  @Output() close = new EventEmitter<void>();
 
+  closeNewGoalModal() {
+    this.close.emit();
+  }
 }

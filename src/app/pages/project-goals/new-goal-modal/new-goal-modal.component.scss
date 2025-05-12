@@ -1,0 +1,119 @@
+.new_goal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+
+    &_content {
+        display: flex;
+        gap: 16px;
+        height: auto;
+        width: auto;
+
+        &-card {
+            border-radius: var(--xc-rounded-sixteen);
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 32px;
+            background: var(--xc-white);
+            width: 760px;
+            min-height: 580px;
+            overflow-y: auto;
+
+            .form {
+                align-items: start;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 20px;
+                width: 100%;
+
+                &_field {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 100%;
+
+                    input {
+                        display: flex;
+                        padding: 8px 16px;
+                        border: 1.5px solid var(--xc-grey200);
+                        border-radius: var(--xc-rounded-eight);
+                        width: 100%;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    &-textarea {
+                        display: flex;
+                        padding: 8px 16px;
+                        border: 1.5px solid var(--xc-grey200);
+                        border-radius: var(--xc-rounded-eight);
+                        resize: none;
+                        width: 100%;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    &-dates {
+                        display: flex;
+                        gap: 16px;
+
+                        &-start {
+                            display: flex;
+                            flex-direction: column;
+
+                            input {
+                                display: flex;
+                                padding: 8px 16px;
+                                border: 1.5px solid var(--xc-grey200);
+                                border-radius: var(--xc-rounded-eight);
+                                width: 100%;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+
+                        &-end {
+                            display: flex;
+                            flex-direction: column;
+
+                            input {
+                                display: flex;
+                                padding: 8px 16px;
+                                border: 1.5px solid var(--xc-grey200);
+                                border-radius: var(--xc-rounded-eight);
+                                width: 100%;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .divider{
+                display: flex;
+                width: 100%;
+                border-bottom: 1.5px solid var(--xc-grey100);
+            }
+            .actions_buttons {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 16px;
+            }
+        }
+    }
+}

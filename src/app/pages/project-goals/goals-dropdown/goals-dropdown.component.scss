@@ -1,8 +1,7 @@
 .dropdown {
   display: flex;
   flex-direction: column;
-  padding: 24px;
-
+  gap: 24px;
   &_card {
     display: flex;
     flex-direction: column;

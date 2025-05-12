@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { XcIconPlusComponent } from '@indziaki/ngx-xchange-icons';
 import { GoalsDropdownComponent } from './goals-dropdown/goals-dropdown.component';
-import { DescriptionModalComponent } from './description-modal/description-modal.component';
 import { NgIf } from '@angular/common';
+import { NewGoalModalComponent } from './new-goal-modal/new-goal-modal.component';
 
 @Component({
   selector: 'app-project-goals',
@@ -11,10 +11,18 @@ import { NgIf } from '@angular/common';
     NgIf,
     XcIconPlusComponent,
     GoalsDropdownComponent,
+    NewGoalModalComponent
   ],
   templateUrl: './project-goals.component.html',
   styleUrl: './project-goals.component.scss'
 })
 export class ProjectGoalsComponent {
+  isNewGoal = false;
 
+  openNewGoalModal() {
+    this.isNewGoal = true;
+  }
+  handleNewGoalModalClose() {
+    this.isNewGoal = false;
+  }
 }
