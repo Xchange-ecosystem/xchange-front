@@ -1,6 +1,6 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconCalenderComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCalenderComponent, XcIconPlayComponent } from '@indziaki/ngx-xchange-icons';
 import {
   ProfileTagsDirective,
   ProjectProgressBarModule,
@@ -14,12 +14,14 @@ import { DescriptionModalComponent } from '../description-modal/description-moda
   standalone: true,
   imports: [
     NgIf,
+    NgClass,
     ProjectProgressBarModule,
     RoundedImageModule,
     XcIconCalenderComponent,
     ProfileTagsDirective,
     ObjectivesDropdownComponent,
-    DescriptionModalComponent
+    DescriptionModalComponent,
+    XcIconPlayComponent
   ],
   templateUrl: './goals-dropdown.component.html',
   styleUrl: './goals-dropdown.component.scss',
