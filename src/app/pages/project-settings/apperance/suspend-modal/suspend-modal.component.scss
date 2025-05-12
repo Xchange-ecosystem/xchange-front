@@ -1,0 +1,27 @@
+.card {
+  border-radius: var(--xc-rounded-sixteen);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: var(--xc-white);
+  flex-wrap: wrap;
+  max-width: 633px;
+
+  &-header {
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .action_buttons {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+}

@@ -6,7 +6,6 @@
 
 .btn {
     align-items: center;
-    background: var(--xc-white);
     border: 1.5px solid var(--xc-black500);
     border-radius: var(--xc-rounded-eight);
     display: flex;
@@ -121,10 +120,13 @@
     color: var(--xc-categories-blocked);
 }
 
-.btn--ban{
+.btn--ban {
     background: var(--xc-categories-blocked);
     color: var(--xc-white);
     border: none;
+}
+.btn--ban > p{ 
+    color: var(--xc-white);
 }
 /* *classes for icons inside the buttons */
 

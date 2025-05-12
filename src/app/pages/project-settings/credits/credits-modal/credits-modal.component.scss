@@ -1,0 +1,84 @@
+.buy_credits {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      min-width: 740px;
+      overflow-y: auto;
+      width: 630px;
+      &-header {
+        display: flex;
+        width: 100%;
+        &-img {
+          width: 100%;
+        }
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        &_select {
+          padding: 8px 11px;
+          border: 1px solid;
+          border-color: var(--xc-grey100);
+          border-radius: var(--xc-rounded-eight);
+          option {
+            width: 50%;
+          }
+        }
+      }
+      .card_data {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+
+        .field {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          flex: 1;
+
+          input {
+            border: 1px solid;
+            border-color: var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            padding: 4px 11px;
+            outline: none;
+          }
+
+          &:first-child {
+            flex: 2;
+          }
+        }
+      }
+      .balance {
+        display: flex;
+        gap: 16px;
+        &_data {
+          flex: 1;
+        }
+      }
+      .action_buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+    }
+  }
+}

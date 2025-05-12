@@ -1,0 +1,56 @@
+.card {
+  border-radius: var(--xc-rounded-sixteen);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: var(--xc-white);
+  flex-wrap: wrap;
+  max-width: 633px;
+  &_header {
+    border-radius: 8px 8px 0px 0px;
+  }
+  &_message_form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+    .field {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 8px;
+      width: 100%;
+      input {
+        padding: 8px 11px;
+        border: 1px solid;
+        border-color: var(--xc-grey100);
+        border-radius: var(--xc-rounded-eight);
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+      .textarea {
+        padding: 8px 11px;
+        border: 1px solid;
+        border-color: var(--xc-grey100);
+        border-radius: var(--xc-rounded-eight);
+        width: 100%;
+        resize: none;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .action_buttons {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      gap: 16px;
+      .rotate{
+        transform: rotate(-35deg);
+      }
+    }
+  }
+}
