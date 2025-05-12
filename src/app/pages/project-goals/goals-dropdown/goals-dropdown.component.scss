@@ -34,6 +34,7 @@
     &-progress {
       display: flex;
       width: 100%;
+
       xc-project-progress-bar {
         display: flex;
         width: 100%;
@@ -82,7 +83,7 @@
       align-items: center;
       width: 100%;
 
-      & > span {
+      &>span {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -93,15 +94,18 @@
       display: flex;
       align-items: center;
       gap: 8px;
+
       p {
         color: var(--xc-grey500);
       }
+
       .icon {
         display: flex;
         stroke: var(--xc-grey500);
         height: 16px;
         width: 16px;
       }
+
       &-range {
         display: flex;
         align-items: center;
@@ -113,9 +117,11 @@
       display: flex;
       align-items: center;
       gap: 8px;
+
       p {
         color: var(--xc-grey500);
       }
+
       &-image {
         display: flex;
         width: 17px;
@@ -123,6 +129,7 @@
       }
     }
   }
+
   &_content {
     background: var(--xc-grey100);
     display: flex;
@@ -130,6 +137,7 @@
     padding: 16px;
     gap: 16px;
     border-radius: 0px 0px 8px 8px;
+
     .objective_complete {
       border-left: 5px solid var(--xc-categories-completed);
       background: var(--xc-white);
@@ -139,16 +147,19 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+
       &_content {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
         &_tags {
           display: flex;
           gap: 16px;
         }
       }
     }
+
     .objective_open {
       border-left: 5px solid var(--xc-categories-progress);
       background: var(--xc-white);
@@ -158,16 +169,19 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+
       &_content {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
         &_tags {
           display: flex;
           gap: 16px;
         }
       }
     }
+
     .objective_general {
       border-left: 5px solid var(--xc-grey200);
       background: var(--xc-white);
@@ -177,33 +191,40 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+
       &_content {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+
         &_tags {
           display: flex;
           gap: 16px;
         }
       }
     }
-    &-select{
+
+    &-select {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       align-items: center;
       justify-content: center;
-      &-content{
-        border-radius: var(--xc-rounded-eight);
-          color: var(--xc-grey500);
 
+      &-content {
+        border-radius: var(--xc-rounded-eight);
+        color: var(--xc-grey500);
         padding: 8px 11px;
         width: 50%;
         option {
           width: 50%;
         }
       }
+          &-component {
+      display: flex;
+      width: 50%;
+    }
     }
   }
 }

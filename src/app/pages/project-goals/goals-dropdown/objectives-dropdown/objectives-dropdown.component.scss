@@ -1,0 +1,45 @@
+.custom-select {
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 50%;
+  position: relative;
+  font-family: sans-serif;
+
+  &__header {
+    font-weight: bold;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__arrow {
+    transition: transform 0.3s ease;
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__dropdown {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: white;
+  }
+
+  &__category {
+    margin-top: 8px;
+  }
+
+  &__options {
+    list-style: none;
+    padding-left: 16px;
+    margin: 0;
+
+    li {
+      margin: 4px 0;
+    }
+  }
+}

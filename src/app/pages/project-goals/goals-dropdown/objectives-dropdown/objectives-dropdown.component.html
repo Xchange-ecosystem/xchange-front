@@ -1,0 +1,16 @@
+<div class="custom-select">
+  <div class="custom-select__header" (click)="toggleDropdown()">
+    {{ title }}
+    <span class="custom-select__arrow" [class.open]="isOpen">▾</span>
+  </div>
+
+  <div class="custom-select__dropdown" *ngIf="isOpen">
+    <strong>Dimension: {{ dimension }}</strong>
+    <div class="custom-select__category">
+      <strong>Category: {{ category }}</strong>
+      <ul class="custom-select__options">
+        <li *ngFor="let opt of options">{{ opt }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
