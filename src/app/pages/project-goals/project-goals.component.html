@@ -5,7 +5,7 @@
     <section class="goals_content">
         <div class="goals_content_add">
             <h2>Goals related to Next Gen LLL – Xchange Studio Project</h2>
-            <button>
+            <button (click)="openNewGoalModal()">
                 <xc-icon-plus class="btn__icon"/>
             </button>
         </div>
@@ -15,3 +15,7 @@
         </article>
     </section>
 </main>
+
+<section *ngIf="isNewGoal">
+    <app-new-goal-modal (close)="handleNewGoalModalClose()"/>
+</section>
