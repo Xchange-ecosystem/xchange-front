@@ -1,7 +1,7 @@
 .dropdown {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+
   padding: 24px;
 
   &_card {
@@ -128,9 +128,64 @@
     display: flex;
     flex-direction: column;
     padding: 16px;
-    gap: 24px;
-    .objective {
-
+    gap: 16px;
+    border-radius: 0px 0px 8px 8px;
+    .objective_complete {
+      border-left: 5px solid var(--xc-categories-completed);
+      background: var(--xc-white);
+      border-radius: var(--xc-rounded-eight);
+      box-shadow: var(--xc-boxShadow-400);
+      padding: 16px 16px 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      &_content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        &_tags {
+          display: flex;
+          gap: 16px;
+        }
+      }
+    }
+    .objective_open {
+      border-left: 5px solid var(--xc-categories-progress);
+      background: var(--xc-white);
+      border-radius: var(--xc-rounded-eight);
+      box-shadow: var(--xc-boxShadow-400);
+      padding: 16px 16px 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      &_content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        &_tags {
+          display: flex;
+          gap: 16px;
+        }
+      }
+    }
+    .objective_general {
+      border-left: 5px solid var(--xc-grey200);
+      background: var(--xc-white);
+      border-radius: var(--xc-rounded-eight);
+      box-shadow: var(--xc-boxShadow-400);
+      padding: 16px 16px 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      &_content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        &_tags {
+          display: flex;
+          gap: 16px;
+        }
+      }
     }
   }
 }
