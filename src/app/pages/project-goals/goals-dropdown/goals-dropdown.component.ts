@@ -6,6 +6,7 @@ import {
   ProjectProgressBarModule,
   RoundedImageModule,
 } from '@indziaki/ngx-xchange-ui';
+import { ObjectivesDropdownComponent } from './objectives-dropdown/objectives-dropdown.component';
 
 @Component({
   selector: 'app-goals-dropdown',
@@ -15,7 +16,8 @@ import {
     ProjectProgressBarModule,
     RoundedImageModule,
     XcIconCalenderComponent,
-    ProfileTagsDirective
+    ProfileTagsDirective,
+    ObjectivesDropdownComponent
   ],
   templateUrl: './goals-dropdown.component.html',
   styleUrl: './goals-dropdown.component.scss',
