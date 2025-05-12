@@ -20,8 +20,21 @@
     }
 
     &-icon {
-      font-size: 16px;
-      transition: transform 0.2s ease;
+      .arrow {
+        display: flex;
+        height: 10px;
+        stroke: var(--xc-grey200);
+        fill: var(--xc-grey200);
+        transform: rotate(-90deg);
+        transition: transform 0.2s ease, color 0.2s ease;
+        width: 10px;
+      }
+
+      &.is-open .arrow {
+        transform: rotate(0deg);
+        stroke: var(--xc-black500);
+        fill: var(--xc-black500);
+      }
     }
 
     &-title {
