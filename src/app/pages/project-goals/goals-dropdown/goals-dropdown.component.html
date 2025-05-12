@@ -22,7 +22,7 @@
           solves key user needs in a Social Media app. Lorem ipsum dolor sit
           amet...
           <button
-            (click)="handleOpenDescriptionModal()"
+            (click)="openDescription()"
             class="dropdown_card-description-btn"
           >
             <b>Read more</b>
@@ -94,4 +94,8 @@
       <app-objectives-dropdown class="dropdown_content-select-component"/>
     </div>
   </article>
+</section>
+
+<section *ngIf="isDescription" >
+    <app-description-modal (close)="handleDescritionModalClose()"/>
 </section>

@@ -1,0 +1,26 @@
+.description {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      width: 760px;
+      min-height: 580px;
+      overflow-y: auto;
+    }
+  }
+}
