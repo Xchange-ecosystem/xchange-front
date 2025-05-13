@@ -38,6 +38,18 @@ const routes: Routes = [
         path:'new-password',
         loadComponent: () => import('src/app/pages/new-password/new-password.component').then(m => m.NewPasswordComponent),
       },
+      {
+        path:'dashboard',
+        loadComponent: () => import('src/app/pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
+      },
+      {
+        path:'ecosystem-admin',
+        loadComponent: () => import('src/app/pages/ecosystem-admin/ecosystem-admin.component').then(m => m.EcosystemAdminComponent),
+      },
+      {
+        path:'project-dashboard',
+        loadComponent: () => import('src/app/pages/project-dashboard/project-dashboard.component').then(m => m.ProjectDashboardComponent),
+      },
     ],
   },
 ];

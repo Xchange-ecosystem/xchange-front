@@ -1,8 +1,8 @@
 .navigation-label {
     font-size: 14px;
-}
+  }
 
-.container_icon {
+  .container_icon {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -10,39 +10,42 @@
     height: 24px;
     stroke: var(--xc-black500);
     fill: var(--xc-black500);
-}
+  }
 
-.container_iconLabel {
+  .container_iconLabel {
     align-items: center;
     display: flex;
     gap: 8px;
     cursor: pointer;
-}
+  }
 
-.container_label {
+  .container_label {
     cursor: pointer;
-}
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
 
-.container_arrowSelection {
+  .container_arrowSelection {
     width: 24px;
     stroke: black;
-}
+  }
 
-.notification {
+  .notification {
     display: none;
     position: absolute;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    right: 24px; 
+    right: 24px;
     top: 0;
-}
+  }
 
-.notification--active {
-    background: #B8FBFF;
+  .notification--active {
+    background: #b8fbff;
     display: block;
-}
+  }
 
-.onActive{
+  .onActive {
     background: var(--xc-gradient-light-grey-on-white);
-}
+  }

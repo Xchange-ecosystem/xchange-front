@@ -23,13 +23,14 @@ interface UserData {
 })
 export class CompleteObjectiveUserCardComponent implements OnInit {
   @Input() userData:UserData | undefined = undefined;
-  @Output() checked: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  @Input() readMode:boolean = false;
+  @Output() checked: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input() readMode: boolean = false;
   
   ngOnInit(): void {
   }
   emitChecked(){
-    if(this.userData)
+    if(this.readMode) return
+    if(this.userData )
       this.userData.isCompleted = !this.userData.isCompleted;
     this.checked.next(Boolean(this.userData?.isCompleted))
   }

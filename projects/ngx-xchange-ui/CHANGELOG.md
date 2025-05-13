@@ -1,5 +1,17 @@
+# 0.1.26 08/05/2025
+* (fix) typo on filters
+* (fix) Remove id from objective user card
+* (change) start and end statement
+* (change) remove id from objective user card
+
+# 0.1.24 28/04/2025
+* (fix) project progress bar min with and colors order
+
+# 0.1.23 28/04/2025
+* (change) style aside directive label text
+
 # 0.1.22 24/04/2025
-* (fix) Remove textAling center on copy200
+* (fix) Remove text aligning center on copy200
 
 # 0.1.21 22/04/2025
 * (add) update lib with headline 400

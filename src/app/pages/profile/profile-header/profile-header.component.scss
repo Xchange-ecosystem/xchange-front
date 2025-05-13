@@ -35,18 +35,18 @@
             height: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: end;
+            align-items: flex-end;
         }
         &_nav{
             display: flex;
             width: 100%;
             gap: 36px;
-            justify-content: end;
-            align-items: end;
+            justify-content: flex-end;
+            align-items: flex-end;
             &-tabs{
                 display: flex;
                 gap: 6px;
-                align-items: end;
+                align-items: flex-end;
                 padding-bottom: 30px;
             }
             &-rounded{
