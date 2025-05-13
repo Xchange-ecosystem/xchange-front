@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.rewards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &_header {
+        display: flex;
+        width: 100%;
+        height: 230px;
+        &-image {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
