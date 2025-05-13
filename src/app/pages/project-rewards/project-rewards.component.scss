@@ -30,6 +30,8 @@
         flex-direction: column;
         background: var(--xc-white);
         gap: 32px;
+        height: calc(100% - 230px);
+        overflow-y: auto;
 
         &-numbers {
             border-bottom: 1px solid var(--xc-grey200);
@@ -41,6 +43,7 @@
             .value {
                 align-items: end;
                 display: flex;
+                justify-content: center;
                 flex: 1;
                 gap: 8px;
             }
@@ -100,6 +103,9 @@
                 display: flex;
                 width: 365px;
                 height: 250px;
+                &:hover {
+                    border: 2px solid var(--xc-brand-medium-blue);
+                }
 
                 &-content {
                     display: flex;
@@ -131,6 +137,9 @@
                 width: 100%;
 
                 .pie-graph {
+                    display: flex;
+                    width: 620px;
+                    height: 420px;
                     &-chart {
                         width: 100%;
                         height: 100%;
@@ -144,16 +153,46 @@
                     flex: 1;
 
                     &-data {
+                        align-items: start;
                         display: flex;
                         flex-direction: column;
                         gap: 16px;
                         border: 1px solid var(--xc-grey100);
+                        padding: 8px 16px;
                         border-radius: var(--xc-rounded-eight);
+                        height: min-content;
+                        .dot-data {
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                        }
                     }
                 }
             }
         }
     }
+}
 
+.blue {
+  display: flex;
+  background: #2563ea;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
 
+.medBlue {
+  display: flex;
+  background: #61a5fa;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.smBlue {
+  display: flex;
+  background: #bfdcfe;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
 }
