@@ -1,4 +1,4 @@
-<main class="rewards">
+<!-- <main class="rewards">
   <header class="rewards_header">
     <img
       src="assets/img/Goals-header.png"
@@ -6,88 +6,117 @@
       class="rewards_header-image"
     />
   </header>
-  <section class="rewards_data">
-    <article class="rewards_data-numbers">
-      <div class="value">
-        <h1>4,235,340 €</h1>
-        <p>current project valuation</p>
-      </div>
-      <div class="value">
-        <h1>1,256,500 XCoins</h1>
-        <p>project value on Xcamp</p>
-      </div>
-      <div class="value">
-        <h1>1.8%</h1>
-        <p>Growth factor</p>
-      </div>
-    </article>
-    <article class="rewards_data-cards">
-      <button class="card">
-        <div class="card__background"></div>
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h2>Collaborator fund</h2>
-          <b class="text_400">(external)</b>
+
+</main> -->
+<!-- <section [ngSwitch]="state">
+  <div *ngSwitchCase="'default'">Hola</div>
+  <div *ngSwitchCase="'collaborations'">colab</div>
+  <div *ngSwitchCase="'employee'">empo</div>
+  <div *ngSwitchCase="'owners'">owner</div>
+  <button >Default</button>
+  <button >Coollab</button>
+  <button >owner</button>
+  <button >employee</button>
+
+
+  <button (click)="switchViewService.setViewState('default')"><</button>
+</section> -->
+
+<main class="rewards">
+  <app-rewards-header class="rewards_header" />
+  <section class="rewards_content" [ngSwitch]="state">
+    <section *ngSwitchCase="'default'" class="rewards_data">
+      <article class="rewards_data-numbers">
+        <div class="value">
+          <h1>4,235,340 €</h1>
+          <p>current project valuation</p>
         </div>
-      </button>
-      <button class="card">
-        <div class="card__background"></div>
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h2>Employee fund</h2>
-          <b class="text_400">(internal)</b>
+        <div class="value">
+          <h1>1,256,500 XCoins</h1>
+          <p>project value on Xcamp</p>
         </div>
-      </button>
-      <button class="card">
-        <div class="card__background"></div>
-        <div class="card__overlay"></div>
-        <div class="card__content">
-          <h2>Collaborator fund</h2>
-          <b class="text_400">(vesting)</b>
+        <div class="value">
+          <h1>1.8%</h1>
+          <p>Growth factor</p>
         </div>
-      </button>
-      <button class="add_fund">
-        <div class="add_fund-content">
-          <xc-icon-plus-circle class="icon" />
-          <b>Create a new fund</b>
-          <b>(coming soon)</b>
-        </div>
-      </button>
-    </article>
-    <article class="rewards_data-graphs">
-      <h3>Project Value</h3>
-      <div class="rewards_data-graphs-container">
-        <span class="pie-graph">
-          <img
-            src="assets/img/temp-pieGraph.png"
-            alt="temporal-pieGraph"
-            class="pie-graph-chart"
-          />
-        </span>
-        <span class="line-graph">
-          <div class="line-graph-chart">
-            <img src="assets/img/temp-graph.png" alt="temporal-dot-graph" />
+      </article>
+      <article class="rewards_data-cards">
+        <button
+          class="card"
+          (click)="switchViewService.setViewState('collaborations')"
+        >
+          <div class="card__background"></div>
+          <div class="card__overlay"></div>
+          <div class="card__content">
+            <h2>Collaborator fund</h2>
+            <b class="text_400">(external)</b>
           </div>
-          <div class="line-graph-data">
-            <div class="dot-data">
-              <span class="blue"></span>
-              <p>Total value</p>
-            </div>
-            <div class="dot-data">
-              <span class="medBlue"></span>
-              <p>Collaboration fund</p>
-            </div>
-            <div class="dot-data">
-              <span class="smBlue"></span>
-              <p>Owners fund</p>
-            </div>
-            <div class="dot-data">
-              <span class="smBlue"></span>
-              <p>Employee fund</p>
-            </div>
+        </button>
+        <button
+          class="card"
+          (click)="switchViewService.setViewState('employee')"
+        >
+          <div class="card__background"></div>
+          <div class="card__overlay"></div>
+          <div class="card__content">
+            <h2>Employee fund</h2>
+            <b class="text_400">(internal)</b>
           </div>
-        </span>
-      </div>
-    </article>
+        </button>
+        <button class="card" (click)="switchViewService.setViewState('owners')">
+          <div class="card__background"></div>
+          <div class="card__overlay"></div>
+          <div class="card__content">
+            <h2>Owners fund</h2>
+            <b class="text_400">(vesting)</b>
+          </div>
+        </button>
+        <button class="add_fund">
+          <div class="add_fund-content">
+            <xc-icon-plus-circle class="icon" />
+            <b>Create a new fund</b>
+            <b>(coming soon)</b>
+          </div>
+        </button>
+      </article>
+      <article class="rewards_data-graphs">
+        <h3>Project Value</h3>
+        <div class="rewards_data-graphs-container">
+          <span class="pie-graph">
+            <img
+              src="assets/img/temp-pieGraph.png"
+              alt="temporal-pieGraph"
+              class="pie-graph-chart"
+            />
+          </span>
+          <span class="line-graph">
+            <div class="line-graph-chart">
+              <img src="assets/img/temp-graph.png" alt="temporal-dot-graph" />
+            </div>
+            <div class="line-graph-data">
+              <div class="dot-data">
+                <span class="blue"></span>
+                <p>Total value</p>
+              </div>
+              <div class="dot-data">
+                <span class="medBlue"></span>
+                <p>Collaboration fund</p>
+              </div>
+              <div class="dot-data">
+                <span class="smBlue"></span>
+                <p>Owners fund</p>
+              </div>
+              <div class="dot-data">
+                <span class="smBlue"></span>
+                <p>Employee fund</p>
+              </div>
+            </div>
+          </span>
+        </div>
+      </article>
+    </section>
+    <app-collaboration-fund *ngSwitchCase="'collaborations'" />
+    <app-owners-fund *ngSwitchCase="'owners'" />
+    <app-employee-fund *ngSwitchCase="'employee'" />
   </section>
 </main>

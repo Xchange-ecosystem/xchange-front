@@ -1,0 +1,7 @@
+<header class="header">
+    <img [src]="defaultHeaderImage" alt="header-image" class="header_image">
+    <div>
+        <button (click)="switchViewService.setViewState('default')" *ngIf="state != 'default'"> < </button>
+        <p>{{defaultTitle}}</p>
+    </div>
+</header>
