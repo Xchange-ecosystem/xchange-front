@@ -11,7 +11,7 @@
   gap: 32px;
   margin-left: 165px;
   margin-right: 165px;
-    height:calc(100% - 120px);
+  height: calc(100% - 120px);
   &-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -396,7 +396,7 @@
             .yellow {
               display: flex;
               width: 16px;
-              height: 16px; 
+              height: 16px;
               stroke: var(--xc-categories-yellow-filter);
               transform: rotate(45deg);
             }
@@ -408,5 +408,21 @@
         }
       }
     }
+  }
+}
+
+.fund_reserve {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &-modal {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
   }
 }
