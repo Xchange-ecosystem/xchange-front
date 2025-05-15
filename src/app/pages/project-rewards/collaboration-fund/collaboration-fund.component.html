@@ -1,1 +1,223 @@
-<p>collaboration-fund works!</p>
+<section class="set_fund" *ngIf="!isFundSet">
+  <h2>
+    To set up your first fund, please add the legal representation and value of
+    your project
+  </h2>
+  <div class="set_fund-wrapper">
+    <article class="company_information">
+      <h3>Company information</h3>
+      <header class="company_information-header">
+        <img
+          src="assets/img/Legal-settings.png"
+          alt="company-information-form-image"
+        />
+      </header>
+      <form class="company_information-form">
+        <label class="field">
+          <b>Your organization</b>
+          <input type="text" />
+        </label>
+        <div class="company_info">
+          <label class="field">
+            <b>Incorporation</b>
+            <input type="text" />
+          </label>
+          <label class="country-select">
+            <b>Country</b>
+            <select>
+              <option>Germany</option>
+            </select>
+          </label>
+        </div>
+        <div class="address_info">
+          <label class="street-field">
+            <b>Street</b>
+            <input type="text" />
+          </label>
+          <label class="zip-field">
+            <b>ZIP</b>
+            <input type="number" />
+          </label>
+          <label class="city-field">
+            <b>City</b>
+            <input type="text" />
+          </label>
+        </div>
+        <label class="field">
+          <b>Legal representative(s)</b>
+          <input type="text" />
+        </label>
+        <div class="company_proof">
+          <label class="company_proof-field">
+            <b>Registration number</b>
+            <input type="text" />
+          </label>
+          <label class="upload-button">
+            <input type="file" hidden />
+            <xc-icon-file-upload class="btn__icon" />
+            <span class="upload-button_text">Attach Company Proof</span>
+          </label>
+        </div>
+        <div class="company_files">
+          <span xcProfileTags="gray" class="evidence">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="evidence_remove">
+              <xc-icon-times class="evidence_remove-icon" />
+            </button>
+          </span>
+          <span xcProfileTags="gray" class="evidence">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="evidence_remove">
+              <xc-icon-times class="evidence_remove-icon" />
+            </button>
+          </span>
+          <span xcProfileTags="gray" class="evidence">
+            <xc-icon-paperclip class="btn__icon" />
+            <p>loremfile.pdf</p>
+            <button class="evidence_remove">
+              <xc-icon-times class="evidence_remove-icon" />
+            </button>
+          </span>
+        </div>
+      </form>
+    </article>
+    <article class="valuation">
+      <div class="valuation_wrapper">
+        <h3>Valuation</h3>
+        <header class="valuation_wrapper-header">
+          <img
+            src="assets/img/Buy-tenant.png"
+            alt="valuation-header-image"
+            class="valuation_wrapper-header-image"
+          />
+        </header>
+        <form class="valuation_wrapper-form">
+          <label class="valuation_wrapper-form-label">
+            <b>Initial valuation in Euro (€)*</b>
+            <input type="number" value="0" />
+          </label>
+          <label class="valuation_wrapper-form-label">
+            <b>Current valuation in Euro (€)</b>
+            <input type="number" value="0" />
+          </label>
+        </form>
+        <p class="legal">
+          To leverage the power of collaboration it is required that your
+          project has a monetary value. Good news is: Everything has a real
+          value, be it the The amount of work you already put into it, potential
+          value that is created for people, or the initial share value at the
+          time of incorporation. Note that the initial valuation* cant be
+          changed later! <a class="bold legal_learn"> Learn more.</a>
+        </p>
+        <div class="legal_advice">
+          <b>Collaboration Funds</b>
+          <p>
+            You share a defined percentage of the value that is created in your
+            project with your collaborators. Before you start collaborating, you
+            need to set up a fund. Note that on the platform, Xcoin credits are
+            used instead of fiat currency. <a class="bold learn">Learn more</a>
+          </p>
+        </div>
+        <button class="btn set_up">Set up a fund</button>
+      </div>
+      <div class="valuation_actions">
+        <button class="btn btn--filled">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="collaboration_fund" *ngIf="isFundSet">
+  <article class="collaboration_fund-wrapper">
+    <header class="data">
+      <span class="data-wrapper">
+        <h1>835,340 €</h1>
+        <small>Reserve value</small>
+      </span>
+      <span class="data-wrapper">
+        <h1>10%</h1>
+        <small>Reserve percentage</small>
+      </span>
+      <span class="data-wrapper">
+        <h1>556,500 XCoins</h1>
+        <small>current fund value</small>
+      </span>
+      <span class="data-wrapper">
+        <h1>83%</h1>
+        <small>of reserve value reached</small>
+      </span>
+    </header>
+    <div class="separator"></div>
+    <div class="graphs">
+      <span class="pie-graph">
+        <img
+          class="pie-graph-image"
+          src="assets/img/temp-pieGraph.png"
+          alt="temporal-pieGraph"
+        />
+      </span>
+      <span class="dots-graph">
+        <img
+          src="assets/img/temp-graph.png"
+          alt="temporal-dotGraph"
+          class="dots-graph-image"
+        />
+      </span>
+    </div>
+    <div class="table">
+      <h3>Fund members and collaboration rewards</h3>
+      <article class="table_wrapper">
+        <table class="investment-table">
+          <thead>
+            <tr>
+              <th class="investment-table__name">Name</th>
+              <th class="investment-table__contributed">Contributed</th>
+              <th class="investment-table__current">Current</th>
+              <th class="investment-table__growth">Growth</th>
+              <th class="investment-table__share">Share</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="investment-table__name">
+                <xc-rounded-image class="investment-table__avatar" [image]="'assets/img/user-image-profile.png'"/>
+                <span>Jamie Bond</span>
+              </td>
+              <td class="investment-table__contributed">$1,500.00</td>
+              <td class="investment-table__current">$1,500.00</td>
+              <td class="investment-table__growth ">1.0 <xc-icon-arrow-up-right class="green"/></td>
+              <td class="investment-table__share">15%</td>
+            </tr>
+            <tr>
+              <td class="investment-table__name">
+                <xc-rounded-image class="investment-table__avatar" [image]="'assets/img/user-image-profile.png'"/>
+
+                <span>Mellanie Swan</span>
+              </td>
+              <td class="investment-table__contributed">$3,500.00</td>
+              <td class="investment-table__current">$1,500.00</td>
+              <td class="investment-table__growth ">1.0 <xc-icon-arrow-up-right class="red"/></td>
+              <td class="investment-table__share">35%</td>
+            </tr>
+            <tr>
+              <td class="investment-table__name">
+                <xc-rounded-image class="investment-table__avatar" [image]="'assets/img/user-image-profile.png'"/>
+
+                <span>Some One</span>
+              </td>
+              <td class="investment-table__contributed">$5,000.00</td>
+              <td class="investment-table__current">$1,500.00</td>
+              <td class="investment-table__growth ">1.0 <xc-icon-arrow-up-right class="yellow"/></td>
+              <td class="investment-table__share">50%</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+  </article>
+</section>

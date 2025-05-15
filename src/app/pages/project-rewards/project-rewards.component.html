@@ -1,32 +1,8 @@
-<!-- <main class="rewards">
-  <header class="rewards_header">
-    <img
-      src="assets/img/Goals-header.png"
-      alt="header-image"
-      class="rewards_header-image"
-    />
-  </header>
-
-</main> -->
-<!-- <section [ngSwitch]="state">
-  <div *ngSwitchCase="'default'">Hola</div>
-  <div *ngSwitchCase="'collaborations'">colab</div>
-  <div *ngSwitchCase="'employee'">empo</div>
-  <div *ngSwitchCase="'owners'">owner</div>
-  <button >Default</button>
-  <button >Coollab</button>
-  <button >owner</button>
-  <button >employee</button>
-
-
-  <button (click)="switchViewService.setViewState('default')"><</button>
-</section> -->
-
 <main class="rewards">
   <app-rewards-header class="rewards_header" />
   <section class="rewards_content" [ngSwitch]="state">
-    <section *ngSwitchCase="'default'" class="rewards_data">
-      <article class="rewards_data-numbers">
+    <section *ngSwitchCase="'default'" class="rewards_content_data">
+      <article class="rewards_content_data-numbers">
         <div class="value">
           <h1>4,235,340 €</h1>
           <p>current project valuation</p>
@@ -40,7 +16,7 @@
           <p>Growth factor</p>
         </div>
       </article>
-      <article class="rewards_data-cards">
+      <article class="rewards_content_data-cards">
         <button
           class="card"
           (click)="switchViewService.setViewState('collaborations')"
@@ -79,9 +55,9 @@
           </div>
         </button>
       </article>
-      <article class="rewards_data-graphs">
+      <article class="rewards_content_data-graphs">
         <h3>Project Value</h3>
-        <div class="rewards_data-graphs-container">
+        <div class="rewards_content_data-graphs-container">
           <span class="pie-graph">
             <img
               src="assets/img/temp-pieGraph.png"
