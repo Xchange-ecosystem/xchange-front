@@ -3,3 +3,186 @@
     width: 100%;
     height: 100%;
 }
+.collaboration_fund {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  &-wrapper {
+    align-items: center;
+    background: var(--xc-white);
+    border-radius: var(--xc-rounded-eight);
+    box-shadow: var(--xc-boxShadow-400);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 32px;
+    height: calc(100% - 64px);
+    overflow-y: auto;
+    width: 100%;
+    .data {
+      display: flex;
+      align-items: end;
+      padding-top: 12px;
+      justify-content: center;
+      width: 100%;
+      gap: 64px;
+      &-wrapper {
+        align-items: flex-end;
+        display: flex;
+        gap: 8px;
+      }
+    }
+    .separator {
+      height: 1.5px;
+      border-bottom: 1px solid var(--xc-grey100);
+      width: 100%;
+    }
+    .graphs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      padding: 0px 32px;
+      &_container {
+        display: grid;
+        grid-template-columns: 620px 1fr;
+        column-gap: 32px;
+        .pie-graph,
+        .dots-graph {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 320px;
+          overflow: hidden;
+        }
+
+        .pie-graph {
+          width: 500px;
+
+          &-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+          }
+        }
+      }
+
+      .dots-graph {
+        width: 100%;
+
+        &-image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          display: block;
+        }
+      }
+    }
+    .table {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 32px;
+      gap: 32px;
+      width: 100%;
+
+      &_wrapper {
+        display: flex;
+        width: 100%;
+        border-radius: var(--xc-rounded-eight);
+
+
+        .investment-table {
+          border-collapse: separate;
+          margin-right:auto;
+          width: 100%;
+          &_row {
+            display: grid;
+            grid-template-columns: 700px 160px 100px 100px 75px;
+            gap: 16px;
+            align-items: center;
+            padding: 8px 0px;
+          }
+
+          &_cell {
+
+
+            &-header {
+              text-align: start;
+              color: var(--xc-grey500);
+            }
+
+            &-actions {
+              display: flex;
+              gap: 8px;
+            }
+          }
+
+          &__name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .investment-table__avatar {
+              width: 32px;
+              height: 32px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+          }
+
+          &__growth {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            .green,
+            .red,
+            .yellow {
+              width: 16px;
+              height: 16px;
+            }
+
+            .green {
+              stroke: var(--xc-categories-completed);
+            }
+
+            .red {
+              stroke: var(--xc-categories-blocked);
+              transform: rotate(90deg);
+            }
+
+            .yellow {
+              stroke: var(--xc-categories-yellow-filter);
+              transform: rotate(45deg);
+            }
+          }
+
+          &__button {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            border: none;
+            gap: 4px;
+
+            &-suspend {
+              background-color: #ffe1e1;
+
+              &:hover {
+                background-color: #ffbfbf;
+              }
+            }
+
+            .icon {
+              display: flex;
+              width: 16px;
+              height: 16px;
+              stroke: var(--xc-black500);
+            }
+          }
+        }
+      }
+    }
+  }
+}
