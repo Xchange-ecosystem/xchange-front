@@ -154,74 +154,98 @@
     </header>
     <div class="separator"></div>
     <div class="graphs">
-      <span class="pie-graph">
-        <img
-          class="pie-graph-image"
-          src="assets/img/temp-pieGraph.png"
-          alt="temporal-pieGraph"
-        />
-      </span>
-      <span class="dots-graph">
-        <img
-          src="assets/img/temp-graph.png"
-          alt="temporal-dotGraph"
-          class="dots-graph-image"
-        />
-      </span>
+      <h3>Project Value</h3>
+      <div class="graphs_container">
+        <span class="pie-graph">
+          <img
+            class="pie-graph-image"
+            src="assets/img/temp-pieGraph.png"
+            alt="temporal-pieGraph"
+          />
+        </span>
+        <span class="dots-graph">
+          <img
+            src="assets/img/temp-graph.png"
+            alt="temporal-dotGraph"
+            class="dots-graph-image"
+          />
+        </span>
+      </div>
     </div>
     <div class="table">
       <h3>Fund members and collaboration rewards</h3>
       <article class="table_wrapper">
-        <table class="investment-table">
-          <thead>
-            <tr>
-              <th class="investment-table__name">Name</th>
-              <th class="investment-table__contributed">Contributed</th>
-              <th class="investment-table__current">Current</th>
-              <th class="investment-table__growth">Growth</th>
-              <th class="investment-table__share">Share</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="investment-table__name">
-                <xc-rounded-image class="investment-table__avatar" [image]="'assets/img/user-image-profile.png'"/>
-                <span>Jamie Bond</span>
-              </td>
-              <td class="investment-table__contributed">$1,500.00</td>
-              <td class="investment-table__current">$1,500.00</td>
-              <td class="investment-table__growth ">1.0 <xc-icon-arrow-up-right class="green"/></td>
-              <td class="investment-table__share">15%</td>
-            </tr>
-            <tr>
-              <td class="investment-table__name">
-                <xc-rounded-image class="investment-table__avatar" [image]="'assets/img/user-image-profile.png'"/>
+        <div class="investment-table">
+          <div class="investment-table_row investment-table_row--header">
+            <div class="investment-table_cell investment-table_cell-header">
+              Name
+            </div>
+            <div class="investment-table_cell investment-table_cell-header">
+              Contributed
+            </div>
+            <div class="investment-table_cell investment-table_cell-header">
+              Current
+            </div>
+            <div class="investment-table_cell investment-table_cell-header">
+              Growth
+            </div>
+            <div class="investment-table_cell investment-table_cell-header">
+              Share
+            </div>
+          </div>
 
-                <span>Mellanie Swan</span>
-              </td>
-              <td class="investment-table__contributed">$3,500.00</td>
-              <td class="investment-table__current">$1,500.00</td>
-              <td class="investment-table__growth ">1.0 <xc-icon-arrow-up-right class="red"/></td>
-              <td class="investment-table__share">35%</td>
-            </tr>
-            <tr>
-              <td class="investment-table__name">
-                <xc-rounded-image class="investment-table__avatar" [image]="'assets/img/user-image-profile.png'"/>
+          <div class="investment-table_row">
+            <div class="investment-table_cell investment-table__name">
+              <xc-rounded-image
+                class="investment-table__avatar"
+                [image]="'assets/img/user-image-profile.png'"
+              />
+              <span>Jamie Bond</span>
+            </div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell investment-table__growth">
+              1.0 <xc-icon-arrow-up-right class="green" />
+            </div>
+            <div class="investment-table_cell">15%</div>
+          </div>
 
-                <span>Some One</span>
-              </td>
-              <td class="investment-table__contributed">$5,000.00</td>
-              <td class="investment-table__current">$1,500.00</td>
-              <td class="investment-table__growth ">1.0 <xc-icon-arrow-up-right class="yellow"/></td>
-              <td class="investment-table__share">50%</td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="investment-table_row">
+            <div class="investment-table_cell investment-table__name">
+              <xc-rounded-image
+                class="investment-table__avatar"
+                [image]="'assets/img/user-image-profile.png'"
+              />
+              <span>Jamie Bond</span>
+            </div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell investment-table__growth">
+              1.0 <xc-icon-arrow-up-right class="green" />
+            </div>
+            <div class="investment-table_cell">15%</div>
+          </div>
+          <div class="investment-table_row">
+            <div class="investment-table_cell investment-table__name">
+              <xc-rounded-image
+                class="investment-table__avatar"
+                [image]="'assets/img/user-image-profile.png'"
+              />
+              <span>Jamie Bond</span>
+            </div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell investment-table__growth">
+              1.0 <xc-icon-arrow-up-right class="green" />
+            </div>
+            <div class="investment-table_cell">15%</div>
+          </div>
+        </div>
       </article>
     </div>
   </article>
 </section>
 
 <article *ngIf="isFundReserve" class="fund_reserve">
-  <app-collaboration-modal class="fund_reserve-modal"/>
+  <app-collaboration-modal class="fund_reserve-modal" />
 </article>
