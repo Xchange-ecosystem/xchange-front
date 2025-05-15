@@ -86,12 +86,83 @@
       padding: 0px 32px;
       gap: 32px;
       width: 100%;
-        &_actions {
-            align-items: center;
+      &_actions {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .dropdown_wrapper {
+          position: relative;
+          display: inline-block;
+          z-index: 10;
+
+          .button {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--xc-black500);
+            font-weight: 500;
+            color: var(--xc-black500);
+            .icon--active {
+              stroke: var(--xc-grey200);
+              fill: var(--xc-grey200);
+            }
+          }
+          .button--active {
+            border-color: var(--xc-grey200);
+          }
+          .text--active {
+            color: var(--xc-grey200);
+          }
+          .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--xc-white);
+            border-radius: 12px;
+            box-shadow: var(--xc-boxShadow-400);
+            z-index: 10;
+            min-width: 265px;
+            .button {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              padding: 8px 12px;
+              border-radius: 8px;
+              border: 1px solid transparent;
+              background: white;
+              font-weight: 500;
+              color: #999;
+              transition: border-color 0.2s;
+
+              &__icon {
+                stroke: #999;
+                stroke-width: 2;
+                width: 16px;
+                height: 16px;
+              }
+
+              &:hover {
+                cursor: pointer;
+                background-color: #f5f5f5;
+              }
+            }
+
+            .dropdown-item {
+              padding: 8px 16px;
+              font-size: 14px;
+              white-space: nowrap;
+
+              &:hover {
+                background-color: #f5f5f5;
+                cursor: pointer;
+              }
+            }
+          }
         }
+      }
       &_wrapper {
         display: flex;
         width: 100%;
@@ -125,7 +196,7 @@
 
             &-remove {
               align-items: center;
-              
+
               display: flex;
               gap: 4px;
               padding: 12px;
@@ -209,5 +280,37 @@
         }
       }
     }
+  }
+}
+
+.fund_reserve {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &-modal {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+  }
+}
+
+.suspend {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &_modal {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
   }
 }

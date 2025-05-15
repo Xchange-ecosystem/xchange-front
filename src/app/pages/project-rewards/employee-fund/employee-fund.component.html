@@ -41,10 +41,22 @@
     <div class="table">
       <div class="table_actions">
         <h3>Fund members and collaboration rewards</h3>
-        <button class="btn">
-          <xc-icon-user-plus class="btn__icon" />
-          <p>Add employee</p>
-        </button>
+        <div class="dropdown_wrapper" [class.open]="isOpen">
+          <button
+            class="button"
+            [ngClass]="{ 'button--active': isOpen }"
+            (click)="toggleDropdown()"
+          >
+            <xc-icon-user-plus class="btn__icon"  [ngClass]="{ 'icon--active': isOpen }"/>
+            <p [ngClass]="{ 'text--active': isOpen }">Add employee</p>
+          </button>
+
+          <div class="dropdown-menu" *ngIf="isOpen">
+            <p class="dropdown-item">Fabio Frankfurter</p>
+            <p class="dropdown-item">Francis Falcon</p>
+            <p class="dropdown-item">Friederike Feuerberg</p>
+          </div>
+        </div>
       </div>
       <article class="table_wrapper">
         <div class="investment-table">
@@ -83,10 +95,10 @@
               1.0 <xc-icon-arrow-up-right class="green" />
             </div>
             <div class="investment-table_cell">15%</div>
-            <div class="investment-table_cell-remove">
+            <button class="investment-table_cell-remove" (click)="openSuspendModal()">
               <xc-icon-user-x class="investment-table_cell-remove-icon" />
               <b>Remove</b>
-            </div>
+            </button>
           </div>
 
           <div class="investment-table_row">
@@ -103,10 +115,10 @@
               1.0 <xc-icon-arrow-up-right class="green" />
             </div>
             <div class="investment-table_cell">15%</div>
-            <div class="investment-table_cell-remove">
+            <button class="investment-table_cell-remove" (click)="openSuspendModal()">
               <xc-icon-user-x class="investment-table_cell-remove-icon" />
               <b>Remove</b>
-            </div>
+            </button>
           </div>
 
           <div class="investment-table_row">
@@ -123,13 +135,21 @@
               1.0 <xc-icon-arrow-up-right class="green" />
             </div>
             <div class="investment-table_cell">15%</div>
-            <div class="investment-table_cell-remove">
+            <button class="investment-table_cell-remove" (click)="openSuspendModal()">
               <xc-icon-user-x class="investment-table_cell-remove-icon" />
               <b>Remove</b>
-            </div>
+            </button>
           </div>
         </div>
       </article>
     </div>
   </article>
 </section>
+
+<article *ngIf="isFundReserve" class="fund_reserve"> 
+  <app-employee-modal class="fund_rederve-modal"/>
+</article>
+
+<article *ngIf="isSuspendOpen" class="suspend">
+  <app-suspend-modal class="suspend_modal" (close)="handleSuspendModalClose()"/>
+</article>
