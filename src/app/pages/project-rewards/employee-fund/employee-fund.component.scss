@@ -21,6 +21,9 @@
     height: calc(100% - 120px);
     overflow-y: auto;
     width: 100%;
+    @media (max-width: 1510px) {
+      height: calc(100% - 280px);
+    }
     .data {
       display: flex;
       align-items: end;
@@ -28,6 +31,12 @@
       justify-content: center;
       width: 100%;
       gap: 64px;
+      @media screen and (max-width: 1510px) {
+        gap: 32px;
+        padding-top: 6px;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
       &-wrapper {
         align-items: flex-end;
         display: flex;
@@ -48,6 +57,12 @@
         display: grid;
         grid-template-columns: 620px 1fr;
         column-gap: 32px;
+        @media (max-width: 1510px) {
+          align-self: center;
+          grid-template-columns: 1fr;
+          row-gap: 8px;
+          column-gap: 0;
+        }
         .pie-graph,
         .dots-graph {
           display: flex;
@@ -59,7 +74,9 @@
 
         .pie-graph {
           width: 500px;
-
+          @media (max-width: 1510px) {
+            width: 100%;
+          }
           &-image {
             width: 100%;
             height: 100%;
@@ -71,7 +88,9 @@
 
       .dots-graph {
         width: 100%;
-
+        @media (max-width: 1510px) {
+          width: 100%;
+        }
         &-image {
           width: 100%;
           height: 100%;
@@ -86,6 +105,9 @@
       padding: 0px 32px;
       gap: 32px;
       width: 100%;
+      @media (max-width: 1510px) {
+        padding: 0px;
+      }
       &_actions {
         align-items: center;
         display: flex;
@@ -177,16 +199,20 @@
             grid-template-columns: 700px 160px 100px 100px 75px 100px;
             gap: 16px;
             align-items: center;
+            @media (max-width: 1510px) {
+              grid-template-columns: 100px 80px 50px 50px 35px 40px;
+            }
           }
 
           &_cell {
             padding: 12px;
-
+            @media (max-width: 1510px) {
+              padding: 4px;
+            }
             &-header {
               text-align: start;
               color: var(--xc-grey500);
-              font-weight: 600;
-              font-size: 14px;
+
             }
 
             &-actions {
