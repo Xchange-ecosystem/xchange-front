@@ -47,7 +47,10 @@
             [ngClass]="{ 'button--active': isOpen }"
             (click)="toggleDropdown()"
           >
-            <xc-icon-user-plus class="btn__icon"  [ngClass]="{ 'icon--active': isOpen }"/>
+            <xc-icon-user-plus
+              class="btn__icon"
+              [ngClass]="{ 'icon--active': isOpen }"
+            />
             <p [ngClass]="{ 'text--active': isOpen }">Add employee</p>
           </button>
 
@@ -95,7 +98,10 @@
               1.0 <xc-icon-arrow-up-right class="green" />
             </div>
             <div class="investment-table_cell">15%</div>
-            <button class="investment-table_cell-remove" (click)="openSuspendModal()">
+            <button
+              class="investment-table_cell-remove"
+              (click)="openSuspendModal()"
+            >
               <xc-icon-user-x class="investment-table_cell-remove-icon" />
               <b>Remove</b>
             </button>
@@ -115,7 +121,10 @@
               1.0 <xc-icon-arrow-up-right class="green" />
             </div>
             <div class="investment-table_cell">15%</div>
-            <button class="investment-table_cell-remove" (click)="openSuspendModal()">
+            <button
+              class="investment-table_cell-remove"
+              (click)="openSuspendModal()"
+            >
               <xc-icon-user-x class="investment-table_cell-remove-icon" />
               <b>Remove</b>
             </button>
@@ -135,7 +144,33 @@
               1.0 <xc-icon-arrow-up-right class="green" />
             </div>
             <div class="investment-table_cell">15%</div>
-            <button class="investment-table_cell-remove" (click)="openSuspendModal()">
+            <button
+              class="investment-table_cell-remove"
+              (click)="openSuspendModal()"
+            >
+              <xc-icon-user-x class="investment-table_cell-remove-icon" />
+              <b>Remove</b>
+            </button>
+          </div>
+
+          <div class="investment-table_row">
+            <div class="investment-table_cell investment-table__name">
+              <xc-rounded-image
+                class="investment-table__avatar"
+                [image]="'assets/img/user-image-profile.png'"
+              />
+              <span>Jamie Bond</span>
+            </div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell">$1,500.00</div>
+            <div class="investment-table_cell investment-table__growth">
+              1.0 <xc-icon-arrow-up-right class="green" />
+            </div>
+            <div class="investment-table_cell">15%</div>
+            <button
+              class="investment-table_cell-remove"
+              (click)="openSuspendModal()"
+            >
               <xc-icon-user-x class="investment-table_cell-remove-icon" />
               <b>Remove</b>
             </button>
@@ -146,10 +181,13 @@
   </article>
 </section>
 
-<article *ngIf="isFundReserve" class="fund_reserve"> 
-  <app-employee-modal class="fund_rederve-modal"/>
+<article *ngIf="isFundReserve" class="fund_reserve">
+  <app-employee-modal class="fund_rederve-modal" />
 </article>
 
 <article *ngIf="isSuspendOpen" class="suspend">
-  <app-suspend-modal class="suspend_modal" (close)="handleSuspendModalClose()"/>
+  <app-suspend-modal
+    class="suspend_modal"
+    (close)="handleSuspendModalClose()"
+  />
 </article>
