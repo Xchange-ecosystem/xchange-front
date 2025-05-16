@@ -1,17 +1,21 @@
 .numbers {
-  border-bottom: 1px solid var(--xc-grey200);
+  align-items: end;
   display: flex;
-  padding: 32px 128px;
+  gap: 64px;
   justify-content: center;
+  padding-top: 12px;
   width: 100%;
-
+  @media screen and (max-width: 1510px) {
+    gap: 32px;
+    padding-top: 6px;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
   .value {
     align-items: end;
     background: transparent;
-
     display: flex;
     justify-content: center;
-    flex: 1;
     gap: 8px;
   }
 }
@@ -22,7 +26,10 @@
   justify-content: center;
   gap: 24px;
   padding-right: 18px;
-
+  @media screen and (max-width: 1440px) {
+    flex-direction: column;
+    width: 100%;
+  }
   .card {
     position: relative;
     flex: 1;
@@ -32,7 +39,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      height: 350px;
+    }
     &__background {
       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHTSbD3EVLf3-ZESsX9YbUIknHrUKG2jc8sA&s");
       background-size: cover;
@@ -70,8 +80,13 @@
     background: var(--xc-grey100);
     border-radius: 16px;
     display: flex;
-    width: 365px;
+    flex: 1;
     height: 250px;
+    @media screen and (max-width: 1440px) {
+      width: 100%;
+      height: 300px;
+      padding: 16px 0px;
+    }
     &:hover {
       border: 2px solid var(--xc-brand-medium-blue);
     }
@@ -101,15 +116,21 @@
   width: 100%;
 
   &-container {
-    background: transparent;
-    display: flex;
-    gap: 32px;
-    width: 100%;
-
+    display: grid;
+    grid-template-columns: 622px 1fr;
+    column-gap: 32px;
+    @media screen and (max-width: 1440px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
     .pie-graph {
       display: flex;
       width: 620px;
       height: 420px;
+      @media screen and (max-width: 1440px) {
+        width: 300px;
+        height: 200px;
+      }
       &-chart {
         width: 100%;
         height: 100%;
@@ -121,16 +142,28 @@
       display: flex;
       gap: 16px;
       flex: 1;
-
+      @media screen and (max-width: 1440px) {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
       &-data {
         align-items: start;
+        border-radius: var(--xc-rounded-eight);
+        border: 1px solid var(--xc-grey100);
         display: flex;
         flex-direction: column;
         gap: 16px;
-        border: 1px solid var(--xc-grey100);
         padding: 8px 16px;
-        border-radius: var(--xc-rounded-eight);
         height: min-content;
+        @media screen and (max-width: 1440px) {
+          justify-content: center;
+          width: 100%;
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 16px;
+          height: auto;
+        }
         .dot-data {
           display: flex;
           gap: 8px;
