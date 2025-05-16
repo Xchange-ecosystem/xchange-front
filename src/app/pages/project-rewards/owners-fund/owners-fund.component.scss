@@ -17,11 +17,11 @@
     flex-direction: column;
     gap: 24px;
     padding: 16px 32px;
-    height: calc(100% - 64px);
+    height: 100%;
     overflow-y: auto;
     width: 100%;
     @media (max-width: 1510px) {
-      height: calc(100% - 280px);
+      height: 95%;
     }
     .data {
       display: flex;
@@ -107,7 +107,86 @@
       padding: 0px 32px;
       gap: 32px;
       width: 100%;
+      @media (max-width: 1510px) {
+        padding: 0px;
+      }
+      &_actions {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .dropdown_wrapper {
+          position: relative;
+          display: inline-block;
+          z-index: 10;
 
+          .button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--xc-black500);
+            font-weight: 500;
+            color: var(--xc-black500);
+            .icon--active {
+              stroke: var(--xc-grey200);
+              fill: var(--xc-grey200);
+            }
+          }
+          .button--active {
+            border-color: var(--xc-grey200);
+          }
+          .text--active {
+            color: var(--xc-grey200);
+          }
+          .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--xc-white);
+            border-radius: 12px;
+            box-shadow: var(--xc-boxShadow-400);
+            z-index: 10;
+            min-width: 265px;
+            .button {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              padding: 8px 12px;
+              border-radius: 8px;
+              border: 1px solid transparent;
+              background: white;
+              font-weight: 500;
+              color: #999;
+              transition: border-color 0.2s;
+
+              &__icon {
+                stroke: #999;
+                stroke-width: 2;
+                width: 16px;
+                height: 16px;
+              }
+
+              &:hover {
+                cursor: pointer;
+                background-color: #f5f5f5;
+              }
+            }
+
+            .dropdown-item {
+              padding: 8px 16px;
+              font-size: 14px;
+              white-space: nowrap;
+
+              &:hover {
+                background-color: #f5f5f5;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
       &_wrapper {
         display: flex;
         width: 100%;
@@ -119,16 +198,19 @@
           width: 100%;
           &_row {
             display: grid;
-            grid-template-columns: 700px 160px 100px 100px 75px;
+            grid-template-columns: 700px 1fr 1fr 1fr 1fr 100px;
             gap: 16px;
             align-items: center;
-            padding: 8px 0px;
             @media (max-width: 1510px) {
-              grid-template-columns: 120px 80px 50px 50px 35px;
+              grid-template-columns: 100px 80px 50px 50px 35px 40px;
             }
           }
 
           &_cell {
+            padding: 6px;
+            @media (max-width: 1510px) {
+              padding: 4px;
+            }
             &-header {
               text-align: start;
               color: var(--xc-grey500);
@@ -137,6 +219,22 @@
             &-actions {
               display: flex;
               gap: 8px;
+            }
+
+            &-remove {
+              align-items: center;
+
+              display: flex;
+              gap: 4px;
+              padding: 12px;
+              width: 100%;
+              &-icon {
+                display: flex;
+                width: 16px;
+                height: 16px;
+                stroke: var(--xc-black500);
+                stroke-width: 2;
+              }
             }
           }
 
@@ -150,6 +248,10 @@
               height: 32px;
               object-fit: cover;
               border-radius: 50%;
+            }
+
+            span {
+              font-weight: 500;
             }
           }
 

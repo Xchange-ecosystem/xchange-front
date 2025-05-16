@@ -18,7 +18,7 @@
     flex-direction: column;
     gap: 24px;
     padding: 16px 32px;
-    height: calc(100% - 160px);
+    height: 95%;
     overflow-y: auto;
     width: 100%;
     @media (max-width: 1510px) {
@@ -197,7 +197,7 @@
           width: 100%;
           &_row {
             display: grid;
-            grid-template-columns: 700px 160px 100px 100px 75px 100px;
+            grid-template-columns: 700px 1fr 1fr 1fr 1fr 100px;
             gap: 16px;
             align-items: center;
             @media (max-width: 1510px) {
@@ -206,14 +206,13 @@
           }
 
           &_cell {
-            padding: 12px;
+            padding: 6px;
             @media (max-width: 1510px) {
               padding: 4px;
             }
             &-header {
               text-align: start;
               color: var(--xc-grey500);
-
             }
 
             &-actions {
