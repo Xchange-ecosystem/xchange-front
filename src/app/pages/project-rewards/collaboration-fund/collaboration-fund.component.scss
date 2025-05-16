@@ -1,11 +1,10 @@
 :host {
   display: flex;
   width: 100%;
-  height: calc(100% - 100px);
+  height: 100%;
   overflow-y: auto;
   @media (max-width: 1510px) {
     height: calc(100% - 280px);
-
   }
 }
 
@@ -13,45 +12,47 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  height: 100%;
   margin-left: 165px;
   margin-right: 165px;
-  height: calc(100% - 100px);
   @media (max-width: 1510px) {
-    height: calc(100% - 280px);
+    height: calc(100% - 120px);
     margin: 0px;
   }
   &-wrapper {
+    column-gap: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 32px;
+    height: calc(100% - 180px);
+    overflow: auto;
     @media (max-width: 1440px) {
       grid-template-columns: 1fr;
       row-gap: 32px;
     }
     .company_information {
+      align-items: flex-start;
       background: var(--xc-white);
       border-radius: var(--xc-rounded-eight);
       box-shadow: var(--xc-boxShadow-400);
       display: flex;
       flex-direction: column;
       gap: 24px;
-      padding: 24px;
-      align-items: flex-start;
       justify-content: flex-start;
+      padding: 24px;
       @media (max-width: 1440px) {
         padding: 12px;
       }
       &-header {
         align-items: center;
         display: flex;
-        width: 100%;
         height: 180px;
+        width: 100%;
         img {
           display: flex;
-          width: 100%;
           height: 100%;
-          padding: 22px 80px;
           object-fit: contain;
+          padding: 22px 80px;
+          width: 100%;
         }
       }
       &-form {
@@ -60,17 +61,17 @@
         gap: 24px;
         width: 100%;
         .field {
+          align-items: flex-start;
           display: flex;
           flex-direction: column;
           gap: 6px;
-          align-items: flex-start;
           width: 100%;
           input {
-            display: flex;
-            padding: 8px 11px;
             border: 1px solid var(--xc-grey200);
             border-radius: var(--xc-rounded-eight);
+            display: flex;
             outline: none;
+            padding: 8px 11px;
             width: 100%;
           }
         }
@@ -85,11 +86,11 @@
             flex-direction: column;
             gap: 8px;
             select {
-              display: flex;
-              padding: 8px 11px;
               border: 1px solid var(--xc-grey200);
               border-radius: var(--xc-rounded-eight);
+              display: flex;
               outline: none;
+              padding: 8px 11px;
               width: 100%;
             }
           }
@@ -98,53 +99,53 @@
           display: flex;
           gap: 16px;
           .street-field {
-            flex: 2;
+            align-items: flex-start;
             display: flex;
             flex-direction: column;
+            flex: 2;
             gap: 6px;
-            align-items: flex-start;
             width: 100%;
             @media screen and (max-width: 900px) {
               flex: 1;
             }
             input {
-              display: flex;
-              padding: 8px 11px;
               border: 1px solid var(--xc-grey200);
               border-radius: var(--xc-rounded-eight);
+              display: flex;
               outline: none;
+              padding: 8px 11px;
               width: 100%;
             }
           }
           .zip-field {
-            flex: 1;
+            align-items: flex-start;
             display: flex;
             flex-direction: column;
+            flex: 1;
             gap: 6px;
-            align-items: flex-start;
             width: 100%;
             input {
-              display: flex;
-              padding: 8px 11px;
               border: 1px solid var(--xc-grey200);
               border-radius: var(--xc-rounded-eight);
+              display: flex;
               outline: none;
+              padding: 8px 11px;
               width: 100%;
             }
           }
           .city-field {
-            flex: 1;
+            align-items: flex-start;
             display: flex;
             flex-direction: column;
+            flex: 1;
             gap: 6px;
-            align-items: flex-start;
             width: 100%;
             input {
-              display: flex;
-              padding: 8px 11px;
               border: 1px solid var(--xc-grey200);
               border-radius: var(--xc-rounded-eight);
+              display: flex;
               outline: none;
+              padding: 8px 11px;
               width: 100%;
             }
           }
@@ -154,33 +155,33 @@
           display: flex;
           gap: 8px;
           &-field {
+            align-items: flex-start;
             display: flex;
+            flex: 1;
             flex-direction: column;
             gap: 6px;
-            align-items: flex-start;
             width: 100%;
-            flex: 1;
             input {
-              display: flex;
-              padding: 8px 11px;
               border: 1px solid var(--xc-grey200);
               border-radius: var(--xc-rounded-eight);
+              display: flex;
               outline: none;
+              padding: 8px 11px;
               width: 100%;
             }
           }
           .upload-button {
-            display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 8px 11px;
             border: 1px solid var(--xc-black500);
             border-radius: 8px;
-            flex: 1;
-            height: min-content;
-            cursor: pointer;
             color: var(--xc-black500);
+            cursor: pointer;
+            display: flex;
+            flex: 1;
+            gap: 8px;
+            height: min-content;
+            justify-content: center;
+            padding: 8px 11px;
             input[type="file"] {
               display: none;
             }
@@ -192,15 +193,15 @@
           gap: 8px;
           width: 100%;
           .evidence {
-            display: flex;
             align-items: center;
+            display: flex;
             gap: 4px;
             &_remove {
               display: flex;
               &-icon {
+                fill: var(--xc-categories-blocked);
                 height: 12px;
                 stroke: var(--xc-categories-blocked);
-                fill: var(--xc-categories-blocked);
                 width: 12px;
               }
             }
@@ -214,26 +215,26 @@
       flex-direction: column;
       gap: 24px;
       &_wrapper {
+        align-items: flex-start;
         background: var(--xc-white);
         border-radius: var(--xc-rounded-eight);
         box-shadow: var(--xc-boxShadow-400);
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: 24px;
-        align-items: flex-start;
         justify-content: flex-start;
+        padding: 24px;
         &-header {
           align-items: center;
           display: flex;
-          width: 100%;
           height: 180px;
+          width: 100%;
           img {
             display: flex;
-            width: 100%;
             height: 100%;
-            padding: 22px 80px;
             object-fit: contain;
+            padding: 22px 80px;
+            width: 100%;
           }
         }
         &-form {
@@ -246,12 +247,12 @@
             gap: 8px;
             width: 100%;
             input {
-              flex: 1;
-              display: flex;
               border: 1px solid var(--xc-grey100);
               border-radius: var(--xc-rounded-eight);
-              padding: 8px 11px;
+              display: flex;
               outline: none;
+              padding: 8px 11px;
+              flex: 1;
             }
           }
         }
@@ -277,8 +278,8 @@
 .collaboration_fund {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 100%;
+  width: 100%;
   &-wrapper {
     align-items: center;
     background: var(--xc-white);
@@ -287,26 +288,26 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 16px 32px;
-    height: calc(100% - 120px);
+    height: calc(100% - 60px);
     overflow-y: auto;
+    padding: 16px 32px;
     width: 100%;
     @media (max-width: 1510px) {
       height: calc(100% - 280px);
       padding: 16px 16px;
     }
     .data {
-      display: flex;
       align-items: end;
-      padding-top: 12px;
-      justify-content: center;
-      width: 100%;
+      display: flex;
       gap: 64px;
+      justify-content: center;
+      padding-top: 12px;
+      width: 100%;
       @media screen and (max-width: 1510px) {
-        gap: 32px;
-        padding-top: 6px;
         flex-wrap: wrap;
+        gap: 32px;
         justify-content: start;
+        padding-top: 6px;
       }
       &-wrapper {
         align-items: flex-end;
@@ -314,86 +315,98 @@
         gap: 8px;
       }
     }
-    .separator {
-      height: 1.5px;
-      border-bottom: 1px solid var(--xc-grey100);
-      width: 100%;
-    }
     .graphs {
       display: flex;
       flex-direction: column;
       gap: 16px;
       width: 100%;
+      .dots-graph {
+        align-items: center;
+        display: flex;
+        height: 320px;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        @media (max-width: 1510px) {
+          width: 100%;
+        }
+        &-image {
+          display: block;
+          height: 100%;
+          object-fit: contain;
+          width: 100%;
+        }
+      }
       &_container {
+        column-gap: 32px;
         display: grid;
         grid-template-columns: 620px 1fr;
-        column-gap: 32px;
         @media (max-width: 1510px) {
           align-self: center;
+          column-gap: 0;
           grid-template-columns: 1fr;
           row-gap: 8px;
-          column-gap: 0;
         }
-        .pie-graph,
-        .dots-graph {
-          display: flex;
+        .dots-graph,
+        .pie-graph {
           align-items: center;
-          justify-content: center;
+          display: flex;
           height: 320px;
+          justify-content: center;
           overflow: hidden;
         }
-
         .pie-graph {
           width: 500px;
           @media (max-width: 1510px) {
             width: 350px;
           }
           &-image {
-            width: 100%;
+            display: block;
             height: 100%;
             object-fit: contain;
-            display: block;
+            width: 100%;
           }
         }
       }
-
-      .dots-graph {
-        width: 100%;
-        @media (max-width: 1510px) {
-          width: 100%;
-        }
-        &-image {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          display: block;
-        }
-      }
+    }
+    .separator {
+      border-bottom: 1px solid var(--xc-grey100);
+      height: 1.5px;
+      width: 100%;
     }
     .table {
       display: flex;
       flex-direction: column;
-      padding: 0px 32px;
       gap: 32px;
+      padding: 0px 32px;
       width: 100%;
       @media (max-width: 1510px) {
         padding: 0px;
       }
       &_wrapper {
+        border-radius: var(--xc-rounded-eight);
         display: flex;
         width: 100%;
-        border-radius: var(--xc-rounded-eight);
-
         .investment-table {
           border-collapse: separate;
           margin-right: auto;
           width: 100%;
+          &_cell {
+            padding: 12px;
+            &-actions {
+              display: flex;
+              gap: 8px;
+            }
+            &-header {
+              color: var(--xc-grey500);
+              text-align: start;
+            }
+          }
           &_row {
-            display: grid;
-            grid-template-columns: 700px 160px 100px 100px 75px;
-            gap: 16px;
             align-items: center;
-
+            display: grid;
+            gap: 16px;
+            grid-template-columns: 700px 160px 100px 100px 75px;
             @media (max-width: 900px) {
               grid-template-columns: 80px 50px 50px 50px 35px;
             }
@@ -401,88 +414,63 @@
               grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             }
           }
-
-          &_cell {
-            padding: 12px;
-
-            &-header {
-              text-align: start;
-              color: var(--xc-grey500);
-            }
-
-            &-actions {
-              display: flex;
-              gap: 8px;
-            }
-          }
-
-          &__name {
-            display: flex;
+          &__button {
             align-items: center;
-            gap: 12px;
-
-            .investment-table__avatar {
-              width: 32px;
-              height: 32px;
-              object-fit: cover;
-              border-radius: 50%;
-              @media (max-width: 800px) {
-                display: none;
+            border: none;
+            display: flex;
+            gap: 4px;
+            padding: 6px 12px;
+            .icon {
+              display: flex;
+              height: 16px;
+              stroke: var(--xc-black500);
+              width: 16px;
+            }
+            &-suspend {
+              background-color: #ffe1e1;
+              &:hover {
+                background-color: #ffbfbf;
               }
             }
-
-            span {
-              font-weight: 500;
-            }
           }
-
           &__growth {
-            display: flex;
             align-items: center;
+            display: flex;
             gap: 4px;
-
             .green,
             .red,
             .yellow {
-              width: 16px;
               height: 16px;
+              width: 16px;
             }
-
             .green {
               stroke: var(--xc-categories-completed);
             }
-
             .red {
               stroke: var(--xc-categories-blocked);
               transform: rotate(90deg);
             }
-
             .yellow {
               stroke: var(--xc-categories-yellow-filter);
               transform: rotate(45deg);
             }
           }
-
-          &__button {
-            display: flex;
+          &__name {
             align-items: center;
-            padding: 6px 12px;
-            border: none;
-            gap: 4px;
-
-            &-suspend {
-              background-color: #ffe1e1;
-
-              &:hover {
-                background-color: #ffbfbf;
+            display: flex;
+            gap: 12px;
+            .investment-table__avatar {
+              border-radius: 50%;
+              display: block;
+              height: 32px;
+              object-fit: cover;
+              width: 32px;
+              @media (max-width: 800px) {
+                display: none;
               }
             }
-
-            .icon {
-              display: flex;
-              width: 16px;
-              height: 16px;
-              stroke: var(--xc-black500);
+            span {
+              font-weight: 500;
             }
           }
         }
@@ -491,13 +479,14 @@
   }
 }
 
+
 .fund_reserve {
-  position: fixed;
-  inset: 0;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
+  inset: 0;
   justify-content: center;
+  position: fixed;
   z-index: 20;
   &-modal {
     display: flex;

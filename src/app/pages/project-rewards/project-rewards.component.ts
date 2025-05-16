@@ -6,12 +6,13 @@ import { RewardsHeaderComponent } from './rewards-header/rewards-header.componen
 import { CollaborationFundComponent } from './collaboration-fund/collaboration-fund.component';
 import { EmployeeFundComponent } from './employee-fund/employee-fund.component';
 import { OwnersFundComponent } from './owners-fund/owners-fund.component';
+import { DefaultPageComponent } from "./default-page/default-page.component";
 
 @Component({
   selector: 'app-project-rewards',
   standalone: true,
   imports: [
-    NgIf, 
+    NgIf,
     NgSwitchCase,
     NgSwitch,
     RewardsHeaderComponent,
@@ -19,7 +20,8 @@ import { OwnersFundComponent } from './owners-fund/owners-fund.component';
     XcIconPlusCircleComponent,
     EmployeeFundComponent,
     OwnersFundComponent,
-  ],
+    DefaultPageComponent
+],
   templateUrl: './project-rewards.component.html',
   styleUrl: './project-rewards.component.scss',
 })

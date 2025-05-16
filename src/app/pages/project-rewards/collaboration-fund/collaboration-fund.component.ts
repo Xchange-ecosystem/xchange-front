@@ -22,6 +22,6 @@ import { CollaborationModalComponent } from './collaboration-modal/collaboration
   styleUrl: './collaboration-fund.component.scss'
 })
 export class CollaborationFundComponent {
-  isFundSet = false;
+  isFundSet = true;
   isFundReserve = false;
 }
