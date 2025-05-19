@@ -29,8 +29,9 @@ export class OnboardingComponent implements OnInit {
   public state: ViewStates = 'default';
   public switchViewService = inject(SwitchViewService);
   ngOnInit(): void {
-    this.switchViewService
-      .getViewState()
-      .subscribe((state) => (this.state = state));
+    this.switchViewService.getViewState().subscribe(state => this.state = state)
+  }
+  constructor () {
+    this.switchViewService.setViewState('default')
   }
 }
