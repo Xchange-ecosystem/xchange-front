@@ -1,1 +1,18 @@
-<app-stepper [activeStep]="0" [totalSteps]="steps"/>
+<section>
+    <header>
+        <button (click)="goBack()">
+            <xc-icon-arrow-left class="btn__icon"/>
+            <b>Back</b>
+        </button>
+        <button class="btn" (click)="nextStep()">
+            <p>Next</p>
+        </button>
+    </header>
+</section>
+
+
+
+<app-stepper
+  [totalSteps]="steps"
+  [(activeStep)]="activeStep"
+></app-stepper>

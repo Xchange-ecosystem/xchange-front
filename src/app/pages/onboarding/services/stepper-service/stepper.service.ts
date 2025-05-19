@@ -7,7 +7,7 @@ import { SwitchViewService, ViewStates } from '../switch-view-service/switch-vie
 export class StepperService {
   private readonly stepsDirectory: Record<ViewStates, number> = {
     default: 0,
-    owner: 8,
+    owner: 5,
     collaborator: 5,
     investor: 7,
     operator: 6,
