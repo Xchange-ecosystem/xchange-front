@@ -19,5 +19,25 @@ import { CopyStylesDirective, HeadlineStylesDirective } from '@indziaki/ngx-xcha
 export class ForgotPasswordComponent {
   step = 1;
   private emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  form!: FormGroup;
 
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.form = this.fb.group({
+      email: [
+        '',
+        [ Validators.required,
+          Validators.pattern(this.emailRegex)
+        ]
+      ]
+    });
+  }
+  
+  changeStep() {
+    if (this.form.valid && this.step === 1) {
+      this.step++;
+      console.log('paso cambiado a', this.step);
+    }
+  }
 }

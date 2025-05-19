@@ -58,6 +58,10 @@ const routes: Routes = [
         path:'project-goals',
         loadComponent: () => import('src/app/pages/project-goals/project-goals.component').then(m => m.ProjectGoalsComponent),
       },
+      {
+        path:'forgot-password',
+        loadComponent: () => import('src/app/pages/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent),
+      }
     ],
   },
 ];
