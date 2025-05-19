@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   ViewStates,
 } from '../services/switch-view-service/switch-view.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
 
 @Component({
@@ -13,14 +13,24 @@ import { StepperService } from '../services/stepper-service/stepper.service';
   styleUrl: './owner-splash.component.scss',
 })
 export class OwnerSplashComponent implements OnInit {
-  stepCount$!: Observable<number>;
+
   steps = 0;
+
+  private sub!: Subscription;
 
   constructor(private stepperService: StepperService) {}
 
-  ngOnInit() {
-    this.stepperService.switchViewService.getViewState().subscribe(() => {
-      this.steps = this.stepperService.setStep();
+  ngOnInit(): void {
+
+    this.sub = this.stepperService.getStepCount$().subscribe(count => {
+      this.steps = count;
     });
+
+
+    this.steps = this.stepperService.getCurrentStepCount();
+  }
+
+  ngOnDestroy(): void {
+    this.sub?.unsubscribe();
   }
 }

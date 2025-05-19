@@ -17,10 +17,14 @@ import { XcIconAngleRightBComponent } from '@indziaki/ngx-xchange-icons';
   styleUrl: './default-splash.component.scss'
 })
 export class DefaultSplashComponent {
-  currentStep = 2;
+  currentStep = 1;
   private switchViewService = inject(SwitchViewService);
 
   changeState(state: ViewStates) {
     this.switchViewService.setViewState(state);
+  }
+
+  changeDefaultStep() {
+    this.currentStep = 2;
   }
 }

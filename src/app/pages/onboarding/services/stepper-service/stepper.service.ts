@@ -1,33 +1,28 @@
-import { inject, Injectable } from '@angular/core';
-import {
-  SwitchViewService,
-  ViewStates,
-} from '../switch-view-service/switch-view.service';
+import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { SwitchViewService, ViewStates } from '../switch-view-service/switch-view.service';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class StepperService {
-  public switchViewService = inject(SwitchViewService);
-  state: ViewStates = 'default';
-
-  constructor() {
-    this.switchViewService.getViewState().subscribe((state) => {
-      this.state = state;
-    });
-  }
-
-  public stepsDirectory: Record<string, number> = {
-    "owner": 8,
-    "collaborator": 5,
-    "investor": 7,
-    "operator": 6,
+  private readonly stepsDirectory: Record<ViewStates, number> = {
+    default: 0,
+    owner: 8,
+    collaborator: 5,
+    investor: 7,
+    operator: 6,
   };
 
-  setStep() {
-    return this.stepsDirectory[this.state] ?? 0;
+  constructor(private switchViewService: SwitchViewService) {}
+
+  getStepCount$(): Observable<number> {
+    return this.switchViewService.getViewState().pipe(
+      map((state: ViewStates) => this.stepsDirectory[state] ?? 0) 
+    );
   }
-  getStepCount(state: ViewStates): number {
+
+  getCurrentStepCount(): number {
+    const state = this.switchViewService.getCurrentViewState();
     return this.stepsDirectory[state] ?? 0;
   }
 }

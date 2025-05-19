@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { StepperService } from '../services/stepper-service/stepper.service';
 
 @Component({
   selector: 'app-operator-splash',
@@ -9,4 +11,23 @@ import { Component } from '@angular/core';
 })
 export class OperatorSplashComponent {
 
+  steps = 0;
+
+
+  private sub!: Subscription;
+
+  constructor(private stepperService: StepperService) {}
+
+  ngOnInit(): void {
+    this.sub = this.stepperService.getStepCount$().subscribe(count => {
+      this.steps = count;
+    });
+
+
+    this.steps = this.stepperService.getCurrentStepCount();
+  }
+
+  ngOnDestroy(): void {
+    this.sub?.unsubscribe();
+  }
 }
