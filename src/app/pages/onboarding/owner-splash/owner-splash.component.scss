@@ -1,0 +1,8 @@
+.owner {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--xc-boxShadow-500);
+    border-radius: var(--xc-rounded-sixteen);
+    padding: 32px;
+    gap: 32px;
+}

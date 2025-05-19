@@ -1,11 +1,11 @@
 .stepper__circles {
   display: flex;
-  gap: 12px;
+  gap: 6px;
   margin-bottom: 16px;
 }
 .circle {
-  width: 28px;
-  height: 28px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--xc-grey100);
   display: flex;
@@ -13,6 +13,9 @@
   justify-content: center;
   font-size: 13px;
   &--active {
-    background: var(--xc-categories-completed);
+    background: #A4F8C0;
+    width: 8px;
+    height: 8px;
+
   }
 }

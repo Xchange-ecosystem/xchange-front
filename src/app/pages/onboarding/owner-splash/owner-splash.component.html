@@ -1,18 +1,24 @@
-<section>
-    <header>
-        <button (click)="goBack()">
-            <xc-icon-arrow-left class="btn__icon"/>
-            <b>Back</b>
-        </button>
-        <button class="btn" (click)="nextStep()">
-            <p>Next</p>
-        </button>
-    </header>
+<section class="owner">
+  <header class="owner_header">
+    <button (click)="goBack()">
+      <xc-icon-arrow-left class="btn__icon" />
+      <b>Back</b>
+    </button>
+    <h2>Let’s set you up as an Owner, Fabian!</h2>
+  </header>
+  <article class="owner_content">
+    <div class="owner_content_wrapper">
+        <img src="assets/img/owner-splash-image-1.png" alt="owner-splash-1" class="owner_splash_wrapper-image" />
+    </div>
+    <p class="owner_content_text">Navigate your startup journey with AI-powered guidance that helps you reach milestones efficiently. Collaborate with the right experts and contributors, who earn reward credits that act like mini stock options—fairly compensating their efforts without the need for upfront payments. This system ensures you can focus on growth while your collaborators are motivated by shared success.</p>
+  </article>
+  <hr/>
+  <footer class="owner_footer">
+    <app-stepper [totalSteps]="steps" [(activeStep)]="activeStep"></app-stepper>
+    <button class="btn" (click)="nextStep()">
+      <p>Next</p>
+    </button>
+  </footer>
 </section>
 
 
-
-<app-stepper
-  [totalSteps]="steps"
-  [(activeStep)]="activeStep"
-></app-stepper>
