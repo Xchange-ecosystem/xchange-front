@@ -66,6 +66,10 @@ const routes: Routes = [
         path:'new-password',
         loadComponent: () => import('src/app/pages/new-password/new-password.component').then(m => m.NewPasswordComponent),
       },
+      {
+        path: 'project-rewards',
+        loadComponent: () => import('src/app/pages/project-rewards/project-rewards.component').then(m => m.ProjectRewardsComponent),
+      },
     ],
   },
 ];
@@ -74,4 +78,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PublicRoutingModule {}
+export class PublicRoutingModule { }
