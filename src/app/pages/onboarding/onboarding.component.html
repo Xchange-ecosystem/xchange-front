@@ -1,1 +1,9 @@
-<p>onboarding works!</p>
+<main class="onboarding">
+    <section class="onboarding_content" [ngSwitch]="state">
+        <app-default-splash *ngSwitchCase="'default'"/>
+        <app-collaborator-splash *ngSwitchCase="'collaborator'"/>
+        <app-owner-splash *ngSwitchCase="'owner'"/>
+        <app-operator-splash *ngSwitchCase="'operator'"/>
+        <app-investor-splash *ngSwitchCase="'investor'"/>
+    </section>
+</main>
