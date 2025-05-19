@@ -1,0 +1,27 @@
+<section class="card">
+  <header class="card_header">
+    <img src="assets/img/Send-message.png" alt="send-message-image" />
+</header>
+  <h2>Send a message to Fabian Feutlinske</h2>
+  <form class="card_message_form">
+    <label class="field">
+        <b>Subject</b>
+        <input type="text" placeholder="Please enter yout subject"/>
+    </label>
+    <label class="field">
+        <b>Your message</b>
+        <textarea class="textarea" cols="2" rows="6" placeholder="Please write your message"></textarea>
+    </label>
+    <div class="action_buttons">
+        <button class="btn" (click)="onClose()">
+            <xc-icon-times class="btn__icon-sm"/>
+            <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+            <xc-icon-send class="btn__icon_filled rotate"/>
+            <p>Suspend member</p>
+        </button>
+    </div>
+  </form>
+</section>
+<button (click)="onClose()">Cerrar</button>

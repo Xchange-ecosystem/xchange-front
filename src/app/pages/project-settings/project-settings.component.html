@@ -1,0 +1,9 @@
+<main class="settings">
+  <app-header-project-settings class="settings_header" />
+  <section class="settings_content" [ngSwitch]="tabState">
+    <app-apperance *ngSwitchCase="'Appearance'"/>
+    <app-legal *ngSwitchCase="'Legal'"/>
+    <app-credits *ngSwitchCase="'Credits'"/>
+    <app-members *ngSwitchCase="'Members'"/>
+  </section>
+</main>

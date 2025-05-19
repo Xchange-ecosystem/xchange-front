@@ -1,0 +1,14 @@
+<nav class="nav">
+  <div class="nav-wrapper">
+    <button
+      *ngFor="let sec of sections"
+      (click)="changeSection(sec)"
+      [ngClass]="{
+        'btn btn--tab_active': section === sec,
+        'btn btn--tab_inactive': section !== sec
+      }"
+    >
+      {{ sec }}
+    </button>
+  </div>
+</nav>

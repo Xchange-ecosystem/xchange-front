@@ -1,0 +1,76 @@
+<section class="members">
+  <h2>Manage the members of your project</h2>
+  <article class="members_section">
+    <table class="user-table">
+      <thead class="user-table_header">
+        <tr class="user-table_row">
+          <th class="user-table_cell user-table_cell-header">
+            <b class="text_400">Name</b>
+          </th>
+          <th class="user-table_cell user-table_cell-header">
+            <b class="text_400">Roles</b>
+          </th>
+          <th class="user-table_cell user-table_cell-header">
+            <b class="text_400">Status</b>
+          </th>
+          <th class="user-table_cell user-table_cell-header">
+            <b class="text_400">Actions</b>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="user-table_body">
+        <tr *ngFor="let user of users" class="user-table_row">
+          <td class="user-table_cell">
+            <b>{{ user.name }}</b>
+          </td>
+          <td class="user-table_cell">
+            <span xcProfileTags="gray">{{ user.roles }}</span>
+          </td>
+          <td class="user-table_cell">
+            <span
+              [xcProfileTags]="
+                user.status === 'Accepted'
+                  ? 'green'
+                  : user.status === 'Suspended'
+                  ? 'gray'
+                  : 'yellow'
+              "
+            >
+              {{ user.status }}
+            </span>
+          </td>
+          <td class="user-table_cell user-table_cell-actions">
+            <button
+              class="user-table_button"
+            >
+              <xc-icon-eye class="icon" />
+              <p class="bold">View Profile</p>
+            </button>
+            <button
+              (click)="openMessageModal()"
+              class="user-table_button"
+            >
+              <xc-icon-envelope class="icon" />
+              <p class="bold">Send Email</p>
+            </button>
+            <button
+              (click)="openSuspendModal()"
+              class="user-table_button"
+            >
+              <xc-icon-ban class="icon" />
+              <p class="bold">Suspend</p>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</section>
+
+<section *ngIf="isSuspend" class="suspend_modal">
+  <app-suspend-modal class="suspend_modal-content" (close)="handleSuspendModalClose()"/>
+</section>
+
+<section *ngIf="isMesssage" class="message_modal">
+  <app-message-modal class="message_modal-content" (close)="handleMessageModalClose()"/>
+</section>

@@ -30,6 +30,26 @@ const routes: Routes = [
         path:'profile',
         loadComponent: () => import('src/app/pages/profile/profile.component').then(m => m.ProfileComponent),
       },
+      {
+        path:'dashboard',
+        loadComponent: () => import('src/app/pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
+      },
+      {
+        path:'ecosystem-admin',
+        loadComponent: () => import('src/app/pages/ecosystem-admin/ecosystem-admin.component').then(m => m.EcosystemAdminComponent),
+      },
+      {
+        path:'project-dashboard',
+        loadComponent: () => import('src/app/pages/project-dashboard/project-dashboard.component').then(m => m.ProjectDashboardComponent),
+      },
+      {
+        path:'project-settings',
+        loadComponent: () => import('src/app/pages/project-settings/project-settings.component').then(m => m.ProjectSettingsComponent),
+      },
+      {
+        path:'project-goals',
+        loadComponent: () => import('src/app/pages/project-goals/project-goals.component').then(m => m.ProjectGoalsComponent),
+      },
     ],
   },
 ];
