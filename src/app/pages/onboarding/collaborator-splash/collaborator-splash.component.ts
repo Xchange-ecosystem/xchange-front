@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { StepperService } from '../services/stepper-service/stepper.service';
 import { Subscription } from 'rxjs';
+import { StepperComponent } from "../stepper/stepper.component";
 
 @Component({
   selector: 'app-collaborator-splash',
   standalone: true,
-  imports: [],
+  imports: [StepperComponent],
   templateUrl: './collaborator-splash.component.html',
   styleUrl: './collaborator-splash.component.scss'
 })

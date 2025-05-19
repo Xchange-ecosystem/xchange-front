@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
+import { StepperComponent } from '../stepper/stepper.component';
 
 @Component({
   selector: 'app-investor-splash',
   standalone: true,
-  imports: [],
+  imports: [StepperComponent],
   templateUrl: './investor-splash.component.html',
   styleUrl: './investor-splash.component.scss'
 })

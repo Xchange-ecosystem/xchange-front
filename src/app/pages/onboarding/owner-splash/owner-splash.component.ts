@@ -1,36 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  ViewStates,
-} from '../services/switch-view-service/switch-view.service';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
+import { StepperComponent } from '../stepper/stepper.component';
+import { XcIconArrowLeftComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'app-owner-splash',
   standalone: true,
-  imports: [],
+  imports: [
+    StepperComponent,
+    XcIconArrowLeftComponent
+  ],
   templateUrl: './owner-splash.component.html',
-  styleUrl: './owner-splash.component.scss',
+  styleUrls: ['./owner-splash.component.scss'],
 })
 export class OwnerSplashComponent implements OnInit {
-
   steps = 0;
-
+  activeStep = 0;
+  stepsArray: number[] = [];
   private sub!: Subscription;
 
-  constructor(private stepperService: StepperService) {}
+
+  constructor(private stepperSrv: StepperService) {}
 
   ngOnInit(): void {
-
-    this.sub = this.stepperService.getStepCount$().subscribe(count => {
-      this.steps = count;
+    this.sub = this.stepperSrv.getStepCount$().subscribe(cnt => {
+      this.steps = cnt;
+      this.stepsArray = Array.from({ length: cnt });
+      this.activeStep = 0;
     });
-
-
-    this.steps = this.stepperService.getCurrentStepCount();
-  }
-
-  ngOnDestroy(): void {
-    this.sub?.unsubscribe();
   }
 }
