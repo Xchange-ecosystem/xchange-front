@@ -67,13 +67,13 @@
 }
 
 .btn--rounded_xl{
-    background:var(--xc-gradient-light-grey-on-white);
+    background:var(--xc-white);
     border-radius: 50%;
     border: none;
     height: 56px;
     width: 56px;
     &:hover{
-        background: var(--grey-200);
+        background: var(--xc-grey300);
     }
 }
 

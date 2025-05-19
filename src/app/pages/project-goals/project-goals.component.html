@@ -1,0 +1,21 @@
+<main class="goals">
+    <header class="goals_header">
+        <img src="assets/img/Goals-header.png" alt="goals-header-image" class="goals_header_img">
+    </header>
+    <section class="goals_content">
+        <div class="goals_content_add">
+            <h2>Goals related to Next Gen LLL – Xchange Studio Project</h2>
+            <button (click)="openNewGoalModal()">
+                <xc-icon-plus class="btn__icon"/>
+            </button>
+        </div>
+        <article class="goals_content_injector">
+            <app-goals-dropdown/>
+            <app-goals-dropdown/>
+        </article>
+    </section>
+</main>
+
+<section *ngIf="isNewGoal">
+    <app-new-goal-modal (close)="handleNewGoalModalClose()"/>
+</section>

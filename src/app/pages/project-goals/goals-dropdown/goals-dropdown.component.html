@@ -1,0 +1,93 @@
+<section class="dropdown">
+  <article class="dropdown_card">
+    <div class="dropdown_card-header" (click)="toggleDropdown()">
+      <span class="dropdown_card-icon" [ngClass]="{ 'is-open': dropdownOpen }">
+        <xc-icon-play class="arrow" />
+      </span>
+      <h2 class="dropdown_card-title">Project Title</h2>
+    </div>
+
+    <div class="dropdown_card-progress">
+      <xc-project-progress-bar [completed]="3" [objectivesInProject]="24" [open]="5" />
+    </div>
+
+    <div class="dropdown_card-description" *ngIf="dropdownOpen">
+      <div class="dropdown_card-description-text">
+        <p>
+          Develop a functional and engaging MVP for NextGen, called Challenga,
+          focused on showcasing core features and the unique value proposition
+          of the platform. The MVP should effectively demonstrate how NextGen
+          solves key user needs in a Social Media app. Lorem ipsum dolor sit
+          amet...
+          <button (click)="openDescription()" class="dropdown_card-description-btn">
+            <b>Read more</b>
+          </button>
+        </p>
+      </div>
+    </div>
+
+    <div class="dropdown_card-info">
+      <span class="dropdown_card-owner">
+        <xc-rounded-image [image]="'assets/img/user-image-profile.png'" [marginSize]="0"
+          class="dropdown_card-owner-image" />
+        <p>Owned by John Doe</p>
+      </span>
+      <span class="dropdown_card-dates">
+        <xc-icon-calender class="icon" />
+        <span class="dropdown_card-dates-range">
+          <p>01.09.2024</p>
+          -
+          <p>30.11.2024</p>
+        </span>
+      </span>
+    </div>
+  </article>
+  <article class="dropdown_content" *ngIf="dropdownOpen">
+    <div class="objective_complete">
+      <h2>Objective Title</h2>
+      <div class="objective_complete_content">
+        <span class="objective_complete_content_tags">
+          <p xcProfileTags="gray">Dimension</p>
+          <p xcProfileTags="gray">Category</p>
+          <p xcProfileTags="gray">Phase</p>
+        </span>
+        <button class="action">
+          <b>x Dissmiss</b>
+        </button>
+      </div>
+    </div>
+    <div class="objective_open">
+      <h2>Objective Title</h2>
+      <div class="objective_open_content">
+        <span class="objective_open_content_tags">
+          <p xcProfileTags="gray">Dimension</p>
+          <p xcProfileTags="gray">Category</p>
+          <p xcProfileTags="gray">Phase</p>
+        </span>
+        <button class="action">
+          <b>x Dissmiss</b>
+        </button>
+      </div>
+    </div>
+    <div class="objective_general">
+      <h2>Objective Title</h2>
+      <div class="objective_general_content">
+        <span class="objective_general_content_tags">
+          <p xcProfileTags="gray">Dimension</p>
+          <p xcProfileTags="gray">Category</p>
+          <p xcProfileTags="gray">Phase</p>
+        </span>
+        <button class="action">
+          <b>x Dissmiss</b>
+        </button>
+      </div>
+    </div>
+    <div class="dropdown_content-select">
+      <app-objectives-dropdown class="dropdown_content-select-component" />
+    </div>
+  </article>
+</section>
+
+<section *ngIf="isDescription">
+  <app-description-modal (close)="handleDescritionModalClose()" />
+</section>
