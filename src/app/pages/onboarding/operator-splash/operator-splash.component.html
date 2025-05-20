@@ -1,18 +1,159 @@
-<section>
-    <header>
-        <button (click)="goBack()">
-            <xc-icon-arrow-left class="btn__icon"/>
-            <b>Back</b>
-        </button>
-        <button class="btn" (click)="nextStep()">
-            <p>Next</p>
-        </button>
-    </header>
+<section class="operator">
+  <header class="operator_header">
+    <button (click)="goBack()" class="operator_header-back">
+      <xc-icon-arrow-left class="btn__icon" />
+      <b>Back</b>
+    </button>
+    <div class="operator_header-title">
+      <h2>Let’s set you up as an Operator, Fabian!</h2>
+    </div>
+    <div class="investor_header-tag" *ngIf="activeStep === 0">
+      <span xcProfileTags="purple">Premium</span>
+    </div>
+  </header>
+  <ng-container *ngIf="activeStep === 0">
+    <article class="operator_content">
+      <div class="operator_content_wrapper">
+        <img
+          src="assets/img/operator-splash-1.png"
+          alt="operator-splash-1"
+          class="operator_splash_wrapper-image"
+        />
+      </div>
+      <p class="operator_content_text">
+        Invite and engage potential startups with ease, allowing them to
+        automatically qualify for your programs and cohorts based on real-time
+        operational data. Say goodbye to traditional pitch decks and application
+        forms — let data-driven insights determine the best fit for your
+        ecosystem.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 1">
+    <article class="operator_content">
+      <div class="operator_content_wrapper">
+        <img
+          src="assets/img/investor-splash-2.png"
+          alt="operator-splash-1"
+          class="operator_splash_wrapper-image"
+        />
+      </div>
+      <p class="operator_content_text">
+        Here’s how it works: Founders use AI to guide their startups through
+        milestones, collaborating with experts who earn reward credits for their
+        contributions. This generates live, real-time data that enables you to
+        track progress and provide transparent performance insights without
+        relying on static reports.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 2">
+    <article class="operator_content">
+      <div class="operator_content_wrapper">
+        @defer (on hover) {
+        <iframe
+          width="580"
+          height="370"
+          src="https://youtube.com/embed/5ZyiJFlJk4w"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="display: block; margin: auto"
+        ></iframe>
+        }@placeholder () {
+        <img src="assets/img/operator-placeholder-video.png" alt="loading" />
+        }
+      </div>
+      <p class="operator_content_text">
+        Watch the video walkthrough to explore tools for operators, including an
+        AI-assisted portfolio builder, operational startup dashboards, a mentor
+        community, and automated pitch decks—all designed to streamline your
+        management and support.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 3">
+    <form class="operator_content-profile">
+      <div class="operator_content-profile-header">
+        <h3>Profile Image</h3>
+        <span class="operator_content-profile-header-rounded">
+          <xc-rounded-image
+            [image]="'https://randomuser.me/api/portraits/men/21.jpg'"
+            class="operator_content-profile-header-rounded-image"
+          />
+        </span>
+      </div>
+      <div class="operator_content-profile-description">
+        <div class="description">
+          <h3>Description</h3>
+          <span class="description_ai">
+            <xc-icon-ai class="ai_icon" />
+            <b class="text_200"
+              >AI matches your skills with projects, templates and other
+              members. That’s why it’s important to build a strong profile</b
+            >
+          </span>
+        </div>
+        <div class="description_input">
+          <textarea
+            class="description_input-textarea"
+            cols="6"
+            rows="6"
+          ></textarea>
+          <span class="error_container">
+            <p class="error_container-message">Minimum 300 characters</p>
+          </span>
+        </div>
+        <div class="linkedin">
+          <b>Linkedin Profile Link</b>
+          <input type="text" class="linkedin_input" />
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 4">
+    <article class="operator_content-tags">
+      <div class="operator_content-tags-header">
+        <h3>Review your skill tags</h3>
+        <span class="description_ai">
+          <xc-icon-ai class="ai_icon" />
+          <b class="text_200"
+            >AI matches your skills with projects, templates and other members.
+            That’s why it’s important to build a strong profile</b
+          >
+        </span>
+      </div>
+      <div class="tags_injector">
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <xc-icon-times class="tag_icon" />
+        </span>
+      </div>
+      <span class="dot-split"></span>
+      <div class="add_tag">
+        <b>Add Tags</b>
+        <span class="add_tag_wrapper">
+          <input type="text" class="add_tag_wrapper-input" />
+          <xc-icon-plus-circle class="add_tag_wrapper-icon" />
+        </span>
+      </div>
+    </article>
+  </ng-container>
+  <hr />
+  <footer class="operator_footer">
+    <app-stepper
+      [totalSteps]="steps"
+      [(activeStep)]="activeStep"
+      class="operator_footer-stepper"
+    ></app-stepper>
+    <div class="action-btn">
+      <button class="btn next" *ngIf="activeStep < 4" (click)="nextStep()">
+        <p>Next</p>
+      </button>
+      <button class="btn btn--filled" *ngIf="activeStep === 4">
+        <p>Finish</p>
+      </button>
+    </div>
+  </footer>
 </section>
-
-
-
-<app-stepper
-  [totalSteps]="steps"
-  [(activeStep)]="activeStep"
-></app-stepper>

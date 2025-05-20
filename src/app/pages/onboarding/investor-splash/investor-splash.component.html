@@ -50,16 +50,20 @@
   <ng-container *ngIf="activeStep === 2">
     <article class="investor_content">
       <div class="investor_content_wrapper">
+        @defer (on hover) {
         <iframe
           width="580"
           height="370"
-          src="https://youtu.be/n1NKatzoPQw"
+          src="https://youtube.com/embed/n1NKatzoPQw"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           style="display: block; margin: auto"
         ></iframe>
+        }@placeholder () {
+        <img src="assets/img/investor-placeholder-video.png" alt="loading" />
+        }
       </div>
       <p class="investor_content_text">
         Watch the video walkthrough to explore tools for investors, including an

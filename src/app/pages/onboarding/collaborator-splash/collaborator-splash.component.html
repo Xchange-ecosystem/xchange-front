@@ -149,10 +149,10 @@
       class="collaborator_footer-stepper"
     ></app-stepper>
     <div class="action-btn">
-      <button class="btn next" *ngIf="activeStep < 4" (click)="nextStep()">
+      <button class="btn next" *ngIf="activeStep < 3" (click)="nextStep()">
         <p>Next</p>
       </button>
-      <button class="btn btn--filled" *ngIf="activeStep === 4">
+      <button class="btn btn--filled" *ngIf="activeStep === 3">
         <p>Finish</p>
       </button>
     </div>

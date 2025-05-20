@@ -2,15 +2,23 @@ import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
 import { StepperComponent } from "../stepper/stepper.component";
-import { XcIconArrowLeftComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
 import { SwitchViewService } from '../services/switch-view-service/switch-view.service';
+import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-operator-splash',
   standalone: true,
   imports: [
-    StepperComponent,
-    XcIconArrowLeftComponent
+    StepperComponent, 
+    XcIconArrowLeftComponent,
+    NgIf,
+    RoundedImageModule,
+    XcIconAIComponent,
+    ProfileTagsDirective,
+    XcIconTimesComponent,
+    XcIconPlusCircleComponent
   ],
   templateUrl: './operator-splash.component.html',
   styleUrl: './operator-splash.component.scss'

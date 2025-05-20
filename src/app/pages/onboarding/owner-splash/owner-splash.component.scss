@@ -16,6 +16,7 @@
     justify-content: space-between;
     width: 100%;
     &-back {
+      align-items: center;
       display: flex;
       gap: 4px;
     }
@@ -33,7 +34,7 @@
     flex-direction: column;
     width: 100%;
     &_wrapper {
-      width: 470px;
+      width: 580px;
       height: 370px;
       &-image {
         display: flex;
@@ -130,7 +131,7 @@
       flex-direction: column;
       gap: 24px;
       width: 100%;
-      
+
       &-header {
         display: flex;
         gap: 4px;
@@ -213,6 +214,15 @@
       align-items: center;
       justify-content: center;
       display: flex;
+    }
+    .action-btn {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      button {
+        width: 200px;
+        display: flex;
+      }
     }
   }
 }

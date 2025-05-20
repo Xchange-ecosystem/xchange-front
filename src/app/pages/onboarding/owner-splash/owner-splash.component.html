@@ -14,7 +14,7 @@
         <img
           src="assets/img/owner-splash-image-1.png"
           alt="owner-splash-1"
-          class="owner_splash_wrapper-image"
+          class="owner_content_wrapper-image"
         />
       </div>
       <p class="owner_content_text">
@@ -33,7 +33,7 @@
         <img
           src="assets/img/owner-splash-image-2.png"
           alt="owner-splash-1"
-          class="owner_splash_wrapper-image"
+          class="owner_content_wrapper-image"
         />
       </div>
       <p class="owner_content_text">
@@ -49,6 +49,7 @@
   <ng-container *ngIf="activeStep === 2">
     <article class="owner_content">
       <div class="owner_content_wrapper">
+        @defer (on hover) {
         <iframe
           width="580"
           height="370"
@@ -59,6 +60,9 @@
           allowfullscreen
           style="display: block; margin: auto"
         ></iframe>
+        }@placeholder () {
+        <img src="assets/img/owner-placeholder-video.png" alt="loading" />
+        }
       </div>
       <p class="owner_content_text">
         The navigation system generates live, real-time data about your

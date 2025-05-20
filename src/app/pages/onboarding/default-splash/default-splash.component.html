@@ -14,15 +14,19 @@
       </header>
       <div class="default_splash-content">
         <div class="default_splash-content-video">
+          @defer (on hover) {
           <iframe
-            width="560"
-            height="360"
+            width="580"
+            height="370"
             src="https://xchangeprod.blob.core.windows.net/xcamp/Xcamp"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
+          }@placeholder () {
+          <img src="assets/images/loading.gif" alt="loading" />
+          }
         </div>
         <p class="default_splash-content-text">
           On Xcamp, investors, and collaborators join together to thrive through

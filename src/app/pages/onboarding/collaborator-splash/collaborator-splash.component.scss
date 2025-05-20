@@ -9,7 +9,6 @@
   background: var(--xc-white);
   max-width: 1200px;
   min-width: 1100px;
-
   margin: auto;
   &_header {
     display: flex;
@@ -17,6 +16,7 @@
     justify-content: space-between;
     width: 100%;
     &-back {
+      align-items: center;
       display: flex;
       gap: 4px;
     }
@@ -213,6 +213,15 @@
       align-items: center;
       justify-content: center;
       display: flex;
+    }
+    .action-btn {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      button {
+        width: 200px;
+        display: flex;
+      }
     }
   }
 }
