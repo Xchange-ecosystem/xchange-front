@@ -25,6 +25,7 @@
       width: 100%;
       align-self: center;
       justify-content: center;
+      margin-right: 80px;
     }
   }
   &_content {
@@ -34,7 +35,7 @@
     flex-direction: column;
     width: 100%;
     &_wrapper {
-      width: 470px;
+      width: 580px;
       height: 370px;
       &-image {
         display: flex;

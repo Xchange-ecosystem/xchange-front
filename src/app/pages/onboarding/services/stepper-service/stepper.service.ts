@@ -8,7 +8,7 @@ export class StepperService {
   private readonly stepsDirectory: Record<ViewStates, number> = {
     default: 0,
     owner: 5,
-    collaborator: 4,
+    collaborator: 5,
     investor: 5,
     operator: 6,
   };

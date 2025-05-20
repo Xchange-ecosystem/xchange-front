@@ -47,6 +47,31 @@
     </article>
   </ng-container>
   <ng-container *ngIf="activeStep === 2">
+    <article class="collaborator_content">
+      <div class="collaborator_content_wrapper">
+        @defer (on hover) {
+        <iframe
+          width="580"
+          height="370"
+          src="https://youtube.com/embed/OHj4nikQcII"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="display: block; margin: auto"
+        ></iframe>
+        }@placeholder () {
+        <img src="assets/img/collaborator-splash-placeholder-video.png" alt="loading" />
+        }
+      </div>
+      <p class="collaborator_content_text">
+        Watch the video walkthrough to explore tools for collaborators,
+        including an AI-assisted feed that connects you to projects across the
+        entire ecosystem.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 3">
     <form class="collaborator_content-profile">
       <div class="collaborator_content-profile-header">
         <h3>Profile Image</h3>
@@ -85,7 +110,7 @@
       </div>
     </form>
   </ng-container>
-  <ng-container *ngIf="activeStep === 3">
+  <ng-container *ngIf="activeStep === 4">
     <article class="collaborator_content-tags">
       <div class="collaborator_content-tags-header">
         <h3>Review your skill tags</h3>
@@ -141,6 +166,7 @@
       </div>
     </article>
   </ng-container>
+
   <hr />
   <footer class="collaborator_footer">
     <app-stepper
