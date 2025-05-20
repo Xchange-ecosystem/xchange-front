@@ -1,10 +1,12 @@
 <section class="owner">
   <header class="owner_header">
-    <button (click)="goBack()">
+    <button (click)="goBack()" class="owner_header-back">
       <xc-icon-arrow-left class="btn__icon" />
       <b>Back</b>
     </button>
-    <h2>Let’s set you up as an Owner, Fabian!</h2>
+    <div class="owner_header-title">
+      <h2>Let’s set you up as an Owner, Fabian!</h2>
+    </div>
   </header>
   <article class="owner_content">
     <div class="owner_content_wrapper">
@@ -14,10 +16,12 @@
   </article>
   <hr/>
   <footer class="owner_footer">
-    <app-stepper [totalSteps]="steps" [(activeStep)]="activeStep"></app-stepper>
-    <button class="btn" (click)="nextStep()">
+    <app-stepper [totalSteps]="steps" [(activeStep)]="activeStep" class="owner_footer-stepper"></app-stepper>
+    <div class="action-btn">
+    <button class="btn next" (click)="nextStep()">
       <p>Next</p>
     </button>
+    </div>
   </footer>
 </section>
 
