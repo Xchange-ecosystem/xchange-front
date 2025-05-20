@@ -8,21 +8,152 @@
       <h2>Let’s set you up as an Owner, Fabian!</h2>
     </div>
   </header>
-  <article class="owner_content">
-    <div class="owner_content_wrapper">
-        <img src="assets/img/owner-splash-image-1.png" alt="owner-splash-1" class="owner_splash_wrapper-image" />
+  <ng-container *ngIf="activeStep === 0">
+    <article class="owner_content">
+      <div class="owner_content_wrapper">
+        <img
+          src="assets/img/owner-splash-image-1.png"
+          alt="owner-splash-1"
+          class="owner_splash_wrapper-image"
+        />
+      </div>
+      <p class="owner_content_text">
+        Navigate your startup journey with AI-powered guidance that helps you
+        reach milestones efficiently. Collaborate with the right experts and
+        contributors, who earn reward credits that act like mini stock
+        options—fairly compensating their efforts without the need for upfront
+        payments. This system ensures you can focus on growth while your
+        collaborators are motivated by shared success.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 1">
+    <article class="owner_content">
+      <div class="owner_content_wrapper">
+        <img
+          src="assets/img/owner-splash-image-2.png"
+          alt="owner-splash-1"
+          class="owner_splash_wrapper-image"
+        />
+      </div>
+      <p class="owner_content_text">
+        The navigation system generates live, real-time data about your
+        startup’s progress, giving you valuable insights at every step. With
+        this living business plan, you can easily find the resources,
+        collaborators, and opportunities you need while gaining the confidence
+        of investors and mentors, thanks to transparent, AI-backed performance
+        tracking.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 2">
+    <article class="owner_content">
+      <div class="owner_content_wrapper">
+        <iframe
+          width="470"
+          height="370"
+          src="https://www.youtube.com/embed/i5O1-fFC5k0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="display: block; margin: auto"
+        ></iframe>
+      </div>
+      <p class="owner_content_text">
+        The navigation system generates live, real-time data about your
+        startup’s progress, giving you valuable insights at every step. With
+        this living business plan, you can easily find the resources,
+        collaborators, and opportunities you need while gaining the confidence
+        of investors and mentors, thanks to transparent, AI-backed performance
+        tracking.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 3">
+    <form class="owner_content-profile">
+      <div class="owner_content-profile-header">
+        <h3>Profile Image</h3>
+        <span class="owner_content-profile-header-rounded">
+          <xc-rounded-image
+            [image]="'https://randomuser.me/api/portraits/men/21.jpg'"
+            class="owner_content-profile-header-rounded-image"
+          />
+        </span>
+      </div>
+      <div class="owner_content-profile-description">
+        <div class="description">
+          <h3>Description</h3>
+          <span class="description_ai">
+            <xc-icon-ai class="ai_icon" />
+            <b class="text_200"
+              >AI matches your skills with projects, templates and other
+              members. That’s why it’s important to build a strong profile</b
+            >
+          </span>
+        </div>
+        <div class="description_input">
+          <textarea
+            class="description_input-textarea"
+            cols="6"
+            rows="6"
+          ></textarea>
+          <span class="error_container">
+            <p class="error_container-message">Minimum 300 characters</p>
+          </span>
+        </div>
+        <div class="linkedin">
+          <b>Linkedin Profile Link</b>
+          <input type="text" class="linkedin_input" />
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 4">
+    <article class="owner_content-tags">
+      <div class="owner_content-tags-header">
+        <h3>Review your skill tags</h3>
+        <span class="description_ai">
+          <xc-icon-ai class="ai_icon" />
+          <b class="text_200"
+            >AI matches your skills with projects, templates and other members.
+            That’s why it’s important to build a strong profile</b
+          >
+        </span>
+      </div>
+      <div class="tags_injector">
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <xc-icon-times class="tag_icon" />
+        </span>
+      </div>
+    </article>
+    <span class="dot-split"></span>
+    <div class="add_tag">
+      <b>Add Tags</b>
+      <span class="add_tag_wrapper">
+        <xc-icon-plus-circle class="add_tag-icon"/>
+        <input type="text" class="add_tag_input" />
+      </span>
     </div>
-    <p class="owner_content_text">Navigate your startup journey with AI-powered guidance that helps you reach milestones efficiently. Collaborate with the right experts and contributors, who earn reward credits that act like mini stock options—fairly compensating their efforts without the need for upfront payments. This system ensures you can focus on growth while your collaborators are motivated by shared success.</p>
-  </article>
-  <hr/>
+  </ng-container>
+  <hr />
   <footer class="owner_footer">
-    <app-stepper [totalSteps]="steps" [(activeStep)]="activeStep" class="owner_footer-stepper"></app-stepper>
+    <app-stepper
+      [totalSteps]="steps"
+      [(activeStep)]="activeStep"
+      class="owner_footer-stepper"
+    ></app-stepper>
     <div class="action-btn">
-    <button class="btn next" (click)="nextStep()">
-      <p>Next</p>
-    </button>
+      <button class="btn next" *ngIf="activeStep < 4" (click)="nextStep()">
+        <p>Next</p>
+      </button>
+      <button
+        class="btn btn--filled"
+        *ngIf="activeStep === 4"
+      >
+        <p>Finish</p>
+      </button>
     </div>
   </footer>
 </section>
-
-

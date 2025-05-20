@@ -2,13 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
 import { StepperComponent } from '../stepper/stepper.component';
-import { XcIconArrowLeftComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
 import { SwitchViewService } from '../services/switch-view-service/switch-view.service';
+import { NgIf } from '@angular/common';
+import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 
 @Component({
   selector: 'app-owner-splash',
   standalone: true,
-  imports: [StepperComponent, XcIconArrowLeftComponent],
+  imports: [
+    StepperComponent, 
+    XcIconArrowLeftComponent,
+    NgIf,
+    RoundedImageModule,
+    XcIconAIComponent,
+    ProfileTagsDirective,
+    XcIconTimesComponent,
+    XcIconPlusCircleComponent
+  ],
   templateUrl: './owner-splash.component.html',
   styleUrls: ['./owner-splash.component.scss'],
 })
