@@ -182,7 +182,19 @@
           align-items: center;
           width: 100%;
           border: 1px solid var(--xc-grey200);
-          border-radius: ;
+          border-radius: var(--xc-rounded-eight);
+          padding: 10px;
+          &-input {
+            display: flex;
+            width: 100%;
+            outline: none;
+          }
+          &-icon {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            stroke: var(--xc-black500);
+          }
         }
       }
     }
