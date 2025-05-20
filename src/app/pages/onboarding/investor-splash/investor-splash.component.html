@@ -1,18 +1,155 @@
-<section>
-    <header>
-        <button (click)="goBack()">
-            <xc-icon-arrow-left class="btn__icon"/>
-            <b>Back</b>
-        </button>
-        <button class="btn" (click)="nextStep()">
-            <p>Next</p>
-        </button>
-    </header>
+<section class="investor">
+  <header class="investor_header">
+    <button (click)="goBack()" class="investor_header-back">
+      <xc-icon-arrow-left class="btn__icon" />
+      <b>Back</b>
+    </button>
+    <div class="investor_header-title">
+      <h2>Let’s set you up as an Investor, Fabian!</h2>
+    </div>
+    <div class="investor_header-tag" *ngIf="activeStep === 0">
+      <span xcProfileTags="purple">Premium</span>
+    </div>
+  </header>
+  <ng-container *ngIf="activeStep === 0">
+    <article class="investor_content">
+      <div class="investor_content_wrapper">
+        <img
+          src="assets/img/investor-splash-1.png"
+          alt="investor-splash-1"
+          class="investor_splash_wrapper-image"
+        />
+      </div>
+      <p class="investor_content_text">
+        Let exciting projects come to you by matching directly with your
+        investment criteria, without the need for traditional pitch decks or
+        lengthy application forms. Xcamp's AI-driven platform streamlines the
+        process, saving you time and connecting you with high-potential startups
+        based on real-time data.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 1">
+    <article class="investor_content">
+      <div class="investor_content_wrapper">
+        <img
+          src="assets/img/investor-splash-2.png"
+          alt="investor-splash-1"
+          class="investor_splash_wrapper-image"
+        />
+      </div>
+      <p class="investor_content_text">
+        Here’s how it works: Founders use AI to navigate their startup journey
+        and reach milestones by collaborating with experts who earn reward
+        credits. This produces live, real-time data, giving you the insights you
+        need to track progress and confidently evaluate performance—no guesswork
+        involved.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 2">
+    <article class="investor_content">
+      <div class="investor_content_wrapper">
+        <iframe
+          width="580"
+          height="370"
+          src="https://youtu.be/n1NKatzoPQw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="display: block; margin: auto"
+        ></iframe>
+      </div>
+      <p class="investor_content_text">
+        Watch the video walkthrough to explore tools for investors, including an
+        AI-assisted portfolio builder, a dashboard for operational startup
+        metrics, automated pitch decks, and streamlined due diligence
+        processes—all designed to help you make data-driven decisions with ease.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 3">
+    <form class="investor_content-profile">
+      <div class="investor_content-profile-header">
+        <h3>Profile Image</h3>
+        <span class="investor_content-profile-header-rounded">
+          <xc-rounded-image
+            [image]="'https://randomuser.me/api/portraits/men/21.jpg'"
+            class="investor_content-profile-header-rounded-image"
+          />
+        </span>
+      </div>
+      <div class="investor_content-profile-description">
+        <div class="description">
+          <h3>Description</h3>
+          <span class="description_ai">
+            <xc-icon-ai class="ai_icon" />
+            <b class="text_200"
+              >AI matches your skills with projects, templates and other
+              members. That’s why it’s important to build a strong profile</b
+            >
+          </span>
+        </div>
+        <div class="description_input">
+          <textarea
+            class="description_input-textarea"
+            cols="6"
+            rows="6"
+          ></textarea>
+          <span class="error_container">
+            <p class="error_container-message">Minimum 300 characters</p>
+          </span>
+        </div>
+        <div class="linkedin">
+          <b>Linkedin Profile Link</b>
+          <input type="text" class="linkedin_input" />
+        </div>
+      </div>
+    </form>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 4">
+    <article class="investor_content-tags">
+      <div class="investor_content-tags-header">
+        <h3>Review your skill tags</h3>
+        <span class="description_ai">
+          <xc-icon-ai class="ai_icon" />
+          <b class="text_200"
+            >AI matches your skills with projects, templates and other members.
+            That’s why it’s important to build a strong profile</b
+          >
+        </span>
+      </div>
+      <div class="tags_injector">
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <xc-icon-times class="tag_icon" />
+        </span>
+      </div>
+      <span class="dot-split"></span>
+      <div class="add_tag">
+        <b>Add Tags</b>
+        <span class="add_tag_wrapper">
+          <input type="text" class="add_tag_wrapper-input" />
+          <xc-icon-plus-circle class="add_tag_wrapper-icon" />
+        </span>
+      </div>
+    </article>
+  </ng-container>
+  <hr />
+  <footer class="investor_footer">
+    <app-stepper
+      [totalSteps]="steps"
+      [(activeStep)]="activeStep"
+      class="investor_footer-stepper"
+    ></app-stepper>
+    <div class="action-btn">
+      <button class="btn next" *ngIf="activeStep < 4" (click)="nextStep()">
+        <p>Next</p>
+      </button>
+      <button class="btn btn--filled" *ngIf="activeStep === 4">
+        <p>Finish</p>
+      </button>
+    </div>
+  </footer>
 </section>
-
-
-
-<app-stepper
-  [totalSteps]="steps"
-  [(activeStep)]="activeStep"
-></app-stepper>

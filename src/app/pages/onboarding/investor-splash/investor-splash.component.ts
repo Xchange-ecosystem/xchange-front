@@ -3,14 +3,22 @@ import { Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
 import { StepperComponent } from '../stepper/stepper.component';
 import { SwitchViewService } from '../services/switch-view-service/switch-view.service';
-import { XcIconArrowLeftComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-investor-splash',
   standalone: true,
   imports: [
+    NgIf,
     StepperComponent,
-    XcIconArrowLeftComponent
+    XcIconArrowLeftComponent,
+    XcIconTimesComponent,
+    XcIconPlusCircleComponent,
+    XcIconAIComponent,
+    RoundedImageModule,
+    ProfileTagsDirective
   ],
   templateUrl: './investor-splash.component.html',
   styleUrl: './investor-splash.component.scss'
