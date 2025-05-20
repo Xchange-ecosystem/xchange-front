@@ -1,22 +1,35 @@
 import { Component } from '@angular/core';
 import { StepperService } from '../services/stepper-service/stepper.service';
 import { Subscription } from 'rxjs';
-import { StepperComponent } from "../stepper/stepper.component";
+import { StepperComponent } from '../stepper/stepper.component';
 import { SwitchViewService } from '../services/switch-view-service/switch-view.service';
-import { XcIconArrowLeftComponent } from '@indziaki/ngx-xchange-icons';
+import {
+  XcIconAIComponent,
+  XcIconArrowLeftComponent,
+  XcIconPlusCircleComponent,
+  XcIconTimesComponent,
+} from '@indziaki/ngx-xchange-icons';
+import { NgIf } from '@angular/common';
+import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 
 @Component({
   selector: 'app-collaborator-splash',
   standalone: true,
   imports: [
+    NgIf,
     StepperComponent,
-    XcIconArrowLeftComponent
+    XcIconArrowLeftComponent,
+    XcIconTimesComponent,
+    XcIconPlusCircleComponent,
+    XcIconAIComponent,
+    RoundedImageModule,
+    ProfileTagsDirective
   ],
   templateUrl: './collaborator-splash.component.html',
-  styleUrl: './collaborator-splash.component.scss'
+  styleUrl: './collaborator-splash.component.scss',
 })
 export class CollaboratorSplashComponent {
-steps = 0;
+  steps = 0;
   activeStep = 0;
   stepsArray: number[] = [];
   private sub!: Subscription;
@@ -43,7 +56,7 @@ steps = 0;
       console.log('→ Retrocedemos un paso');
       this.activeStep--;
     } else {
-      return
+      return;
     }
   }
   nextStep(): void {
@@ -51,7 +64,7 @@ steps = 0;
     if (this.activeStep < this.steps - 1) {
       this.activeStep++;
     } else {
-      return
+      return;
     }
   }
 }
