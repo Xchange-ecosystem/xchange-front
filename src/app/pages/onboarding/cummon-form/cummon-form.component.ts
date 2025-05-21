@@ -1,7 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { XcIconAIComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconImageComponent } from '@indziaki/ngx-xchange-icons';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 
 @Component({
@@ -11,7 +11,8 @@ import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
     XcIconAIComponent, 
     RoundedImageModule,
     NgIf,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    XcIconImageComponent
   ],
   templateUrl: './cummon-form.component.html',
   styleUrl: './cummon-form.component.scss',

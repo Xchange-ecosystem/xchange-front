@@ -49,20 +49,16 @@ export class CollaboratorSplashComponent {
     });
   }
   goBack(): void {
-    console.log('goBack click - activeStep:', this.activeStep);
 
     if (this.activeStep === 0) {
-      console.log('→ Paso 1, volvemos a default');
       this.switchViewSrv.setViewState('default');
     } else if (this.activeStep > 0) {
-      console.log('→ Retrocedemos un paso');
       this.activeStep--;
     } else {
       return;
     }
   }
   nextStep(): void {
-    console.log('nextStep click - activeStep:', this.activeStep);
     if (this.activeStep < this.steps - 1) {
       this.activeStep++;
     } else {

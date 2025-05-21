@@ -6,6 +6,15 @@
         [image]="'https://randomuser.me/api/portraits/men/21.jpg'"
         class="cummon-form__header-rounded-image"
       />
+      <label class="cummon-form__header-rounded-upload">
+        <xc-icon-image class="btn__icon_filled-sm" />
+        <input
+          type="file"
+          accept="image/*"
+          class="cummon-form__header-rounded-upload-input"
+          formControlName="image"
+        />
+      </label>
     </span>
   </div>
   <div class="cummon-form__description">
@@ -14,8 +23,8 @@
       <span class="cummon-form__description-ai">
         <xc-icon-ai class="cummon-form__description-ai-icon" />
         <b class="text_200">
-          AI matches your skills with projects, templates and other
-          members. That’s why it’s important to build a strong profile
+          AI matches your skills with projects, templates and other members.
+          That’s why it’s important to build a strong profile
         </b>
       </span>
     </div>
@@ -27,9 +36,16 @@
         rows="6"
       ></textarea>
       <span class="cummon-form__description-error">
-        <p class="cummon-form__description-error-message" *ngIf="description?.touched && description?.invalid">
-          <ng-container *ngIf="description?.errors?.['required']">Description is required.</ng-container>
-          <ng-container *ngIf="description?.errors?.['minlength']">Minimum 300 characters</ng-container>
+        <p
+          class="cummon-form__description-error-message"
+          *ngIf="description?.touched && description?.invalid"
+        >
+          <ng-container *ngIf="description?.errors?.['required']"
+            >Description is required.</ng-container
+          >
+          <ng-container *ngIf="description?.errors?.['minlength']"
+            >Minimum 300 characters</ng-container
+          >
         </p>
       </span>
     </div>
@@ -41,9 +57,16 @@
         formControlName="linkedin"
       />
       <span class="cummon-form__description-error">
-        <p class="cummon-form__description-error-message" *ngIf="linkedin?.touched && linkedin?.invalid">
-          <ng-container *ngIf="linkedin?.errors?.['required']">LinkedIn link is required.</ng-container>
-          <ng-container *ngIf="linkedin?.errors?.['pattern']">Enter a valid LinkedIn URL.</ng-container>
+        <p
+          class="cummon-form__description-error-message"
+          *ngIf="linkedin?.touched && linkedin?.invalid"
+        >
+          <ng-container *ngIf="linkedin?.errors?.['required']"
+            >LinkedIn link is required.</ng-container
+          >
+          <ng-container *ngIf="linkedin?.errors?.['pattern']"
+            >Enter a valid LinkedIn URL.</ng-container
+          >
         </p>
       </span>
     </div>
