@@ -11,6 +11,7 @@ import {
 } from '@indziaki/ngx-xchange-icons';
 import { NgIf } from '@angular/common';
 import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { CummonFormComponent } from '../cummon-form/cummon-form.component';
 
 @Component({
   selector: 'app-collaborator-splash',
@@ -23,7 +24,8 @@ import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-
     XcIconPlusCircleComponent,
     XcIconAIComponent,
     RoundedImageModule,
-    ProfileTagsDirective
+    ProfileTagsDirective,
+    CummonFormComponent
   ],
   templateUrl: './collaborator-splash.component.html',
   styleUrl: './collaborator-splash.component.scss',

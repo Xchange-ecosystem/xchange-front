@@ -1,0 +1,51 @@
+<form class="cummon-form" [formGroup]="form" novalidate>
+  <div class="cummon-form__header">
+    <h3>Profile Image</h3>
+    <span class="cummon-form__header-rounded">
+      <xc-rounded-image
+        [image]="'https://randomuser.me/api/portraits/men/21.jpg'"
+        class="cummon-form__header-rounded-image"
+      />
+    </span>
+  </div>
+  <div class="cummon-form__description">
+    <div class="cummon-form__description-title">
+      <h3>Description</h3>
+      <span class="cummon-form__description-ai">
+        <xc-icon-ai class="cummon-form__description-ai-icon" />
+        <b class="text_200">
+          AI matches your skills with projects, templates and other
+          members. That’s why it’s important to build a strong profile
+        </b>
+      </span>
+    </div>
+    <div class="cummon-form__description-input">
+      <textarea
+        class="cummon-form__description-input-textarea"
+        formControlName="description"
+        cols="6"
+        rows="6"
+      ></textarea>
+      <span class="cummon-form__description-error">
+        <p class="cummon-form__description-error-message" *ngIf="description?.touched && description?.invalid">
+          <ng-container *ngIf="description?.errors?.['required']">Description is required.</ng-container>
+          <ng-container *ngIf="description?.errors?.['minlength']">Minimum 300 characters</ng-container>
+        </p>
+      </span>
+    </div>
+    <div class="cummon-form__linkedin">
+      <b>Linkedin Profile Link</b>
+      <input
+        type="text"
+        class="cummon-form__linkedin-input"
+        formControlName="linkedin"
+      />
+      <span class="cummon-form__description-error">
+        <p class="cummon-form__description-error-message" *ngIf="linkedin?.touched && linkedin?.invalid">
+          <ng-container *ngIf="linkedin?.errors?.['required']">LinkedIn link is required.</ng-container>
+          <ng-container *ngIf="linkedin?.errors?.['pattern']">Enter a valid LinkedIn URL.</ng-container>
+        </p>
+      </span>
+    </div>
+  </div>
+</form>

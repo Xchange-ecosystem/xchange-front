@@ -6,6 +6,7 @@ import { SwitchViewService } from '../services/switch-view-service/switch-view.s
 import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { NgIf } from '@angular/common';
+import { CummonFormComponent } from '../cummon-form/cummon-form.component';
 
 @Component({
   selector: 'app-investor-splash',
@@ -18,7 +19,8 @@ import { NgIf } from '@angular/common';
     XcIconPlusCircleComponent,
     XcIconAIComponent,
     RoundedImageModule,
-    ProfileTagsDirective
+    ProfileTagsDirective,
+    CummonFormComponent
   ],
   templateUrl: './investor-splash.component.html',
   styleUrl: './investor-splash.component.scss'

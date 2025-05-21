@@ -71,44 +71,8 @@
       </p>
     </article>
   </ng-container>
-  <ng-container *ngIf="activeStep === 3">
-    <form class="collaborator_content-profile">
-      <div class="collaborator_content-profile-header">
-        <h3>Profile Image</h3>
-        <span class="collaborator_content-profile-header-rounded">
-          <xc-rounded-image
-            [image]="'https://randomuser.me/api/portraits/men/21.jpg'"
-            class="collaborator_content-profile-header-rounded-image"
-          />
-        </span>
-      </div>
-      <div class="collaborator_content-profile-description">
-        <div class="description">
-          <h3>Description</h3>
-          <span class="description_ai">
-            <xc-icon-ai class="ai_icon" />
-            <b class="text_200"
-              >AI matches your skills with projects, templates and other
-              members. That’s why it’s important to build a strong profile</b
-            >
-          </span>
-        </div>
-        <div class="description_input">
-          <textarea
-            class="description_input-textarea"
-            cols="6"
-            rows="6"
-          ></textarea>
-          <span class="error_container">
-            <p class="error_container-message">Minimum 300 characters</p>
-          </span>
-        </div>
-        <div class="linkedin">
-          <b>Linkedin Profile Link</b>
-          <input type="text" class="linkedin_input" />
-        </div>
-      </div>
-    </form>
+  <ng-container *ngIf="activeStep === 3"> 
+    <app-cummon-form class="collaborator_content-profile"/>
   </ng-container>
   <ng-container *ngIf="activeStep === 4">
     <article class="collaborator_content-tags">
@@ -175,10 +139,10 @@
       class="collaborator_footer-stepper"
     ></app-stepper>
     <div class="action-btn">
-      <button class="btn next" *ngIf="activeStep < 3" (click)="nextStep()">
+      <button class="btn next" *ngIf="activeStep < 4" (click)="nextStep()">
         <p>Next</p>
       </button>
-      <button class="btn btn--filled" *ngIf="activeStep === 3">
+      <button class="btn btn--filled" *ngIf="activeStep === 4">
         <p>Finish</p>
       </button>
     </div>

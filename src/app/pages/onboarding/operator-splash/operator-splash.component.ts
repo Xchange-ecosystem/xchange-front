@@ -6,20 +6,22 @@ import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent,
 import { SwitchViewService } from '../services/switch-view-service/switch-view.service';
 import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { NgIf } from '@angular/common';
+import { CummonFormComponent } from "../cummon-form/cummon-form.component";
 
 @Component({
   selector: 'app-operator-splash',
   standalone: true,
   imports: [
-    StepperComponent, 
+    StepperComponent,
     XcIconArrowLeftComponent,
     NgIf,
     RoundedImageModule,
     XcIconAIComponent,
     ProfileTagsDirective,
     XcIconTimesComponent,
-    XcIconPlusCircleComponent
-  ],
+    XcIconPlusCircleComponent,
+    CummonFormComponent
+],
   templateUrl: './operator-splash.component.html',
   styleUrl: './operator-splash.component.scss'
 })
