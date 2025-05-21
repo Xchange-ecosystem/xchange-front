@@ -36,4 +36,11 @@ export class CummonFormComponent {
   get linkedin() {
     return this.form.get('linkedin');
   }
+  onFileChange(event: Event) {
+  const input = event.target as HTMLInputElement;
+  if (input.files && input.files.length) {
+    const file = input.files[0];
+    this.form.patchValue({ image: file });
+  }
+}
 }

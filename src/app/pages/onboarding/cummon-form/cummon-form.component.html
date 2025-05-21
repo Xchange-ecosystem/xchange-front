@@ -12,7 +12,7 @@
           type="file"
           accept="image/*"
           class="cummon-form__header-rounded-upload-input"
-          formControlName="image"
+          (change)="onFileChange($event)"
         />
       </label>
     </span>
