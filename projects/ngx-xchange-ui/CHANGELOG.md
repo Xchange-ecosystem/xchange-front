@@ -1,3 +1,6 @@
+# 0.1.27 22/05/2025
+* (change) change color var(--xc-categories-completed-opacity)
+
 # 0.1.26 08/05/2025
 * (fix) typo on filters
 * (fix) Remove id from objective user card
