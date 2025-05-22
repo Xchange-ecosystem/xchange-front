@@ -1,0 +1,23 @@
+<section class="card">
+  <header class="card_header">
+    <img
+      src="assets/img/Suspend-member.png"
+      alt="image-header"
+      class="card_header-image"
+    />
+  </header>
+  <section class="card_content">
+    <h2 class="card_content-title">Remove employee</h2>
+    <p>Do you really want to remove Frederik Feut? By removing an employee they will be turned into a collaborator. </p>
+    <div class="card_content-actions">
+        <button class="btn" (click)="onClose()">
+            <xc-icon-times class="btn__icon"/>
+            <p>Cancel</p>
+        </button>
+        <button class="btn btn--ban">
+            <xc-icon-trash class="btn__icon_ban"/>
+            <p>Remove employee</p>
+        </button>
+    </div>
+  </section>
+</section>

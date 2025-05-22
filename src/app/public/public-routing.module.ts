@@ -31,6 +31,14 @@ const routes: Routes = [
         loadComponent: () => import('src/app/pages/profile/profile.component').then(m => m.ProfileComponent),
       },
       {
+        path:'forgot-password',
+        loadComponent: () => import('src/app/pages/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent),
+      },
+      {
+        path:'new-password',
+        loadComponent: () => import('src/app/pages/new-password/new-password.component').then(m => m.NewPasswordComponent),
+      },
+      {
         path:'dashboard',
         loadComponent: () => import('src/app/pages/dashboard/dashboard.component').then(m => m.DashboardComponent),
       },
@@ -50,6 +58,18 @@ const routes: Routes = [
         path:'project-goals',
         loadComponent: () => import('src/app/pages/project-goals/project-goals.component').then(m => m.ProjectGoalsComponent),
       },
+      {
+        path:'forgot-password',
+        loadComponent: () => import('src/app/pages/forgot-password/forgot-password.component').then(m => m.ForgotPasswordComponent),
+      },
+      {
+        path:'new-password',
+        loadComponent: () => import('src/app/pages/new-password/new-password.component').then(m => m.NewPasswordComponent),
+      },
+      {
+        path: 'project-rewards',
+        loadComponent: () => import('src/app/pages/project-rewards/project-rewards.component').then(m => m.ProjectRewardsComponent),
+      },
     ],
   },
 ];
@@ -58,4 +78,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PublicRoutingModule {}
+export class PublicRoutingModule { }

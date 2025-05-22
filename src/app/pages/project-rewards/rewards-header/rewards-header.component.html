@@ -1,0 +1,10 @@
+<header class="header">
+    <img [src]="defaultHeaderImage" alt="header-image" class="header_image">
+    <div class="header_overlay" *ngIf="state != 'default'"></div>
+    <div class="header_content" *ngIf="state != 'default'">
+        <button class="btn btn--rounded return" (click)="switchViewService.setViewState('default')" >
+            <xc-icon-angle-left-b class="btn__icon"/>
+        </button>
+        <h1 class="header_content-title">{{defaultTitle}}</h1>
+    </div>
+</header>
