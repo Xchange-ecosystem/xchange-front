@@ -1,6 +1,6 @@
 <section 
     class="flex flex-col justify-center items-center gap-5 bg-white rounded-lg shadow-Shadow500 p-4">
-    <div *ngFor="let user of users; index as i" class="flex items-center justify-center gap-2 max-h-[112px] overflow-y-scroll">
+    <div *ngFor="let user of users; index as i" class="flex items-center justify-center gap-2 max-h-[112px]">
         <div class="w-[30px] h-[30px]">
         <xc-rounded-image [marginSize]="0"  [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'"/>
         </div>
