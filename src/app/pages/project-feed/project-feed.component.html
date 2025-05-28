@@ -1,4 +1,4 @@
-<div class="card" *ngIf="isModalOpen">
+<dialog class="card" *ngIf="isModalOpen">
   <header class="card_header">
     <img
       src="assets/img/Send-credits.png"
@@ -116,26 +116,33 @@
       </div>
     </article>
     <article class="card_content-invitations">
-      <!-- <div class="placeholder">
-        <img src="assets/img/Pitch-image.png" alt="placeholder-image" />
-        <h2>You haven’t invited anyone yet</h2>
-      </div> -->
-      <div class="user_list">
-        <div class="user_list-item">
-          <span class="user_list-item-information">
-            <xc-rounded-image [image]="'https://randomuser.me/api/portraits/women/24.jpg'" class="user_list-item-information-image"/>
-            <h3>John Doe</h3>
-          </span>
-          <button class="user_list-item-action">
-            <xc-icon-times class="btn__icon_reject"/>
-          </button>
+      @defer (on hover) {
+        <div class="user_list">
+          <div class="user_list-item">
+            <span class="user_list-item-information">
+              <xc-rounded-image
+                [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+                class="user_list-item-information-image"
+              />
+              <h3>John Doe</h3>
+            </span>
+            <button class="user_list-item-action">
+              <xc-icon-times class="btn__icon_reject" />
+            </button>
+          </div>
         </div>
-      </div>
+      }
+      @placeholder {
+        <div class="placeholder">
+          <img src="assets/img/Pitch-image.png" alt="placeholder-image" />
+          <h2>You haven’t invited anyone yet</h2>
+        </div>
+      }
     </article>
     <div class="card_content-actions">
       <button class="btn">
         <xc-icon-times class="btn__icon" />
-        <p>cancel</p>
+        <p>Cancel</p>
       </button>
       <button class="btn btn--filled">
         <xc-icon-send class="btn__icon_filled send" />
@@ -143,4 +150,4 @@
       </button>
     </div>
   </section>
-</div>
+</dialog>
