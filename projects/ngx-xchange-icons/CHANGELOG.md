@@ -1,3 +1,6 @@
+# 0.1.9 07/04/2025
+* (change) icon send circle fill currentColor
+
 # 0.1.7 07/04/2025
 * (change) icon plus circle fill none
 
