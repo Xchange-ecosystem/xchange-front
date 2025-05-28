@@ -1,0 +1,196 @@
+.card {
+  background: var(--xc-white);
+  box-shadow: var(--xc-boxShadow-400);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: fit-content;
+  border-radius: var(--xc-rounded-sixteen);
+  padding: 32px;
+  width: fit-content;
+  &_header {
+    width: 100%;
+    height: 180px;
+    &-image {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    &-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      input {
+        display: flex;
+        padding: 8px 11px;
+        border: 1px solid var(--xc-grey100);
+        border-radius: var(--xc-rounded-eight);
+        width: 50%;
+        outline: none;
+      }
+    }
+    &-dropdown {
+      display: flex;
+      width: 100%;
+      align-self: start;
+      justify-self: start;
+      .custom-dropdown {
+        position: relative;
+        width: 100%;
+        &__toggle {
+          width: 100%;
+          text-align: left;
+          background: #fff;
+          border: 1px solid #ddd;
+          padding: 12px;
+          border-radius: 8px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &__arrow {
+          margin-left: 8px;
+          &-icon {
+            display: flex;
+            width: 20px;
+            height: 20px;
+            stroke: var(--xc-black500);
+          }
+        }
+        &__menu {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          background: var(--xc-white);
+          border: 1px solid var(--xc-grey200);
+          border-radius: var(--xc-rounded-eight);
+          position: absolute;
+          padding: 8px;
+          width: 100%;
+          z-index: 10;
+          max-height: 260px;
+          overflow-y: auto;
+          top: 110%;
+          left: 0;
+        }
+        &__search {
+          padding: 8px 12px;
+          background: #fff;
+          position: sticky;
+          top: 0;
+          z-index: 1;
+          &-input {
+            width: 100%;
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            outline: none;
+          }
+        }
+        &__option {
+          display: flex;
+          align-items: center;
+          padding: 10px 12px;
+          &-image {
+            display: flex;
+            width: 30px;
+            height: 30px;
+          }
+        }
+        &__img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+        &__name {
+          flex: 1;
+        }
+        &__actions {
+          display: flex;
+          gap: 8px;
+        }
+        &__btn {
+          align-items: center;
+          display: flex;
+          gap: 4px;
+          background: none;
+          border: none;
+          color: #007bff;
+          cursor: pointer;
+          padding: 0 6px;
+          font-size: 0.95em;
+          &-icon {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            stroke: var(--xc-black500);
+          }
+        }
+      }
+    }
+    &-invitations {
+      display: flex;
+      width: 100%;
+      justify-content: start;
+      align-items: center;
+      .placeholder {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+      }
+      .user_list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &-item{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          &-information {
+            align-items: center;
+            display: flex;
+            gap: 4px;
+            flex: 1;
+            &-image {
+              display: flex;
+              width: 30px;
+              height: 30px;
+            }
+          }
+          &-action {
+            display: flex;
+align-items: center;
+          }
+        }
+      }
+    }
+    &-actions {
+      align-items: end;
+      display: flex;
+      gap: 16px;
+      justify-content: flex-end;
+      width: 100%;
+      height: 100%;
+      .send {
+        transform: rotate(-35deg);
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
