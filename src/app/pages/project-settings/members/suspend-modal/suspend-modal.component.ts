@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconBanComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconBanComponent, XcIconSendComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
   selector: 'app-suspend-modal',
   standalone: true,
   imports: [
     XcIconBanComponent,
-    XcIconTimesComponent
+    XcIconTimesComponent,
+    XcIconSendComponent
   ],
   templateUrl: './suspend-modal.component.html',
   styleUrl: './suspend-modal.component.scss'
