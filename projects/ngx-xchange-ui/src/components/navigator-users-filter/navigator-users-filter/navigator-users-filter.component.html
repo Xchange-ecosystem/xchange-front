@@ -1,10 +1,10 @@
 <section 
     class="flex flex-col justify-center items-center gap-5 bg-white rounded-lg shadow-Shadow500 p-4">
-    <div *ngFor="let user of users; index as i" class="flex items-center justify-center gap-2 max-h-[112px] overflow-y-scroll">
+    <div *ngFor="let user of users; index as i" class="flex items-center justify-start gap-2 max-h-[112px]">
         <div class="w-[30px] h-[30px]">
         <xc-rounded-image [marginSize]="0"  [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'"/>
         </div>
-        <p>{{(user.name !== '' ? user.name : 'Users') + ' ' + user.lastName}}</p>
+        <p class="text-nowrap">{{(user.name !== '' ? user.name : 'Users') + ' ' + user.lastName}}</p>
         <xc-check-rounded-button [index]="i" [statusCheck]="!(notSelectedUsers.includes(user.userId))" (statusCheckChange)="setUserStatus($event,user.userId)"/>
     </div>
     <div class="flex justify-end item-center gap-1 w-full">
