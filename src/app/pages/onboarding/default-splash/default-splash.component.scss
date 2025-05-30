@@ -84,8 +84,19 @@
             display: flex;
             justify-content: center;
             width: 100%;
-            .premium {
-              align-self: flex-end;
+            &-title {
+              display: flex;
+              flex-direction: column;
+              flex: 1;
+              margin-left: 64px;
+              text-align: center;
+            }
+            .premium_tag {
+              display: flex;
+              height: 100%;
+              .premium {
+                align-self: flex-end;
+              }
             }
           }
           &-wrapper {
