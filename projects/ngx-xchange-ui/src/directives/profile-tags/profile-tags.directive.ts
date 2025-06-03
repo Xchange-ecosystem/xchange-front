@@ -19,6 +19,7 @@ export class ProfileTagsDirective implements OnChanges {
     green: 'var(--xc-categories-completed-opacity)',
     purple: 'var(--xc-categories-suggestion)',
     yellow: 'var(--xc-categories-progress)',
+    Vizblue:"var(--xc-data-viz-blue50)",
     blue: '#47E3E366'
   };
 

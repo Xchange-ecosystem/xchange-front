@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { LanguageDropdownComponent } from '../language-dropdown/language-dropdown.component';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 import { ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/directives/profile-tags/profile-tags.directive';
 import { FormsModule } from '@angular/forms';
 import { XcIconSaveComponent } from 'projects/ngx-xchange-icons/src/public-api';
-import { XcIconArrowRightComponent, XcIconCopyComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconArrowRightComponent, XcIconCloseSComponent, XcIconCopyComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { ToggleComponent } from '@indziaki/ngx-xchange-ui';
+import { TagModalComponent } from '../tag-modal/tag-modal.component';
 @Component({
   selector: 'app-appereance',
   standalone: true,
@@ -17,7 +19,13 @@ import { ToggleComponent } from '@indziaki/ngx-xchange-ui';
     FormsModule,
     XcIconCopyComponent,
     XcIconArrowRightComponent,
-    ToggleComponent
+    ToggleComponent,
+    CopyStylesDirective,
+    NgIf,
+    TagModalComponent,
+    XcIconCloseSComponent,
+    XcIconPlusCircleComponent,
+    XcIconAIComponent
   ],
   templateUrl: './appereance.component.html',
   styleUrl: './appereance.component.scss'
@@ -35,7 +43,7 @@ export class AppereanceComponent {
   @Input() image: string = 'https://randomuser.me/api/portraits/women/26.jpg'
   tempDescription = '';
   tempEmail = '';
-  tempLinkedin = '';
+  tempLinkedin = 'https://www.linkedin.com/in/fabian-bermeo';
   editingDescription = false;
   editingEmail = false;
   editingLinkedin = false;
@@ -86,11 +94,18 @@ export class AppereanceComponent {
   cancelLinkedin() {
     this.editingLinkedin = false;
   }
-  openTags() {
-    this.isTagsOpen = true;
-  }
+
   onLanguageChange(newLang: string) {
     this.selectedLang = newLang;
   }
 
+
+
+
+  openTags() {
+    this.isTagsOpen = true;
+  }
+  closeTags() {
+    this.isTagsOpen = false;
+  }
 }

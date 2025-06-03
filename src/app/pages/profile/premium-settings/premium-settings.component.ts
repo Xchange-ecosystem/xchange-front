@@ -27,6 +27,9 @@ import { ProfileSortComponent } from '../profile-sort/profile-sort.component';
 })
 export class PremiumSettingsComponent {
     isCancelOpen=false;
+      tempDescription = '';
+      tempEmail = '';
+      tempLinkedin = '';
     selectedInterests: { interest: string | null; level: number }[] = [];
       interestOptions = [
     { value: 'design',    label: 'Design' },
