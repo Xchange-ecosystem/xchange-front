@@ -7,13 +7,11 @@ import { LoginComponent } from "./login/containers/login.componet";
 import { HeaderCardComponent } from './components/header-card/header-card.component';
 import { UserNameCardComponent } from './components/user-name-card/user-name-card.component';
 import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
-import { CardDeadlineIndicatorModule } from "@indziaki/ngx-xchange-ui";
 
 @NgModule({
     imports: [
         PublicRoutingModule,
         ShareModule,
-        CardDeadlineIndicatorModule,
     ],
     declarations: [
         PublicComponent,

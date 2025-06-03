@@ -21,6 +21,12 @@ import { LanguageDropdownComponent } from './language-dropdown/language-dropdown
 import { InterestsProfileComponent } from './interests-profile/interests-profile.component';
 import { InterestCardComponent } from './interest-card/interest-card.component';
 import { ProfileSortComponent } from './profile-sort/profile-sort.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { AppereanceComponent } from './appereance/appereance.component';
+import { PremiumSettingsComponent } from './premium-settings/premium-settings.component';
+import { PremiumUpgradeComponent } from './premium-upgrade/premium-upgrade.component';
+import { TagModalComponent } from './tag-modal/tag-modal.component';
+import { CancelModalComponent } from './cancel-modal/cancel-modal.component';
 
 @Component({
   selector: 'app-profile',
@@ -51,6 +57,12 @@ import { ProfileSortComponent } from './profile-sort/profile-sort.component';
     ButtonsWrappersDirective,
     RoundedImageModule,
     ProfileSortComponent,
+    WalletComponent,
+    AppereanceComponent,
+    PremiumSettingsComponent,
+    PremiumUpgradeComponent,
+    TagModalComponent,
+    CancelModalComponent
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
@@ -66,17 +78,14 @@ export class ProfileComponent {
   that provides end-to-end services from intent to implementation in
   innovation and business transformation.`;
   @Input() image: string = 'https://randomuser.me/api/portraits/women/26.jpg'
-  
+  activeSection: string = 'Apperance';
   tempDescription = '';
   tempEmail = '';
   tempLinkedin = '';
-
-  activeSection: string = 'Apperance';
   isTagsOpen = false;
   isCancelOpen=false;
   isCancelToast=false;
   selectedLang: string | null = null;
-
   editingDescription = false;
   editingEmail       = false;
   editingLinkedin    = false;
@@ -261,14 +270,6 @@ export class ProfileComponent {
     this.isTagsOpen = false;
   }
 
-  openCancel(){
-    this.isCancelOpen = true
-  }
-
-  closeCancel(){
-    this.isCancelOpen= false
-  }
-
   onSectionChange(section: string): void {
     this.activeSection = section;
   }
@@ -310,24 +311,6 @@ export class ProfileComponent {
   cancelLinkedin() {
     this.editingLinkedin = false;
   }
-  saveChanges() {
-  }
 
 
-  getFilteredOptions(idx: number) {
-    const taken = this.selectedInterests
-      .filter((_, i) => i !== idx)
-      .map(sel => sel.interest)
-      .filter((v): v is string => v !== null);
-
-    return this.interestOptions.filter(opt => !taken.includes(opt.value));
-  }
-
-  onInterestSelected(event: { interest: string; level: number }, idx: number) {
-    this.selectedInterests[idx] = event;
-  }
-
-  addSelector() {
-    this.selectedInterests.push({ interest: null, level: 0 });
-  }
 }

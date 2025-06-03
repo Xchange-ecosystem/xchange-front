@@ -1,13 +1,11 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconCalenderComponent, XcIconPlayComponent } from '@indziaki/ngx-xchange-icons';
-import {
-  ProfileTagsDirective,
-  ProjectProgressBarModule,
-  RoundedImageModule,
-} from '@indziaki/ngx-xchange-ui';
+
 import { ObjectivesDropdownComponent } from './objectives-dropdown/objectives-dropdown.component';
 import { DescriptionModalComponent } from '../description-modal/description-modal.component';
+import { ProjectProgressBarModule, RoundedImageModule, ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/public-api';
+import { XcIconCalenderComponent } from 'projects/ngx-xchange-icons/src/lib/calender.component';
+import { XcIconPlayComponent } from 'projects/ngx-xchange-icons/src/lib/play.component';
 
 @Component({
   selector: 'app-goals-dropdown',
