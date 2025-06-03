@@ -1,3 +1,7 @@
+# 0.1.29 03/06/2025
+* (Fix): Dinamic width on rating bar
+* (Refactor): Move user-assesment-card to client project
+
 # 0.1.28 22/05/2025
 * (fix) Remove scroll on navigator-users-filter
 
