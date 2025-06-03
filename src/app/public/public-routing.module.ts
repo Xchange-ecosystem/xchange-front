@@ -70,6 +70,14 @@ const routes: Routes = [
         path: 'project-rewards',
         loadComponent: () => import('src/app/pages/project-rewards/project-rewards.component').then(m => m.ProjectRewardsComponent),
       },
+      {
+        path: 'onboarding',
+        loadComponent: () => import('src/app/pages/onboarding/onboarding.component').then(m => m.OnboardingComponent),
+      },
+      {
+        path: 'project-feed',
+        loadComponent: () => import('src/app/pages/project-feed/project-feed.component').then(m => m.ProjectFeedComponent),
+      },
     ],
   },
 ];

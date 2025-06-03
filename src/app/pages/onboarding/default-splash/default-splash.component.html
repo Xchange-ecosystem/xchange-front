@@ -1,0 +1,157 @@
+<section [ngSwitch]="currentStep">
+  <ng-container *ngSwitchCase="1">
+    <section class="default_splash">
+      <header class="default_splash-header">
+        <div class="default_splash-header-logo">
+          <span class="default_splash-header-logo-container">
+            <img src="assets/img/X-Vector.webp" alt="Xcamp logo" />
+          </span>
+          <h1>camp</h1>
+        </div>
+        <div class="default_splash-header-title">
+          <h2>Welcome to the Operating System for Starting Up!</h2>
+        </div>
+      </header>
+      <div class="default_splash-content">
+        <div class="default_splash-content-video">
+          @defer (on hover) {
+          <iframe
+            width="580"
+            height="370"
+            src="https://xchangeprod.blob.core.windows.net/xcamp/Xcamp"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          }@placeholder () {
+          <img src="assets/img/default-splash-placeholder-video.png" alt="loading" />
+          }
+        </div>
+        <p class="default_splash-content-text">
+          On Xcamp, investors, and collaborators join together to thrive through
+          an AI-powered, data-driven ecosystem that fosters transparent
+          collaboration, fair value-sharing, and sustainable growth. Connect,
+          co-create, and succeed together with the right tools and insights
+          tailored to your journey.
+        </p>
+        <hr />
+        <button class="btn start" (click)="changeDefaultStep()">
+          <p>Get Started</p>
+        </button>
+      </div>
+    </section>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="2">
+    <section class="default_splash">
+      <header class="default_splash-header">
+        <div class="default_splash-header-logo">
+          <span class="default_splash-header-logo-container">
+            <img src="assets/img/X-Vector.webp" alt="Xcamp logo" />
+          </span>
+          <h1>camp</h1>
+        </div>
+        <div class="default_splash-header-title">
+          <h2>How do you want to start, Fabian?</h2>
+        </div>
+      </header>
+      <div class="default_splash-content">
+        <p>
+          Select your role to unlock tailored tools and resources that drive
+          your success in the startup ecosystem. Both owner or collaborator
+          receive the basic tools to start and join projects. Premium
+          subscribers gain access to Portfolio Builder and Dashboard to build,
+          grow and monitor their portfolio life and automatically.
+        </p>
+        <div class="default_splash-content-cards">
+          <section class="card">
+            <div class="card_image">
+              <header class="card_image-header">
+                <b>FREE</b>
+              </header>
+              <span class="card_image-wrapper">
+                <img
+                  src="assets/img/owner-splash.png"
+                  alt="owner-splash-image"
+                />
+              </span>
+            </div>
+            <div class="card_description">
+              <span class="card_description-text">
+                <h3>Owner</h3>
+                <p>I am founding or owning a startup</p>
+              </span>
+              <button
+                class="btn btn--rounded_reset-active action"
+                (click)="changeState('owner')"
+              >
+                <xc-icon-angle-right-b class="btn__icon" />
+              </button>
+            </div>
+          </section>
+          <section class="card">
+            <div class="card_image">
+              <header class="card_image-header">
+                <b>FREE</b>
+              </header>
+              <span class="card_image-wrapper">
+                <img
+                  src="assets/img/collaborator-splash.png"
+                  alt="owner-splash-image"
+                />
+              </span>
+            </div>
+            <div class="card_description">
+              <span class="card_description-text">
+                <h3>Collaborator</h3>
+                <p>I want to collaborate alone or in a network</p>
+              </span>
+              <button
+                class="btn btn--rounded_reset-active action"
+                (click)="changeState('collaborator')"
+              >
+                <xc-icon-angle-right-b class="btn__icon" />
+              </button>
+            </div>
+          </section>
+          <section class="card">
+            <div class="card_image">
+              <header class="card_image-header">
+                <span class="card_image-header-title">
+                  <p>Special Offer:</p>
+                  <b>FREE IN BETA</b>
+                </span>
+                <div class="premium_tag">
+                  <span xcProfileTags="purple" class="premium">Premium</span>
+                </div>
+              </header>
+              <span class="card_image-wrapper">
+                <img
+                  src="assets/img/investor-splash.png"
+                  alt="owner-splash-image"
+                />
+              </span>
+            </div>
+            <div class="card_description">
+              <span class="card_description-text">
+                <h3>Investor</h3>
+                <p>I want to invest in exiting projects</p>
+              </span>
+              <button
+                class="btn btn--rounded_reset-active action"
+                (click)="changeState('investor')"
+              >
+                <xc-icon-angle-right-b class="btn__icon" />
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </ng-container>
+</section>
+
+<div class="default_splash-actions">
+  <button (click)="changeState('operator')">Go to Operator</button>
+</div>

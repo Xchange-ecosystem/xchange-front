@@ -209,7 +209,6 @@ export class DashboardComponent {
   
 
   optionSelected(value:any){
-    console.log("seleccion hecha",value)
   }
   
   toggleExpand(index: number) {

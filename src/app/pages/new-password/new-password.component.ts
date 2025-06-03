@@ -21,7 +21,7 @@ import { CopyStylesDirective, HeadlineStylesDirective } from '@indziaki/ngx-xcha
 })
 export class NewPasswordComponent {
   form!: FormGroup;
-  step = 2;
+  step = 1;
 
   showPassword = false;
   showConfirm  = false;
