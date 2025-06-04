@@ -1,0 +1,25 @@
+.stepper__circles {
+  display: flex;
+  gap: 6px;
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  align-items: center;
+  margin-left: 180px;
+  justify-content: center;
+}
+.circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--xc-grey100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  &--active {
+    background: #a4f8c0;
+    width: 8px;
+    height: 8px;
+  }
+}

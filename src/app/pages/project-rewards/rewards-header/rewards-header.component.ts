@@ -51,7 +51,6 @@ export class RewardsHeaderComponent implements OnInit {
   }
 
   setHeaderTitle(): string {
-    console.log('cambio en header', this.state)
     return this.privateTitleDirectory[this.state];
   }
 

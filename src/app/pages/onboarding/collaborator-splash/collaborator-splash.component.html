@@ -1,0 +1,150 @@
+<section class="collaborator">
+  <header class="collaborator_header">
+    <button (click)="goBack()" class="collaborator_header-back">
+      <xc-icon-arrow-left class="btn__icon" />
+      <b>Back</b>
+    </button>
+    <div class="collaborator_header-title">
+      <h2>Let’s set you up as Collaborator, Fabian!</h2>
+    </div>
+  </header>
+  <ng-container *ngIf="activeStep === 0">
+    <article class="collaborator_content">
+      <div class="collaborator_content_wrapper">
+        <img
+          src="assets/img/collaborator-splash-1.png"
+          alt="collaborator-splash-1"
+          class="collaborator_splash_wrapper-image"
+        />
+      </div>
+      <p class="collaborator_content_text">
+        Discover exciting projects that perfectly match your skills and
+        expertise, and start contributing to meaningful work. With Xcamp, you’re
+        rewarded with credits that function like mini stock options, giving you
+        a share in the project’s success rather than a one-time direct payment.
+        This system ensures your contributions are valued and aligned with the
+        long-term growth of the project.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 1">
+    <article class="collaborator_content">
+      <div class="collaborator_content_wrapper">
+        <img
+          src="assets/img/collaborator-splash-2.png"
+          alt="collaborator-splash-1"
+          class="collaborator_splash_wrapper-image"
+        />
+      </div>
+      <p class="collaborator_content_text">
+        Enhance your skills with AI-driven matchmaking that connects you to the
+        most relevant projects for your expertise. As you collaborate, you’ll
+        earn credits for your contributions, allowing you to monetize your
+        knowledge and experience. Over time, this collaborative environment
+        could empower you to take the next step in your journey—potentially even
+        developing your own startup with the support of the ecosystem.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 2">
+    <article class="collaborator_content">
+      <div class="collaborator_content_wrapper">
+        @defer (on hover) {
+        <iframe
+          width="580"
+          height="370"
+          src="https://youtube.com/embed/OHj4nikQcII"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          style="display: block; margin: auto"
+        ></iframe>
+        }@placeholder () {
+        <img src="assets/img/collaborator-splash-placeholder-video.png" alt="loading" />
+        }
+      </div>
+      <p class="collaborator_content_text">
+        Watch the video walkthrough to explore tools for collaborators,
+        including an AI-assisted feed that connects you to projects across the
+        entire ecosystem.
+      </p>
+    </article>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 3"> 
+    <app-cummon-form class="collaborator_content-profile"/>
+  </ng-container>
+  <ng-container *ngIf="activeStep === 4">
+    <article class="collaborator_content-tags">
+      <div class="collaborator_content-tags-header">
+        <h3>Review your skill tags</h3>
+        <span class="description_ai">
+          <xc-icon-ai class="ai_icon" />
+          <b class="text_200"
+            >AI matches your skills with projects, templates and other members.
+            That’s why it’s important to build a strong profile</b
+          >
+        </span>
+      </div>
+      <div class="tags_injector">
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <button>
+            <xc-icon-times class="tag_icon" />
+          </button>
+        </span>
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <button>
+            <xc-icon-times class="tag_icon" />
+          </button>
+        </span>
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <button>
+            <xc-icon-times class="tag_icon" />
+          </button>
+        </span>
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <button>
+            <xc-icon-times class="tag_icon" />
+          </button>
+        </span>
+        <span xcProfileTags="gray" class="tag">
+          <b>Dolrotag</b>
+          <button>
+            <xc-icon-times class="tag_icon" />
+          </button>
+        </span>
+      </div>
+      <span class="dot-split"></span>
+      <div class="add_tag">
+        <b>Add Tags</b>
+        <span class="add_tag_wrapper">
+          <input type="text" class="add_tag_wrapper-input" />
+          <button>
+            <xc-icon-plus-circle class="add_tag_wrapper-icon" />
+          </button>
+        </span>
+      </div>
+    </article>
+  </ng-container>
+
+  <hr />
+  <footer class="collaborator_footer">
+    <app-stepper
+      [totalSteps]="steps"
+      [(activeStep)]="activeStep"
+      class="collaborator_footer-stepper"
+    ></app-stepper>
+    <div class="action-btn">
+      <button class="btn next" *ngIf="activeStep < 4" (click)="nextStep()">
+        <p>Next</p>
+      </button>
+      <button class="btn btn--filled" *ngIf="activeStep === 4">
+        <p>Finish</p>
+      </button>
+    </div>
+  </footer>
+</section>

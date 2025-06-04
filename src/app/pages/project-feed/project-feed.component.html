@@ -1,0 +1,153 @@
+<dialog class="card" *ngIf="isModalOpen">
+  <header class="card_header">
+    <img
+      src="assets/img/Send-credits.png"
+      alt="image-header"
+      class="card_header-image"
+    />
+  </header>
+  <section class="card_content">
+    <h3>Invite people to your project</h3>
+    <article class="card_content-dropdown">
+      <div class="custom-dropdown">
+        <button
+          class="custom-dropdown__toggle"
+          (click)="isDropdownOpen = !isDropdownOpen"
+        >
+          <span>Select someone to invite ...</span>
+          <span class="custom-dropdown__arrow">
+            <xc-icon-angle-down class="custom-dropdown__arrow-icon" />
+          </span>
+        </button>
+        <ul class="custom-dropdown__menu" *ngIf="isDropdownOpen">
+          <li class="custom-dropdown__search">
+            <input
+              type="text"
+              class="custom-dropdown__search-input"
+              placeholder="Search users"
+            />
+          </li>
+          <li class="custom-dropdown__option">
+            <xc-rounded-image
+              [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+              class="custom-dropdown__option-image"
+            />
+            <h4 class="custom-dropdown__name">Alice Johnson</h4>
+            <span class="custom-dropdown__actions">
+              <button class="custom-dropdown__btn">
+                <xc-icon-user-plus class="custom-dropdown__btn-icon" />
+                <b>Add as owner</b>
+              </button>
+              <button class="custom-dropdown__btn">
+                <xc-icon-eye class="custom-dropdown__btn-icon" />
+                <b>Add as viewer</b>
+              </button>
+            </span>
+          </li>
+          <li class="custom-dropdown__option">
+            <xc-rounded-image
+              [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+              class="custom-dropdown__option-image"
+            />
+            <h4 class="custom-dropdown__name">Bob Smith</h4>
+            <span class="custom-dropdown__actions">
+              <button class="custom-dropdown__btn">
+                <xc-icon-user-plus class="custom-dropdown__btn-icon" />
+                <b>Add as owner</b>
+              </button>
+              <button class="custom-dropdown__btn">
+                <xc-icon-eye class="custom-dropdown__btn-icon" />
+                <b>Add as viewer</b>
+              </button>
+            </span>
+          </li>
+          <li class="custom-dropdown__option">
+            <xc-rounded-image
+              [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+              class="custom-dropdown__option-image"
+            />
+            <h4 class="custom-dropdown__name">Carol Lee</h4>
+            <span class="custom-dropdown__actions">
+              <button class="custom-dropdown__btn">
+                <xc-icon-user-plus class="custom-dropdown__btn-icon" />
+                <b>Add as owner</b>
+              </button>
+              <button class="custom-dropdown__btn">
+                <xc-icon-eye class="custom-dropdown__btn-icon" />
+                <b>Add as viewer</b>
+              </button>
+            </span>
+          </li>
+          <li class="custom-dropdown__option">
+            <xc-rounded-image
+              [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+              class="custom-dropdown__option-image"
+            />
+            <h4 class="custom-dropdown__name">Carol Lee</h4>
+            <span class="custom-dropdown__actions">
+              <button class="custom-dropdown__btn">
+                <xc-icon-user-plus class="custom-dropdown__btn-icon" />
+                <b>Add as owner</b>
+              </button>
+              <button class="custom-dropdown__btn">
+                <xc-icon-eye class="custom-dropdown__btn-icon" />
+                <b>Add as viewer</b>
+              </button>
+            </span>
+          </li>
+          <li class="custom-dropdown__option">
+            <xc-rounded-image
+              [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+              class="custom-dropdown__option-image"
+            />
+            <h4 class="custom-dropdown__name">Carol Lee</h4>
+            <span class="custom-dropdown__actions">
+              <button class="custom-dropdown__btn">
+                <xc-icon-user-plus class="custom-dropdown__btn-icon" />
+                <b>Add as owner</b>
+              </button>
+              <button class="custom-dropdown__btn">
+                <xc-icon-eye class="custom-dropdown__btn-icon" />
+                <b>Add as viewer</b>
+              </button>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="card_content-invitations">
+      @defer (on hover) {
+        <div class="user_list">
+          <div class="user_list-item">
+            <span class="user_list-item-information">
+              <xc-rounded-image
+                [image]="'https://randomuser.me/api/portraits/women/24.jpg'"
+                class="user_list-item-information-image"
+              />
+              <h3>John Doe</h3>
+            </span>
+            <button class="user_list-item-action">
+              <xc-icon-times class="btn__icon_reject" />
+            </button>
+          </div>
+        </div>
+      }
+      @placeholder {
+        <div class="placeholder">
+          <img src="assets/img/Pitch-image.png" alt="placeholder-image" />
+          <h2>You haven’t invited anyone yet</h2>
+        </div>
+      }
+    </article>
+    <div class="card_content-actions">
+      <button class="btn">
+        <xc-icon-times class="btn__icon" />
+        <p>Cancel</p>
+      </button>
+      <button class="btn btn--filled">
+        <xc-icon-send class="btn__icon_filled send" />
+        <p>Send invitations</p>
+      </button>
+    </div>
+  </section>
+</dialog>

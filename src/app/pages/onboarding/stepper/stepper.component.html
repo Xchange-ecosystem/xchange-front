@@ -1,0 +1,8 @@
+<div class="stepper__circles">
+  <div
+    *ngFor="let _ of steps(); let i = index"
+    class="circle"
+    [class.circle--active]="i === activeStep"
+  >
+  </div>
+</div>

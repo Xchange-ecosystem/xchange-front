@@ -13,7 +13,18 @@
   margin-left: 165px;
   margin-right: 165px;
   width: 100%;
-
+  @media screen and (max-width: 1440px) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   &_section {
     display: flex;
     width: 100%;
@@ -21,6 +32,9 @@
     border-radius: var(--xc-rounded-eight);
     box-shadow: var(--xc-boxShadow-400);
     padding: 24px;
+    @media screen and (max-width: 1440px) {
+      overflow-x: auto;
+    }
     .user-table {
       width: 100%;
       border-collapse: separate;
@@ -33,13 +47,13 @@
 
       &_row {
         display: grid;
-        grid-template-columns: 440px 300px 320px auto;
+        grid-template-columns: 300px 280px 120px auto;
         gap: 16px;
         align-items: center;
       }
 
       &_cell {
-        padding: 12px;
+        padding: 8px;
         &-header {
           text-align: start;
         }
