@@ -1,0 +1,2 @@
+<textarea class="textarea" [class.textarea--error]="error" [class.textarea--success]="success" [attr.placeholder]="placeholder" [rows]="rows || 4" [cols]="cols || 40"></textarea>
+<p class="textarea__error-message" *ngIf="error && touched">{{ errorMessage }}</p>

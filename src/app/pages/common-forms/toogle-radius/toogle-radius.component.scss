@@ -1,0 +1,40 @@
+.toogle-radius {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  transition: border 0.2s;
+  width: 32px;
+}
+
+.toogle-radius__check {
+  align-items: center;
+  background: var(--xc-brand-light-green);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  outline:none;
+}
+
+.toogle-radius__check-icon {
+  display: block;
+  fill: var(--xc-categories-completed);
+  height: 32px;
+  stroke:var(--xc-categories-completed);
+  width: 32px;
+}
+
+.toogle-radius__circle {
+  background: transparent;
+  border: 1px solid var(--xc-grey300);
+  border-radius: 50%;
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+
+.toogle-radius__circle:hover{
+    border-color: var(--xc-grey500);
+}

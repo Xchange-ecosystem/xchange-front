@@ -1,0 +1,25 @@
+.input {
+    background: transparent;
+    border: 1.5px solid var(--xc-grey200);
+    border-radius: var(--xc-rounded-eight);
+    caret-color: var(--xc-brand-medium-blue);
+    display: flex;
+    max-width: 100%;
+    min-width: 240px;
+    outline: none;
+    padding:6px;
+}
+
+.input--error {
+  border: 1px solid var(--xc-categories-blocked);
+}
+
+.input--success {
+  border: 1px solid var(--xc-brand-light-green);
+}
+
+.input__error-message {
+  color: var(--xc-categories-blocked);
+  font-size: 0.9em;
+  margin-top: 4px;
+}

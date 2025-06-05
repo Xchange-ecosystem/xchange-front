@@ -1,0 +1,6 @@
+<div class="toogle-radius" [class.toogle-radius--active]="checked" (click)="toggle()" tabindex="0" role="button">
+  <span class="toogle-radius__circle" *ngIf="!checked"></span>
+  <span class="toogle-radius__check" *ngIf="checked">
+    <xc-icon-check class="toogle-radius__check-icon"/>
+  </span>
+</div>

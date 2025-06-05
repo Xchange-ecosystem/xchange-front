@@ -78,6 +78,10 @@ const routes: Routes = [
         path: 'project-feed',
         loadComponent: () => import('src/app/pages/project-feed/project-feed.component').then(m => m.ProjectFeedComponent),
       },
+      {
+        path: 'common-forms',
+        loadComponent: () => import('src/app/pages/common-forms/test-page/test-page.component').then(m => m.TestPageComponent),
+      },
     ],
   },
 ];

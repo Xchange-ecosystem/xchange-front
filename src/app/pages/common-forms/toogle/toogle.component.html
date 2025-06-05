@@ -1,0 +1,13 @@
+<div class="toggle-container">
+  <button 
+    type="button"
+    role="switch"
+    [attr.aria-checked]="checked"
+    [attr.aria-disabled]="disabled"
+    [attr.aria-label]="label"
+    [class]="toggleClass"
+    (click)="toggle()">
+    <span class="toggle-thumb"></span>
+  </button>
+  <label *ngIf="label" class="toggle-label">{{ label }}</label>
+</div>

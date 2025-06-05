@@ -1,0 +1,23 @@
+.textarea {
+  background: transparent;
+  border: 1px solid var(--xc-grey200);
+  border-radius: var(--xc-rounded-eight);
+  caret-color: var(--xc-brand-medium-blue);
+  display: flex;
+  max-width: 100%;
+  min-width: 240px;
+  outline: none;
+  padding: 8px;
+  resize: none;
+}
+.textarea--error {
+  border: 1px solid var(--xc-categories-blocked);
+}
+.textarea--success {
+  border: 1px solid var(--xc-brand-light-green);
+}
+.textarea__error-message {
+  color:  var(--xc-categories-blocked);
+  font-size:12px;
+  line-height: 16px;
+}
