@@ -1,0 +1,90 @@
+<section class="credits">
+    <h1>Credits in your ecosystem</h1>
+    <article class="credits-customization">
+      <div class="video card_24">
+        <h3>How credits work in the collaboration ecosystem</h3>
+        <div class="video_container">
+          <video
+            class="video_container-frame"
+            src="https://www.youtube.com/embed/wI00QO2A2j4"
+            frameborder="0"
+            allowfullscreen
+            width="100%"
+            height="100%"
+          ></video>
+        </div>
+      </div>
+      <div class="balance">
+        <div class="balance_coin">
+          <h3>Current credit balance</h3>
+          <span class="balance_coin-amount">
+            <h1>10,000</h1>
+            <p>Xcoins</p>
+          </span>
+          <span class="balance_coin-actions">
+            <button class="btn" (click)="openBuyCredits()">
+              <b>Buy credits for the ecosystem</b>
+            </button>
+            <button class="btn" (click)="openSendCredits()">
+              <b>Send credits to a project</b>
+            </button>
+          </span>
+        </div>
+        <div class="balance_history">
+          <nav class="balance_history-header">
+            <h3>Credit history</h3>
+            <div class="wrapper">
+              <label for="filter">Sort by:</label>
+              <select id="filter" name="filter">
+                <option value="">Select filter</option>
+                <option value="date">Date</option>
+                <option value="amount">Amount</option>
+                <option value="status">Status</option>
+              </select>
+            </div>
+          </nav>
+          <div class="transaction">
+            <table class="transaction_table">
+              <tbody>
+                <tr
+                  *ngFor="let transaction of transactions"
+                  class="transaction_table-row"
+                >
+                  <td class="transaction_table__info">
+                    <div class="transaction_table__avatar">
+                      <xc-rounded-image
+                        [image]="transaction.image"
+                        [marginSize]="2"
+                        color="var(--xc-grey300)"
+                      />
+                    </div>
+                    <p class="transaction_table__name">{{ transaction.name }}</p>
+                  </td>
+                  <td class="transaction_table__date">{{ transaction.date }}</td>
+                  <td
+                  class="transaction_table__amount"
+                  [ngClass]="{
+                    'transaction_table__amount--positive': transaction.amount > 0,
+                    'transaction_table__amount--negative': transaction.amount < 0
+                  }"
+                >
+                  {{ transaction.amount > 0 ? '+' + transaction.amount : transaction.amount }} Xcoins
+                </td>
+                
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bookings">
+            <button class="bookings_btn" (click)="openHistoryModal()">
+              <span class="bookings_btn-wrapper">
+                <xc-icon-arrow-right class="icon" />
+                <p class="bold">See all bookings</p>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>

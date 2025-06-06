@@ -1,0 +1,195 @@
+.credits {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    margin-left: 165px;
+    margin-right: 165px;
+
+    @media (max-width: 1830px) {
+      margin: 0 120px;
+    }
+
+    @media (max-width: 1640px) {
+      margin: 0 100px;
+      overflow-y: scroll;
+    }
+
+    @media (max-width: 1440px) {
+      margin: 0 80px;
+    }
+
+    @media (max-width: 1280px) {
+      margin: 0 60px;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 0 24px;
+    }
+
+    &-customization {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 630px 630px;
+      align-items: start;
+      gap: 24px;
+
+      @media (max-width: 1640px) {
+        grid-template-columns: 1fr;
+      }
+
+      .video {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        background: var(--xc-white);
+        border-radius: var(--xc-rounded-eight);
+        min-height: 430px;
+        &_container {
+          flex: 1;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          &-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: var(--xc-grey200);
+          }
+        }
+      }
+
+      .balance {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 200px 1fr;
+        row-gap: 24px;
+        height: 100%;
+
+        &_coin {
+          background: var(--xc-white);
+          border-radius: var(--xc-rounded-eight);
+          box-shadow: var(--xc-boxShadow-400);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 16px;
+
+          &-amount {
+            display: flex;
+            gap: 8px;
+            text-align: start;
+            align-items: end;
+          }
+
+          &-actions {
+            display: flex;
+            gap: 16px;
+          }
+        }
+
+        &_history {
+          background: var(--xc-white);
+          border-radius: var(--xc-rounded-eight);
+          box-shadow: var(--xc-boxShadow-400);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding: 16px;
+
+          &-header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .wrapper {
+              border: 1px solid;
+              border-color: var(--xc-grey200);
+              border-radius: var(--xc-rounded-eight);
+              padding: 8px 10px;
+            }
+          }
+          .transaction {
+            max-height: calc(54px * 7);
+            overflow-y: hidden;
+            &_table {
+              width: 100%;
+              border-collapse: collapse;
+              &-row {
+                td {
+                  padding: 12px 16px;
+                  vertical-align: middle;
+                }
+              }
+
+              &__info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+              }
+
+              &__avatar {
+                width: 30px;
+                height: 30px;
+                flex-shrink: 0;
+
+                xc-rounded-image {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  display: block;
+                }
+              }
+
+              &__name {
+                margin: 0;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+
+              &__date,
+              &__amount {
+                white-space: nowrap;
+              }
+
+              &__amount {
+                &--positive {
+                  color: var(--xc-categories-completed);
+                }
+
+                &--negative {
+                  color: var(--xc-categories-blocked);
+                }
+              }
+            }
+          }
+
+          .bookings {
+            display: flex;
+            justify-content: flex-end;
+
+            &_btn {
+              display: flex;
+
+              &-wrapper {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+
+                .icon {
+                  display: flex;
+                  width: 20px;
+                  height: 20px;
+                  stroke: var(--xc-black500);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

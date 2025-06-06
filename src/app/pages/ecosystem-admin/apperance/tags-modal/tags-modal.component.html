@@ -1,0 +1,18 @@
+<section class="tags">
+  <div class="tags_content">
+    <article class="tags_content-card">
+      <h1>All tags related to Fabian</h1>
+      <div class="container">
+        <span
+          *ngFor="let tag of tags"
+          xcProfileTags="gray"
+          class="appearance__tag"
+          >{{ tag }}</span
+        >
+      </div>
+    </article>
+    <button class="btn btn--rounded" (click)="closeTagsModal()">
+      <xc-icon-close-s class="icon" />
+    </button>
+  </div>
+</section>

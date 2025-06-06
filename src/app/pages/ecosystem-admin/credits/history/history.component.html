@@ -1,0 +1,54 @@
+<section *ngIf="isHistory" class="history">
+  <div class="history_content">
+    <article class="history_content-card">
+      <nav class="filters">
+        <h3>Credit history</h3>
+        <div class="wrapper">
+          <label for="filter">Sort by:</label>
+          <select id="filter" name="filter">
+            <option value="">Select</option>
+            <option value="date">Date</option>
+            <option value="amount">Amount</option>
+            <option value="status">Status</option>
+          </select>
+        </div>
+      </nav>
+      <div class="history_content-card-table">
+        <table class="transaction-table">
+          <tbody>
+            <tr *ngFor="let transaction of transactions" class="transaction-table__row">
+              <td class="profile">
+                <xc-rounded-image [image]="transaction.image" [marginSize]="2"
+                color="var(--xc-grey300)"  />
+                <p>{{ transaction.name }}</p>
+              </td>
+              
+              <td>{{ transaction.date }}</td>
+              
+              <td class="destiny">
+                <span class="destiny__icon">
+                  <xc-icon-user class="icon" />
+                </span>
+                <p>{{ transaction.destination }}</p>
+              </td>
+              
+              <td
+                class="amount"
+                [ngClass]="{
+                  'amount--positive': transaction.amount > 0,
+                  'amount--negative': transaction.amount < 0
+                }"
+              >
+                {{ transaction.amount > 0 ? '+' + transaction.amount : transaction.amount }} Xcoins
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </article>
+    <button class="btn btn--rounded" >
+      <xc-icon-close-s class="icon" />
+    </button>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+.tags {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+
+    .icon {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      stroke: var(--xc-black500);
+    }
+
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      flex-wrap: wrap;
+      max-width: 633px;
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    }
+  }
+}
