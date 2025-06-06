@@ -1,5 +1,5 @@
 import { NgClass, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { XcIconCloseSComponent, XcIconUserComponent } from '@indziaki/ngx-xchange-icons';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 
@@ -17,9 +17,9 @@ import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
   styleUrl: './history.component.scss'
 })
 export class HistoryComponent {
+  @Output() close = new EventEmitter<void>();
 
-
-    transactions = [
+  transactions = [
     {
       name: 'Manuel Cabrera',
       date: '14 Aug.24',
@@ -105,4 +105,8 @@ export class HistoryComponent {
       destination: 'Investor Rewards',
     },
   ];
+
+  onClose() {
+    this.close.emit();
+  }
 }

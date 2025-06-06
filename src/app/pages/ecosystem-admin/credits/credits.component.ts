@@ -1,16 +1,23 @@
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { XcIconArrowRightComponent } from '@indziaki/ngx-xchange-icons';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { BuyCreditsComponent } from './buy-credits/buy-credits.component';
+import { SendCreditsComponent } from './send-credits/send-credits.component';
+import { HistoryComponent } from './history/history.component';
 
 @Component({
   selector: 'app-credits',
   standalone: true,
   imports: [
     NgFor, 
+    NgIf,
     RoundedImageModule, 
     NgClass, 
-    XcIconArrowRightComponent
+    XcIconArrowRightComponent,
+    BuyCreditsComponent,
+    SendCreditsComponent,
+    HistoryComponent
   ],
   templateUrl: './credits.component.html',
   styleUrl: './credits.component.scss',
@@ -22,6 +29,7 @@ export class CreditsComponent {
 
   openBuyCredits() {
     this.isBuyCredits = true;
+    console.log('Opening Buy Credits Modal');
   }
 
   closeBuyCredits() {
@@ -30,6 +38,7 @@ export class CreditsComponent {
 
   openSendCredits() {
     this.isSendCredits = true;
+    console.log('Opening Send Credits Modal');
   }
 
   closeSendCredits() {
@@ -38,6 +47,7 @@ export class CreditsComponent {
 
   openHistoryModal() {
     this.isHistory = true;
+    console.log('Opening History Modal');
   }
 
   closeHistoryModal() {

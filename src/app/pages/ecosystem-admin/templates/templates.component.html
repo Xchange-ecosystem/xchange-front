@@ -1,0 +1,44 @@
+  <section class="templates">
+    <h1>Manage your templates</h1>
+  
+    <article class="templates-wrapper">
+      <div class="templates-wrapper-header">
+        <b>Help us understand the focus of your ecosystem</b>
+        <p>By selecting one or more focus points, we can provide you with the most suitable templates.</p>
+      </div>
+  
+      <section class="templates-wrapper-focus">
+        <div
+          class="templates-wrapper-focus-column"
+          *ngFor="let category of templateCategories"
+        >
+          <h3>{{ category.title }}</h3>
+      
+          <div class="templates-wrapper-select-all">
+            <button class="button-select">select all</button>
+          </div>
+      
+          <div class="templates-wrapper-list">
+            <ul>
+              <li *ngFor="let option of category.options">
+                <label class="templates-wrapper-checkbox">
+                  <input type="checkbox"/>
+                  <span>{{ option.label }}</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div class="action_buttons">
+        <button class="btn" [disabled]="!isSelectionValid">
+          <xc-icon-times class="btn__icon" />
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled" [disabled]="!isSelectionValid">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </div>
+    </article>
+  </section>

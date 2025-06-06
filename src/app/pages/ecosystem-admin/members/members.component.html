@@ -1,0 +1,114 @@
+<section class="members-wrapper">
+    <div class="members-grid">
+      <div class="members-grid__top">
+        <div class="members-grid__box">
+          <b>Search for members</b>
+          <label class="search_input">
+            <input type="search" placeholder="Who are you looking for">
+            <xc-icon-search class="icon"/>
+          </label>
+        </div>
+        <div class="members-grid__box">
+          <b>New user requests</b>
+          <p class="no-requests">There are no active requests at the moment</p>
+          <!-- <div class="user_request">
+            <span class="user_request-name">
+              <b>Jose Jimenez</b>
+              <p>jose$64gmail.com</p>
+            </span>
+            <span class="user_request-actions">
+              <button class="btn btn--reject">
+                <xc-icon-times class="btn__icon_reject"/>
+                <p class="reject">Reject</p>
+              </button>
+              <button class="btn btn--accept">
+                <xc-icon-user-plus class="btn__icon_accept accept-icon"/>
+                <p class="accept">Accept</p>
+              </button>
+            </span>
+          </div>
+          <div class="user_request">
+            <span class="user_request-name">
+              <b>Jose Jimenez</b>
+              <p>jose$64gmail.com</p>
+            </span>
+            <span class="user_request-actions">
+              <button class="btn btn--reject">
+                <xc-icon-times class="btn__icon_reject"/>
+                <p class="reject">Reject</p>
+              </button>
+              <button class="btn btn--accept">
+                <xc-icon-user-plus class="btn__icon_accept accept-icon"/>
+                <p class="accept">Accept</p>
+              </button>
+            </span>
+          </div>
+          <div class="user_request">
+            <span class="user_request-name">
+              <b>Jose Jimenez</b>
+              <p>jose$64gmail.com</p>
+            </span>
+            <span class="user_request-actions">
+              <button class="btn btn--reject">
+                <xc-icon-times class="btn__icon_reject"/>
+                <p class="reject">Reject</p>
+              </button>
+              <button class="btn btn--accept">
+                <xc-icon-user-plus class="btn__icon_accept accept-icon"/>
+                <p class="accept">Accept</p>
+              </button>
+            </span>
+          </div> -->
+        </div>
+      </div>
+      <div class="members-grid__bottom">
+        <div class="members-grid__box">
+          <h3>Active members</h3>
+          <section class="members-table">
+            <table class="members-table__table">
+              <thead>
+                <tr>
+                  <th class="email bold">Email</th>
+                  <th class="first-name bold">First name</th>
+                  <th class="last-name bold">Last name</th>
+                  <th class="actions bold">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let member of members">
+                  <td class="email">
+                    <b>{{ member.email }}</b>
+                  </td>
+                  <td class="first-name-text">{{ member.firstName }}</td>
+                  <td class="last-name-text">{{ member.lastName }}</td>
+                  <td class="members-table__actions">
+                    <button type="button" class="action-btn" (click)="openEditModal()">
+                      <xc-icon-edit class="action-icon"/> 
+                      <b>Edit</b>
+                    </button>
+                    <button type="button" class="action-btn" (click)="openEmailModal()">
+                      <xc-icon-envelope class="action-icon"/> 
+                      <b>Send email</b>
+                    </button>
+                    <button type="button" class="action-btn" (click)="openPasswordModal()">
+                      <xc-icon-padlock class="action-icon"/> 
+                      <b>Set new password</b>
+                    </button>
+                    <button type="button" class="action-btn" (click)="openSuspendModal()">
+                      <xc-icon-ban class="action-icon"/> 
+                      <b>Suspend</b>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <app-edit-member *ngIf="isEditMemeber" (close)="closeEditModal()"></app-edit-member>
+  <app-suspend-member *ngIf="isSuspendMember" (close)="closeSuspendModal()"></app-suspend-member>
+  <app-send-message *ngIf="isSendMessage" (close)="closeEmailModal()"></app-send-message>
+  <app-set-password *ngIf="isSetNewPassword" (close)="closePasswordModal()"></app-set-password>

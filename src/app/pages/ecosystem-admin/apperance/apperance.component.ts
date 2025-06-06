@@ -22,7 +22,6 @@ export class ApperanceComponent {
 
   openTagsModal() {
     this.isTags = true;
-    console.log('open tags modal');
   }
   closeTagsModal() {
     this.isTags = false;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { XcIconShoppingCartComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
 
 @Component({
@@ -12,5 +12,9 @@ import { XcIconShoppingCartComponent, XcIconTimesComponent } from '@indziaki/ngx
   styleUrl: './buy-credits.component.scss'
 })
 export class BuyCreditsComponent {
+  @Output() close = new EventEmitter<void>();
 
+  onClose() {
+    this.close.emit();
+  }
 }

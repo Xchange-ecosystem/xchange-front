@@ -1,4 +1,4 @@
-<section *ngIf="isHistory" class="history">
+<section class="history">
   <div class="history_content">
     <article class="history_content-card">
       <nav class="filters">
@@ -14,9 +14,9 @@
         </div>
       </nav>
       <div class="history_content-card-table">
-        <table class="transaction-table">
+        <table class="transaction_table">
           <tbody>
-            <tr *ngFor="let transaction of transactions" class="transaction-table__row">
+            <tr *ngFor="let transaction of transactions" class="transaction_table__row">
               <td class="profile">
                 <xc-rounded-image [image]="transaction.image" [marginSize]="2"
                 color="var(--xc-grey300)"  />
@@ -47,8 +47,8 @@
         
       </div>
     </article>
-    <button class="btn btn--rounded" >
-      <xc-icon-close-s class="icon" />
+    <button class="btn btn--rounded" (click)="onClose()">
+      <xc-icon-close-s class="btn__icon" />
     </button>
   </div>
 </section>

@@ -87,4 +87,8 @@
         </div>
       </div>
     </article>
-  </section>
+</section>
+
+<app-buy-credits *ngIf="isBuyCredits" (close)="closeBuyCredits()" />
+<app-send-credits *ngIf="isSendCredits" (close)="closeSendCredits()" />
+<app-history *ngIf="isHistory" (close)="closeHistoryModal()"/>

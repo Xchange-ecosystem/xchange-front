@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCloseSComponent, XcIconAIComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
 
 @Component({
@@ -8,8 +8,10 @@ import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
   standalone: true,
   imports: [
     XcIconCloseSComponent,
+    XcIconAIComponent,
     NgFor,
-    ProfileTagsDirective
+    ProfileTagsDirective,
+    XcIconPlusCircleComponent
     ],
   templateUrl: './tags-modal.component.html',
   styleUrl: './tags-modal.component.scss',

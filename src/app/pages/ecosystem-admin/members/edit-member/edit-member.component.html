@@ -1,0 +1,38 @@
+<section class="edit_member">
+  <div class="edit_member_content">
+    <article class="edit_member_content-card">
+      <header class="header">
+        <img src="assets/img/Edit-member.png" alt="Edit-member-header-image" class="header_image">
+      </header>
+      <h2>Edit member</h2>
+      <form class="form_wrapper">
+        <label class="form_field">
+          <b>User email</b>
+          <input type="email" placeholder="johndoe@company.com">
+        </label>
+        <label class="form_field">
+          <b>First Name</b>
+          <input type="text" placeholder="John">
+        </label>
+        <label class="form_field">
+          <b>Last name</b>
+          <input type="text" placeholder="Doe">
+        </label>
+        <label class="form_field">
+          <b>Description</b>
+          <textarea placeholder="Optional" cols="16" rows="6"></textarea>
+        </label>
+      </form>
+      <div class="actions_buttons">
+        <button class="btn" type="button" (click)="onClose()">
+          <xc-icon-times class="btn__icon"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-save class="btn__icon_filled" />
+          <p>Save changes</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
