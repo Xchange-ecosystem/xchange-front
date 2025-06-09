@@ -1,7 +1,7 @@
 <div class="header">
     <!-- Modo vista -->
     <ng-container *ngIf="!editing; else editMode">
-      <h1 xcHeadlineStyles class="headline-400">{{ title }}</h1>
+      <h1 xcHeadlineStyles class="headline-400">{{ name }} {{ lastName }}</h1>
       <button
         *ngIf="isEditable"
         class="edit-button"
@@ -14,11 +14,22 @@
   
     <!-- Modo edición -->
     <ng-template #editMode>
-      <input
-        type="text"
-        class="header-input"
-        [(ngModel)]="tempTitle"
-      />
+      <label>
+        <input
+          type="text"
+          placeholder="Name"
+          class="header-input"
+          [(ngModel)]="nameHolder"
+        />
+      </label>
+      <label>
+        <input  
+          type="text"
+          placeholder="Last Name"
+          class="header-input"
+          [(ngModel)]="lastNameHolder"
+        />
+      </label>
       <div class="button-group" *ngIf="editing">
         <button
           class="edit-button cancel"
