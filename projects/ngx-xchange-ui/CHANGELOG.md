@@ -1,6 +1,8 @@
-# 0.1.30 08/06/2023
+# 0.1.30 08/06/2025
 * (change) header title behavior name and lastName one by one
 * (change) tags color in tags modal
+* (Fix) Change colors on progress project bar
+* (Fix) line leading on navigator objective card
 
 # 0.1.29 03/06/2025
 * (Fix): Dinamic width on rating bar
