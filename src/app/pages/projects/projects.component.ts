@@ -1,5 +1,4 @@
 import { ChangeDetectorRef, Component} from '@angular/core';
-import { XcIconCloseSComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
 import { ProjectsCardComponent } from 'src/app/pages/projects/projects-card/projects-card.component';
 import { SortByComponent } from 'projects/ngx-xchange-ui/src/components/sort-by/sort-by.component';
 import { Headline600Directive } from 'projects/ngx-xchange-ui/src/directives/headline-600/headline-600.directive';
@@ -9,6 +8,7 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { NgFor, NgIf } from '@angular/common';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { SectionTabComponent } from 'projects/ngx-xchange-ui/src/components/section-tab/section-tab.component';
+import { XcIconPlusCircleComponent, XcIconCloseSComponent } from 'projects/ngx-xchange-icons/src/public-api';
 interface ProjectInterface {
   image: string;
   title: string;

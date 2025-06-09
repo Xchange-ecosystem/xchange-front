@@ -1,0 +1,37 @@
+  <article  class="wallet">
+    <section class="wallet_assets">
+      <p xcHeadlineStyles class="headline-300">My assets</p>
+      <div class="wallet_assets-graph">
+        <img
+          src="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png"
+          alt="temp-graph-image"
+          class="wallet_assets-graph-image"
+        />
+      </div>
+    </section>
+    <section class="wallet_contributions">
+      <p xcHeadlineStyles class="headline-300">Contributions and value</p>
+      <table class="wallet_contributions-table">
+        <thead class="wallet_contributions-table-header">
+          <tr class="wallet_contributions-table-header-row">
+            <th xcHeadlineStyles class="headline-200-gray">Project</th>
+            <span class="wallet_contributions-table-header-row-last">
+              <th xcHeadlineStyles class="headline-200-gray">Contributed</th>
+              <th xcHeadlineStyles class="headline-200-gray">Current</th>
+              <th xcHeadlineStyles class="headline-200-gray">Status</th>
+            </span>
+          </tr>
+        </thead>
+        <tbody class="wallet_contributions-table-body">
+          <tr *ngFor="let row of tableData" class="wallet_contributions-table-body-row">
+            <td class="col-project">{{ row.project }}</td>
+            <td class="col-contributed">{{ row.contributed }}</td>
+            <td class="col-current">{{ row.current }}</td>
+            <td class="col-status">
+              <div xcProfileTags="{{ row.statusTag }}">{{ row.status }}</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </article>

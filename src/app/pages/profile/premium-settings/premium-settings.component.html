@@ -1,0 +1,239 @@
+
+  <article  class="premium_settings">
+    <section class="premium_settings-wrapper">
+      <div class="premium_settings-wrapper-custom">
+        <div class="premium_settings-wrapper-custom-container">
+          <h6 xcHeadlineStyles class="headline-300">
+            Customise your premium profile
+          </h6>
+          <span class="premium_settings-wrapper-custom-container-titles">
+            <p xcCopyStyles class="copy-300">Interests</p>
+            <p xcCopyStyles class="copy-300 scale">Interests scale</p>
+          </span>
+          <div *ngFor="let sel of selectedInterests; let i = index">
+            <app-interests-profile
+              [options]="getFilteredOptions(i)"
+              [selectedInterest]="sel.interest"
+              [selectedLevel]="sel.level"
+              (selection)="onInterestSelected($event, i)"
+            ></app-interests-profile>
+          </div>
+          <button
+            (click)="addSelector()"
+            class="premium_settings-wrapper-custom-container-button"
+          >
+            <p xcCopyStyles class="copy-400-bold">+ Añadir otro interés</p>
+          </button>
+        </div>
+        <button
+          xcButtonsWrappers
+          
+          class="button-filled-noHeight save"
+        >
+          <xc-icon-save class="save-icon" />
+          <p>Guardar cambios</p>
+        </button>
+      </div>
+      <div class="injector">
+        <h6 xcHeadlineStyles class="headline-300">
+          ... or load from predefined profiles to get started
+        </h6>
+        <app-interest-card class="injector"> </app-interest-card>
+      </div>
+    </section>
+    <section class="premium_settings-invoice">
+      <div class="premium_settings-invoice-header">
+        <p xcHeadlineStyles class="headline-300">Premium</p>
+      </div>
+
+      <div class="premium_settings-invoice-container">
+        <article class="premium_settings-invoice-premium">
+          <div class="premium_settings-invoice-premium-basic">
+            <h6
+              xcHeadlineStyles
+              class="headline-300 premium_settings-invoice-premium-basic-title"
+            >
+              Xcamp Basic
+            </h6>
+            <div class="premium_settings-invoice-premium-basic-container">
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Projects and collaborations in the community
+                </p>
+              </span>
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Collaboration reward credits
+                </p>
+              </span>
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Start projects with AI templates
+                </p>
+              </span>
+              <span
+                class="premium_settings-invoice-premium-basic-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-basic-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-basic-container-item-wrapper-icon"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Project navigation and collaborator assignments
+                </p>
+              </span>
+            </div>
+          </div>
+
+          <div class="premium_settings-invoice-premium-investor">
+            <h6 xcHeadlineStyles class="headline-300">Investor Premium</h6>
+            <div class="premium_settings-invoice-premium-investor-container">
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Advantage number one lorem ipsum
+                </p>
+              </span>
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Advantage number one lorem ipsum
+                </p>
+              </span>
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Advantage number one lorem ipsum
+                </p>
+              </span>
+              <span
+                class="premium_settings-invoice-premium-investor-container-item"
+              >
+                <div
+                  class="premium_settings-invoice-premium-investor-container-item-wrapper"
+                >
+                  <xc-icon-check-circle
+                    class="premium_settings-invoice-premium-investor-container-item-wrapper-icon-purple"
+                  />
+                </div>
+                <p xcCopyStyles class="copy-400">
+                  Advantage number one lorem ipsum
+                </p>
+              </span>
+            </div>
+            <div class="premium_settings-invoice-premium-investor-footer">
+              <small xcCopyStyles class="copy-400-purple">FREE IN BETA</small>
+              <button xcButtonsWrappers class="button-default-noHeight button">
+                <xc-icon-star class="button-icon" />
+                <button (click)="openCancel()">Cancel Premium</button>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="premium_settings-invoice-billing">
+          <table class="invoice-table">
+            <thead class="invoice-table__header">
+              <tr class="invoice-table__header-row">
+                <th class="invoice-table__header-row-cell">
+                  <div class="invoice-table__header-row-cell-title">
+                    <p class="invoice-table__title-text">Billing History</p>
+                    <app-profile-sort />
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="invoice-table__body">
+              <tr
+                class="invoice-table__row"
+                *ngFor="let invoice of invoiceData"
+              >
+                <td class="invoice-table__cell">
+                  <div class="invoice-table__name-wrapper">
+                    <xc-rounded-image
+                     [image]="image"
+                      class="invoice-table__image"
+                    />
+                    {{ invoice.invoiceName }}
+                  </div>
+                </td>
+                <td class="invoice-table__cell">{{ invoice.date }}</td>
+                <td class="invoice-table__cell">{{ invoice.amount }}</td>
+                <td class="invoice-table__cell-button">
+                  <button class="invoice-table__cell-button-text">
+                    {{ invoice.status }}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot class="invoice-table__footer">
+              <tr>
+                <td colspan="4" class="invoice-table__footer-cell">
+                  <button class="invoice-table__footer-button">
+                    <xc-icon-arrow-right
+                      class="invoice-table__footer-button-icon"
+                    />
+                    <p xcCopyStyles class="copy-400-bold">See full history</p>
+                  </button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </article>
+      </div>
+    </section>
+  </article>
