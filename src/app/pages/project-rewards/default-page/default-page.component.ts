@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ProjectDashboardNavigatorService } from '../../project-settings/services/services-dashboard-navigator-service.service';
 import { SwitchViewService } from '../services/swith-view-service/switch-view.service';
-import { XcIconPlusCircleComponent } from "@indziaki/ngx-xchange-icons";
+import { XcIconPlusCircleComponent } from 'projects/ngx-xchange-icons/src/lib/plus-circle.component';
 
 @Component({
   selector: 'app-default-page',

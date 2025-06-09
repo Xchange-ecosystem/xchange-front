@@ -28,7 +28,7 @@ export class ProfileHeaderComponent {
     { name: 'Premium settings', hasNotifications: false }
   ];
 
-  @Input() isPremium = false;
+  @Input() isPremium = true;
   
   get sections() {
     return this.allSections.filter(s => {
