@@ -1,0 +1,123 @@
+<article class="apperance">
+    <section class="apperance_about">
+      <div class="apperance_about-title">
+        <p xcHeadlineStyles class="headline-300">About Me</p>
+
+        <ng-container *ngIf="!editingDescription; else editDescTpl">
+          <p (click)="editDescription()" xcCopyStyles class="copy-400">{{ description }}</p>
+        </ng-container>
+        <ng-template #editDescTpl>
+          <textarea
+            [(ngModel)]="tempDescription"
+            cols="60"
+            rows="20"
+            autofocus
+            xcCopyStyles
+            class="copy-400 edit-textarea"
+          ></textarea>
+        </ng-template>
+      </div>
+    </section>
+    <section class="apperance_further">
+      <div class="apperance_further-settings">
+        <p xcHeadlineStyles class="headline-300">Further settings</p>
+        <div class="apperance_further-settings-options">
+          <span class="apperance_further-settings-options-item">
+            <p xcCopyStyles class="copy-300-bold">Public visibility</p>
+            <div>
+              <xc-toggle color="green" />
+            </div>
+          </span>
+          <span class="apperance_further-settings-options-item-language">
+            <p xcCopyStyles class="copy-300-bold">Platform language</p>
+
+            <app-language-dropdown
+              class="apperance_further-settings-options-item-language-component"
+              [options]="languageOptions"
+              (change)="onLanguageChange($event)"
+            ></app-language-dropdown>
+          </span>
+          <span class="apperance_further-settings-options-item-interests">
+            <p xcCopyStyles class="copy-300-bold">Interests and talents</p>
+            <div class="apperance_further-settings-options-item-interests-tags">
+              <div
+                class="apperance_further-settings-options-item-interests-tags-container"
+              >
+                <div xcProfileTags="gray">Generate</div>
+                <div xcProfileTags="gray">Organizational</div>
+                <div xcProfileTags="gray">Improve</div>
+                <div xcProfileTags="gray">Analyze</div>
+                <div xcProfileTags="gray">Develop</div>
+              </div>
+              <button
+                (click)="openTags()"
+                class="apperance_further-settings-options-item-interests-tags-see"
+              >
+                <xc-icon-arrow-right
+                  class="apperance_further-settings-options-item-interests-tags-see-icon"
+                />
+                <p xcCopyStyles class="copy-300-bold">See all tags</p>
+              </button>
+            </div>
+          </span>
+          <span class="apperance_further-settings-options-item-blockchain">
+            <p xcCopyStyles class="copy-300-bold">Blockchain key</p>
+            <div
+              class="apperance_further-settings-options-item-blockchain-info"
+            >
+              <xc-icon-copy
+                class="apperance_further-settings-options-item-blockchain-info-icon"
+              />
+              <p xcCopyStyles class="copy-400">
+                0x1234567890abcdef1234567890abcdef12345678
+              </p>
+            </div>
+          </span>
+          <span class="apperance_further-settings-options-item-member">
+            <p xcCopyStyles class="copy-300-bold">Member since</p>
+            <p xcCopyStyles class="copy-400">7 Aug.2024</p>
+          </span>
+          <span class="apperance_further-settings-options-item-email">
+            <p xcCopyStyles class="copy-300-bold">Email</p>
+            <ng-container *ngIf="!editingEmail; else editEmailTpl">
+              <p (click)="editEmail()">{{ email }}</p>
+            </ng-container>
+            <ng-template #editEmailTpl>
+              <input
+                [(ngModel)]="tempEmail"
+                type="email"
+                autofocus
+                class="edit-input"
+              />
+            </ng-template>
+          </span>
+          <span class="apperance_further-settings-options-item-linkedin">
+            <p xcCopyStyles class="copy-300-bold">Linkedin</p>
+            <ng-container *ngIf="!editingLinkedin; else editLinkTemp">
+              <p (click)="editLinkedin()">{{ linkedin }}</p>
+            </ng-container>
+            <ng-template #editLinkTemp>
+              <input
+                [(ngModel)]="tempLinkedin"
+                type="url"
+                autofocus
+                class="edit-input"
+              />
+            </ng-template>
+          </span>
+        </div>
+      </div>
+    </section>
+    <footer class="apperance_footer">
+      <button
+        type="button"
+        class="apperance_footer-save"
+        (click)="saveChanges()"
+      >
+        <xc-icon-save class="apperance_footer-save-icon" />
+        Save changes
+      </button>
+    </footer>
+</article>
+
+<app-tag-modal *ngIf="isTagsOpen" (close)="closeTags()"/>
