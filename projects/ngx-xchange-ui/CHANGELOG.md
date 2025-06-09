@@ -1,3 +1,7 @@
+# 0.1.30 08/06/2023
+* (change) header title behavior name and lastName one by one
+* (change) tags color in tags modal
+
 # 0.1.29 03/06/2025
 * (Fix): Dinamic width on rating bar
 * (Refactor): Move user-assesment-card to client project
