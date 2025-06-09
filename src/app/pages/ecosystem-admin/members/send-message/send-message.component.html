@@ -1,0 +1,30 @@
+<section class="send_message">
+  <div class="send_message_content">
+    <article class="send_message_content-card">
+      <header class="header">
+        <img src="assets/img/Send-message.png" alt="send_message-header-image" class="header_image">
+      </header>
+      <h2>Send a message to Jose Jimenez</h2>
+      <form class="form_wrapper">
+        <label class="form_field">
+          <b>Subject</b>
+          <input type="password" placeholder="Please enter yout subject">
+        </label>
+        <label class="form_field">
+          <b>Your message</b>
+          <textarea placeholder="Please write your message" cols="16" rows="6"></textarea>
+        </label>
+      </form>
+      <div class="actions_buttons">
+        <button class="btn" type="button" (click)="onClose()">
+          <xc-icon-times class="btn__icon cancel"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-send class="btn__icon_filled send" />
+          <p>Send</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,0 +1,101 @@
+@import 'src/styles/components/scrollbar';
+
+.history {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+
+    margin-top: 106px;
+    margin-bottom: 106px;
+
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      flex-wrap: wrap;
+      min-width: 860px;
+      max-width: 100%;
+
+      .filters {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-table {
+        max-height: 600px;
+        overflow-y: auto;
+        @include custom-scrollbar;
+        .transaction_table {
+          width: 100%;
+        }
+
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          xc-rounded-image {
+            width: 30px;
+            height: 30px;
+            flex-shrink: 0;
+            object-fit: cover;
+            display: block;
+          }
+        }
+
+        .destiny {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          white-space: nowrap;
+
+          &__icon {
+            width: 30px;
+            height: 30px;
+            background-color: var(--xc-grey200);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon {
+              width: 20px;
+              height: 20px;
+              color: var(--xc-black400);
+            }
+          }
+        }
+
+        .amount {
+          white-space: nowrap;
+          font-weight: 600;
+
+          &--positive {
+            color: var(--xc-categories-completed);
+          }
+
+          &--negative {
+            color: var(--xc-categories-blocked);
+          }
+        }
+
+        td {
+          padding: 12px 16px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

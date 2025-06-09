@@ -1,0 +1,38 @@
+<section class="tags">
+  <div class="tags_content">
+    <article class="tags_content-card">
+      <h2>All tags related to Fabian</h2>
+      <article class="tags_content-card-article">
+        <h4 class="bold">Review your skill tags</h4>
+        <span class="tags_content-card-article-item">
+          <xc-icon-ai class="ia-icon" />
+          <p class="bold">
+            Our AI matches your skills with projects, templates and other
+            members. That’s why it’s important to build a strong profile
+          </p>
+        </span>
+      </article>
+      <div class="tags_content-card-injector">
+        <div xcProfileTags="gray" *ngFor="let tag of tags" class="tag">
+          <p class="text_200 bold">{{ tag }}</p>
+          <button>
+            <xc-icon-close-s class="btn__icon_reject" />
+          </button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="tags_content-card-new">
+        <h4>Add tags</h4>
+        <span class="tags_content-card-new-span">
+          <input class="tags_content-card-new-span-input" />
+          <button>
+            <xc-icon-plus-circle class="btn__icon" />
+          </button>
+        </span>
+      </div>
+    </article>
+    <button class="btn btn--rounded" (click)="closeTagsModal()">
+      <xc-icon-close-s class="btn__icon" />
+    </button>
+  </div>
+</section>
