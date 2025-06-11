@@ -20,6 +20,11 @@
     column-gap: 16px;
     max-width: 100%;
     box-sizing: border-box;
+    @media (max-width: 1320px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+      row-gap: 26px;
+    }
     &_organizer {
       overflow: hidden;
       display: flex;
@@ -27,6 +32,10 @@
       gap: 16px;
       margin-bottom: 12px;
       margin-left: 24px;
+      @media (max-width: 1320px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
       &_chat {
         background: white;
         display: flex;

@@ -8,6 +8,7 @@ import { CommunityComponent } from "./pages/community/community.component";
 import {MainHeadingModule} from "../../projects/ngx-xchange-ui/src/directives/main-heading/main-heading.module";
 import { NewAsideNavComponent } from 'projects/ngx-xchange-ui/src/components/new-aside-nav/new-aside-nav.component';
 import { RouterOutlet } from '@angular/router';
+import { BurgerMenuComponent } from 'projects/ngx-xchange-ui/src/components/burger-menu/burger-menu.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { RouterOutlet } from '@angular/router';
     MainHeadingModule,
     NewAsideNavComponent,
     RouterOutlet,
-    ProjectProgressBarModule
+    ProjectProgressBarModule,
+    BurgerMenuComponent
 ],
   providers: [],
   bootstrap: [AppComponent]

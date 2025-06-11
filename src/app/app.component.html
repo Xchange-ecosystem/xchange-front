@@ -1,5 +1,6 @@
 <main class="main-content">
-  <xc-new-aside-nav />
+  <xc-new-aside-nav *ngIf="!isMobile" />
+  <xc-burger-menu *ngIf="isMobile" class="burger-menu"/>
   <div class="main-content__container">
     <router-outlet></router-outlet>
   </div>

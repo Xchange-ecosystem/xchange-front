@@ -1,0 +1,153 @@
+<button class="burger-button" (click)="toggleMenu()" [class.burger-button--open]="isOpen">
+  <span class="burger-button__line"></span>
+  <span class="burger-button__line"></span>
+  <span class="burger-button__line"></span>
+</button>
+
+<aside class="aside-nav" [class.aside-nav--open]="isOpen">
+    <div class="aside-nav__top">
+      <header class="aside-nav__header">
+        <img
+          src="/assets/img/X-Vector.webp"
+          alt="Xchange-logo"
+          class="aside-nav__logo"
+        />
+        <h2 class="aside-nav__title">camp</h2>
+      </header>
+      <div class="aside-nav__tabs">
+        <button
+          class="aside-nav__tab"
+          [ngClass]="{
+            'aside-nav__tab--active': activeTab === 'ecosystem',
+            'aside-nav__tab--inactive': activeTab !== 'ecosystem'
+          }"
+          (click)="setActiveTab('ecosystem')"
+        >
+          Ecosystem
+        </button>
+        <button
+          class="aside-nav__tab-right"
+          [ngClass]="{
+            'aside-nav__tab--active': activeTab === 'project',
+            'aside-nav__tab--inactive': activeTab !== 'project'
+          }"
+          (click)="setActiveTab('project')"
+        >
+          Project
+        </button>
+      </div>
+      
+      <nav class="aside-nav__menu" *ngIf="activeTab === 'ecosystem'">
+        <xc-aside-links [route]="'/feed'" [label]="'Feed'" class="nav-item">
+          <span icon class="aside-nav__wifi">
+            <xc-icon-wifi></xc-icon-wifi>
+          </span>
+        </xc-aside-links>
+        <xc-aside-links [route]="'/projects'" [label]="'Projects'">
+          <span icon>
+            <xc-icon-rocket></xc-icon-rocket>
+          </span>
+        </xc-aside-links>
+        <xc-aside-links [route]="'/community'" [label]="'Community'">
+          <span icon>
+            <xc-icon-users-alt></xc-icon-users-alt>
+          </span>
+        </xc-aside-links>
+        <xc-aside-links [route]="'/dashboard'" [label]="'Dashboard'">
+          <span icon>
+            <xc-icon-chart></xc-icon-chart>
+          </span>
+        </xc-aside-links>
+        <xc-aside-links [route]="'/ecosystem-admin'" [label]="'Admin'">
+          <span icon>
+            <xc-icon-setting></xc-icon-setting>
+          </span>
+        </xc-aside-links>
+      </nav>
+      <nav class="aside-nav__menu" *ngIf="activeTab === 'project'">
+          <xc-aside-links [route]="'/project-feed'" [label]="'Project Feed'">
+              <span icon class="aside-nav__wifi">
+                  <xc-icon-wifi></xc-icon-wifi>
+              </span>
+            </xc-aside-links>
+            <xc-aside-links [route]="'/project-dashboard'" [label]="'Dashboard'">
+              <span icon>
+                <xc-icon-chart></xc-icon-chart>
+              </span>
+            </xc-aside-links>
+            <xc-aside-links [route]="'/project-navigator'" [label]="'Navigator'">
+              <span icon>
+                <xc-icon-compass></xc-icon-compass>
+              </span>
+            </xc-aside-links>
+            <xc-aside-links [route]="'/project-goals'" [label]="'Goals'">
+              <span icon>
+                <xc-icon-crosshair></xc-icon-crosshair>
+              </span>
+            </xc-aside-links>
+            <xc-aside-links [route]="'/project-rewards'" [label]="'Rewards'">
+              <span icon>
+                <xc-icon-star></xc-icon-star>
+              </span>
+            </xc-aside-links>
+            <xc-aside-links [route]="'/project-settings'" [label]="'Settings'">
+              <span icon>
+                <xc-icon-setting></xc-icon-setting>
+              </span>
+            </xc-aside-links>
+      </nav>
+    </div>
+    <nav class="aside-nav__bottom-menu">
+      <button
+        *ngFor="let user of users"
+        [routerLink]="'/profile'"
+        class="aside-nav__user"
+        [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenu === 'profile' }"
+        (click)="selectMenu('profile')"
+      >
+        <span class="aside-nav__user-info">
+          <xc-rounded-image
+            [image]="user.imageUrl"
+            class="aside-nav__user-img"
+            [marginSize]="0"
+          />
+          <p class="aside-nav__text">My profile</p>
+        </span>
+        <span class="aside-nav__arrow">
+          <xc-icon-angle-right class="aside-nav__arrow-icon" />
+        </span>
+      </button>
+    
+      <button
+        [routerLink]="'/support'"
+        class="aside-nav__support"
+        [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenu === 'support' }"
+        (click)="selectMenu('support')"
+      >
+        <span class="aside-nav__support-info">
+          <xc-icon-question-circle class="aside-nav__support-icon" />
+          <p class="aside-nav__text">Support</p>
+        </span>
+        <span class="aside-nav__arrow">
+          <xc-icon-angle-right class="aside-nav__arrow-icon" />
+        </span>
+      </button>
+    
+      <button
+        [routerLink]="'/logout'"
+        class="aside-nav__logout"
+        [ngClass]="{ 'aside-nav__bottom-menu--active': selectedMenu === 'logout' }"
+        (click)="selectMenu('logout')"
+      >
+        <span class="aside-nav__logout-info">
+          <xc-log-out-icon class="aside-nav__logout-icon" />
+          <p class="aside-nav__text">Logout</p>
+        </span>
+        <span class="aside-nav__arrow">
+          <xc-icon-angle-right class="aside-nav__arrow-icon" />
+        </span>
+      </button>
+    </nav>
+    
+  </aside>
+  
