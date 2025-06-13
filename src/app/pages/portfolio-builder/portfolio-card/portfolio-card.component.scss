@@ -1,0 +1,80 @@
+.portfolio {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 20px 16px;
+  max-height: 520px;
+  box-shadow: var(--xc-boxShadow-400);
+  background-color: var(--xc-white);
+  border-radius: var(--xc-rounded-eight);
+  &_title {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    &-tags {
+      display: flex;
+      gap: 6px;
+      overflow-x: hidden;
+    }
+
+  }
+  &_numbers {
+    display: flex;
+    width: 100%;
+    &-stats {
+      display: flex;
+      width: 100%;
+      gap: 24px;
+      .stat-values {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid var(--xc-grey100);
+        flex: 1;
+        max-width: 180px;
+        .value {
+         text-align: center;
+        }
+        .label {
+          color: var(--xc-black400);
+          text-align: center;
+        }
+
+      }
+      .project-values {
+        display: flex;
+        gap: 8px;
+        .collaborators {
+          text-align:center;
+          padding:0 16px;
+          border-right: 1px solid var(--xc-grey100);
+        }
+        .quality {
+          text-align:center;
+          padding:0 16px;
+          border-right: 1px solid var(--xc-grey100);
+        }
+        .proof {
+          text-align:center;
+          padding:0 16px;
+        }
+      }
+    }
+  }
+  &_tasks {
+    display: flex;
+    width: 100%;
+    &-bar {
+      width: 100%;
+    }
+  }
+  &_description {
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

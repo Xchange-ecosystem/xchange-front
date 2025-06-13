@@ -1,0 +1,30 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &_filters {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &_title {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    &_cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        flex-wrap: wrap;
+    }
+}

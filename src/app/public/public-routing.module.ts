@@ -78,7 +78,11 @@ const routes: Routes = [
         path: 'project-feed',
         loadComponent: () => import('src/app/pages/project-feed/project-feed.component').then(m => m.ProjectFeedComponent),
       },
-    ],
+      {
+        path: 'portfolio-builder',
+        loadComponent: () => import('src/app/pages/portfolio-builder/portfolio-builder.component').then(m => m.PortfolioBuilderComponent),
+      },
+    ], 
   },
 ];
 

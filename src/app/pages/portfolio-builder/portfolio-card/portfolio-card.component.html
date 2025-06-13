@@ -1,0 +1,53 @@
+<button class="portfolio">
+    <article class="portfolio_header">
+        <img src="assets/img/user-modal-background.webp" alt="portfolio-header-image" class="portfolio_header_image">
+    </article>
+    <article class="portfolio_title">
+        <h3>NextGen LLL – Xchange Studio project</h3>
+        <div class="portfolio_title-tags">
+            <span xcProfileTags="gray">Project Label</span>
+            <span xcProfileTags="gray">Project Label</span>
+            <span xcProfileTags="gray">Project Label</span>
+        </div>
+    </article>
+    <article class="portfolio_numbers">
+        <div class="portfolio_numbers-stats">
+          <div class="stat-values">
+            <h2 class="value">83.814€</h2>
+            <span class="label medium-300">Collaboration value</span>
+          </div>
+          <div class="stat-values">
+            <h2 class="value">83.814€</h2>
+            <span class="label medium-300">Project value</span>
+          </div>
+          <div class="project-values">
+            <div class="collaborators">
+              <h2 class="value">18</h2>
+              <span class="label medium-300">Collaborators</span>
+            </div>
+            <div class="quality">
+              <h2 class="value">78%</h2>
+              <span class="label medium-300">Quality</span>
+            </div>
+            <div class="proof">
+              <h2 class="value">38</h2>
+              <span class="label medium-300">Proof</span>
+            </div>
+          </div>
+        </div>
+    </article>
+    <article class="portfolio_tasks">
+        <xc-project-progress-bar 
+        [completed]="12" 
+        [open]="8" 
+        [suggested]="9" 
+        [objectivesInProject]="50" 
+        class="portfolio_tasks-bar">
+      </xc-project-progress-bar>
+    </article>
+    <article class="portfolio_description">
+        <p>
+          OneLife is the HealthTech Ecosphere of Xchange with a focus on holistic, self-determined individual health. The project is designed as a platform between individual users, healthcare professionals and third parties. The product can be described as follows:   
+        </p>
+    </article>
+</button>

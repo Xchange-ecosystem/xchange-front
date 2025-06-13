@@ -1,0 +1,10 @@
+<main class="portfolio">
+    <div class="portfolio_filters">
+    </div>
+    <section class="portfolio_title">
+        <h1>Portfolio Builder</h1>
+    </section>
+    <section class="portfolio_cards">
+        <app-portfolio-card *ngFor="let portfolio of portfolios" [portfolio]="portfolio" />
+    </section>
+</main>     
