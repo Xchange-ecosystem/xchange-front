@@ -1,0 +1,78 @@
+.modal_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: -100px;
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 42px;
+            background-color: var(--xc-white);
+            gap: 24px;
+            padding: 32px;
+            border-radius: var(--xc-rounded-eight);
+            .card_info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 16px;
+                width: 100%;
+                &-item {
+                    display: flex;
+                    gap: 8px;
+                    width: 100%;
+                    b {
+                        text-wrap: nowrap;
+                    }
+                    &-text {
+                        color: var(--xc-grey500);
+                    }
+                    &-images {
+                        display: flex;
+                        width: 100%;
+                        .rounded-image {
+                            display: flex;
+                            width: 30px;
+                            height: 30px;
+                            margin-left: -5px;
+                        }
+                    }
+                }
+            }
+        }
+        &-navigation {
+            align-self: center;
+            display: flex;
+            margin-right: 23px;
+            background-color: var(--xc-white);
+            border-radius: var(--xc-rounded-eight);
+            gap: 16px;
+            height: min-content;
+            padding: 4px 14px;
+            button {
+                border: none;
+                height: min-content;
+                border-radius: var(--xc-rounded-eight);
+                padding:10px;
+                &:hover {
+                    background-color: var(--xc-gradient-light-grey-on-white);
+                }
+            }
+        }
+    }
+}

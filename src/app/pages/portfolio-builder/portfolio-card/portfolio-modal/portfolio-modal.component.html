@@ -1,0 +1,65 @@
+<section class="portfolio-modal">
+  <app-modal-header [portfolio]="portfolio" />
+  <article class="portfolio-modal__content">
+    <div class="portfolio-modal__about">
+      <div class="portfolio-modal__about-section">
+        <div class="portfolio-modal__about-header">
+          <h3 class="portfolio-modal__title">About the project</h3>
+          <div class="portfolio-modal__tags">
+            <div class="portfolio-modal__tags-list">
+              <span xcProfileTags="gray" *ngFor="let tag of portfolio.tags">{{ tag }}</span>
+            </div>
+            <button class="portfolio-modal__tags-button">See all tags</button>
+          </div>
+        </div>
+        <div class="portfolio-modal__description">
+          <p>{{ portfolio.description }}</p>
+        </div>
+      </div>
+      <div class="portfolio-modal__metrics">
+        <h3 class="portfolio-modal__title">Overall project progress</h3>
+        <div class="portfolio-modal__progress">
+          <xc-project-progress-bar
+            [completed]="portfolio.completed || 4"
+            [open]="portfolio.open || 3"
+            [suggested]="portfolio.suggested || 6"
+            [objectivesInProject]="portfolio.objectivesInProject || 10"
+            class="portfolio-modal__progress-bar"
+          />
+        </div>
+        <div class="portfolio-modal__graphs">
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-modal__data">
+      <h3 class="portfolio-modal__title">Project metrics</h3>
+      <div class="portfolio-modal__data-flex">
+        <div class="portfolio-modal__data-item">
+          <h2 class="portfolio-modal__data-value">1.281.500€</h2>
+          <p class="portfolio-modal__data-label">Project value</p>
+        </div>
+        <div class="portfolio-modal__data-item">
+          <h2 class="portfolio-modal__data-value">83.814€</h2>
+          <p class="portfolio-modal__data-label">Value added through collaborations</p>
+        </div>
+        <div class="portfolio-modal__data-item">
+          <h2 class="portfolio-modal__data-value">156.814€</h2>
+          <p class="portfolio-modal__data-label">value added through owners</p>
+        </div>
+        <div class="portfolio-modal__data-item">
+          <h2 class="portfolio-modal__data-value">78%</h2>
+          <p class="portfolio-modal__data-label">quality</p>
+        </div>
+        <div class="portfolio-modal__data-item">
+          <h2 class="portfolio-modal__data-value">95</h2>
+          <p class="portfolio-modal__data-label">collaborations</p>
+        </div>
+        <div class="portfolio-modal__data-item">
+          <h2 class="portfolio-modal__data-value">116</h2>
+          <p class="portfolio-modal__data-label">proofs uploaded</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+  

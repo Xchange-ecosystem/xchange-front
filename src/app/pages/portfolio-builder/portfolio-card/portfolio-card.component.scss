@@ -69,6 +69,8 @@
     width: 100%;
     &-bar {
       width: 100%;
+      z-index: 0;
+      display: flex;
     }
   }
   &_description {
@@ -76,5 +78,61 @@
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  &_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 10;
+    .modal {
+      width: 75%;
+      border-radius: 16px;
+      background: white;
+      transform: scale(0.8);
+      opacity: 0;
+      animation: slideIn 0.3s ease-in-out forwards;
+    }
+    &-close {
+      background: white;
+      border-radius: 16px;
+      padding: 4px;
+      align-self: flex-start;
+      margin-top: 80px;
+      margin-left: 20px;
+      &-icon {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        stroke: var(--xc-black500);
+      }
+    }
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
