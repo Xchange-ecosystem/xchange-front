@@ -1,17 +1,15 @@
 <button class="portfolio" (click)="onOpenModal()">
   <article class="portfolio_header">
     <img
-      src="assets/img/user-modal-background.webp"
+      [src]="portfolio.image"
       alt="portfolio-header-image"
       class="portfolio_header_image"
     />
   </article>
   <article class="portfolio_title">
-    <h3>NextGen LLL – Xchange Studio project</h3>
+    <h3>{{ portfolio.title }}</h3>
     <div class="portfolio_title-tags">
-      <span xcProfileTags="gray">Project Label</span>
-      <span xcProfileTags="gray">Project Label</span>
-      <span xcProfileTags="gray">Project Label</span>
+      <span xcProfileTags="gray" *ngFor="let tag of portfolio.tags">{{ tag }}</span>
     </div>
   </article>
   <article class="portfolio_numbers">
@@ -42,21 +40,16 @@
   </article>
   <article class="portfolio_tasks">
     <xc-project-progress-bar
-      [completed]="12"
-      [open]="8"
-      [suggested]="9"
-      [objectivesInProject]="50"
+      [completed]="portfolio.completed || 0"
+      [open]="portfolio.open || 0"
+      [suggested]="portfolio.suggested || 0"
+      [objectivesInProject]="portfolio.objectivesInProject || 0"
       class="portfolio_tasks-bar"
     >
     </xc-project-progress-bar>
   </article>
   <article class="portfolio_description">
-    <p>
-      OneLife is the HealthTech Ecosphere of Xchange with a focus on holistic,
-      self-determined individual health. The project is designed as a platform
-      between individual users, healthcare professionals and third parties. The
-      product can be described as follows:  
-    </p>
+    <p>{{ portfolio.description }}</p>
   </article>
 </button>
 
