@@ -18,9 +18,9 @@
             </div>
         </div>
         <div class="modal_header-content-navigation">
-            <button>General</button>
-            <button>Value</button>
-            <button>Pitch</button>
+            <button (click)="changeSection(PortfolioSection.GENERAL)">General</button>
+            <button (click)="changeSection(PortfolioSection.METRICS)">Value</button>
+            <button (click)="changeSection(PortfolioSection.PITCH)">Pitch</button>
         </div>
     </section>
 </article>

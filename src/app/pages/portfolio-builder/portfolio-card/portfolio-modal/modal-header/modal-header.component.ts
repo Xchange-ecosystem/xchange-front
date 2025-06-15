@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
 import { ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/directives/profile-tags/profile-tags.directive';
+import { ChangeTabService, PortfolioSection } from '../../../change-tab.service';
 
 interface PortfolioInterface {
   id: number;
@@ -22,4 +23,11 @@ interface PortfolioInterface {
 })
 export class ModalHeaderComponent {
   @Input() portfolio!: PortfolioInterface;
+  PortfolioSection = PortfolioSection;
+
+  constructor(private changeTabService: ChangeTabService) {}
+
+  changeSection(section: PortfolioSection): void {
+    this.changeTabService.changeSection(section);
+  }
 }

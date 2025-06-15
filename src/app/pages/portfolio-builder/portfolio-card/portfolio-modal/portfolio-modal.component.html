@@ -1,7 +1,7 @@
 <section class="portfolio-modal">
   <app-modal-header [portfolio]="portfolio" />
-  <article class="portfolio-modal__content">
-    <div class="portfolio-modal__about">
+  <article class="portfolio-modal__content" *ngIf="currentSection === 'general'">
+    <div class="portfolio-modal__about" >
       <div class="portfolio-modal__about-section">
         <div class="portfolio-modal__about-header">
           <h3 class="portfolio-modal__title">About the project</h3>
@@ -9,7 +9,10 @@
             <div class="portfolio-modal__tags-list">
               <span xcProfileTags="gray" *ngFor="let tag of portfolio.tags">{{ tag }}</span>
             </div>
-            <button class="portfolio-modal__tags-button">See all tags</button>
+            <button class="portfolio-modal__tags-button">
+              <xc-icon-arrow-right class="portfolio-modal__tags-button-icon" />
+              <b>See all tags</b>
+            </button>
           </div>
         </div>
         <div class="portfolio-modal__description">
@@ -28,6 +31,10 @@
           />
         </div>
         <div class="portfolio-modal__graphs">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
         </div>
       </div>
     </div>
@@ -58,6 +65,48 @@
           <h2 class="portfolio-modal__data-value">116</h2>
           <p class="portfolio-modal__data-label">proofs uploaded</p>
         </div>
+      </div>
+      <div class="portfolio-modal__actions">
+        <button class="btn">
+          <p class="bold">Add to watchlist</p>
+        </button>
+        <button class="btn btn--filled">
+          <p>Ask for access</p>
+        </button>
+      </div>
+    </div>
+  </article>
+  <article class="portfolio-modal__metrics" *ngIf="currentSection === 'metrics'">
+    <div class="portfolio-modal__metrics">
+      <h3 class="portfolio-modal__title">Metric development</h3>
+      <div class="portfolio-modal__metrics-flex">
+        <div class="dropdown">
+          <button class="dropdown__toggle">
+            <p class="text--300">Metric</p>
+            <span class="dropdown__icon">
+              <xc-icon-angle-down class="btn__icon"/>
+            </span>
+          </button>
+        </div>
+        <div class="dots_graph">
+          <img src="assets/img/temp-graph.png" alt="Graph" class="dots_graph-img">
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="portfolio-modal__pitch" *ngIf="currentSection === 'pitch'">
+    <div class="portfolio-modal__pitch-container">
+      <h3 class="portfolio-modal__pitch-title">AI Pitch</h3>
+      <div class="portfolio-modal__pitch-content">
+        <img src="assets/img/Pitch-image.png" alt="Pitch" class="portfolio-modal__pitch-image">
+        <span class="portfolio-modal__pitch-text">
+          <h4 class="portfolio-modal__pitch-text-title">
+            We are announcing the end of pitchdecks!
+          </h4>
+          <p>
+            Automatic Pitch cards created by AI are coming soon!
+          </p>
+        </span>
       </div>
     </div>
   </article>

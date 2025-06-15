@@ -61,11 +61,13 @@
 </button>
 
 <dialog class="portfolio_modal" *ngIf="selectedPortfolio">
-  <app-portfolio-modal 
-    class="modal" 
-    [portfolio]="selectedPortfolio"
-  />
-  <button class="portfolio_modal-close" (click)="onCloseModal()">
-    <xc-icon-close-s class="portfolio_modal-close-icon"></xc-icon-close-s>
-  </button>
+  <div class="portfolio_modal-container">
+    <app-portfolio-modal 
+      class="modal" 
+      [portfolio]="selectedPortfolio"
+    />
+    <button class="portfolio_modal-close btn--rounded" (click)="onCloseModal()">
+      <xc-icon-close-s class="portfolio_modal-close-icon"></xc-icon-close-s>
+    </button>
+  </div>
 </dialog>

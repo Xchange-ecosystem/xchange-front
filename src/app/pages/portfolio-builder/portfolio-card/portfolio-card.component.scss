@@ -91,21 +91,28 @@
     align-items: center;
     animation: fadeIn 0.3s ease-in-out;
     z-index: 10;
+
+    &-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+    }
+
     .modal {
-      width: 75%;
+      width: 100%;
       border-radius: 16px;
       background: white;
       transform: scale(0.8);
       opacity: 0;
       animation: slideIn 0.3s ease-in-out forwards;
+      height: min-content;
     }
     &-close {
-      background: white;
-      border-radius: 16px;
-      padding: 4px;
-      align-self: flex-start;
-      margin-top: 80px;
-      margin-left: 20px;
+      margin-left: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &-icon {
         display: flex;
         width: 24px;
