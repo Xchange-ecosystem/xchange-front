@@ -1,72 +1,72 @@
 <section class="portfolio-modal">
   <app-modal-header [portfolio]="portfolio" />
-  <article class="portfolio-modal__content" *ngIf="currentSection === 'general'">
-    <div class="portfolio-modal__about" >
-      <div class="portfolio-modal__about-section">
-        <div class="portfolio-modal__about-header">
-          <h3 class="portfolio-modal__title">About the project</h3>
-          <div class="portfolio-modal__tags">
-            <div class="portfolio-modal__tags-list">
+  <article class="portfolio-modal_content" *ngIf="currentSection === 'general'">
+    <div class="portfolio-modal_content-about" >
+      <div class="portfolio-modal_content-about-section">
+        <div class="portfolio-modal_content-about-section-header">
+          <h3 class="portfolio-modal_content-about-section-header-title">About the project</h3>
+          <div class="portfolio-modal_content-about-section-header-tags">
+            <div class="tags-list">
               <span xcProfileTags="gray" *ngFor="let tag of portfolio.tags">{{ tag }}</span>
             </div>
-            <button class="portfolio-modal__tags-button">
-              <xc-icon-arrow-right class="portfolio-modal__tags-button-icon" />
+            <button class="tags-button">
+              <xc-icon-arrow-right class="tags-button-icon" />
               <b>See all tags</b>
             </button>
           </div>
         </div>
-        <div class="portfolio-modal__description">
+        <div class="portfolio-modal_content-about-section-description">
           <p>{{ portfolio.description }}</p>
         </div>
       </div>
-      <div class="portfolio-modal__metrics">
-        <h3 class="portfolio-modal__title">Overall project progress</h3>
-        <div class="portfolio-modal__progress">
+      <div class="portfolio-modal_content-about-metrics">
+        <h3 class="portfolio-modal_content-about-metrics-title">Overall project progress</h3>
+        <div class="portfolio-modal_content-about-metrics-progress">
           <xc-project-progress-bar
-            [completed]="portfolio.completed || 4"
-            [open]="portfolio.open || 3"
-            [suggested]="portfolio.suggested || 6"
-            [objectivesInProject]="portfolio.objectivesInProject || 10"
-            class="portfolio-modal__progress-bar"
+            [completed]="portfolio.completed || 0"
+            [open]="portfolio.open || 0"
+            [suggested]="portfolio.suggested || 0"
+            [objectivesInProject]="portfolio.objectivesInProject || 0"
+            class="portfolio-modal_content-about-metrics-progress-bar"
           />
         </div>
-        <div class="portfolio-modal__graphs">
-          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
-          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
-          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
-          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="portfolio-modal__graph">
+        <div class="portfolio-modal_content-about-metrics-graphs">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="graph-image">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="graph-image">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="graph-image">
+          <img src="assets/img/temp-pieGraph.png" alt="Graph" class="graph-image">
         </div>
       </div>
     </div>
-    <div class="portfolio-modal__data">
-      <h3 class="portfolio-modal__title">Project metrics</h3>
-      <div class="portfolio-modal__data-flex">
-        <div class="portfolio-modal__data-item">
-          <h2 class="portfolio-modal__data-value">1.281.500€</h2>
-          <p class="portfolio-modal__data-label">Project value</p>
+    <div class="portfolio-modal_content-data">
+      <h3 class="portfolio-modal_content-data_title">Project metrics</h3>
+      <div class="portfolio-modal_content-data-flex">
+        <div class="portfolio-modal_content-data-flex-item">
+          <h2 class="portfolio-modal_content-data-flex-item-value">1.281.500€</h2>
+          <p class="portfolio-modal_content-data-flex-item-label">Project value</p>
         </div>
-        <div class="portfolio-modal__data-item">
-          <h2 class="portfolio-modal__data-value">83.814€</h2>
-          <p class="portfolio-modal__data-label">Value added through collaborations</p>
+        <div class="portfolio-modal_content-data-flex-item">
+          <h2 class="portfolio-modal_content-data-flex-item-value">83.814€</h2>
+          <p class="portfolio-modal_content-data-flex-item-label">Value added through collaborations</p>
         </div>
-        <div class="portfolio-modal__data-item">
-          <h2 class="portfolio-modal__data-value">156.814€</h2>
-          <p class="portfolio-modal__data-label">value added through owners</p>
+        <div class="portfolio-modal_content-data-flex-item">
+          <h2 class="portfolio-modal_content-data-flex-item-value">156.814€</h2>
+          <p class="portfolio-modal_content-data-flex-item-label">value added through owners</p>
         </div>
-        <div class="portfolio-modal__data-item">
-          <h2 class="portfolio-modal__data-value">78%</h2>
-          <p class="portfolio-modal__data-label">quality</p>
+        <div class="portfolio-modal_content-data-flex-item">
+          <h2 class="portfolio-modal_content-data-flex-item-value">78%</h2>
+          <p class="portfolio-modal_content-data-flex-item-label">quality</p>
         </div>
-        <div class="portfolio-modal__data-item">
-          <h2 class="portfolio-modal__data-value">95</h2>
-          <p class="portfolio-modal__data-label">collaborations</p>
+        <div class="portfolio-modal_content-data-flex-item">
+          <h2 class="portfolio-modal_content-data-flex-item-value">95</h2>
+          <p class="portfolio-modal_content-data-flex-item-label">collaborations</p>
         </div>
-        <div class="portfolio-modal__data-item">
-          <h2 class="portfolio-modal__data-value">116</h2>
-          <p class="portfolio-modal__data-label">proofs uploaded</p>
+        <div class="portfolio-modal_content-data-flex-item">
+          <h2 class="portfolio-modal_content-data-flex-item-value">116</h2>
+          <p class="portfolio-modal_content-data-flex-item-label">proofs uploaded</p>
         </div>
       </div>
-      <div class="portfolio-modal__actions">
+      <div class="portfolio-modal_content-data-actions">
         <button class="btn">
           <p class="bold">Add to watchlist</p>
         </button>
@@ -76,7 +76,7 @@
       </div>
     </div>
   </article>
-  <article class="portfolio-modal__metrics" *ngIf="currentSection === 'metrics'">
+  <article class="portfolio-modal_metrics" *ngIf="currentSection === 'metrics'">
     <div class="portfolio-modal__metrics">
       <h3 class="portfolio-modal__title">Metric development</h3>
       <div class="portfolio-modal__metrics-flex">

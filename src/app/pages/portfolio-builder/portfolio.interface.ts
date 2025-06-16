@@ -8,4 +8,9 @@ export interface PortfolioInterface {
   open?: number;
   suggested?: number;
   objectivesInProject?: number;
+  projectValue?: number;
+  collaborationValue?: number;
+  collaborators?: number;
+  quality?: number;
+  proof?: number;
 } 

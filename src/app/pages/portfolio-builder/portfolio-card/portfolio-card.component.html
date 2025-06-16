@@ -15,24 +15,24 @@
   <article class="portfolio_numbers">
     <div class="portfolio_numbers-stats">
       <div class="stat-values">
-        <h2 class="value">83.814€</h2>
+        <h2 class="value">{{ portfolio.collaborationValue | number:'1.0-0' }}€</h2>
         <span class="label medium-300">Collaboration value</span>
       </div>
       <div class="stat-values">
-        <h2 class="value">83.814€</h2>
+        <h2 class="value">{{ portfolio.projectValue | number:'1.0-0' }}€</h2>
         <span class="label medium-300">Project value</span>
       </div>
       <div class="project-values">
         <div class="collaborators">
-          <h2 class="value">18</h2>
+          <h2 class="value">{{ portfolio.collaborators }}</h2>
           <span class="label medium-300">Collaborators</span>
         </div>
         <div class="quality">
-          <h2 class="value">78%</h2>
+          <h2 class="value">{{ portfolio.quality }}%</h2>
           <span class="label medium-300">Quality</span>
         </div>
         <div class="proof">
-          <h2 class="value">38</h2>
+          <h2 class="value">{{ portfolio.proof }}</h2>
           <span class="label medium-300">Proof</span>
         </div>
       </div>

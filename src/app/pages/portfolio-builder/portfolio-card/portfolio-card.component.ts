@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
 import { ProfileTagsDirective, ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
 import { PortfolioModalComponent } from './portfolio-modal/portfolio-modal.component';
-import { NgIf, NgFor } from '@angular/common';
+import { NgIf, NgFor, DecimalPipe } from '@angular/common';
 import { PortfolioInterface } from '../portfolio.interface';
 
 @Component({
@@ -14,7 +14,8 @@ import { PortfolioInterface } from '../portfolio.interface';
     XcIconCloseSComponent,
     PortfolioModalComponent,
     NgIf,
-    NgFor
+    NgFor,
+    DecimalPipe
   ],
   templateUrl: './portfolio-card.component.html',
   styleUrl: './portfolio-card.component.scss'
