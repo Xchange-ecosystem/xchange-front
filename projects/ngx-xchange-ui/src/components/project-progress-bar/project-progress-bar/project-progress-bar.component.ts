@@ -31,7 +31,7 @@ export class ProjectProgressBarComponent {
       : 'rounded-lg';
   }
   getOpenClass(objectives: number, completeObjectives: number) {
-    const rightSideColor = this.completed > 0 ? 'bg-Main_accent' : '';
+    const rightSideColor = this.completed > 0 ? 'complete-indicator' : '';
     const isRound =
       this.completed + this.open + this.suggested == this.objectivesInProject
         ? 'rounded-lg'
@@ -43,7 +43,7 @@ export class ProjectProgressBarComponent {
 
   get SuggestedClass() {
     return this.suggested && this.completed > 0 && this.open === 0 ?
-    "bg-Main_accent h-full" :
+    "complete-indicator h-full" :
     this.suggested && this.open > 0 ?
     "bg-[var(--xc-categories-progress)]  h-full" :
     ''
@@ -52,9 +52,9 @@ export class ProjectProgressBarComponent {
     return objectivesOpen === 0 && objectivesComplete === 0 && this.suggested === 0
       ? 'bg-[var(--xc-grey200)] rounded-lg h-full flex items-center justify-center'
       : this.suggested > 0
-      ? 'bg-[var(--xc-categories-suggestion)] rounded-s-lg h-full flex items-center justify-center'
+      ? 'suggested-indicator rounded-s-lg h-full flex items-center justify-center'
       : objectivesOpen === 0 && objectivesComplete > 0 && this.suggested === 0
-      ? 'bg-Main_accent rounded-s-lg h-full flex items-center justify-center'
+      ? 'complete-indicator rounded-s-lg h-full flex items-center justify-center'
       : objectivesOpen > 0 && this.suggested === 0
       ? 'bg-[var(--xc-categories-progress)] rounded-s-lg h-full flex items-center justify-center'
       : '';

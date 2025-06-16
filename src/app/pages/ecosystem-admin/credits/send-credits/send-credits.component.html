@@ -1,0 +1,33 @@
+<section class="send_credits">
+  <div class="send_credits-content">
+    <article class="send_credits-content-card">
+      <header class="send_credits-content-card-header">
+        <img src="assets/img/Send-credits.png" alt="send_credits-content-card-header-image">
+      </header>
+      <div class="custom-select">
+        <b>Select a recipient</b>
+        <select class="dropdown">
+          <option disabled selected>Select a project</option>
+        </select>
+      </div>
+      <div class="assign_credits">
+        <b>Assign credits</b>
+        <input type="number" placeholder="0">
+      </div>
+      <div>
+        <b>Balance in the project</b>
+        <p>0 xCoins</p>
+      </div>
+      <div class="action_buttons">
+        <button class="btn" (click)="onClose()">
+          <xc-icon-times class="btn__icon"/>
+          <p>Cancel</p>
+        </button>
+        <button class="btn btn--filled">
+          <xc-icon-shopping-cart class="btn__icon_filled"/>
+          <p>Buy credits</p>
+        </button>
+      </div>
+    </article>
+  </div>
+</section>

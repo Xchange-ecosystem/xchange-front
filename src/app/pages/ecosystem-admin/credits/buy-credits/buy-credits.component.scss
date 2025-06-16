@@ -1,0 +1,83 @@
+.buy_credits {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      flex-wrap: wrap;
+      max-width: 633px;
+      .custom-select {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .dropdown {
+          border: 1px solid;
+          border-color: var(--xc-grey100);
+          border-radius: var(--xc-rounded-eight);
+          padding: 8px 11px;
+        }
+      }
+      .card-data {
+        display: flex;
+        gap: 12px;
+        &_field {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+
+          input {
+            padding: 8px 11px;
+            border: 1px solid;
+            border-color: var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+          }
+        }
+        &_field--wide {
+          display: flex;
+          flex-direction: column;
+          flex: 2;
+          input {
+            padding: 8px 11px;
+            border: 1px solid;
+            border-color: var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+          }
+        }
+      }
+      .balance {
+        display: flex;
+        gap: 16px;
+        &_current {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          flex: 1;
+        }
+        &_new {
+          @extend .balance_current;
+        }
+      }
+      .action_buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 16px;
+      }
+    }
+  }
+}

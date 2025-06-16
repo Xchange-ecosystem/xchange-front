@@ -1,0 +1,136 @@
+.legal {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    margin-left: 165px;
+    margin-right: 165px;
+
+    @media (max-width: 1830px) {
+      margin: 0 120px;
+    }
+
+    @media (max-width: 1640px) {
+      margin: 0 100px;
+      overflow-y: scroll;
+    }
+
+    @media (max-width: 1440px) {
+      margin: 0 80px;
+    }
+
+    @media (max-width: 1280px) {
+      margin: 0 60px;
+    }
+
+    @media (max-width: 1024px) {
+      margin: 0 24px;
+    }
+
+    &-customization {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: 630px 1fr;
+      align-items: start;
+      gap: 24px;
+
+      @media (max-width: 1640px) {
+        grid-template-columns: 1fr;
+      }
+
+      .form_wrapper {
+        display: flex;
+        background: var(--xc-white);
+        box-shadow: var(--xc-boxShadow-400);
+        border-radius: var(--xc-rounded-eight);
+        width: 100%;
+
+        &-form {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 24px;
+
+          &-field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            p {
+              display: flex;
+              flex-direction: column;
+              color: var(--xc-black400);
+              width: 100%;
+            }
+
+            input {
+              width: 100%;
+              padding: 4px 8px;
+              border: 1px solid;
+              border-color: var(--xc-grey100);
+              border-radius: var(--xc-rounded-eight);
+              caret-color: var(--xc-brand-medium-blue);
+
+              &:focus {
+                outline: none;
+              }
+            }
+
+            &-stretch {
+              @extend .form_wrapper-form-field;
+              flex: 3;
+            }
+          }
+
+          .address {
+            display: flex;
+            gap: 16px;
+          }
+        }
+      }
+
+      .terms {
+        height: 100%;
+        @extend .form_wrapper;
+
+        &_field {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          width: 100%;
+
+          textarea {
+            width: 100%;
+            padding: 4px 8px;
+            border: 1px solid;
+            border-color: var(--xc-grey100);
+            border-radius: var(--xc-rounded-eight);
+            caret-color: var(--xc-brand-medium-blue);
+            resize: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .disclaimer {
+          margin-top: auto;
+          text-align: start;
+          color: var(--xc-grey500);
+        }
+      }
+    }
+
+    .save_button {
+      display: flex;
+      justify-content: flex-end;
+
+      .save_icon {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        stroke: var(--xc-white);
+      }
+    }
+  }

@@ -1,0 +1,36 @@
+.suspend_member {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  &_content {
+    display: flex;
+    gap: 16px;
+    height: auto;
+    width: auto;
+    &-card {
+      border-radius: var(--xc-rounded-sixteen);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 32px;
+      background: var(--xc-white);
+      flex-wrap: wrap;
+      max-width: 633px;
+      .header {
+        border-radius: 0px 0px 8px 8px;
+      }
+      .actions_buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: flex-end;
+        .ban_text {
+          color: var(--xc-white);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+import { NgFor } from '@angular/common';
+import { Component } from '@angular/core';
+import { XcIconSaveComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+
+@Component({
+  selector: 'app-templates',
+  standalone: true,
+  imports: [
+    NgFor,
+    XcIconTimesComponent,
+    XcIconSaveComponent
+  ],
+  templateUrl: './templates.component.html',
+  styleUrl: './templates.component.scss',
+})
+export class TemplatesComponent {
+  isSelectionValid: boolean = false;
+  templateCategories = [
+    {
+      title: 'Innovation Project',
+      selectAll: false,
+      options: [
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Open Innovation', selected: false },
+      ],
+    },
+    {
+      title: 'Change and Development',
+      selectAll: false,
+      options: [
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Open Innovation', selected: false },
+      ],
+    },
+    {
+      title: 'Assessments/ Audits',
+      selectAll: false,
+      options: [
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Open Innovation', selected: false },
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+      ],
+    },
+    {
+      title: 'Learning',
+      selectAll: false,
+      options: [
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Open Innovation', selected: false },
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+        { label: 'Open Innovation', selected: false },
+        { label: 'Startups', selected: true },
+        { label: 'Innovation Projects', selected: false },
+        { label: 'Corporate Innovation', selected: false },
+        { label: 'Research', selected: false },
+        { label: 'Academy & Curriculum', selected: false },
+        { label: 'Social Innovation', selected: false },
+        { label: 'Environmental Innovation', selected: false },
+      ],
+    },
+  ];
+}

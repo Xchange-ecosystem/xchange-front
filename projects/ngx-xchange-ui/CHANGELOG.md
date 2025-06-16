@@ -1,4 +1,8 @@
-# 0.1.30 08/06/2023
+# 0.1.31 08/06/2025
+* (Fix) Change colors on progress project bar
+* (Fix) line leading on navigator objective card
+
+# 0.1.30 08/06/2025
 * (change) header title behavior name and lastName one by one
 * (change) tags color in tags modal
 
