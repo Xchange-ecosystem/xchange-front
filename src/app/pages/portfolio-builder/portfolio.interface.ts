@@ -13,4 +13,5 @@ export interface PortfolioInterface {
   collaborators?: number;
   quality?: number;
   proof?: number;
+  valueOwners?: number;
 } 

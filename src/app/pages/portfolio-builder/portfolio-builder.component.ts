@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { PortfolioCardComponent } from './portfolio-card/portfolio-card.component';
 import { NgFor } from '@angular/common';
 import { PortfolioInterface } from './portfolio.interface';
+import { TabSwitchComponent } from './tab-switch/tab-switch.component';
 
 @Component({
   selector: 'app-portfolio-builder',
   standalone: true,
   imports: [
     PortfolioCardComponent,
-    NgFor
+    NgFor,
+    TabSwitchComponent
   ],
   templateUrl: './portfolio-builder.component.html',
   styleUrl: './portfolio-builder.component.scss'
@@ -29,7 +31,8 @@ export class PortfolioBuilderComponent {
       collaborationValue: 83814,
       collaborators: 18,
       quality: 78,
-      proof: 38
+      proof: 38,
+      valueOwners: 1259,
     },
     {
       id: 2,
@@ -45,7 +48,8 @@ export class PortfolioBuilderComponent {
       collaborationValue: 65000,
       collaborators: 15,
       quality: 85,
-      proof: 25
+      proof: 25,
+      valueOwners: 4586,
     },
     {
       id: 3,
@@ -61,7 +65,8 @@ export class PortfolioBuilderComponent {
       collaborationValue: 78000,
       collaborators: 22,
       quality: 92,
-      proof: 45
+      proof: 45,
+      valueOwners: 1100,
     },
     {
       id: 4,
@@ -77,7 +82,8 @@ export class PortfolioBuilderComponent {
       collaborationValue: 55000,
       collaborators: 12,
       quality: 75,
-      proof: 20
+      proof: 20,
+      valueOwners: 5489,
     }
   ];
 }

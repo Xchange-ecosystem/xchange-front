@@ -1,0 +1,20 @@
+.tab {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  &_wrapper {
+    display: flex;
+    gap: 16px;
+    padding: 8px;
+    background: var(--xc-white);
+    border-radius: var(--xc-rounded-sixteen);
+    box-shadow: var(--xc-boxShadow-400);
+    .button {
+        display: flex;
+        align-items: center;
+        background: var(--xc-grey50);
+        justify-content: center;
+    }
+  }
+}
