@@ -6,12 +6,15 @@
   background: var(--xc-white);
   border-radius: 16px;
   overflow: hidden;
-
   &_content {
     display: grid;
     grid-template-columns: 1fr 405px;
     column-gap: 24px;
     padding: 0 25px 35px 42px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 0 16px 24px 16px;
+    }
     &-about {
       display: flex;
       flex-direction: column;
@@ -56,7 +59,7 @@
           line-height: 1.5;
         }
       }
-      &-metrics{
+      &-metrics {
         padding: 24px;
         background-color: var(--xc-white);
         border-radius: var(--xc-rounded-eight);
@@ -78,6 +81,13 @@
           display: flex;
           width: 180px;
           min-height: 180px;
+          @media screen and (max-width: 1580px) {
+            overflow-x: auto;
+            width: 100%;
+          }
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
           .graph-image {
             width: 100%;
             flex: 1;
@@ -103,6 +113,11 @@
         &-item {
           display: flex;
           flex-direction: column;
+          border-bottom: 1px solid var(--xc-grey200);
+          padding: 16px 0;
+          &-item:last-child {
+            border-bottom: none;
+          }
           &-value {
             font-size: 1.5rem;
             font-weight: 600;
@@ -124,6 +139,11 @@
   }
 
   &_metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding: 24px 12px;
     .dots_graph {
       width: 100%;
       height: 430px;
@@ -138,7 +158,7 @@
     }
   }
 
-  &__metrics-flex {
+  &_metrics-flex {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -165,11 +185,6 @@
         transition: transform 0.3s ease;
       }
     }
-  }
-
-
-  &__description {
-    color: var(--xc-black400);
   }
 
   &__data-flex {
@@ -199,19 +214,19 @@
     justify-content: space-between;
   }
 
-  &__pitch {
+  &_pitch {
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 42px;
     background-color: var(--xc-white);
-    border-radius: var(--xc-rounded-eight);
     &-container {
       display: flex;
       flex-direction: column;
       gap: 24px;
       padding: 24px;
       box-shadow: var(--xc-boxShadow-400);
+      border-radius: var(--xc-rounded-eight);
     }
     &-content {
       display: flex;
