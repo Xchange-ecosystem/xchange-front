@@ -44,7 +44,7 @@
     (mouseleave)="mouseMarkersActionOpen = false"
   >
     <div
-      class="bg-[var(--xc-categories-suggestion)] rounded-e-lg h-full flex items-center justify-center"
+      class="suggested-indicator rounded-e-lg h-full flex items-center justify-center"
     >
       <span
         class="text-paragraph text-center font-manrope font-regular leading-project-bar"
@@ -58,7 +58,7 @@
     >
       <p>Objectives suggested</p>
       <div class="flex gap-2 justify-start">
-        <div class="bg-Suggestion opacity-[0.6] rounded-e-lg w-4 h-4 border border-white"></div>
+        <div class="suggested-indicator rounded-e-lg w-4 h-4 border border-white"></div>
         <span>{{ suggested }}</span>
       </div>
     </div>
@@ -100,13 +100,13 @@
   <div
     *ngIf="completed > 0"
     [style.width]="getSize(completed, objectivesInProject)"
-    class="relative bg-Main_accent rounded-e-lg min-w-[20%]"
+    class="relative complete-indicator rounded-e-lg min-w-[20%]"
     [ngClass]="getCompleteClass()"
     (mouseover)="mouseMarkersActionComplete = true"
     (mouseleave)="mouseMarkersActionComplete = false"
   >
     <div
-      class="bg-Main_accent rounded-lg h-full flex items-center justify-center"
+      class="complete-indicator rounded-lg h-full flex items-center justify-center"
     >
       <span
         class="text-paragraph text-center font-manrope font-regular leading-project-bar"
@@ -120,7 +120,7 @@
     >
       <p>Objectives completed</p>
       <div class="flex gap-2 justify-start">
-        <div class="bg-Main_accent w-4 h-4 border border-white"></div>
+        <div class="complete-indicator w-4 h-4 border border-white"></div>
         <span>{{ completed }}</span>
       </div>
     </div>
