@@ -1,3 +1,6 @@
+# 0.1.32 30/06/2025
+* (Fix) Padding set to 1.5rem on objective-card
+
 # 0.1.31 08/06/2025
 * (Fix) Change colors on progress project bar
 * (Fix) line leading on navigator objective card
