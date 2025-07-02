@@ -1,17 +1,16 @@
-<section 
-    class="flex flex-col justify-center items-center gap-5 bg-white rounded-lg shadow-Shadow500 p-4">
-    <div *ngFor="let user of users; index as i" class="flex items-center justify-start gap-2 max-h-[112px]">
-        <div class="w-[30px] h-[30px]">
-        <xc-rounded-image [marginSize]="0"  [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'"/>
+<section class="navigator-users-filter">
+    <div *ngFor="let user of users; index as i" class="navigator-users-filter__user-item">
+        <div class="navigator-users-filter__user-avatar">
+            <xc-rounded-image [marginSize]="0" [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'"/>
         </div>
-        <p class="text-nowrap">{{(user.name !== '' ? user.name : 'Users') + ' ' + user.lastName}}</p>
+        <p class="navigator-users-filter__user-name">{{(user.name !== '' ? user.name : 'Users') + ' ' + user.lastName}}</p>
         <xc-check-rounded-button [index]="i" [statusCheck]="!(notSelectedUsers.includes(user.userId))" (statusCheckChange)="setUserStatus($event,user.userId)"/>
     </div>
-    <div class="flex justify-end item-center gap-1 w-full">
-        <div class="w-6 h-6 fill-Blocked stroke-Blocked cursor-pointer" (click)="resetFilter()">
+    <div class="navigator-users-filter__actions">
+        <div class="navigator-users-filter__action navigator-users-filter__action--reset" (click)="resetFilter()">
             <xc-icon-times />
         </div>
-        <div class="w-6 h-6 fill-Completed stroke-Completed cursor-pointer" (click)="sendSelection()">
+        <div class="navigator-users-filter__action navigator-users-filter__action--apply" (click)="sendSelection()">
             <xc-icon-check />
         </div>
     </div>

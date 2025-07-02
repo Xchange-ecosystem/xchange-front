@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CheckRoundedButtonComponent } from './check-rounded-button/check-rounded-button.component';
+import { XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
 
 
 
@@ -9,7 +10,8 @@ import { CheckRoundedButtonComponent } from './check-rounded-button/check-rounde
     CheckRoundedButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    XcIconCheckComponent
   ],
   exports: [
     CheckRoundedButtonComponent
