@@ -1,3 +1,6 @@
+# 0.1.10
+* (fix) icon check removed fill #11111 to none
+
 # 0.1.9 07/04/2025
 * (change) icon send circle fill currentColor
 
