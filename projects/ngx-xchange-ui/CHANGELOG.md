@@ -1,3 +1,7 @@
+# 0.1.33 02/07/2025
+* (Refactor) Navigator user filter component changed to css
+* (Fix) Check rounded button component check icon changed, background & color set to figma design
+
 # 0.1.32 30/06/2025
 * (Fix) Padding set to 1.5rem on objective-card
 

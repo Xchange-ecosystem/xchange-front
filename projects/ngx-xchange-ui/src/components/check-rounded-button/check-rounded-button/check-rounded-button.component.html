@@ -3,5 +3,7 @@
     type="checkbox"
     [checked]="statusCheck"
     (change)="statusCheckChange.next(!statusCheck)">
-    <div class="checkbox-container"></div>
+    <div class="checkbox-container">
+      <xc-icon-check *ngIf="statusCheck" class="checkbox-icon"/>
+    </div>
 </label>
