@@ -1,0 +1,98 @@
+/* Bloque principal */
+.navigator-users-filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; 
+  background-color: white;
+  border-radius: 8px; 
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 16px; 
+}
+
+/* Elemento: item de usuario */
+.navigator-users-filter__user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px; 
+  max-height: 112px; 
+  width: 100%;
+}
+
+/* Elemento: avatar del usuario */
+.navigator-users-filter__user-avatar {
+  width: 30px; 
+  height: 30px;
+}
+
+/* Elemento: nombre del usuario */
+.navigator-users-filter__user-name {
+  white-space: nowrap; 
+}
+
+/* Elemento: contenedor de acciones */
+.navigator-users-filter__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.25rem; 
+  width: 100%;
+}
+
+/* Elemento: acción individual */
+.navigator-users-filter__action {
+  width: 1.5rem; 
+  height: 1.5rem; 
+  cursor: pointer;
+}
+
+/* Modificador: acción de reset */
+.navigator-users-filter__action--reset {
+  fill: #ef4444; 
+  stroke: #ef4444; 
+}
+
+.navigator-users-filter__action--apply {
+  fill: #22c55e; 
+  stroke: #22c55e; 
+}
+
+/* Estados hover para las acciones */
+.navigator-users-filter__action--reset:hover {
+  fill: #dc2626;
+  stroke: #dc2626;
+}
+
+.navigator-users-filter__action--apply:hover {
+  fill: #16a34a;
+  stroke: #16a34a;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .navigator-users-filter {
+    margin: 0 0.5rem;
+  }
+
+  .navigator-users-filter__user-item {
+    gap: 0.375rem;
+  }
+}
+
+/* Animación de entrada */
+.navigator-users-filter {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
