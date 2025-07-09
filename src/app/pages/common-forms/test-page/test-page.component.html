@@ -1,10 +1,15 @@
-<form class="form_demo">
+<form class="form_demo" [formGroup]="exampleForm" (ngSubmit)="handlerSubmit($event)">
   <app-toogle [checked]="true" [color]="'purple'" [size]="'small'"/>
   <app-toogle [checked]="true" [color]="'green'"/>
   <app-toogle [checked]="true" [color]="'yellow'" [size]="'large'" label="a label can come along"/>
 
-  <app-input [type]="'text'" placeholder="This is input"/>
-  <app-textarea placeholder="This is a textarea"/>
+  <app-input [type]="'text'" formcontrolname="" placeholder="This is input"/>
+  <app-textarea formControlName="txarea" [error]="true" placeholder="This is a textarea"/>
 
   <app-toogle-radius/>
+
+  <button >enviar</button>
+  
 </form>
+
+<p>{{ exampleForm.value | json }} </p>
