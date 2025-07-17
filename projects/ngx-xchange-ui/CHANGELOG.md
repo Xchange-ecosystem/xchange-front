@@ -1,3 +1,6 @@
+# 0.1.34 14/07/2025
+* (add) common input for universal forms
+
 # 0.1.33 02/07/2025
 * (Refactor) Navigator user filter component changed to css
 * (Fix) Check rounded button component check icon changed, background & color set to figma design
