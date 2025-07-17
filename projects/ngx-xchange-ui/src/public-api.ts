@@ -137,3 +137,4 @@ export * from './components/feed-buttons/feed-buttons.component';
 export * from './components/create-project/create-project.component';
 export * from './components/chat-text/chat-text.component';
 export * from './components/section-tab/section-tab.component';
+export * from './components/common-input/common-input.component';
