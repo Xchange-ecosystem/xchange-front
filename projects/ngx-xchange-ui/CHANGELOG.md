@@ -1,3 +1,6 @@
+# 0.1.36 25/07/2025
+* (fix) text spacing on navigator-users-filter component
+
 # 0.1.35 25/07/2025
 * (add) disabled input to button-400
 
