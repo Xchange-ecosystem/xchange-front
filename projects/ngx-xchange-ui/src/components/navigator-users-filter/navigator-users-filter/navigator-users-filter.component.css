@@ -30,6 +30,11 @@
 /* Elemento: nombre del usuario */
 .navigator-users-filter__user-name {
   white-space: nowrap; 
+  max-width: 160px;
+  width:100%;
+  text-overflow:ellipsis;
+  overflow-x:hidden;
+  text-align: start;
 }
 
 /* Elemento: contenedor de acciones */

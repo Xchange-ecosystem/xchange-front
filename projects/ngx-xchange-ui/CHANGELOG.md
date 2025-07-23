@@ -1,5 +1,7 @@
 # 0.1.35 25/07/2025
 * (add) disabled input to button-400
+* (fix) text spacing on navigator-users-filter component
+
 
 # 0.1.34 14/07/2025
 * (add) common input for universal forms
