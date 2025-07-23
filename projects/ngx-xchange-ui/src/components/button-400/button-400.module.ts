@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import { Button400Component } from './button-400/button-400.component';
 import { XcIconAngleLeftComponent, XcIconCloseSComponent, XcIconMoreThreeDots, XcIconAIComponent, XcIconCheckComponent } from '@indziaki/ngx-xchange-icons';
 
@@ -13,7 +13,8 @@ import { XcIconAngleLeftComponent, XcIconCloseSComponent, XcIconMoreThreeDots, X
     XcIconAngleLeftComponent,
     XcIconCloseSComponent,
     XcIconAIComponent,
-    XcIconCheckComponent
+    XcIconCheckComponent,
+    NgClass
 ],
   exports: [
     Button400Component
