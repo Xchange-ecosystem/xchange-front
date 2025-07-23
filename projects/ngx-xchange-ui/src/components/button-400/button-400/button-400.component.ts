@@ -12,7 +12,8 @@ export class Button400Component implements OnChanges {
   @Input() description: string;
   @Output() onClick = new EventEmitter<Event>;
   @Input() full: boolean = false;
-  
+  @Input() disabled: boolean = false;
+
 
   constructor() {
     this.type = '';
