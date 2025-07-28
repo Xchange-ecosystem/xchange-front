@@ -13,7 +13,7 @@
             </div>
         </label>
         <xc-rounded-image [image]="userData?.profilePhotoUrl ?? null" [marginSize]="0" class="w-[30px] h-[30px] min-w-[30px] min-h-[30px]"/>
-        <p class="font-Copy-300-Bold-font-weight text-Copy-300-Bold-font-size line-height-Copy-300-Bold-line-Height text-Grey500">{{(userData?.name ?? 'User') + ' ' + userData?.lastName}}</p>
+        <p class="userName font-Copy-300-Bold-font-weight text-Copy-300-Bold-font-size line-height-Copy-300-Bold-line-Height text-Grey500">{{(userData?.name ?? 'User') + ' ' + userData?.lastName}}</p>
         <span xcTag="gray">{{userData?.role ?? 'Viewer'}}</span>
     </section>
     <section class="flex items-center justify-end gap-4">
