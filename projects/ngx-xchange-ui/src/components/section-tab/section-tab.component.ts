@@ -15,9 +15,9 @@ import { CopyStylesDirective } from '../../directives/copy-styles/copy-styles.di
 })
 export class SectionTabComponent {
   @Input() sections: { name: string, hasNotifications: boolean }[] = [];
+  @Input() activeSection: string = '';
   @Output() sectionSelected: EventEmitter<string> = new EventEmitter<string>();
   
-  activeSection: string = 'Apperance';
   
   selectSection(section: string): void {
     this.activeSection = section;
