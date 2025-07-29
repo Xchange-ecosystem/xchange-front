@@ -1,3 +1,7 @@
+# 0.1.36 28/07/2025
+* (fix) text elipsis on user name on component complete-objective-user-card
+* (fix) section tab was nor selected at the begining 
+
 # 0.1.35 25/07/2025
 * (add) disabled input to button-400
 * (fix) text spacing on navigator-users-filter component
