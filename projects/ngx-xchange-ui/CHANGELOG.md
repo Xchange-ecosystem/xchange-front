@@ -1,3 +1,6 @@
+# 0.1.37 29/07/2025
+* (fix) flex wrap for complete-objective-user-card
+
 # 0.1.36 28/07/2025
 * (fix) text elipsis on user name on component complete-objective-user-card
 * (fix) section tab was nor selected at the begining 
