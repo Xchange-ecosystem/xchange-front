@@ -1,5 +1,5 @@
 # 0.1.38 11/08/2025
-* new behaiviour on tablet devices for navigator-filter-selector & toggle
+* new behaviour on tablet devices for navigator-filter-selector & toggle
 
 # 0.1.37 29/07/2025
 * (fix) flex wrap for complete-objective-user-card
