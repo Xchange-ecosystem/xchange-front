@@ -1,15 +1,23 @@
 <div 
-class="relative"
+class="relative filter_wrapper max-[880px]:flex max-[880px]:flex-col max-[880px]:w-full"
 (blur)="focusOut($event)"
 [tabindex]="0"
 [ngClass]="{'inputContainer': filterDescription === 'User Input Search' && selection}"
 >
-<div *ngIf="selection" class="absolute top-[50px] left-[-10px] flex" #dropContainer [ngClass]="{'staticPosition': filterDescription === 'User Input Search' }">
-    <ng-content />
+<div
+  *ngIf="selection"
+  class="absolute top-[50px] left-[-10px] flex filter-container
+         max-[880px]:static max-[880px]:top-auto max-[880px]:left-auto
+         max-[880px]:block max-[880px]:w-full
+         max-[880px]:order-2 max-[880px]:mt-2"
+  #dropContainer
+  [ngClass]="{'staticPosition': filterDescription === 'User Input Search'}"
+>
+  <ng-content />
 </div>
   <label
     [for]="labelName"
-    class="filterSelector"
+    class="filterSelector max-[880px]:w-full max-[880px]:order-1"
     [ngClass]="{ circleButton: (filterDescription === 'User Input Search' && !selection) }"
   >
     <input
