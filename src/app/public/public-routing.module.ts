@@ -78,6 +78,10 @@ const routes: Routes = [
         path: 'project-feed',
         loadComponent: () => import('src/app/pages/project-feed/project-feed.component').then(m => m.ProjectFeedComponent),
       },
+      {
+        path: 'project-navigator',
+        loadComponent: () => import('src/app/pages/project-navigator/project-navigator.component').then(m => m.ProjectNavigatorComponent),
+      }
     ],
   },
 ];
