@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProfileTagsDirective } from '../../directives/profile-tags/profile-tags.directive';
-import { XcIconCalenderComponent, XcIconFileCheckAltComponent, XcIconPaperclipComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCalenderComponent, XcIconFileCheckAltComponent, XcIconPaperclipComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { HeadlineStylesDirective } from '../../directives/headline-styles/headline-styles.directive';
 import { CopyStylesDirective } from '../../directives/copy-styles/copy-styles.directive';
 

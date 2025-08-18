@@ -1,8 +1,8 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { XcIconAIComponent, XcIconImageComponent } from '@indziaki/ngx-xchange-icons';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconAIComponent, XcIconImageComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-cummon-form',

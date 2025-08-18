@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
-import { XcIconArrowRightComponent } from '@indziaki/ngx-xchange-icons';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowRightComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { BuyCreditsComponent } from './buy-credits/buy-credits.component';
 import { SendCreditsComponent } from './send-credits/send-credits.component';
 import { HistoryComponent } from './history/history.component';

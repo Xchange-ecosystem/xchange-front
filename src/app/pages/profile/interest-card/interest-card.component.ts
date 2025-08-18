@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { InterestScaleComponent } from '../interests-profile/interest-scale/interest-scale.component';
 import { NgFor } from '@angular/common';
-import { XcIconAngleLeftBComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleLeftBComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 
 @Component({

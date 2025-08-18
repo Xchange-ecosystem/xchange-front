@@ -1,7 +1,7 @@
 import { NgClass, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowUpRightComponent, XcIconUserPlusComponent, XcIconUserXComponent } from '@indziaki/ngx-xchange-icons';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowUpRightComponent, XcIconUserPlusComponent, XcIconUserXComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { EmployeeModalComponent } from './employee-modal/employee-modal.component';
 import { SuspendModalComponent } from './suspend-modal/suspend-modal.component';
 

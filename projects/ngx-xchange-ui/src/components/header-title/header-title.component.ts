@@ -1,7 +1,7 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { XcIconCheckComponent, XcIconEditComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCheckComponent, XcIconEditComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { HeadlineStylesDirective } from '../../directives/headline-styles/headline-styles.directive';
 
 @Component({

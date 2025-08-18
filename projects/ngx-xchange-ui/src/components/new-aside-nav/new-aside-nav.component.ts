@@ -14,7 +14,7 @@ import {
   XcIconWifiComponent,
   XcIconAngleRightComponent,
   XcLogOutIconComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { RouterLink } from '@angular/router';
 
 type BottomMenuType = 'profile' | 'support' | 'logout' | '';

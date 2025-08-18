@@ -10,7 +10,7 @@ import {
   XcIconPlusCircleComponent,
   XcIconSaveComponent,
   XcIconStarComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { ToggleComponent } from 'projects/ngx-xchange-ui/src/components/toggle/toggle.component';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';

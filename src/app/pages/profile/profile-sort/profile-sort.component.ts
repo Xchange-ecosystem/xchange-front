@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleDownComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 
 @Component({

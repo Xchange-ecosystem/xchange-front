@@ -1,7 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconCopyComponent, XcIconImagePlusComponent, XcIconSaveComponent, XcIconTrashComponent } from '@indziaki/ngx-xchange-icons';
-import { ToggleComponent } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowRightComponent, XcIconCopyComponent, XcIconImagePlusComponent, XcIconSaveComponent, XcIconTrashComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ToggleComponent } from '@xchange-ecosystem/ngx-xchange-ui';
 import { SuspendModalComponent } from './suspend-modal/suspend-modal.component';
 import { TagsModalComponent } from './tags-modal/tags-modal.component';
 

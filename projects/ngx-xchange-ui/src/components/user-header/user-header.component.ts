@@ -1,9 +1,9 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { ProfileHeaderDirective } from '../../directives/profile-header/profile-header.directive';
 import { Headline400Directive } from '../../directives/headline-400/headline-400.directive';
-import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCheckComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { ButtonsWrappersDirective } from '../../public-api';
 import { Headline500Directive } from '../../directives/headline-500/headline-500.directive';
 

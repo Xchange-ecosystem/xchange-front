@@ -1,6 +1,6 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleDownComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-ai-filter',

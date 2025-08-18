@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import {
   XcIconAIComponent,
   XcIconHomeComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-new-button-400',

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigatorFilterSelectorModule,NavigatorObjectiveStatusFilterModule,NavigatorRangeFilterModule,NavigatorUsersFilterModule } from '@indziaki/ngx-xchange-ui';
+import { NavigatorFilterSelectorModule,NavigatorObjectiveStatusFilterModule,NavigatorRangeFilterModule,NavigatorUsersFilterModule } from '@xchange-ecosystem/ngx-xchange-ui';
 export interface Collaborator {
   id: number;
   name: string;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { XcIconAmbulanceComponent, XcIconAngleDownComponent, XcIconPlayComponent, XcIconRedoComponent } from '@indziaki/ngx-xchange-icons';
-import { CopyStylesDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
+import { XcIconAmbulanceComponent, XcIconAngleDownComponent, XcIconPlayComponent, XcIconRedoComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { CopyStylesDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@xchange-ecosystem/ngx-xchange-ui';
 import { FilterComponent } from './filter/filter.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 

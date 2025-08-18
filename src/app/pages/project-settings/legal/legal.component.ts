@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconFileUploadComponent, XcIconPaperclipComponent, XcIconSaveComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconFileUploadComponent, XcIconPaperclipComponent, XcIconSaveComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-legal',

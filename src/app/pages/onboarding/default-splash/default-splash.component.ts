@@ -1,8 +1,8 @@
 import { NgSwitch, NgSwitchCase } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { SwitchViewService, ViewStates } from '../services/switch-view-service/switch-view.service';
-import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
-import { XcIconAngleRightBComponent } from '@indziaki/ngx-xchange-icons';
+import { ProfileTagsDirective } from '@xchange-ecosystem/ngx-xchange-ui';
+import { XcIconAngleRightBComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-default-splash',

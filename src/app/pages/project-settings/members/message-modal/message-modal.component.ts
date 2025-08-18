@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconSendComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconSendComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-message-modal',

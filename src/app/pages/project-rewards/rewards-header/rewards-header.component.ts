@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { SwitchViewService, ViewStates } from '../services/swith-view-service/switch-view.service';
 import { NgIf } from '@angular/common';
-import { XcIconAngleLeftBComponent, XcIconAngleLeftComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleLeftBComponent, XcIconAngleLeftComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-rewards-header',

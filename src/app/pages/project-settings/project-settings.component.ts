@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
-import { ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
+import { ProjectProgressBarModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { HeaderProjectSettingsComponent } from './header-project-settings/header-project-settings.component';
 import { LegalComponent } from './legal/legal.component';
 import { MembersComponent } from './members/members.component';

@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { XcIconAIComponent, XcIconCheckCircleComponent, XcIconPlugComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconCheckCircleComponent, XcIconPlugComponent, XcIconPlusCircleComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { XcIconCloseSComponent } from 'projects/ngx-xchange-icons/src/public-api';
-import { ButtonsWrappersDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
+import { ButtonsWrappersDirective, HeadlineStylesDirective, ProfileTagsDirective } from '@xchange-ecosystem/ngx-xchange-ui';
 @Component({
   selector: 'app-tag-modal',
   imports: [

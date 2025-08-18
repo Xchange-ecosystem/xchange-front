@@ -1,6 +1,6 @@
 import { NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconPlusCircleComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { SwitchViewService, ViewStates } from './services/swith-view-service/switch-view.service';
 import { RewardsHeaderComponent } from './rewards-header/rewards-header.component';
 import { CollaborationFundComponent } from './collaboration-fund/collaboration-fund.component';

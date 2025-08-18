@@ -4,7 +4,7 @@ import { Button400Component, Button400Module, CompleteObjectiveUserCardModule } 
 import { Event } from '@angular/router';
 import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { XcIconClockComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconClockComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 @Component({
     selector: 'test',
     imports:[Button400Module, XcIconClockComponent,

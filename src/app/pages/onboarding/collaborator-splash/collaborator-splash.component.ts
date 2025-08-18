@@ -8,9 +8,9 @@ import {
   XcIconArrowLeftComponent,
   XcIconPlusCircleComponent,
   XcIconTimesComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { NgIf } from '@angular/common';
-import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { ProfileTagsDirective, RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { CummonFormComponent } from '../cummon-form/cummon-form.component';
 
 @Component({

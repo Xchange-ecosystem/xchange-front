@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AsideNavComponent } from './aside-nav/aside-nav.component';
-import {XcIconAngleRightBComponent, XcIconAngleLeftBComponent} from '@indziaki/ngx-xchange-icons'
+import {XcIconAngleRightBComponent, XcIconAngleLeftBComponent} from '@xchange-ecosystem/ngx-xchange-icons'
 
 @NgModule({
   declarations: [

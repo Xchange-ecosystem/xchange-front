@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { HeaderTitleComponent } from 'projects/ngx-xchange-ui/src/components/header-title/header-title.component';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 

@@ -4,8 +4,8 @@ import { Button400Component } from 'projects/ngx-xchange-ui/src/public-api'
 import { Event } from '@angular/router';
 import { Component, EventEmitter, Input, input, Output } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Button400Module } from '@indziaki/ngx-xchange-ui';
-import { XcIconClockComponent } from '@indziaki/ngx-xchange-icons';
+import { Button400Module } from '@xchange-ecosystem/ngx-xchange-ui';
+import { XcIconClockComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 @Component({
     selector: 'test',
     imports:[Button400Module, XcIconClockComponent],

@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconSaveComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-legal',

@@ -4,7 +4,7 @@ import {
   XcIconAngleDownComponent,
   XcIconRedoComponent,
   XcIconSearchComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { FormsModule } from '@angular/forms';
 import { ButtonsWrappersDirective } from '../../directives/buttons-wrappers/buttons-wrappers.directive';
 

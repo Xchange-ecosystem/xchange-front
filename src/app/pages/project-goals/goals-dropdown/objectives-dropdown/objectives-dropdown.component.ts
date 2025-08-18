@@ -1,6 +1,6 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { XcIconAngleUpComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleUpComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-objectives-dropdown',

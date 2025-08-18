@@ -1,7 +1,7 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CopyStylesDirective, HeadlineStylesDirective } from '@indziaki/ngx-xchange-ui';
+import { CopyStylesDirective, HeadlineStylesDirective } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-forgot-password',
