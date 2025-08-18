@@ -25,6 +25,7 @@
 .navigator-users-filter__user-avatar {
   width: 30px; 
   height: 30px;
+  display: flex;
 }
 
 /* Elemento: nombre del usuario */
@@ -100,4 +101,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.rounded-image {
+  display: flex;
+  width: 30px;
+  height: 30px;
 }

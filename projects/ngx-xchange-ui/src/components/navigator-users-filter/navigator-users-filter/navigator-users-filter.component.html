@@ -1,7 +1,7 @@
 <section class="navigator-users-filter">
     <div *ngFor="let user of users; index as i" class="navigator-users-filter__user-item">
         <div class="navigator-users-filter__user-avatar">
-            <xc-rounded-image [marginSize]="0" [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'"/>
+            <xc-rounded-image [marginSize]="0" [image]="user.profilePhotoUrl ?? '/assets/images/icon-profile.png'" class="rounded-image"/>
         </div>
         <p class="navigator-users-filter__user-name">{{(user.name !== '' ? user.name : 'Users') + ' ' + user.lastName}}</p>
         <xc-check-rounded-button [index]="i" [statusCheck]="!(notSelectedUsers.includes(user.userId))" (statusCheckChange)="setUserStatus($event,user.userId)"/>
