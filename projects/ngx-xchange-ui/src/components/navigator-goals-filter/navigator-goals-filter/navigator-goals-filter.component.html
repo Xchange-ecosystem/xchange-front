@@ -2,7 +2,7 @@
 class="flex flex-col justify-center items-center gap-5 bg-white rounded-lg shadow-Shadow500 p-4"
 >
   <ul class="max-h-[157px] overflow-y-scroll flex flex-col gap-2 items-start justify-center ps-[11px] pe-2 pt-[11px] pb-4">
-    <li class="cursor-pointer" *ngFor="let goal in goals; index as i" (click)="">
+    <li class="cursor-pointer" *ngFor="let goal in goals; index as i" >
         {{goal.name}}
     </li>
   </ul>
