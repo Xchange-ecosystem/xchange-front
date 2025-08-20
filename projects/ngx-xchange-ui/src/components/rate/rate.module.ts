@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RateComponent } from './rate/rate.component';
-import { XcIconGrayStarComponent, XcIconYellowStarComponent, XcIconCustomStarComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconGrayStarComponent, XcIconYellowStarComponent, XcIconCustomStarComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @NgModule({
   declarations: [

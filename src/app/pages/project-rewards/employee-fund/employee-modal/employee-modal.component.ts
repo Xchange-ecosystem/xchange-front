@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { XcIconSaveComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconSaveComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-employee-modal',

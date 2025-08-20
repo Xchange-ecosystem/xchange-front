@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-chat-message',

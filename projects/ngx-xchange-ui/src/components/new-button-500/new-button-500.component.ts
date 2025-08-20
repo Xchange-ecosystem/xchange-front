@@ -5,7 +5,7 @@ import {
   XcIconMicrophoneComponent,
   XcIconRedoComponent,
   XcIconSendComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'xc-new-button-500',

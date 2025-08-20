@@ -1,8 +1,8 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, Validators } from '@angular/forms';
-import { XcIconEyeComponent, XcIconEyeSlashComponent } from '@indziaki/ngx-xchange-icons';
-import { CopyStylesDirective, HeadlineStylesDirective } from '@indziaki/ngx-xchange-ui';
+import { XcIconEyeComponent, XcIconEyeSlashComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { CopyStylesDirective, HeadlineStylesDirective } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-new-password',

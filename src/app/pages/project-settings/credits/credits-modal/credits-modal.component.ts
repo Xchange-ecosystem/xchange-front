@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import {
   XcIconShoppingCartComponent,
   XcIconTimesComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-credits-modal',

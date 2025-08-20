@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconTimesComponent, XcIconTrashComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconTimesComponent, XcIconTrashComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-suspend-modal',

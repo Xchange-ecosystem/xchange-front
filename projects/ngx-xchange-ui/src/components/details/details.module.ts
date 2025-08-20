@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details/details.component';
-import { XcIconAngleDownComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAngleDownComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @NgModule({
   declarations: [

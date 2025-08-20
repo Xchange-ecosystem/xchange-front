@@ -1,3 +1,6 @@
+# 0.1.11
+* (fix) new library namespace
+
 # 0.1.10
 * (fix) icon check removed fill #11111 to none
 

@@ -1,6 +1,6 @@
 {
-  "name": "@indziaki/ngx-xchange-icons",
-  "version": "0.1.10",
+  "name": "@xchange-ecosystem/ngx-xchange-icons",
+  "version": "0.1.11",
   "peerDependencies": {
     "@angular/common": "^17.3.8",
     "@angular/core": "^17.3.8"
@@ -10,6 +10,6 @@
   },
   "sideEffects": false,
   "publishConfig": {
-    "@indziaki:registry": "https://npm.pkg.github.com"
+    "@xchange-ecosystem:registry": "https://npm.pkg.github.com"
   }
 }

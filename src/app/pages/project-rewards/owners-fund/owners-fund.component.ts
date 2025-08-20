@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { RoundedImageModule } from "@indziaki/ngx-xchange-ui";
-import { XcIconArrowUpRightComponent } from "@indziaki/ngx-xchange-icons";
-import { XcIconSaveComponent } from "@indziaki/ngx-xchange-icons";
+import { RoundedImageModule } from "@xchange-ecosystem/ngx-xchange-ui";
+import { XcIconArrowUpRightComponent } from "@xchange-ecosystem/ngx-xchange-icons";
+import { XcIconSaveComponent } from "@xchange-ecosystem/ngx-xchange-icons";
 
 @Component({
   selector: 'app-owners-fund',

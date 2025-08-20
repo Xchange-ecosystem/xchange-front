@@ -3,7 +3,7 @@ import { XcIconCheckCircleComponent, XcIconSaveComponent } from 'projects/ngx-xc
 import { ButtonsWrappersDirective, CopyStylesDirective, HeadlineStylesDirective, RoundedImageModule } from 'projects/ngx-xchange-ui/src/public-api';
 import { InterestsProfileComponent } from '../interests-profile/interests-profile.component';
 import { InterestCardComponent } from '../interest-card/interest-card.component';
-import { XcIconArrowRightComponent, XcIconStarComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowRightComponent, XcIconStarComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { ProfileSortComponent } from '../profile-sort/profile-sort.component';
 
 @Component({

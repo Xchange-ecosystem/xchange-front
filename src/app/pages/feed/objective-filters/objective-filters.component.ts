@@ -7,7 +7,7 @@ import {
   Input,
   Output,
 } from '@angular/core';
-import { XcIconAIComponent, XcIconHomeAltComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconHomeAltComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { NotificationBubbleDirective } from 'projects/ngx-xchange-ui/src/directives/notification-bubble/notification-bubble.directive';
 import { ButtonsWrappersDirective } from 'projects/ngx-xchange-ui/src/public-api';
 

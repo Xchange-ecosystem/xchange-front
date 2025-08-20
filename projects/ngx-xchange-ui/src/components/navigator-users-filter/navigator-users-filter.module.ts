@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavigatorUsersFilterComponent } from './navigator-users-filter/navigator-users-filter.component';
 import { RoundedImageModule } from '../rounded-image/rounded-image.module';
 import { CheckRoundedButtonModule } from '../check-rounded-button/check-rounded-button.module';
-import { XcIconCheckComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCheckComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 
 

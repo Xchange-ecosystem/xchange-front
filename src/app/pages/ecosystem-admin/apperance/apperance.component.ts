@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconCloseSComponent, XcIconSaveComponent } from '@indziaki/ngx-xchange-icons';
-import { ToggleComponent } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowRightComponent, XcIconCloseSComponent, XcIconSaveComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ToggleComponent } from '@xchange-ecosystem/ngx-xchange-ui';
 import { TagsModalComponent } from './tags-modal/tags-modal.component';
 
 @Component({

@@ -7,7 +7,7 @@ import {
   XcIconPadlockComponent,
   XcIconSearchComponent,
   XcIconTimesComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { SuspendMemberComponent } from './suspend-member/suspend-member.component';
 import { SetPasswordComponent } from './set-password/set-password.component';

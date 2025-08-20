@@ -1,7 +1,7 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconCloseSComponent, XcIconUserComponent } from '@indziaki/ngx-xchange-icons';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconCloseSComponent, XcIconUserComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-history',

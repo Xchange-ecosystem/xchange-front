@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconPlayComponent, XcIconStarComponent } from '@indziaki/ngx-xchange-icons';
-import { ProjectProgressBarModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconPlayComponent, XcIconStarComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ProjectProgressBarModule } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-project-dashboard',

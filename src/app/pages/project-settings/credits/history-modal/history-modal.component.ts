@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconArrowRightComponent, XcIconCloseSComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-history-modal',

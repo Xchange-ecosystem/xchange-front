@@ -5,8 +5,8 @@ import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy
 import { ProfileTagsDirective } from 'projects/ngx-xchange-ui/src/directives/profile-tags/profile-tags.directive';
 import { FormsModule } from '@angular/forms';
 import { XcIconSaveComponent } from 'projects/ngx-xchange-icons/src/public-api';
-import { XcIconAIComponent, XcIconArrowRightComponent, XcIconCloseSComponent, XcIconCopyComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
-import { ToggleComponent } from '@indziaki/ngx-xchange-ui';
+import { XcIconAIComponent, XcIconArrowRightComponent, XcIconCloseSComponent, XcIconCopyComponent, XcIconPlusCircleComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ToggleComponent } from '@xchange-ecosystem/ngx-xchange-ui';
 import { TagModalComponent } from '../tag-modal/tag-modal.component';
 @Component({
   selector: 'app-appereance',

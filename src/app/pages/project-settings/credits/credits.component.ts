@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {
   XcIconArrowRightComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { HistoryModalComponent } from './history-modal/history-modal.component';
 import { NgIf } from '@angular/common';
 import { CreditsModalComponent } from './credits-modal/credits-modal.component';

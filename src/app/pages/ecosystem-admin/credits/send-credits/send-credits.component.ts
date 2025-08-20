@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconShoppingCartComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconShoppingCartComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-send-credits',

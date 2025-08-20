@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconCloseSComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCloseSComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 @Component({
   selector: 'app-description-modal',

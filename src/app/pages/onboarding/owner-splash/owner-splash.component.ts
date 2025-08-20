@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { StepperService } from '../services/stepper-service/stepper.service';
 import { StepperComponent } from '../stepper/stepper.component';
-import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconAIComponent, XcIconArrowLeftComponent, XcIconPlusCircleComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { SwitchViewService } from '../services/switch-view-service/switch-view.service';
 import { NgIf } from '@angular/common';
-import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { ProfileTagsDirective, RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { CummonFormComponent } from "../cummon-form/cummon-form.component";
 
 @Component({

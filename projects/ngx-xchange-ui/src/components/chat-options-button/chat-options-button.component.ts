@@ -3,7 +3,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import {
   XcIconMegaphoneComponent,
   XcIconRocketComponent,
-} from '@indziaki/ngx-xchange-icons';
+} from '@xchange-ecosystem/ngx-xchange-icons';
 import { ChatOptionDirective } from '../../directives/chat-option/chat-option.directive';
 
 @Component({

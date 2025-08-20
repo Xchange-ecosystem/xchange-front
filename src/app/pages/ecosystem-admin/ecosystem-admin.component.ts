@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowRightComponent, XcIconBanComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconEnvelopeComponent, XcIconPadlockComponent, XcIconSaveComponent, XcIconSearchComponent, XcIconSendComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent, XcIconUserPlusComponent } from '@indziaki/ngx-xchange-icons';
-import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowRightComponent, XcIconBanComponent, XcIconCloseSComponent, XcIconEditComponent, XcIconEnvelopeComponent, XcIconPadlockComponent, XcIconSaveComponent, XcIconSearchComponent, XcIconSendComponent, XcIconShoppingCartComponent, XcIconTimesComponent, XcIconUserComponent, XcIconUserPlusComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ProfileTagsDirective, RoundedImageModule, ToggleComponent } from '@xchange-ecosystem/ngx-xchange-ui';
 import { ApperanceComponent } from './apperance/apperance.component';
 import { LegalComponent } from './legal/legal.component';
 import { CreditsComponent } from './credits/credits.component';

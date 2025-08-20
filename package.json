@@ -1,5 +1,5 @@
 {
-  "name": "@indziaki/xchange-front",
+  "name": "@xchange-ecosystem/xchange-front",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -61,6 +61,6 @@
     "zone.js": "0.14.5"
   },
   "publishConfig": {
-    "@indziaki:registry": "https://npm.pkg.github.com"
+    "@xchange-ecosystem:registry": "https://npm.pkg.github.com"
   }
 }

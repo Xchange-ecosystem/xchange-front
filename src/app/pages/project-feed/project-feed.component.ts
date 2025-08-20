@@ -1,7 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconAngleDownComponent, XcIconCloseSComponent, XcIconEyeComponent, XcIconSaveComponent, XcIconSendComponent, XcIconTimesComponent, XcIconUserPlusComponent } from '@indziaki/ngx-xchange-icons';
-import { RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconAngleDownComponent, XcIconCloseSComponent, XcIconEyeComponent, XcIconSaveComponent, XcIconSendComponent, XcIconTimesComponent, XcIconUserPlusComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-project-feed',

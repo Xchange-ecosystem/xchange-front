@@ -4,8 +4,8 @@ import {
   XcIconBanComponent,
   XcIconEnvelopeComponent,
   XcIconEyeComponent,
-} from '@indziaki/ngx-xchange-icons';
-import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
+} from '@xchange-ecosystem/ngx-xchange-icons';
+import { ProfileTagsDirective } from '@xchange-ecosystem/ngx-xchange-ui';
 import { SuspendModalComponent } from './suspend-modal/suspend-modal.component';
 import { MessageModalComponent } from './message-modal/message-modal.component';
 

@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { XcIconAIComponent, XcIconCloseSComponent, XcIconPlusCircleComponent } from '@indziaki/ngx-xchange-icons';
-import { ProfileTagsDirective } from '@indziaki/ngx-xchange-ui';
+import { XcIconAIComponent, XcIconCloseSComponent, XcIconPlusCircleComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ProfileTagsDirective } from '@xchange-ecosystem/ngx-xchange-ui';
 
 @Component({
   selector: 'app-tags-modal',

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { AsideLinkDirective } from '../../directives/aside-link/aside-link.directive';
-import { XcIconSlidersVComponent, XcIconAngleRightComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconSlidersVComponent, XcIconAngleRightComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
 
 

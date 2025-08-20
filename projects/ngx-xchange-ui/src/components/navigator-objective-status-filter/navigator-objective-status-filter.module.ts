@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigatorObjectiveStatusFilterComponent } from './navigator-objective-status-filter/navigator-objective-status-filter.component';
 import { NavigatorFilterToggleModule } from '../navigator-filter-toggle/navigator-filter-toggle.module';
-import { XcIconCancelComponent, XcIconCheckComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconCancelComponent, XcIconCheckComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 
 
 

@@ -1,7 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { XcIconArrowToRightComponent, XcIconArrowUpRightComponent, XcIconFileUploadComponent, XcIconPaperclipComponent, XcIconSaveComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
-import { ProfileTagsDirective, RoundedImageModule } from '@indziaki/ngx-xchange-ui';
+import { XcIconArrowToRightComponent, XcIconArrowUpRightComponent, XcIconFileUploadComponent, XcIconPaperclipComponent, XcIconSaveComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
+import { ProfileTagsDirective, RoundedImageModule } from '@xchange-ecosystem/ngx-xchange-ui';
 import { CollaborationModalComponent } from './collaboration-modal/collaboration-modal.component';
 
 @Component({

@@ -1,6 +1,6 @@
 import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent, XcIconTimesComponent } from '@indziaki/ngx-xchange-icons';
+import { XcIconImageComponent, XcIconImagePlusComponent, XcIconSaveComponent, XcIconTimesComponent } from '@xchange-ecosystem/ngx-xchange-icons';
 import { CopyStylesDirective } from 'projects/ngx-xchange-ui/src/directives/copy-styles/copy-styles.directive';
 import { HeadlineStylesDirective } from 'projects/ngx-xchange-ui/src/directives/headline-styles/headline-styles.directive';
 import { ButtonsWrappersDirective } from 'projects/ngx-xchange-ui/src/public-api';
