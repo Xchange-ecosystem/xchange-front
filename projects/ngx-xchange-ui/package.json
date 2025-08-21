@@ -1,6 +1,6 @@
 {
   "name": "@xchange-ecosystem/ngx-xchange-ui",
-  "version": "0.1.38",
+  "version": "0.1.39",
   "peerDependencies": {
     "@angular/common": "^17.3.8",
     "@angular/core": "^17.3.8"

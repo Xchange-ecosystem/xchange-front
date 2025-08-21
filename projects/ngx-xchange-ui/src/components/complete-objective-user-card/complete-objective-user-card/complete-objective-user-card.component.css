@@ -45,3 +45,10 @@ input[type="checkbox"] {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media screen and (max-width:770px){
+  .obj {
+    flex-wrap:wrap;
+    gap: 4px;
+  }
+}

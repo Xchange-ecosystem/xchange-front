@@ -1,3 +1,6 @@
+# 0.1.39 20/08/2025
+* (fix) previous behavior of the complete card was returned, adding responsiveness up to 770
+
 # 0.1.38 11/08/2025
 * new behaviour on tablet devices for navigator-filter-selector & toggle
 
