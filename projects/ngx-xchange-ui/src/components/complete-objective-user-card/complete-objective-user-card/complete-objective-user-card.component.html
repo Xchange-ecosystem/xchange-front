@@ -1,5 +1,5 @@
-<article class="flex justify-between items-center bg-white p-4 shadow-userCadComplete rounded-lg flex-wrap">
-    <section class="flex items-center gap-1">
+<article class="flex justify-between items-center bg-white p-4 shadow-userCadComplete rounded-lg obj">
+    <section class="flex items-center gap-2 sections-flex">
         <label>
             <input 
             type="checkbox"
@@ -13,18 +13,18 @@
             </div>
         </label>
         <xc-rounded-image [image]="userData?.profilePhotoUrl ?? null" [marginSize]="0" class="w-[30px] h-[30px] min-w-[30px] min-h-[30px]"/>
-        <p class="userName font-Copy-300-Bold-font-weight text-Copy-300-Bold-font-size line-height-Copy-300-Bold-line-Height text-Grey500">{{(userData?.name ?? 'User') + ' ' + userData?.lastName}}</p>
+        <p class="userName font-Copy-300-Bold-font-weight text-Copy-300-Bold-font-size line-height-Copy-300-Bold-line-Height text-Grey500 user_name">{{(userData?.name ?? 'User') + ' ' + userData?.lastName}}</p>
         <span xcTag="gray">{{userData?.role ?? 'Viewer'}}</span>
     </section>
-    <section class="flex items-center justify-end gap-4">
+    <section class="flex items-center justify-end gap-4 sections-flex max-[1200px]:justify-start">
         <div class="flex gap-1 items-center">
-            <div class="text-Grey500 w-6 h-6 fill-grey500 stroke-Grey500">
+            <div class="text-Grey500 w-6 h-6 fill-grey500 stroke-Grey500 icon">
                 <xc-icon-clock-five />
             </div>
-            <span class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500">{{userData?.hours + 'h'}}</span>
+            <span class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500 texts_sm">{{userData?.hours + 'h'}}</span>
         </div>
-        <span class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500">{{userData?.resultCount + ' contributions'}}</span>
-        <span class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500">{{userData?.proofCount + ' proofs'}}</span>
+        <span class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500 texts_sm">{{userData?.resultCount + ' contributions'}}</span>
+        <span class="font-Copy-300-Medium-font-weight text-Copy-300-Medium-font-size line-height-Copy-300-Bold-line-Height text-Grey500 texts_sm">{{userData?.proofCount + ' proofs'}}</span>
         <div>
             <xc-rating-bar [rating]="userData?.ratingAverage ?? 0" [readOnly]="true" />
         </div>
