@@ -1,5 +1,12 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-import { NavigatorFilterSelectorModule,NavigatorObjectiveStatusFilterModule,NavigatorRangeFilterModule,NavigatorUsersFilterModule } from '@xchange-ecosystem/ngx-xchange-ui';
+import {
+  CompleteObjectiveUserCardModule,
+  NavigatorFilterSelectorModule,
+  NavigatorObjectiveStatusFilterModule,
+  NavigatorRangeFilterModule,
+  NavigatorUsersFilterModule,
+} from '@xchange-ecosystem/ngx-xchange-ui';
 export interface Collaborator {
   id: number;
   name: string;
@@ -11,15 +18,13 @@ export interface Collaborator {
     NavigatorFilterSelectorModule,
     NavigatorUsersFilterModule,
     NavigatorObjectiveStatusFilterModule,
-    NavigatorRangeFilterModule
+    NavigatorRangeFilterModule,
+    CompleteObjectiveUserCardModule,
+    NgFor
   ],
   templateUrl: './project-navigator.component.html',
-  styleUrl: './project-navigator.component.scss'
+  styleUrl: './project-navigator.component.scss',
 })
 export class ProjectNavigatorComponent {
-  collaborator: Collaborator[] = [
-    { id: 1, name: 'User 1' },
-    { id: 2, name: 'User 2' },
-    { id: 3, name: 'User 3' }
-  ];
+  
 }

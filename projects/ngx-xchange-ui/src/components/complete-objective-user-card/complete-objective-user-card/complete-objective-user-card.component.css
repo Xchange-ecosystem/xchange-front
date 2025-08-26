@@ -45,3 +45,30 @@ input[type="checkbox"] {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media screen and (max-width:1200px){
+  .obj {
+    flex-wrap:wrap;
+    gap: 4px;
+  }
+}
+
+.user_name {
+  max-width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1200px) {
+  .texts_sm {
+    font-size: 12px;
+  }
+  .icon {
+    width: 12px;
+    height: 12px;
+  }
+  .sections-flex {
+    width: 100%;
+  }
+}
